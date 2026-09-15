@@ -1,0 +1,666 @@
+<title>Radar Insurtech VC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300&family=IBM+Plex+Sans:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+:root{
+  --ink:#16211E;
+  --paper:#E7EBE6;
+  --surface:#FFFFFF;
+  --petrol:#0C5C5E;
+  --petrol-strong:#0A4A4B;
+  --petrol-soft:#E3EEEE;
+  --ochre:#A8681F;
+  --ochre-soft:#F8F0E4;
+  --muted:#6C7873;
+  --line:#CBD3CD;
+  --line-soft:#E1E6E1;
+  --good:#3F7A4E;
+  --good-soft:#E6F0E7;
+  --rail:308px;
+  --font-display:"Newsreader",Georgia,serif;
+  --font-body:"IBM Plex Sans",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono","SFMono-Regular",Menlo,monospace;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E9EDE8;
+    --paper:#12100E;
+    --surface:#1B1816;
+    --petrol:#5BC2B7;
+    --petrol-strong:#7ED4CA;
+    --petrol-soft:#17302E;
+    --ochre:#E3AD70;
+    --ochre-soft:#2E2416;
+    --muted:#A39C93;
+    --line:#332E29;
+    --line-soft:#242019;
+    --good:#7BBF8C;
+    --good-soft:#1B2A1E;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E9EDE8;
+  --paper:#12100E;
+  --surface:#1B1816;
+  --petrol:#5BC2B7;
+  --petrol-strong:#7ED4CA;
+  --petrol-soft:#17302E;
+  --ochre:#E3AD70;
+  --ochre-soft:#2E2416;
+  --muted:#A39C93;
+  --line:#332E29;
+  --line-soft:#242019;
+  --good:#7BBF8C;
+  --good-soft:#1B2A1E;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:15px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding-left:max(0px, env(safe-area-inset-left, 0px));
+  padding-right:max(0px, env(safe-area-inset-right, 0px));
+}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--petrol)}
+:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+::selection{background:var(--petrol-soft);color:var(--ink)}
+h1,h2,h3,p{text-wrap:balance}
+
+/* ---------- topbar ---------- */
+.topbar{
+  display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;
+  padding:14px 24px;padding-top:calc(14px + env(safe-area-inset-top, 0px));
+  border-bottom:1px solid var(--line);background:var(--surface);
+}
+.brand{font-family:var(--font-display);font-size:22px;font-weight:500;letter-spacing:-.01em;white-space:nowrap}
+.brand span{color:var(--petrol)}
+.count{color:var(--muted);font-size:12.5px;font-variant-numeric:tabular-nums}
+.tabs{display:flex;gap:2px;margin-left:auto}
+.tab{border:1px solid transparent;background:none;padding:6px 14px;border-radius:3px;color:var(--muted);font-size:14px;font-weight:450}
+.tab[aria-selected="true"]{background:var(--petrol);color:#fff}
+.tab:hover:not([aria-selected="true"]){background:var(--petrol-soft);color:var(--petrol)}
+.tools{display:flex;gap:8px;align-items:center}
+.ghost{border:1px solid var(--line);background:var(--surface);padding:5px 11px;border-radius:3px;font-size:13px;color:var(--ink)}
+.ghost:hover{border-color:var(--petrol);color:var(--petrol)}
+
+.layout{display:grid;grid-template-columns:var(--rail) 1fr;min-height:calc(100vh - 58px)}
+
+/* ---------- rail ---------- */
+.rail{border-right:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;max-height:calc(100vh - 58px);position:sticky;top:0}
+.rail-head{padding:14px;border-bottom:1px solid var(--line-soft);display:grid;gap:9px}
+.search{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:3px;background:var(--paper);color:var(--ink);font-size:14px}
+.search::placeholder{color:var(--muted)}
+.filters{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.filters select{width:100%;padding:6px 7px;border:1px solid var(--line);border-radius:3px;background:var(--surface);font-size:12.5px;color:var(--muted)}
+.rail-list{overflow-y:auto;flex:1;padding-bottom:20px}
+.group-head{padding:11px 14px 4px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--petrol);position:sticky;top:0;background:var(--surface);border-bottom:1px solid var(--line-soft)}
+.item{display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:7px 14px;border:0;background:none;font-size:14px;border-left:2px solid transparent;color:var(--ink)}
+.item:hover{background:var(--paper)}
+.item[aria-current="true"]{background:var(--petrol-soft);border-left-color:var(--petrol);font-weight:500}
+.item .pin{width:15px;height:15px;flex:none;border:1px solid var(--line);border-radius:3px;display:grid;place-items:center;font-size:10px;color:transparent;background:var(--surface)}
+.item .pin.on{background:var(--petrol);border-color:var(--petrol);color:#fff}
+.empty-rail{padding:24px 14px;color:var(--muted);font-size:13.5px}
+
+/* ---------- panel ---------- */
+.panel{padding:28px 34px 80px;max-width:1100px}
+.placeholder{padding:14vh 20px 20px;text-align:center;color:var(--muted)}
+.placeholder h2{font-family:var(--font-display);font-weight:400;font-size:27px;color:var(--ink);margin:0 0 6px}
+
+.sheet-firm{color:var(--petrol);font-size:13.5px;font-weight:500;margin-bottom:2px;letter-spacing:.01em}
+.sheet-name{font-family:var(--font-display);font-size:37px;font-weight:400;letter-spacing:-.015em;margin:0 0 12px;line-height:1.1}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px}
+.chip{border:1px solid var(--line);padding:3px 9px;border-radius:3px;font-size:12.5px;background:var(--surface);color:var(--muted)}
+.chip.on{border-color:var(--petrol);color:var(--petrol);background:var(--petrol-soft)}
+.chip.q{border-color:var(--ochre);color:var(--ochre);background:var(--ochre-soft);font-weight:500}
+.chip.good{border-color:var(--good);color:var(--good);background:var(--good-soft)}
+
+.band{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line);background:var(--surface)}
+.fig{padding:14px 16px;border-right:1px solid var(--line-soft)}
+.fig:last-child{border-right:0}
+.fig dt{font-size:11px;color:var(--muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:.03em}
+.fig dd{margin:0;font-family:var(--font-display);font-size:27px;font-weight:400;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.15}
+.fig dd small{font-family:var(--font-body);font-size:12px;color:var(--muted);font-weight:400;margin-left:2px}
+.fig dd.nil{color:var(--line);font-size:22px}
+
+h3.sec{font-family:var(--font-body);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:var(--ink);margin:32px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+
+.track{display:flex;align-items:flex-start;gap:0;margin-top:6px}
+.stage{flex:1;text-align:center;position:relative;padding-top:18px;font-size:11.5px;color:var(--muted)}
+.stage::before{content:"";position:absolute;top:5px;left:0;right:0;height:1px;background:var(--line)}
+.stage:first-child::before{left:50%}
+.stage:last-child::before{right:50%}
+.stage::after{content:"";position:absolute;top:1px;left:50%;margin-left:-4.5px;width:9px;height:9px;border-radius:50%;background:var(--paper);border:1px solid var(--line)}
+.stage.on{color:var(--ink);font-weight:500}
+.stage.on::after{background:var(--petrol);border-color:var(--petrol)}
+
+.range{margin-top:10px}
+.range-bar{height:5px;background:var(--line-soft);position:relative;border-radius:3px}
+.range-fill{position:absolute;top:0;bottom:0;background:var(--petrol);border-radius:3px}
+.range-lab{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-top:7px;font-variant-numeric:tabular-nums}
+.range-lab b{color:var(--ink);font-weight:500}
+
+.kv{border-collapse:collapse;width:100%;font-size:14px}
+.kv td{padding:6px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.kv td:first-child{color:var(--muted);width:54%;padding-right:14px}
+.kv td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+
+table.data{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--surface)}
+table.data th{text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.02em;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--ink);white-space:nowrap}
+table.data td{padding:7px 10px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+table.data td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.data tr:hover td{background:var(--paper)}
+.tbl-wrap{overflow-x:auto}
+.role{font-size:11px;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted)}
+.role.lead{border-color:var(--ochre);color:var(--ochre);background:var(--ochre-soft)}
+
+.trace{margin-top:32px;padding:14px 16px;background:var(--surface);border:1px solid var(--line-soft);border-radius:4px;font-size:12.5px;color:var(--muted)}
+.trace b{color:var(--ink);font-weight:500}
+.trace .src{font-family:var(--font-mono);font-size:11.5px;line-height:1.6;margin-top:6px;word-break:break-word}
+
+details.raw{margin-top:30px;border-top:1px solid var(--line);padding-top:12px}
+details.raw summary{cursor:pointer;font-size:13px;color:var(--petrol);font-weight:500}
+details.raw table{margin-top:12px}
+
+.note{color:var(--muted);font-size:12.5px;margin-top:8px}
+.nores{color:var(--muted);font-size:13.5px;padding:10px 0}
+
+.cmp-hint{color:var(--muted);font-size:14px;margin-bottom:16px}
+.cmp-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line)}
+table.cmp{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+table.cmp th{text-align:left;padding:10px;border-bottom:1px solid var(--ink);font-size:12px;position:sticky;left:0;background:var(--surface)}
+table.cmp thead th{font-family:var(--font-display);font-size:15px;font-weight:500;text-align:right}
+table.cmp thead th:first-child{text-align:left;font-family:var(--font-body);font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase}
+table.cmp td{padding:8px 10px;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
+table.cmp tbody th{font-weight:400;color:var(--muted);border-bottom:1px solid var(--line-soft);border-top:0;font-size:13px}
+table.cmp tr:hover td,table.cmp tr:hover th{background:var(--paper)}
+
+.foot{max-width:1100px;margin-top:40px;padding-top:14px;border-top:1px solid var(--line-soft);color:var(--muted);font-size:12px}
+
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .rail{position:static;max-height:340px;border-right:0;border-bottom:1px solid var(--line)}
+  .panel{padding:20px 16px 60px}
+  .sheet-name{font-size:29px}
+  .topbar{padding:12px 16px}
+  .tabs{margin-left:0;width:100%;order:3}
+}
+@media print{
+  .topbar,.rail,.tools,details.raw{display:none!important}
+  .layout{display:block}
+  body{background:#fff}
+  .panel{padding:0;max-width:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="topbar">
+  <div class="brand">Radar <span>Insurtech VC</span></div>
+  <div class="count" id="count">—</div>
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" data-view="funds" aria-selected="true">Fonds</button>
+    <button class="tab" role="tab" data-view="startups" aria-selected="false">Start-ups</button>
+    <button class="tab" role="tab" data-view="compare" aria-selected="false">Comparateur</button>
+  </nav>
+  <div class="tools">
+    <button class="ghost" id="btn-csv">Exporter en CSV</button>
+    <button class="ghost" id="btn-print">Imprimer</button>
+    <button class="ghost" id="btn-load">Recharger l'Excel</button>
+    <input type="file" id="file" accept=".xlsx,.xlsm,.xls" hidden>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="rail" id="rail">
+    <div class="rail-head">
+      <input class="search" id="q" type="search" placeholder="Rechercher un fonds, une société…" autocomplete="off">
+      <div class="filters" id="filters">
+        <select id="f-strat"><option value="">Toutes stratégies</option></select>
+        <select id="f-stage"><option value="">Tous stades</option></select>
+        <select id="f-statut"><option value="">Tous statuts</option></select>
+        <select id="f-quart"><option value="">Tous quartiles</option></select>
+      </div>
+    </div>
+    <div class="rail-list" id="list"></div>
+  </aside>
+  <main class="panel" id="panel"></main>
+</div>
+
+<script>
+window.__DATA__ = __DATA_JSON__;
+</script>
+<script>
+/* ============================================================
+   Radar Insurtech VC — logique applicative
+   Données : window.__DATA__ (générées depuis VC_Database_Standardisee_vN.xlsx)
+   ============================================================ */
+
+const RAW = window.__DATA__;
+const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{strat:'',stage:'',statut:'',quart:''} };
+
+const STAGES = ["Pré-Seed","Seed","Pré-Série A","Série A","Série B","Série C","Série D"];
+const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
+const esc  = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtN = (n,d=0) => (n===null||n===undefined||Number.isNaN(n)) ? null
+  : n.toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const fmtDate = v => {
+  if (v===null||v===undefined) return null;
+  const n = Number(v);
+  if (!Number.isNaN(n) && n > 1900 && n < 2100) return String(Math.round(n));
+  return String(v);
+};
+
+let FONDS = RAW.fonds;
+let STARTUPS = RAW.startups;
+
+/* ---------- filtres ---------- */
+function fillFilters(){
+  const set = (id, vals) => {
+    const el = document.getElementById(id);
+    const first = el.options[0].textContent;
+    el.innerHTML = `<option value="">${first}</option>` +
+      vals.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join('');
+  };
+  set('f-strat', [...new Set(FONDS.flatMap(f => f.strategie))].sort((a,b)=>a.localeCompare(b,'fr')));
+  set('f-stage', STAGES);
+  set('f-statut', [...new Set(FONDS.map(f=>f.statut).filter(Boolean))].sort());
+  set('f-quart', [...new Set(FONDS.map(f=>f.quartile).filter(Boolean))].sort());
+}
+
+function visibleFunds(){
+  const q = norm(S.q), F = S.filters;
+  return FONDS.filter(f => {
+    if (q && !(norm(f.vehicule).includes(q) || norm(f.nom).includes(q))) return false;
+    if (F.strat && !f.strategie.includes(F.strat)) return false;
+    if (F.stage && !f.stages[F.stage]) return false;
+    if (F.statut && f.statut !== F.statut) return false;
+    if (F.quart && f.quartile !== F.quart) return false;
+    return true;
+  });
+}
+function visibleStartups(){
+  const q = norm(S.q);
+  return STARTUPS.filter(s => !q || norm(s.nom).includes(q) || norm(s.fondsNom||'').includes(q)
+    || norm(s.vehicule||'').includes(q) || norm(s.secteur||'').includes(q));
+}
+function startupsOf(fid){ return STARTUPS.filter(s => s.fid === fid); }
+
+/* ---------- rendu : liste ---------- */
+function renderRail(){
+  const list = document.getElementById('list');
+  const filters = document.getElementById('filters');
+
+  if (S.view === 'startups'){
+    filters.style.display = 'none';
+    const items = visibleStartups();
+    list.innerHTML = items.length ? items.map(s => `
+      <button class="item" data-startup="${esc(s.nom)}${esc(s.fid)}" data-startup-fid="${esc(s.fid)}" data-startup-nom="${esc(s.nom)}" ${S.selStartup===(s.fid+'|'+s.nom)?'aria-current="true"':''}>
+        <span>${esc(s.nom)}<br><span style="color:var(--muted);font-size:12px">${esc(s.secteur||s.vehicule||'')}</span></span>
+      </button>`).join('')
+      : `<p class="empty-rail">Aucune société ne correspond. Effacez la recherche pour tout revoir.</p>`;
+    return;
+  }
+
+  filters.style.display = 'grid';
+  const items = visibleFunds();
+  if (!items.length){
+    list.innerHTML = `<p class="empty-rail">Aucun fonds ne correspond à ces critères. Élargissez la recherche ou remettez les filtres à zéro.</p>`;
+    return;
+  }
+  const byFirm = {};
+  items.forEach(f => (byFirm[f.nom] = byFirm[f.nom] || []).push(f));
+  list.innerHTML = Object.keys(byFirm).sort((a,b) => a.localeCompare(b,'fr')).map(firm => `
+    <div class="group-head">${esc(firm)}</div>
+    ${byFirm[firm].map(f => `
+      <button class="item" data-fund="${esc(f.fid)}" ${S.selFund===f.fid?'aria-current="true"':''}>
+        <span class="pin ${S.pinned.includes(f.fid)?'on':''}" data-pin="${esc(f.fid)}" title="Ajouter au comparateur">✓</span>
+        <span>${esc(f.vehicule)}</span>
+      </button>`).join('')}
+  `).join('');
+}
+
+/* ---------- rendu : fiche fonds ---------- */
+function figure(label, value, unit, dec){
+  const v = value === null || value === undefined
+    ? `<dd class="nil">—</dd>`
+    : `<dd>${fmtN(value, dec||0)}${unit?`<small>${unit}</small>`:''}</dd>`;
+  return `<div class="fig"><dt>${label}</dt>${v}</div>`;
+}
+
+function renderFund(f){
+  const linked = startupsOf(f.fid);
+  const tMin = f.ticketMin, tMax = f.ticketMax;
+  const scale = Math.max(tMax || 0, 1);
+  const ticket = (tMin !== null || tMax !== null) ? `
+    <div class="range">
+      <div class="range-bar"><div class="range-fill" style="left:${((tMin||0)/scale*100).toFixed(1)}%;right:${(100-(tMax||tMin||0)/scale*100).toFixed(1)}%"></div></div>
+      <div class="range-lab">
+        <span>min <b>${tMin!==null?fmtN(tMin,tMin<1?2:1)+' M€':'—'}</b></span>
+        <span>max <b>${tMax!==null?fmtN(tMax,tMax<1?2:1)+' M€':'—'}</b></span>
+      </div>
+    </div>` : `<p class="nores">Ticket non renseigné dans la base.</p>`;
+
+  const irrPct = f.irr !== null ? f.irr * 100 : null;
+
+  const portfolioRows = [
+    ...linked.map(s => ({
+      nom:s.nom, secteur:s.secteur, montant:s.montantFonds, valo:s.valorisation,
+      stage:s.stage, exit:s.exit, goto:s.fid+'|'+s.nom
+    })),
+    ...f.deals.filter(d => !linked.some(s => norm(s.nom)===norm(d.nom))).map(d => ({
+      nom:d.nom, secteur:d.secteur, montant:d.montant, valo:null, stage:d.stage, exit:null, goto:null
+    }))
+  ];
+
+  return `
+  <div class="sheet-firm">${esc(f.nom)}</div>
+  <h1 class="sheet-name">${esc(f.vehicule)}</h1>
+  <div class="chips">
+    ${f.statut ? `<span class="chip ${f.statut==='Ouvert'?'good':'on'}">${esc(f.statut)}</span>` : ''}
+    ${f.phase ? `<span class="chip">Phase : ${esc(f.phase)}</span>` : ''}
+    ${f.millesime ? `<span class="chip">Millésime ${esc(f.millesime)}</span>` : ''}
+    ${f.quartile ? `<span class="chip q">${esc(f.quartile)} de performance</span>` : ''}
+    ${f.site ? `<span class="chip"><a href="${esc(f.site)}" target="_blank" rel="noopener">Site officiel ↗</a></span>` : ''}
+  </div>
+
+  <dl class="band">
+    ${figure('Montant levé', f.leve, ' M€')}
+    ${figure('Actifs sous gestion', f.aum, ' M€')}
+    ${figure('TVPI', f.tvpi, '×', 2)}
+    ${figure('DPI', f.dpi, '×', 2)}
+    ${figure('TRI', irrPct, ' %', 1)}
+    ${figure('MoC', f.moc, '×', 2)}
+  </dl>
+  <p class="note">Montants en millions d'euros, tels que renseignés dans l'onglet Fonds.</p>
+
+  <h3 class="sec">Stades d'entrée au capital</h3>
+  <div class="track">
+    ${STAGES.map(st => `<div class="stage ${f.stages[st]?'on':''}">${esc(st)}</div>`).join('')}
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h3 class="sec">Ticket d'investissement</h3>
+      ${ticket}
+    </div>
+    <div>
+      <h3 class="sec">Portefeuille</h3>
+      <table class="kv">
+        <tr><td>Participations déclarées</td><td>${fmtN(f.participations) ?? '—'}</td></tr>
+        <tr><td>Montant alloué</td><td>${fmtN(f.alloue) ? fmtN(f.alloue)+' M€' : '—'}</td></tr>
+        <tr><td>Sociétés InsurTech</td><td>${fmtN(f.insurtech) ?? '—'}</td></tr>
+        <tr><td>Sorties réalisées</td><td>${fmtN(f.exits) ?? '—'}</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h3 class="sec">Stratégie</h3>
+      ${f.strategie.length ? `<div class="chips">${f.strategie.map(s => `<span class="chip on">${esc(s)}</span>`).join('')}</div>`
+        : `<p class="nores">Stratégie non renseignée.</p>`}
+    </div>
+    <div>
+      <h3 class="sec">Zone d'investissement</h3>
+      ${f.geo.length ? `<div class="chips">${f.geo.map(g => `<span class="chip on">${esc(g)}</span>`).join('')}</div>`
+        : `<p class="nores">Zone non renseignée.</p>`}
+    </div>
+  </div>
+
+  ${portfolioRows.length ? `
+  <h3 class="sec">Sociétés suivies dans la base (${portfolioRows.length})</h3>
+  <div class="tbl-wrap"><table class="data">
+    <thead><tr><th>Société</th><th>Secteur</th><th>Stage</th><th>Investi</th><th>Valorisation</th><th>Exit</th></tr></thead>
+    <tbody>${portfolioRows.map(p => `<tr>
+      <td>${p.goto ? `<a href="#" data-goto="${esc(p.goto)}">${esc(p.nom)}</a>` : esc(p.nom)}</td>
+      <td>${esc(p.secteur||'—')}</td>
+      <td>${esc(p.stage||'—')}</td>
+      <td class="num">${fmtN(p.montant,1) ? fmtN(p.montant,1)+' M€' : '—'}</td>
+      <td class="num">${fmtN(p.valo) ? fmtN(p.valo)+' M€' : '—'}</td>
+      <td>${p.exit==='O' ? '<span class="role lead">Oui</span>' : (p.exit==='N' ? '—' : (p.exit||'—'))}</td>
+    </tr>`).join('')}</tbody>
+  </table></div>` : ''}
+
+  ${f.source ? `
+  <div class="trace">
+    <b>Traçabilité</b> — dernière mise à jour ${f.maj ? esc(fmtDate(f.maj)) : '—'}
+    <div class="src">${esc(f.source)}</div>
+  </div>` : ''}
+
+  <details class="raw">
+    <summary>Voir la fiche complète en JSON</summary>
+    <table class="data"><tbody>${Object.entries(f).filter(([k])=>k!=='deals').map(([k,v]) =>
+      `<tr><td style="color:var(--muted);white-space:nowrap">${esc(k)}</td><td class="num" style="text-align:left">${esc(Array.isArray(v)?v.join(', '):(typeof v==='object'&&v!==null?JSON.stringify(v):v))}</td></tr>`).join('')}
+    </tbody></table>
+  </details>`;
+}
+
+/* ---------- rendu : fiche start-up ---------- */
+function renderStartup(s){
+  return `
+  <div class="sheet-firm">${esc(s.fondsNom||'')}${s.vehicule?` · ${esc(s.vehicule)}`:''}</div>
+  <h1 class="sheet-name">${esc(s.nom)}</h1>
+  <div class="chips">
+    ${s.secteur ? `<span class="chip on">${esc(s.secteur)}</span>` : ''}
+    ${s.stage ? `<span class="chip">Stage financé : ${esc(s.stage)}</span>` : ''}
+    ${s.dateCreation ? `<span class="chip">Créée en ${esc(fmtDate(s.dateCreation))}</span>` : ''}
+    ${s.position ? `<span class="chip q">${esc(s.position)} du tour</span>` : ''}
+    ${s.exit==='O' ? `<span class="chip good">Sortie réalisée</span>` : ''}
+  </div>
+
+  <dl class="band">
+    ${figure('Valorisation', s.valorisation, ' M€')}
+    ${figure("Total levé", s.totalLeve, ' M€', 1)}
+    ${figure('Capital social', s.capitalSocial, ' k€')}
+    ${figure('Investi par le fonds', s.montantFonds, ' M€', 1)}
+    ${figure('CA', s.ca, ' M€', 1)}
+    ${figure('Tours réalisés', s.nbToursTotal)}
+  </dl>
+
+  <div class="grid2">
+    <div>
+      <h3 class="sec">Implantation</h3>
+      <table class="kv">
+        <tr><td>Pays d'origine</td><td>${esc(s.pays||'—')}</td></tr>
+        <tr><td>Nombre de pays</td><td>${fmtN(s.nbPays) ?? '—'}</td></tr>
+        <tr><td>Date d'investissement</td><td>${s.dateInvest?esc(fmtDate(s.dateInvest)):'—'}</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3 class="sec">Tours et sortie</h3>
+      <table class="kv">
+        <tr><td>Fonds au capital</td><td>${fmtN(s.nbFonds) ?? '—'}</td></tr>
+        <tr><td>Tours menés par le fonds</td><td>${fmtN(s.nbToursFonds) ?? '—'}</td></tr>
+        <tr><td>Repositionnement</td><td>${s.repositionnement || '—'}</td></tr>
+        <tr><td>MoC / MoEP à la sortie</td><td>${fmtN(s.mocExit,2) ?? '—'} / ${fmtN(s.moepExit,2) ?? '—'}</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p class="note">Fonds investisseur : <a href="#" data-goto-fund="${esc(s.fid)}">${esc(s.vehicule||s.fondsNom||'')}</a></p>`;
+}
+
+/* ---------- rendu : comparateur ---------- */
+const CMP_ROWS = [
+  ['Société de gestion', f => f.nom],
+  ['Statut',            f => f.statut || '—'],
+  ['Millésime',         f => f.millesime || '—'],
+  ['Montant levé',      f => fmtN(f.leve) ? fmtN(f.leve)+' M€' : '—'],
+  ['Actifs sous gestion', f => fmtN(f.aum) ? fmtN(f.aum)+' M€' : '—'],
+  ['TVPI',              f => fmtN(f.tvpi,2) ? fmtN(f.tvpi,2)+'×' : '—'],
+  ['DPI',               f => fmtN(f.dpi,2) ? fmtN(f.dpi,2)+'×' : '—'],
+  ['TRI',               f => f.irr!==null ? fmtN(f.irr*100,1)+' %' : '—'],
+  ['MoC',               f => fmtN(f.moc,2) ? fmtN(f.moc,2)+'×' : '—'],
+  ['Quartile',          f => f.quartile || '—'],
+  ['Ticket',            f => (f.ticketMin!==null||f.ticketMax!==null) ? `${fmtN(f.ticketMin,1)??'?'} – ${fmtN(f.ticketMax,1)??'?'} M€` : '—'],
+  ['Participations',    f => fmtN(f.participations) ?? '—'],
+  ['Stades',            f => STAGES.filter(s=>f.stages[s]).join(', ') || '—'],
+  ['Stratégie',         f => f.strategie.join(', ') || '—'],
+  ['Zone',              f => f.geo.join(', ') || '—']
+];
+
+function renderCompare(){
+  const sel = S.pinned.map(fid => FONDS.find(f => f.fid === fid)).filter(Boolean);
+  if (!sel.length) return `
+    <div class="placeholder">
+      <h2>Comparez plusieurs fonds côte à côte</h2>
+      <p>Cochez la case à gauche du nom d'un fonds dans la liste pour l'ajouter ici.</p>
+    </div>`;
+  return `
+    <h1 class="sheet-name">Comparateur</h1>
+    <p class="cmp-hint">${sel.length} fonds sélectionné${sel.length>1?'s':''}. Décochez un fonds dans la liste pour le retirer.</p>
+    <div class="cmp-wrap"><table class="cmp">
+      <thead><tr><th>Critère</th>${sel.map(f => `<th>${esc(f.vehicule)}</th>`).join('')}</tr></thead>
+      <tbody>${CMP_ROWS.map(([label,fn]) => `<tr><th>${label}</th>${sel.map(f => `<td>${esc(fn(f))}</td>`).join('')}</tr>`).join('')}</tbody>
+    </table></div>`;
+}
+
+/* ---------- rendu global ---------- */
+function render(){
+  document.getElementById('count').textContent =
+    `v${RAW.version} · ${FONDS.length} fonds · ${new Set(FONDS.map(f=>f.nom)).size} sociétés de gestion · ${STARTUPS.length} participations suivies`;
+  document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', String(t.dataset.view === S.view)));
+  renderRail();
+
+  const panel = document.getElementById('panel');
+  if (S.view === 'compare'){ panel.innerHTML = renderCompare(); return; }
+  if (S.view === 'startups'){
+    const s = S.selStartup ? STARTUPS.find(x => (x.fid+'|'+x.nom) === S.selStartup) : null;
+    panel.innerHTML = s ? renderStartup(s) : `
+      <div class="placeholder"><h2>Choisissez une société</h2>
+      <p>Les ${STARTUPS.length} participations de l'onglet Participations sont listées à gauche.</p></div>`;
+    return;
+  }
+  const f = FONDS.find(x => x.fid === S.selFund);
+  panel.innerHTML = f ? renderFund(f) : `
+    <div class="placeholder"><h2>Choisissez un fonds</h2>
+    <p>Sélectionnez un véhicule à gauche pour afficher sa fiche complète.</p></div>`;
+}
+
+/* ---------- interactions ---------- */
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => { S.view = t.dataset.view; render(); });
+
+document.getElementById('q').oninput = e => { S.q = e.target.value; renderRail(); };
+['strat','stage','statut','quart'].forEach(k => {
+  document.getElementById('f-'+k).onchange = e => { S.filters[k] = e.target.value; renderRail(); };
+});
+
+document.getElementById('list').addEventListener('click', e => {
+  const pin = e.target.closest('[data-pin]');
+  if (pin){ e.stopPropagation(); const n = pin.dataset.pin; S.pinned = S.pinned.includes(n) ? S.pinned.filter(x=>x!==n) : [...S.pinned,n]; render(); return; }
+  const f = e.target.closest('[data-fund]');
+  if (f){ S.selFund = f.dataset.fund; S.view='funds'; render(); return; }
+  const s = e.target.closest('[data-startup]');
+  if (s){ S.selStartup = s.dataset.startupFid+'|'+s.dataset.startupNom; S.view='startups'; render(); }
+});
+
+document.getElementById('panel').addEventListener('click', e => {
+  const g = e.target.closest('[data-goto]');
+  if (g){ e.preventDefault(); S.selStartup = g.dataset.goto; S.view='startups'; S.q=''; document.getElementById('q').value=''; render(); return; }
+  const gf = e.target.closest('[data-goto-fund]');
+  if (gf){ e.preventDefault(); S.selFund = gf.dataset.gotoFund; S.view='funds'; S.q=''; document.getElementById('q').value=''; render(); }
+});
+
+document.getElementById('btn-print').onclick = () => window.print();
+
+/* Le bac à sable de l'artefact ne permet pas un téléchargement direct via <a download> :
+   on passe par la capacité "downloads" (window.claude.use), qui affiche une confirmation
+   côté visiteur avant tout enregistrement. */
+let DOWNLOADS = null;
+(async () => {
+  try { DOWNLOADS = (window.claude && window.claude.use) ? await window.claude.use('downloads') : null; }
+  catch { DOWNLOADS = null; }
+  const btn = document.getElementById('btn-csv');
+  if (!DOWNLOADS) { btn.disabled = true; btn.title = "Export indisponible dans cette vue."; btn.style.opacity = .5; }
+})();
+
+document.getElementById('btn-csv').onclick = async () => {
+  if (!DOWNLOADS) return;
+  let rows, filename;
+  if (S.view === 'startups' && S.selStartup){
+    const s = STARTUPS.find(x => (x.fid+'|'+x.nom) === S.selStartup);
+    rows = [Object.keys(s)].concat([Object.values(s)]);
+    filename = `${s.nom}.csv`;
+  } else if (S.view === 'compare' && S.pinned.length){
+    const sel = S.pinned.map(fid => FONDS.find(f => f.fid === fid));
+    rows = [['Critère', ...sel.map(f => f.vehicule)]].concat(CMP_ROWS.map(([l,fn]) => [l, ...sel.map(fn)]));
+    filename = 'comparateur-fonds.csv';
+  } else {
+    const list = visibleFunds();
+    rows = [['Société de gestion','Véhicule','Statut','Millésime','Montant levé (M€)','AuM (M€)','TVPI','DPI','TRI (%)','MoC',
+             'Quartile','Ticket min (M€)','Ticket max (M€)','Participations','Stades','Stratégie','Zone']]
+      .concat(list.map(f => [f.nom,f.vehicule,f.statut,f.millesime,f.leve,f.aum,f.tvpi,f.dpi,f.irr!==null?f.irr*100:null,f.moc,
+             f.quartile,f.ticketMin,f.ticketMax,f.participations,
+             STAGES.filter(s=>f.stages[s]).join(' / '), f.strategie.join(' / '), f.geo.join(' / ')]));
+    filename = 'fonds-vc.csv';
+  }
+  const csv = '﻿' + rows.map(r => r.map(c => `"${(c===null||c===undefined?'':String(c)).replace(/"/g,'""')}"`).join(';')).join('\n');
+  try {
+    await DOWNLOADS.save({ filename, data: new Blob([csv], {type:'text/csv;charset=utf-8'}) });
+  } catch (err) {
+    if (err && err.code === 'declined') return; // le visiteur a refusé, rien à faire
+    alert("L'export n'a pas pu aboutir (" + (err && err.code || 'erreur inconnue') + ").");
+  }
+};
+
+/* ---------- rechargement depuis un Excel mis à jour ---------- */
+document.getElementById('btn-load').onclick = () => {
+  if (typeof XLSX === 'undefined'){
+    alert("La librairie de lecture Excel n'a pas pu se charger.\nConnectez-vous à Internet et rechargez la page pour importer un classeur.");
+    return;
+  }
+  document.getElementById('file').click();
+};
+const STAGE_KEYS = STAGES;
+document.getElementById('file').onchange = async e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  try {
+    const wb = XLSX.read(await file.arrayBuffer(), {type:'array'});
+    const sheet = n => wb.Sheets[n] ? XLSX.utils.sheet_to_json(wb.Sheets[n], {defval:null}) : null;
+    const fondsRows = sheet('Fonds');
+    if (!fondsRows) throw new Error("La feuille « Fonds » est introuvable dans ce classeur.");
+    const partRows = sheet('Participations') || [];
+
+    const num = v => (v===null||v===undefined||v==='') ? null : (typeof v==='number' ? v : parseFloat(String(v).replace(',','.')));
+    const lst = v => (v===null||v===undefined||v==='') ? [] : String(v).split(';').map(x=>x.trim()).filter(Boolean);
+
+    FONDS = fondsRows.map(r => ({
+      fid:r['Fonds_ID'], nom:r['Nom du fonds'], vehicule:r['Véhicule'], site:r['Site web'],
+      statut:r['Statut'], phase:r['Phase'], millesime:num(r['Millésime']),
+      geo:lst(r['Géographie']), strategie:lst(r['Stratégie']),
+      stages:Object.fromEntries(STAGE_KEYS.map(s=>[s, r[s]===1||r[s]===1.0||r[s]==='1'])),
+      aum:num(r['AuM (M€)']), leve:num(r['Montant levé (M€)']), alloue:num(r['Montant alloué (M€)']),
+      ticketMin:num(r['Ticket min (M€)']), ticketMax:num(r['Ticket max (M€)']),
+      participations:num(r['Nb participations (déclaré)']), exits:num(r['Nb exits']), insurtech:num(r['Nb InsurTech']),
+      tvpi:num(r['TVPI']), dpi:num(r['DPI']), rvpi:num(r['RVPI']), moc:num(r['MoC (MoM)']), irr:num(r['IRR (TRI)']), quartile:r['Quartile'],
+      deals:['01','02','03'].filter(n=>r[`Deal_${n}_Nom`]).map(n=>({nom:r[`Deal_${n}_Nom`],secteur:r[`Deal_${n}_Secteur`],stage:r[`Deal_${n}_Stage`],montant:num(r[`Deal_${n}_Montant_investi_M€`]),date:r[`Deal_${n}_Date_invest`]})),
+      source:r['Source_AuM'], maj:r['Date_MAJ']
+    }));
+    STARTUPS = partRows.map(r => ({
+      fid:r['Fonds_ID'], fondsNom:r['Nom du fonds'], vehicule:r['Véhicule'], nom:r['Start-up'], secteur:r['Secteur'],
+      stage:r['Stage financé'], montantFonds:num(r['Montant investi par le fonds (M€)']), totalLeve:num(r['Total levé par la start-up (M€)']),
+      dateCreation:r['Date de création'], dateInvest:r['Date d’investissement'], pays:r['Pays d’origine'], nbPays:num(r['Nb pays d’implantation']),
+      position:r['Positionnement (Leader/Minoritaire)'], capitalSocial:num(r['Capital social (k€)']), ca:num(r['CA (M€)']), valorisation:num(r['Valorisation (M€)']),
+      nbFonds:num(r['Nb fonds investisseurs']), nbToursFonds:num(r['Nb tours (fonds)']), nbToursTotal:num(r['Nb tours (total)']),
+      repositionnement:r['Repositionnement'], exit:r['Exit (O/N)'], mocExit:num(r['MoC exit']), moepExit:num(r['MoEP exit'])
+    }));
+    S.selFund = S.selStartup = null; S.pinned = [];
+    fillFilters(); render();
+    alert(`Import réussi : ${FONDS.length} fonds et ${STARTUPS.length} participations chargés.`);
+  } catch (err){
+    alert("L'import a échoué : " + err.message + "\nVérifiez que le classeur contient bien les onglets « Fonds » et « Participations » avec les mêmes colonnes que le modèle.");
+  }
+};
+
+fillFilters();
+render();
+</script>
