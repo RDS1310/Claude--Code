@@ -75,6 +75,17 @@ h2.sec{font-family:var(--font-display);font-size:24px;font-weight:400;margin:0 0
 
 .synth{font-family:var(--font-display);font-size:19px;line-height:1.5;font-style:italic;color:var(--ink);border-left:3px solid var(--petrol);padding:4px 0 4px 18px;margin-top:24px}
 
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.stat-tile{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:16px 18px}
+.stat-tile dt{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px}
+.stat-tile dd{margin:0;font-family:var(--font-display);font-size:30px;font-variant-numeric:tabular-nums}
+h3.sub{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.02em;margin:0 0 12px}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar-row{display:grid;grid-template-columns:130px 1fr 32px;align-items:center;gap:10px;font-size:13px}
+.bar-label{color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{height:8px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.bar-fill{display:block;height:100%;background:var(--petrol);border-radius:4px}
+.bar-n{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
 .pipe-group{margin-bottom:26px}
 .pipe-group h3{display:flex;align-items:center;gap:8px;font-size:15px;margin:0 0 10px}
 .badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;letter-spacing:.02em}
@@ -172,148 +183,67 @@ table.data tr.detail td{background:var(--paper);padding:14px 16px}
   </section>
 
   <section>
-    <h2 class="sec">Lecture actuelle du pipe</h2>
-    <p class="sec-note">Vue qualitative — au 15/09/2026, à partir de l'instruction en cours.</p>
+    <h2 class="sec">Panorama du pipe</h2>
+    <p class="sec-note">Vue agrégée uniquement — aucun nom de société, aucun statut individuel. Le détail
+      nominatif reste dans le fichier de suivi interne, hors de cette page.</p>
 
-    <div class="pipe-group">
-      <h3><span class="badge priorite">Priorité</span> Dossiers à suivre en priorité</h3>
-      <div class="pipe-cards">
-        <div class="pipe-card"><b>Spareka</b><p>Dossier précédemment écarté (fragilités financières, changement de modèle), en attente d'une décision sur la réouverture de l'instruction. Participation évoquée entre 0,5 M€ et 1,0 M€ aux côtés d'autres investisseurs institutionnels.</p></div>
-        <div class="pipe-card"><b>Apidata</b><p>Partenaire de GGVie, exemple retenu au CA de juillet pour illustrer l'élargissement possible au-delà de Volt'terre. Les échanges récents suggèrent toutefois un dossier davantage stratégique GGVie que GVI.</p><p class="absent">Non présent dans le fichier de suivi enrichi.</p></div>
-        <div class="pipe-card"><b>Archipell</b><p>SaaS de gestion des assurances de personnes, déjà étudié par GGVie. Projet commercial initial abandonné début 2026, mais nouvelles ambitions des fondateurs justifiant de conserver la cible à moyen terme.</p><p class="absent">Non présent dans le fichier de suivi enrichi.</p></div>
+    <div class="stat-row">
+      <div class="stat-tile"><dt>Start-ups suivies</dt><dd id="stat-total">—</dd></div>
+      <div class="stat-tile"><dt>Fonds VC mentionnés</dt><dd id="stat-vc">—</dd></div>
+      <div class="stat-tile"><dt>dont déjà suivis dans Radar</dt><dd id="stat-vc-connus">—</dd></div>
+    </div>
+
+    <div class="grid2" style="margin-top:28px">
+      <div>
+        <h3 class="sub">Répartition par statut d'instruction</h3>
+        <div class="bars" id="bars-statut"></div>
+      </div>
+      <div>
+        <h3 class="sub">Répartition par maturité</h3>
+        <div class="bars" id="bars-maturite"></div>
       </div>
     </div>
 
-    <div class="pipe-group">
-      <h3><span class="badge suivi">Watchlist</span> Dossiers à conserver en watchlist</h3>
-      <div class="pipe-cards">
-        <div class="pipe-card"><b>Weathermind</b><p>Équipe solide, maturité commerciale jugée insuffisante lors de la dernière analyse. Réévaluation envisagée.</p></div>
-        <div class="pipe-card"><b>Eukonomy</b><p>Partenariat opérationnel intéressant, maturité économique insuffisante à ce stade.</p></div>
-        <div class="pipe-card"><b>Prévisia, Stock CO2, NEC Initiatives, Dattak</b><p>Dossiers identifiés ou examinés, sans instruction active clairement documentée.</p></div>
-        <div class="pipe-card"><b>Agryco</b><p>Écarté historiquement : société jugée trop mature pour la thèse GVI.</p><p class="absent">Non présent dans le fichier de suivi enrichi.</p></div>
+    <div class="grid2" style="margin-top:24px">
+      <div>
+        <h3 class="sub">Secteurs les plus représentés</h3>
+        <div class="bars" id="bars-secteur"></div>
       </div>
-    </div>
-
-    <div class="pipe-group">
-      <h3><span class="badge portefeuille">Portefeuille</span> Déjà investies (suivi participations / follow-on)</h3>
-      <div class="pipe-cards">
-        <div class="pipe-card"><b>Certificall</b><p>En portefeuille GVI (flag Volt'terre GVI = Oui dans le fichier de suivi).</p></div>
-        <div class="pipe-card"><b>AlloBrain</b><p>En portefeuille GVI (flag Volt'terre GVI = Oui dans le fichier de suivi).</p></div>
+      <div>
+        <h3 class="sub">Lien avec le programme Volt'terre</h3>
+        <div class="bars" id="bars-volt"></div>
       </div>
-    </div>
-
-    <p class="sec-note">Le reste de l'univers de sourcing (Eyst, Finovox, Orakle Weather, MyBakup, inTouch, OKOA,
-      DutyAdvisor et les 180+ autres sociétés suivies) est consultable dans le tableau ci-dessous — c'est un
-      réservoir à qualifier, pas un pipe d'instruction active.</p>
-  </section>
-
-  <section>
-    <h2 class="sec">Vue d'ensemble du pipe</h2>
-    <p class="sec-note">Données « fiche entreprise » uniquement — contacts personnels et notes internes de négociation
-      exclus de cette page. Un chip <span class="vc-chip known" style="margin:0 2px">bleu</span> signale un fonds
-      déjà suivi dans Radar Insurtech VC.</p>
-    <div class="toolbar">
-      <input id="q" type="search" placeholder="Rechercher une start-up, un secteur…" autocomplete="off">
-      <select id="f-statut"><option value="">Tous statuts</option></select>
-      <select id="f-secteur"><option value="">Tous secteurs</option></select>
-      <select id="f-maturite"><option value="">Toutes maturités</option></select>
-    </div>
-    <p class="count" id="count"></p>
-    <div class="tbl-wrap">
-      <table class="data">
-        <thead><tr><th>Start-up</th><th>Statut</th><th>Secteur</th><th>Maturité</th><th>Total levé</th><th>Dernière MAJ</th></tr></thead>
-        <tbody id="tbody"></tbody>
-      </table>
     </div>
   </section>
 </div>
 
 <div class="foot">
-  Page générée le <span id="foot-date"></span> à partir du fichier de suivi interne GVI. Fait partie de
-  <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>.
+  Page générée le <span id="foot-date"></span> à partir du fichier de suivi interne GVI (agrégats uniquement).
+  Fait partie de <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>.
 </div>
 
 <script>window.__DATA__ = __DATA_JSON__;</script>
 <script>
 const RAW = window.__DATA__;
-const STARTUPS = RAW.startups;
-document.getElementById('meta').textContent = `${STARTUPS.length} start-ups suivies · généré le ${RAW.genere}`;
+document.getElementById('meta').textContent = `${RAW.total} start-ups suivies (agrégats) · généré le ${RAW.genere}`;
 document.getElementById('foot-date').textContent = RAW.genere;
+document.getElementById('stat-total').textContent = RAW.total;
+document.getElementById('stat-vc').textContent = RAW.fondsVcMentions;
+document.getElementById('stat-vc-connus').textContent = RAW.fondsVcConnus;
 
-const STATUT_LABEL = {
-  priorite:'Priorité', suivi:'Suivi actif', sourcing:'Sourcing', portefeuille:'Portefeuille',
-  ecarte:'Écarté', a_evaluer:'À évaluer', non_note:'Non noté'
-};
 const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 
-function fillSelect(id, vals, allLabel){
-  const el = document.getElementById(id);
-  el.innerHTML = `<option value="">${allLabel}</option>` + vals.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('');
+function bars(id, items){
+  const max = Math.max(...items.map(x=>x.n), 1);
+  document.getElementById(id).innerHTML = items.map(x => `
+    <div class="bar-row">
+      <span class="bar-label">${esc(x.label)}</span>
+      <span class="bar-track"><span class="bar-fill" style="width:${(x.n/max*100).toFixed(1)}%"></span></span>
+      <span class="bar-n">${x.n}</span>
+    </div>`).join('');
 }
-fillSelect('f-statut', Object.keys(STATUT_LABEL).filter(k=>STARTUPS.some(s=>s.statut===k)), 'Tous statuts');
-fillSelect('f-secteur', [...new Set(STARTUPS.map(s=>s.secteur).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr')), 'Tous secteurs');
-fillSelect('f-maturite', [...new Set(STARTUPS.map(s=>s.maturite).filter(Boolean))].sort(), 'Toutes maturités');
-
-let expanded = null;
-const state = { q:'', statut:'', secteur:'', maturite:'' };
-
-function visible(){
-  const q = norm(state.q);
-  return STARTUPS.filter(s => {
-    if (q && !(norm(s.nom).includes(q) || norm(s.secteur||'').includes(q) || norm(s.theme||'').includes(q))) return false;
-    if (state.statut && s.statut !== state.statut) return false;
-    if (state.secteur && s.secteur !== state.secteur) return false;
-    if (state.maturite && s.maturite !== state.maturite) return false;
-    return true;
-  });
-}
-
-function detailRow(s){
-  const vc = s.fondsVC.length ? s.fondsVC.map(f=>`<span class="vc-chip ${f.connu?'known':''}">${esc(f.nom)}</span>`).join('') : '—';
-  return `<tr class="detail"><td colspan="6"><div class="dl">
-    <div><dt>Type</dt><dd>${esc(s.type||'—')}</dd></div>
-    <div><dt>Sous-secteurs</dt><dd>${esc([s.sousSecteur1,s.sousSecteur2].filter(Boolean).join(' · ')||'—')}</dd></div>
-    <div><dt>Pays / Implantation</dt><dd>${esc(s.pays||'—')}${s.implantation?` · ${esc(s.implantation)}`:''}</dd></div>
-    <div><dt>Création</dt><dd>${esc(s.creation||'—')}</dd></div>
-    <div><dt>CA / ETP</dt><dd>${esc(s.ca||'—')} · ${esc(s.etp||'—')}</dd></div>
-    <div><dt>Dernière levée</dt><dd>${esc(s.derniereLevee||'—')}</dd></div>
-    <div><dt>Concurrents</dt><dd>${esc(s.concurrents||'—')}</dd></div>
-    <div><dt>Volt'terre (Inno. / GVI)</dt><dd>${esc(s.voltInno||'—')} / ${esc(s.voltGVI||'—')}</dd></div>
-    <div><dt>Fonds VC au capital</dt><dd>${vc}</dd></div>
-    ${s.pitch?`<div class="pitch-full"><dt style="color:var(--muted);font-size:12px;margin-bottom:4px">Pitch</dt>${esc(s.pitch)}</div>`:''}
-  </div></td></tr>`;
-}
-
-function render(){
-  const list = visible();
-  document.getElementById('count').textContent = `${list.length} société${list.length>1?'s':''}`;
-  const tb = document.getElementById('tbody');
-  tb.innerHTML = list.map((s,i) => `
-    <tr class="row" data-i="${i}">
-      <td><b>${esc(s.nom)}</b></td>
-      <td><span class="badge ${s.statut}">${STATUT_LABEL[s.statut]}</span></td>
-      <td>${esc(s.secteur||'—')}</td>
-      <td>${esc(s.maturite||'—')}</td>
-      <td>${esc(s.totalLeve||'—')}</td>
-      <td>${esc(s.maj||'—')}</td>
-    </tr>
-  `).join('');
-  tb.querySelectorAll('tr.row').forEach(tr => {
-    tr.onclick = () => {
-      const i = tr.dataset.i;
-      const next = tr.nextElementSibling;
-      if (next && next.classList.contains('detail')) { next.remove(); return; }
-      tb.querySelectorAll('tr.detail').forEach(d=>d.remove());
-      tr.insertAdjacentHTML('afterend', detailRow(list[i]));
-    };
-  });
-}
-
-document.getElementById('q').oninput = e => { state.q = e.target.value; render(); };
-document.getElementById('f-statut').onchange = e => { state.statut = e.target.value; render(); };
-document.getElementById('f-secteur').onchange = e => { state.secteur = e.target.value; render(); };
-document.getElementById('f-maturite').onchange = e => { state.maturite = e.target.value; render(); };
-
-render();
+bars('bars-statut', RAW.parStatut);
+bars('bars-maturite', RAW.parMaturite);
+bars('bars-secteur', RAW.parSecteur);
+bars('bars-volt', RAW.voltGVI);
 </script>

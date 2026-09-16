@@ -65,6 +65,38 @@ def statut_de(row) -> str:
     return {"3": "priorite", "2": "suivi", "1": "sourcing", "0": "ecarte"}.get(interet, "a_evaluer")
 
 
+STATUT_LABEL = {
+    "priorite": "Priorité", "suivi": "Suivi actif", "sourcing": "Sourcing",
+    "portefeuille": "Portefeuille", "ecarte": "Écarté", "a_evaluer": "À évaluer",
+    "non_note": "Non noté",
+}
+ORDRE_STATUT = ["portefeuille", "priorite", "suivi", "sourcing", "a_evaluer", "ecarte", "non_note"]
+ORDRE_MATURITE = ["Pré-seed", "Pré-Seed", "Seed", "Pré-série A", "Pré-Série A", "Série A", "Série B",
+                   "Série C", "Série D", "Série E", "Série F", "Scale up"]
+
+
+def canon_maturite(v):
+    """Normalise les variantes de casse/accent présentes dans le fichier source (ex. 'Serie B')."""
+    if not v:
+        return v
+    for ref in ORDRE_MATURITE:
+        if v.strip().lower().replace("é", "e") == ref.strip().lower().replace("é", "e"):
+            return ref
+    return v
+
+
+def compte(vals, ordre=None):
+    from collections import Counter
+    c = Counter(v for v in vals if v)
+    items = list(c.items())
+    if ordre:
+        rang = {v: i for i, v in enumerate(ordre)}
+        items.sort(key=lambda kv: (rang.get(kv[0], len(ordre)), -kv[1]))
+    else:
+        items.sort(key=lambda kv: -kv[1])
+    return [{"label": k, "n": v} for k, v in items]
+
+
 def main() -> int:
     if not ENTREE.exists():
         print(f"ERREUR : {ENTREE} introuvable.")
@@ -73,63 +105,60 @@ def main() -> int:
     su = pd.read_excel(ENTREE, "Start-up")
     su = su.astype(object).where(pd.notna(su), None)
 
-    # Base des fonds déjà suivis dans Radar Insurtech VC (pour le rapprochement croisé)
+    # Base des fonds déjà suivis dans Radar Insurtech VC (pour un comptage agrégé uniquement)
     fonds_connus = set()
     radar = BASE_DIR / "radar_insurtech_vc.html"
     if radar.exists():
         m = re.search(r"window\.__DATA__ = (.*?);\s*</script>", radar.read_text(encoding="utf-8"), re.S)
         if m:
-            data = json.loads(m.group(1))
-            fonds_connus = {f["nom"].strip().lower() for f in data["fonds"]}
+            data_radar = json.loads(m.group(1))
+            fonds_connus = {f["nom"].strip().lower() for f in data_radar["fonds"]}
 
     def connu(nom: str) -> bool:
-        if not nom:
-            return False
-        n = nom.strip().lower()
-        return any(n in fc or fc in n for fc in fonds_connus)
+        n = (nom or "").strip().lower()
+        return bool(n) and any(n in fc or fc in n for fc in fonds_connus)
 
-    startups = []
+    statuts, secteurs, maturites, volt_inno, volt_gvi = [], [], [], [], []
+    fonds_vc_mentions, fonds_vc_connus = 0, 0
+    total = 0
     for _, r in su.iterrows():
-        nom = s(r.get("Start-up"))
-        if not nom:
+        if not s(r.get("Start-up")):
             continue
-        fonds_vc = [s(r.get(f"Fonds de VC {i}")) for i in range(1, 6)]
-        fonds_vc = [{"nom": f, "connu": connu(f)} for f in fonds_vc if f]
-        startups.append({
-            "nom": nom,
-            "statut": statut_de(r),
-            "interet": s(r.get("Intérêt GVI")),
-            "type": s(r.get("Type ")),
-            "maturite": s(r.get("Maturité")),
-            "creation": s(r.get("Création")),
-            "pays": s(r.get("Pays\nd'origine")),
-            "theme": s(r.get("Thème")),
-            "secteur": s(r.get("Secteur")),
-            "sousSecteur1": s(r.get("Sous-Secteur\n 1")),
-            "sousSecteur2": s(r.get("Sous-secteur\n 2")),
-            "pitch": s(r.get("Pitch")),
-            "implantation": s(r.get("Implantation")),
-            "concurrents": s(r.get("Concurrents")),
-            "ca": s(r.get("CA")),
-            "etp": s(r.get("ETP")),
-            "totalLeve": s(r.get("Total  levé")),
-            "derniereLevee": s(r.get("Dernière levée")),
-            "fondsVC": fonds_vc,
-            "voltInno": s(r.get("Volt'terre \nInno.")),
-            "voltGVI": s(r.get("Volt'terre \nGVI")),
-            "maj": s(r.get("MAJ")),
-        })
+        total += 1
+        statuts.append(STATUT_LABEL[statut_de(r)])
+        secteurs.append(s(r.get("Secteur")))
+        maturites.append(canon_maturite(s(r.get("Maturité"))))
+        vi = s(r.get("Volt'terre \nInno.")) or "Non renseigné"
+        vg = s(r.get("Volt'terre \nGVI")) or "Non renseigné"
+        volt_inno.append(vi)
+        volt_gvi.append(vg)
+        for i in range(1, 6):
+            f = s(r.get(f"Fonds de VC {i}"))
+            if f:
+                fonds_vc_mentions += 1
+                if connu(f):
+                    fonds_vc_connus += 1
 
-    data = {"genere": pd.Timestamp.now().strftime("%d/%m/%Y"), "startups": startups}
+    data = {
+        "genere": pd.Timestamp.now().strftime("%d/%m/%Y"),
+        "total": total,
+        "parStatut": sorted(compte(statuts), key=lambda kv: ORDRE_STATUT.index(
+            [k for k, v in STATUT_LABEL.items() if v == kv["label"]][0])),
+        "parSecteur": compte(secteurs)[:12],
+        "parMaturite": compte(maturites, ORDRE_MATURITE),
+        "voltInno": compte(volt_inno),
+        "voltGVI": compte(volt_gvi),
+        "fondsVcMentions": fonds_vc_mentions,
+        "fondsVcConnus": fonds_vc_connus,
+    }
 
     template = (BASE_DIR / "_gvi_template.html").read_text(encoding="utf-8")
     html = template.replace("__DATA_JSON__", json.dumps(data, ensure_ascii=False))
     SORTIE.write_text(html, encoding="utf-8")
 
-    print(f"Page produite : {SORTIE}")
-    print(f"Start-ups     : {len(startups)}")
-    from collections import Counter
-    print("Répartition   :", Counter(x["statut"] for x in startups))
+    print(f"Page produite (agrégats uniquement, aucun nom de société) : {SORTIE}")
+    print(f"Start-ups comptabilisées : {total}")
+    print("Par statut :", {x['label']: x['n'] for x in data['parStatut']})
     return 0
 
 
