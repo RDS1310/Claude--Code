@@ -1,0 +1,152 @@
+<title>Veille Insurtech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16211E; --paper:#E7EBE6; --surface:#FFFFFF;
+  --petrol:#0C5C5E; --petrol-soft:#E3EEEE;
+  --ochre:#A8681F; --ochre-soft:#F8F0E4;
+  --muted:#6C7873; --line:#CBD3CD; --line-soft:#E1E6E1;
+  --good:#3F7A4E; --good-soft:#E6F0E7;
+  --font-display:"Newsreader",Georgia,serif;
+  --font-body:"IBM Plex Sans",system-ui,sans-serif;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E9EDE8; --paper:#12100E; --surface:#1B1816;
+    --petrol:#5BC2B7; --petrol-soft:#17302E;
+    --ochre:#E3AD70; --ochre-soft:#2E2416;
+    --muted:#A39C93; --line:#332E29; --line-soft:#242019;
+    --good:#7BBF8C; --good-soft:#1B2A1E;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E9EDE8; --paper:#12100E; --surface:#1B1816;
+  --petrol:#5BC2B7; --petrol-soft:#17302E;
+  --ochre:#E3AD70; --ochre-soft:#2E2416;
+  --muted:#A39C93; --line:#332E29; --line-soft:#242019;
+  --good:#7BBF8C; --good-soft:#1B2A1E;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--petrol)}
+h1,h2,p{text-wrap:balance}
+:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+
+.topbar{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding:14px 24px;border-bottom:1px solid var(--line);background:var(--surface)}
+.brand{font-family:var(--font-display);font-size:20px;font-weight:500}
+.brand span{color:var(--petrol)}
+.back{margin-left:auto;font-size:13px;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:5px 11px;border-radius:3px}
+.back:hover{border-color:var(--petrol);color:var(--petrol)}
+
+.wrap{max-width:920px;margin:0 auto;padding:36px 24px 90px}
+.eyebrow{color:var(--petrol);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+h1.title{font-family:var(--font-display);font-size:36px;font-weight:400;letter-spacing:-.015em;margin:0 0 10px;line-height:1.1}
+.lede{color:var(--muted);font-size:16px;max-width:65ch;margin:0 0 30px}
+
+.status{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.status-tile{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:14px 18px;flex:1;min-width:150px}
+.status-tile dt{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px}
+.status-tile dd{margin:0;font-family:var(--font-display);font-size:19px}
+
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:6px;padding:32px 28px;text-align:center;margin-bottom:36px}
+.empty h2{font-family:var(--font-display);font-weight:400;font-size:21px;margin:0 0 8px}
+.empty p{color:var(--muted);font-size:14px;max-width:48ch;margin:0 auto}
+
+.feed{display:flex;flex-direction:column;gap:0}
+.entry{display:grid;grid-template-columns:88px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-soft)}
+.entry-date{color:var(--muted);font-size:12.5px;padding-top:2px}
+.entry-body b{font-size:14.5px}
+.tag{display:inline-block;font-size:10.5px;font-weight:600;padding:1px 7px;border-radius:20px;margin-left:8px;vertical-align:1px;letter-spacing:.02em}
+.tag.fonds{background:var(--petrol-soft);color:var(--petrol)}
+.tag.startup{background:var(--ochre-soft);color:var(--ochre)}
+.entry-body p{margin:4px 0 0;font-size:13.5px;color:var(--ink)}
+.entry-body .src{font-size:12px;color:var(--muted);margin-top:4px}
+
+h2.sec{font-family:var(--font-display);font-size:20px;font-weight:400;margin:36px 0 4px}
+.sec-note{color:var(--muted);font-size:13.5px;margin:0 0 16px;max-width:70ch}
+.method{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:16px 18px;font-size:13.5px}
+.method dt{font-weight:500;margin-top:10px}
+.method dt:first-child{margin-top:0}
+.method dd{margin:2px 0 0;color:var(--muted)}
+
+.foot{max-width:920px;margin:50px auto 0;padding:16px 24px;border-top:1px solid var(--line-soft);color:var(--muted);font-size:12px}
+.foot a{color:var(--petrol)}
+
+@media (max-width:640px){
+  .wrap{padding:24px 16px 60px}
+  h1.title{font-size:28px}
+  .entry{grid-template-columns:1fr}
+  .entry-date{padding-top:0}
+}
+</style>
+
+<header class="topbar">
+  <div class="brand">Veille <span>Insurtech</span></div>
+  <a class="back" href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">← Radar Insurtech VC</a>
+</header>
+
+<div class="wrap">
+  <div class="eyebrow">Suivi hebdomadaire automatisé</div>
+  <h1 class="title">Actualité des fonds et du pipe GVI</h1>
+  <p class="lede">Nouvelles levées et actualités notables détectées chaque semaine parmi les 111 fonds suivis
+    dans Radar Insurtech VC et les start-ups actives du pipe GVI — générées automatiquement, à vérifier avant diffusion.</p>
+
+  <div class="status">
+    <div class="status-tile"><dt>Dernière passe</dt><dd id="stat-date">—</dd></div>
+    <div class="status-tile"><dt>Entrées détectées</dt><dd id="stat-total">—</dd></div>
+    <div class="status-tile"><dt>Prochaine passe</dt><dd id="stat-next">—</dd></div>
+  </div>
+
+  <div id="empty-state" class="empty" hidden>
+    <h2>Première veille pas encore lancée</h2>
+    <p>Cette page se remplit automatiquement à la première exécution programmée. Le contenu ci-dessous
+      décrit la méthode — aucune actualité n'a encore été collectée.</p>
+  </div>
+
+  <div class="feed" id="feed"></div>
+
+  <h2 class="sec">Méthode</h2>
+  <p class="sec-note">Pour rester soutenable dans la durée, la veille ne recherche pas individuellement les
+    226 entités suivies chaque semaine — elle s'appuie sur des roundups déjà agrégés par la presse, complétés
+    par une vérification ciblée sur l'échantillon actif.</p>
+  <div class="method">
+    <dt>Flux fonds</dt>
+    <dd>Roundups hebdomadaires (EU-Startups, Maddyness, Sifted, CFNEWS…) croisés avec les 111 fonds de Radar Insurtech VC.</dd>
+    <dt>Flux start-ups</dt>
+    <dd>Même croisement, restreint aux start-ups à statut actif du pipe GVI (Priorité, Suivi actif, Sourcing — 115 sociétés ; Écarté/Non noté/À évaluer exclus).</dd>
+    <dt>Fréquence</dt>
+    <dd id="method-freq">à définir</dd>
+  </div>
+</div>
+
+<div class="foot">
+  Page régénérée automatiquement. Fait partie de <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>.
+</div>
+
+<script>window.__DATA__ = __DATA_JSON__;</script>
+<script>
+const RAW = window.__DATA__;
+const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+document.getElementById('stat-date').textContent = RAW.derniereMaj || '—';
+document.getElementById('stat-total').textContent = RAW.entries.length;
+document.getElementById('stat-next').textContent = RAW.prochaine || '—';
+document.getElementById('method-freq').textContent = RAW.frequence || 'à définir';
+
+if (!RAW.entries.length){
+  document.getElementById('empty-state').hidden = false;
+} else {
+  document.getElementById('feed').innerHTML = RAW.entries.map(e => `
+    <div class="entry">
+      <div class="entry-date">${esc(e.date)}</div>
+      <div class="entry-body">
+        <b>${esc(e.titre)}</b><span class="tag ${e.type}">${e.type==='fonds'?'Fonds':'Start-up'}</span>
+        <p>${esc(e.resume)}</p>
+        ${e.source?`<div class="src">${esc(e.source)}${e.url?` — <a href="${esc(e.url)}" target="_blank" rel="noopener">source</a>`:''}</div>`:''}
+      </div>
+    </div>`).join('');
+}
+</script>
