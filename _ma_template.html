@@ -58,6 +58,19 @@ a{color:inherit}
 .section-head h2{font-family:var(--font-display);font-weight:400;font-size:24px;margin:0 0 4px}
 .section-head p{color:var(--muted);font-size:13.5px;margin:0;max-width:60ch}
 
+.tendances{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;padding:16px 0;border-bottom:1px solid var(--line)}
+.tendances-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tendances-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tendance-tag{font-size:12.5px;background:var(--petrol-soft);color:var(--petrol);padding:3px 10px;border-radius:20px}
+.tendance-tag b{font-variant-numeric:tabular-nums;font-weight:600}
+
+table.comps{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--surface);min-width:480px}
+table.comps th{text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.02em;color:var(--muted);padding:8px 4px;border-bottom:1px solid var(--ink)}
+table.comps td{padding:8px 4px;border-bottom:1px solid var(--line-soft)}
+table.comps td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.comps a{color:var(--ink);text-decoration:none}
+table.comps a:hover{color:var(--petrol);text-decoration:underline}
+
 .stories{padding:4px 0}
 .story{padding:26px 0;border-bottom:1px solid var(--line)}
 .story .kicker{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:20px;margin-right:8px}
@@ -121,6 +134,11 @@ a{color:inherit}
 </div>
 
 <div class="issue">
+  <div class="tendances" id="tendances" hidden>
+    <span class="tendances-label">Tendances</span>
+    <div class="tendances-tags" id="tendances-tags"></div>
+  </div>
+
   <div class="section-head">
     <h2>Opérations confirmées</h2>
     <p>Fusions, acquisitions et rapprochements annoncés publiquement, quel que soit leur statut d'avancement.</p>
@@ -132,6 +150,15 @@ a{color:inherit}
     <p>Dossiers évoqués par la presse sans confirmation officielle des parties.</p>
   </div>
   <div class="stories" id="stories-rumeurs"></div>
+
+  <div class="section-head" id="comps-head" hidden>
+    <h2>Comparables de valorisation</h2>
+    <p>Opérations confirmées avec valorisation chiffrée, classées par taille — repère pour situer des discussions de valorisation.</p>
+  </div>
+  <div class="tbl-wrap" id="comps-wrap" hidden><table class="comps">
+    <thead><tr><th>Cible</th><th>Secteur</th><th>Valorisation</th><th>Multiple</th><th>Date</th></tr></thead>
+    <tbody id="comps-body"></tbody>
+  </table></div>
 
   <details class="methodology">
     <summary>Méthodologie &amp; contexte marché</summary>
@@ -191,5 +218,23 @@ if (ctx){
   document.getElementById('contexte-marche').innerHTML = `<b>Contexte marché</b><br>
     ${esc(ctx.operationsEurope2025)} opérations M&amp;A annoncées en Europe sur l'assurance en 2025 (${esc(ctx.evolutionVsN1)}),
     dont ${esc(ctx.partCourtageDansOperations)} portées par le courtage. ${esc(ctx.note)}`;
+}
+
+if (RAW.tendances && RAW.tendances.length){
+  document.getElementById('tendances').hidden = false;
+  document.getElementById('tendances-tags').innerHTML = RAW.tendances.map(t =>
+    `<span class="tendance-tag"><b>${t.n}</b> ${esc(t.theme)}</span>`).join('');
+}
+
+if (RAW.comps && RAW.comps.length){
+  document.getElementById('comps-head').hidden = false;
+  document.getElementById('comps-wrap').hidden = false;
+  document.getElementById('comps-body').innerHTML = RAW.comps.map(c => `<tr>
+    <td>${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.cible)}</a>` : esc(c.cible)}</td>
+    <td>${esc(c.secteur||'—')}</td>
+    <td class="num">${c.valorisationM >= 1000 ? (c.valorisationM/1000).toFixed(2)+' Md€' : c.valorisationM+' M€'}</td>
+    <td class="num">${c.multiple ? c.multiple+'×' : '—'}</td>
+    <td class="num">${esc(c.date||'—')}</td>
+  </tr>`).join('');
 }
 </script>

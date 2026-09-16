@@ -15,11 +15,18 @@ from __future__ import annotations
 
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 ENTREE = BASE_DIR / "veille_data" / "entries.json"
 SORTIE = BASE_DIR / "veille_insurtech.html"
+
+
+def calculer_tendances(entries: list[dict]) -> list[dict]:
+    """Tally des thèmes des entrées pour le panneau Tendances."""
+    themes = [e.get("theme") for e in entries if e.get("theme")]
+    return [{"theme": t, "n": n} for t, n in Counter(themes).most_common()]
 
 
 def main() -> int:
@@ -33,6 +40,7 @@ def main() -> int:
 
     data = json.loads(ENTREE.read_text(encoding="utf-8"))
     data["entries"] = sorted(data.get("entries", []), key=lambda e: e.get("date", ""), reverse=True)
+    data["tendances"] = calculer_tendances(data["entries"])
 
     template = (BASE_DIR / "_veille_template.html").read_text(encoding="utf-8")
     html = template.replace("__DATA_JSON__", json.dumps(data, ensure_ascii=False))

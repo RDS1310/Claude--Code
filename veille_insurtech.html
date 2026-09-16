@@ -52,6 +52,12 @@ a{color:inherit}
 
 .edition-bar{display:flex;justify-content:space-between;align-items:center;max-width:640px;margin:0 auto;padding:10px 0;font-family:var(--font-mono);font-size:11.5px;color:var(--muted);letter-spacing:.02em;border-bottom:1px solid var(--line);text-transform:uppercase}
 
+.tendances{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px;padding:16px 0;border-bottom:1px solid var(--line)}
+.tendances-label{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tendances-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tendance-tag{font-size:12.5px;background:var(--petrol-soft);color:var(--petrol);padding:3px 10px;border-radius:20px}
+.tendance-tag b{font-variant-numeric:tabular-nums;font-weight:600}
+
 .stories{padding:8px 0}
 .story{padding:30px 0;border-bottom:1px solid var(--line)}
 .story:first-of-type{padding-top:34px}
@@ -111,6 +117,11 @@ a{color:inherit}
 </div>
 
 <div class="issue">
+  <div class="tendances" id="tendances" hidden>
+    <span class="tendances-label">Tendances</span>
+    <div class="tendances-tags" id="tendances-tags"></div>
+  </div>
+
   <div id="empty-state" class="empty" hidden>
     <h2>Première édition pas encore lancée</h2>
     <p>Cette page se remplit automatiquement à la première exécution programmée — rien à afficher pour l'instant.</p>
@@ -130,7 +141,7 @@ a{color:inherit}
 
 <div class="foot">Fait partie de <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>.</div>
 
-<script>window.__DATA__ = {"entries": [{"date": "14/09/2026", "type": "fonds", "titre": "Alven acte sa succession et prépare un nouveau fonds", "resume": "Rodolphe Menegaux devient directeur général d'Alven Capital, qui finalise la transmission progressive du capital à sa nouvelle génération d'associés et prévoit le lancement d'une nouvelle levée d'ici la fin d'année.", "source": "Maddyness", "url": "https://www.maddyness.com/2026/09/14/apres-des-mois-dincertitude-alven-acte-sa-succession-et-prepare-un-nouveau-fonds/"}, {"date": "10/09/2026", "type": "fonds", "titre": "XAnge (via La Poste Ventures) et Ring Capital au tour de seed de Ed.ai (5 M€)", "resume": "La start-up Ed.ai (correction de copies assistée par IA) lève 5 M€ en seed avec la participation de La Poste Ventures — fonds géré par XAnge — et de Ring Capital, aux côtés de Bpifrance (Digital Venture) et 50 Partners. Hors périmètre insurtech, mais mouvement notable de deux fonds suivis dans Radar Insurtech VC.", "source": "Maddyness", "url": "https://www.maddyness.com/2026/09/10/ed-ai-leve-5-millions-deuros-pour-aider-les-enseignants-a-mieux-tirer-profit-des-copies-de-leurs-eleves-avec-lia/"}], "derniereMaj": "16/09/2026", "prochaine": "21/09/2026", "frequence": "Hebdomadaire (lundi)"};</script>
+<script>window.__DATA__ = {"entries": [{"date": "14/09/2026", "type": "fonds", "theme": "Succession & gouvernance de fonds", "titre": "Alven acte sa succession et prépare un nouveau fonds", "resume": "Rodolphe Menegaux devient directeur général d'Alven Capital, qui finalise la transmission progressive du capital à sa nouvelle génération d'associés et prévoit le lancement d'une nouvelle levée d'ici la fin d'année.", "source": "Maddyness", "url": "https://www.maddyness.com/2026/09/14/apres-des-mois-dincertitude-alven-acte-sa-succession-et-prepare-un-nouveau-fonds/"}, {"date": "10/09/2026", "type": "fonds", "theme": "Activité des fonds hors insurtech", "titre": "XAnge (via La Poste Ventures) et Ring Capital au tour de seed de Ed.ai (5 M€)", "resume": "La start-up Ed.ai (correction de copies assistée par IA) lève 5 M€ en seed avec la participation de La Poste Ventures — fonds géré par XAnge — et de Ring Capital, aux côtés de Bpifrance (Digital Venture) et 50 Partners. Hors périmètre insurtech, mais mouvement notable de deux fonds suivis dans Radar Insurtech VC.", "source": "Maddyness", "url": "https://www.maddyness.com/2026/09/10/ed-ai-leve-5-millions-deuros-pour-aider-les-enseignants-a-mieux-tirer-profit-des-copies-de-leurs-eleves-avec-lia/"}], "derniereMaj": "16/09/2026", "prochaine": "21/09/2026", "frequence": "Hebdomadaire (lundi)", "tendances": [{"theme": "Succession & gouvernance de fonds", "n": 1}, {"theme": "Activité des fonds hors insurtech", "n": 1}]};</script>
 <script>
 const RAW = window.__DATA__;
 const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -153,5 +164,11 @@ if (!RAW.entries.length){
   document.getElementById('empty-state').hidden = false;
 } else {
   document.getElementById('feed').innerHTML = RAW.entries.map(storyHtml).join('');
+}
+
+if (RAW.tendances && RAW.tendances.length){
+  document.getElementById('tendances').hidden = false;
+  document.getElementById('tendances-tags').innerHTML = RAW.tendances.map(t =>
+    `<span class="tendance-tag"><b>${t.n}</b> ${esc(t.theme)}</span>`).join('');
 }
 </script>
