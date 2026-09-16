@@ -1,0 +1,74 @@
+{
+ "confirmees": [
+  {
+   "date": "2026-09",
+   "acquereur": "Malakoff Humanis",
+   "cible": "Kerialis Prévoyance",
+   "secteur": "Prévoyance — professions juridiques/comptables",
+   "type": "Fusion",
+   "statut": "Protocole de fusion signé (18/04/2026), AG favorables, fusion effective au 01/11/2026",
+   "valorisation": null,
+   "resume": "Rapprochement de deux acteurs de la protection sociale : Kerialis accède aux synergies produits/distribution de Malakoff Humanis pour accélérer sur les professions juridiques et comptables ; Malakoff Humanis renforce sa présence sur ces marchés ainsi que sur l'épargne, les TPE/PME et les indépendants.",
+   "source": "Newsroom Malakoff Humanis",
+   "url": "https://newsroom.malakoffhumanis.com/actualites/kerialis-rejoint-malakoff-humanis-une-nouvelle-etape-structurante-pour-le-developpement-des-deux-groupes-bddfc-63a59.html"
+  },
+  {
+   "date": "2026",
+   "acquereur": "Malakoff Humanis",
+   "cible": "Magnolia (courtier assurance emprunteur)",
+   "secteur": "Courtage — assurance emprunteur",
+   "type": "Acquisition majoritaire",
+   "statut": "Acquisition finalisée",
+   "valorisation": "≈300 M€ (environ 18x le résultat du courtier)",
+   "resume": "Malakoff Humanis remporte les enchères face à AG2R La Mondiale, Odealim et CNP Assurances pour prendre le contrôle de Magnolia, spécialiste du courtage en assurance emprunteur alternative — renforce le pôle assurance de prêt du groupe, après les rapprochements avec La France Mutualiste (2024) et Union notariale financière (été 2025).",
+   "source": "Argus de l'assurance / En-Contact",
+   "url": "https://www.argusdelassurance.com/assurance-de-personnes/rachat-du-courtier-magnolia-decouvrez-quel-groupe-de-protection-sociale-a-remporte-la-mise.237799"
+  },
+  {
+   "date": "2026",
+   "acquereur": "Mutuelle Ociane Matmut + Mgéfi",
+   "cible": "Fusion créant Matmut Santé Prévoyance",
+   "secteur": "Mutuelle santé/prévoyance",
+   "type": "Fusion",
+   "statut": "Sous réserve d'approbation ACPR, lancement prévu 01/01/2027",
+   "valorisation": null,
+   "resume": "Naissance de Matmut Santé Prévoyance, regroupant les activités santé et prévoyance des deux mutuelles — environ 1,4 M de personnes protégées, positionnement sur tous les segments (particuliers, entreprises, fonction publique).",
+   "source": "Argus de l'assurance",
+   "url": "https://www.argusdelassurance.com/les-assureurs/mutuelles/mutuelles-vers-une-nouvelle-fusion.232366"
+  },
+  {
+   "date": "2026",
+   "acquereur": "La Prévoyance artisanale, commerciale et salariale",
+   "cible": "La Protection Mutuelle et Familiale (Strasbourg)",
+   "secteur": "Mutuelle — transfert de portefeuille",
+   "type": "Fusion-absorption",
+   "statut": "Avis publié, délai créanciers de 2 mois en cours",
+   "valorisation": null,
+   "resume": "Transfert par fusion-absorption du portefeuille de bulletins d'adhésion et de contrats de La Protection Mutuelle et Familiale vers La Prévoyance artisanale, commerciale et salariale, deux mutuelles basées à Strasbourg.",
+   "source": "Légifrance (avis officiel)",
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054556125"
+  }
+ ],
+ "rumeurs": [
+  {
+   "date": "2026",
+   "acteurs_pressentis": "Belfius (bancassureur belge) — CNP Assurances également cité comme intéressé",
+   "cible": "Acheel (assurtech 100% digitale)",
+   "secteur": "Assurtech — distribution digitale",
+   "valorisation_indicative": "≈300 M€",
+   "statut": "Rumeur de marché — non confirmée par les parties",
+   "resume": "Belfius étudierait le rachat d'Acheel pour s'implanter sur le marché français dans le cadre de sa stratégie d'internationalisation à horizon 2030. Acheel revendique 850 000 contrats (+40 %) et une rentabilité atteinte dès 2023 ; CNP Assurances serait également positionné sur le dossier.",
+   "source": "Presse spécialisée assurance (à recouper)",
+   "url": null
+  }
+ ],
+ "contexteMarche": {
+  "operationsEurope2025": 789,
+  "evolutionVsN1": "+14% vs 694 opérations en 2024",
+  "partCourtageDansOperations": "≈90% des opérations de M&A assurance en Europe",
+  "note": "Source : baromètre FTI Consulting / Argus de l'assurance. Fitch anticipe une accélération du M&A assurance européen en 2026, portée par la position Solvency II des acteurs et la réforme prévue au 01/01/2027."
+ },
+ "derniereMaj": "16/09/2026",
+ "prochaine": "à définir (cadence mensuelle proposée)",
+ "frequence": "Mensuelle (jour à définir)"
+}

@@ -1,0 +1,197 @@
+<title>Étude de Marché — M&amp;A Assurance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16211E; --paper:#E7EBE6; --surface:#FFFFFF;
+  --petrol:#0C5C5E; --petrol-soft:#E3EEEE;
+  --ochre:#A8681F; --ochre-soft:#F8F0E4;
+  --muted:#6C7873; --line:#CBD3CD; --line-soft:#E1E6E1;
+  --good:#3F7A4E; --good-soft:#E6F0E7;
+  --warn:#A03E3E; --warn-soft:#F6E6E6;
+  --font-display:"Newsreader",Georgia,serif;
+  --font-body:"IBM Plex Sans",system-ui,sans-serif;
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    --ink:#E9EDE8; --paper:#12100E; --surface:#1B1816;
+    --petrol:#5BC2B7; --petrol-soft:#17302E;
+    --ochre:#E3AD70; --ochre-soft:#2E2416;
+    --muted:#A39C93; --line:#332E29; --line-soft:#242019;
+    --good:#7BBF8C; --good-soft:#1B2A1E;
+    --warn:#E38686; --warn-soft:#2E1A1A;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E9EDE8; --paper:#12100E; --surface:#1B1816;
+  --petrol:#5BC2B7; --petrol-soft:#17302E;
+  --ochre:#E3AD70; --ochre-soft:#2E2416;
+  --muted:#A39C93; --line:#332E29; --line-soft:#242019;
+  --good:#7BBF8C; --good-soft:#1B2A1E;
+  --warn:#E38686; --warn-soft:#2E1A1A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--petrol)}
+h1,h2,p{text-wrap:balance}
+:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+
+.topbar{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding:14px 24px;border-bottom:1px solid var(--line);background:var(--surface)}
+.brand{font-family:var(--font-display);font-size:20px;font-weight:500}
+.brand span{color:var(--petrol)}
+.back{margin-left:auto;font-size:13px;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:5px 11px;border-radius:3px}
+.back:hover{border-color:var(--petrol);color:var(--petrol)}
+
+.wrap{max-width:980px;margin:0 auto;padding:36px 24px 90px}
+.eyebrow{color:var(--petrol);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+h1.title{font-family:var(--font-display);font-size:36px;font-weight:400;letter-spacing:-.015em;margin:0 0 10px;line-height:1.1}
+.lede{color:var(--muted);font-size:16px;max-width:70ch;margin:0 0 20px}
+
+.banner{background:var(--ochre-soft);border:1px solid var(--ochre);border-radius:5px;padding:12px 16px;font-size:13px;color:var(--ink);margin-bottom:30px}
+.banner b{color:var(--ochre)}
+
+.status{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.status-tile{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:14px 18px;flex:1;min-width:140px}
+.status-tile dt{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px}
+.status-tile dd{margin:0;font-family:var(--font-display);font-size:19px}
+
+h2.sec{font-family:var(--font-display);font-size:22px;font-weight:400;margin:38px 0 4px}
+.sec-note{color:var(--muted);font-size:13.5px;margin:0 0 16px;max-width:72ch}
+
+.deals{display:flex;flex-direction:column;gap:12px}
+.deal{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.deal-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.deal-title{font-family:var(--font-display);font-size:17px}
+.deal-title .arrow{color:var(--muted);margin:0 6px;font-family:var(--font-body)}
+.deal-date{font-size:12px;color:var(--muted);white-space:nowrap}
+.tag{display:inline-block;font-size:10.5px;font-weight:600;padding:1px 8px;border-radius:20px;letter-spacing:.02em;margin-right:6px}
+.tag.confirme{background:var(--good-soft);color:var(--good)}
+.tag.rumeur{background:var(--warn-soft);color:var(--warn)}
+.deal-meta{font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.deal-meta b{color:var(--ink);font-weight:500}
+.deal p{margin:0 0 8px;font-size:13.5px}
+.deal .src{font-size:12px;color:var(--muted)}
+.deal .val{display:inline-block;background:var(--petrol-soft);color:var(--petrol);font-size:12px;font-weight:500;padding:2px 9px;border-radius:4px;margin-bottom:8px}
+
+.context{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:16px 18px;font-size:13.5px;margin-top:16px}
+.context b{font-family:var(--font-display);font-size:15px;font-weight:500}
+
+.method{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:16px 18px;font-size:13.5px}
+.method dt{font-weight:500;margin-top:10px}
+.method dt:first-child{margin-top:0}
+.method dd{margin:2px 0 0;color:var(--muted)}
+
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:6px;padding:24px 22px;text-align:center;color:var(--muted);font-size:13.5px}
+
+.foot{max-width:980px;margin:50px auto 0;padding:16px 24px;border-top:1px solid var(--line-soft);color:var(--muted);font-size:12px}
+.foot a{color:var(--petrol)}
+
+@media (max-width:640px){
+  .wrap{padding:24px 16px 60px}
+  h1.title{font-size:28px}
+}
+</style>
+
+<header class="topbar">
+  <div class="brand">Étude de Marché <span>M&amp;A Assurance</span></div>
+  <a class="back" href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">← Radar Insurtech VC</a>
+</header>
+
+<div class="wrap">
+  <div class="eyebrow">Suivi mensuel — prototype</div>
+  <h1 class="title">Opérations M&amp;A sur le marché assurance &amp; bancassurance</h1>
+  <p class="lede">Panorama des opérations confirmées et des rumeurs de marché touchant l'assurance, la
+    mutualité, la bancassurance et le courtage en France et en Europe — à l'usage de GVI et des équipes M&amp;A corpo.</p>
+
+  <div class="banner"><b>Prototype — première passe.</b> Sourcé sur presse mainstream (Argus de l'assurance,
+    Légifrance, presse spécialisée), sans accès Mergermarket/CFNEWS à ce stade. Les valorisations et
+    statuts « rumeur » ne sont pas vérifiés auprès des parties — à recouper avant toute diffusion externe
+    à cette page. Page encore privée, diffusion à l'équipe M&amp;A à définir.</div>
+
+  <div class="status">
+    <div class="status-tile"><dt>Dernière passe</dt><dd id="stat-date">—</dd></div>
+    <div class="status-tile"><dt>Opérations confirmées</dt><dd id="stat-confirmees">—</dd></div>
+    <div class="status-tile"><dt>Rumeurs suivies</dt><dd id="stat-rumeurs">—</dd></div>
+    <div class="status-tile"><dt>Prochaine passe</dt><dd id="stat-next">—</dd></div>
+  </div>
+
+  <h2 class="sec">Opérations confirmées</h2>
+  <p class="sec-note">Fusions, acquisitions et rapprochements annoncés publiquement, quel que soit leur statut d'avancement (protocole signé, en attente d'agrément, finalisé).</p>
+  <div class="deals" id="deals-confirmees"></div>
+
+  <h2 class="sec">Rumeurs de marché &amp; opérations hors périmètre Groupama</h2>
+  <p class="sec-note">Dossiers évoqués par la presse sans confirmation officielle des parties — valorisations indicatives à considérer avec prudence.</p>
+  <div class="deals" id="deals-rumeurs"></div>
+
+  <div class="context" id="contexte-marche"></div>
+
+  <h2 class="sec">Méthode</h2>
+  <div class="method">
+    <dt>Périmètre</dt>
+    <dd>Assureurs, mutuelles, institutions de prévoyance, bancassureurs et courtiers actifs sur le marché français et européen pertinent pour Groupama (concurrents directs, distributeurs, cibles assurtech).</dd>
+    <dt>Sources</dt>
+    <dd>Presse spécialisée en accès libre (Argus de l'assurance, Newsassurancespro, CFNEWS en accès libre, Légifrance pour les avis officiels de fusion). Pas d'exploitation de Mergermarket/CFNEWS payant à ce stade.</dd>
+    <dt>Rumeurs</dt>
+    <dd>Signalées explicitement comme telles, jamais présentées comme confirmées ; valorisations indicatives sourcées de la presse, non vérifiées.</dd>
+    <dt>Fréquence</dt>
+    <dd id="method-freq">à définir</dd>
+  </div>
+</div>
+
+<div class="foot">
+  Page régénérée manuellement (prototype). Fait partie de <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>.
+</div>
+
+<script>window.__DATA__ = __DATA_JSON__;</script>
+<script>
+const RAW = window.__DATA__;
+const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+document.getElementById('stat-date').textContent = RAW.derniereMaj || '—';
+document.getElementById('stat-confirmees').textContent = RAW.confirmees.length;
+document.getElementById('stat-rumeurs').textContent = RAW.rumeurs.length;
+document.getElementById('stat-next').textContent = RAW.prochaine || '—';
+document.getElementById('method-freq').textContent = RAW.frequence || 'à définir';
+
+function dealConfirmeHtml(d){
+  return `<div class="deal">
+    <div class="deal-head">
+      <div class="deal-title">${esc(d.acquereur)}<span class="arrow">→</span>${esc(d.cible)}</div>
+      <div class="deal-date">${esc(d.date)}</div>
+    </div>
+    <div class="deal-meta"><span class="tag confirme">Confirmé</span><b>${esc(d.type)}</b> — ${esc(d.secteur)}</div>
+    ${d.valorisation ? `<div class="val">${esc(d.valorisation)}</div>` : ''}
+    <p>${esc(d.resume)}</p>
+    <div class="deal-meta">Statut : ${esc(d.statut)}</div>
+    <div class="src">${esc(d.source)}${d.url?` — <a href="${esc(d.url)}" target="_blank" rel="noopener">source</a>`:''}</div>
+  </div>`;
+}
+function dealRumeurHtml(d){
+  return `<div class="deal">
+    <div class="deal-head">
+      <div class="deal-title">${esc(d.acteurs_pressentis)}<span class="arrow">→</span>${esc(d.cible)}</div>
+      <div class="deal-date">${esc(d.date)}</div>
+    </div>
+    <div class="deal-meta"><span class="tag rumeur">Rumeur</span>${esc(d.secteur)}</div>
+    ${d.valorisation_indicative ? `<div class="val">Valorisation indicative : ${esc(d.valorisation_indicative)}</div>` : ''}
+    <p>${esc(d.resume)}</p>
+    <div class="deal-meta">Statut : ${esc(d.statut)}</div>
+    <div class="src">${esc(d.source)}${d.url?` — <a href="${esc(d.url)}" target="_blank" rel="noopener">source</a>`:''}</div>
+  </div>`;
+}
+
+const cEl = document.getElementById('deals-confirmees');
+cEl.innerHTML = RAW.confirmees.length ? RAW.confirmees.map(dealConfirmeHtml).join('') : '<div class="empty">Aucune opération confirmée suivie pour l\'instant.</div>';
+
+const rEl = document.getElementById('deals-rumeurs');
+rEl.innerHTML = RAW.rumeurs.length ? RAW.rumeurs.map(dealRumeurHtml).join('') : '<div class="empty">Aucune rumeur suivie pour l\'instant.</div>';
+
+const ctx = RAW.contexteMarche;
+if (ctx){
+  document.getElementById('contexte-marche').innerHTML = `<b>Contexte marché</b><br>
+    ${esc(ctx.operationsEurope2025)} opérations M&amp;A annoncées en Europe sur l'assurance en 2025 (${esc(ctx.evolutionVsN1)}),
+    dont ${esc(ctx.partCourtageDansOperations)} portées par le courtage. ${esc(ctx.note)}`;
+}
+</script>
