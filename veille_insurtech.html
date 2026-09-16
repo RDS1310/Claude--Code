@@ -70,10 +70,13 @@ a{color:inherit}
 .empty h2{font-family:var(--font-display);font-weight:400;font-size:24px;margin:0 0 10px}
 .empty p{color:var(--muted);font-size:14.5px;max-width:42ch;margin:0 auto}
 
-.colophon{margin-top:20px;padding-top:26px}
-.colophon h2{font-family:var(--font-display);font-weight:400;font-size:19px;margin:0 0 12px}
-.colophon .method{font-size:13px;color:var(--muted);display:grid;gap:9px}
-.colophon .method b{color:var(--ink);font-weight:500}
+.methodology{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.methodology summary{cursor:pointer;font-size:13px;color:var(--petrol);list-style:none}
+.methodology summary::-webkit-details-marker{display:none}
+.methodology summary::after{content:" →"}
+.methodology[open] summary::after{content:" ↑"}
+.method{margin-top:18px;font-size:13px;color:var(--muted);display:grid;gap:9px}
+.method b{color:var(--ink);font-weight:500}
 
 .foot{max-width:640px;margin:40px auto 0;padding:16px 24px 0;border-top:1px solid var(--line-soft);color:var(--muted);font-size:12px;text-align:center}
 .foot a{color:var(--petrol)}
@@ -115,14 +118,14 @@ a{color:inherit}
 
   <div class="stories" id="feed"></div>
 
-  <div class="colophon">
-    <h2>Méthode</h2>
-    <div class="method">
+  <details class="methodology">
+    <summary>Méthodologie</summary>
+    <div class="inner method">
       <div><b>Flux fonds —</b> roundups hebdomadaires (EU-Startups, Maddyness, Sifted, CFNEWS…) croisés avec les 111 fonds de Radar Insurtech VC.</div>
       <div><b>Flux start-ups —</b> même croisement, restreint aux start-ups à statut actif du pipe GVI (Priorité, Suivi actif, Sourcing — 115 sociétés ; Écarté/Non noté/À évaluer exclus).</div>
       <div><b>Fréquence —</b> <span id="method-freq">à définir</span>. Prochaine édition : <span id="stat-next">—</span>.</div>
     </div>
-  </div>
+  </details>
 </div>
 
 <div class="foot">Fait partie de <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>.</div>
