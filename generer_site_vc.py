@@ -122,6 +122,95 @@ def construire_fonds(fonds: pd.DataFrame) -> list[dict]:
     return out
 
 
+SUFFIXES_FONDS = [
+    "capital partners", "venture capital", "asset management",
+    "capital", "ventures", "venture", "partners", "management",
+    "investissement", "investments", "group", "vc",
+]
+CORE_MIN_LEN = 5
+CORE_DENYLIST = {
+    "index", "start", "open", "good", "step", "cash", "seed", "team", "next", "deal",
+    "group", "asset", "trust", "bank", "life", "home", "insurtech", "assurtech",
+    "fintech", "tech", "digital", "innovation", "capital", "ventures",
+}
+
+
+def coeur_nom(nom: str) -> str:
+    """Réduit un nom de fonds à son cœur distinctif (retire les suffixes génériques
+    type 'Capital'/'Ventures'/'VC') pour le rapprochement avec les actus."""
+    n = nom.strip()
+    changed = True
+    while changed:
+        changed = False
+        low = n.lower()
+        for suf in SUFFIXES_FONDS:
+            if low.endswith(" " + suf):
+                n = n[: -(len(suf) + 1)].strip()
+                changed = True
+                break
+    return n
+
+
+def rattacher_actus(fonds: list[dict]) -> None:
+    """Croise chaque fonds avec veille_data/entries.json et ma_data/deals.json : si le
+    cœur du nom du fonds apparaît dans une actu, l'ajoute à f['actus'] (lien cliquable
+    vers la source, affiché sur la fiche du fonds dans Radar Insurtech VC)."""
+    def charger(rel):
+        p = BASE_DIR / rel
+        if not p.exists():
+            return None
+        return json.loads(p.read_text(encoding="utf-8"))
+
+    veille = charger("veille_data/entries.json") or {"entries": []}
+    ma = charger("ma_data/deals.json") or {"confirmees": [], "rumeurs": []}
+
+    noms = sorted({f["nom"] for f in fonds})
+    coeurs = {nom: coeur_nom(nom) for nom in noms}
+    actus_par_nom: dict[str, list[dict]] = {nom: [] for nom in noms}
+
+    def matche(nom: str, texte: str) -> bool:
+        texte_low = texte.lower()
+        if nom.lower() in texte_low:
+            return True
+        coeur = coeurs[nom]
+        if len(coeur) < CORE_MIN_LEN or coeur.lower() in CORE_DENYLIST:
+            return False
+        return coeur.lower() in texte_low
+
+    URL_VEILLE = "https://claude.ai/artifact/5FXTpkCo6KvGu6YyeYAHiw"
+    URL_MA = "https://claude.ai/artifact/BPSeTnKnWY2PkAGcH5s2ai"
+
+    for e in veille.get("entries", []):
+        texte = f"{e.get('titre','')} {e.get('resume','')}"
+        for nom in noms:
+            if matche(nom, texte):
+                actus_par_nom[nom].append({
+                    "type": "veille", "titre": e.get("titre"), "date": e.get("date"),
+                    "url": e.get("url"), "source": e.get("source"), "page": URL_VEILLE,
+                })
+
+    for d in ma.get("confirmees", []):
+        texte = f"{d.get('acquereur','')} {d.get('cible','')} {d.get('resume','')}"
+        for nom in noms:
+            if matche(nom, texte):
+                actus_par_nom[nom].append({
+                    "type": "ma", "titre": f"{d.get('acquereur')} → {d.get('cible')}",
+                    "date": d.get("date"), "url": d.get("url"), "source": d.get("source"), "page": URL_MA,
+                })
+
+    for d in ma.get("rumeurs", []):
+        texte = f"{d.get('acteurs_pressentis','')} {d.get('cible','')} {d.get('resume','')}"
+        for nom in noms:
+            if matche(nom, texte):
+                actus_par_nom[nom].append({
+                    "type": "ma", "titre": f"{d.get('acteurs_pressentis')} → {d.get('cible')} (rumeur)",
+                    "date": d.get("date"), "url": d.get("url"), "source": d.get("source"), "page": URL_MA,
+                })
+
+    for f in fonds:
+        f["actus"] = actus_par_nom.get(f["nom"], [])
+
+
 def construire_startups(part: pd.DataFrame) -> list[dict]:
     out = []
     for _, r in part.iterrows():
@@ -165,6 +254,7 @@ def main() -> int:
     ano_df = pd.read_excel(entree, "Anomalies")
 
     fonds = construire_fonds(fonds_df)
+    rattacher_actus(fonds)
     startups = construire_startups(part_df)
 
     data = {

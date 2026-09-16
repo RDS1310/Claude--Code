@@ -162,6 +162,15 @@ table.data tr:hover td{background:var(--paper)}
 .role{font-size:11px;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted)}
 .role.lead{border-color:var(--ochre);color:var(--ochre);background:var(--ochre-soft)}
 
+.actus{display:flex;flex-direction:column;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+.actu{display:block;padding:10px 14px;background:var(--surface);text-decoration:none;color:var(--ink)}
+.actu:hover{background:var(--petrol-soft)}
+.actu-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:1px 7px;border-radius:20px;margin-right:8px;vertical-align:1px}
+.actu-tag.veille{background:var(--petrol-soft);color:var(--petrol)}
+.actu-tag.ma{background:var(--ochre-soft);color:var(--ochre)}
+.actu-titre{font-size:13.5px}
+.actu-meta{display:block;font-size:11.5px;color:var(--muted);margin-top:2px;margin-left:0}
+
 .trace{margin-top:32px;padding:14px 16px;background:var(--surface);border:1px solid var(--line-soft);border-radius:4px;font-size:12.5px;color:var(--muted)}
 .trace b{color:var(--ink);font-weight:500}
 .trace .src{font-family:var(--font-mono);font-size:11.5px;line-height:1.6;margin-top:6px;word-break:break-word}
@@ -443,6 +452,16 @@ function renderFund(f){
     </tr>`).join('')}</tbody>
   </table></div>` : ''}
 
+  ${(f.actus && f.actus.length) ? `
+  <h3 class="sec">Actualité liée</h3>
+  <div class="actus">${f.actus.map(a => `
+    <a class="actu" href="${esc(a.url || a.page)}" target="_blank" rel="noopener">
+      <span class="actu-tag ${a.type}">${a.type==='veille'?'Veille':'M&A'}</span>
+      <span class="actu-titre">${esc(a.titre)}</span>
+      <span class="actu-meta">${esc(a.date||'')}${a.source?` — ${esc(a.source)}`:''}</span>
+    </a>`).join('')}
+  </div>` : ''}
+
   ${f.source ? `
   <div class="trace">
     <b>Traçabilité</b> — dernière mise à jour ${f.maj ? esc(fmtDate(f.maj)) : '—'}
@@ -451,7 +470,7 @@ function renderFund(f){
 
   <details class="raw">
     <summary>Voir la fiche complète en JSON</summary>
-    <table class="data"><tbody>${Object.entries(f).filter(([k])=>k!=='deals').map(([k,v]) =>
+    <table class="data"><tbody>${Object.entries(f).filter(([k])=>k!=='deals'&&k!=='actus').map(([k,v]) =>
       `<tr><td style="color:var(--muted);white-space:nowrap">${esc(k)}</td><td class="num" style="text-align:left">${esc(Array.isArray(v)?v.join(', '):(typeof v==='object'&&v!==null?JSON.stringify(v):v))}</td></tr>`).join('')}
     </tbody></table>
   </details>`;
