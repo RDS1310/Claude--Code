@@ -47,6 +47,66 @@
    "resume": "Transfert par fusion-absorption du portefeuille de bulletins d'adhésion et de contrats de La Protection Mutuelle et Familiale vers La Prévoyance artisanale, commerciale et salariale, deux mutuelles basées à Strasbourg.",
    "source": "Légifrance (avis officiel)",
    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054556125"
+  },
+  {
+   "date": "05/2026",
+   "acquereur": "Diot-Siaci",
+   "cible": "Aerial and Space Reunion",
+   "secteur": "Courtage — aviation/spatial",
+   "type": "Acquisition",
+   "statut": "Acquisition finalisée",
+   "valorisation": null,
+   "resume": "Diot-Siaci renforce son offre de courtage aviation/spatial (assurance et réassurance) en rachetant Aerial and Space Reunion, société fondée en 1953 — s'inscrit dans la stratégie de croissance externe du courtier, dont le CA a dépassé 1,3 Md€ en 2025.",
+   "source": "Tracxn / Argus de l'assurance",
+   "url": "https://www.argusdelassurance.com/courtiers/diot-siaci-booste-par-linternational-le-courtier-depasse-13-milliard-deuros-de-chiffre-daffaires-en-2025.22SQGOQV55EV3K4H5OMHM7GRYM.html"
+  },
+  {
+   "date": "08/2025",
+   "acquereur": "Arthur J. Gallagher & Co.",
+   "cible": "AssuredPartners",
+   "secteur": "Courtage — mega-deal mondial",
+   "type": "Acquisition",
+   "statut": "Acquisition finalisée (closing août 2025, après second request FTC)",
+   "valorisation": "13,5 Md$",
+   "resume": "L'un des quatre méga-deals du courtage mondial en 2024-2025 (plus de 44 Md$ cumulés avec NFP/Aon, McGriff/Marsh McLennan) — illustre l'intensité de la consolidation chez les leaders mondiaux du courtage, dont Groupama est aussi client/partenaire indirect via ses propres courtiers.",
+   "source": "Insurance Business Magazine",
+   "url": "https://richiecarchia.substack.com/p/reflections-on-arthur-j-gallaghers"
+  },
+  {
+   "date": "19/08/2026",
+   "acquereur": "Munich Re",
+   "cible": "At-Bay",
+   "secteur": "Assurtech — cyber-assurance (US)",
+   "type": "Acquisition",
+   "statut": "Accord définitif signé, closing attendu T1 2027 (sous réserve d'agréments réglementaires)",
+   "valorisation": "575 M$ (valeur d'entreprise)",
+   "resume": "Munich Re rachète At-Bay, spécialiste américain de la cyber-assurance et de la cybersécurité proactive pour PME — mouvement notable d'un réassureur européen de premier plan sur l'assurtech cyber, segment stratégique pour Groupama.",
+   "source": "Munich Re (communiqué officiel)",
+   "url": "https://www.munichre.com/en/company/media-relations/media-information-and-corporate-news/media-information/2026/media-release-2026-08-19.html"
+  },
+  {
+   "date": "28/11/2025",
+   "acquereur": "AXA",
+   "cible": "Prima Assicurazioni",
+   "secteur": "Assurtech — auto low-cost (Italie)",
+   "type": "Acquisition majoritaire (51 %)",
+   "statut": "Acquisition finalisée (accord initial signé 01/08/2025) ; options d'achat/vente sur les 49 % restants exerçables en 2029-2030",
+   "valorisation": "≈538 M€ pour 51 % (valorisation implicite ≈1,05 Md€)",
+   "resume": "AXA l'emporte face à Allianz au terme d'un processus compétitif pour le contrôle de Prima Assicurazioni, assurtech milanaise spécialiste de l'auto low-cost — Generali et CNP Assurances étaient également positionnés sur le dossier, signe de l'appétit des grands assureurs européens pour l'assurtech depuis 2025.",
+   "source": "Il Sole 24 Ore / Atlas Magazine",
+   "url": "https://www.atlas-mag.net/en/articles/axa-ahead-allianz-acquisition-prima-assicurazioni-0"
+  },
+  {
+   "date": "03/2026",
+   "acquereur": "Ascora",
+   "cible": "Assuralib",
+   "secteur": "Assurtech",
+   "type": "Acquisition",
+   "statut": "Acquisition finalisée",
+   "valorisation": null,
+   "resume": "Consolidation supplémentaire côté assurtech française — opération de taille plus modeste mais qui confirme le mouvement de rapprochement entre plateformes assurtech en 2026.",
+   "source": "Argus de l'assurance",
+   "url": "https://www.argusdelassurance.com/tech/assurtech/"
   }
  ],
  "rumeurs": [
@@ -66,7 +126,7 @@
   "operationsEurope2025": 789,
   "evolutionVsN1": "+14% vs 694 opérations en 2024",
   "partCourtageDansOperations": "≈90% des opérations de M&A assurance en Europe",
-  "note": "Source : baromètre FTI Consulting / Argus de l'assurance. Fitch anticipe une accélération du M&A assurance européen en 2026, portée par la position Solvency II des acteurs et la réforme prévue au 01/01/2027."
+  "note": "Source : baromètre FTI Consulting / Argus de l'assurance. Fitch anticipe une accélération du M&A assurance européen en 2026, portée par la position Solvency II des acteurs et la réforme prévue au 01/01/2027. Périmètre élargi à l'Europe et aux mouvements des réassureurs/courtiers mondiaux dès lors qu'ils éclairent la dynamique concurrentielle de Groupama."
  },
  "derniereMaj": "16/09/2026",
  "prochaine": "à définir (cadence mensuelle proposée)",
