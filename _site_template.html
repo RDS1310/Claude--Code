@@ -392,11 +392,11 @@ function renderFund(f){
 
   const portfolioRows = [
     ...linked.map(s => ({
-      nom:s.nom, secteur:s.secteur, montant:s.montantFonds, valo:s.valorisation,
+      nom:s.nom, secteur:s.secteur, montant:s.montantFonds, tour:s.tailleDuTour, valo:s.valorisation,
       stage:s.stage, exit:s.exit, confiance:s.confiance, goto:s.fid+'|'+s.nom
     })),
     ...f.deals.filter(d => !linked.some(s => norm(s.nom)===norm(d.nom))).map(d => ({
-      nom:d.nom, secteur:d.secteur, montant:d.montant, valo:null, stage:d.stage, exit:null, confiance:null, goto:null
+      nom:d.nom, secteur:d.secteur, montant:d.montant, tour:null, valo:null, stage:d.stage, exit:null, confiance:null, goto:null
     }))
   ];
 
@@ -458,11 +458,12 @@ function renderFund(f){
   ${portfolioRows.length ? `
   <h3 class="sec">Sociétés suivies dans la base (${portfolioRows.length})</h3>
   <div class="tbl-wrap"><table class="data">
-    <thead><tr><th>Société</th><th>Secteur</th><th>Stage</th><th>Investi</th><th>Valorisation</th><th>Exit</th><th>Confiance</th></tr></thead>
+    <thead><tr><th>Société</th><th>Secteur</th><th>Stage</th><th>Taille du tour</th><th>Investi (fonds)</th><th>Valorisation</th><th>Exit</th><th>Confiance</th></tr></thead>
     <tbody>${portfolioRows.map(p => `<tr>
       <td>${p.goto ? `<a href="#" data-goto="${esc(p.goto)}">${esc(p.nom)}</a>` : esc(p.nom)}</td>
       <td>${esc(p.secteur||'—')}</td>
       <td>${esc(p.stage||'—')}</td>
+      <td class="num">${fmtN(p.tour,1) ? fmtN(p.tour,1)+' M€' : '—'}</td>
       <td class="num">${fmtN(p.montant,1) ? fmtN(p.montant,1)+' M€' : '—'}</td>
       <td class="num">${fmtN(p.valo) ? fmtN(p.valo)+' M€' : '—'}</td>
       <td>${p.exit==='O' ? '<span class="role lead">Oui</span>' : (p.exit==='N' ? '—' : (p.exit||'—'))}</td>
@@ -511,7 +512,9 @@ function renderStartup(s){
 
   <dl class="band">
     ${figure('Valorisation', s.valorisation, ' M€')}
-    ${figure("Total levé", s.totalLeve, ' M€', 1)}
+    ${s.totalLeve !== null
+      ? figure("Total levé", s.totalLeve, ' M€', 1)
+      : figure("Taille du tour", s.tailleDuTour, ' M€', 1)}
     ${figure('Capital social', s.capitalSocial, ' k€')}
     ${figure('Investi par le fonds', s.montantFonds, ' M€', 1)}
     ${figure('CA', s.ca, ' M€', 1)}
@@ -534,7 +537,7 @@ function renderStartup(s){
         <tr><td>Tours menés par le fonds</td><td>${fmtN(s.nbToursFonds) ?? '—'}</td></tr>
         <tr><td>Repositionnement</td><td>${s.repositionnement || '—'}</td></tr>
         <tr><td>MoC / MoEP à la sortie</td><td>${fmtN(s.mocExit,2) ?? '—'} / ${fmtN(s.moepExit,2) ?? '—'}</td></tr>
-        ${s.tailleDuTour ? `<tr><td>Taille du tour</td><td>${fmtN(s.tailleDuTour,1)} M€</td></tr>` : ''}
+        ${(s.tailleDuTour && s.totalLeve !== null) ? `<tr><td>Taille du tour</td><td>${fmtN(s.tailleDuTour,1)} M€</td></tr>` : ''}
         ${s.pctDetention ? `<tr><td>% de détention</td><td>${esc(s.pctDetention)}</td></tr>` : ''}
         ${s.roleDetail ? `<tr><td>Rôle du véhicule</td><td>${esc(s.roleDetail)}</td></tr>` : ''}
       </table>
