@@ -46,6 +46,11 @@ h1,h2,h3,p{text-wrap:balance}
 .brand span{color:var(--petrol)}
 .back{margin-left:auto;font-size:13px;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:5px 11px;border-radius:3px}
 .back:hover{border-color:var(--petrol);color:var(--petrol)}
+.crossnav{display:flex;flex-wrap:wrap;align-items:center;gap:0;font-size:12px;padding:7px 24px;border-bottom:1px solid var(--line-soft);background:var(--paper)}
+.crossnav a{color:var(--muted);text-decoration:none;padding:2px 0}
+.crossnav a:hover{color:var(--petrol)}
+.crossnav .current{color:var(--ink);font-weight:500}
+.crossnav .sep{margin:0 9px;color:var(--line)}
 
 .wrap{max-width:1080px;margin:0 auto;padding:36px 24px 90px}
 .eyebrow{color:var(--petrol);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
@@ -132,6 +137,15 @@ table.data tr.detail td{background:var(--paper);padding:14px 16px}
   <div class="brand">Stratégie &amp; Pipe <span>GVI</span></div>
   <a class="back" href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">← Radar Insurtech VC</a>
 </header>
+<nav class="crossnav">
+  <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>
+  <span class="sep">·</span>
+  <span class="current">Stratégie &amp; Pipe GVI</span>
+  <span class="sep">·</span>
+  <a href="https://claude.ai/artifact/5FXTpkCo6KvGu6YyeYAHiw">Veille Insurtech</a>
+  <span class="sep">·</span>
+  <a href="https://claude.ai/artifact/BPSeTnKnWY2PkAGcH5s2ai">Étude M&amp;A Assurance</a>
+</nav>
 
 <div class="wrap">
   <div class="eyebrow">Groupama Vol'terre Investissement</div>
