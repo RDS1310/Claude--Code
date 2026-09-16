@@ -184,10 +184,6 @@ table.data tr:hover td{background:var(--paper)}
 .trace summary b{color:var(--ink);font-weight:500}
 .trace .src{font-family:var(--font-mono);font-size:11.5px;line-height:1.6;word-break:break-word}
 
-details.raw{margin-top:30px;border-top:1px solid var(--line);padding-top:12px}
-details.raw summary{cursor:pointer;font-size:13px;color:var(--petrol);font-weight:500}
-details.raw table{margin-top:12px}
-
 .note{color:var(--muted);font-size:12.5px;margin-top:8px}
 .nores{color:var(--muted);font-size:13.5px;padding:10px 0}
 
@@ -217,7 +213,7 @@ table.cmp tr:hover td,table.cmp tr:hover th{background:var(--paper)}
 .crossnav .current{color:var(--ink);font-weight:500}
 .crossnav .sep{margin:0 9px;color:var(--line)}
 @media print{
-  .topbar,.crossnav,.rail,.tools,details.raw{display:none!important}
+  .topbar,.crossnav,.rail,.tools{display:none!important}
   .layout{display:block}
   body{background:#fff}
   .panel{padding:0;max-width:none}
@@ -485,14 +481,7 @@ function renderFund(f){
   <details class="trace">
     <summary><b>Traçabilité</b> — dernière mise à jour ${f.maj ? esc(fmtDate(f.maj)) : '—'}</summary>
     <div class="src">${esc(f.source)}</div>
-  </details>` : ''}
-
-  <details class="raw">
-    <summary>Voir la fiche complète en JSON</summary>
-    <table class="data"><tbody>${Object.entries(f).filter(([k])=>k!=='deals'&&k!=='actus').map(([k,v]) =>
-      `<tr><td style="color:var(--muted);white-space:nowrap">${esc(k)}</td><td class="num" style="text-align:left">${esc(Array.isArray(v)?v.join(', '):(typeof v==='object'&&v!==null?JSON.stringify(v):v))}</td></tr>`).join('')}
-    </tbody></table>
-  </details>`;
+  </details>` : ''}`;
 }
 
 /* ---------- rendu : fiche start-up ---------- */
