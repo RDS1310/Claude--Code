@@ -238,6 +238,13 @@ def construire_startups(part: pd.DataFrame) -> list[dict]:
             "exit": j(r.get("Exit (O/N)")),
             "mocExit": j(r.get("MoC exit")),
             "moepExit": j(r.get("MoEP exit")),
+            "tailleDuTour": j(r.get("Taille du tour (M€)")),
+            "pctDetention": j(r.get("% de détention")),
+            "roleDetail": j(r.get("Rôle du véhicule (détail)")),
+            "statutDetail": j(r.get("Statut start-up (détail)")),
+            "confiance": j(r.get("Confiance")),
+            "commentaires": j(r.get("Commentaires")),
+            "sources": j(r.get("Source(s)")),
         })
     return out
 

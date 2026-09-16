@@ -161,6 +161,10 @@ table.data tr:hover td{background:var(--paper)}
 .tbl-wrap{overflow-x:auto}
 .role{font-size:11px;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted)}
 .role.lead{border-color:var(--ochre);color:var(--ochre);background:var(--ochre-soft)}
+.confiance{font-size:11px;padding:1px 7px;border-radius:20px;font-weight:500}
+.confiance.high{background:var(--good-soft);color:var(--good)}
+.confiance.mid{background:var(--ochre-soft);color:var(--ochre)}
+.confiance.low{background:var(--line-soft);color:var(--muted)}
 
 .actus{display:flex;flex-direction:column;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
 .actu{display:block;padding:10px 14px;background:var(--surface);text-decoration:none;color:var(--ink)}
@@ -171,9 +175,14 @@ table.data tr:hover td{background:var(--paper)}
 .actu-titre{font-size:13.5px}
 .actu-meta{display:block;font-size:11.5px;color:var(--muted);margin-top:2px;margin-left:0}
 
-.trace{margin-top:32px;padding:14px 16px;background:var(--surface);border:1px solid var(--line-soft);border-radius:4px;font-size:12.5px;color:var(--muted)}
-.trace b{color:var(--ink);font-weight:500}
-.trace .src{font-family:var(--font-mono);font-size:11.5px;line-height:1.6;margin-top:6px;word-break:break-word}
+.trace{margin-top:32px;padding:10px 16px;background:var(--surface);border:1px solid var(--line-soft);border-radius:4px;font-size:12.5px;color:var(--muted)}
+.trace summary{cursor:pointer;list-style:none}
+.trace summary::-webkit-details-marker{display:none}
+.trace summary::after{content:" →"}
+.trace[open] summary::after{content:" ↑"}
+.trace[open] summary{margin-bottom:8px}
+.trace summary b{color:var(--ink);font-weight:500}
+.trace .src{font-family:var(--font-mono);font-size:11.5px;line-height:1.6;word-break:break-word}
 
 details.raw{margin-top:30px;border-top:1px solid var(--line);padding-top:12px}
 details.raw summary{cursor:pointer;font-size:13px;color:var(--petrol);font-weight:500}
@@ -351,6 +360,14 @@ function renderRail(){
 }
 
 /* ---------- rendu : fiche fonds ---------- */
+function confClass(c){
+  const low = String(c).toLowerCase();
+  if (low.startsWith('élev')) return 'high';
+  if (low.startsWith('moy')) return 'mid';
+  if (low.startsWith('faib')) return 'low';
+  return '';
+}
+
 function figure(label, value, unit, dec){
   const v = value === null || value === undefined
     ? `<dd class="nil">—</dd>`
@@ -376,10 +393,10 @@ function renderFund(f){
   const portfolioRows = [
     ...linked.map(s => ({
       nom:s.nom, secteur:s.secteur, montant:s.montantFonds, valo:s.valorisation,
-      stage:s.stage, exit:s.exit, goto:s.fid+'|'+s.nom
+      stage:s.stage, exit:s.exit, confiance:s.confiance, goto:s.fid+'|'+s.nom
     })),
     ...f.deals.filter(d => !linked.some(s => norm(s.nom)===norm(d.nom))).map(d => ({
-      nom:d.nom, secteur:d.secteur, montant:d.montant, valo:null, stage:d.stage, exit:null, goto:null
+      nom:d.nom, secteur:d.secteur, montant:d.montant, valo:null, stage:d.stage, exit:null, confiance:null, goto:null
     }))
   ];
 
@@ -441,7 +458,7 @@ function renderFund(f){
   ${portfolioRows.length ? `
   <h3 class="sec">Sociétés suivies dans la base (${portfolioRows.length})</h3>
   <div class="tbl-wrap"><table class="data">
-    <thead><tr><th>Société</th><th>Secteur</th><th>Stage</th><th>Investi</th><th>Valorisation</th><th>Exit</th></tr></thead>
+    <thead><tr><th>Société</th><th>Secteur</th><th>Stage</th><th>Investi</th><th>Valorisation</th><th>Exit</th><th>Confiance</th></tr></thead>
     <tbody>${portfolioRows.map(p => `<tr>
       <td>${p.goto ? `<a href="#" data-goto="${esc(p.goto)}">${esc(p.nom)}</a>` : esc(p.nom)}</td>
       <td>${esc(p.secteur||'—')}</td>
@@ -449,6 +466,7 @@ function renderFund(f){
       <td class="num">${fmtN(p.montant,1) ? fmtN(p.montant,1)+' M€' : '—'}</td>
       <td class="num">${fmtN(p.valo) ? fmtN(p.valo)+' M€' : '—'}</td>
       <td>${p.exit==='O' ? '<span class="role lead">Oui</span>' : (p.exit==='N' ? '—' : (p.exit||'—'))}</td>
+      <td>${p.confiance ? `<span class="confiance ${confClass(p.confiance)}">${esc(p.confiance)}</span>` : '—'}</td>
     </tr>`).join('')}</tbody>
   </table></div>` : ''}
 
@@ -463,10 +481,10 @@ function renderFund(f){
   </div>` : ''}
 
   ${f.source ? `
-  <div class="trace">
-    <b>Traçabilité</b> — dernière mise à jour ${f.maj ? esc(fmtDate(f.maj)) : '—'}
+  <details class="trace">
+    <summary><b>Traçabilité</b> — dernière mise à jour ${f.maj ? esc(fmtDate(f.maj)) : '—'}</summary>
     <div class="src">${esc(f.source)}</div>
-  </div>` : ''}
+  </details>` : ''}
 
   <details class="raw">
     <summary>Voir la fiche complète en JSON</summary>
@@ -487,6 +505,8 @@ function renderStartup(s){
     ${s.dateCreation ? `<span class="chip">Créée en ${esc(fmtDate(s.dateCreation))}</span>` : ''}
     ${s.position ? `<span class="chip q">${esc(s.position)} du tour</span>` : ''}
     ${s.exit==='O' ? `<span class="chip good">Sortie réalisée</span>` : ''}
+    ${s.statutDetail ? `<span class="chip">${esc(s.statutDetail)}</span>` : ''}
+    ${s.confiance ? `<span class="confiance ${confClass(s.confiance)}">Confiance ${esc(s.confiance)}</span>` : ''}
   </div>
 
   <dl class="band">
@@ -514,11 +534,22 @@ function renderStartup(s){
         <tr><td>Tours menés par le fonds</td><td>${fmtN(s.nbToursFonds) ?? '—'}</td></tr>
         <tr><td>Repositionnement</td><td>${s.repositionnement || '—'}</td></tr>
         <tr><td>MoC / MoEP à la sortie</td><td>${fmtN(s.mocExit,2) ?? '—'} / ${fmtN(s.moepExit,2) ?? '—'}</td></tr>
+        ${s.tailleDuTour ? `<tr><td>Taille du tour</td><td>${fmtN(s.tailleDuTour,1)} M€</td></tr>` : ''}
+        ${s.pctDetention ? `<tr><td>% de détention</td><td>${esc(s.pctDetention)}</td></tr>` : ''}
+        ${s.roleDetail ? `<tr><td>Rôle du véhicule</td><td>${esc(s.roleDetail)}</td></tr>` : ''}
       </table>
     </div>
   </div>
 
-  <p class="note">Fonds investisseur : <a href="#" data-goto-fund="${esc(s.fid)}">${esc(s.vehicule||s.fondsNom||'')}</a></p>`;
+  <p class="note">Fonds investisseur : <a href="#" data-goto-fund="${esc(s.fid)}">${esc(s.vehicule||s.fondsNom||'')}</a></p>
+
+  ${s.commentaires ? `<p class="note">${esc(s.commentaires)}</p>` : ''}
+
+  ${s.sources ? `
+  <details class="trace">
+    <summary><b>Traçabilité</b>${s.confiance?` — confiance ${esc(s.confiance)}`:''}</summary>
+    <div class="src">${esc(s.sources)}</div>
+  </details>` : ''}`;
 }
 
 /* ---------- rendu : comparateur ---------- */
