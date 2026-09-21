@@ -251,6 +251,7 @@ table.cmp tr:hover td,table.cmp tr:hover th{background:var(--paper)}
     <div class="rail-head">
       <input class="search" id="q" type="search" placeholder="Rechercher un fonds, une société…" autocomplete="off">
       <div class="filters" id="filters">
+        <select id="f-type"><option value="">Tous types d'investisseur</option></select>
         <select id="f-strat"><option value="">Toutes stratégies</option></select>
         <select id="f-stage"><option value="">Tous stades</option></select>
         <select id="f-statut"><option value="">Tous statuts</option></select>
@@ -272,7 +273,7 @@ window.__DATA__ = __DATA_JSON__;
    ============================================================ */
 
 const RAW = window.__DATA__;
-const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{strat:'',stage:'',statut:'',quart:''} };
+const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:''} };
 
 const STAGES = ["Pré-Seed","Seed","Pré-Série A","Série A","Série B","Série C","Série D"];
 const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
@@ -297,6 +298,7 @@ function fillFilters(){
     el.innerHTML = `<option value="">${first}</option>` +
       vals.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join('');
   };
+  set('f-type', [...new Set(FONDS.map(f=>f.typeInvestisseur).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fr')));
   set('f-strat', [...new Set(FONDS.flatMap(f => f.strategie))].sort((a,b)=>a.localeCompare(b,'fr')));
   set('f-stage', STAGES);
   set('f-statut', [...new Set(FONDS.map(f=>f.statut).filter(Boolean))].sort());
@@ -307,6 +309,7 @@ function visibleFunds(){
   const q = norm(S.q), F = S.filters;
   return FONDS.filter(f => {
     if (q && !(norm(f.vehicule).includes(q) || norm(f.nom).includes(q))) return false;
+    if (F.type && f.typeInvestisseur !== F.type) return false;
     if (F.strat && !f.strategie.includes(F.strat)) return false;
     if (F.stage && !f.stages[F.stage]) return false;
     if (F.statut && f.statut !== F.statut) return false;
@@ -350,7 +353,7 @@ function renderRail(){
     ${byFirm[firm].map(f => `
       <button class="item" data-fund="${esc(f.fid)}" ${S.selFund===f.fid?'aria-current="true"':''}>
         <span class="pin ${S.pinned.includes(f.fid)?'on':''}" data-pin="${esc(f.fid)}" title="Ajouter au comparateur">✓</span>
-        <span>${esc(f.vehicule)}</span>
+        <span>${esc(f.vehicule)}${f.typeInvestisseur==='CVC' ? ' <span style="color:var(--ochre);font-size:11px;font-weight:600">CVC</span>' : ''}</span>
       </button>`).join('')}
   `).join('');
 }
@@ -400,6 +403,7 @@ function renderFund(f){
   <div class="sheet-firm">${esc(f.nom)}</div>
   <h1 class="sheet-name">${esc(f.vehicule)}</h1>
   <div class="chips">
+    <span class="chip ${f.typeInvestisseur==='CVC'?'q':''}">${f.typeInvestisseur==='CVC' ? 'CVC' + (f.societeMere ? ' — ' + esc(f.societeMere) : '') : 'VC indépendant'}</span>
     ${f.statut ? `<span class="chip ${f.statut==='Ouvert'?'good':'on'}">${esc(f.statut)}</span>` : ''}
     ${f.phase ? `<span class="chip">Phase : ${esc(f.phase)}</span>` : ''}
     ${f.millesime ? `<span class="chip">Millésime ${esc(f.millesime)}</span>` : ''}
@@ -547,6 +551,7 @@ function renderStartup(s){
 /* ---------- rendu : comparateur ---------- */
 const CMP_ROWS = [
   ['Société de gestion', f => f.nom],
+  ['Type d\'investisseur', f => f.typeInvestisseur==='CVC' ? 'CVC' + (f.societeMere?' ('+f.societeMere+')':'') : 'VC indépendant'],
   ['Statut',            f => f.statut || '—'],
   ['Millésime',         f => f.millesime || '—'],
   ['Montant levé',      f => fmtN(f.leve) ? fmtN(f.leve)+' M€' : '—'],
@@ -605,7 +610,7 @@ function render(){
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => { S.view = t.dataset.view; render(); });
 
 document.getElementById('q').oninput = e => { S.q = e.target.value; renderRail(); };
-['strat','stage','statut','quart'].forEach(k => {
+['type','strat','stage','statut','quart'].forEach(k => {
   document.getElementById('f-'+k).onchange = e => { S.filters[k] = e.target.value; renderRail(); };
 });
 
@@ -699,7 +704,8 @@ document.getElementById('file').onchange = async e => {
       participations:num(r['Nb participations (déclaré)']), exits:num(r['Nb exits']), insurtech:num(r['Nb InsurTech']),
       tvpi:num(r['TVPI']), dpi:num(r['DPI']), rvpi:num(r['RVPI']), moc:num(r['MoC (MoM)']), irr:num(r['IRR (TRI)']), quartile:r['Quartile'],
       deals:['01','02','03'].filter(n=>r[`Deal_${n}_Nom`]).map(n=>({nom:r[`Deal_${n}_Nom`],secteur:r[`Deal_${n}_Secteur`],stage:r[`Deal_${n}_Stage`],montant:num(r[`Deal_${n}_Montant_investi_M€`]),date:r[`Deal_${n}_Date_invest`]})),
-      source:r['Source_AuM'], maj:r['Date_MAJ']
+      source:r['Source_AuM'], maj:r['Date_MAJ'],
+      typeInvestisseur:r["Type d'investisseur"] || 'VC indépendant', societeMere:r['Société mère (si CVC)']
     }));
     STARTUPS = partRows.map(r => ({
       fid:r['Fonds_ID'], fondsNom:r['Nom du fonds'], vehicule:r['Véhicule'], nom:r['Start-up'], secteur:r['Secteur'],

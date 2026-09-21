@@ -118,6 +118,8 @@ def construire_fonds(fonds: pd.DataFrame) -> list[dict]:
             "deals": deals,
             "source": j(r.get("Source_AuM")),
             "maj": j(r.get("Date_MAJ")),
+            "typeInvestisseur": j(r.get("Type d'investisseur")) or "VC indépendant",
+            "societeMere": j(r.get("Société mère (si CVC)")),
         })
     return out
 
