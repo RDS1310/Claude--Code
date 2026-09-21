@@ -6,11 +6,13 @@ generer_page_gvi.py — Génère la page « Stratégie & Pipe GVI »
 
 Lit gvi_data/GVI_Status_Report_Startups.xlsx (onglet Start-up) et produit
 gvi_strategie_pipe.html : la stratégie d'investissement de GVI (synthèse
-fournie par l'utilisateur) + le pipe de start-ups suivies.
+fournie par l'utilisateur) + le pipe nominatif des start-ups suivies, avec
+moteur de recherche (même logique que Radar Insurtech VC).
 
-Exclut délibérément les colonnes personnelles/confidentielles du fichier
-source (contacts, numéros, mails, deck, notes internes de négociation) :
-seules les données de niveau « fiche entreprise » sont publiées.
+Exclut délibérément les colonnes de contact personnel du fichier source
+(Contact Startup, Numéro, Mail, Deck) : seules les données de niveau
+« fiche entreprise » sont publiées (nom, secteur, statut, financier,
+fonds VC, pitch, contact Groupama interne, commentaires).
 
 Usage : python3 generer_page_gvi.py
 """
@@ -121,23 +123,65 @@ def main() -> int:
     statuts, secteurs, maturites, volt_inno, volt_gvi = [], [], [], [], []
     fonds_vc_mentions, fonds_vc_connus = 0, 0
     total = 0
+    pipe = []
     for _, r in su.iterrows():
-        if not s(r.get("Start-up")):
+        nom = s(r.get("Start-up"))
+        if not nom:
             continue
         total += 1
-        statuts.append(STATUT_LABEL[statut_de(r)])
-        secteurs.append(s(r.get("Secteur")))
-        maturites.append(canon_maturite(s(r.get("Maturité"))))
+        statut_key = statut_de(r)
+        statut_lbl = STATUT_LABEL[statut_key]
+        secteur = s(r.get("Secteur"))
+        maturite = canon_maturite(s(r.get("Maturité")))
+        statuts.append(statut_lbl)
+        secteurs.append(secteur)
+        maturites.append(maturite)
         vi = s(r.get("Volt'terre \nInno.")) or "Non renseigné"
         vg = s(r.get("Volt'terre \nGVI")) or "Non renseigné"
         volt_inno.append(vi)
         volt_gvi.append(vg)
+
+        fonds_vc = []
         for i in range(1, 6):
             f = s(r.get(f"Fonds de VC {i}"))
             if f:
                 fonds_vc_mentions += 1
-                if connu(f):
+                est_connu = connu(f)
+                if est_connu:
                     fonds_vc_connus += 1
+                fonds_vc.append({"nom": f, "connu": est_connu})
+
+        pipe.append({
+            "nom": nom,
+            "statutKey": statut_key,
+            "statut": statut_lbl,
+            "secteur": secteur,
+            "sousSecteur1": s(r.get("Sous-Secteur\n 1")),
+            "sousSecteur2": s(r.get("Sous-secteur\n 2")),
+            "type": s(r.get("Type ")),
+            "creation": s(r.get("Création")),
+            "maturite": maturite,
+            "pays": s(r.get("Pays\nd'origine")),
+            "fondateurs": s(r.get("Fondateurs ")),
+            "theme": s(r.get("Thème")),
+            "pitch": s(r.get("Pitch")),
+            "implantation": s(r.get("Implantation")),
+            "concurrents": s(r.get("Concurrents")),
+            "ca": s(r.get("CA")),
+            "etp": s(r.get("ETP")),
+            "totalLeve": s(r.get("Total  levé")),
+            "derniereLevee": s(r.get("Dernière levée")),
+            "fondsVc": fonds_vc,
+            "contactGroupama": s(r.get("Contact Groupama")),
+            "via": s(r.get("Via")),
+            "commentaires": s(r.get("Commentaires")),
+            "derniereRencontre": s(r.get("Denière rencontre")),
+            "maj": s(r.get("MAJ")),
+            "voltInno": vi,
+            "voltGVI": vg,
+        })
+
+    pipe.sort(key=lambda p: (ORDRE_STATUT.index(p["statutKey"]), p["nom"].lower()))
 
     data = {
         "genere": pd.Timestamp.now().strftime("%d/%m/%Y"),
@@ -150,13 +194,14 @@ def main() -> int:
         "voltGVI": compte(volt_gvi),
         "fondsVcMentions": fonds_vc_mentions,
         "fondsVcConnus": fonds_vc_connus,
+        "pipe": pipe,
     }
 
     template = (BASE_DIR / "_gvi_template.html").read_text(encoding="utf-8")
     html = template.replace("__DATA_JSON__", json.dumps(data, ensure_ascii=False))
     SORTIE.write_text(html, encoding="utf-8")
 
-    print(f"Page produite (agrégats uniquement, aucun nom de société) : {SORTIE}")
+    print(f"Page produite (pipe nominatif + agrégats) : {SORTIE}")
     print(f"Start-ups comptabilisées : {total}")
     print("Par statut :", {x['label']: x['n'] for x in data['parStatut']})
     return 0

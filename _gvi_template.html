@@ -198,8 +198,7 @@ table.data tr.detail td{background:var(--paper);padding:14px 16px}
 
   <section>
     <h2 class="sec">Panorama du pipe</h2>
-    <p class="sec-note">Vue agrégée uniquement — aucun nom de société, aucun statut individuel. Le détail
-      nominatif reste dans le fichier de suivi interne, hors de cette page.</p>
+    <p class="sec-note">Vue d'ensemble agrégée — le détail nominatif de chaque société est disponible ci-dessous.</p>
 
     <div class="stat-row">
       <div class="stat-tile"><dt>Start-ups suivies</dt><dd id="stat-total">—</dd></div>
@@ -229,10 +228,33 @@ table.data tr.detail td{background:var(--paper);padding:14px 16px}
       </div>
     </div>
   </section>
+
+  <section>
+    <h2 class="sec">Pipe nominatif</h2>
+    <p class="sec-note">Recherchez une start-up par nom pour voir sa fiche. Coordonnées personnelles (contact,
+      téléphone, email) et deck volontairement exclus de cette page.</p>
+
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Rechercher une start-up (ex. Certificall)…" autocomplete="off">
+      <select id="f-statut"><option value="">Tous statuts</option></select>
+      <select id="f-secteur"><option value="">Tous secteurs</option></select>
+      <select id="f-maturite"><option value="">Toutes maturités</option></select>
+    </div>
+    <div class="count" id="pipe-count"></div>
+    <div class="tbl-wrap">
+      <table class="data">
+        <thead><tr>
+          <th>Start-up</th><th>Statut</th><th>Secteur</th><th>Maturité</th><th>Pays</th><th>Dernière levée</th>
+        </tr></thead>
+        <tbody id="pipe-body"></tbody>
+      </table>
+    </div>
+  </section>
 </div>
 
 <div class="foot">
-  Page générée le <span id="foot-date"></span> à partir du fichier de suivi interne GVI (agrégats uniquement).
+  Page générée le <span id="foot-date"></span> à partir du fichier de suivi interne GVI. Coordonnées personnelles
+  (contact, téléphone, email) et deck exclus de cette page.
   Fait partie de <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>.
 </div>
 
@@ -260,4 +282,88 @@ bars('bars-statut', RAW.parStatut);
 bars('bars-maturite', RAW.parMaturite);
 bars('bars-secteur', RAW.parSecteur);
 bars('bars-volt', RAW.voltGVI);
+
+/* ---------- pipe nominatif : recherche + fiche détaillée ---------- */
+const PIPE = RAW.pipe || [];
+const statutClass = k => ['priorite','suivi','sourcing','portefeuille'].includes(k) ? k : 'ecarte';
+let openNom = null;
+
+function fillSelect(id, values){
+  const sel = document.getElementById(id);
+  values.forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = v; sel.appendChild(o); });
+}
+fillSelect('f-statut', [...new Set(PIPE.map(p=>p.statut))].sort());
+fillSelect('f-secteur', [...new Set(PIPE.map(p=>p.secteur).filter(Boolean))].sort());
+fillSelect('f-maturite', [...new Set(PIPE.map(p=>p.maturite).filter(Boolean))]);
+
+function detailRow(p){
+  const vcChips = (p.fondsVc||[]).map(f =>
+    `<span class="vc-chip${f.connu?' known':''}">${esc(f.nom)}${f.connu?' ↗':''}</span>`).join(' ') || '—';
+  const dl = (label, val) => val ? `<div><dt>${label}</dt><dd>${esc(val)}</dd></div>` : '';
+  return `<tr class="detail"><td colspan="6"><div class="dl">
+    ${dl('Type', p.type)}
+    ${dl('Sous-secteur 1', p.sousSecteur1)}
+    ${dl('Sous-secteur 2', p.sousSecteur2)}
+    ${dl('Création', p.creation)}
+    ${dl('Fondateurs', p.fondateurs)}
+    ${dl('Thème', p.theme)}
+    ${dl('Implantation', p.implantation)}
+    ${dl('Concurrents', p.concurrents)}
+    ${dl('CA', p.ca)}
+    ${dl('ETP', p.etp)}
+    ${dl('Total levé', p.totalLeve)}
+    ${dl('Contact Groupama', p.contactGroupama)}
+    ${dl('Via', p.via)}
+    ${dl('Dernière rencontre', p.derniereRencontre)}
+    ${dl('Dernière MAJ', p.maj)}
+    ${dl("Volt'terre Inno.", p.voltInno)}
+    ${dl("Volt'terre GVI", p.voltGVI)}
+    <div><dt>Fonds VC</dt><dd>${vcChips}</dd></div>
+    ${p.pitch ? `<div class="pitch-full"><dt style="color:var(--muted);font-size:13px;margin-bottom:4px">Pitch</dt>${esc(p.pitch)}</div>` : ''}
+    ${p.commentaires ? `<div class="pitch-full"><dt style="color:var(--muted);font-size:13px;margin-bottom:4px">Commentaires</dt>${esc(p.commentaires)}</div>` : ''}
+  </div></td></tr>`;
+}
+
+function renderPipe(){
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const fStatut = document.getElementById('f-statut').value;
+  const fSecteur = document.getElementById('f-secteur').value;
+  const fMaturite = document.getElementById('f-maturite').value;
+
+  const filtered = PIPE.filter(p => {
+    if (q && !p.nom.toLowerCase().includes(q)) return false;
+    if (fStatut && p.statut !== fStatut) return false;
+    if (fSecteur && p.secteur !== fSecteur) return false;
+    if (fMaturite && p.maturite !== fMaturite) return false;
+    return true;
+  });
+
+  document.getElementById('pipe-count').textContent = `${filtered.length} / ${PIPE.length} start-ups`;
+
+  const body = document.getElementById('pipe-body');
+  body.innerHTML = filtered.map(p => {
+    const rowHtml = `<tr class="row" data-nom="${esc(p.nom)}">
+      <td><b>${esc(p.nom)}</b></td>
+      <td><span class="badge ${statutClass(p.statutKey)}">${esc(p.statut)}</span></td>
+      <td>${esc(p.secteur||'—')}</td>
+      <td>${esc(p.maturite||'—')}</td>
+      <td>${esc(p.pays||'—')}</td>
+      <td>${esc(p.derniereLevee||'—')}</td>
+    </tr>`;
+    return openNom === p.nom ? rowHtml + detailRow(p) : rowHtml;
+  }).join('') || '<tr><td colspan="6" style="color:var(--muted);padding:16px 10px">Aucune start-up ne correspond à cette recherche.</td></tr>';
+
+  body.querySelectorAll('tr.row').forEach(tr => {
+    tr.addEventListener('click', () => {
+      openNom = openNom === tr.dataset.nom ? null : tr.dataset.nom;
+      renderPipe();
+    });
+  });
+}
+
+document.getElementById('q').addEventListener('input', renderPipe);
+document.getElementById('f-statut').addEventListener('change', renderPipe);
+document.getElementById('f-secteur').addEventListener('change', renderPipe);
+document.getElementById('f-maturite').addEventListener('change', renderPipe);
+renderPipe();
 </script>
