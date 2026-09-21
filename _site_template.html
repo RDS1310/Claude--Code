@@ -132,6 +132,7 @@ h1,h2,h3,p{text-wrap:balance}
 
 h3.sec{font-family:var(--font-body);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:var(--ink);margin:32px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:14px 16px}
 
 .track{display:flex;align-items:flex-start;gap:0;margin-top:6px}
 .stage{flex:1;text-align:center;position:relative;padding-top:18px;font-size:11.5px;color:var(--muted)}
@@ -455,6 +456,19 @@ function renderFund(f){
     </div>
   </div>
 
+  ${(f.contacts && f.contacts.length) ? `
+  <h3 class="sec">Contacts clés</h3>
+  <div class="grid2">${f.contacts.map(c => `
+    <div class="card">
+      <div style="font-weight:500;font-size:15px">${esc(c.nom)}</div>
+      ${c.titre ? `<div style="color:var(--muted);font-size:13px;margin-top:2px">${esc(c.titre)}</div>` : ''}
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        ${c.linkedin ? `<a class="chip" href="${esc(c.linkedin)}" target="_blank" rel="noopener">LinkedIn ↗</a>` : ''}
+        ${c.email ? `<a class="chip" href="mailto:${esc(c.email)}">${esc(c.email)}</a>` : `<span class="chip" style="color:var(--muted)">Email à renseigner</span>`}
+      </div>
+    </div>`).join('')}
+  </div>` : ''}
+
   ${portfolioRows.length ? `
   <h3 class="sec">Sociétés suivies dans la base (${portfolioRows.length})</h3>
   <div class="tbl-wrap"><table class="data">
@@ -705,7 +719,10 @@ document.getElementById('file').onchange = async e => {
       tvpi:num(r['TVPI']), dpi:num(r['DPI']), rvpi:num(r['RVPI']), moc:num(r['MoC (MoM)']), irr:num(r['IRR (TRI)']), quartile:r['Quartile'],
       deals:['01','02','03'].filter(n=>r[`Deal_${n}_Nom`]).map(n=>({nom:r[`Deal_${n}_Nom`],secteur:r[`Deal_${n}_Secteur`],stage:r[`Deal_${n}_Stage`],montant:num(r[`Deal_${n}_Montant_investi_M€`]),date:r[`Deal_${n}_Date_invest`]})),
       source:r['Source_AuM'], maj:r['Date_MAJ'],
-      typeInvestisseur:r["Type d'investisseur"] || 'VC indépendant', societeMere:r['Société mère (si CVC)']
+      typeInvestisseur:r["Type d'investisseur"] || 'VC indépendant', societeMere:r['Société mère (si CVC)'],
+      contacts:['01','02'].filter(n=>r[`Contact_${n}_Nom`]).map(n=>({
+        nom:r[`Contact_${n}_Nom`], titre:r[`Contact_${n}_Titre`], linkedin:r[`Contact_${n}_LinkedIn`], email:r[`Contact_${n}_Email`]
+      }))
     }));
     STARTUPS = partRows.map(r => ({
       fid:r['Fonds_ID'], fondsNom:r['Nom du fonds'], vehicule:r['Véhicule'], nom:r['Start-up'], secteur:r['Secteur'],

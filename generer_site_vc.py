@@ -74,6 +74,21 @@ def liste(v) -> list[str]:
     return [x.strip() for x in str(v).split(";") if x.strip()]
 
 
+def construire_contacts(r) -> list[dict]:
+    out = []
+    for n in ("01", "02"):
+        nom = r.get(f"Contact_{n}_Nom")
+        if est_vide(nom):
+            continue
+        out.append({
+            "nom": j(nom),
+            "titre": j(r.get(f"Contact_{n}_Titre")),
+            "linkedin": j(r.get(f"Contact_{n}_LinkedIn")),
+            "email": j(r.get(f"Contact_{n}_Email")),
+        })
+    return out
+
+
 def construire_fonds(fonds: pd.DataFrame) -> list[dict]:
     out = []
     for _, r in fonds.iterrows():
@@ -120,6 +135,7 @@ def construire_fonds(fonds: pd.DataFrame) -> list[dict]:
             "maj": j(r.get("Date_MAJ")),
             "typeInvestisseur": j(r.get("Type d'investisseur")) or "VC indépendant",
             "societeMere": j(r.get("Société mère (si CVC)")),
+            "contacts": construire_contacts(r),
         })
     return out
 
