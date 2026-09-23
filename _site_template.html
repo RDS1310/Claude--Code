@@ -221,6 +221,25 @@ table.data tr:hover td{background:var(--paper)}
 .trace summary b{color:var(--ink);font-weight:500}
 .trace .src{font-family:var(--font-mono);font-size:11.5px;line-height:1.6;word-break:break-word}
 
+/* ---------- anomalies ---------- */
+.anom-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:6px}
+.anom-controls .search{flex:1;min-width:200px}
+.anom-controls select{padding:6px 8px;border:1px solid var(--line);border-radius:3px;background:var(--surface);font-size:13px;color:var(--ink)}
+.anom-count{color:var(--muted);font-size:12.5px;margin-bottom:16px}
+.anom-list{display:flex;flex-direction:column;gap:8px}
+.anom-row{margin-top:0;padding:11px 16px}
+.anom-row summary{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.anom-row summary b{font-family:var(--font-mono);font-size:11px;color:var(--muted);font-weight:500;flex:none}
+.anom-row summary .anom-entite{color:var(--ink);font-weight:500;font-size:13.5px}
+.anom-row summary .anom-type{color:var(--muted);font-size:12.5px}
+.anom-row .dl{display:grid;grid-template-columns:150px 1fr;gap:5px 12px;font-size:12.5px;margin-top:2px}
+.anom-row .dl dt{color:var(--muted)}
+.anom-row .dl dd{margin:0;color:var(--ink);word-break:break-word}
+.conf-badge{font-size:10.5px;padding:1px 7px;border-radius:20px;font-weight:500;flex:none;margin-left:auto}
+.conf-badge.eleve{background:var(--good-soft);color:var(--good)}
+.conf-badge.moyen{background:var(--ochre-soft);color:var(--ochre)}
+.conf-badge.faible{background:var(--line-soft);color:var(--muted)}
+
 .note{color:var(--muted);font-size:12.5px;margin-top:8px}
 .nores{color:var(--muted);font-size:13.5px;padding:10px 0}
 
@@ -311,6 +330,7 @@ table.trend-table tr:hover td{background:var(--paper)}
     <button class="tab" role="tab" data-view="startups" aria-selected="false">Start-ups</button>
     <button class="tab" role="tab" data-view="compare" aria-selected="false">Comparateur</button>
     <button class="tab" role="tab" data-view="trends" aria-selected="false">Tendances</button>
+    <button class="tab" role="tab" data-view="anomalies" aria-selected="false">Anomalies</button>
   </nav>
   <div class="tools">
     <button class="ghost" id="btn-csv">Exporter en CSV</button>
@@ -356,7 +376,7 @@ window.__DATA__ = __DATA_JSON__;
    ============================================================ */
 
 const RAW = window.__DATA__;
-const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:''}, trendsTable:false };
+const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:''}, trendsTable:false, anomQ:'', anomType:'', anomConf:'' };
 
 const STAGES = ["Pré-Seed","Seed","Pré-Série A","Série A","Série B","Série C","Série D"];
 const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
@@ -793,6 +813,74 @@ function renderPaysHtml(){
     </div>`;
 }
 
+function anomaliesFiltrees(){
+  const all = RAW.anomalies || [];
+  const q = norm(S.anomQ);
+  return all.filter(a => {
+    if (S.anomType && a.type !== S.anomType) return false;
+    if (S.anomConf && a.confiance !== S.anomConf) return false;
+    if (q && !norm([a.id,a.type,a.entite,a.champ,a.commentaire,a.traitement].join(' ')).includes(q)) return false;
+    return true;
+  });
+}
+
+function confBadgeClass(conf){
+  const n = norm(conf);
+  return n === 'eleve' ? 'eleve' : (n === 'moyen' ? 'moyen' : 'faible');
+}
+
+function anomalyRowHtml(a){
+  const rows = [
+    ['Onglet source', a.onglet], ['Table / bloc source', a.table], ['Champ concerné', a.champ],
+    ['Valeur source', a.valeurSource], ['Valeur retenue', a.valeurRetenue],
+    ['Candidats éventuels', a.candidats], ['Score de similarité', a.score],
+    ['Traitement appliqué', a.traitement], ['Commentaire', a.commentaire],
+  ].filter(([,v]) => v !== null && v !== undefined && v !== '');
+  return `<details class="trace anom-row">
+    <summary>
+      <b>${esc(a.id)}</b>
+      <span class="anom-entite">${esc(a.entite || 'Entité non précisée')}</span>
+      <span class="anom-type">${esc(a.type)}</span>
+      ${a.confiance ? `<span class="conf-badge ${confBadgeClass(a.confiance)}">${esc(a.confiance)}</span>` : ''}
+    </summary>
+    <dl class="dl">${rows.map(([k,v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+  </details>`;
+}
+
+function anomaliesListHtml(){
+  const list = anomaliesFiltrees();
+  const countEl = `<p class="anom-count">${list.length} / ${(RAW.anomalies||[]).length} anomalies affichées</p>`;
+  const body = list.length
+    ? `<div class="anom-list">${list.map(anomalyRowHtml).join('')}</div>`
+    : `<p class="nores">Aucune anomalie ne correspond à ces filtres.</p>`;
+  return countEl + body;
+}
+
+function renderAnomalies(){
+  const all = RAW.anomalies || [];
+  if (!all.length){
+    return `<div class="placeholder"><h2>Aucune anomalie enregistrée</h2></div>`;
+  }
+  const types = [...new Set(all.map(a => a.type).filter(Boolean))].sort((a,b) => a.localeCompare(b,'fr'));
+  const confs = ['Élevé','Moyen','Faible'].filter(c => all.some(a => a.confiance === c));
+  return `
+    <h1 class="sheet-name">Anomalies</h1>
+    <p class="cmp-hint">Journal de traçabilité de la collecte de données : chaque ligne documente une décision de saisie (ambiguïté, correction, rapprochement non résolu, mise à jour web…) plutôt que de la laisser implicite. Cliquez une ligne pour voir le détail.</p>
+    <div class="anom-controls">
+      <input class="search" id="anom-q" type="search" placeholder="Rechercher (entité, champ, commentaire…)" autocomplete="off" value="${esc(S.anomQ)}">
+      <select id="anom-type"><option value="">Tous types</option>${types.map(t => `<option value="${esc(t)}"${t===S.anomType?' selected':''}>${esc(t)}</option>`).join('')}</select>
+      <select id="anom-conf"><option value="">Toute confiance</option>${confs.map(c => `<option value="${esc(c)}"${c===S.anomConf?' selected':''}>${esc(c)}</option>`).join('')}</select>
+    </div>
+    <div id="anom-results">${anomaliesListHtml()}</div>`;
+}
+
+function wireAnomaliesControls(){
+  const refresh = () => { document.getElementById('anom-results').innerHTML = anomaliesListHtml(); };
+  document.getElementById('anom-q').oninput = e => { S.anomQ = e.target.value; refresh(); };
+  document.getElementById('anom-type').onchange = e => { S.anomType = e.target.value; refresh(); };
+  document.getElementById('anom-conf').onchange = e => { S.anomConf = e.target.value; refresh(); };
+}
+
 function showTrendTooltip(bandEl){
   const t = RAW.tendances;
   const tip = document.getElementById('trend-tooltip');
@@ -846,6 +934,7 @@ function render(){
   const panel = document.getElementById('panel');
   if (S.view === 'compare'){ panel.innerHTML = renderCompare(); return; }
   if (S.view === 'trends'){ panel.innerHTML = renderTrends(); return; }
+  if (S.view === 'anomalies'){ panel.innerHTML = renderAnomalies(); wireAnomaliesControls(); return; }
   if (S.view === 'startups'){
     const s = S.selStartup ? STARTUPS.find(x => (x.fid+'|'+x.nom) === S.selStartup) : null;
     panel.innerHTML = s ? renderStartup(s) : `

@@ -354,6 +354,28 @@ def construire_pays(part: pd.DataFrame) -> dict:
     return {"pays": liste, "exclues": total_exclues, "total": sum(compte.values())}
 
 
+def construire_anomalies(ano: pd.DataFrame) -> list[dict]:
+    out = []
+    for _, r in ano.iterrows():
+        out.append({
+            "id": j(r.get("Anomalie_ID")),
+            "type": j(r.get("Type d'anomalie")),
+            "onglet": j(r.get("Onglet source")),
+            "table": j(r.get("Table ou bloc source")),
+            "ligne": j(r.get("Ligne source")),
+            "entite": j(r.get("Entité concernée")),
+            "champ": j(r.get("Champ concerné")),
+            "valeurSource": j(r.get("Valeur source")),
+            "valeurRetenue": j(r.get("Valeur retenue")),
+            "candidats": j(r.get("Candidats éventuels")),
+            "score": j(r.get("Score de similarité")),
+            "confiance": j(r.get("Niveau de confiance")),
+            "traitement": j(r.get("Traitement appliqué")),
+            "commentaire": j(r.get("Commentaire")),
+        })
+    return out
+
+
 def construire_startups(part: pd.DataFrame) -> list[dict]:
     out = []
     for _, r in part.iterrows():
@@ -408,6 +430,7 @@ def main() -> int:
     startups = construire_startups(part_df)
     tendances = construire_tendances(part_df)
     pays = construire_pays(part_df)
+    anomalies = construire_anomalies(ano_df)
 
     data = {
         "version": version,
@@ -417,6 +440,7 @@ def main() -> int:
         "startups": startups,
         "tendances": tendances,
         "pays": pays,
+        "anomalies": anomalies,
     }
 
     template = (BASE_DIR / "_site_template.html").read_text(encoding="utf-8")
@@ -429,6 +453,7 @@ def main() -> int:
     print(f"Sociétés de gestion : {len(set(f['nom'] for f in fonds))}")
     print(f"Tendances : {tendances['total']} participations classées ({tendances['exclues']} exclues : date ou secteur non exploitable)")
     print(f"Pays d'origine : {pays['total']} participations réparties sur {len(pays['pays'])} pays ({pays['exclues']} exclues : pays non identifiable)")
+    print(f"Anomalies : {len(anomalies)} entrées exposées")
     return 0
 
 
