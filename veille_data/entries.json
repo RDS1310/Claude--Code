@@ -1,25 +1,52 @@
 {
- "entries": [
-  {
-   "date": "14/09/2026",
-   "type": "fonds",
-   "theme": "Succession & gouvernance de fonds",
-   "titre": "Alven acte sa succession et prépare un nouveau fonds",
-   "resume": "Rodolphe Menegaux devient directeur général d'Alven Capital, qui finalise la transmission progressive du capital à sa nouvelle génération d'associés et prévoit le lancement d'une nouvelle levée d'ici la fin d'année.",
-   "source": "Maddyness",
-   "url": "https://www.maddyness.com/2026/09/14/apres-des-mois-dincertitude-alven-acte-sa-succession-et-prepare-un-nouveau-fonds/"
-  },
-  {
-   "date": "10/09/2026",
-   "type": "fonds",
-   "theme": "Activité des fonds hors insurtech",
-   "titre": "XAnge (via La Poste Ventures) et Ring Capital au tour de seed de Ed.ai (5 M€)",
-   "resume": "La start-up Ed.ai (correction de copies assistée par IA) lève 5 M€ en seed avec la participation de La Poste Ventures — fonds géré par XAnge — et de Ring Capital, aux côtés de Bpifrance (Digital Venture) et 50 Partners. Hors périmètre insurtech, mais mouvement notable de deux fonds suivis dans Radar Insurtech VC.",
-   "source": "Maddyness",
-   "url": "https://www.maddyness.com/2026/09/10/ed-ai-leve-5-millions-deuros-pour-aider-les-enseignants-a-mieux-tirer-profit-des-copies-de-leurs-eleves-avec-lia/"
-  }
- ],
- "derniereMaj": "16/09/2026",
- "prochaine": "21/09/2026",
- "frequence": "Hebdomadaire (lundi)"
+  "entries": [
+    {
+      "date": "21/09/2026",
+      "type": "startup",
+      "titre": "Lemonade : un tribunal approuve un accord de 10,5 M$ après la fuite des numéros de permis de conduire",
+      "resume": "Un tribunal fédéral de New York approuve l'accord amiable de 10,5 M$ conclu par Lemonade dans une action de groupe : son outil de devis auto en ligne avait exposé les numéros de permis de conduire de jusqu'à 190 644 conducteurs entre avril 2023 et septembre 2024.",
+      "source": "Claims Journal",
+      "url": "https://www.claimsjournal.com/news/national/2026/09/21/340219.htm",
+      "theme": "Contentieux & conformité"
+    },
+    {
+      "date": "16/09/2026",
+      "type": "fonds",
+      "titre": "BlackFin Capital Partners réinvestit dans ETFbook (13 M$) pour son expansion aux États-Unis et en Asie",
+      "resume": "ETFbook, plateforme de données sur les ETF, lève 13 M$ lors d'un tour mené par Expedition Growth Capital, avec BlackFin Capital Partners (actionnaire existant, lead de la série A de 4 M€). Opération fintech, hors assurtech.",
+      "source": "FinTech Global",
+      "url": "https://fintech.global/2026/09/16/etfbook-raises-13m-to-close-etf-datas-global-gap/",
+      "theme": "Activité des fonds hors insurtech"
+    },
+    {
+      "date": "14/09/2026",
+      "type": "fonds",
+      "theme": "Succession & gouvernance de fonds",
+      "titre": "Alven acte sa succession et prépare un nouveau fonds",
+      "resume": "Rodolphe Menegaux devient directeur général d'Alven Capital, qui finalise la transmission progressive du capital à sa nouvelle génération d'associés et prévoit le lancement d'une nouvelle levée d'ici la fin d'année.",
+      "source": "Maddyness",
+      "url": "https://www.maddyness.com/2026/09/14/apres-des-mois-dincertitude-alven-acte-sa-succession-et-prepare-un-nouveau-fonds/"
+    },
+    {
+      "date": "14/09/2026",
+      "type": "fonds",
+      "titre": "Zurich Insurance Group obtient toutes les autorisations réglementaires pour racheter Beazley (8,1 Md£)",
+      "resume": "Zurich et Beazley confirment que toutes les autorisations réglementaires pour l'acquisition en numéraire de 8,1 Md£ (10,9 Md$) sont réunies ; audience au tribunal le 22 septembre, finalisation prévue le 1er octobre 2026.",
+      "source": "Reinsurance News",
+      "url": "https://www.reinsurancene.ws/zurichs-8-1bn-beazley-acquisition-to-complete-october-1-following-regulatory-clearance/",
+      "theme": "M&A & consolidation"
+    },
+    {
+      "date": "10/09/2026",
+      "type": "fonds",
+      "theme": "Activité des fonds hors insurtech",
+      "titre": "XAnge (via La Poste Ventures) et Ring Capital au tour de seed de Ed.ai (5 M€)",
+      "resume": "La start-up Ed.ai (correction de copies assistée par IA) lève 5 M€ en seed avec la participation de La Poste Ventures — fonds géré par XAnge — et de Ring Capital, aux côtés de Bpifrance (Digital Venture) et 50 Partners. Hors périmètre insurtech, mais mouvement notable de deux fonds suivis dans Radar Insurtech VC.",
+      "source": "Maddyness",
+      "url": "https://www.maddyness.com/2026/09/10/ed-ai-leve-5-millions-deuros-pour-aider-les-enseignants-a-mieux-tirer-profit-des-copies-de-leurs-eleves-avec-lia/"
+    }
+  ],
+  "derniereMaj": "23/09/2026",
+  "prochaine": "28/09/2026",
+  "frequence": "Hebdomadaire (lundi)"
 }
