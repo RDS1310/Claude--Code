@@ -136,6 +136,8 @@ h1,h2,h3,p{text-wrap:balance}
 .search::placeholder{color:var(--muted)}
 .filters{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .filters select{width:100%;padding:6px 7px;border:1px solid var(--line);border-radius:3px;background:var(--surface);font-size:12.5px;color:var(--muted)}
+.recence-select{width:100%;padding:6px 7px;border:1px solid var(--line);border-radius:3px;background:var(--surface);font-size:12.5px;color:var(--muted)}
+.recence-select.active{border-color:var(--petrol);color:var(--petrol)}
 .rail-list{overflow-y:auto;flex:1;padding-bottom:20px}
 .group-head{padding:11px 14px 4px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--petrol);position:sticky;top:0;background:var(--surface);border-bottom:1px solid var(--line-soft)}
 .item{display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:7px 14px;border:0;background:none;font-size:14px;border-left:2px solid transparent;color:var(--ink)}
@@ -353,6 +355,12 @@ table.trend-table tr:hover td{background:var(--paper)}
   <aside class="rail" id="rail">
     <div class="rail-head">
       <input class="search" id="q" type="search" placeholder="Rechercher un fonds, une société…" autocomplete="off">
+      <select class="recence-select" id="f-recence">
+        <option value="">Toute période</option>
+        <option value="3">3 derniers mois</option>
+        <option value="6">6 derniers mois</option>
+        <option value="12">12 derniers mois</option>
+      </select>
       <div class="filters" id="filters">
         <select id="f-type"><option value="">Tous types d'investisseur</option></select>
         <select id="f-strat"><option value="">Toutes stratégies</option></select>
@@ -376,7 +384,7 @@ window.__DATA__ = __DATA_JSON__;
    ============================================================ */
 
 const RAW = window.__DATA__;
-const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:''}, trendsTable:false, anomQ:'', anomType:'', anomConf:'' };
+const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:'',recence:''}, trendsTable:false, anomQ:'', anomType:'', anomConf:'' };
 
 const STAGES = ["Pré-Seed","Seed","Pré-Série A","Série A","Série B","Série C","Série D"];
 const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
@@ -408,6 +416,33 @@ function fillFilters(){
   set('f-quart', [...new Set(FONDS.map(f=>f.quartile).filter(Boolean))].sort());
 }
 
+/* ---------- récence ---------- */
+function recenceCutoff(mois){
+  const d = new Date();
+  d.setMonth(d.getMonth() - Number(mois));
+  return d;
+}
+function parseActuDate(v){
+  // format "JJ/MM/AAAA"
+  const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(v || '');
+  if (!m) return null;
+  const d = new Date(Number(m[3]), Number(m[2]) - 1, Number(m[1]));
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+function fondRecent(f, mois){
+  if (!mois) return true;
+  const cutoff = recenceCutoff(mois);
+  return (f.actus || []).some(a => { const d = parseActuDate(a.date); return d && d >= cutoff; });
+}
+function startupRecent(s, mois){
+  if (!mois) return true;
+  // "Date d'investissement" n'est renseignée qu'à l'année (pas de jour/mois connu) : on ne peut
+  // honnêtement comparer qu'au niveau de l'année de la borne, pas au mois près.
+  const y = parseInt(s.dateInvest, 10);
+  if (!y || Number.isNaN(y)) return false;
+  return y >= recenceCutoff(mois).getFullYear();
+}
+
 function visibleFunds(){
   const q = norm(S.q), F = S.filters;
   return FONDS.filter(f => {
@@ -417,13 +452,18 @@ function visibleFunds(){
     if (F.stage && !f.stages[F.stage]) return false;
     if (F.statut && f.statut !== F.statut) return false;
     if (F.quart && f.quartile !== F.quart) return false;
+    if (F.recence && !fondRecent(f, F.recence)) return false;
     return true;
   });
 }
 function visibleStartups(){
-  const q = norm(S.q);
-  return STARTUPS.filter(s => !q || norm(s.nom).includes(q) || norm(s.fondsNom||'').includes(q)
-    || norm(s.vehicule||'').includes(q) || norm(s.secteur||'').includes(q));
+  const q = norm(S.q), mois = S.filters.recence;
+  return STARTUPS.filter(s => {
+    if (q && !(norm(s.nom).includes(q) || norm(s.fondsNom||'').includes(q)
+      || norm(s.vehicule||'').includes(q) || norm(s.secteur||'').includes(q))) return false;
+    if (mois && !startupRecent(s, mois)) return false;
+    return true;
+  });
 }
 function startupsOf(fid){ return STARTUPS.filter(s => s.fid === fid); }
 
@@ -431,19 +471,23 @@ function startupsOf(fid){ return STARTUPS.filter(s => s.fid === fid); }
 function renderRail(){
   const list = document.getElementById('list');
   const filters = document.getElementById('filters');
+  const recenceSel = document.getElementById('f-recence');
+  recenceSel.classList.toggle('active', !!S.filters.recence);
 
   if (S.view === 'startups'){
     filters.style.display = 'none';
+    recenceSel.title = "Fondé sur l'année d'investissement (le mois exact n'est pas toujours connu) : une société investie en début d'année de la borne peut être incluse même si l'investissement remonte à plus de la période affichée.";
     const items = visibleStartups();
     list.innerHTML = items.length ? items.map(s => `
       <button class="item" data-startup="${esc(s.nom)}${esc(s.fid)}" data-startup-fid="${esc(s.fid)}" data-startup-nom="${esc(s.nom)}" ${S.selStartup===(s.fid+'|'+s.nom)?'aria-current="true"':''}>
         <span>${esc(s.nom)}<br><span style="color:var(--muted);font-size:12px">${esc(s.secteur||s.vehicule||'')}</span></span>
       </button>`).join('')
-      : `<p class="empty-rail">Aucune société ne correspond. Effacez la recherche pour tout revoir.</p>`;
+      : `<p class="empty-rail">Aucune société ne correspond.${S.filters.recence ? ' Essayez une période plus large ou remettez « Récence » à « Toute période ».' : ' Effacez la recherche pour tout revoir.'}</p>`;
     return;
   }
 
   filters.style.display = 'grid';
+  recenceSel.title = "Fondé sur les actualités (veille) rattachées à chaque fonds : un fonds sans actualité récente n'apparaît pas, même s'il reste actif.";
   const items = visibleFunds();
   if (!items.length){
     list.innerHTML = `<p class="empty-rail">Aucun fonds ne correspond à ces critères. Élargissez la recherche ou remettez les filtres à zéro.</p>`;
@@ -952,7 +996,7 @@ function render(){
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => { S.view = t.dataset.view; render(); });
 
 document.getElementById('q').oninput = e => { S.q = e.target.value; renderRail(); };
-['type','strat','stage','statut','quart'].forEach(k => {
+['type','strat','stage','statut','quart','recence'].forEach(k => {
   document.getElementById('f-'+k).onchange = e => { S.filters[k] = e.target.value; renderRail(); };
 });
 
