@@ -124,6 +124,8 @@ table.data tr.detail td{background:var(--paper);padding:14px 16px}
 .vc-chip{display:inline-block;font-size:11.5px;border:1px solid var(--line);padding:1px 7px;border-radius:3px;margin:2px 4px 0 0;background:var(--surface)}
 .vc-chip.known{border-color:var(--petrol);color:var(--petrol);background:var(--petrol-soft)}
 
+.chips-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+
 .foot{max-width:1080px;margin:50px auto 0;padding:16px 24px;border-top:1px solid var(--line-soft);color:var(--muted);font-size:12px}
 .foot a{color:var(--petrol)}
 
@@ -252,6 +254,22 @@ table.data tr.detail td{background:var(--paper);padding:14px 16px}
       </table>
     </div>
   </section>
+
+  <section id="pertinence-section">
+    <h2 class="sec">Pertinence pour GVI</h2>
+    <p class="sec-note">Relit la fiche d'une start-up du pipe ci-dessus à travers les six critères de scoring GVI.
+      Construit uniquement à partir des données déjà suivies dans le « Pipe nominatif » — se met à jour
+      automatiquement avec elles. Ne fait aucune recherche externe : les champs non renseignés dans le suivi
+      restent marqués comme tels plutôt que d'être complétés arbitrairement.</p>
+
+    <div class="toolbar">
+      <select id="p-select"><option value="">— Choisir une start-up —</option></select>
+    </div>
+
+    <div id="pertinence-body">
+      <p class="sec-note">Sélectionnez une start-up ci-dessus pour afficher son évaluation.</p>
+    </div>
+  </section>
 </div>
 
 <div class="foot">
@@ -368,4 +386,89 @@ document.getElementById('f-statut').addEventListener('change', renderPipe);
 document.getElementById('f-secteur').addEventListener('change', renderPipe);
 document.getElementById('f-maturite').addEventListener('change', renderPipe);
 renderPipe();
+
+/* ---------- pertinence pour GVI : relecture d'une fiche par les 6 critères ---------- */
+const pSelect = document.getElementById('p-select');
+(function buildPSelect(){
+  let currentStatut = null, group = null;
+  PIPE.forEach(p => {
+    if (p.statut !== currentStatut) {
+      currentStatut = p.statut;
+      group = document.createElement('optgroup');
+      group.label = currentStatut;
+      pSelect.appendChild(group);
+    }
+    const o = document.createElement('option');
+    o.value = p.nom; o.textContent = p.nom;
+    group.appendChild(o);
+  });
+})();
+
+function critereBlock(titre, items, noteVide){
+  const present = items.filter(it => it.val);
+  const body = present.length
+    ? `<div class="dl">${present.map(it => `<div><dt>${esc(it.label)}</dt><dd>${esc(it.val)}</dd></div>`).join('')}</div>`
+    : `<p style="color:var(--muted);font-size:13px;margin:0">${esc(noteVide || 'Non renseigné dans le suivi actuel.')}</p>`;
+  return `<div class="card"><h3>${esc(titre)}</h3>${body}</div>`;
+}
+
+function pertinenceHtml(p){
+  const vcChips = (p.fondsVc||[]).map(f =>
+    `<span class="vc-chip${f.connu?' known':''}">${esc(f.nom)}${f.connu?' ↗':''}</span>`).join(' ');
+  const fenetreOk = ['Pré-Seed','Seed','Pré-Série A','Série A'].includes(p.maturite);
+  const fenetre = p.maturite
+    ? (fenetreOk ? 'Cohérent avec la fenêtre cible GVI (Seed – Série A).'
+                 : `Hors fenêtre cible habituelle de GVI (Seed – Série A) — maturité actuelle : ${p.maturite}.`)
+    : null;
+
+  const blocs = [
+    critereBlock('1 · Sponsorship métier', [
+      {label:'Contact Groupama', val:p.contactGroupama},
+      {label:"Voie d'entrée", val:p.via},
+      {label:'Dernière rencontre', val:p.derniereRencontre},
+      {label:'Notes internes', val:p.commentaires},
+    ]),
+    critereBlock('2 · Équipe', [{label:'Fondateurs', val:p.fondateurs}]),
+    critereBlock('3 · Marché', [
+      {label:'Secteur', val:p.secteur},
+      {label:'Sous-secteur', val:[p.sousSecteur1,p.sousSecteur2].filter(Boolean).join(' / ') || null},
+      {label:'Thème', val:p.theme},
+      {label:'Concurrents', val:p.concurrents},
+      {label:'Implantation', val:p.implantation},
+      {label:"Pays d'origine", val:p.pays},
+    ]),
+    critereBlock('4 · IT, technologie & données', [
+      {label:'Type', val:p.type},
+      {label:'Pitch', val:p.pitch},
+    ], "Non systématiquement renseigné dans le suivi actuel — angle mort du pipe, nécessite une due diligence technique dédiée."),
+    critereBlock('5 · Traction commerciale', [
+      {label:'CA', val:p.ca},
+      {label:'Effectifs (ETP)', val:p.etp},
+      {label:'Création', val:p.creation},
+      {label:'Maturité', val:p.maturite},
+    ]),
+    critereBlock('6 · Maturité financière', [
+      {label:'Total levé', val:p.totalLeve},
+      {label:'Dernière levée', val:p.derniereLevee},
+      {label:'Fenêtre cible GVI', val:fenetre},
+    ]),
+  ];
+
+  return `
+    <div class="chips-row">
+      <span class="badge ${statutClass(p.statutKey)}" style="font-size:13px;padding:4px 12px">${esc(p.statut)}</span>
+      ${vcChips ? vcChips : ''}
+    </div>
+    <div class="cards">${blocs.join('')}</div>
+  `;
+}
+
+function renderPertinence(){
+  const nom = pSelect.value;
+  const body = document.getElementById('pertinence-body');
+  if (!nom) { body.innerHTML = '<p class="sec-note">Sélectionnez une start-up ci-dessus pour afficher son évaluation.</p>'; return; }
+  const p = PIPE.find(x => x.nom === nom);
+  body.innerHTML = p ? pertinenceHtml(p) : '';
+}
+pSelect.addEventListener('change', renderPertinence);
 </script>
