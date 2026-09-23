@@ -260,6 +260,19 @@ table.cmp tr:hover td,table.cmp tr:hover th{background:var(--paper)}
 .trend-tooltip .tt-val{font-variant-numeric:tabular-nums;font-weight:500;color:var(--ink)}
 .trend-tooltip .tt-total{border-top:1px solid var(--line-soft);margin-top:5px;padding-top:5px;font-weight:600}
 .trends-caption{color:var(--muted);font-size:12.5px;margin-top:12px;max-width:640px}
+
+/* ---------- répartition par pays (bar-list horizontal) ---------- */
+.pays-section{margin-top:40px}
+.pays-list{display:flex;flex-direction:column;gap:3px;background:var(--surface);border:1px solid var(--line);padding:10px 14px}
+.pays-row{display:grid;grid-template-columns:120px 1fr 34px;align-items:center;gap:10px;padding:4px 0;border-radius:3px}
+.pays-row:hover{background:var(--paper)}
+.pays-name{font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pays-track{height:18px;background:var(--paper);border-radius:0 3px 3px 0;overflow:hidden}
+.pays-bar{height:100%;background:var(--petrol);border-radius:0 3px 3px 0;min-width:2px}
+.pays-value{font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--ink);text-align:right;font-weight:500}
+@media (max-width:860px){
+  .pays-row{grid-template-columns:92px 1fr 30px}
+}
 table.trend-table{border-collapse:collapse;width:100%;font-size:13.5px}
 table.trend-table th,table.trend-table td{padding:8px 10px;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
 table.trend-table th:first-child,table.trend-table td:first-child{text-align:left;font-variant-numeric:normal}
@@ -755,7 +768,29 @@ function renderTrends(){
       </svg>
       <div class="trend-tooltip" id="trend-tooltip"></div>
     </div>`}
-    <p class="trends-caption">${t.total} participations réparties sur ${years.length} années (${years[0]}–${lastYear}).${incompleteNote} ${t.exclues} participation${t.exclues>1?'s':''} exclue${t.exclues>1?'s':''} de ce graphique (date d'investissement non renseignée, secteur non identifiable, ou société elle-même hors périmètre assurance malgré son rattachement à un fonds insurtech).</p>`;
+    <p class="trends-caption">${t.total} participations réparties sur ${years.length} années (${years[0]}–${lastYear}).${incompleteNote} ${t.exclues} participation${t.exclues>1?'s':''} exclue${t.exclues>1?'s':''} de ce graphique (date d'investissement non renseignée, secteur non identifiable, ou société elle-même hors périmètre assurance malgré son rattachement à un fonds insurtech).</p>
+    ${renderPaysHtml()}`;
+}
+
+function renderPaysHtml(){
+  const p = RAW.pays;
+  if (!p || !p.pays || !p.pays.length) return '';
+  const maxVal = Math.max(...p.pays.map(x => x.valeur));
+  const rows = p.pays.map(x => {
+    const pct = Math.max(2, Math.round((x.valeur / maxVal) * 100));
+    return `<div class="pays-row">
+      <span class="pays-name" title="${esc(x.nom)}">${esc(x.nom)}</span>
+      <span class="pays-track"><span class="pays-bar" style="width:${pct}%"></span></span>
+      <span class="pays-value">${x.valeur}</span>
+    </div>`;
+  }).join('');
+  return `
+    <div class="pays-section">
+      <h3 class="sec">Répartition par pays d'origine</h3>
+      <p class="cmp-hint" style="margin-top:0">Nombre de participations par pays d'origine de la start-up, tous secteurs et années confondus.</p>
+      <div class="pays-list">${rows}</div>
+      <p class="trends-caption">${p.total} participations réparties sur ${p.pays.length} pays. Pour une start-up à pays multiples (ex. « Royaume-Uni / États-Unis »), seul le premier pays cité est compté. ${p.exclues} participation${p.exclues>1?'s':''} exclue${p.exclues>1?'s':''} (pays d'origine non renseigné ou trop générique, ex. « Europe »).</p>
+    </div>`;
 }
 
 function showTrendTooltip(bandEl){

@@ -322,6 +322,38 @@ def construire_tendances(part: pd.DataFrame) -> dict:
     }
 
 
+PAYS_ALIAS = {"us": "États-Unis", "usa": "États-Unis", "u.s.": "États-Unis", "uk": "Royaume-Uni", "u.k.": "Royaume-Uni"}
+PAYS_HORS_PERIMETRE = {"europe"}  # trop générique pour être compté comme un pays
+
+
+def pays_canonique(v):
+    if est_vide(v):
+        return None
+    s = re.sub(r"\(.*?\)", "", str(v)).strip()
+    if "/" in s:
+        s = s.split("/")[0].strip()
+    if not s:
+        return None
+    low = s.lower()
+    if low in PAYS_HORS_PERIMETRE:
+        return None
+    return PAYS_ALIAS.get(low, s)
+
+
+def construire_pays(part: pd.DataFrame) -> dict:
+    from collections import Counter
+    compte = Counter()
+    total_exclues = 0
+    for _, r in part.iterrows():
+        pays = pays_canonique(r.get("Pays d’origine"))
+        if pays is None:
+            total_exclues += 1
+            continue
+        compte[pays] += 1
+    liste = [{"nom": p, "valeur": n} for p, n in compte.most_common()]
+    return {"pays": liste, "exclues": total_exclues, "total": sum(compte.values())}
+
+
 def construire_startups(part: pd.DataFrame) -> list[dict]:
     out = []
     for _, r in part.iterrows():
@@ -375,6 +407,7 @@ def main() -> int:
     rattacher_actus(fonds)
     startups = construire_startups(part_df)
     tendances = construire_tendances(part_df)
+    pays = construire_pays(part_df)
 
     data = {
         "version": version,
@@ -383,6 +416,7 @@ def main() -> int:
         "fonds": fonds,
         "startups": startups,
         "tendances": tendances,
+        "pays": pays,
     }
 
     template = (BASE_DIR / "_site_template.html").read_text(encoding="utf-8")
@@ -394,6 +428,7 @@ def main() -> int:
     print(f"Sociétés (Participations) : {len(startups)}")
     print(f"Sociétés de gestion : {len(set(f['nom'] for f in fonds))}")
     print(f"Tendances : {tendances['total']} participations classées ({tendances['exclues']} exclues : date ou secteur non exploitable)")
+    print(f"Pays d'origine : {pays['total']} participations réparties sur {len(pays['pays'])} pays ({pays['exclues']} exclues : pays non identifiable)")
     return 0
 
 
