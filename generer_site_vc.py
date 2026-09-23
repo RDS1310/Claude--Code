@@ -230,18 +230,61 @@ def rattacher_actus(fonds: list[dict]) -> None:
 
 
 SECTEUR_LABELS = {
-    "coeur": "InsurTech (cœur)", "adjacent": "InsurTech (adjacent)", "fintech": "FinTech liée assurance",
+    "coeur": "InsurTech (cœur)",
+    "fintech": "FinTech liée assurance",
+    "data": "Data, IA & distribution",
+    "telematique": "Télématique, mobilité & prévention IoT",
+    "sante": "Santé & prévoyance",
+    "cyber": "Cyber",
+    "emploi": "Emploi & avantages sociaux",
+    "climat": "Climat & risques catastrophes",
+}
+# Ordre fixe des séries du graphique Tendances (identité -> teinte catégorielle, jamais recyclée) :
+# du plus gros volume au plus petit, cf. skill dataviz (8 teintes catégorielles validées par défaut).
+SECTEUR_ORDRE = ["coeur", "fintech", "data", "telematique", "sante", "cyber", "emploi", "climat"]
+
+# Sous-classification manuelle du bucket "InsurTech (adjacent)" en verticales exploitables pour le
+# graphique Tendances (recherche web du 23/09/2026, à partir des Commentaires déjà collectés + WebSearch
+# ciblé pour les 7 entrées sans description suffisante). "hors_perimetre" = la description trouvée montre
+# qu'il ne s'agit pas d'une verticale assurance identifiable (l'entreprise elle-même n'est pas insurtech,
+# même si le fonds qui y a investi l'est) -> exclue du graphique plutôt que forcée dans une case fausse.
+ADJACENT_SOUS_SECTEUR = {
+    # Cyber
+    "SesameIT": "cyber", "CyberTide": "cyber", "Fenix24": "cyber", "CyberSmart": "cyber",
+    "Cygnvs": "cyber", "Kovrr": "cyber",
+    # Climat & risques catastrophes
+    "Claims Carbon (Claims Carbon Institute)": "climat", "Sourse (ex-Stratos Solution)": "climat",
+    "Cape Analytics": "climat", "NeuWave": "climat",
+    # Santé & prévoyance
+    "DeinePflege": "sante", "HealthCaters": "sante", "Grace": "sante", "Bliss (Saúde Bliss)": "sante",
+    "Human API": "sante", "ifeel": "sante", "iBeat": "sante", "Osigu": "sante", "Ninebarc": "sante",
+    # Télématique, mobilité & prévention IoT
+    "Liberty Rider": "telematique", "DC Connected Car": "telematique", "Drivit": "telematique",
+    "Cambridge Mobile Telematics": "telematique", "Nauto": "telematique", "Savari": "telematique",
+    "ShipIn Systems": "telematique", "Cocoon": "telematique", "Roost": "telematique",
+    "Champ Titles": "telematique", "Linkbycar": "telematique",
+    # Emploi & avantages sociaux
+    "Coverflex": "emploi", "Thatch": "emploi", "Limelight Health": "emploi", "Family First": "emploi",
+    # Data, IA & distribution
+    "MiTrust": "data", "Complero": "data", "Bdeo": "data", "Digital Fineprint": "data", "Widmee": "data",
+    "Zelros": "data", "WeGroup": "data", "Particeep": "data", "AlloBrain": "data", "Indico Data": "data",
+    "Shepper": "data", "Certificall": "data", "Notch (notch.cx)": "data", "Ai5": "data", "Protex AI": "data",
+    "Etvas": "data", "ARTA": "data", "Erste Hausverwaltung": "data", "Coverfy": "data",
+    # Hors périmètre assurance (entreprise elle-même non identifiée comme insurtech malgré le tag
+    # "adjacent" existant — cf. Anomalies : MuchBetter.ai = EdTech/RH, Gretel = data synthétique
+    # horizontale rachetée par Nvidia, hypt. = SaaS avis clients horizontal, Value Factory = non identifiée)
+    "MuchBetter.ai": None, "Gretel": None, "hypt.": None, "Value Factory": None,
 }
 
 
-def secteur_bucket(v):
+def secteur_bucket(v, startup=None):
     if est_vide(v):
         return None
     s0 = str(v).split("/")[0].strip().lower()
+    if "adjacent" in str(v).lower():
+        return ADJACENT_SOUS_SECTEUR.get(str(startup).strip()) if startup is not None else None
     if "fintech" in s0:
         return "fintech"
-    if "adjacent" in s0:
-        return "adjacent"
     return "coeur"
 
 
@@ -261,7 +304,7 @@ def construire_tendances(part: pd.DataFrame) -> dict:
     total_exclues = 0
     for _, r in part.iterrows():
         annee = annee_de(r.get("Date d’investissement"))
-        bucket = secteur_bucket(r.get("Secteur"))
+        bucket = secteur_bucket(r.get("Secteur"), r.get("Start-up"))
         if annee is None or bucket is None:
             total_exclues += 1
             continue
@@ -270,11 +313,8 @@ def construire_tendances(part: pd.DataFrame) -> dict:
         return {"annees": [], "series": [], "exclues": total_exclues, "total": 0}
     annees = list(range(min(a for a, _ in compte), max(a for a, _ in compte) + 1))
     series = [
-        {"key": "coeur", "label": SECTEUR_LABELS["coeur"], "valeurs": [compte.get((a, "coeur"), 0) for a in annees]},
-        {"key": "adjacent", "label": SECTEUR_LABELS["adjacent"],
-         "valeurs": [compte.get((a, "adjacent"), 0) for a in annees]},
-        {"key": "fintech", "label": SECTEUR_LABELS["fintech"],
-         "valeurs": [compte.get((a, "fintech"), 0) for a in annees]},
+        {"key": k, "label": SECTEUR_LABELS[k], "valeurs": [compte.get((a, k), 0) for a in annees]}
+        for k in SECTEUR_ORDRE
     ]
     return {
         "annees": annees, "series": series, "exclues": total_exclues,
@@ -353,7 +393,7 @@ def main() -> int:
     print(f"Véhicules       : {len(fonds)}")
     print(f"Sociétés (Participations) : {len(startups)}")
     print(f"Sociétés de gestion : {len(set(f['nom'] for f in fonds))}")
-    print(f"Tendances : {tendances['total']} participations datées ({tendances['exclues']} exclues, date non retrouvée)")
+    print(f"Tendances : {tendances['total']} participations classées ({tendances['exclues']} exclues : date ou secteur non exploitable)")
     return 0
 
 

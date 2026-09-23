@@ -21,11 +21,21 @@
   --v1:#2a78d6;
   --v2:#eb6834;
   --v3:#1baf7a;
+  --v4:#eda100;
+  --v5:#e87ba4;
+  --v6:#008300;
+  --v7:#4a3aa7;
+  --v8:#e34948;
   --label-dark:#12100E;
   --label-light:#FBFAF7;
-  --v1-onfill:var(--label-light);
+  --v1-onfill:var(--label-dark);
   --v2-onfill:var(--label-dark);
   --v3-onfill:var(--label-dark);
+  --v4-onfill:var(--label-dark);
+  --v5-onfill:var(--label-dark);
+  --v6-onfill:var(--label-light);
+  --v7-onfill:var(--label-light);
+  --v8-onfill:var(--label-dark);
   --rail:308px;
   --font-display:"Newsreader",Georgia,serif;
   --font-body:"IBM Plex Sans",system-ui,sans-serif;
@@ -49,9 +59,12 @@
     --v1:#3987e5;
     --v2:#d95926;
     --v3:#199e70;
-    --v1-onfill:var(--label-dark);
-    --v2-onfill:var(--label-dark);
-    --v3-onfill:var(--label-dark);
+    --v4:#c98500;
+    --v5:#d55181;
+    --v6:#008300;
+    --v7:#9085e9;
+    --v8:#e66767;
+    --v7-onfill:var(--label-dark);
   }
 }
 :root[data-theme="dark"]{
@@ -71,9 +84,12 @@
   --v1:#3987e5;
   --v2:#d95926;
   --v3:#199e70;
-  --v1-onfill:var(--label-dark);
-  --v2-onfill:var(--label-dark);
-  --v3-onfill:var(--label-dark);
+  --v4:#c98500;
+  --v5:#d55181;
+  --v6:#008300;
+  --v7:#9085e9;
+  --v8:#e66767;
+  --v7-onfill:var(--label-dark);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;height:100%}
@@ -655,7 +671,14 @@ function roundedTopPath(x, y, w, h, r){
   r = Math.max(0, Math.min(r, w / 2, h));
   return `M${x},${y+h} L${x},${y+r} Q${x},${y} ${x+r},${y} L${x+w-r},${y} Q${x+w},${y} ${x+w},${y+r} L${x+w},${y+h} Z`;
 }
-const TREND_VAR = { coeur:'var(--v1)', adjacent:'var(--v2)', fintech:'var(--v3)' };
+const TREND_VAR = {
+  coeur:'var(--v1)', fintech:'var(--v2)', data:'var(--v3)', telematique:'var(--v4)',
+  sante:'var(--v5)', cyber:'var(--v6)', emploi:'var(--v7)', climat:'var(--v8)',
+};
+const TREND_ONFILL = {
+  coeur:'var(--v1-onfill)', fintech:'var(--v2-onfill)', data:'var(--v3-onfill)', telematique:'var(--v4-onfill)',
+  sante:'var(--v5-onfill)', cyber:'var(--v6-onfill)', emploi:'var(--v7-onfill)', climat:'var(--v8-onfill)',
+};
 
 function renderTrends(){
   const t = RAW.tendances;
@@ -688,7 +711,7 @@ function renderTrends(){
       const d = isTop ? roundedTopPath(x0, yTop, barW, drawH, 4) : `M${x0},${yTop} h${barW} v${drawH} h${-barW} Z`;
       segsSvg += `<path d="${d}" fill="${TREND_VAR[seg.key]}" class="trend-seg" data-key="${seg.key}"></path>`;
       if (drawH >= MIN_LABEL_H){
-        labelsSvg += `<text x="${x0 + barW/2}" y="${yTop + drawH/2 + 3.5}" class="trend-seg-label" fill="var(--${seg.key==='coeur'?'v1':seg.key==='adjacent'?'v2':'v3'}-onfill)">${seg.val}</text>`;
+        labelsSvg += `<text x="${x0 + barW/2}" y="${yTop + drawH/2 + 3.5}" class="trend-seg-label" fill="${TREND_ONFILL[seg.key]}">${seg.val}</text>`;
       }
       topY = yTop;
       cursor = yTop - (isTop ? 0 : gapPx);
@@ -732,7 +755,7 @@ function renderTrends(){
       </svg>
       <div class="trend-tooltip" id="trend-tooltip"></div>
     </div>`}
-    <p class="trends-caption">${t.total} participations réparties sur ${years.length} années (${years[0]}–${lastYear}).${incompleteNote} ${t.exclues} participation${t.exclues>1?'s':''} exclue${t.exclues>1?'s':''} de ce graphique (date d'investissement ou secteur non renseigné(e)).</p>`;
+    <p class="trends-caption">${t.total} participations réparties sur ${years.length} années (${years[0]}–${lastYear}).${incompleteNote} ${t.exclues} participation${t.exclues>1?'s':''} exclue${t.exclues>1?'s':''} de ce graphique (date d'investissement non renseignée, secteur non identifiable, ou société elle-même hors périmètre assurance malgré son rattachement à un fonds insurtech).</p>`;
 }
 
 function showTrendTooltip(bandEl){
