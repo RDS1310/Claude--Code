@@ -21,6 +21,11 @@
   --v1:#2a78d6;
   --v2:#eb6834;
   --v3:#1baf7a;
+  --label-dark:#12100E;
+  --label-light:#FBFAF7;
+  --v1-onfill:var(--label-light);
+  --v2-onfill:var(--label-dark);
+  --v3-onfill:var(--label-dark);
   --rail:308px;
   --font-display:"Newsreader",Georgia,serif;
   --font-body:"IBM Plex Sans",system-ui,sans-serif;
@@ -44,6 +49,9 @@
     --v1:#3987e5;
     --v2:#d95926;
     --v3:#199e70;
+    --v1-onfill:var(--label-dark);
+    --v2-onfill:var(--label-dark);
+    --v3-onfill:var(--label-dark);
   }
 }
 :root[data-theme="dark"]{
@@ -63,6 +71,9 @@
   --v1:#3987e5;
   --v2:#d95926;
   --v3:#199e70;
+  --v1-onfill:var(--label-dark);
+  --v2-onfill:var(--label-dark);
+  --v3-onfill:var(--label-dark);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;height:100%}
@@ -216,10 +227,10 @@ table.cmp tr:hover td,table.cmp tr:hover th{background:var(--paper)}
 .trends-legend-item .sw{width:11px;height:11px;border-radius:2px;flex:none}
 .trends-chart-wrap{position:relative;background:var(--surface);border:1px solid var(--line);padding:14px 10px 4px;overflow-x:auto}
 .trend-svg{display:block}
-.trend-grid line{stroke:var(--line);stroke-width:1;shape-rendering:crispEdges}
-.trend-grid text{fill:var(--muted);font-size:10.5px;font-family:var(--font-body)}
-.trend-axis text{fill:var(--muted);font-size:11px;font-family:var(--font-body)}
-.trend-total{fill:var(--ink);font-size:11px;font-variant-numeric:tabular-nums;font-weight:500}
+.trend-axis{fill:var(--muted);font-size:11px;font-family:var(--font-body);text-anchor:middle}
+.trend-total-chip rect{fill:var(--line-soft)}
+.trend-total-chip text{fill:var(--ink);font-size:11.5px;font-weight:600;font-variant-numeric:tabular-nums;text-anchor:middle;font-family:var(--font-body)}
+.trend-seg-label{font-size:10.5px;font-weight:600;font-variant-numeric:tabular-nums;text-anchor:middle;font-family:var(--font-body);pointer-events:none}
 .trend-seg{cursor:pointer;transition:opacity .12s}
 .trend-hit{fill:transparent}
 .trend-hit:hover,.trend-hit:focus{outline:none}
@@ -658,23 +669,17 @@ function renderTrends(){
   const step = maxTotal <= 20 ? 5 : (maxTotal <= 60 ? 10 : 20);
   const yMax = Math.ceil(maxTotal / step) * step;
 
-  const bandW = 56, barW = 22, gapPx = 2, padL = 34, padR = 12, padT = 26, padB = 34;
-  const plotW = years.length * bandW, plotH = 240;
+  const bandW = 56, barW = 24, gapPx = 2, padL = 8, padR = 8, padT = 32, padB = 34;
+  const plotW = years.length * bandW, plotH = 230;
   const W = padL + plotW + padR, H = padT + plotH + padB;
-  const yToPix = v => plotH - (v / yMax) * plotH;
+  const MIN_LABEL_H = 15; // en-dessous, le libellé ne rentre pas proprement -> on le retire (table/tooltip prennent le relais)
 
-  let gridSvg = '';
-  for (let v = 0; v <= yMax; v += step){
-    const y = padT + yToPix(v);
-    gridSvg += `<line x1="${padL}" x2="${padL+plotW}" y1="${y}" y2="${y}"></line><text x="${padL-8}" y="${y+3}" text-anchor="end">${v}</text>`;
-  }
-
-  let bars = '', axisSvg = '', totalsSvg = '';
+  let bars = '', axisSvg = '', chipsSvg = '';
   years.forEach((yr, i) => {
     const x0 = padL + i * bandW + (bandW - barW) / 2;
     const baseline = padT + plotH;
     const nonZero = series.map(ser => ({ key: ser.key, label: ser.label, val: ser.valeurs[i] || 0 })).filter(s => s.val > 0);
-    let cursor = baseline, topY = baseline, segsSvg = '';
+    let cursor = baseline, topY = baseline, segsSvg = '', labelsSvg = '';
     nonZero.forEach((seg, si) => {
       const rawH = (seg.val / yMax) * plotH;
       const isTop = si === nonZero.length - 1;
@@ -682,14 +687,18 @@ function renderTrends(){
       const yTop = cursor - drawH;
       const d = isTop ? roundedTopPath(x0, yTop, barW, drawH, 4) : `M${x0},${yTop} h${barW} v${drawH} h${-barW} Z`;
       segsSvg += `<path d="${d}" fill="${TREND_VAR[seg.key]}" class="trend-seg" data-key="${seg.key}"></path>`;
+      if (drawH >= MIN_LABEL_H){
+        labelsSvg += `<text x="${x0 + barW/2}" y="${yTop + drawH/2 + 3.5}" class="trend-seg-label" fill="var(--${seg.key==='coeur'?'v1':seg.key==='adjacent'?'v2':'v3'}-onfill)">${seg.val}</text>`;
+      }
       topY = yTop;
       cursor = yTop - (isTop ? 0 : gapPx);
     });
-    bars += `<g class="trend-band" data-idx="${i}">${segsSvg}<rect class="trend-hit" x="${padL + i*bandW}" y="${padT}" width="${bandW}" height="${plotH}" tabindex="0" aria-label="${yr} : ${totals[i]} participation${totals[i]>1?'s':''}"></rect></g>`;
+    bars += `<g class="trend-band" data-idx="${i}">${segsSvg}${labelsSvg}<rect class="trend-hit" x="${padL + i*bandW}" y="${padT}" width="${bandW}" height="${plotH}" tabindex="0" aria-label="${yr} : ${totals[i]} participation${totals[i]>1?'s':''}"></rect></g>`;
     if (totals[i] > 0){
-      totalsSvg += `<text x="${x0 + barW/2}" y="${topY - 6}" class="trend-total" text-anchor="middle">${totals[i]}</text>`;
+      const chipW = 12 + String(totals[i]).length * 7, chipH = 18, chipY = Math.max(0, topY - 10 - chipH);
+      chipsSvg += `<g class="trend-total-chip"><rect x="${x0+barW/2-chipW/2}" y="${chipY}" width="${chipW}" height="${chipH}" rx="3"></rect><text x="${x0+barW/2}" y="${chipY+chipH/2+4}">${totals[i]}</text></g>`;
     }
-    axisSvg += `<text x="${x0 + barW/2}" y="${padT+plotH+18}" class="trend-axis" text-anchor="middle">${yr}</text>`;
+    axisSvg += `<text x="${x0 + barW/2}" y="${padT+plotH+18}" class="trend-axis">${yr}</text>`;
   });
 
   const legend = series.map(ser =>
@@ -717,9 +726,8 @@ function renderTrends(){
     ${S.trendsTable ? tableHtml : `
     <div class="trends-chart-wrap">
       <svg class="trend-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Participations par année et secteur">
-        <g class="trend-grid">${gridSvg}</g>
         <g>${bars}</g>
-        <g>${totalsSvg}</g>
+        <g>${chipsSvg}</g>
         <g>${axisSvg}</g>
       </svg>
       <div class="trend-tooltip" id="trend-tooltip"></div>
