@@ -18,6 +18,9 @@
   --line-soft:#E1E6E1;
   --good:#3F7A4E;
   --good-soft:#E6F0E7;
+  --v1:#2a78d6;
+  --v2:#eb6834;
+  --v3:#1baf7a;
   --rail:308px;
   --font-display:"Newsreader",Georgia,serif;
   --font-body:"IBM Plex Sans",system-ui,sans-serif;
@@ -38,6 +41,9 @@
     --line-soft:#242019;
     --good:#7BBF8C;
     --good-soft:#1B2A1E;
+    --v1:#3987e5;
+    --v2:#d95926;
+    --v3:#199e70;
   }
 }
 :root[data-theme="dark"]{
@@ -54,6 +60,9 @@
   --line-soft:#242019;
   --good:#7BBF8C;
   --good-soft:#1B2A1E;
+  --v1:#3987e5;
+  --v2:#d95926;
+  --v3:#199e70;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;height:100%}
@@ -198,6 +207,38 @@ table.cmp td{padding:8px 10px;border-bottom:1px solid var(--line-soft);text-alig
 table.cmp tbody th{font-weight:400;color:var(--muted);border-bottom:1px solid var(--line-soft);border-top:0;font-size:13px}
 table.cmp tr:hover td,table.cmp tr:hover th{background:var(--paper)}
 
+/* ---------- tendances (graphique empilé) ---------- */
+.trends-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:4px}
+.trends-toggle{border:1px solid var(--line);background:var(--surface);padding:5px 11px;border-radius:3px;font-size:12.5px;color:var(--ink)}
+.trends-toggle:hover{border-color:var(--petrol);color:var(--petrol)}
+.trends-legend{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0 18px;font-size:13px}
+.trends-legend-item{display:flex;align-items:center;gap:7px;color:var(--ink)}
+.trends-legend-item .sw{width:11px;height:11px;border-radius:2px;flex:none}
+.trends-chart-wrap{position:relative;background:var(--surface);border:1px solid var(--line);padding:14px 10px 4px;overflow-x:auto}
+.trend-svg{display:block}
+.trend-grid line{stroke:var(--line);stroke-width:1;shape-rendering:crispEdges}
+.trend-grid text{fill:var(--muted);font-size:10.5px;font-family:var(--font-body)}
+.trend-axis text{fill:var(--muted);font-size:11px;font-family:var(--font-body)}
+.trend-total{fill:var(--ink);font-size:11px;font-variant-numeric:tabular-nums;font-weight:500}
+.trend-seg{cursor:pointer;transition:opacity .12s}
+.trend-hit{fill:transparent}
+.trend-hit:hover,.trend-hit:focus{outline:none}
+.trend-band.is-active .trend-seg{opacity:.82}
+.trend-tooltip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:9px 12px;font-size:12.5px;box-shadow:0 4px 14px rgba(0,0,0,.14);opacity:0;transform:translate(-50%,-100%);transition:opacity .08s;z-index:5;min-width:150px}
+.trend-tooltip.show{opacity:1}
+.trend-tooltip .tt-year{font-family:var(--font-display);font-size:14px;margin-bottom:6px}
+.trend-tooltip .tt-row{display:flex;align-items:center;gap:7px;justify-content:space-between;padding:2px 0}
+.trend-tooltip .tt-key{display:flex;align-items:center;gap:6px;color:var(--muted)}
+.trend-tooltip .tt-key .ln{width:10px;height:2px;border-radius:1px;flex:none}
+.trend-tooltip .tt-val{font-variant-numeric:tabular-nums;font-weight:500;color:var(--ink)}
+.trend-tooltip .tt-total{border-top:1px solid var(--line-soft);margin-top:5px;padding-top:5px;font-weight:600}
+.trends-caption{color:var(--muted);font-size:12.5px;margin-top:12px;max-width:640px}
+table.trend-table{border-collapse:collapse;width:100%;font-size:13.5px}
+table.trend-table th,table.trend-table td{padding:8px 10px;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
+table.trend-table th:first-child,table.trend-table td:first-child{text-align:left;font-variant-numeric:normal}
+table.trend-table thead th{border-bottom:1px solid var(--ink);color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:600}
+table.trend-table tr:hover td{background:var(--paper)}
+
 .foot{max-width:1100px;margin-top:40px;padding-top:14px;border-top:1px solid var(--line-soft);color:var(--muted);font-size:12px}
 
 @media (max-width:860px){
@@ -229,6 +270,7 @@ table.cmp tr:hover td,table.cmp tr:hover th{background:var(--paper)}
     <button class="tab" role="tab" data-view="funds" aria-selected="true">Fonds</button>
     <button class="tab" role="tab" data-view="startups" aria-selected="false">Start-ups</button>
     <button class="tab" role="tab" data-view="compare" aria-selected="false">Comparateur</button>
+    <button class="tab" role="tab" data-view="trends" aria-selected="false">Tendances</button>
   </nav>
   <div class="tools">
     <button class="ghost" id="btn-csv">Exporter en CSV</button>
@@ -274,7 +316,7 @@ window.__DATA__ = __DATA_JSON__;
    ============================================================ */
 
 const RAW = window.__DATA__;
-const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:''} };
+const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:''}, trendsTable:false };
 
 const STAGES = ["Pré-Seed","Seed","Pré-Série A","Série A","Série B","Série C","Série D"];
 const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
@@ -598,6 +640,136 @@ function renderCompare(){
     </table></div>`;
 }
 
+function roundedTopPath(x, y, w, h, r){
+  r = Math.max(0, Math.min(r, w / 2, h));
+  return `M${x},${y+h} L${x},${y+r} Q${x},${y} ${x+r},${y} L${x+w-r},${y} Q${x+w},${y} ${x+w},${y+r} L${x+w},${y+h} Z`;
+}
+const TREND_VAR = { coeur:'var(--v1)', adjacent:'var(--v2)', fintech:'var(--v3)' };
+
+function renderTrends(){
+  const t = RAW.tendances;
+  if (!t || !t.annees || !t.annees.length){
+    return `<div class="placeholder"><h2>Pas assez de données</h2>
+      <p>Aucune participation datée n'a pu être rattachée à une année et à un secteur.</p></div>`;
+  }
+  const years = t.annees, series = t.series;
+  const totals = years.map((_, i) => series.reduce((s, ser) => s + (ser.valeurs[i] || 0), 0));
+  const maxTotal = Math.max(1, ...totals);
+  const step = maxTotal <= 20 ? 5 : (maxTotal <= 60 ? 10 : 20);
+  const yMax = Math.ceil(maxTotal / step) * step;
+
+  const bandW = 56, barW = 22, gapPx = 2, padL = 34, padR = 12, padT = 26, padB = 34;
+  const plotW = years.length * bandW, plotH = 240;
+  const W = padL + plotW + padR, H = padT + plotH + padB;
+  const yToPix = v => plotH - (v / yMax) * plotH;
+
+  let gridSvg = '';
+  for (let v = 0; v <= yMax; v += step){
+    const y = padT + yToPix(v);
+    gridSvg += `<line x1="${padL}" x2="${padL+plotW}" y1="${y}" y2="${y}"></line><text x="${padL-8}" y="${y+3}" text-anchor="end">${v}</text>`;
+  }
+
+  let bars = '', axisSvg = '', totalsSvg = '';
+  years.forEach((yr, i) => {
+    const x0 = padL + i * bandW + (bandW - barW) / 2;
+    const baseline = padT + plotH;
+    const nonZero = series.map(ser => ({ key: ser.key, label: ser.label, val: ser.valeurs[i] || 0 })).filter(s => s.val > 0);
+    let cursor = baseline, topY = baseline, segsSvg = '';
+    nonZero.forEach((seg, si) => {
+      const rawH = (seg.val / yMax) * plotH;
+      const isTop = si === nonZero.length - 1;
+      const drawH = Math.max(0.5, isTop ? rawH : rawH - gapPx);
+      const yTop = cursor - drawH;
+      const d = isTop ? roundedTopPath(x0, yTop, barW, drawH, 4) : `M${x0},${yTop} h${barW} v${drawH} h${-barW} Z`;
+      segsSvg += `<path d="${d}" fill="${TREND_VAR[seg.key]}" class="trend-seg" data-key="${seg.key}"></path>`;
+      topY = yTop;
+      cursor = yTop - (isTop ? 0 : gapPx);
+    });
+    bars += `<g class="trend-band" data-idx="${i}">${segsSvg}<rect class="trend-hit" x="${padL + i*bandW}" y="${padT}" width="${bandW}" height="${plotH}" tabindex="0" aria-label="${yr} : ${totals[i]} participation${totals[i]>1?'s':''}"></rect></g>`;
+    if (totals[i] > 0){
+      totalsSvg += `<text x="${x0 + barW/2}" y="${topY - 6}" class="trend-total" text-anchor="middle">${totals[i]}</text>`;
+    }
+    axisSvg += `<text x="${x0 + barW/2}" y="${padT+plotH+18}" class="trend-axis" text-anchor="middle">${yr}</text>`;
+  });
+
+  const legend = series.map(ser =>
+    `<span class="trends-legend-item"><span class="sw" style="background:${TREND_VAR[ser.key]}"></span>${esc(ser.label)}</span>`
+  ).join('');
+
+  const tableRows = years.map((yr, i) =>
+    `<tr><td>${yr}</td>${series.map(ser => `<td>${ser.valeurs[i]||0}</td>`).join('')}<td><b>${totals[i]}</b></td></tr>`
+  ).join('');
+  const tableHtml = `<div class="cmp-wrap"><table class="trend-table">
+    <thead><tr><th>Année</th>${series.map(s=>`<th>${esc(s.label)}</th>`).join('')}<th>Total</th></tr></thead>
+    <tbody>${tableRows}</tbody>
+  </table></div>`;
+
+  const lastYear = years[years.length - 1];
+  const incompleteNote = lastYear >= 2026 ? ` L'année ${lastYear} est partielle (données arrêtées en cours d'année).` : '';
+
+  return `
+    <h1 class="sheet-name">Tendances</h1>
+    <div class="trends-head">
+      <p class="cmp-hint" style="margin:0">Nombre de participations par année d'investissement et par secteur.</p>
+      <button class="trends-toggle" id="trend-view-toggle">${S.trendsTable ? 'Voir le graphique' : 'Voir le tableau'}</button>
+    </div>
+    <div class="trends-legend">${legend}</div>
+    ${S.trendsTable ? tableHtml : `
+    <div class="trends-chart-wrap">
+      <svg class="trend-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Participations par année et secteur">
+        <g class="trend-grid">${gridSvg}</g>
+        <g>${bars}</g>
+        <g>${totalsSvg}</g>
+        <g>${axisSvg}</g>
+      </svg>
+      <div class="trend-tooltip" id="trend-tooltip"></div>
+    </div>`}
+    <p class="trends-caption">${t.total} participations réparties sur ${years.length} années (${years[0]}–${lastYear}).${incompleteNote} ${t.exclues} participation${t.exclues>1?'s':''} exclue${t.exclues>1?'s':''} de ce graphique (date d'investissement ou secteur non renseigné(e)).</p>`;
+}
+
+function showTrendTooltip(bandEl){
+  const t = RAW.tendances;
+  const tip = document.getElementById('trend-tooltip');
+  if (!t || !tip) return;
+  const idx = Number(bandEl.dataset.idx);
+  const yr = t.annees[idx];
+  tip.innerHTML = '';
+  const yearEl = document.createElement('div'); yearEl.className = 'tt-year'; yearEl.textContent = yr;
+  tip.appendChild(yearEl);
+  let total = 0;
+  t.series.forEach(ser => {
+    const val = ser.valeurs[idx] || 0;
+    total += val;
+    const row = document.createElement('div'); row.className = 'tt-row';
+    const keyWrap = document.createElement('span'); keyWrap.className = 'tt-key';
+    const ln = document.createElement('span'); ln.className = 'ln'; ln.style.background = TREND_VAR[ser.key];
+    const lbl = document.createElement('span'); lbl.textContent = ser.label;
+    keyWrap.append(ln, lbl);
+    const valEl = document.createElement('span'); valEl.className = 'tt-val'; valEl.textContent = String(val);
+    row.append(keyWrap, valEl);
+    tip.appendChild(row);
+  });
+  const totalRow = document.createElement('div'); totalRow.className = 'tt-row tt-total';
+  const totalLbl = document.createElement('span'); totalLbl.textContent = 'Total';
+  const totalVal = document.createElement('span'); totalVal.className = 'tt-val'; totalVal.textContent = String(total);
+  totalRow.append(totalLbl, totalVal);
+  tip.appendChild(totalRow);
+
+  const wrap = tip.parentElement;
+  const wrapRect = wrap.getBoundingClientRect();
+  const hitRect = bandEl.querySelector('.trend-hit').getBoundingClientRect();
+  tip.style.left = (hitRect.left - wrapRect.left + hitRect.width / 2 + wrap.scrollLeft) + 'px';
+  tip.style.top = (hitRect.top - wrapRect.top) + 'px';
+  tip.classList.add('show');
+  document.querySelectorAll('.trend-band').forEach(b => b.classList.remove('is-active'));
+  bandEl.classList.add('is-active');
+}
+function hideTrendTooltip(){
+  const tip = document.getElementById('trend-tooltip');
+  if (tip) tip.classList.remove('show');
+  document.querySelectorAll('.trend-band').forEach(b => b.classList.remove('is-active'));
+}
+
 /* ---------- rendu global ---------- */
 function render(){
   document.getElementById('count').textContent =
@@ -607,6 +779,7 @@ function render(){
 
   const panel = document.getElementById('panel');
   if (S.view === 'compare'){ panel.innerHTML = renderCompare(); return; }
+  if (S.view === 'trends'){ panel.innerHTML = renderTrends(); return; }
   if (S.view === 'startups'){
     const s = S.selStartup ? STARTUPS.find(x => (x.fid+'|'+x.nom) === S.selStartup) : null;
     panel.innerHTML = s ? renderStartup(s) : `
@@ -641,7 +814,21 @@ document.getElementById('panel').addEventListener('click', e => {
   const g = e.target.closest('[data-goto]');
   if (g){ e.preventDefault(); S.selStartup = g.dataset.goto; S.view='startups'; S.q=''; document.getElementById('q').value=''; render(); return; }
   const gf = e.target.closest('[data-goto-fund]');
-  if (gf){ e.preventDefault(); S.selFund = gf.dataset.gotoFund; S.view='funds'; S.q=''; document.getElementById('q').value=''; render(); }
+  if (gf){ e.preventDefault(); S.selFund = gf.dataset.gotoFund; S.view='funds'; S.q=''; document.getElementById('q').value=''; render(); return; }
+  if (e.target.closest('#trend-view-toggle')){ S.trendsTable = !S.trendsTable; render(); }
+});
+
+document.getElementById('panel').addEventListener('pointermove', e => {
+  const band = e.target.closest('.trend-band');
+  if (band) showTrendTooltip(band); else if (document.getElementById('trend-tooltip')) hideTrendTooltip();
+});
+document.getElementById('panel').addEventListener('pointerleave', () => hideTrendTooltip());
+document.getElementById('panel').addEventListener('focusin', e => {
+  const band = e.target.closest('.trend-band');
+  if (band) showTrendTooltip(band);
+});
+document.getElementById('panel').addEventListener('focusout', e => {
+  if (e.target.closest('.trend-band')) hideTrendTooltip();
 });
 
 document.getElementById('btn-print').onclick = () => window.print();

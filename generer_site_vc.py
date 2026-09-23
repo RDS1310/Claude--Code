@@ -229,6 +229,59 @@ def rattacher_actus(fonds: list[dict]) -> None:
         f["actus"] = actus_par_nom.get(f["nom"], [])
 
 
+SECTEUR_LABELS = {
+    "coeur": "InsurTech (cœur)", "adjacent": "InsurTech (adjacent)", "fintech": "FinTech liée assurance",
+}
+
+
+def secteur_bucket(v):
+    if est_vide(v):
+        return None
+    s0 = str(v).split("/")[0].strip().lower()
+    if "fintech" in s0:
+        return "fintech"
+    if "adjacent" in s0:
+        return "adjacent"
+    return "coeur"
+
+
+def annee_de(v):
+    if est_vide(v):
+        return None
+    if isinstance(v, (int, float)):
+        y = int(v)
+        return y if 1990 <= y <= 2030 else None
+    txt = str(v).strip()
+    return int(txt) if re.fullmatch(r"\d{4}", txt) else None
+
+
+def construire_tendances(part: pd.DataFrame) -> dict:
+    from collections import Counter
+    compte = Counter()
+    total_exclues = 0
+    for _, r in part.iterrows():
+        annee = annee_de(r.get("Date d’investissement"))
+        bucket = secteur_bucket(r.get("Secteur"))
+        if annee is None or bucket is None:
+            total_exclues += 1
+            continue
+        compte[(annee, bucket)] += 1
+    if not compte:
+        return {"annees": [], "series": [], "exclues": total_exclues, "total": 0}
+    annees = list(range(min(a for a, _ in compte), max(a for a, _ in compte) + 1))
+    series = [
+        {"key": "coeur", "label": SECTEUR_LABELS["coeur"], "valeurs": [compte.get((a, "coeur"), 0) for a in annees]},
+        {"key": "adjacent", "label": SECTEUR_LABELS["adjacent"],
+         "valeurs": [compte.get((a, "adjacent"), 0) for a in annees]},
+        {"key": "fintech", "label": SECTEUR_LABELS["fintech"],
+         "valeurs": [compte.get((a, "fintech"), 0) for a in annees]},
+    ]
+    return {
+        "annees": annees, "series": series, "exclues": total_exclues,
+        "total": sum(compte.values()),
+    }
+
+
 def construire_startups(part: pd.DataFrame) -> list[dict]:
     out = []
     for _, r in part.iterrows():
@@ -281,6 +334,7 @@ def main() -> int:
     fonds = construire_fonds(fonds_df)
     rattacher_actus(fonds)
     startups = construire_startups(part_df)
+    tendances = construire_tendances(part_df)
 
     data = {
         "version": version,
@@ -288,6 +342,7 @@ def main() -> int:
         "nbAnomalies": int(len(ano_df)),
         "fonds": fonds,
         "startups": startups,
+        "tendances": tendances,
     }
 
     template = (BASE_DIR / "_site_template.html").read_text(encoding="utf-8")
@@ -298,6 +353,7 @@ def main() -> int:
     print(f"Véhicules       : {len(fonds)}")
     print(f"Sociétés (Participations) : {len(startups)}")
     print(f"Sociétés de gestion : {len(set(f['nom'] for f in fonds))}")
+    print(f"Tendances : {tendances['total']} participations datées ({tendances['exclues']} exclues, date non retrouvée)")
     return 0
 
 
