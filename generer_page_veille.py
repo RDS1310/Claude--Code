@@ -23,6 +23,15 @@ ENTREE = BASE_DIR / "veille_data" / "entries.json"
 SORTIE = BASE_DIR / "veille_insurtech.html"
 
 
+def cle_date(e: dict) -> tuple:
+    """Clé de tri chronologique pour une date JJ/MM/AAAA (un tri sur la chaîne brute mélange les mois)."""
+    try:
+        j, m, a = (int(x) for x in e.get("date", "").split("/"))
+        return (a, m, j)
+    except ValueError:
+        return (0, 0, 0)
+
+
 def calculer_tendances(entries: list[dict]) -> list[dict]:
     """Tally des thèmes des entrées pour le panneau Tendances."""
     themes = [e.get("theme") for e in entries if e.get("theme")]
@@ -39,7 +48,7 @@ def main() -> int:
         print(f"Journal initialisé : {ENTREE}")
 
     data = json.loads(ENTREE.read_text(encoding="utf-8"))
-    data["entries"] = sorted(data.get("entries", []), key=lambda e: e.get("date", ""), reverse=True)
+    data["entries"] = sorted(data.get("entries", []), key=cle_date, reverse=True)
     data["tendances"] = calculer_tendances(data["entries"])
 
     template = (BASE_DIR / "_veille_template.html").read_text(encoding="utf-8")
