@@ -18,6 +18,8 @@
   --line-soft:#E1E6E1;
   --good:#3F7A4E;
   --good-soft:#E6F0E7;
+  --bad:#B0413E;
+  --bad-soft:#F7E6E4;
   --v1:#2a78d6;
   --v2:#eb6834;
   --v3:#1baf7a;
@@ -56,6 +58,8 @@
     --line-soft:#242019;
     --good:#7BBF8C;
     --good-soft:#1B2A1E;
+  --bad:#E58B85;
+  --bad-soft:#34201E;
     --v1:#3987e5;
     --v2:#d95926;
     --v3:#199e70;
@@ -81,6 +85,8 @@
   --line-soft:#242019;
   --good:#7BBF8C;
   --good-soft:#1B2A1E;
+  --bad:#E58B85;
+  --bad-soft:#34201E;
   --v1:#3987e5;
   --v2:#d95926;
   --v3:#199e70;
@@ -159,6 +165,8 @@ h1,h2,h3,p{text-wrap:balance}
 .chip.on{border-color:var(--petrol);color:var(--petrol);background:var(--petrol-soft)}
 .chip.q{border-color:var(--ochre);color:var(--ochre);background:var(--ochre-soft);font-weight:500}
 .chip.good{border-color:var(--good);color:var(--good);background:var(--good-soft)}
+.chip.bad{border-color:var(--bad);color:var(--bad);background:var(--bad-soft)}
+.chip.doute{border-style:dashed;color:var(--muted)}
 
 .band{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line);background:var(--surface)}
 .fig{padding:14px 16px;border-right:1px solid var(--line-soft)}
@@ -414,6 +422,18 @@ const valoDate = s => {
   return d ? "à l'investissement (" + d + ")" : null;
 };
 
+// Statut email (code couleur Apollo) : vert = vérifié, gris = à confirmer, rouge = non disponible.
+const emailChip = c => {
+  if (c.emailStatut === 'indisponible')
+    return `<span class="chip bad" title="Recherche Apollo sans email exploitable">Email non disponible</span>`;
+  if (!c.email) return `<span class="chip" style="color:var(--muted)">Email à renseigner</span>`;
+  if (c.emailStatut === 'confirme')
+    return `<a class="chip good" href="mailto:${esc(c.email)}" title="Email vérifié par Apollo">✓ ${esc(c.email)}</a>`;
+  if (c.emailStatut === 'doute')
+    return `<a class="chip doute" href="mailto:${esc(c.email)}" title="Email non vérifié (deviné ou extrapolé par Apollo) — à confirmer">${esc(c.email)} ?</a>`;
+  return `<a class="chip" href="mailto:${esc(c.email)}">${esc(c.email)}</a>`;
+};
+
 let FONDS = RAW.fonds;
 let STARTUPS = RAW.startups;
 
@@ -626,7 +646,7 @@ function renderFund(f){
       ${c.titre ? `<div style="color:var(--muted);font-size:13px;margin-top:2px">${esc(c.titre)}</div>` : ''}
       <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
         ${c.linkedin ? `<a class="chip" href="${esc(c.linkedin)}" target="_blank" rel="noopener">LinkedIn ↗</a>` : ''}
-        ${c.email ? `<a class="chip" href="mailto:${esc(c.email)}">${esc(c.email)}</a>` : `<span class="chip" style="color:var(--muted)">Email à renseigner</span>`}
+        ${emailChip(c)}
       </div>
     </div>`).join('')}
   </div>` : ''}

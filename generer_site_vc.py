@@ -74,6 +74,20 @@ def liste(v) -> list[str]:
     return [x.strip() for x in str(v).split(";") if x.strip()]
 
 
+# Statut d'email tel que renvoyé par Apollo (colonne Contact_0x_Email_Statut, absente avant
+# l'enrichissement) → 3 états affichés avec le code couleur d'Apollo.
+STATUTS_EMAIL = {
+    "verified": "confirme",
+    "guessed": "doute", "unverified": "doute", "extrapolated": "doute",
+    "likely to engage": "doute", "likely_to_engage": "doute", "catch_all": "doute", "catch-all": "doute",
+    "unavailable": "indisponible", "bounced": "indisponible", "non trouvé": "indisponible",
+}
+
+
+def statut_email(v):
+    return None if est_vide(v) else STATUTS_EMAIL.get(str(v).strip().lower(), "doute")
+
+
 def construire_contacts(r) -> list[dict]:
     out = []
     for n in ("01", "02"):
@@ -85,6 +99,7 @@ def construire_contacts(r) -> list[dict]:
             "titre": j(r.get(f"Contact_{n}_Titre")),
             "linkedin": j(r.get(f"Contact_{n}_LinkedIn")),
             "email": j(r.get(f"Contact_{n}_Email")),
+            "emailStatut": statut_email(r.get(f"Contact_{n}_Email_Statut")),
         })
     return out
 

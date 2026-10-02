@@ -57,7 +57,7 @@ Site tokens: petrol `#0C5C5E`, ochre `#A8681F`, Newsreader (display) + IBM Plex 
 - Radar template has `VALO_DATES` (dated valuations, e.g. Alan 06/2026) — it was published from an uncommitted session on 01/10 and merged back on 02/10.
 - Review the 4 start-ups tagged "adjacent" but out of insurance scope (ANO-0315: MuchBetter.ai, Gretel, hypt., Value Factory).
 - Collection: watch feed health in the raw files (`flux[].ok`); feeding fund news into the Excel (vN+1) not automated yet.
-- Missing LinkedIn: Dietrich Aumann (Helsana, 2nd contact). Contact emails empty (planned Apollo enrichment).
+- Missing LinkedIn: Dietrich Aumann (Helsana, 2nd contact). Contact emails empty: Apollo connector works but the user's **Free plan blocks people/match and bulk_match** (02/10, no credits spent). Options given: upgrade, or user imports the 85-contact CSV into the Apollo web app and sends back emails. When emails arrive: saved script → vN+1 filling `Contact_0x_Email` + new `Contact_0x_Email_Statut` (raw Apollo status: verified/guessed/unverified/unavailable…). The page already renders it with Apollo's colour code (green ✓ verified, grey dashed '?' doubt, red 'Email non disponible'; `STATUTS_EMAIL` in `generer_site_vc.py`, `emailChip` in the template). User wants emails shown on the fund page.
 - Deferred: case-based session on how GVI assesses a start-up (to improve "Pertinence pour GVI"); login gate for Radar (undecided).
 
 ## Git
