@@ -47,10 +47,11 @@ FLUX = {
     "Artemis": "https://www.artemis.bm/feed/",
     "Insurance Journal": "https://www.insurancejournal.com/rss/news/",
     "Claims Journal": "https://www.claimsjournal.com/rss/",
-    "Insurance Times": "https://www.insurancetimes.co.uk/rss",
+    "Insurance Times": GN.format(q="site:insurancetimes.co.uk+when:7d", hl="en-GB", gl="GB"),
     "News Assurances Pro": GN.format(q="site:newsassurancespro.com+when:7d", hl="fr", gl="FR"),
     "L'Argus de l'assurance": GN.format(q="site:argusdelassurance.com+when:7d", hl="fr", gl="FR"),
-    # (FinSMEs, Insurtech Insights, News Assurances Pro, L'Argus : flux directs en 403/404,
+    # (FinSMEs, Insurtech Insights, Insurance Times, News Assurances Pro, L'Argus : flux directs
+    #  en 403/404 ou XML invalide,
     #  lus via Google News « site: ».)
     # Recherches Google News (7 derniers jours ; le filtre JOURS s'applique ensuite)
     "GN insurtech funding": GN.format(q="insurtech+funding+when:7d", hl="en-GB", gl="GB"),
