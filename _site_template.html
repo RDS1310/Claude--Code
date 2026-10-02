@@ -223,7 +223,12 @@ table.data tr:hover td{background:var(--paper)}
 .trace summary b{color:var(--ink);font-weight:500}
 .trace .src{font-family:var(--font-mono);font-size:11.5px;line-height:1.6;word-break:break-word}
 
-/* ---------- anomalies ---------- */
+/* ---------- fiabilité ---------- */
+.fiab-section{margin-top:28px}
+.fiab-section h2{font-family:var(--font-display);font-weight:400;font-size:22px;margin:0 0 4px}
+.fiab-section .cmp-hint{margin-bottom:12px}
+.anom-row summary a{color:var(--ink)}
+.anom-row summary a:hover{color:var(--petrol)}
 .anom-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:6px}
 .anom-controls .search{flex:1;min-width:200px}
 .anom-controls select{padding:6px 8px;border:1px solid var(--line);border-radius:3px;background:var(--surface);font-size:13px;color:var(--ink)}
@@ -332,7 +337,7 @@ table.trend-table tr:hover td{background:var(--paper)}
     <button class="tab" role="tab" data-view="startups" aria-selected="false">Start-ups</button>
     <button class="tab" role="tab" data-view="compare" aria-selected="false">Comparateur</button>
     <button class="tab" role="tab" data-view="trends" aria-selected="false">Tendances</button>
-    <button class="tab" role="tab" data-view="anomalies" aria-selected="false">Anomalies</button>
+    <button class="tab" role="tab" data-view="fiabilite" aria-selected="false">Fiabilité</button>
   </nav>
   <div class="tools">
     <button class="ghost" id="btn-csv">Exporter en CSV</button>
@@ -384,7 +389,7 @@ window.__DATA__ = __DATA_JSON__;
    ============================================================ */
 
 const RAW = window.__DATA__;
-const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:'',recence:''}, trendsTable:false, anomQ:'', anomType:'', anomConf:'' };
+const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:'',recence:''}, trendsTable:false, fiabQ:'' };
 
 const STAGES = ["Pré-Seed","Seed","Pré-Série A","Série A","Série B","Série C","Série D"];
 const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
@@ -868,72 +873,89 @@ function renderPaysHtml(){
     </div>`;
 }
 
-function anomaliesFiltrees(){
-  const all = RAW.anomalies || [];
-  const q = norm(S.anomQ);
-  return all.filter(a => {
-    if (S.anomType && a.type !== S.anomType) return false;
-    if (S.anomConf && a.confiance !== S.anomConf) return false;
-    if (q && !norm([a.id,a.type,a.entite,a.champ,a.commentaire,a.traitement].join(' ')).includes(q)) return false;
-    return true;
-  });
-}
-
 function confBadgeClass(conf){
   const n = norm(conf);
-  return n === 'eleve' ? 'eleve' : (n === 'moyen' ? 'moyen' : 'faible');
+  return n.startsWith('eleve') ? 'eleve' : (n.startsWith('moyen') ? 'moyen' : 'faible');
 }
 
-function anomalyRowHtml(a){
+const estFiable = c => norm(c) === 'eleve';
+const RANG_CONF = c => { const n = norm(c); return n.startsWith('faible') ? 0 : (n.startsWith('moyen') ? 1 : 2); };
+
+function fiabParticipations(){
+  const q = norm(S.fiabQ);
+  return (RAW.startups || [])
+    .filter(s => s.confiance && !estFiable(s.confiance))
+    .filter(s => !q || norm([s.nom, s.fondsNom, s.vehicule, s.commentaires].join(' ')).includes(q))
+    .sort((a,b) => RANG_CONF(a.confiance) - RANG_CONF(b.confiance) || a.nom.localeCompare(b.nom,'fr'));
+}
+
+function fiabPoints(){
+  const q = norm(S.fiabQ);
+  return (RAW.pointsOuverts || [])
+    .filter(a => !q || norm([a.entite, a.nature, a.champ, a.explication].join(' ')).includes(q));
+}
+
+function fiabParticipationHtml(s){
+  return `<details class="trace anom-row">
+    <summary>
+      <span class="anom-entite"><a href="#" data-goto="${esc(s.fid+'|'+s.nom)}">${esc(s.nom)}</a></span>
+      <span class="anom-type">${esc(s.vehicule || s.fondsNom || '')}</span>
+      <span class="conf-badge ${confBadgeClass(s.confiance)}">${esc(s.confiance)}</span>
+    </summary>
+    <dl class="dl">
+      <dt>Pourquoi</dt><dd>${esc(s.commentaires || 'Motif non documenté')}</dd>
+      ${s.sources ? `<dt>Sources</dt><dd>${esc(s.sources)}</dd>` : ''}
+    </dl>
+  </details>`;
+}
+
+function fiabPointHtml(a){
   const rows = [
-    ['Onglet source', a.onglet], ['Table / bloc source', a.table], ['Champ concerné', a.champ],
-    ['Valeur source', a.valeurSource], ['Valeur retenue', a.valeurRetenue],
-    ['Candidats éventuels', a.candidats], ['Score de similarité', a.score],
-    ['Traitement appliqué', a.traitement], ['Commentaire', a.commentaire],
+    ['Champ', a.champ], ['Valeur en base / source', a.valeurSource], ['Valeur retenue', a.valeurRetenue],
+    ['Explication', a.explication], ['Référence', a.id],
   ].filter(([,v]) => v !== null && v !== undefined && v !== '');
   return `<details class="trace anom-row">
     <summary>
-      <b>${esc(a.id)}</b>
       <span class="anom-entite">${esc(a.entite || 'Entité non précisée')}</span>
-      <span class="anom-type">${esc(a.type)}</span>
+      <span class="anom-type">${esc(a.nature)}</span>
       ${a.confiance ? `<span class="conf-badge ${confBadgeClass(a.confiance)}">${esc(a.confiance)}</span>` : ''}
     </summary>
     <dl class="dl">${rows.map(([k,v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
   </details>`;
 }
 
-function anomaliesListHtml(){
-  const list = anomaliesFiltrees();
-  const countEl = `<p class="anom-count">${list.length} / ${(RAW.anomalies||[]).length} anomalies affichées</p>`;
-  const body = list.length
-    ? `<div class="anom-list">${list.map(anomalyRowHtml).join('')}</div>`
-    : `<p class="nores">Aucune anomalie ne correspond à ces filtres.</p>`;
-  return countEl + body;
-}
-
-function renderAnomalies(){
-  const all = RAW.anomalies || [];
-  if (!all.length){
-    return `<div class="placeholder"><h2>Aucune anomalie enregistrée</h2></div>`;
-  }
-  const types = [...new Set(all.map(a => a.type).filter(Boolean))].sort((a,b) => a.localeCompare(b,'fr'));
-  const confs = ['Élevé','Moyen','Faible'].filter(c => all.some(a => a.confiance === c));
+function fiabResultsHtml(){
+  const parts = fiabParticipations(), pts = fiabPoints();
+  const totParts = (RAW.startups || []).filter(s => s.confiance && !estFiable(s.confiance)).length;
   return `
-    <h1 class="sheet-name">Anomalies</h1>
-    <p class="cmp-hint">Journal de traçabilité de la collecte de données : chaque ligne documente une décision de saisie (ambiguïté, correction, rapprochement non résolu, mise à jour web…) plutôt que de la laisser implicite. Cliquez une ligne pour voir le détail.</p>
-    <div class="anom-controls">
-      <input class="search" id="anom-q" type="search" placeholder="Rechercher (entité, champ, commentaire…)" autocomplete="off" value="${esc(S.anomQ)}">
-      <select id="anom-type"><option value="">Tous types</option>${types.map(t => `<option value="${esc(t)}"${t===S.anomType?' selected':''}>${esc(t)}</option>`).join('')}</select>
-      <select id="anom-conf"><option value="">Toute confiance</option>${confs.map(c => `<option value="${esc(c)}"${c===S.anomConf?' selected':''}>${esc(c)}</option>`).join('')}</select>
-    </div>
-    <div id="anom-results">${anomaliesListHtml()}</div>`;
+    <section class="fiab-section">
+      <h2>Participations à confiance moyenne ou faible</h2>
+      <p class="cmp-hint">${parts.length} / ${totParts} — la participation est publiée, mais au moins un élément (véhicule investisseur, montant, date…) repose sur une source indirecte ou incomplète. Les plus fragiles en premier.</p>
+      ${parts.length ? `<div class="anom-list">${parts.map(fiabParticipationHtml).join('')}</div>` : `<p class="nores">Aucune participation ne correspond.</p>`}
+    </section>
+    <section class="fiab-section">
+      <h2>Points ouverts</h2>
+      <p class="cmp-hint">${pts.length} / ${(RAW.pointsOuverts||[]).length} — questions non tranchées : écart entre sources, risque d'homonymie, valeur approximative ou non confirmée. La donnée concernée est laissée vide ou conservée telle quelle en attendant une vérification.</p>
+      ${pts.length ? `<div class="anom-list">${pts.map(fiabPointHtml).join('')}</div>` : `<p class="nores">Aucun point ouvert ne correspond.</p>`}
+    </section>`;
 }
 
-function wireAnomaliesControls(){
-  const refresh = () => { document.getElementById('anom-results').innerHTML = anomaliesListHtml(); };
-  document.getElementById('anom-q').oninput = e => { S.anomQ = e.target.value; refresh(); };
-  document.getElementById('anom-type').onchange = e => { S.anomType = e.target.value; refresh(); };
-  document.getElementById('anom-conf').onchange = e => { S.anomConf = e.target.value; refresh(); };
+function renderFiabilite(){
+  return `
+    <h1 class="sheet-name">Fiabilité des données</h1>
+    <p class="cmp-hint">Par défaut, chaque donnée du Radar est sourcée avec un niveau de confiance élevé (au moins deux sources concordantes ou une source primaire). Cet onglet ne liste que les exceptions, à lire avec prudence.</p>
+    <div class="anom-controls">
+      <input class="search" id="fiab-q" type="search" placeholder="Rechercher (start-up, fonds, motif…)" autocomplete="off" value="${esc(S.fiabQ)}">
+    </div>
+    <div id="fiab-results">${fiabResultsHtml()}</div>
+    <p class="note">Le journal complet de la collecte (${RAW.nbAnomalies} lignes : corrections, rapprochements, mises à jour tracées) reste disponible dans l'onglet « Anomalies » du classeur Excel.</p>`;
+}
+
+function wireFiabiliteControls(){
+  document.getElementById('fiab-q').oninput = e => {
+    S.fiabQ = e.target.value;
+    document.getElementById('fiab-results').innerHTML = fiabResultsHtml();
+  };
 }
 
 function showTrendTooltip(bandEl){
@@ -989,7 +1011,7 @@ function render(){
   const panel = document.getElementById('panel');
   if (S.view === 'compare'){ panel.innerHTML = renderCompare(); return; }
   if (S.view === 'trends'){ panel.innerHTML = renderTrends(); return; }
-  if (S.view === 'anomalies'){ panel.innerHTML = renderAnomalies(); wireAnomaliesControls(); return; }
+  if (S.view === 'fiabilite'){ panel.innerHTML = renderFiabilite(); wireFiabiliteControls(); return; }
   if (S.view === 'startups'){
     const s = S.selStartup ? STARTUPS.find(x => (x.fid+'|'+x.nom) === S.selStartup) : null;
     panel.innerHTML = s ? renderStartup(s) : `

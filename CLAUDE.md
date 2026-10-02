@@ -19,7 +19,7 @@ Suite of 4 web pages built for Rui (Groupama Vol'terre Investissement, GVI — G
 Each page embeds its data as JSON (`window.__DATA__`) in a static HTML file. A cross-nav bar links the 4 pages.
 
 ### Radar Insurtech VC — tabs
-Fonds (fund sheets: key figures, stages, contacts, participations, news, sources) · Start-ups · Comparateur · Tendances (stacked bars by year × 8 sectors + country breakdown) · Anomalies (searchable data-quality log). Rail filters include a Récence filter (news-based for funds, year-based for start-ups).
+Fonds (fund sheets: key figures, stages, contacts, participations, news, sources) · Start-ups · Comparateur · Tendances (stacked bars by year × 8 sectors + country breakdown) · Fiabilité (only the exceptions: participations with confidence below Élevé, with their reason, + ~42 open points from the Anomalies sheet — divergences, homonymy risks, approximate/unconfirmed values; types listed in `TYPES_POINTS_OUVERTS` in `generer_site_vc.py`). The full Anomalies log stays in the Excel only (replaced the old Anomalies tab on 02/10, user found it unhelpful). Rail filters include a Récence filter (news-based for funds, year-based for start-ups).
 
 ## Data model (Excel, 5 sheets)
 `Fonds` (125 vehicles, 59 cols) · `Participations` (263) · `Tours_de_table` (58) · `Dictionnaire` (106 fields) · `Anomalies` (329, IDs `ANO-0001`…).

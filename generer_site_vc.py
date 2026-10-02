@@ -354,24 +354,39 @@ def construire_pays(part: pd.DataFrame) -> dict:
     return {"pays": liste, "exclues": total_exclues, "total": sum(compte.values())}
 
 
-def construire_anomalies(ano: pd.DataFrame) -> list[dict]:
+# Onglet « Fiabilité » : seuls les points encore ouverts (divergence non arbitrée, homonymie,
+# valeur approximative ou non confirmée…) sont publiés. Le reste de l'onglet Anomalies du
+# classeur (cases cochées, corrections de libellé, mises à jour tracées…) est un journal de
+# collecte interne, sans usage pour le lecteur de la page.
+TYPES_POINTS_OUVERTS = {
+    "Rapprochement non résolu": "Identité ou véhicule incertain (risque d'homonymie)",
+    "Différence entre description et structure réelle": "Écart entre la base et une source web, non arbitré",
+    "Valeur en fourchette non retenue": "Sources contradictoires ou en fourchette : champ laissé vide",
+    "Valeur approximative conservée": "Valeur approximative (ordre de grandeur)",
+    "Information non confirmée": "Information de source unique, non appliquée",
+    "Risque de double comptage": "Risque de double comptage",
+    "Libellé ambigu": "Libellé ambigu dans la source",
+    "Participation rattachée à plusieurs véhicules": "Participation rattachée à plusieurs véhicules",
+    "Unité non identifiée": "Unité non identifiée dans la source",
+    "Conversion non effectuée": "Montant en devise non converti",
+}
+
+
+def construire_points_ouverts(ano: pd.DataFrame) -> list[dict]:
     out = []
     for _, r in ano.iterrows():
+        type_ = j(r.get("Type d'anomalie"))
+        if type_ not in TYPES_POINTS_OUVERTS:
+            continue
         out.append({
             "id": j(r.get("Anomalie_ID")),
-            "type": j(r.get("Type d'anomalie")),
-            "onglet": j(r.get("Onglet source")),
-            "table": j(r.get("Table ou bloc source")),
-            "ligne": j(r.get("Ligne source")),
+            "nature": TYPES_POINTS_OUVERTS[type_],
             "entite": j(r.get("Entité concernée")),
             "champ": j(r.get("Champ concerné")),
             "valeurSource": j(r.get("Valeur source")),
             "valeurRetenue": j(r.get("Valeur retenue")),
-            "candidats": j(r.get("Candidats éventuels")),
-            "score": j(r.get("Score de similarité")),
             "confiance": j(r.get("Niveau de confiance")),
-            "traitement": j(r.get("Traitement appliqué")),
-            "commentaire": j(r.get("Commentaire")),
+            "explication": j(r.get("Commentaire")) or j(r.get("Traitement appliqué")),
         })
     return out
 
@@ -430,7 +445,7 @@ def main() -> int:
     startups = construire_startups(part_df)
     tendances = construire_tendances(part_df)
     pays = construire_pays(part_df)
-    anomalies = construire_anomalies(ano_df)
+    points_ouverts = construire_points_ouverts(ano_df)
 
     data = {
         "version": version,
@@ -440,7 +455,7 @@ def main() -> int:
         "startups": startups,
         "tendances": tendances,
         "pays": pays,
-        "anomalies": anomalies,
+        "pointsOuverts": points_ouverts,
     }
 
     template = (BASE_DIR / "_site_template.html").read_text(encoding="utf-8")
@@ -453,7 +468,7 @@ def main() -> int:
     print(f"Sociétés de gestion : {len(set(f['nom'] for f in fonds))}")
     print(f"Tendances : {tendances['total']} participations classées ({tendances['exclues']} exclues : date ou secteur non exploitable)")
     print(f"Pays d'origine : {pays['total']} participations réparties sur {len(pays['pays'])} pays ({pays['exclues']} exclues : pays non identifiable)")
-    print(f"Anomalies : {len(anomalies)} entrées exposées")
+    print(f"Fiabilité : {len(points_ouverts)} points ouverts publiés (sur {len(ano_df)} lignes d'anomalies)")
     return 0
 
 
