@@ -19,6 +19,7 @@ import html
 import json
 import re
 import unicodedata
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -31,6 +32,16 @@ JOURS_DEDOUBLONNAGE = 30
 SNIPPET_MAX = 300
 
 GN = "https://news.google.com/rss/search?q={q}&hl={hl}&gl={gl}&ceid={gl}:{hl}"
+ASSURANCE_FR = "(assurance OR assureur OR insurtech OR assurtech OR mutuelle OR courtier OR réassurance)"
+
+
+def gn_site(domaine: str, filtre: str = "") -> str:
+    """Recherche Google News limitée à un site (7 jours), en français.
+    `filtre` restreint les sites généralistes aux sujets assurance."""
+    q = urllib.parse.quote_plus(f"site:{domaine} {filtre} when:7d".replace("  ", " "))
+    return GN.format(q=q, hl="fr", gl="FR")
+
+
 FLUX = {
     # Écosystème start-up / VC Europe
     "EU-Startups": "https://www.eu-startups.com/feed/",
@@ -53,6 +64,38 @@ FLUX = {
     # (FinSMEs, Insurtech Insights, Insurance Times, News Assurances Pro, L'Argus : flux directs
     #  en 403/404 ou XML invalide,
     #  lus via Google News « site: ».)
+    # Presse française start-up / VC / deals (sans filtre : les noms suivis sont détectés ensuite)
+    "FrenchWeb": gn_site("frenchweb.fr"),
+    "CFNEWS": gn_site("cfnews.net"),
+    "Décideurs Corporate Finance": gn_site("magazine-decideurs.com"),
+    "Les Echos Start": gn_site("lesechos.fr", "(start-up OR levée OR insurtech OR assurtech)"),
+    "Journal du Net": gn_site("journaldunet.com", "(levée OR " + ASSURANCE_FR[1:]),
+    "Siècle Digital": gn_site("siecledigital.fr", "(levée OR " + ASSURANCE_FR[1:]),
+    "Dynamique Mag": gn_site("dynamique-mag.com", "(levée OR " + ASSURANCE_FR[1:]),
+    "Entreprendre": gn_site("entreprendre.fr", "(levée OR " + ASSURANCE_FR[1:]),
+    # Presse économique, financière et assurance
+    "BFM Business": gn_site("bfmtv.com", ASSURANCE_FR),
+    "L'Agefi": gn_site("agefi.fr", ASSURANCE_FR),
+    "Revue Banque": gn_site("revue-banque.fr", ASSURANCE_FR),
+    "La Tribune de l'Assurance": gn_site("tribune-assurance.optionfinance.fr"),
+    # Presse tech / IT / data (filtre assurance : volume élevé hors sujet)
+    "L'Usine Digitale": gn_site("usine-digitale.fr", ASSURANCE_FR),
+    "LeMagIT": gn_site("lemagit.fr", ASSURANCE_FR),
+    "Le Monde Informatique": gn_site("lemondeinformatique.fr", ASSURANCE_FR),
+    "CIO Online": gn_site("cio-online.com", ASSURANCE_FR),
+    "ZDNet.fr": gn_site("zdnet.fr", ASSURANCE_FR),
+    "Silicon.fr": gn_site("silicon.fr", ASSURANCE_FR),
+    "ActuIA": gn_site("actuia.com", ASSURANCE_FR),
+    "IT for Business": gn_site("itforbusiness.fr", ASSURANCE_FR),
+    "Alliancy": gn_site("alliancy.fr", ASSURANCE_FR),
+    "Solutions Numériques": gn_site("solutions-numeriques.com", ASSURANCE_FR),
+    "InformatiqueNews": gn_site("informatiquenews.fr", ASSURANCE_FR),
+    "L'Informaticien": gn_site("linformaticien.com", ASSURANCE_FR),
+    "Distributique": gn_site("distributique.com", ASSURANCE_FR),
+    "ChannelNews": gn_site("channelnews.fr", ASSURANCE_FR),
+    "Decideo": gn_site("decideo.fr", ASSURANCE_FR),
+    "IT Social": gn_site("itsocial.fr", ASSURANCE_FR),
+    "LeBigData.fr": gn_site("lebigdata.fr", ASSURANCE_FR),
     # Recherches Google News (7 derniers jours ; le filtre JOURS s'applique ensuite)
     "GN insurtech funding": GN.format(q="insurtech+funding+when:7d", hl="en-GB", gl="GB"),
     "GN insurtech raises": GN.format(q="insurtech+raises+Europe+when:7d", hl="en-GB", gl="GB"),
