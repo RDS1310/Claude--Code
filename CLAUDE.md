@@ -44,20 +44,15 @@ Fonds (fund sheets: key figures, stages, contacts, participations, news, sources
 Site tokens: petrol `#0C5C5E`, ochre `#A8681F`, Newsreader (display) + IBM Plex Sans/Mono. Light + dark themes. Chart colors use the dataviz skill's validated categorical palette (the brand colors fail its chroma check).
 
 ## Automations
+- **Daily collection (free, no AI)**: GitHub Actions `.github/workflows/collecte_news.yml` runs `collecte_news_quotidienne.py` at 05:47 UTC (also manual via workflow_dispatch). 21 RSS feeds incl. 5 Google News searches, 2-day window, insurance keyword filter + tracked-name matching (funds + short aliases, portfolio start-ups, active GVI pipe), 30-day dedupe on link, per-feed health. Output: `veille_data/raw/AAAA-MM-JJ.json`, committed by github-actions[bot] to `claude/new-session-esly1p` (the default branch — scheduled workflows only run there). Replaces n8n `fetch_news`.
 - **Claude routines** (fresh session per run):
-  - weekly veille `trig_01C8tsihdPN4XackPZwGAsq7`, Mondays 06:00 UTC — the 28/09 run "succeeded" but pushed nothing (no alert);
+  - weekly veille `trig_01C8tsihdPN4XackPZwGAsq7`, Mondays 06:00 UTC — since 02/10 it reads the raw files since `derniereMaj` (≤3 WebSearch), verifies, updates `entries.json`, republishes, and reports feed health + M&A leads; falls back to roundup WebSearch if no raw files. (The 28/09 run found nothing reliable and correctly pushed nothing, ~$1.90 / 38 searches.)
   - monthly M&A `trig_013VoXmnanak2NpoDXPuPUU1`, 1st of the month 06:00 UTC.
-- **n8n** (user's own instance, trial):
-  - workflow `fetch_news` (published): 26 RSS feeds incl. 4 Google News searches, keyword filter, `days` = 2, snippets capped at 300 chars;
-  - an n8n agent with a knowledge base (guide + CSV exports of funds, participations, active pipe) — the user had trouble running it.
-- **Target setup**:
-  - n8n `daily_news_to_sheet` (Schedule 08:00 Paris → `fetch_news` → Google Sheet `Veille Insurtech`, tab `Brut`, dedupe on `link`);
-  - then a **weekly** Claude/Cowork task that reads the sheet, validates, and updates `entries.json` / the Excel and republishes;
-  - if that works, the Claude weekly routine becomes redundant.
+- **n8n** (user's trial, being retired): workflow `fetch_news` and an agent with a knowledge base — superseded by the GitHub Actions collection.
 
 ## Open items
 - Review the 4 start-ups tagged "adjacent" but out of insurance scope (ANO-0315: MuchBetter.ai, Gretel, hypt., Value Factory).
-- n8n: error-alert workflow, `add_entries` / sheet output, broken feeds (403: FinSMEs, Les Echos Start, La Tribune de l'Assurance…).
+- Collection: watch feed health in the raw files (`flux[].ok`); feeding fund news into the Excel (vN+1) not automated yet.
 - Missing LinkedIn: Dietrich Aumann (Helsana, 2nd contact). Contact emails empty (planned Apollo enrichment).
 - Deferred: case-based session on how GVI assesses a start-up (to improve "Pertinence pour GVI"); login gate for Radar (undecided).
 

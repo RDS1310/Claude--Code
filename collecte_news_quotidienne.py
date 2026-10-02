@@ -37,19 +37,21 @@ FLUX = {
     "Tech.eu": "https://tech.eu/feed/",
     "Sifted": "https://sifted.eu/feed",
     "Maddyness": "https://www.maddyness.com/feed/",
-    "FinSMEs": "https://www.finsmes.com/feed",
+    "FinSMEs": GN.format(q="site:finsmes.com+insurance+when:7d", hl="en-GB", gl="GB"),
     "Finextra": "https://www.finextra.com/rss/headlines.aspx",
     "FinTech Global": "https://fintech.global/feed/",
     # Assurance / insurtech
     "Coverager": "https://coverager.com/feed/",
-    "Insurtech Insights": "https://www.insurtechinsights.com/feed/",
+    "Insurtech Insights": GN.format(q="site:insurtechinsights.com+when:7d", hl="en-GB", gl="GB"),
     "Reinsurance News": "https://www.reinsurancene.ws/feed/",
     "Artemis": "https://www.artemis.bm/feed/",
     "Insurance Journal": "https://www.insurancejournal.com/rss/news/",
     "Claims Journal": "https://www.claimsjournal.com/rss/",
     "Insurance Times": "https://www.insurancetimes.co.uk/rss",
-    "News Assurances Pro": "https://www.newsassurancespro.com/feed/",
-    "L'Argus de l'assurance": "https://www.argusdelassurance.com/rss",
+    "News Assurances Pro": GN.format(q="site:newsassurancespro.com+when:7d", hl="fr", gl="FR"),
+    "L'Argus de l'assurance": GN.format(q="site:argusdelassurance.com+when:7d", hl="fr", gl="FR"),
+    # (FinSMEs, Insurtech Insights, News Assurances Pro, L'Argus : flux directs en 403/404,
+    #  lus via Google News « site: ».)
     # Recherches Google News (7 derniers jours ; le filtre JOURS s'applique ensuite)
     "GN insurtech funding": GN.format(q="insurtech+funding+when:7d", hl="en-GB", gl="GB"),
     "GN insurtech raises": GN.format(q="insurtech+raises+Europe+when:7d", hl="en-GB", gl="GB"),
@@ -138,7 +140,14 @@ def parse_date(s: str):
 def lire_flux(url: str):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (veille-insurtech RSS reader)"})
     with urllib.request.urlopen(req, timeout=30) as r:
-        racine = ET.fromstring(r.read())
+        brut = r.read()
+    fin = max(brut.rfind(b"</rss>") + 6, brut.rfind(b"</feed>") + 7)
+    if fin > 6:
+        brut = brut[:fin]  # contenu parasite après la balise de fin (Maddyness)
+    try:
+        racine = ET.fromstring(brut)
+    except ET.ParseError:  # « & » non échappés (Insurance Times)
+        racine = ET.fromstring(re.sub(rb"&(?!#?\w+;)", b"&amp;", brut))
     atom = "{http://www.w3.org/2005/Atom}"
     items = racine.findall(".//item") or racine.findall(f".//{atom}entry")
     for it in items:
