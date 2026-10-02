@@ -62,6 +62,51 @@
    "resume": "Veridion, plateforme de données d'entreprises alimentée par l'IA (plus de 640 millions de sociétés cartographiées en temps réel), lève 20 M$ en série A menée par Hoxton Ventures, avec ses investisseurs existants Underline Ventures, OTB Ventures, Gapminder, Day One Capital et Launchub. Les fonds serviront notamment à accélérer son développement aux États-Unis.",
    "source": "FinSMEs",
    "url": "https://www.finsmes.com/2026/09/veridion-raises-20m-in-series-a-funding.html"
+  },
+  {
+   "date": "16/09/2026",
+   "type": "fonds",
+   "titre": "Portage boucle Portage Ventures IV à environ 600 M$",
+   "resume": "La plateforme fintech de Sagard annonce le closing final de son quatrième fonds de venture (~600 M$), avec de nouveaux LPs stratégiques (Broadridge, Fifth Third Bank). Elle revendique 7,0 Md$ d'actifs et plus de 140 participations, dont en assurance.",
+   "source": "FinTech Global",
+   "url": "https://fintech.global/2026/09/21/portage-closes-600m-fund-to-back-fintechs-next-wave/",
+   "theme": "Closings de fonds"
+  },
+  {
+   "date": "25/06/2026",
+   "type": "startup",
+   "titre": "Alan lève 480 M€ auprès de Prosus et atteint 5,5 Md€ de valorisation",
+   "resume": "L'assureur santé français boucle une série G de 480 M€ menée par Prosus, avec ses investisseurs historiques Teachers' Venture Growth et Index Ventures et l'entrée de Dara Holdings. Les fonds financeront l'international, l'IA et les services de santé.",
+   "source": "FrenchWeb",
+   "url": "https://www.frenchweb.fr/alan-depasse-le-milliard-deuros-leves-avec-larrivee-de-prosus/462572",
+   "theme": "Levées de fonds"
+  },
+  {
+   "date": "11/08/2026",
+   "type": "fonds",
+   "titre": "Accel lève 800 M$ pour son neuvième fonds early-stage Europe & Israël",
+   "resume": "Accel annonce 3,5 Md$ répartis sur quatre fonds, dont 800 M$ dédiés à l'early-stage en Europe et en Israël, en hausse par rapport aux 650 M$ du fonds précédent.",
+   "source": "Tech.eu",
+   "url": "https://tech.eu/2026/08/12/monzo-and-lovable-backer-accel-raises-enlarged-800m-early-stage-fund/",
+   "theme": "Closings de fonds"
+  },
+  {
+   "date": "22/07/2026",
+   "type": "startup",
+   "titre": "Klaimee lève 5,5 M$ pour assurer les agents IA autonomes, avec Kima Ventures",
+   "resume": "Issue de Y Combinator, Klaimee certifie les agents IA et adosse leurs performances à une couverture de responsabilité spécifique. Le seed est mené par FundersClub, avec notamment Kima Ventures et Robinhood Ventures.",
+   "source": "FinTech Global",
+   "url": "https://fintech.global/2026/07/22/klaimee-lands-5-5m-to-insure-autonomous-ai-agents/",
+   "theme": "Levées de fonds"
+  },
+  {
+   "date": "05/08/2026",
+   "type": "fonds",
+   "titre": "White Star Capital boucle son Fund IV à 250 M$",
+   "resume": "Le fonds transatlantique finalise son quatrième véhicule (Séries A et B) et dépasse 350 M$ de capital frais avec un fonds seed nord-américain et des SPV ; il cible notamment l'IA verticale et l'IA « physique ».",
+   "source": "Tech.eu",
+   "url": "https://tech.eu/2026/08/05/white-star-capital-closes-250m-fund-iv-to-back-global-startups-from-series-a-to-b/",
+   "theme": "Closings de fonds"
   }
  ],
  "derniereMaj": "28/09/2026",

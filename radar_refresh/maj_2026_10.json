@@ -1,0 +1,435 @@
+{
+ "_meta": {
+  "campagne": "Rafraîchissement complet Radar — octobre 2026",
+  "debut": "2026-10-02",
+  "methode": "WebSearch par société de gestion (WebFetch bloqué par le proxy) ; Élevé = ≥2 sources concordantes, Moyen = 1 source ; fenêtre actus ≥ 01/07/2026",
+  "fenetre_actus": "2026-06-01",
+  "fin": "2026-10-02"
+ },
+ "nouveaux_vehicules": [
+  {
+   "fonds": "Portage Venture",
+   "vehicule": "Portage Ventures IV",
+   "montant_leve_devise": "600 M$",
+   "montant_leve_meur": 552.0,
+   "millesime": 2026,
+   "statut": "Fermé",
+   "phase": "Investissement",
+   "commentaire": "Closing final annoncé le 16/09/2026 (~600 M$) ; Portage déclare 7,0 Md$ d'AuM et >140 participations ; nouveaux LPs Broadridge et Fifth Third Bank. Focus fintech incl. assurance.",
+   "sources": [
+    "https://fintech.global/2026/09/21/portage-closes-600m-fund-to-back-fintechs-next-wave/",
+    "https://www.debevoise.com/news/2026/09/debevoise-advised-portage-in-the-closing",
+    "https://crowdfundinsider.com/2026/09/311040-portage-finalizes-600m-fintech-venture-fund-as-platform-hits-7-billion"
+   ],
+   "confiance": "Élevé"
+  },
+  {
+   "fonds": "Serena Capital",
+   "vehicule": "Serena IV",
+   "montant_leve_devise": "200 M€ (premier closing)",
+   "montant_leve_meur": 200.0,
+   "millesime": 2025,
+   "statut": "Ouvert",
+   "phase": "Investissement",
+   "ticket_max_meur": 15.0,
+   "commentaire": "Premier closing annoncé le 01/10/2025 à 200 M€, objectif 250 M€ en 2026 ; thèses IA appliquée et transition énergétique ; jusqu'à 15 M€ par société. Montant levé = premier closing (closing final non trouvé).",
+   "sources": [
+    "https://tech.eu/2025/10/01/serena-raises-eur200m-for-applied-ai-and-energy-transition/",
+    "https://www.maddyness.com/2025/10/01/serena-lance-un-fonds-de-200-millions-deuros-pour-miser-sur-les-prochaines-pepites-europeennes-de-lia/",
+    "https://www.jonesday.com/en/practices/experience/2025/10/serena-capital-forms-serena-iv"
+   ],
+   "confiance": "Élevé"
+  },
+  {
+   "fonds": "Accel Partners",
+   "vehicule": "Accel London IX",
+   "montant_leve_devise": "800 M$",
+   "montant_leve_meur": 736.0,
+   "millesime": 2026,
+   "statut": "Fermé",
+   "phase": "Investissement",
+   "commentaire": "Neuvième fonds early-stage Europe & Israël annoncé le 11/08/2026 (800 M$, contre 650 M$ pour le précédent), dans une levée globale de 3,5 Md$ sur quatre fonds. Nom de véhicule aligné sur la série « Accel London » de la base.",
+   "sources": [
+    "https://tech.eu/2026/08/12/monzo-and-lovable-backer-accel-raises-enlarged-800m-early-stage-fund/",
+    "https://sifted.eu/articles/accel-fundraise-800m-ninth-early-stage-europe-fund",
+    "https://thenextweb.com/news/accel-europe-fund-800m-3-5bn-four-funds"
+   ],
+   "confiance": "Élevé"
+  },
+  {
+   "fonds": "ISAI",
+   "vehicule": "ISAI Venture IV",
+   "montant_leve_devise": "~75 M€ (premier closing)",
+   "montant_leve_meur": 75.0,
+   "millesime": 2025,
+   "statut": "Ouvert",
+   "phase": "Investissement",
+   "ticket_min_meur": 1.0,
+   "ticket_max_meur": 3.0,
+   "commentaire": "Premier closing annoncé début décembre 2025 à près de 75 M€, objectif 100 M€ ; tickets 1-3 M€ (10 % du fonds en pré-seed 100-500 k€) ; fondateurs français, en France et aux États-Unis.",
+   "sources": [
+    "https://www.maddyness.com/2025/12/03/isai-leve-75-millions-deuros-pour-soutenir-lenvol-des-futures-pepites-de-la-french-tech/",
+    "https://www.morganlewis.com/news/2025/12/morgan-lewis-advises-isai-gestion-on-the-launch-of-its-fourth-early-stage-fund"
+   ],
+   "confiance": "Élevé"
+  },
+  {
+   "fonds": "White Star Capital",
+   "vehicule": "WSC IV",
+   "montant_leve_devise": "250 M$",
+   "montant_leve_meur": 230.0,
+   "millesime": 2026,
+   "statut": "Fermé",
+   "phase": "Investissement",
+   "commentaire": "Closing final du Fund IV annoncé début août 2026 à 250 M$ (Série A-B) ; avec un premier fonds seed nord-américain et des SPV, plus de 350 M$ levés. Premiers leads : Sequen, Veesion, OatFi, AMI Labs, Tetrix, Trayd.",
+   "sources": [
+    "https://tech.eu/2026/08/05/white-star-capital-closes-250m-fund-iv-to-back-global-startups-from-series-a-to-b/",
+    "https://www.vestbee.com/insights/articles/white-star-capital-closes-250m-fund",
+    "https://pulse2.com/white-star-capital-closes-250-million-fund-iv-to-back-series-a-and-b-companies/amp/"
+   ],
+   "confiance": "Élevé"
+  },
+  {
+   "fonds": "Samaipata Ventures",
+   "vehicule": "Samaipata III",
+   "montant_leve_devise": "70 M€ (premier closing)",
+   "montant_leve_meur": 70.0,
+   "millesime": 2026,
+   "statut": "Ouvert",
+   "phase": "Investissement",
+   "ticket_max_meur": 10.0,
+   "commentaire": "Premier closing annoncé le 11/03/2026 à 70 M€ sur un objectif de 110 M€ ; 25-30 start-ups B2B « AI-native » en Europe, jusqu'à 10 M€ par société ; ancres KfW et SETT.",
+   "sources": [
+    "https://thenextweb.com/news/vc-samaipata-raises-e70m-new-ai-native-fund",
+    "https://bebeez.eu/2026/03/11/samaipata-launches-e110m-fund-iii-to-back-early-stage-ai-native-startups-across-europe/",
+    "https://dealroom.co/news/126724-samaipata-closes-70m-first-tranche-of-110m-fund-iii-for-ai-native-startu/"
+   ],
+   "confiance": "Élevé"
+  }
+ ],
+ "maj_champs": [
+  {
+   "fonds": "Munich Re Ventures",
+   "vehicule": "Munich Re Ventures (incl. HSB Ventures)",
+   "champs": {
+    "Statut": "Fermé (plus de nouveaux investissements ; gestion via MEAG)",
+    "Phase": "Gestion"
+   },
+   "ancien": {
+    "Statut": "Actif"
+   },
+   "commentaire": "Munich Re a annoncé fin octobre 2025 l'arrêt des nouveaux investissements de MRV (~1,2 Md$, près de 100 participations : Next, Hippo, At-Bay…) et son intégration aux activités fonds/co-investissement de MEAG ; à partir de 2026 une petite équipe à San Francisco, supervisée par MEAG, gère le portefeuille existant.",
+   "sources": [
+    "https://coverager.com/munich-re-ventures-ends-new-investments/",
+    "https://www.insurancebusinessmag.com/reinsurance/news/breaking-news/munich-re-winds-down-ventures-unit-centralizes-investments-with-meag-554649.aspx",
+    "https://globalventuring.com/corporate/services/munich-re-winds-down-1-2bn-vc-arm-after-decade-of-investing/",
+    "https://www.frenchweb.fr/munich-re-ferme-son-fonds-dinvestissement-de-12-milliard-un-signal-pour-toute-linsurtech-europeenne/458694"
+   ],
+   "confiance": "Élevé"
+  }
+ ],
+ "participations": [
+  {
+   "fonds": "Kima Venture Capital",
+   "vehicule": "Kima Venture",
+   "startup": "Klaimee",
+   "secteur": "InsurTech/IA",
+   "stage": "Seed",
+   "date_invest": 2026,
+   "taille_tour_meur": 5.06,
+   "pays": "États-Unis",
+   "role": "Participant (tour mené par FundersClub)",
+   "statut": "Active",
+   "commentaire": "Seed de 5,5 M$ annoncé en juillet 2026 (issu du batch Y Combinator printemps 2026) ; Klaimee certifie et assure les agents IA autonomes (garanties de performance adossées à une couverture RC spécifique IA). Montant investi par Kima non publié. Pays : siège à San Francisco selon les sources (fondateurs non vérifiés).",
+   "sources": [
+    "https://fintech.global/2026/07/22/klaimee-lands-5-5m-to-insure-autonomous-ai-agents/",
+    "https://beinsure.com/news/insurtech-klaimee-secures-5-5mn/",
+    "https://www.ycombinator.com/launches/QCC-klaimee-insures-your-ai-agents"
+   ],
+   "confiance": "Élevé"
+  },
+  {
+   "fonds": "CommerzVentures",
+   "vehicule": "CommerzVentures Fonds I à III",
+   "startup": "Artificial Labs",
+   "secteur": "InsurTech",
+   "stage": "Série B",
+   "date_invest": 2026,
+   "taille_tour_meur": 41.4,
+   "pays": "Royaume-Uni",
+   "role": "Leader",
+   "statut": "Active",
+   "commentaire": "Série B de 45 M$ annoncée le 03/02/2026, menée par CommerzVentures avec Move Capital Fund I et les investisseurs existants (Augmentum Fintech, 6 Degrees Capital, FOM, TrueSight Ventures). Plateforme de courtage et souscription digitale pour l'assurance spécialisée et commerciale (London Market) ; entrée aux États-Unis prévue en 2026. Montant investi par CommerzVentures non publié. (Artificial Labs figure déjà en base au titre de TrueSight Ventures, tour 2026.)",
+   "sources": [
+    "https://www.theinsurer.com/ti/news/artificial-labs-raises-45-million-in-commerzventures-led-round-2026-02-03",
+    "https://fintech.global/2026/02/03/artificial-labs-secures-45m-series-b-to-fuel-global-expansion/",
+    "https://www.reinsurancene.ws/artificial-labs-secures-45m-series-b-to-fuel-global-growth/"
+   ],
+   "confiance": "Élevé"
+  }
+ ],
+ "actus": [
+  {
+   "date": "16/09/2026",
+   "type": "fonds",
+   "titre": "Portage boucle Portage Ventures IV à environ 600 M$",
+   "resume": "La plateforme fintech de Sagard annonce le closing final de son quatrième fonds de venture (~600 M$), avec de nouveaux LPs stratégiques (Broadridge, Fifth Third Bank). Elle revendique 7,0 Md$ d'actifs et plus de 140 participations, dont en assurance.",
+   "source": "FinTech Global",
+   "url": "https://fintech.global/2026/09/21/portage-closes-600m-fund-to-back-fintechs-next-wave/",
+   "theme": "Closings de fonds"
+  },
+  {
+   "date": "25/06/2026",
+   "type": "startup",
+   "titre": "Alan lève 480 M€ auprès de Prosus et atteint 5,5 Md€ de valorisation",
+   "resume": "L'assureur santé français boucle une série G de 480 M€ menée par Prosus, avec ses investisseurs historiques Teachers' Venture Growth et Index Ventures et l'entrée de Dara Holdings. Les fonds financeront l'international, l'IA et les services de santé.",
+   "source": "FrenchWeb",
+   "url": "https://www.frenchweb.fr/alan-depasse-le-milliard-deuros-leves-avec-larrivee-de-prosus/462572",
+   "theme": "Levées de fonds"
+  },
+  {
+   "date": "11/08/2026",
+   "type": "fonds",
+   "titre": "Accel lève 800 M$ pour son neuvième fonds early-stage Europe & Israël",
+   "resume": "Accel annonce 3,5 Md$ répartis sur quatre fonds, dont 800 M$ dédiés à l'early-stage en Europe et en Israël, en hausse par rapport aux 650 M$ du fonds précédent.",
+   "source": "Tech.eu",
+   "url": "https://tech.eu/2026/08/12/monzo-and-lovable-backer-accel-raises-enlarged-800m-early-stage-fund/",
+   "theme": "Closings de fonds"
+  },
+  {
+   "date": "22/07/2026",
+   "type": "startup",
+   "titre": "Klaimee lève 5,5 M$ pour assurer les agents IA autonomes, avec Kima Ventures",
+   "resume": "Issue de Y Combinator, Klaimee certifie les agents IA et adosse leurs performances à une couverture de responsabilité spécifique. Le seed est mené par FundersClub, avec notamment Kima Ventures et Robinhood Ventures.",
+   "source": "FinTech Global",
+   "url": "https://fintech.global/2026/07/22/klaimee-lands-5-5m-to-insure-autonomous-ai-agents/",
+   "theme": "Levées de fonds"
+  },
+  {
+   "date": "05/08/2026",
+   "type": "fonds",
+   "titre": "White Star Capital boucle son Fund IV à 250 M$",
+   "resume": "Le fonds transatlantique finalise son quatrième véhicule (Séries A et B) et dépasse 350 M$ de capital frais avec un fonds seed nord-américain et des SPV ; il cible notamment l'IA verticale et l'IA « physique ».",
+   "source": "Tech.eu",
+   "url": "https://tech.eu/2026/08/05/white-star-capital-closes-250m-fund-iv-to-back-global-startups-from-series-a-to-b/",
+   "theme": "Closings de fonds"
+  }
+ ],
+ "ecartes": [
+  {
+   "fonds": "Truffle Capital",
+   "piste": "Premier closing Truffle Financial Innovation Fund 70 M€",
+   "raison": "Actualité de fin 2017, résumé de recherche erroné sur la date"
+  },
+  {
+   "fonds": "BlackFin Capital Partners",
+   "piste": "Fund IV 1,8 Md€",
+   "raison": "Fonds PE services financiers (oct. 2024), pas un véhicule tech suivi ; hors fenêtre"
+  },
+  {
+   "fonds": "Aviva Ventures",
+   "piste": "Investissements 2026 Haast, Tembo Money",
+   "raison": "Hors périmètre assurance (logiciel de productivité, courtage hypothécaire) — non ajoutés aux Participations"
+  },
+  {
+   "fonds": "Ethias Ventures",
+   "piste": "June Energy 1,5 M€ (déc. 2025)",
+   "raison": "Comparateur d'énergie, hors assurance"
+  },
+  {
+   "fonds": "Zurich Insurance Group",
+   "piste": "Acquisition de Beazley finalisée (01/10/2026, Insurance Journal)",
+   "raison": "Déjà dans ma_data (annonce 02/03/2026) — à signaler à la routine M&A pour mettre à jour le statut (finalisée)"
+  },
+  {
+   "fonds": "Breega Capital",
+   "piste": "Dalma série B 20 M€",
+   "raison": "Date non vérifiable par recherche"
+  },
+  {
+   "fonds": "XAnge Capital",
+   "piste": "Fonds 4 à 220 M€",
+   "raison": "Déjà en base (XAnge 4, 2021) — actualité ancienne"
+  },
+  {
+   "fonds": "Ring Capital",
+   "piste": "Levée 165 M€ / fonds d'impact",
+   "raison": "Actualités antérieures, véhicules déjà en base (Mission I/II, Génération)"
+  },
+  {
+   "fonds": "Eurazeo",
+   "piste": "Fonds insurtech Asie du Sud-Est (~200 M€)",
+   "raison": "Lancé en 2023 et hors Europe ; le véhicule Eurazeo de la base couvre déjà l'activité VC — non ajouté"
+  },
+  {
+   "fonds": "ISAI",
+   "piste": "ISAI Cap Venture II (80 M€)",
+   "raison": "Ambiguïté avec la ligne ISAI Cap Venture existante (dont la source cite déjà « Cap Venture II ») — non ajouté"
+  },
+  {
+   "fonds": "Kima Venture Capital",
+   "piste": "Assurup seed 1 M€",
+   "raison": "Déjà en base (2017)"
+  },
+  {
+   "fonds": "360 Capital Partners",
+   "piste": "360 Life II",
+   "raison": "Déjà en base"
+  },
+  {
+   "fonds": "speedInvest",
+   "piste": "Speedinvest 4 à 350 M€",
+   "raison": "Déjà en base (Speedinvest IV)"
+  },
+  {
+   "fonds": "CommerzVentures",
+   "piste": "Gradient Labs (juin 2026)",
+   "raison": "IA de support client pour services financiers, hors assurance"
+  },
+  {
+   "fonds": "NewFund Capital",
+   "piste": "Closing final NAEH Innopy II",
+   "raison": "Date non vérifiable ; ambiguïté avec la ligne « NewFund NAEH 1 et 2 »"
+  },
+  {
+   "fonds": "Seraphim Space",
+   "piste": "Nouveau closing du fonds early-stage >100 M$",
+   "raison": "Date et montant non vérifiables"
+  },
+  {
+   "fonds": "Venpace",
+   "piste": "hypt. (sept. 2025)",
+   "raison": "Déjà en base (ANO-0315)"
+  },
+  {
+   "fonds": "Concentric",
+   "piste": "Premier closing Concentric 02",
+   "raison": "Date non vérifiable (communiqué probablement antérieur à 2026)"
+  },
+  {
+   "fonds": "Elevation Capital Partners",
+   "piste": "FPCI Elevation Patria / Immo Opportunités",
+   "raison": "Fonds défense / immobilier destinés au retail, hors périmètre VC insurtech"
+  },
+  {
+   "fonds": "Sharpstone Capitale",
+   "piste": "Orakle Weather (pré-seed, mai 2026)",
+   "raison": "Prévision météo, pas d'activité assurance documentée"
+  },
+  {
+   "fonds": "Aris Occitanie VC",
+   "piste": "Donecle (série B, avril 2026)",
+   "raison": "Inspection d'aéronefs par drones, hors assurance"
+  },
+  {
+   "fonds": "Step Venture",
+   "piste": "Step Fund — premier closing >30 M€ (ACP SGR)",
+   "raison": "Correspond vraisemblablement à « Step Venture I » déjà en base ; date non vérifiée"
+  },
+  {
+   "fonds": "Evolem Start",
+   "piste": "Innovorder, Losanje (2026)",
+   "raison": "Hors assurance"
+  },
+  {
+   "fonds": "South East Angels",
+   "piste": "EarSwitch (mai 2026)",
+   "raison": "Medtech, hors assurance"
+  }
+ ],
+ "rien_de_neuf": [
+  "115K",
+  "13books Capital (ex-Element Ventures)",
+  "360 Capital Partners",
+  "365.fintech",
+  "Achmea Innovation Fund",
+  "Allianz X",
+  "Alven Capital",
+  "Aris Occitanie VC",
+  "Astorya.vc",
+  "Atlantic Vantage Point",
+  "BPI France",
+  "BlackFin Capital Partners",
+  "Blast.Club",
+  "Breega Capital",
+  "Cadence Growth Capital",
+  "Cathay",
+  "Committed Capital",
+  "Concentric",
+  "EOS Venture",
+  "Elaia Partners",
+  "Elevation Capital Partners",
+  "Ethias Ventures",
+  "Eurazeo",
+  "Evolem Start",
+  "Founders Future VC",
+  "Generali Ventures",
+  "Goldsmith Ventures",
+  "Groupama",
+  "Helsana HealthInvest",
+  "Howden Ventures",
+  "Index Venture",
+  "Insurtech Capital",
+  "Insurtech Gateway",
+  "Kickstart Innovation",
+  "MAIF Avenir",
+  "Macif Innovation",
+  "Mash VC",
+  "NCA (Next Commerce Accelerator)",
+  "NewAlpha Asset Management",
+  "NewFund Capital",
+  "Open CNP",
+  "Partech",
+  "Ring Capital",
+  "SCOR Ventures",
+  "Schumpeter Ventures",
+  "Seed X Liechtenstein",
+  "Seraphim Space",
+  "Sharpstone Capitale",
+  "South East Angels",
+  "Start Venture",
+  "Step Venture",
+  "TSP Ventures",
+  "Tenity",
+  "The Moon Venture",
+  "The Net Street Capital",
+  "The49",
+  "TomCat",
+  "TrueSight Ventures",
+  "Truffle Capital",
+  "UNIQA Ventures",
+  "Venpace",
+  "XAnge Capital",
+  "Zurich Insurance Group",
+  "speedInvest"
+ ],
+ "maj_participations": [
+  {
+   "startup": "Alan",
+   "champs": {
+    "Valorisation (M€)": 5500
+   },
+   "commentaire": "Série G de 480 M€ annoncée le 25/06/2026, menée par Prosus avec TVG et Index Ventures (historiques) et l'entrée de Dara Holdings ; valorisation 5,5 Md€ ; Alan dépasse le milliard d'euros levés au total.",
+   "sources": [
+    "https://www.optionfinance.fr/info-financiere-en-continu/d/2026-06-25-alan-leve-480-millions-deuros-avec-le-soutien-de-prosus.html",
+    "https://www.frenchweb.fr/alan-depasse-le-milliard-deuros-leves-avec-larrivee-de-prosus/462572",
+    "https://startups.one.gob.es/news/note/prosus-leads-480m-round-in-alan-at-5-5b-valuation-to-fuel-ai-powered-healthcare"
+   ],
+   "confiance": "Élevé"
+  }
+ ],
+ "a_verifier": [
+  {
+   "fonds": "The Family",
+   "piste": "Rachat de TheFamily le 17/02/2026",
+   "source": "CB Insights (fiche thefamily/financials) — acquéreur et conditions non publiés",
+   "url": "https://www.cbinsights.com/company/thefamily/financials",
+   "raison": "Source unique (agrégateur), aucune presse : à vérifier avant de modifier le statut"
+  }
+ ],
+ "non_recherches": [
+  "David Semmens",
+  "Patrice Fleurquin",
+  "Mohammad Hossein Tavangar"
+ ]
+}

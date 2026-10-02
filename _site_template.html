@@ -398,6 +398,17 @@ const fmtDate = v => {
   return String(v);
 };
 
+// Dates de valorisation sourcées (clé : nom de la start-up). À défaut : date d'investissement du fonds.
+const VALO_DATES = {
+  'Alan': '06/2026'  // Série G, 480 M€ levés à 5,5 Md€ de valorisation (Prosus ; FrenchWeb, Option Finance)
+};
+const valoDate = s => {
+  if (!s || s.valorisation===null || s.valorisation===undefined) return null;
+  if (VALO_DATES[s.nom]) return 'au ' + VALO_DATES[s.nom];
+  const d = fmtDate(s.dateInvest);
+  return d ? "à l'investissement (" + d + ")" : null;
+};
+
 let FONDS = RAW.fonds;
 let STARTUPS = RAW.startups;
 
@@ -538,11 +549,11 @@ function renderFund(f){
 
   const portfolioRows = [
     ...linked.map(s => ({
-      nom:s.nom, secteur:s.secteur, montant:s.montantFonds, tour:s.tailleDuTour, valo:s.valorisation,
+      nom:s.nom, secteur:s.secteur, montant:s.montantFonds, tour:s.tailleDuTour, valo:s.valorisation, valoDate:valoDate(s),
       stage:s.stage, exit:s.exit, confiance:s.confiance, goto:s.fid+'|'+s.nom
     })),
     ...f.deals.filter(d => !linked.some(s => norm(s.nom)===norm(d.nom))).map(d => ({
-      nom:d.nom, secteur:d.secteur, montant:d.montant, tour:null, valo:null, stage:d.stage, exit:null, confiance:null, goto:null
+      nom:d.nom, secteur:d.secteur, montant:d.montant, tour:null, valo:null, valoDate:null, stage:d.stage, exit:null, confiance:null, goto:null
     }))
   ];
 
@@ -625,7 +636,7 @@ function renderFund(f){
       <td>${esc(p.stage||'—')}</td>
       <td class="num">${fmtN(p.tour,1) ? fmtN(p.tour,1)+' M€' : '—'}</td>
       <td class="num">${fmtN(p.montant,1) ? fmtN(p.montant,1)+' M€' : '—'}</td>
-      <td class="num">${fmtN(p.valo) ? fmtN(p.valo)+' M€' : '—'}</td>
+      <td class="num">${fmtN(p.valo) ? fmtN(p.valo)+' M€'+(p.valoDate?`<br><small class="valo-date">${esc(p.valoDate)}</small>`:'') : '—'}</td>
       <td>${p.exit==='O' ? '<span class="role lead">Oui</span>' : (p.exit==='N' ? '—' : (p.exit||'—'))}</td>
       <td>${p.confiance ? `<span class="confiance ${confClass(p.confiance)}">${esc(p.confiance)}</span>` : '—'}</td>
     </tr>`).join('')}</tbody>
@@ -664,7 +675,7 @@ function renderStartup(s){
   </div>
 
   <dl class="band">
-    ${figure('Valorisation', s.valorisation, ' M€')}
+    ${figure('Valorisation' + (valoDate(s) ? ' ' + valoDate(s) : ''), s.valorisation, ' M€')}
     ${s.totalLeve !== null
       ? figure("Total levé", s.totalLeve, ' M€', 1)
       : figure("Taille du tour", s.tailleDuTour, ' M€', 1)}
