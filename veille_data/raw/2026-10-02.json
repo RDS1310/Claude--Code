@@ -1,8 +1,8 @@
 {
- "collecte": "2026-10-02T09:20:11+00:00",
+ "collecte": "2026-10-02T09:21:19+00:00",
  "fenetreJours": 2,
- "nbArticles": 62,
- "nbAvecNomSuivi": 4,
+ "nbArticles": 111,
+ "nbAvecNomSuivi": 10,
  "flux": {
   "EU-Startups": {
    "ok": true,
@@ -20,12 +20,14 @@
    "retenus": 0
   },
   "Maddyness": {
-   "ok": false,
-   "erreur": "junk after document element: line 202, column 3"
+   "ok": true,
+   "items": 10,
+   "retenus": 1
   },
   "FinSMEs": {
-   "ok": false,
-   "erreur": "HTTP Error 403: Forbidden"
+   "ok": true,
+   "items": 11,
+   "retenus": 0
   },
   "Finextra": {
    "ok": true,
@@ -43,8 +45,9 @@
    "retenus": 10
   },
   "Insurtech Insights": {
-   "ok": false,
-   "erreur": "HTTP Error 403: Forbidden"
+   "ok": true,
+   "items": 5,
+   "retenus": 0
   },
   "Reinsurance News": {
    "ok": true,
@@ -68,19 +71,21 @@
   },
   "Insurance Times": {
    "ok": false,
-   "erreur": "not well-formed (invalid token): line 131, column 76"
+   "erreur": "not well-formed (invalid token): line 1566, column 519"
   },
   "News Assurances Pro": {
-   "ok": false,
-   "erreur": "HTTP Error 404: Not Found"
+   "ok": true,
+   "items": 61,
+   "retenus": 20
   },
   "L'Argus de l'assurance": {
-   "ok": false,
-   "erreur": "HTTP Error 404: Not Found"
+   "ok": true,
+   "items": 98,
+   "retenus": 29
   },
   "GN insurtech funding": {
    "ok": true,
-   "items": 47,
+   "items": 46,
    "retenus": 11
   },
   "GN insurtech raises": {
@@ -101,7 +106,7 @@
   "GN M&A assurance": {
    "ok": true,
    "items": 13,
-   "retenus": 5
+   "retenus": 4
   }
  },
  "articles": [
@@ -122,6 +127,32 @@
    ]
   },
   {
+   "source": "L'Argus de l'assurance",
+   "titre": "Royaume-Uni : Aviva alerte sur les 115 000 logements qui pourraient être construits en zones inondables - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOY3JyVUNkaU4zNmFKbUxSbVJpbzMtcVh3bWVpUUwtU0diYWJIX2RpcjhfU1BIX3ZSUXFJc1VXdlgxT2d0ajNoSDNvT1N1dEhkMDBvUXUyY0JxdHRXN3dQbXlrS1Rtb1lRQXhvR3AwdDNTY240OTNVMmVPMExBMlhoc21TNnBoQmtNQVFDMkNjZERMREduc3pUSjZibHFTdkMyc0JXRGthVVN2VV9aa0tLbU9vb19zbEd5NVIyNWJyOUJEYVRTVUdIMllhVUNmUThsbndXbzZOeThoQW9feXR5UHBtajVlR1hKMWtlejdVeDNTckFzOTBaYmsxRktfVmtEOC1kMFlKS3hUc2V5WWpTOGdwQTlwckZfeEV1VVhJRmQ2eExnMjMtTFZFRQ?oc=5",
+   "date": "2026-10-02",
+   "extrait": "Royaume-Uni : Aviva alerte sur les 115 000 logements qui pourraient être construits en zones inondables L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Aviva (fonds)"
+   ]
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Howden France revoit ses ambitions à la baisse sur fond de turbulences financières - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQaGl4UDhEZ2FNVjVKRE9PdWc2WVZmYmg5bGc4amw2czVkal9sV3hLUmRubGF2N3J6azQ2ckc2Qk9FNTRSU1B0eGJwM1RUMjFpRVUwNTE5Q2lkMlhIT2lNYTZGbEM2RU9tUGFoNW5MN1U4LVdUTlJLSEE4NVlnVXJKQmMtamtpbkl5Z3FJVk0xM05EbHMyallwbnVRZjVSZENOUjNpQ3czYl9ETnp2ZnlaMW5LS0JRLXk4Tks5T3gzamJJckV5QXJ3Wk81eU45cHZHWGRaYVQtQ0czT0syeHY4dmc0VzNnRkFGeU1neE40SQ?oc=5",
+   "date": "2026-10-02",
+   "extrait": "Howden France revoit ses ambitions à la baisse sur fond de turbulences financières L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Howden (fonds)"
+   ]
+  },
+  {
    "source": "Tech.eu",
    "titre": "Voltaback raises €2.8M to scale EV charging reimbursement across Europe",
    "lien": "https://tech.eu/2026/10/01/voltaback-raises-eur28m-to-scale-ev-charging-reimbursement-across-europe/",
@@ -130,6 +161,17 @@
    "motsCles": [],
    "nomsSuivis": [
     "Serena (fonds)"
+   ]
+  },
+  {
+   "source": "Maddyness",
+   "titre": "Tomcat lance une verticale santé pour accélérer les medtechs",
+   "lien": "https://www.maddyness.com/2026/10/01/tomcat-lance-une-verticale-sante-pour-accelerer-les-medtechs/",
+   "date": "2026-10-01",
+   "extrait": "L’article Tomcat lance une verticale santé pour accélérer les medtechs est apparu en premier sur Maddyness - Le média pour comprendre l'économie de demain .",
+   "motsCles": [],
+   "nomsSuivis": [
+    "TomCat (fonds)"
    ]
   },
   {
@@ -155,6 +197,45 @@
    ],
    "nomsSuivis": [
     "Zurich Insurance Group (fonds)"
+   ]
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Generali France : Alexandru Popescu, nouveau directeur financier - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWFZLd096R0tnOTAycXdFVUZ4R3B0TllxUGxETjFVeXQ5R1FXM011YlZjWE5ZRl8wU0RCSWg5R0g0UXJlWWt4R08zV1lpUTBDTmFldjdkVXNRWWJHUDkzZVd0bEVDdFltcDlTa3JZcDltU0U5MWRQQkV1cDJTZjQ0UEZsek83ZXo1LUdaYjlLQ2tBYVk4bzg2OXo0aVZnRkQxbU9wOVIwTTdtZFE?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Generali France : Alexandru Popescu, nouveau directeur financier News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Generali (fonds)"
+   ]
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Generali France annonce l’arrivée d’un nouveau membre au sein du comité exécutif avec la nomination de son directeur financier - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiygJBVV95cUxQQXZGNktjeEFQU21jdUNiOTlJZm5od19NSmVtczZkblp2bU9KUFRSRmVmLUJfbm1NQldEc20wSW1FeFNfc29qR2Z6WE9VUlV3bGtpYzJpZWxKQklTWnJGYjJQM19Belh4U2xMMFZfR2hXSUJVQ3dYUnZ2UGdQbGlOYTNwOXlaZVNieExqazFfN3BtYzljcENJTEN5eWlPOXA2ZGtQT2d4YTM3RExLdjltUzlSVVI1Ykl0QzUtb3dMMHFuTTBEcG9RZ05HMUFLTFVYSzM0V3VBdl9RNzM5RU9oZnNHby1qaEZiamhHT3NOWVNpQ0tvaWtjQi0zdVFEellHeFc1cmdMa2llVGtOZWxsUjBUZkE5eV9takotSGUxaEpXcGF6RldjdkdoOW9IQkxIV09MazlndEt2MUxkTm8ySUo0YUMteHhmZGc?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Generali France annonce l’arrivée d’un nouveau membre au sein du comité exécutif avec la nomination de son directeur financier L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Generali (fonds)"
+   ]
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Alan lance sa première campagne de publicité internationale, mettant en avant son ambassadeur Kylian Mbappé - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPdVlMWVFLNFV3NHBKNTlMcjhjUXpaaktLUzhVS0ZkNmxSaGNOTWx2MVZfNVliMHpCUXA5SlNlUVI3ZmFRbFJsTDZVQks3ekg1aFNRV1hTM1NsSlFGT1RNd2hqaXZRSWxRT2dsclNMNVd3Nm5RSlZxNm1BRFI3bU1wTG5GTW0yMVFSSWxpU2hIOWpDRXZmYUc2cVZxSU44d3V5aWxGTnNneEFfMU1hR1BWRGE4MUpVaU90NVIxam1ndmJBa25iXzlER1NzTWxtbGNGNDBENXlEb2xfZXlMYkYxdG5jWWx3N1dOVEJXMmhfRXNJdGdkbUlma3RTZUNhNGoxWDZxSGgxTzBSMTFZRWdvR3RzazlOcnlmd1gxQg?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Alan lance sa première campagne de publicité internationale, mettant en avant son ambassadeur Kylian Mbappé L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Alan (participation)"
    ]
   },
   {
@@ -337,6 +418,86 @@
    "extrait": "Across the industry, nuclear verdicts are dominating conversations about social inflation and liability severity, and for good reason: in 2025, U.S. juries returned nearly 200 nuclear verdicts — awards of $10 million or more — against corporate defendants, a 40.7% …",
    "motsCles": [
     "claims"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Courtage : Kereis signe l’acquisition du groupe Santiane - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOYzl1MG1QNnFaX1gyQzF6SS1CU2xQWmdxR19nTDFLR2p2MTA2R1RmNXY1bUMtNngyRFVWdjNEOTE1SHZheVRZbUUwYlpHVnZLSXYxTkxiZHZWT2hGS0c5azBJUGZsa3JvY1J1UmR2ZEExc2J2R0Nha0lVY0J5NnlxU2dPM3ZxbHIwVEg4TFdoZUJXRzIxVFdPelZRWWpKeF84?oc=5",
+   "date": "2026-10-02",
+   "extrait": "Courtage : Kereis signe l’acquisition du groupe Santiane News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "PLF 2027 : Assurance vie, provisions, TSCA... le détail des mesures - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQTJGU2JxT0VqOVY0STBqTzJvOF9pMG5lU252OUtJOTFocjVjaGFRMUdTZTJ3ZmdjNmc0eng1bmZJRl82NkVYaHpoUXZYTGZYSWdmNGpLcXBRVlpwUWxtcVlySXBMQXlVcFRqSEZBbmZPa3FKU0pQbFh5V2FUeWMtLXBDTVlmM0l4NFpYN294VG5udFJteTNnMzZ6cVdULUN0d0JOay1USXN4QQ?oc=5",
+   "date": "2026-10-02",
+   "extrait": "PLF 2027 : Assurance vie, provisions, TSCA... le détail des mesures News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "RESPONSABLE VEILLE ET METHODE H/F CREDIT AGRICOLE ASSURANCES Paris CDI - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTFQzcE1wR1VHUy14NlBWNDAzbVI4M2JsV0FrNTNVcU9EaVNudVJVT3ZYczBWWDFBOF9ETXBFMkxvTXR1clZYQllwT0pvZFA4Z05oVlJPTWdZeDdQSnE0WHZLU3FfUnFBYkJEUkRKbUstN3Rua0xGV3pIcHRBLUZPUFJQUTcwLUFJeTVKQzd2eHNfSklkOFBXRmx6b256ck42QWpteWdycGQ5LUJXSjZPNXJvWkt0QmNPV2FrTzhWWG81WUV5RVVhTjRn?oc=5",
+   "date": "2026-10-02",
+   "extrait": "RESPONSABLE VEILLE ET METHODE H/F CREDIT AGRICOLE ASSURANCES Paris CDI L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "L’assurtech Benefiz ouvre ses produits d’assurance santé et prévoyance aux travailleurs indépendants - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPaWttbjVmaUZRd2xwLUo0bW8yRkdLQWJGR1U1UklKVW85dVpJV0VzYzl4cWR5UWpHSmNTdXVpNjRLVGxCRjZqYThVQ0RURVR5dlktUjFsRURnTEZER0lMclB5LWRGbFc0UHlWXzB5NkFRelY4c1lYUnB2RFdGNmNjWHhWbHNXY0Mtb2VhdGN0dnNuQlVsQTBGVDkyNk5iU3F0ZGxvNnBkMG1EUzR0Z2wwVmhjTk1ab2xzdENwczVoQmJBNms5QWJxV1E0eUxXd21tUUluZ2wtVHNBMTJzWTVHUVFtdFdIMEZqQWFRTHR2eHl3Ti0zOXd5b1BvVDVPMFBDT1VSN2FDV2tfMmNITXc1cVJJTnZ4UQ?oc=5",
+   "date": "2026-10-02",
+   "extrait": "L’assurtech Benefiz ouvre ses produits d’assurance santé et prévoyance aux travailleurs indépendants L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assurtech",
+    "prévoyance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Assistance médicale à la procréation : SwissLife lance son pack innovant auprès des courtiers - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPZlhHOXBfczFmb1p6RVJyc3lWV3ZlUm0tNFRXb29ZdFpNR0dWRDdJUnB5dXpYMkV5ekdUT3MyU2NYa3ZGNFg5QVhNM2dBOFdkd1dXS3hJMVZMajh6d0ZzWEhMaWcxeTZsRzV5aF96VkNhVm9CTXBoYm5Uc2VzdlZxd0M1YkpySFc5WlM5NkVBbHZGbHI5cWtfbnpsaXpSYnB6UWJOX3ZtQzUtXzhuV3NLYmY4RWlLNjN2SWNrSTlRdFIxYXlpLW8yNHJmLWhCRVdOQzk4c216eVpqQ3NZRXlvNElUa1I5bHpzRWpzYk5aV2pDQXU2dzdLeG14X0JNRHE3QU1oMnVPeUZCMVpSMjFoUW9HVl9NczF2UkhWRXZfcVB0dw?oc=5",
+   "date": "2026-10-02",
+   "extrait": "Assistance médicale à la procréation : SwissLife lance son pack innovant auprès des courtiers L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "courtier"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Chargé de gestion immobilière (F/H) Thélem assurances Chécy CDD - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWmtxTFNSNnprdVFxUVlXaEQzemZtdUt0NmpsVjJKVE5xNnpkQ0gxcVBQdHg0bFVvcGo1U3VQZGNubHQyUGF3ZnJBdTUzb2JLZms1NVE3RTVVRDlDMmFKNGtoalhiS2c4MFFFMHlRWW5DdFBMdk9ERjhzbUVaRUVvWGZZS3V2V1BEOGtRS1dtQnExQnlqZDN4SmZBaEE0RHBqR0FwMTVqa0J6TTdIN2ZTX0ktVnlmaUc5TEZrSFA0OVF5aDNIQ2hxeFh3?oc=5",
+   "date": "2026-10-02",
+   "extrait": "Chargé de gestion immobilière (F/H) Thélem assurances Chécy CDD L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Assurance vie : une baisse de la collecte nette en trompe l’œil en août, les résultats depuis le début de l’année demeurent très hauts - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMivwJBVV95cUxQRlc4MDUydGt5OXNKLUc5dkxiVG9ERUM0UUp0Wmx3VGtiV056VkhpWlNaWWJ0c0J4V2k1dm82OGNybEI0d0tGRXpGaTFoa2dtRXZ5dGVHVkZiRVBoMnRpOVFJYUJpMHBVNUJNdUd1blUtcWhEMk1vSlE3UV9WMXVYQnBLaHBOOXlKUndOZmIwTk1sOXF6UlA3MEJSMi05RXZuWGx5bTVnSnZ6UFFoSVFsSjNlWkN5dlRfbmFuNm1yS2JYNWRYbHlGcFNGS3pCeTNnOWVpZ0Z4eDB4LTltbHV4YWxIOUdIbE1yMUNJVjVKTlE3TVF6cTZBYUZJMWJPd2VZTjhuVTN3dWczY3RTaUVTdThOdmNNNEJyUXRtcUREYVZkaTVMRVVMZkpWbldfeE1aN3MtYUN6cENaVTJSU3dJ?oc=5",
+   "date": "2026-10-02",
+   "extrait": "Assurance vie : une baisse de la collecte nette en trompe l’œil en août, les résultats depuis le début de l’année demeurent très hauts L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
    ],
    "nomsSuivis": []
   },
@@ -628,11 +789,266 @@
    "nomsSuivis": []
   },
   {
+   "source": "News Assurances Pro",
+   "titre": "PLF 2027 : Le gouvernement prévoit d’augmenter la TSCA - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMingFBVV95cUxQMy1Qb2plMF9lVGxLWHFNcW9DWm1yUHdRVHFxWjRidW9MM29EWjRCcjNXeG1tSGJZcENoQTBWellHRUhmd2FVS0tSaFF5MHZIVGN2dnA5T3hjbDNvVFFfVDNUVk02ejF3T0ZmdEYxNVRibVZlTDVpa0xJTDlnaG9oZDUtMk02OWdOR09kSm10OGdoeUVIcXlOdjFIZzhTdw?oc=5",
+   "date": "2026-10-01",
+   "extrait": "PLF 2027 : Le gouvernement prévoit d’augmenter la TSCA News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Helvetia - Journées Courtage 2026 - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSVkxR3h6M1VBSEZDU1NnaDNEd012VE14aW9xSkZaNkxHempLa1d6aDk0QkRWWS1qZmlWZ2lJUnh6ZGFNVVVxcm5zYS11M0Z2VkhtTmRYcmhaY2p4eXBReHczN1hwZGE0SWEzSHVtSEVUWHhWMkxNZE5DNFZabXpPN3FEbw?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Helvetia - Journées Courtage 2026 News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Le BADASS : à ne surtout pas garder pour soi - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQTkNVZWFLNkVka0JFTUxOMFl4RXN4S0VQSnRKR3RSMUhtcUhtdEIzRkpwMnBVVmgwX3k4eTVEZWVjRmtPajZDZGxHZlJvYnN3LUJrMGN0ZnpaNzNuWWxaYWtQNnFsWV94ZFd4TGNyTGlLQXo1YUhVUVY0enRXdjhZdldSaFdNQ0VnUnpiR1RKUnA2UQ?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Le BADASS : à ne surtout pas garder pour soi News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "PLFSS 2027 : Un effort de 1,6 milliard d’euros demandé aux OCAM - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNX25GNFFkQkRJeFRYV3l3VmNhb2ZEQVVPUy1OaVVrcTBySW5aZ241RHJ6QzhhSTFGWWJLNFVxTXI2eENkWHpSeDY5MFlFcFJ6dF9VNXRoWEUwbXV5czRhb0tWUFlLeDMzNnJOcE5RYzZIMURfeWhkNUpPRUkxXzZqMm5SQ2JrQ2U4OWV1RzEyWXptaGd2SkQ1ZnB3dThPVDlFa1RaWW1JN3U?oc=5",
+   "date": "2026-10-01",
+   "extrait": "PLFSS 2027 : Un effort de 1,6 milliard d’euros demandé aux OCAM News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Fédérations : Edwige Duterrage Baudin rejoint France Assureurs - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNERUZU5RakQ4VUtscFpnTUUwUGRYOEVXRm1YaDJ5VkpTU1Z0dHhUMmxreDVYSHE3MTNMU0xIWW5zZkQ0X01xRndWY0dFNHhzTTRQeHlKNXBXZ2dha1FzaWJWeHlwckdUVWJsQkYwYlJrZFNkX3RNQzRENkxYTEJaeV9qSTVINGt3dVlMMzlRTWQyWXlFbXBjWEtaV3ZEck91cmxpNHU0Zzl5Zw?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Fédérations : Edwige Duterrage Baudin rejoint France Assureurs News Assurances Pro",
+   "motsCles": [
+    "assurance",
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Assurance vie : Une baisse de la collecte nette à relativiser - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdWFfTUNBLWVKQktzVWowNGtSMnRKaVVuVFI2NnBRbEo5UC1FZjBnVThGYnlja3dSUGtKRW04ZFg0YWZ3WXVBTWxZWS1wR2xDSGlyRjVOTWxMMHZDVUlzUm9wRkg1NkZzRG1laGt6TFV1ci1ob0xIS2Zmc3pGWVlOTFNOVHkyYXZjUmxTT2JkZk1oZmNnbEFXVEJ1UEFiQ2R0N09xQnFUVzA?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Assurance vie : Une baisse de la collecte nette à relativiser News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Comprendre les systèmes de zones humides d'eau douce - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQLTNFUXQ0d29xdHI5alBDc1R1bTF4TDI3dm1XR3pYWGdXNXJyajEwRnpmTlBDcFAzVDNxQkFoQ2pPTGphRGhPb01VQTk5MF9XUThjRW95M3hQRC1GUFhJM28zNl9MWmJydEFNMjlXdEYtXzF1TjVsR1g5NzdCdkdmNHBCeWF0NU5Jd3c2YWdFUlFMQWlhRlUzS2c1cnVUUk1RZmk2VjFmdncxQQ?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Comprendre les systèmes de zones humides d'eau douce News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Les recommandations du Cercle RSE - Saison 2025/2026 - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVFk2ZGNjN0tQWnZuUVJXZURlcnRvdUlKVHkycW5rdDN6a2ZUc3RIdzRHUklJeHZodklJNUNmSkJ1azNRZnk2SnVRcS05RjRZWEo5V3BkNVlPZ2IyX0pOQ0JydjJoS09sRXhIWFl2M0E4bWRvU0xtc2Q5VUpLWGRkSXd0YURkbFRqa1VZZ3V1ZEZPdXd3UWlLRnZmMFU?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Les recommandations du Cercle RSE - Saison 2025/2026 News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Deuxième réunion du Cercle Prévoyance 2026/2027 - Cercle LAB - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQVHNMUW9NaUduYU1OamNkUTNpTmwzSTNzNVBZT1JwUnlPUFBWZmZaNkxPWjRpYzc5Z1RadUNtekxRMEYyTlFJQVYtYlctRzRVVTUzMTVpODlmck9OS0k5ZmF4YWd0WHRMaGlkY0NQaGdyRHZaMUNLbmxzZnpWalkzaDRkZFg3MGJuTEd0Q0h5MG5BT252TndESHBjcVhlcVJJUldrUTlXUGJTWTRLM2FiajFwUk1yekN0SVIwOHl2QktsekZobk5YVVAxUmZYV1FKVmdqZEs0WS0wcVFZd2QyWVhqdmlUOHBhdVl6Z1pTdl9zOWdZdFhEMEliTHRhaFlsamg1UExFbw?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Deuxième réunion du Cercle Prévoyance 2026/2027 - Cercle LAB News Assurances Pro",
+   "motsCles": [
+    "assurance",
+    "prévoyance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Les recommandations du Cercle Épargne & Retraite - Saison 2025/2026 - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQLXVmcE81aXc2WTczeVNiam9PQWhacVZ4X2VpOEJMUHhFaHVmYzJkVW9TbFpPWG9lSDNPZ3JJZWMxQjBHcGU4T3JjejNKdzNTaVlqd2JHV1FkeUhXVl9QNEpYQnlUdThsa1lDWDRpQWY1bnpiYkhseFViQm9XcldGRWhCd1lFTVlBaE5OZHFha1lTakttcThhV0ZTTVExVkxRUXVoc3duWkJ1RlQ5RUE?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Les recommandations du Cercle Épargne & Retraite - Saison 2025/2026 News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Les recommandations du Cercle Marketing & Relation client - Saison 2025/2026 - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPaGJUb2huUEQ2NHVZWFNuZDYzN2NTQVJITTg0cEIyNkMwamNvVUhwSm0wWWVDNDNXUUZJMlZsQ1MwRFgyTTVyVVNXYV9FSk9iVTV0N0ZUU203R1djM0lBVi1fYk5sZjNqUXJxWklwVzJ2SU9mSEZrQjNKOGd5R0dfMkZxTXA0RmdrSVRwd08yR3I1bGVmTWVpZjd4LVVZYjNjSEsxYXQyUVpNdUd1NFlIQjBaMlBRbUhONHc?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Les recommandations du Cercle Marketing & Relation client - Saison 2025/2026 News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "La compagnie d’assurance Wakam interdite de souscription par l’ACPR : l’ombre des sulfureux précédents - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPRmNmX19nOXkwUk9CMkROOXFiaEVYU2NrOXRITk56bTdYblZHWUJyWlFva3BLSDBKMVFuZkw4VWxjUC1HMnFGUURTbDF4dFNDaWxTMEZnbllORk1RU2xRNE1pN1E5b1dvWmlXV2JoQlE0OWZqSmFWVDE5a1hOLVpUSE1XU0E2X3JJSVZhUlBuZURoaTdPc0pYazZQdUNvOWtwR25VdzVFdjU3QXdDVlBNbklaRGNiMVg1RFYzLXhqS2ljT2pGNXFsWE43UlZvYXRpMUU3M0F5TVZJaHctZUpvMmRKQ2lSQW9lUzdmdVpvZ3g2SkVTQUpiVHRvek5yc29qSG1POE81ZWhVb3lDYk9mM1VlY2twdHo1TVlfTg?oc=5",
+   "date": "2026-10-01",
+   "extrait": "La compagnie d’assurance Wakam interdite de souscription par l’ACPR : l’ombre des sulfureux précédents L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Budget de la Sécurité sociale 2027 : lourde contribution des organismes complémentaires santé à la réduction du déficit de l’assurance maladie - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNZUMwRDVxc0hoR3daMGZIS1VaNk1GcmlBVzl6WFJVVDZpSXd6ekhnU29sbTJyeC1tdXlsVGZIUjNuN1E2cEloblViNnNoT3JRd3F2VFBDRDRnY0k3Q3pjbGNUdUg2S1dOQVlhSmd5Qk43bVd2QWh6Wlhta1Q3N0dEc2tVNEdmei1faThpRHU5YVdvWnA0bHJhdFpDb0s3QWI3UVotU2pUV2I2R3ZyMHFhS3FMa0VUMld6SC1XUFQzRFZSbTJnLWZYYnFjV1NPU054TVVDRlgyS0VEaE0xOUtYaFo2dXFnaWpCRFRENkcxQ3FrTnNMT1hMMnpuZGs4ZWVHTGRvakk3Y0NaM2VsM3UtaXUtc1ZUcE1qSnE3dmFlTDJXbWRNaWpEUDJYTVhLdU5YeHptdVdveU9tMkhvWVN6UzNRLURfMG5rcUl2Ug?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Budget de la Sécurité sociale 2027 : lourde contribution des organismes complémentaires santé à la réduction du déficit de l’assurance maladie L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Automobile : Macif passe à la vitesse supérieure et lance avec Cosmobilis une plateforme de vente de véhicules - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPLXktU3BodHh0WWtwWDU0SkNDY2ZKeUU1bmZhRF9PV1dGUlI1cHlGejZtN2dEa2JoY1BucllPSHl2dkxJZERpaVVtOG9LZmNEbVN6M3hyWTRXMU4xaC1vbFdjaFAxVHlpZVoxT3ZwcFVncVd4M0pXcE96Sk91UTZ6Q19PdnRyVGVhVVg2SGxPLUh4N2JIRVg3NXRjV0lnRTNvTzZHaUE1eEtpRlFTSHNQM2pYdF9tWE5hNEJNWE5kckNEODJac3FicThway1VTEtNS1hPV0RhUGd1MWVmTnR2aXJEMHVEWm5TekozaWNlOFJkWnlzRGdWRnF5ZFpQOWlaUmdKODN1VmxzN3ZuZEpEd1RiZmdBUWxFd3c?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Automobile : Macif passe à la vitesse supérieure et lance avec Cosmobilis une plateforme de vente de véhicules L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "ALTERNANCE - Gestionnaire RH H/F - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQN0s4S0ZESUd6elc3a0t2RHhJZEkyYXY1MmFpd3poTHN2T20wdXk1SmNqQTFWWl9UYVJ6eEZlaFhKSXRaR2JRZVVSb2FWRWktcXRSOWxaeGRHbTdOcDh0azNFTFNlQ1JScDRER1FxaWlqR3VSZEhCU1kxMFFDX0hsYTVCOFNzSV9RS1o4TjdhS01lSDljcjlwd1BjdEpqT2VIMUR5ek9JNE82T2EtUkhRLW5WbDFGUzBvWjhsajdhTFE0OEJYcVE?oc=5",
+   "date": "2026-10-01",
+   "extrait": "ALTERNANCE - Gestionnaire RH H/F L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Budget 2027 et assurance : la fiscalité de l’assurance vie est épargnée, mais plusieurs hausses de taxes sont prévues - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPM3psUUkzMHFoMmtIc0dlYkd5ZEpoZ3hGTEM1c2drZ0ZpWUJDVm1PUFF0TnBORGN5OVJ5MFVUZ1pkeFc2UEVHdmlvRVhLdWhfb1hrUFFtaWw5M1hGZkxVbGEtX09LTTZlel9zdVNHMm04bW1BV3FMT3JQdlBkUFV6dUcyLVp1VWNneUcxX19uQzBQOXprNld1VG1aVnhXNVJCY3Exc0N6OGNtYW1yQTc5cC1qQXdoRklUOXNqRXN0emNPUklkeWlvYWdMWVljbVdBZC1NaXFkMjd2OWRvNEpYOG13TzMzM0ZvVGI5eG9BT0hDMldPYnlQUi14TjIyem02SENUUTJtdXNsMzJobjdpdHlRXy1CV2djdXBvS2dmYmFNWkJubHhabw?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Budget 2027 et assurance : la fiscalité de l’assurance vie est épargnée, mais plusieurs hausses de taxes sont prévues L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Agent Général F/H, Expert VIE en association, pour notre agence de Thonon-les-Bains (74) - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQTjdiTkxoTXh0TkdlUk5MRXp2eFVJT0d2S0JWa2RNQUE0aDQ5cG15bDhuRnlSbXlscFVMakhldUxSQ2NiZ2U2UnNxRVJWZlB4REt1OXpQUjRkZFc4VzYzMEpTc2ZfYTZDbTRnQXhwaFJHSWZVQnhtd3EtX0x4YXdGOGxYZUFfNnU1NEM3SmlrbzRtU2hzckh4dy1WdUxOUzJOZk9tSkpmeW9UTlZjYnpiM0x1THZsNGlodTdiNUU1RWxyQlMwUTJnd3Y2YUY1TE5sR09aZGhCX21PSE1YcTRxalBIOW5MdUF2TEtuZGpnYkk2dk1GcGZOZUU1X25sSUNKaGpQYXJaN3pZLXlLMXc?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Agent Général F/H, Expert VIE en association, pour notre agence de Thonon-les-Bains (74) L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Assurance vie et épargne éthique : les nouvelles règles du jeu pour bien accompagner la clientèle - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOUzJId01MN3F2dWRmRUpna0Y0MFFMU0w4dkdlYjRxY1NUNm5zMkhsZi1VQnhQYXZ4YjBJN2Y2OGwwdWNvT0VwcGxBSUpKR3B6TndNaDBRY2pRak5nd3QxbndIQ19ZT1hDZXpxT1d0M005eXVkbGNkcDROWXlGTVVYeXFwWl91OXFuR3pYZ1BJNU9HdWdqTTZuVTExOEFKSGI3dy1xaHB2LWdodWRvNkhiZjJXVUxQSGxtcmlUUS13bXpRQUdvRmM5REdNREZkcGsxYXVNWi10c3lSQ0lWQi05WHgtcFlacmh3dEtJTGkzaFN3djNtN1lTaXV3bTJjWDl1UF9mRWVpaHMyWWlvcGkybQ?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Assurance vie et épargne éthique : les nouvelles règles du jeu pour bien accompagner la clientèle L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Agent Général F/H, Expert Patrimonial en association, pour notre agence de Pornic (44) - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNMEIwVGd0bE1JTkRWLWlVOWZhNURwRDdXTEdCWnM3cDAxcm9QdFlzaHQyTXRyMXJ1WGR0eS1DTzRlSlptNVRZbG0zVUg5TEZ5X2VoWnN1UWducmdzNm1FeUw5R3hBQzM4N0Nob0pFVVNoUlE5d2lYRlk2NzlpUnlQMXYyUWI2ZU9VY1BNNmZjQ1ZpaFlOUmtUOXNtZGlJY3FiY1lWbEtoLVRVSFF2eUtSWXlGdDN5Uk9EcTY2blRlY0liUTRiaTBsbGs1cjJyVS1heEliUzdXbV9Wc19wLVg5SWRieUZlUUFpZHdJa0hJTTVyQ1FiMXNXX1hOR2REcVIzYVRPVjNDRDYxRzA?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Agent Général F/H, Expert Patrimonial en association, pour notre agence de Pornic (44) L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Maif : le ministre du Travail veut faire de l’accord sur l’IA un exemple pour toutes les entreprises - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOZFBuNnVScVJfdXhFMEwwaV9vc3JvQlotUlE1c1NncWFTS1RSVl9nTU95RUNVd2VUU3k3SzBHMnRPbThvMmE5WjFMV050MVM0SW5xeWlfanB0Nm5LVnh2Ukx6Z2RiWThBZl9KMUVHTWs4Wi1BSEY4dXRmRmE5MC1MNkV3NzZSZUsxSi1wa2ZhUGxwc1BDOFR3S195TkxYLV9lOU9NbWI2aUdsS1lDazJQUjhyOHdkODltSHJFRmtWV0JiSHlTMHc1dkpQUjRBZzhoc3E2Tk95VW9yeWtvaHpvdS1xaXlvbDJ4aU9KR1dIdE84WHlkZ1JXUUpsbXRYblkzRW9lZFo3YjU?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Maif : le ministre du Travail veut faire de l’accord sur l’IA un exemple pour toutes les entreprises L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Agent Général F/H, Expert VIE en association, pour notre agence de Buchelay (78) - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQT0RxeGM2RlBBSERvdUstYXdxbzJXX2FSeFlJNXdvRHZfMHgyMDFtcFFPcDBnbVZFVmx3cEpFMmxNRGZnbHA2QkdCUGxqTTA0ekxTN3pILTRyMVZ5aHBJbkdGR2pWN1puUk9uYTZqcUV5ejBtSjhSZHRJMC1MdEM2V3RhMm5rOXQwdFpOdmN6NG94U3FTQ0h1eUlMalFRSkZhcVJiSXpXMDdNcHFmM204b0tPMGZUSkI3dkkwaklQUk41RXIxV04yLVVRd09FcVZlR2l1M2UtVndrNTdocEVWcEJrQzZaOFIwT1ljQXVwcFlzNzdaZFhqSk5PbTAyd01JR0tF?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Agent Général F/H, Expert VIE en association, pour notre agence de Buchelay (78) L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Assurance emprunteur : « Le cumul des garanties peut créer un effet d’aubaine » - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPcC1nVkJBWjRvdmF1emFzaUVqcDdSejg2a3QzMWoxTXQ2SUk0WjUteFlFSGRmZV9uamN2Qzh6bEdzZ2dsUEV6TWxOSUpKa0dEdjRtQ0Y3YV9wMFNxczBLQ2o2NWtSQmphYVFpdGd2X1Q1a0VjMDR5alBhZ2JDaDJ4MkV6Mjcxb1dJbkI2OXNZUUYwRmJSRXkwMkNnSHFYbnBjWmlpRFJ4dUhjVTdXSnhGQ3ZvY0t2RE1iV1IzTkZxbk9mR3VmQ2ZwUUZVYmNrUXJZWDRfQWZQcFN5N2hIMERvaFVR?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Assurance emprunteur : « Le cumul des garanties peut créer un effet d’aubaine » L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Benjamin Chabrier | La rédaction L'Argus de l'assurance - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0xdVRQZks2WGI4R0VGVVA2V1RwbWRaemFmdXNjTndjSnR6YVZxcGhNTEE0eC1Ec3l2T1FQN2wzZlhmSjJXMVhhT29qMWp1Uy1EaHFxV0ZzV2V5R3Y3dDFxN3pYOUNCaXJod0ZGa1NMbnpTMVU?oc=5",
+   "date": "2026-10-01",
+   "extrait": "Benjamin Chabrier | La rédaction L'Argus de l'assurance L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
    "source": "GN insurtech funding",
-   "titre": "FRANK raises €2.9M to cut paperwork for insurance brokers - tech.eu",
+   "titre": "FRANK raises €2.9M to cut paperwork for insurance brokers - Tech.eu",
    "lien": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOU09TR2cyU29nc19WWFJ5d2RCczFFX0ZhZ19oMHJUUVVMUzJzZHdVUHR1bGtpRHF1TlpBVGxIZUhrVDB6OW5TcjhQdHE5cFBjX3J6STBlSHF5ZWItWWY3NFk0Qk5CVW5PZmZPMGtyNVNvT0ExbUdMbWtydHo4eGp2bEw1S2pXbXhrTjU2NzVaTQ?oc=5",
    "date": "2026-10-01",
-   "extrait": "FRANK raises €2.9M to cut paperwork for insurance brokers tech.eu",
+   "extrait": "FRANK raises €2.9M to cut paperwork for insurance brokers Tech.eu",
    "motsCles": [
     "broker",
     "insurance"
@@ -652,10 +1068,10 @@
   },
   {
    "source": "GN insurtech funding",
-   "titre": "EquiTrust taps Sureify to modernise legacy insurance tech - FinTech Global",
+   "titre": "EquiTrust taps Sureify to modernise legacy insurance tech - fintech.global",
    "lien": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQUUU4NFRsQzE5Y2NzN3JTVVM4cWxZVTRhN1ZhcDF5TXM1TUtibl9Rckx0Ymt6Y3JiQTYwWloxczRVOHVZR1o1YTNMY0J0b0hGTWtVeEJpWkpzVmpqQlp2T3pBSnFYMDB3enlpZXBCZFRmV3NGOXVoWDdaeHQ3SEZyejJnb0lLWW9zVVhoYmMwMGp4dVdCem9r?oc=5",
    "date": "2026-10-01",
-   "extrait": "EquiTrust taps Sureify to modernise legacy insurance tech FinTech Global",
+   "extrait": "EquiTrust taps Sureify to modernise legacy insurance tech fintech.global",
    "motsCles": [
     "insurance"
    ],
@@ -675,10 +1091,10 @@
   },
   {
    "source": "GN insurtech funding",
-   "titre": "Allianz, Jio Financial inject US$66.5m into India general insurance JV - reinasia.com",
+   "titre": "Allianz, Jio Financial inject US$66.5m into India general insurance JV - (Re)in Asia",
    "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZnU0cV9BWUZ0d2FRZTRyM3NzYU0xZUhjUkpld19hYWtDa1JhRkpUMXVILWVzaWpSbjdsVTBJT3NaZ25mZl9fV2M2V1BnOW5yQ2lzd2NRcDFCa284ajhla3Y4SzdnaElpMzVTS2t5Qkw4RUtfRUhTS0ljWTI4U3BTb2tBd0JHbTcxR3JMMXR0bEY4ZmM4?oc=5",
    "date": "2026-10-01",
-   "extrait": "Allianz, Jio Financial inject US$66.5m into India general insurance JV reinasia.com",
+   "extrait": "Allianz, Jio Financial inject US$66.5m into India general insurance JV (Re)in Asia",
    "motsCles": [
     "insurance"
    ],
@@ -703,17 +1119,6 @@
    "extrait": "L'expertise diligentée par l'assureur vaut-elle renonciation à la prescription ? LE MONDE DU CHIFFRE",
    "motsCles": [
     "assureur"
-   ],
-   "nomsSuivis": []
-  },
-  {
-   "source": "GN M&A assurance",
-   "titre": "Automobile : Macif passe à la vitesse supérieure et lance avec Cosmobilis une plateforme de vente de véhicules - L'Argus de l'assurance",
-   "lien": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPLXktU3BodHh0WWtwWDU0SkNDY2ZKeUU1bmZhRF9PV1dGUlI1cHlGejZtN2dEa2JoY1BucllPSHl2dkxJZERpaVVtOG9LZmNEbVN6M3hyWTRXMU4xaC1vbFdjaFAxVHlpZVoxT3ZwcFVncVd4M0pXcE96Sk91UTZ6Q19PdnRyVGVhVVg2SGxPLUh4N2JIRVg3NXRjV0lnRTNvTzZHaUE1eEtpRlFTSHNQM2pYdF9tWE5hNEJNWE5kckNEODJac3FicThway1VTEtNS1hPV0RhUGd1MWVmTnR2aXJEMHVEWm5TekozaWNlOFJkWnlzRGdWRnF5ZFpQOWlaUmdKODN1VmxzN3ZuZEpEd1RiZmdBUWxFd3c?oc=5",
-   "date": "2026-10-01",
-   "extrait": "Automobile : Macif passe à la vitesse supérieure et lance avec Cosmobilis une plateforme de vente de véhicules L'Argus de l'assurance",
-   "motsCles": [
-    "assurance"
    ],
    "nomsSuivis": []
   },
@@ -754,11 +1159,169 @@
    "nomsSuivis": []
   },
   {
+   "source": "News Assurances Pro",
+   "titre": "Santé prévoyance : La FIPS pioche dans le rapport AMO/AMC - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZDRiM2NzZHlLRnhnYkJFLVFIQ1JMTWc4SHRRQVJCeDJHb0M4VERUdFptRzJtOEd2MjBaS0JpcGVLb2NNZEJHVERJWlJwZFFOQWZUNlUzYjFiUDBxZHhSZkQ0SmcxZV94cjBDQThyTHUxRVBWaUtGdnlfTXVBUDhQV3lLa05iRVNsQ0QtVUZwYWFJS2NHVm41akREcUJJZ25NS1E?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Santé prévoyance : La FIPS pioche dans le rapport AMO/AMC News Assurances Pro",
+   "motsCles": [
+    "assurance",
+    "prévoyance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Budget 2027 : Le secteur retient son souffle - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdzFpcnB4NFdmYUdTNjNEdEVXLXBQUVVaTzVuSHNlQlZoUGwzcHR5VTNZTC1iZHNwWmVDQ0xSRUNDd0FyaERLaml4YVVEU2tzbzJVbFVodFh1ci1EZjd5ZjVSWVZpM25kdVZSTzU2OTdfZTNpRl9rNlB1ZDdrVzAtaDNfUDVKeTI5VFpjaS1ab2U2dw?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Budget 2027 : Le secteur retient son souffle News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Retraite : Derrière le mot capitalisation, des conceptions différentes - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOXhyV1gxdzR3czBVMVhTb0lGbFFzV1JHbnRwRWdBcVhobTh6ZXBwVFRiYkwxcF9MRE9ocURhS2NfVHpJdEtNWnlXWnhST05mS0pZWFlIYWE2LUdYcC0wUERrSlRRRWZnNXZxN2FZdDlVTWdUQ3lmejk1UWotQWZ6U0VSb1ZUbklmM01KRHJWdGZ4MWEtWVZiUFdhYlV4Ykk3RERXSGtITkxpVzZ3bHI4SVdpSQ?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Retraite : Derrière le mot capitalisation, des conceptions différentes News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "AMO/AMC : Un rapport qui traduit les divergences au sein de la MECSS - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYVFPdVBYa3pRRU9zZE1paEdveU1GejVVMmxiZXJEWlU5TldZRjVlbnpJNzVJZWY3VTdnSUFfQ0Q2OE9EeU1OTEZTbDIyOWh2YUE0QWt6eW1wZG1HSjF2ZmtTZ0EtdVNabWtSLTExM2xXajcwREZ3WHlCbUp4QUFFQXRReUFkdkRCSGRUSHlPUk5ONWZPWFljbUJmZ3RsTHJiX2R1dGdKeUdfaHo5cjJDNA?oc=5",
+   "date": "2026-09-30",
+   "extrait": "AMO/AMC : Un rapport qui traduit les divergences au sein de la MECSS News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Assurance emprunteur : En AG, Tégo entérine le choix de CNP - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMVhGWXhPWkxXT1IwZnZjR09HNE9DZlZKRlhCc2dIUXVjSXZ4LVZLbTR3cTFCWG1GT3JzOTd5T09WTm11SlFvLW5mVEpvUUJnVjYwVGNNbmNZczZkV1g1Z0hNakVJWmdpWEEzZHNUaDRraHQ4aHlRSFFSS3Q1ZXNSNlpOUUxMLXhzM19Hdjd6OEY1T3Bid1V5X3ROdGNqU1dHTU9NaA?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Assurance emprunteur : En AG, Tégo entérine le choix de CNP News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Auto : Macif se mue en vendeur de véhicules - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMDVQTWIzcFlnMnZJZkxWY2sxZmpkSW5ONUpPa2NWVVBlMENvT2JMVWhqYl9sMXR1YTBhc0dIQm0tQkRwMEtYNk1ydGdYcVdOUmFoZ0M3UzZSVWRaV0xzTE5wTXlCUjlnQ3hfZDh4anpBaFJCQXJDalZmZ29QZDYxRHRKeFFRRDVTRmYxcjBpd0o?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Auto : Macif se mue en vendeur de véhicules News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Affinitaire : les enseignements à tirer de la sanction de la Société générale - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNRmtudmJ0NVhzT2FFVGotTV9fcUJRZTdjZ1hYNWhESGh5eWw5Q2VINjFjaXR3WkpBSXFIa1hjRWRXWmZrV2xjRDlUSi1KT0xhWkwzYlVKRWw4YnJncnFmMGo1d25JNGJUQnotbUNUTWxMOW1peFBDNjVlRURIR0ZDUWlodk5uTHRnRk5WOURaRndwSzJwMHN4LWxpMlFmXy02aFFtQ3V1Q0ZxTlJIVHhGRE5pRlF2UmVId3VZWVJfaVQ3WDhGQnNKLXpkRzJ6RUpEcWNBRU9ISXZMLVNyT0tuUTQ3SlhLRGxieHpyUS10WHBFdzZpMVlLRmNrRjAwcWZ6SVkzLU91eUN3amNk?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Affinitaire : les enseignements à tirer de la sanction de la Société générale L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "La Maif réaffirme son ambition de souveraineté technologique face à l’essor de l’IA générative et renforce ses liens avec Mistral AI - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQa1pvZlpfV2tsTzRKWEZiRXR6WFBocFc4ZGNOR1d5MVY1djhlZks0X1o4WENEOUNrVTFCOGp1VmtGOXIxWGh0Z3ItbGgyMTFtSkVYT1p3M3o5YlF2c3Y0OUdUM3pxZHZQSndpZDFhT1ZEMzNQSTNmamVLdm16SEN3bmw1ZHV5d3p6am5TeXFDeHFXSkJyTUk2dFU5WXlubTExQk5pZEtHZ1l3dXg0SHNqTUV1RG8tQS1KUl9RZmRoQkNyZXRuMkhpTlV6NUM2X2I0ZHlrRVhGSVlRVGVGcWJaRVRLcnRVVXR3UW5kQ2o1VXM0cGNIUm9lYVBpOVpVeFlield6T0hsenExQmJtX2h1TWlJeDc3VGtNc0VRM2JlZjR2eW9tZWlpZjFabXJjMGlsRFg1Y3lB?oc=5",
+   "date": "2026-09-30",
+   "extrait": "La Maif réaffirme son ambition de souveraineté technologique face à l’essor de l’IA générative et renforce ses liens avec Mistral AI L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Placement-direct.fr annonce un changement dans son organisation à la suite du départ de son directeur général Gilles Belloir - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMivwJBVV95cUxOTlhITmZiUTd6am5WblpWUUxJZGdYNWpBOUZIY01zTDYxeXdtM2JicjdENzJqMXBFNHhGaVp0dWtzYjk0R1lyVElJdWhfOW5ZSkFCbWlCY19LZnltOEdpWFMwY1dpM0VXdDQ5OTNhYkJHcDYzVEtwSVoyaWItVlZlVGU0XzdoR0RCSGtkeTYyRFh5aDd1T2tzU1A1a19hZlhYcVFxVjNmQm9wOWk1c0NqX0pCc2QzNkZmR0xuVDdkN0VTSDQ0TW00aTdacjlCaHhkS25RM0RJcUV0U0luOUFubzM4UTRfcEJRcS1aMno3bkZwSkRUcVZMYmM3bVUyY05WYlloRV90dVY2WUVnMVk5R3ZqN1pUWV9venZQLVQ1ZjdKSW9MSkptNWdCR0dEVXQybE91MG50SWh0eVJqa0Q0?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Placement-direct.fr annonce un changement dans son organisation à la suite du départ de son directeur général Gilles Belloir L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Budget : l’épargne est à nouveau dans le viseur du gouvernement, les assureurs sous pression - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQajhxUnkxV25HcGI0MzFYcl9YSlk3ckF2V0hWNjhNSXp2ZGxmSFNTVzFrbklPYkFEOFpUMHNCMjBJSGdZRGM4LWNBSDFWTk1OWDNmY0lUMkxNcTh4SDlwOEl5SWNzbU40RU1NajRFTjYxT0x5UFVYTGtPLVB4QnVOcTlmSktBRVN4ZEc4V24yaDJiWVVpN1M0TllVNkliMU9vQjJRTkd6VDQzR2F0c2RKMTZXVFgxVmNTa1NhaXVYZ0x6YXB1YTVLd0N0WWFfNWZQbWl5cC1iMG95NktESTM0cjRFSE5SZmg4RFAyQXpZazY4dFo4dnJqOUQtTjl6N0Y2WGVSa0VOaUJRSlh0MGxkaUJRZTlJUl9qSGs0UFJaM0w3MTdVRW90cHRB?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Budget : l’épargne est à nouveau dans le viseur du gouvernement, les assureurs sous pression L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Prévoyance : pourquoi les indépendants non couverts renoncent encore à se protéger - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQVDA4bGpxb2xzYl9qSWs2OEY0a3BwcEZTck1OcUI5eXJnY0FwYTNzbTQwVktRbHlrOVZMS0tTOWloejNUTjc5VDU0eWpwLWR3a0VOb2tTTy1MYVhmc3NZbG1MUjRNV2pjdVRubEtxcElScWJ6OS1PbjdyQ3BTd05iT3VVTEpDUVZYWTQ3OU9zR041YWNpcDNFeWprWGZCX1RvVEdjdWlzSUF2N3NGekx0N3M0YkVRUHlRRzVFeVFiaEpWVTVZLXZzN2hvZ0dvZUlfZUxuWkpYQ3pDNlFscE9JVmJJRThKMkwzVWFOWQ?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Prévoyance : pourquoi les indépendants non couverts renoncent encore à se protéger L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "prévoyance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Après l’emprunteur, CNP Assurances et Meilleurtaux renforcent leur partenariat avec de nouvelles offres en auto et en santé - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxOejNKQlRkNU1fWUJzemIyMG9NUnR4engtdE5QaGRMQ3JYV3hNeGRyWExQRDE0U2pFZXFjTXpPcV9BTHgzSXByZW5BQVRkclhWWTNSRkZRVUx6RTB5blFHZnEwMVhUaFlMc0FPREZzLUVWekx3NDBhTzktYy10bDJmY29SWi16OGJKY2tHcmQwWG5WV21SWlpoamhNX1BpdnJ3OVVjYVJUWUFVSDJ1MTJuRU1rVDVQaDNaaDNJV0pMZkROU0dlbks2X19QZV9IWlQ5NHFKVG9jc29UUjRzaDRlTU94R0JfZXNUZ2otODVLZm9CdGJWTXpnN2cwVmdEMWllTXhCWG85RE95S205SVFLd0ZqbjNhUXlLUHhnMW9NTDBWcjM3V1dQeTRSNDJKcml5blF3dXpQdVI?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Après l’emprunteur, CNP Assurances et Meilleurtaux renforcent leur partenariat avec de nouvelles offres en auto et en santé L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Articles Mes Magazines - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5ZTXZEa0czM2J4NjF1WGRRU3ROYWRlQlI1Y0hMeURTbEJsWEdEWG9jdlJ2ZjVkUDlFWWEwUHU0UkVWN1RmcDQ4TVpqWExpaTlCakRSbWJkaHhES2I1VmRXM1F4TQ?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Articles Mes Magazines L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Assureurs santé : le rapport de la mission Rist sur le rôle des complémentaires va nécessiter un travail « approfondi » mais « ouvre le débat » se félicite la Mutualité française - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxNanJTSmIyaXB0T2xkdnJrYXhnWE1Cb05XOWF0MnR6WUU5R0pLaVlnb3R4Z0l3WGZLN255c2IxOWQwVTQ1VzlJSlhxazdBeW0yeHdxV0Q4VWZTcjNPQ0hIX0VGWDB3YXlnc1lSQ1hwcnREcUtJNDV0UXJYazRNcEV1bzJRS0NwY19leWdtYnRfSWIzXzFvazdMcm9oRXJURmtDU2RZZ3FiQkQ0QWQ1Mm9XcWd4RVIzTkdWN2UyTng4Mjd4UDRWQ19WazFZeDdkV2hXQlRNakc3cFRVUUt1U3AxZWF4bjVQOTBtNjFCS2RmY2FfMVdSd0ZTV1VVSGhQRjNwVm5tb2JZSXVnWF9CTmxkakpQbHJBaFlEU3gzd3loZkZwRkZVTjM1R29EdGwzZ2VXYXNFQjB0dThMbTJIN05uRy1QejM4UHBFYnRJZlNkdzkxdURSNmdxOXNaVmdMbVRxc3JnajNmbHRURElCTUk2bGJpUQ?oc=5",
+   "date": "2026-09-30",
+   "extrait": "Assureurs santé : le rapport de la mission Rist sur le rôle des complémentaires va nécessiter un travail « approfondi » mais « ouvre le débat » se félicite la Mutualité française L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
    "source": "GN insurtech funding",
-   "titre": "Newly proposed federal rules would have “disastrous” impact on Medicaid, insurance funding, state says - coloradosun.com",
+   "titre": "Newly proposed federal rules would have “disastrous” impact on Medicaid, insurance funding, state says - The Colorado Sun",
    "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE43MF9lYlN5eWVzRkZDdFJPc1FyVUh4d19uZkdSV29iM28wclVTTjJGdHU3aE56YkRIQU5pcjR5UElaUTB0RWVGeW1QLWxvaVRtbnlvTDcwTVdkbGVVN2oxSElzS0x3RXJudHFiQnFFYTVHczRtVnZCLV9FOWw?oc=5",
    "date": "2026-09-30",
-   "extrait": "Newly proposed federal rules would have “disastrous” impact on Medicaid, insurance funding, state says coloradosun.com",
+   "extrait": "Newly proposed federal rules would have “disastrous” impact on Medicaid, insurance funding, state says The Colorado Sun",
    "motsCles": [
     "insurance"
    ],
