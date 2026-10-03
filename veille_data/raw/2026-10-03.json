@@ -1,0 +1,511 @@
+{
+ "collecte": "2026-10-03T10:39:09+00:00",
+ "fenetreJours": 2,
+ "nbArticles": 25,
+ "nbAvecNomSuivi": 1,
+ "flux": {
+  "EU-Startups": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Tech.eu": {
+   "ok": true,
+   "items": 20,
+   "retenus": 0
+  },
+  "Sifted": {
+   "ok": true,
+   "items": 24,
+   "retenus": 0
+  },
+  "Maddyness": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "FinSMEs": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Finextra": {
+   "ok": true,
+   "items": 54,
+   "retenus": 1
+  },
+  "FinTech Global": {
+   "ok": true,
+   "items": 10,
+   "retenus": 1
+  },
+  "Coverager": {
+   "ok": true,
+   "items": 10,
+   "retenus": 7
+  },
+  "Insurtech Insights": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Reinsurance News": {
+   "ok": true,
+   "items": 10,
+   "retenus": 9
+  },
+  "Artemis": {
+   "ok": true,
+   "items": 10,
+   "retenus": 2
+  },
+  "Insurance Journal": {
+   "ok": true,
+   "items": 30,
+   "retenus": 4
+  },
+  "Claims Journal": {
+   "ok": true,
+   "items": 15,
+   "retenus": 1
+  },
+  "Insurance Times": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "News Assurances Pro": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "L'Argus de l'assurance": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "FrenchWeb": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "CFNEWS": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Décideurs Corporate Finance": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Les Echos Start": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Journal du Net": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Siècle Digital": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Dynamique Mag": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Entreprendre": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "BFM Business": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "L'Agefi": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Revue Banque": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "La Tribune de l'Assurance": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "L'Usine Digitale": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "LeMagIT": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Le Monde Informatique": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "CIO Online": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "ZDNet.fr": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Silicon.fr": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "ActuIA": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "IT for Business": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Alliancy": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Solutions Numériques": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "InformatiqueNews": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "L'Informaticien": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Distributique": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "ChannelNews": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "Decideo": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "IT Social": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "LeBigData.fr": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "GN insurtech funding": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "GN insurtech raises": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "GN assurtech levée": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "GN CVC assureur": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  },
+  "GN M&A assurance": {
+   "ok": false,
+   "erreur": "HTTP Error 503: Service Unavailable"
+  }
+ },
+ "articles": [
+  {
+   "source": "FinTech Global",
+   "titre": "Akur8 launches AI agents to streamline actuarial pricing",
+   "lien": "https://fintech.global/2026/10/02/akur8-launches-ai-agents-to-streamline-actuarial-pricing/?utm_source=rss&utm_medium=rss&utm_campaign=akur8-launches-ai-agents-to-streamline-actuarial-pricing",
+   "date": "2026-10-02",
+   "extrait": "Akur8, the global actuarial AI platform provider, has rolled out Akur8 Agents, a new offering that embeds expert guidance and no-code automation into the day-to-day workflows of actuaries. The initial version, Akur8 Agents for pricing, is intended to help actuaries handle complex pricing tasks more ",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Akur8 (participation)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "Lloyds survey reveals 71% of UK FIs believe tokenisation will reshape financial services",
+   "lien": "https://www.finextra.com/newsarticle/48526/lloyds-survey-reveals-71-of-uk-fis-believe-tokenisation-will-reshape-financial-services?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-10-02",
+   "extrait": "Lloyds' 10th annual Financial Institutions Sentiment Survey, conducted between April and May 2026, showed that 71% of the 100 senior leaders surveyed across UK banks, insurers, financial sponsors and asset and wealth managers, expect tokenisation to transform how money and assets move through the fi",
+   "motsCles": [
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Novatae acquires Specialized Program Solutions",
+   "lien": "https://coverager.com/novatae-acquires-specialized-program-solutions/",
+   "date": "2026-10-02",
+   "extrait": "Novatae is a specialty insurance brokerage, MGA and program manager with 43 US offices serving more than 6,000 clients. The post Novatae acquires Specialized Program Solutions appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "broker",
+    "insurance",
+    "mga"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Commercial Express to withdraw static caravan product",
+   "lien": "https://coverager.com/commercial-express-to-withdraw-static-caravan-product/",
+   "date": "2026-10-02",
+   "extrait": "The company will stop accepting new business from that date and will no longer invite renewals due on or after November 1. The post Commercial Express to withdraw static caravan product appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Aon launches professional liability risk analyzer for law firms",
+   "lien": "https://coverager.com/aon-launches-professional-liability-risk-analyzer-for-law-firms/",
+   "date": "2026-10-02",
+   "extrait": "The tool is part of Aon’s broader Risk Analyzer suite. Aon is expanding it to other professional services sectors, including accounting and consulting firms. The post Aon launches professional liability risk analyzer for law firms appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Allianz names new CEOs for Allianz Partners and Allianz Direct",
+   "lien": "https://coverager.com/allianz-names-new-ceos-for-allianz-partners-and-allianz-direct/",
+   "date": "2026-10-02",
+   "extrait": "The appointments support Allianz’s Connected Platforms strategy. The post Allianz names new CEOs for Allianz Partners and Allianz Direct appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Freeway Insurance partners with National Debt Relief",
+   "lien": "https://coverager.com/freeway-insurance-partners-with-national-debt-relief/",
+   "date": "2026-10-02",
+   "extrait": "Freeway operates more than 650 locations across the US, offering personal lines insurance from multiple carriers. The post Freeway Insurance partners with National Debt Relief appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Asurion expands LeakProtect with monitoring-only option",
+   "lien": "https://coverager.com/asurion-expands-leakprotect-with-monitoring-only-option/",
+   "date": "2026-10-02",
+   "extrait": "The addition creates a three-tier lineup. The post Asurion expands LeakProtect with monitoring-only option appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Samsung insurance affiliates join $1 billion Helix investment",
+   "lien": "https://coverager.com/samsung-insurance-affiliates-join-1-billion-helix-investment/",
+   "date": "2026-10-02",
+   "extrait": "Samsung Life and Samsung Fire & Marine are the latest insurers to put capital into AI infrastructure. The post Samsung insurance affiliates join $1 billion Helix investment appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Wawanesa launches WSI after acquiring Everest Canada",
+   "lien": "https://www.reinsurancene.ws/wawanesa-launches-wsi-after-acquiring-everest-canada/",
+   "date": "2026-10-02",
+   "extrait": "The Wawanesa Mutual Insurance Company (Wawanesa) has launched WSI, which marks the closing of the acquisition of Everest Insurance Company of Canada (Everest Canada), a move which aims to enhance and accelerate its diversification, growth priorities, and commercial capabilities. The acquisition was ",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Neary named CEO for Marsh’s newly combined East Region",
+   "lien": "https://www.reinsurancene.ws/neary-named-ceo-for-marshs-newly-combined-east-region/",
+   "date": "2026-10-02",
+   "extrait": "Marsh, a global insurance broking and risk management firm, has announced the appointment of Andrew Neary CEO of Marsh Agency’s newly combined Eastern region of the US, effective immediately. Based in Conshohocken, Pennsylvania, Neary will lead around 1,400 colleagues across the unified East and Nor",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Industry reacts to proposed changes to US terrorism insurance backstop",
+   "lien": "https://www.reinsurancene.ws/industry-reacts-to-proposed-changes-to-us-terrorism-insurance-backstop/",
+   "date": "2026-10-02",
+   "extrait": "Proposed changes to the federal terrorism insurance backstop could raise the program trigger to $10 million from $5 million and require insurers to absorb more terrorism-related losses, according to new commentary from AM Best. The proposed Terrorism Risk Insurance Program (TRIA) Program Reauthoriza",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Bold Penguin and bolttech form global partnership to develop insurance distribution offering",
+   "lien": "https://www.reinsurancene.ws/bold-penguin-and-bolttech-form-global-partnership-to-develop-insurance-distribution-offering/",
+   "date": "2026-10-02",
+   "extrait": "Bold Penguin, an AI-enabled insurance distribution technology company specialising in commercial lines, and bolttech, a global insurtech providing technology-led insurance distribution, have entered into a global strategic partnership covering the US, Europe and Asia. The partnership will focus on d",
+   "motsCles": [
+    "insurance",
+    "insurtech"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Enact enters 35% quota share with panel of reinsurers",
+   "lien": "https://www.reinsurancene.ws/enact-enters-35-quota-share-with-panel-of-reinsurers/",
+   "date": "2026-10-02",
+   "extrait": "Enact Holdings, Inc., a U.S. private mortgage insurance provider, has announced that its wholly owned subsidiary, Enact Mortgage Insurance Corporation, has entered into a quota share reinsurance agreement with a panel of reinsurers as part of its diversified credit risk transfer programme. Each rein",
+   "motsCles": [
+    "insurance",
+    "insurer",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Hope Murera appointed as IDF Deputy Chair",
+   "lien": "https://www.reinsurancene.ws/hope-murera-appointed-as-idf-deputy-chair/",
+   "date": "2026-10-02",
+   "extrait": "The Insurance Development Forum (IDF), a global public-private partnership strengthening climate and disaster risk protection alongside governments, insurers and international organisations, has appointed Hope Murera as its Deputy Chair. Murera serves as Managing Director & Group CEO of ZEP-RE (PTA ",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Favourable insurance market gives US buyers more flexibility, Lockton says",
+   "lien": "https://www.reinsurancene.ws/favourable-insurance-market-gives-us-buyers-more-flexibility-lockton-says/",
+   "date": "2026-10-02",
+   "extrait": "Lockton, a privately held independent insurance broker, says US commercial insurance buyers are currently operating in a market where strong capacity and competition are providing greater choice across a number of insurance lines. In its latest quarterly Market Update, Lockton examines the condition",
+   "motsCles": [
+    "broker",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Ocean Re names Pedro Pinzón as Chief Risk Officer",
+   "lien": "https://www.reinsurancene.ws/ocean-re-names-pedro-pinzon-as-chief-risk-officer/",
+   "date": "2026-10-02",
+   "extrait": "Ocean Re Group, an insurance and reinsurance company, has appointed Pedro Pinzón as Chief Risk Officer, as the business continues to strengthen its approach to risk oversight and governance across its international operations. In the newly created role, Pinzón will be responsible for leading Ocean R",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Lincoln closes $6.3bn reinsurance transaction with Talcott",
+   "lien": "https://www.reinsurancene.ws/lincoln-closes-6-3bn-reinsurance-transaction-with-talcott/",
+   "date": "2026-10-02",
+   "extrait": "Lincoln Financial has closed its previously announced $6.3 billion reinsurance transaction with Talcott Financial Group, effective October 1, 2026. Lincoln explained that the $6.3 billion total transaction includes the reinsurance by a Talcott subsidiary of approximately $5.8 billion of in-force gua",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "Dependable exit mechanisms the key breakthrough in casualty ILS: Strategic Risk Solutions",
+   "lien": "https://www.artemis.bm/news/dependable-exit-mechanisms-the-key-breakthrough-in-casualty-ils-strategic-risk-solutions/?utm_source=rss&utm_medium=rss&utm_campaign=dependable-exit-mechanisms-the-key-breakthrough-in-casualty-ils-strategic-risk-solutions",
+   "date": "2026-10-02",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Strategic Risk Solutions, an independent provider of insurance, reinsurance and captive management and consulting services, suggests that casualty ILS will breakthrough when platforms of",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "As bonds become bonds again, investors should look to insurance debt: Plenum",
+   "lien": "https://www.artemis.bm/news/as-bonds-become-bonds-again-investors-should-look-to-insurance-debt-plenum/?utm_source=rss&utm_medium=rss&utm_campaign=as-bonds-become-bonds-again-investors-should-look-to-insurance-debt-plenum",
+   "date": "2026-10-02",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. In a webinar held this week, executives from specialist insurance-linked securities manager Plenum Investments explained that subordinated insurance debt is a rare category that is benef",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Business Moves: Everest Completes Sale of Canadian Retail Operations to Wawanesa; Arthur J. Gallagher & Co. Buys New Zealand’s Albany Insurance Services",
+   "lien": "https://www.insurancejournal.com/news/international/2026/10/02/887796.htm",
+   "date": "2026-10-02",
+   "extrait": "Everest Group Ltd., the Bermuda-based specialty re/insurer, announced the completion of the previously announced sale of its Canadian retail Insurance operations, to Wawanesa Mutual Insurance Co. In connection with the Everest acquisition, Wawanesa launched a unit called “WSI,” which comprise …",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Florida Insurance Agent Pleads Guilty in $300,000 Premium Finance Scheme",
+   "lien": "https://www.insurancejournal.com/news/southeast/2026/10/02/887787.htm",
+   "date": "2026-10-02",
+   "extrait": "A Florida insurance agent faces years in prison after he pleaded guilty to fraudulently arranging more than $300,000 in premium financing for fake companies, then diverting much of the money to his personal use. Daniel Raney, 41, who managed Raney …",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "US P/C Insurers See Fewer Ratings Downgrades in H1 2026 on Improved Performance",
+   "lien": "https://www.insurancejournal.com/news/national/2026/10/02/887782.htm",
+   "date": "2026-10-02",
+   "extrait": "The US property/casualty insurance segment saw substantially fewer ratings downgrades with more ratings upgrades in the first half of 2026 — mostly related to either poor or improved operating performance, according to AM Best. There were about half as many …",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "International Criminal Court, AXA Cut Ties Amid Trump Campaign Against Court",
+   "lien": "https://www.insurancejournal.com/news/international/2026/10/02/887731.htm",
+   "date": "2026-10-02",
+   "extrait": "The International Criminal Court has ended its contract with French life and health insurer AXA starting October 1 and will now be using a new health insurance provider, a spokesperson for the Hague-based court said. The spokesperson gave no reason …",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Claims Journal",
+   "titre": "Google Faces $3.2 Billion Damage Claims on Ad-Tech Monopoly",
+   "lien": "https://www.claimsjournal.com/news/national/2026/10/02/340522.htm",
+   "date": "2026-10-02",
+   "extrait": "U.S. District Judge P. Kevin Castel said he will allow jury trials to move forward on how Google’s conduct related to its AdX advertising exchange harmed major publishers.",
+   "motsCles": [
+    "claims"
+   ],
+   "nomsSuivis": []
+  }
+ ]
+}
