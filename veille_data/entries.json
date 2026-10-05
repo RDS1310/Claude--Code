@@ -1,6 +1,24 @@
 {
  "entries": [
   {
+   "date": "01/10/2026",
+   "type": "fonds",
+   "titre": "Zurich Insurance Group finalise le rachat de Beazley (8,1 Md£)",
+   "resume": "Zurich Insurance Group a finalisé l'acquisition de l'assureur du Lloyd's Beazley, effective au 1er octobre ; le titre Beazley a été retiré de la cote de Londres le 2 octobre.",
+   "source": "Insurance Journal",
+   "url": "https://www.insurancejournal.com/news/international/2026/10/01/887514.htm",
+   "theme": "M&A & consolidation"
+  },
+  {
+   "date": "01/10/2026",
+   "type": "fonds",
+   "titre": "Serena investit dans Voltaback (2,8 M€) – gestion de flottes et recharge électrique",
+   "resume": "La start-up française Voltaback, qui rembourse la recharge de véhicules électriques pour les flottes, lève 2,8 M€ auprès du fonds Serena et de business angels, dont le cofondateur d'Electra.",
+   "source": "Tech.eu",
+   "url": "https://tech.eu/2026/10/01/voltaback-raises-eur28m-to-scale-ev-charging-reimbursement-across-europe/",
+   "theme": "Activité des fonds hors insurtech"
+  },
+  {
    "date": "21/09/2026",
    "type": "startup",
    "titre": "Lemonade : un tribunal approuve un accord de 10,5 M$ après la fuite des numéros de permis de conduire",
@@ -109,7 +127,7 @@
    "theme": "Closings de fonds"
   }
  ],
- "derniereMaj": "28/09/2026",
- "prochaine": "05/10/2026",
+ "derniereMaj": "05/10/2026",
+ "prochaine": "12/10/2026",
  "frequence": "Hebdomadaire (lundi)"
 }

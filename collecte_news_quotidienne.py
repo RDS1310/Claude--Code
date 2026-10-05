@@ -19,6 +19,8 @@ import html
 import json
 import re
 import unicodedata
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -183,8 +185,15 @@ def parse_date(s: str):
 
 def lire_flux(url: str):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (veille-insurtech RSS reader)"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        brut = r.read()
+    for essai in range(3):  # Google News renvoie parfois 503/429 en rafale (ex. 03/10/2026)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                brut = r.read()
+            break
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 503) or essai == 2:
+                raise
+            time.sleep(10 * (essai + 1))
     fin = max(brut.rfind(b"</rss>") + 6, brut.rfind(b"</feed>") + 7)
     if fin > 6:
         brut = brut[:fin]  # contenu parasite après la balise de fin (Maddyness)
@@ -237,6 +246,8 @@ def main():
 
     articles, etat_flux = {}, {}
     for source, url in FLUX.items():
+        if "news.google.com" in url:
+            time.sleep(2)  # espacer les requêtes Google News pour éviter le 503
         try:
             items = list(lire_flux(url))
         except Exception as e:
