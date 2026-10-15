@@ -1,0 +1,604 @@
+{
+ "_meta": {
+  "source": "Apollo.io (révélation manuelle par R. De Sousa dans l'application, fichier contacts_fonds_pour_apollo_v2.xlsx)",
+  "date": "2026-10-15",
+  "legende": "V = email vérifié par Apollo ; M = email non vérifié (deviné) ; x = aucun email trouvé"
+ },
+ "contacts": [
+  {
+   "prenom": "Michele",
+   "nom": "Foradori",
+   "fonds": "BlackFin Capital Partners",
+   "email": "michele.foradori@blackfin.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Hélène",
+   "nom": "Falchier",
+   "fonds": "Portage Venture",
+   "email": "hfalchier@portageinvest.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Reza",
+   "nom": "Malekzadeh",
+   "fonds": "Partech",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Thomas",
+   "nom": "Gruederich",
+   "fonds": "TomCat",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Nicolas",
+   "nom": "Celier",
+   "fonds": "Ring Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Marc",
+   "nom": "Menasé",
+   "fonds": "Founders Future VC",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Romain",
+   "nom": "Fonade",
+   "fonds": "Aris Occitanie VC",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Sam",
+   "nom": "Evans",
+   "fonds": "EOS Venture",
+   "email": "sam@eosvc.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "François",
+   "nom": "Robinet",
+   "fonds": "Atlantic Vantage Point",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Alexis",
+   "nom": "Frentz",
+   "fonds": "Elaia Partners",
+   "email": "afrentz@elaia.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Charles",
+   "nom": "Letourneur",
+   "fonds": "Alven Capital",
+   "email": "charles@alven.co",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "François",
+   "nom": "Véron",
+   "fonds": "NewFund Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Jean",
+   "nom": "de La Rochebrochard",
+   "fonds": "Kima Venture Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Alice",
+   "nom": "Zagury",
+   "fonds": "The Family",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Sébastien",
+   "nom": "Le Roy",
+   "fonds": "Serena Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "José",
+   "nom": "del Barrio",
+   "fonds": "Samaipata Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Christophe",
+   "nom": "Raynaud",
+   "fonds": "ISAI",
+   "email": "raynaud@isai.fr",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Eric",
+   "nom": "Martineau-Fortin",
+   "fonds": "White Star Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Fausto",
+   "nom": "Boni",
+   "fonds": "360 Capital Partners",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Luca",
+   "nom": "Bocchio",
+   "fonds": "Accel Partners",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Ben",
+   "nom": "Marrel",
+   "fonds": "Breega Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Guillaume",
+   "nom": "Meulle",
+   "fonds": "XAnge Capital",
+   "email": "guillaume.meulle@xange.fr",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Germain",
+   "nom": "Gaschet",
+   "fonds": "Sharpstone Capitale",
+   "email": "ggaschet@sharpstone.fr",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Matthieu",
+   "nom": "Baret",
+   "fonds": "Eurazeo",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Nicolas",
+   "nom": "du Cray",
+   "fonds": "Cathay",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Benjamin",
+   "nom": "Cohen",
+   "fonds": "Elevation Capital Partners",
+   "email": "bcohen@elevation-cp.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "João",
+   "nom": "Menano",
+   "fonds": "Start Venture",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Bernard-Louis",
+   "nom": "Roques",
+   "fonds": "Truffle Capital",
+   "email": "bernie@truffle.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Florian",
+   "nom": "Graillot",
+   "fonds": "Astorya.vc",
+   "email": "florian@astorya.vc",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Jan",
+   "nom": "Hammer",
+   "fonds": "Index Venture",
+   "email": "jan@indexventures.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Stefan",
+   "nom": "Klestil",
+   "fonds": "speedInvest",
+   "email": "stefan.klestil@speedinvest.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Damien",
+   "nom": "Launoy",
+   "fonds": "115K",
+   "email": "launoy.damien@115k.fr",
+   "statut_apollo": "guessed"
+  },
+  {
+   "prenom": "Rudolf",
+   "nom": "Vrabel",
+   "fonds": "365.fintech",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Leonard",
+   "nom": "Clemens",
+   "fonds": "Cadence Growth Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Patrick",
+   "nom": "Meisberger",
+   "fonds": "CommerzVentures",
+   "email": "patrick.meisberger@commerzventures.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Stefan",
+   "nom": "Tirtey",
+   "fonds": "CommerzVentures",
+   "email": "stefan.tirtey@commerzventures.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Kjartan",
+   "nom": "Rist",
+   "fonds": "Concentric",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "David",
+   "nom": "Semmens",
+   "fonds": "David Semmens",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Steve",
+   "nom": "Gibson",
+   "fonds": "13books Capital (ex-Element Ventures)",
+   "email": "steve@13bookscapital.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Marius",
+   "nom": "Declerck",
+   "fonds": "Ethias Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Thomas",
+   "nom": "Rival",
+   "fonds": "Evolem Start",
+   "email": "thomas.rival@evolem.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "James",
+   "nom": "Pringle",
+   "fonds": "Goldsmith Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Ralf",
+   "nom": "Molitor",
+   "fonds": "Helsana HealthInvest",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Dietrich",
+   "nom": "Aumann",
+   "fonds": "Helsana HealthInvest",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Tom",
+   "nom": "Hoad",
+   "fonds": "Howden Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Luke",
+   "nom": "Hakes",
+   "fonds": "Howden Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Minh",
+   "nom": "Q. Tran",
+   "fonds": "Insurtech Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Stephen",
+   "nom": "Brittain",
+   "fonds": "Insurtech Gateway",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "François-Xavier",
+   "nom": "Marchand",
+   "fonds": "Macif Innovation",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Mira",
+   "nom": "Le Lay",
+   "fonds": "Macif Innovation",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Antoine",
+   "nom": "Rolland",
+   "fonds": "NewAlpha Asset Management",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Alexandra",
+   "nom": "Pailhes",
+   "fonds": "Open CNP",
+   "email": "alexandra.pailhes@cnp.fr",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Anas",
+   "nom": "Tazlaoui",
+   "fonds": "Open CNP",
+   "email": "anas.tazlaoui@cnp.fr",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Udo",
+   "nom": "Bröskamp",
+   "fonds": "Schumpeter Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Will",
+   "nom": "Thorne",
+   "fonds": "SCOR Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Mathias",
+   "nom": "Jaeggi",
+   "fonds": "Seed X Liechtenstein",
+   "email": "mathias.jaeggi@seedx.li",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Andreas",
+   "nom": "Iten",
+   "fonds": "Tenity",
+   "email": "andreas.iten@tenity.com",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Paul",
+   "nom": "Anderson",
+   "fonds": "The49",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Paul",
+   "nom": "O'Connor",
+   "fonds": "The49",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Chris",
+   "nom": "Smith",
+   "fonds": "TSP Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Christian",
+   "nom": "Huber",
+   "fonds": "UNIQA Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Ingo",
+   "nom": "Küpper",
+   "fonds": "Venpace",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Patrice",
+   "nom": "Fleurquin",
+   "fonds": "Patrice Fleurquin",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Anthony",
+   "nom": "Bourbon",
+   "fonds": "Blast.Club",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Sébastien",
+   "nom": "Fertier",
+   "fonds": "The Moon Venture",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Mohammad",
+   "nom": "Hossein Tavangar",
+   "fonds": "Mohammad Hossein Tavangar",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Thorsten",
+   "nom": "Wittmütz",
+   "fonds": "NCA (Next Commerce Accelerator)",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Christoph",
+   "nom": "Schepan",
+   "fonds": "NCA (Next Commerce Accelerator)",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Michele",
+   "nom": "Novelli",
+   "fonds": "Step Venture",
+   "email": "michele.novelli@stepventure.eu",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Katka",
+   "nom": "Letzing",
+   "fonds": "Kickstart Innovation",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Andrew",
+   "nom": "Mash",
+   "fonds": "Mash VC",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Mark",
+   "nom": "Boggett",
+   "fonds": "Seraphim Space",
+   "email": "mark@seraphim.vc",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Kristina",
+   "nom": "Pereckaite",
+   "fonds": "South East Angels",
+   "email": "Kristana@futureworlds.com",
+   "statut_apollo": "guessed"
+  },
+  {
+   "prenom": "Jorge",
+   "nom": "Blasco",
+   "fonds": "The Net Street Capital",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Hampus",
+   "nom": "Monthan Nordenskjöld",
+   "fonds": "TrueSight Ventures",
+   "email": "hampus@1880.vc",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Nazim",
+   "nom": "Cetin",
+   "fonds": "Allianz X",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Mohamed",
+   "nom": "Abdesslam",
+   "fonds": "MAIF Avenir",
+   "email": "mohamed@ternel.vc",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Timothée",
+   "nom": "Poulain",
+   "fonds": "MAIF Avenir",
+   "email": "timothee@ternel.vc",
+   "statut_apollo": "verified"
+  },
+  {
+   "prenom": "Jacqueline",
+   "nom": "LeSage Krause",
+   "fonds": "Munich Re Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Oshri",
+   "nom": "Kaplan",
+   "fonds": "Munich Re Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Danilo",
+   "nom": "Raponi",
+   "fonds": "Generali Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Ben",
+   "nom": "Luckett",
+   "fonds": "Aviva Ventures",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Cara",
+   "nom": "Morton",
+   "fonds": "Zurich Insurance Group",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Katharina",
+   "nom": "Maass",
+   "fonds": "Achmea Innovation Fund",
+   "email": null,
+   "statut_apollo": "unavailable"
+  },
+  {
+   "prenom": "Henrieke",
+   "nom": "Hoftijzer",
+   "fonds": "Achmea Innovation Fund",
+   "email": "henrieke.hoftijzer@achmea.nl",
+   "statut_apollo": "verified"
+  }
+ ]
+}
