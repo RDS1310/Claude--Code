@@ -1,0 +1,235 @@
+{
+ "_meta": {
+  "campagne": "Contacts société (adresses génériques publiées par les fonds)",
+  "date": "2026-10-15",
+  "methode": "WebSearch restreinte au domaine officiel du fonds (WebFetch indisponible) ; adresse retenue seulement si elle figure sur une page du fonds ; sinon formulaire de contact s'il existe ; jamais d'adresse reconstituée"
+ },
+ "contacts_societe": [
+  {
+   "fonds": "Serena Capital",
+   "email": "contact@serena.vc",
+   "libelle": "Contact général",
+   "source": "https://www.serena.vc/legal/"
+  },
+  {
+   "fonds": "Partech",
+   "email": "contact@partechpartners.com",
+   "libelle": "Contact général",
+   "source": "https://partechpartners.com/contact"
+  },
+  {
+   "fonds": "360 Capital Partners",
+   "email": "info@360cap.vc",
+   "libelle": "Contact général",
+   "source": "https://www.360cap.vc/legals",
+   "formulaire": "https://www.360cap.vc/submit"
+  },
+  {
+   "fonds": "365.fintech",
+   "email": "365fintech@365fintech.sk",
+   "libelle": "Contact général",
+   "source": "https://www.365fintech.sk/"
+  },
+  {
+   "fonds": "Allianz X",
+   "email": "allianzx@allianz.com",
+   "libelle": "Demandes d'investissement",
+   "source": "https://allianzx.com/contact/"
+  },
+  {
+   "fonds": "Aviva Ventures",
+   "email": "pmventurecapital@avivainvestors.com",
+   "libelle": "Équipe Venture Capital (Aviva Investors)",
+   "source": "https://www.avivainvestors.com/en-gb/capabilities/private-markets/venture-capital/"
+  },
+  {
+   "fonds": "Blast.Club",
+   "email": "contact@blast.club",
+   "libelle": "Contact général",
+   "source": "https://www.blast.club/en/legal-notice"
+  },
+  {
+   "fonds": "Aris Occitanie VC",
+   "email": null,
+   "libelle": "Formulaire « Contactez-nous »",
+   "formulaire": "https://aris-occitanie.fr/",
+   "source": "https://aris-occitanie.fr/"
+  },
+  {
+   "fonds": "Cadence Growth Capital",
+   "email": null,
+   "libelle": "Formulaire de contact",
+   "formulaire": "https://www.cadencegrowthcapital.com/",
+   "source": "https://www.cadencegrowthcapital.com/"
+  },
+  {
+   "fonds": "Cathay",
+   "email": "contact@cathayinnovation.com",
+   "libelle": "Contact général",
+   "source": "https://cathayinnovation.com/contact/"
+  },
+  {
+   "fonds": "Concentric",
+   "email": "info@concentricteam.com",
+   "libelle": "Contact (politique de confidentialité)",
+   "source": "https://concentric.vc/privacy-policy/"
+  },
+  {
+   "fonds": "Founders Future VC",
+   "email": "hello@foundersfuture.com",
+   "libelle": "Contact général",
+   "source": "https://www.foundersfuture.com/en/contact"
+  },
+  {
+   "fonds": "Howden Ventures",
+   "email": null,
+   "libelle": "Formulaire « Get in touch »",
+   "formulaire": "https://www.howdengroupholdings.com/about-us/howden-ventures",
+   "source": "https://www.howdengroupholdings.com/about-us/howden-ventures"
+  },
+  {
+   "fonds": "Insurtech Gateway",
+   "email": "info@insurtechgateway.com",
+   "libelle": "Contact général",
+   "source": "https://www.insurtechgateway.com/"
+  },
+  {
+   "fonds": "Kickstart Innovation",
+   "email": "hello@kickstart-innovation.com",
+   "libelle": "Contact général",
+   "source": "https://www.kickstart-innovation.com/about"
+  },
+  {
+   "fonds": "NewAlpha Asset Management",
+   "email": "contact@newalpha.net",
+   "libelle": "Contact général",
+   "source": "https://www.newalpha.com/en/contact/"
+  },
+  {
+   "fonds": "NewFund Capital",
+   "email": "bri@newfundcap.com",
+   "libelle": "Pitch / fondateurs",
+   "source": "https://blog.newfundcap.com/"
+  },
+  {
+   "fonds": "Ring Capital",
+   "email": "contact@ringcp.com",
+   "libelle": "Contact général",
+   "source": "https://www.ringcp.com/contact/"
+  },
+  {
+   "fonds": "Samaipata Ventures",
+   "email": "hello@samaipata.vc",
+   "libelle": "Contact général",
+   "source": "https://www.samaipata.vc/legal-notice"
+  },
+  {
+   "fonds": "Schumpeter Ventures",
+   "email": "sr@schumpeter.vc",
+   "libelle": "Contact (Stephanie Rudolf)",
+   "source": "https://schumpeter.vc/en/about/"
+  },
+  {
+   "fonds": "The Net Street Capital",
+   "email": "tech@thenetstreet.com",
+   "libelle": "Contact bureau de Barcelone",
+   "source": "https://thenetstreet.com/contact/"
+  },
+  {
+   "fonds": "The49",
+   "email": null,
+   "libelle": "Page contact",
+   "formulaire": "https://www.the49.com/contact",
+   "source": "https://www.the49.com/contact"
+  },
+  {
+   "fonds": "TomCat",
+   "email": null,
+   "libelle": "Formulaire investisseurs",
+   "formulaire": "https://www.tomcat.eu/rejoindre-tomcat/investisseurs-contact/",
+   "source": "https://www.tomcat.eu/rejoindre-tomcat/investisseurs-contact/"
+  },
+  {
+   "fonds": "Venpace",
+   "email": "hello@venpace.com",
+   "libelle": "Contact général",
+   "source": "https://www.venpace.com/en/kontakt"
+  },
+  {
+   "fonds": "Committed Capital",
+   "email": "info@committedcapital.co.uk",
+   "libelle": "Contact général",
+   "source": "https://committedcapital.co.uk/contact/"
+  }
+ ],
+ "sans_adresse_publiee": [
+  "Breega Capital",
+  "Kima Venture Capital",
+  "Atlantic Vantage Point",
+  "Ethias Ventures (adresses assureur génériques seulement)",
+  "Eurazeo (contacts presse/IR seulement)",
+  "Generali Ventures (contacts presse seulement)",
+  "Goldsmith Ventures",
+  "NCA (Next Commerce Accelerator)",
+  "The Moon Venture (contact presse seulement)",
+  "White Star Capital (adresse sur domaine de test, non retenue)",
+  "Accel Partners",
+  "Mash VC",
+  "UNIQA Ventures (contact presse seulement)"
+ ],
+ "emails_partenaires_publies": [
+  {
+   "fonds": "Founders Future VC",
+   "contact": "Marc Menasé",
+   "email": "marc@foundersfuture.com",
+   "statut": "published",
+   "source": "https://www.foundersfuture.com/en/contact",
+   "commentaire": "Adresse « investisseurs » de la page contact du fonds"
+  },
+  {
+   "fonds": "Helsana HealthInvest",
+   "contact": "Ralf Molitor",
+   "email": "ralf.molitor@helsana.ch",
+   "statut": "published",
+   "source": "https://www.helsana.ch/en/helsana-group/about-us/healthinvest.html",
+   "commentaire": "Adresse de contact de la page HealthInvest de Helsana"
+  },
+  {
+   "fonds": "SCOR Ventures",
+   "contact": "Will Thorne",
+   "email": "wthorne@scor.com",
+   "statut": "published_old",
+   "source": "https://www.scor.com/en/download/ (Speakers Bios)",
+   "commentaire": "Biographie d'intervenant publiée par SCOR, document ancien (~4 ans) : à confirmer"
+  }
+ ],
+ "contacts_a_remplacer": [
+  {
+   "fonds": "Zurich Insurance Group",
+   "contact": "Cara Morton",
+   "motif": "A quitté Zurich Global Ventures en janvier 2026 ; successeur non identifié"
+  },
+  {
+   "fonds": "Munich Re Ventures",
+   "contact": "Jacqueline LeSage Krause",
+   "motif": "Munich Re Ventures ne fait plus de nouveaux investissements (portefeuille géré par MEAG)"
+  },
+  {
+   "fonds": "Munich Re Ventures",
+   "contact": "Oshri Kaplan",
+   "motif": "Munich Re Ventures ne fait plus de nouveaux investissements (portefeuille géré par MEAG)"
+  },
+  {
+   "fonds": "UNIQA Ventures",
+   "contact": "Christian Huber",
+   "motif": "Intérim depuis la dissolution de la marque UNIQA Ventures (nov. 2024) ; interlocuteur venture à identifier"
+  }
+ ],
+ "a_verifier": [
+  {
+   "fonds": "TrueSight Ventures",
+   "contact": "Hampus Monthan Nordenskjöld",
+   "point": "Email vérifié par Apollo sur le domaine 1880.vc, différent de TrueSight ; aucune source trouvée sur un changement de fonction"
+  }
+ ]
+}

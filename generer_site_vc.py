@@ -77,7 +77,7 @@ def liste(v) -> list[str]:
 # Statut d'email tel que renvoyé par Apollo (colonne Contact_0x_Email_Statut, absente avant
 # l'enrichissement) → 3 états affichés avec le code couleur d'Apollo.
 STATUTS_EMAIL = {
-    "verified": "confirme",
+    "verified": "confirme", "published": "confirme", "published_old": "doute",
     "guessed": "doute", "unverified": "doute", "extrapolated": "doute",
     "likely to engage": "doute", "likely_to_engage": "doute", "catch_all": "doute", "catch-all": "doute",
     "unavailable": "indisponible", "bounced": "indisponible", "non trouvé": "indisponible",
@@ -100,6 +100,7 @@ def construire_contacts(r) -> list[dict]:
             "linkedin": j(r.get(f"Contact_{n}_LinkedIn")),
             "email": j(r.get(f"Contact_{n}_Email")),
             "emailStatut": statut_email(r.get(f"Contact_{n}_Email_Statut")),
+            "aRemplacer": j(r.get(f"Contact_{n}_A_Remplacer")),
         })
     return out
 
@@ -151,6 +152,10 @@ def construire_fonds(fonds: pd.DataFrame) -> list[dict]:
             "typeInvestisseur": j(r.get("Type d'investisseur")) or "VC indépendant",
             "societeMere": j(r.get("Société mère (si CVC)")),
             "contacts": construire_contacts(r),
+            "contactSociete": {
+                "email": j(r.get("Contact_Societe_Email")), "libelle": j(r.get("Contact_Societe_Libelle")),
+                "formulaire": j(r.get("Contact_Societe_Formulaire")), "source": j(r.get("Contact_Societe_Source")),
+            } if not est_vide(r.get("Contact_Societe_Libelle")) else None,
         })
     return out
 

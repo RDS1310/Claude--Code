@@ -167,6 +167,7 @@ h1,h2,h3,p{text-wrap:balance}
 .chip.good{border-color:var(--good);color:var(--good);background:var(--good-soft)}
 .chip.bad{border-color:var(--bad);color:var(--bad);background:var(--bad-soft)}
 .chip.doute{border-style:dashed;color:var(--muted)}
+.a-remplacer{margin-top:6px;font-size:12px;color:var(--ochre);background:var(--ochre-soft);padding:3px 8px;border-radius:3px;display:inline-block}
 
 .band{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line);background:var(--surface)}
 .fig{padding:14px 16px;border-right:1px solid var(--line-soft)}
@@ -428,9 +429,9 @@ const emailChip = c => {
     return `<span class="chip bad" title="Recherche Apollo sans email exploitable">Email non disponible</span>`;
   if (!c.email) return `<span class="chip" style="color:var(--muted)">Email à renseigner</span>`;
   if (c.emailStatut === 'confirme')
-    return `<a class="chip good" href="mailto:${esc(c.email)}" title="Email vérifié par Apollo">✓ ${esc(c.email)}</a>`;
+    return `<a class="chip good" href="mailto:${esc(c.email)}" title="Email vérifié (Apollo) ou publié par le fonds">✓ ${esc(c.email)}</a>`;
   if (c.emailStatut === 'doute')
-    return `<a class="chip doute" href="mailto:${esc(c.email)}" title="Email non vérifié (deviné ou extrapolé par Apollo) — à confirmer">${esc(c.email)} ?</a>`;
+    return `<a class="chip doute" href="mailto:${esc(c.email)}" title="Email non vérifié ou issu d'un document ancien — à confirmer">${esc(c.email)} ?</a>`;
   return `<a class="chip" href="mailto:${esc(c.email)}">${esc(c.email)}</a>`;
 };
 
@@ -638,17 +639,28 @@ function renderFund(f){
     </div>
   </div>
 
-  ${(f.contacts && f.contacts.length) ? `
+  ${((f.contacts && f.contacts.length) || f.contactSociete) ? `
   <h3 class="sec">Contacts clés</h3>
-  <div class="grid2">${f.contacts.map(c => `
+  <div class="grid2">${(f.contacts||[]).map(c => `
     <div class="card">
       <div style="font-weight:500;font-size:15px">${esc(c.nom)}</div>
       ${c.titre ? `<div style="color:var(--muted);font-size:13px;margin-top:2px">${esc(c.titre)}</div>` : ''}
+      ${c.aRemplacer ? `<div class="a-remplacer">À remplacer : ${esc(c.aRemplacer)}</div>` : ''}
       <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
         ${c.linkedin ? `<a class="chip" href="${esc(c.linkedin)}" target="_blank" rel="noopener">LinkedIn ↗</a>` : ''}
         ${emailChip(c)}
       </div>
     </div>`).join('')}
+    ${f.contactSociete ? `
+    <div class="card">
+      <div style="font-weight:500;font-size:15px">Contact société</div>
+      <div style="color:var(--muted);font-size:13px;margin-top:2px">${esc(f.contactSociete.libelle || '')} — adresse générique publiée par le fonds</div>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        ${f.contactSociete.email ? `<a class="chip" href="mailto:${esc(f.contactSociete.email)}">${esc(f.contactSociete.email)}</a>` : ''}
+        ${f.contactSociete.formulaire ? `<a class="chip" href="${esc(f.contactSociete.formulaire)}" target="_blank" rel="noopener">Formulaire ↗</a>` : ''}
+        ${f.contactSociete.source ? `<a class="chip" style="color:var(--muted)" href="${esc(f.contactSociete.source)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
+      </div>
+    </div>` : ''}
   </div>` : ''}
 
   ${portfolioRows.length ? `
