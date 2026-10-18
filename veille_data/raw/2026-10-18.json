@@ -1,0 +1,394 @@
+{
+ "collecte": "2026-10-18T09:54:29+00:00",
+ "fenetreJours": 2,
+ "nbArticles": 12,
+ "nbAvecNomSuivi": 1,
+ "flux": {
+  "EU-Startups": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Tech.eu": {
+   "ok": true,
+   "items": 20,
+   "retenus": 0
+  },
+  "Sifted": {
+   "ok": true,
+   "items": 24,
+   "retenus": 0
+  },
+  "Maddyness": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "FinSMEs": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "Finextra": {
+   "ok": true,
+   "items": 52,
+   "retenus": 0
+  },
+  "FinTech Global": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Coverager": {
+   "ok": true,
+   "items": 10,
+   "retenus": 4
+  },
+  "Insurtech Insights": {
+   "ok": true,
+   "items": 28,
+   "retenus": 1
+  },
+  "Reinsurance News": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Artemis": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Insurance Journal": {
+   "ok": true,
+   "items": 30,
+   "retenus": 0
+  },
+  "Claims Journal": {
+   "ok": true,
+   "items": 15,
+   "retenus": 0
+  },
+  "Insurance Times": {
+   "ok": true,
+   "items": 100,
+   "retenus": 4
+  },
+  "News Assurances Pro": {
+   "ok": true,
+   "items": 47,
+   "retenus": 1
+  },
+  "L'Argus de l'assurance": {
+   "ok": true,
+   "items": 88,
+   "retenus": 1
+  },
+  "FrenchWeb": {
+   "ok": true,
+   "items": 21,
+   "retenus": 0
+  },
+  "CFNEWS": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Décideurs Corporate Finance": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Les Echos Start": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Journal du Net": {
+   "ok": true,
+   "items": 8,
+   "retenus": 0
+  },
+  "Siècle Digital": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Dynamique Mag": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Entreprendre": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "BFM Business": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "L'Agefi": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Revue Banque": {
+   "ok": true,
+   "items": 19,
+   "retenus": 0
+  },
+  "La Tribune de l'Assurance": {
+   "ok": true,
+   "items": 91,
+   "retenus": 1
+  },
+  "L'Usine Digitale": {
+   "ok": true,
+   "items": 9,
+   "retenus": 0
+  },
+  "LeMagIT": {
+   "ok": true,
+   "items": 5,
+   "retenus": 0
+  },
+  "Le Monde Informatique": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "CIO Online": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ZDNet.fr": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Silicon.fr": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ActuIA": {
+   "ok": true,
+   "items": 37,
+   "retenus": 0
+  },
+  "IT for Business": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "Alliancy": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Solutions Numériques": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "InformatiqueNews": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "L'Informaticien": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Distributique": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ChannelNews": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Decideo": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "IT Social": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "LeBigData.fr": {
+   "ok": true,
+   "items": 69,
+   "retenus": 0
+  },
+  "GN insurtech funding": {
+   "ok": true,
+   "items": 49,
+   "retenus": 0
+  },
+  "GN insurtech raises": {
+   "ok": true,
+   "items": 11,
+   "retenus": 0
+  },
+  "GN assurtech levée": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN CVC assureur": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN M&A assurance": {
+   "ok": true,
+   "items": 12,
+   "retenus": 0
+  }
+ },
+ "articles": [
+  {
+   "source": "Insurtech Insights",
+   "titre": "Casey Kempton - Insurtech Insights",
+   "lien": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE82ZGpMaHk4emtwT1JvU1hzRzkwQ3Z6UC1MaVhleXVYci1ieHhpbE54WHNYbjRwMHd4M1p3ajh1Y2V3YU5vZFBWek5KVHlPZjNVdkVEbHZ0MlNXaFFPNW02NjJ4bWtTV0Vw?oc=5",
+   "date": "2026-10-17",
+   "extrait": "Casey Kempton Insurtech Insights",
+   "motsCles": [
+    "insurtech"
+   ],
+   "nomsSuivis": [
+    "Casey (pipe GVI)"
+   ]
+  },
+  {
+   "source": "Coverager",
+   "titre": "ERGO appoints Guy Goldstein as Chief AI Officer",
+   "lien": "https://coverager.com/ergo-appoints-guy-goldstein-as-chief-ai-officer/",
+   "date": "2026-10-18",
+   "extrait": "The new AI role will support implementation across its insurance value chain and markets. The post ERGO appoints Guy Goldstein as Chief AI Officer appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Chase expands payroll offering powered by Gusto",
+   "lien": "https://coverager.com/chase-expands-payroll-offering-powered-by-gusto/",
+   "date": "2026-10-18",
+   "extrait": "The service lets business owners pay employees and contractors. The post Chase expands payroll offering powered by Gusto appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Numéro d’urgence européen : les assisteurs se voient confier à nouveau par l’Etat le traitement du 112 - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNczIwWU5nRmNleUNCaUNYOGhsa0hxZUhwVTVRSlJrV2EzR2Z4OXB5dkJqdnNsRk9PcnhzeE5ndnF3RTFWYTR3UE5ZLWQ0UE95bmJmdVJKOGtmSnlTWGt2aG9PUUc5ZEMwNy1VUDh0ZndfZE1Hemt2UVgwdmJWMi1raWxBV2VUYVNla1BWYmllMTl4VV9MUTJBNlgxUnlyU0lQSHBxS1lNWTE4Y0RiWWQxdUhBMXRIRlFRbjJsS2JNOG5vbF9SazJ4Um91SURKc1ZCR0xpWmV2MWw2OFNhNEpVMlZKUUJDWjNqbUZZa0RPVVk4UGFSZi1td1JJODFsSURoVHlOMEpUTVc0di1PUzVUeW9R?oc=5",
+   "date": "2026-10-18",
+   "extrait": "Numéro d’urgence européen : les assisteurs se voient confier à nouveau par l’Etat le traitement du 112 L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "VestGen secures growth capital from Willow Tree",
+   "lien": "https://coverager.com/vestgen-secures-growth-capital-from-willow-tree/",
+   "date": "2026-10-17",
+   "extrait": "Willow Tree is a New York-based private credit firm that provides financing to middle-market businesses. The post VestGen secures growth capital from Willow Tree appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Simplicity Group adds Denver RIA and Chicago tax shop in back-to-back deals",
+   "lien": "https://coverager.com/simplicity-group-adds-denver-ria-and-chicago-tax-shop-in-back-to-back-deals/",
+   "date": "2026-10-17",
+   "extrait": "Neither deal disclosed price, assets under management or headcount. The post Simplicity Group adds Denver RIA and Chicago tax shop in back-to-back deals appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQcmdKOVBHTHhQeWpMYkswb0xFTGM3QmtmSDRRbThMQl9PNGlldFJZZkk2OURnM1lzUDhSVXhhN21BMTBpYkFfR2NNM1FrNFVmVUtwcEFjY0U2X2pOLVp4UGppU3RPaGVmSlVBeFZGSHVFZGRjZDBVdVF2VGxJT3Fib2czbWtuZEdZUFE3cW04aFBPS3kwQWpzeGt1YndlcUsxQWsxUXJoeHRibVd3dFFFZ3lKTmFUVF9aSXFQRzMybUd3M3hrc0J0YmdoUlFHR0NWNjgxX3NQTXAweHZjeUd6bnRBaGw2Qkk2QlhZ?oc=5",
+   "date": "2026-10-17",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxQamk3Y253U0VnZXp6MnlPU3hZUEpKcEhWcC05ZTU5VlFPZ0ZxQWd2eGJzTzJkTEg4LS0wUlg3RDA5R2FDTnc2UUw3QV9aLWMtclF2TnJrYUtLOWFiVHpSRkpkQmxUMDJMV3FnUV81eExLYkRTSmw1ZWdpcFpFVlBxU3c1ckJZN0ttWWQ4a192eFJLYU90dG9UR3RpVlFjY1FiNk1RRzNpZ1R1cHZJZFVxQk5Yb0JsbUtvSWUzOGE2RFpZc3BUZTc3UXpYOVJQRnBvWGNBZVVkWnpvc3FKcG1FSnowQVMzckRlWjdaTkwwRWhKcE4wTUNJOElUblozVmI1WjcySmxKVkJnMkhQUW01NVJpWTZQMGRCQjZiWWZmRGxBbVlGaGs0Qw?oc=5",
+   "date": "2026-10-17",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPQkExMENhS3ptajJfRWZUUFJxbUl1aUFMOElzZ0szc3lYQ3RQTDlNMC1fR0w4dGpTUWZXaTc4TG5kRmNxNVp0MlRYY0lFa1lEUjJkU0pKRGIxQ055d3JsbzViRUdVX2dYMXlidXJ6dmJOb0lwWTZyYURJbFJvbkNTRktKcXlVMmZCaDgzOEU1akVEZ0dJdGVFREVpVUd1clFvS2RnWmh0Q1U1UDFsRmVZTkpuYUhqNDRfdXdtT1JWSVNtenJEYmlfVG4zX29PME4xRUo5RktzR3pqZEJ5bWRPUFRaU0VZWjc2Y1lwU1FqOVhZWXFsWlVpOTA3YWdRYjZ3Y1FfNklaSWJ4cVhpTGc?oc=5",
+   "date": "2026-10-16",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "WATCH: Insurance Times’ making agentic AI work for the investigator webinar - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORGJKV2xvbmhiOG1vZ3BWMVdpLTF2d2hZOG1HVUNRSTJkaE0wb1FIUXdOSS1pdTM1b19CVEVEdjFIU2VTal9aV0RERHQxcW9OWHo3cEhxODhUMmNTOTg4QzRkbjVPNktabE9SSUNuSGlPOEppMHNSN1hNMDl2d09QUGx2VDN1cnNyQkh2NG16RkIyeGZRQzducWdsdjluakViVHJDNElDTjVXM2huZnRTS0hRQ3h3WFRJYzFpWmJ0Z0ZabjVnT0E?oc=5",
+   "date": "2026-10-16",
+   "extrait": "WATCH: Insurance Times’ making agentic AI work for the investigator webinar Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Épargne salariale : Toujours plus haut - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZEZkZXd4RU5VamJEYkhIMUN0bmVXVXNfcW01cTlFQ0pJczRFdU0ybzJoMk1PV2UzcFcyRXA5S0lwR0p4Nlp1djlVaU5uWXF6Zm10MC01bXlGSVRhSzJ6WHQ0VEFLTkZ0cTdUc2x4MEdBbjVtdldRdVZNajZlOVI4OWtPXzFaamRTVlE?oc=5",
+   "date": "2026-10-16",
+   "extrait": "Épargne salariale : Toujours plus haut News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Le directeur général de CoreWeave a cédé près d'un milliard de dollars d'actions depuis l'introduction en Bourse - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOc2R5QmNLU3hneUVKalM3NHV2V2ZjZjNzdF9JMlNFcWwzd3V4dkFpM2MzMjJGQWxza2YyWjRTbnloRmtoUlk3aThmaHVUYmJqMlV5WkV2Y1dGZXFaU1MxT0JIeW1YbWJpUWdvYUlBOHVSNHZUd21QRFNNUUYyODVVVDFmLTFpWllJWllvdjBqMm5HcWlwZFc1VmJYLUlFb2kwWERxZGx2TUwxU0NyVk9wUUN3NlJnbEtKdkYxbmg5dlBtak1BZGQ0T1ViODZybXNjTVBka3JfNkpxYjJlRnNKamxOcGo4TW4wb3dlWnZPM0RLVTVHeEQ5dVZ5TXRCeU1BclB4X0ViUjhtc0U?oc=5",
+   "date": "2026-10-16",
+   "extrait": "Le directeur général de CoreWeave a cédé près d'un milliard de dollars d'actions depuis l'introduction en Bourse La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  }
+ ]
+}
