@@ -190,7 +190,7 @@ a{color:var(--petrol)}
         <ol>
           <li>« Nouvelle analyse » : nom de la société, site, contexte, et déposez deck, business plan, tableur ou notes.</li>
           <li>Claude lit les documents, remplit la grille GVI et enregistre la fiche ici (1 à 3 minutes).</li>
-          <li>Pour une vérification sur le web, demandez-la dans la conversation Claude du projet (« vérifie Seedext ») : la fiche est complétée ici, avec ses sources.</li>
+          <li>En bas de la fiche, « Collecter les données web » : Claude vérifie et complète la fiche sur internet, avec sources (2 à 5 minutes).</li>
         </ol>
       </div>
     </aside>
@@ -228,8 +228,8 @@ function listHtml(sel){
       <span class="row">
         <span class="pill ${esc(a.verdict)}">${esc(VERDICTS[a.verdict]||a.verdict)}</span>
         ${a.exemple ? '<span class="pill exemple">Exemple</span>' : ''}
-        ${a.origine==='page' ? `<span class="pill exemple">Documents seuls</span>` : ''}
-        ${a.origine==='web' ? '<span class="pill exemple">Docs + web</span>' : ''}
+        ${a.origine==='page' ? `<span class="pill exemple">${enAttente(a.web) ? 'Recherche web…' : 'Documents seuls'}</span>` : ''}
+        ${a.origine==='web' ? `<span class="pill exemple">${enAttente(a.web) ? 'Recherche web…' : 'Docs + web'}</span>` : ''}
         <span class="mono">${esc(a.date)}</span>
       </span>
     </button>`).join('');
@@ -248,10 +248,10 @@ function sheetHtml(a){
     ? `<ul class="sources">${a.documentsFournis.map(d => `<li><span class="pill exemple">Document fourni</span> ${esc(d)}</li>`).join('')}</ul>` : '';
   const page = a.origine === 'page' || a.origine === 'web';
   const suppr = page && PEUT_ECRIRE !== false && DB ? (S.confirmSuppr === a.id
-    ? `<div class="danger-zone"><span class="status">Supprimer définitivement cette fiche ?</span>
+    ? `<span class="status">Supprimer définitivement cette fiche ?</span>
         <button class="btn danger" type="button" data-act="suppr-ok">Supprimer</button>
-        <button class="btn ghost" type="button" data-act="suppr-non">Annuler</button></div>`
-    : `<div class="danger-zone"><button class="btn ghost" type="button" data-act="suppr">Supprimer la fiche</button></div>`) : '';
+        <button class="btn ghost" type="button" data-act="suppr-non">Annuler</button>`
+    : `<button class="btn ghost" type="button" data-act="suppr">Supprimer la fiche</button>`) : '';
   return `
     <div class="sheet-top">
       <div class="mono">Pré-analyse du ${esc(a.date)} · confiance ${esc(a.confiance)}${a.exemple ? ' · fiche exemple réalisée sur sources publiques' : ''}</div>
@@ -283,7 +283,7 @@ function sheetHtml(a){
         <ul class="sources">${(a.sources||[]).map(s => `<li><span class="mono">${esc(s.date)}</span>
           <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre)}</a><span class="mono">${esc(s.media)}</span></li>`).join('')}</ul>
       </div>
-      ${suppr}
+      <div class="danger-zone">${DL ? '<button class="btn ghost" type="button" data-act="pdf">Exporter en PDF</button>' : ''}${boutonWeb(a)}${suppr}</div>
     </div>`;
 }
 
@@ -331,8 +331,8 @@ function render(){
     return;
   }
   const a = all.find(x => x.id === S.id) || all[0];
-  S.id = a ? a.id : null;
-  $('list').innerHTML = listHtml(S.id);
+  S.affiche = a ? a.id : null;  // S.id garde la fiche demandée (lien #id) même si elle n'est pas encore chargée
+  $('list').innerHTML = listHtml(S.affiche);
   $('sheet').innerHTML = a ? sheetHtml(a)
     : '<div class="sheet-top"><h2>Aucune fiche pour l\'instant</h2><p class="pitch">Lancez une nouvelle analyse pour créer la première fiche.</p></div>';
 }
@@ -344,6 +344,7 @@ const LIBS = {
   pdf: ['https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js'],
   zip: ['https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js'],
   xlsx: ['https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'],
+  jspdf: ['https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'],
 };
 const chargés = {};
 function script(src){
@@ -582,11 +583,172 @@ function alerteFiche(t){
   if (top) top.insertAdjacentHTML('afterend', `<div class="note-page" role="status">${esc(t)}</div>`);
 }
 
-/* ---------- Vérification web : faite dans la conversation Claude du projet, qui met la fiche à jour ---------- */
+/* ---------- Données web : le bouton marque la fiche « demandée » et lance la tâche planifiée
+   « Analyses GVI · vérification web » (instructions fixes, côté Claude) qui cherche sur le web
+   et réécrit la fiche dans la base ; la page se met à jour d'elle-même. ---------- */
+const SRV = 'Claude Code Remote', TACHE_WEB = 'trig_01SB5bBresd7Jx4QU5KGcJcV';
+const DELAI_BLOQUE = 30 * 60 * 1000;  // au-delà, une demande restée sans réponse peut être relancée
+let MCP = null;
 const jour = iso => { try { return new Date(iso).toLocaleDateString('fr-FR'); } catch (_) { return ''; } };
+const enAttente = w => w && (w.etat === 'demandée' || w.etat === 'en cours');
+const bloquee = w => enAttente(w) && Date.now() - new Date(w.demande || w.debut || 0).getTime() > DELAI_BLOQUE;
+const peutDemander = a => DB && PEUT_ECRIRE !== false && !a.nonEnregistree && (a.origine === 'page' || a.origine === 'web');
 function bandeauWeb(a){
-  if (a.origine === 'web') return `<div class="note-page">Fiche vérifiée et complétée sur le web le ${esc(jour(a.web && a.web.fin))}. Faits marqués « (doc.) » : documents fournis ; « (web) » : sources en ligne listées en bas ; « (à vérifier) » : non confirmés.</div>`;
-  return `<div class="note-page">Fiche produite à partir des seuls documents fournis, pas encore vérifiée sur le web. Faits marqués « (doc.) » : documents ; « (à vérifier) » : connaissances générales. Pour la vérifier et la compléter avec des sources, demandez-le dans la conversation Claude du projet (« vérifie ${esc(a.nom)} »).</div>`;
+  const w = a.web || {};
+  if (enAttente(w)) return `<div class="note-page"><div class="prog" style="margin-bottom:8px"><i></i></div>${w.etat === 'en cours' ? 'Recherche web en cours' : 'Recherche web demandée'} : Claude vérifie la fiche sur internet (2 à 5 minutes). Elle se mettra à jour d'elle-même, vous pouvez fermer la page.</div>`;
+  if (w.etat === 'échec') return `<div class="note-page">La dernière recherche web n'a pas abouti : ${esc(w.message || 'raison inconnue')}.</div>`;
+  if (a.origine === 'web') return `<div class="note-page">Fiche vérifiée et complétée sur le web le ${esc(jour(w.fin))}. Faits marqués « (doc.) » : documents fournis ; « (web) » : sources en ligne listées en bas ; « (à vérifier) » : non confirmés.</div>`;
+  return `<div class="note-page">Fiche produite à partir des seuls documents fournis, pas encore vérifiée sur le web. Faits marqués « (doc.) » : documents ; « (à vérifier) » : connaissances générales. Le bouton « Collecter les données web » en bas de la fiche la complète avec des sources.</div>`;
+}
+function boutonWeb(a){
+  if (!peutDemander(a)) return '';
+  const w = a.web || {};
+  if (enAttente(w) && !bloquee(w)) return `<button class="btn" type="button" disabled>Recherche web en cours…</button>`;
+  const libelle = enAttente(w) || w.etat === 'échec' ? 'Relancer la recherche web' : a.origine === 'web' ? 'Actualiser avec le web' : 'Collecter les données web';
+  return `<button class="btn" type="button" data-act="web">${libelle}</button>`;
+}
+async function demanderWeb(a){
+  const web = {etat: 'demandée', demande: new Date().toISOString()};
+  try { await DB.collection('analyses').doc(a.id).update({web}); a.web = web; render(); }
+  catch (_) { alerteFiche("Demande impossible : vos droits sur cette page ne permettent pas de modifier la fiche."); return; }
+  if (!MCP) { alerteFiche("Demande enregistrée, mais cette page ne peut pas lancer la recherche elle-même ici. Dites « traite les demandes web » dans la conversation Claude du projet."); return; }
+  try { await MCP.callTool(SRV, 'fire_trigger', {trigger_id: TACHE_WEB, text: `Fiche à traiter en priorité : ${a.id}`}); }
+  catch (e) {
+    const c = e && e.code;
+    const pourquoi = c === 'needs_reauth' ? 'reconnectez Claude Code dans claude.ai, Paramètres, Connecteurs'
+      : c === 'server_not_connected' ? 'le connecteur Claude Code n\'est pas disponible pour ce compte'
+      : (c === 'not_granted' || c === 'approval_required') ? 'autorisez la page à utiliser Claude Code (menu de l\'artefact)'
+      : (c === 'server_unavailable' || c === 'upstream_error') ? 'service momentanément indisponible ; la recherche a peut-être démarré, attendez quelques minutes avant de relancer'
+      : 'erreur du service';
+    alerteFiche(`Demande enregistrée, mais le lancement a échoué : ${pourquoi}.`);
+  }
+}
+
+/* ---------- Export PDF : fiche nettoyée (sans marqueurs d'origine ni notes internes), à joindre à un e-mail ---------- */
+let DL = null;
+const sansMarqueurs = t => String(t == null ? '' : t)
+  .replace(/\s*\((?:\s*(?:doc\.?|web|à vérifier)\s*[,;]?)+\)/gi, '')
+  .replace(/\((?:\s*(?:doc\.?|web|à vérifier)\s*[,;])+\s*/gi, '(')
+  .replace(/(?:\s*[,;]\s*(?:doc\.?|web|à vérifier))+\s*\)/gi, ')')
+  .replace(/\s+([.,])/g, '$1').replace(/\s{2,}/g, ' ').trim();
+// Polices standard du PDF (WinAnsi) : on remplace les quelques signes qu'elles n'ont pas.
+const pdfTexte = t => sansMarqueurs(t).replace(/[   ]/g, ' ').replace(/→/g, '->').replace(/≈/g, '~')
+  .replace(/[≥]/g, '>=').replace(/[≤]/g, '<=').replace(/[‑−]/g, '-')
+  .replace(/[^\x20-\x7e\xa0-\xff€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ]/g, '');
+async function exporterPdf(a){
+  await lib('jspdf');
+  const {jsPDF} = window.jspdf;
+  const doc = new jsPDF({unit: 'mm', format: 'a4'});
+  const W = 210, M = 18, L = W - 2 * M, BAS = 297 - 18;
+  const PETROLE = [12, 92, 94], ENCRE = [22, 33, 30], GRIS = [108, 120, 115], LIGNE = [203, 211, 205];
+  const TEINTES = {etudier: [[230, 240, 231], [63, 122, 78]], surveiller: [[248, 240, 228], [168, 104, 31]], ecarter: [[245, 231, 228], [154, 74, 63]]};
+  let y = M;
+  const place = h => { if (y + h > BAS) { doc.addPage(); y = M; } };
+  const texte = (t, {taille = 10, gras = false, couleur = ENCRE, retrait = 0, inter = 1.38, largeur} = {}) => {
+    doc.setFont('helvetica', gras ? 'bold' : 'normal'); doc.setFontSize(taille); doc.setTextColor(...couleur);
+    const lignes = doc.splitTextToSize(pdfTexte(t), (largeur || L) - retrait);
+    const h = taille * 0.3528 * inter;
+    for (const l of lignes) { place(h); doc.text(l, M + retrait, y + h * 0.78); y += h; }
+  };
+  const titreSection = t => {
+    y += 4; place(12);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8.5); doc.setTextColor(...GRIS);
+    doc.text(pdfTexte(t).toUpperCase(), M, y + 3, {charSpace: 0.3});
+    doc.setDrawColor(...LIGNE); doc.setLineWidth(0.2); doc.line(M, y + 5, W - M, y + 5); y += 8;
+  };
+  const puce = t => { const y0 = y; texte(t, {retrait: 5}); doc.setFillColor(...PETROLE); doc.circle(M + 1.6, y0 + 2.4, 0.7, 'F'); y += 1; };
+
+  // En-tête
+  doc.setFillColor(...PETROLE); doc.rect(0, 0, W, 4, 'F');
+  texte("Groupama Volt'terre Investissement · Pré-analyse", {taille: 8.5, couleur: GRIS});
+  y += 1; texte(a.nom, {taille: 22, gras: true, inter: 1.15});
+  texte([a.secteur, `Pré-analyse du ${a.date}`].filter(Boolean).join(' · '), {taille: 9.5, couleur: GRIS});
+  if (a.pitch) { y += 2; texte(a.pitch, {taille: 11}); }
+
+  // Recommandation
+  y += 4;
+  const [fond, fort] = TEINTES[a.verdict] || TEINTES.surveiller;
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(10);
+  const lignesV = doc.splitTextToSize(pdfTexte(a.verdictTexte), L - 10);
+  const hV = 12 + lignesV.length * 10 * 0.3528 * 1.38 + 4;
+  place(hV); doc.setFillColor(...fond); doc.roundedRect(M, y, L, hV, 1.5, 1.5, 'F');
+  const yV = y; y += 4;
+  doc.setFont('helvetica', 'bold'); doc.setFontSize(13); doc.setTextColor(...fort);
+  doc.text(pdfTexte(VERDICTS[a.verdict] || a.verdict), M + 5, y + 4.5);
+  doc.setFont('helvetica', 'normal'); doc.setFontSize(8.5); doc.setTextColor(...GRIS);
+  doc.text(pdfTexte(`Recommandation · confiance ${String(a.confiance || '').toLowerCase()}`), W - M - 5, y + 4.5, {align: 'right'});
+  y += 8; texte(a.verdictTexte, {retrait: 5, largeur: L - 5}); y = yV + hV;
+
+  // Carte d'identité, en deux colonnes
+  if ((a.identite || []).length) {
+    titreSection("Carte d'identité");
+    const col = (L - 8) / 2;
+    const items = a.identite.map(paire);
+    for (let i = 0; i < items.length; i += 2) {
+      const bloc = items.slice(i, i + 2).map(([k, v]) => {
+        doc.setFontSize(9.5); return {k, l: doc.splitTextToSize(pdfTexte(v), col)};
+      });
+      const h = 4 + Math.max(...bloc.map(b => b.l.length)) * 9.5 * 0.3528 * 1.35 + 2.5;
+      place(h);
+      bloc.forEach((b, j) => {
+        const x = M + j * (col + 8);
+        doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(...GRIS); doc.text(pdfTexte(b.k), x, y + 3);
+        doc.setFont('helvetica', 'bold'); doc.setFontSize(9.5); doc.setTextColor(...ENCRE);
+        b.l.forEach((l, n) => doc.text(l, x, y + 7.2 + n * 9.5 * 0.3528 * 1.35));
+      });
+      y += h;
+    }
+  }
+
+  // Grille GVI
+  titreSection('Grille GVI');
+  for (const g of RAW.grille) {
+    const n = (a.notes || {})[g.cle] || {};
+    place(14);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); doc.setTextColor(...ENCRE); doc.text(pdfTexte(g.titre), M, y + 3.6);
+    for (let i = 1; i <= 3; i++) {
+      const x = W - M - (3 - i) * 4.6 - 1.8;
+      doc.setLineWidth(0.35); doc.setDrawColor(...(n.note == null ? LIGNE : PETROLE));
+      if (n.note != null && i <= n.note) { doc.setFillColor(...PETROLE); doc.circle(x, y + 2.4, 1.5, 'FD'); } else doc.circle(x, y + 2.4, 1.5, 'S');
+    }
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(...GRIS);
+    doc.text(n.note == null ? 'non noté' : `${n.note}/3`, W - M - 15.5, y + 3.4, {align: 'right'});
+    y += 6; texte(n.commentaire || 'Non renseigné.', {taille: 9.5}); y += 2.5;
+  }
+
+  // Sections, questions
+  for (const sec of a.sections || []) { titreSection(sec.titre); (sec.points || []).forEach(puce); }
+  if ((a.questions || []).length) {
+    titreSection('Questions à poser à la société');
+    a.questions.forEach((q, i) => { const y0 = y; texte(q, {retrait: 6}); doc.setFont('helvetica', 'bold'); doc.setFontSize(10); doc.setTextColor(...PETROLE); doc.text(`${i + 1}.`, M, y0 + 3.9); y += 1; });
+  }
+  // Sources
+  const docs = a.documentsFournis || [], web = a.sources || [];
+  if (docs.length || web.length) {
+    titreSection('Sources');
+    docs.forEach(d => texte(`Document transmis par la société : ${d}`, {taille: 9, couleur: GRIS}));
+    web.forEach(src => { texte([src.titre, src.media, src.date && src.date !== 'n.d.' ? src.date : ''].filter(Boolean).join(' · '), {taille: 9}); texte(src.url, {taille: 8, couleur: PETROLE}); y += 1; });
+  }
+
+  // Pied de page
+  const n = doc.getNumberOfPages();
+  for (let i = 1; i <= n; i++) {
+    doc.setPage(i); doc.setFont('helvetica', 'normal'); doc.setFontSize(7.5); doc.setTextColor(...GRIS);
+    doc.text(pdfTexte(`Document interne GVI, confidentiel. Pré-analyse non contractuelle : certains éléments restent à confirmer auprès de la société.`), M, 297 - 9);
+    doc.text(`${i} / ${n}`, W - M, 297 - 9, {align: 'right'});
+  }
+  return doc.output('blob');
+}
+async function telechargerPdf(a, bouton){
+  if (!DL) return;
+  bouton.disabled = true; const lib0 = bouton.textContent; bouton.textContent = 'Préparation du PDF…';
+  try {
+    const blob = await exporterPdf(a);
+    const nom = `Pre-analyse GVI - ${a.nom.replace(/[\\/:*?"<>|]+/g, ' ').trim()} - ${String(a.date || '').replace(/\//g, '-')}.pdf`;
+    await DL.save({filename: nom, data: blob});
+  } catch (e) {
+    if (!(e && e.code === 'cancelled')) alerteFiche("Le PDF n'a pas pu être produit" + (e && e.code === 'unavailable' ? ' : enregistrement de fichiers indisponible ici.' : '.'));
+  } finally { bouton.disabled = false; bouton.textContent = lib0; }
 }
 
 /* ---------- Événements ---------- */
@@ -611,7 +773,9 @@ sheet.addEventListener('click', async e => {
   else if (act === 'stop') S.enCours && S.enCours.abort();
   else if (act === 'annuler') { S.vue = 'fiche'; S.fichiers = []; S.form = null; S.statut = ''; render(); setHash(S.id || ''); }
   else if (act === 'retirer') { S.fichiers.splice(+b.dataset.i, 1); render(); }
-  else if (act === 'suppr') { S.confirmSuppr = S.id; render(); }
+  else if (act === 'pdf') { const a = toutes().find(x => x.id === S.affiche); if (a) telechargerPdf(a, b); }
+  else if (act === 'web') { const a = toutes().find(x => x.id === S.affiche); if (a) { b.disabled = true; demanderWeb(a); } }
+  else if (act === 'suppr') { S.confirmSuppr = S.affiche; render(); }
   else if (act === 'suppr-non') { S.confirmSuppr = null; render(); }
   else if (act === 'suppr-ok') {
     const id = S.confirmSuppr; S.confirmSuppr = null;
@@ -641,6 +805,8 @@ if (window.claude && claude.use) {
     if (h === 'nouvelle' && !S.enCours) { S.vue = 'nouvelle'; render(); }
   });
   claude.use('user').then(u => { if (u && u.can) Promise.resolve(u.can('data.write')).then(v => { PEUT_ECRIRE = v; }).catch(() => {}); });
+  claude.use('mcp').then(m => { MCP = m; });
+  claude.use('downloads').then(d => { if (!d) return; DL = d; if (S.vue === 'fiche') render(); });
   claude.use('db').then(db => {
     if (!db) return;
     DB = db;
