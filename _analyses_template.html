@@ -103,10 +103,25 @@ a{color:var(--petrol)}
 .crit{border:1px solid var(--line-soft);border-radius:4px;padding:12px 14px;display:grid;gap:6px;align-content:start}
 .crit .ch{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .crit .ch b{font-size:14px}
-.dots{display:inline-flex;gap:4px}
-.dots i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--petrol);display:block}
-.dots i.on{background:var(--petrol)}
-.dots.nd i{border-color:var(--line)}
+.dots{display:inline-flex;gap:4px;align-items:center}
+.dots i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--c,var(--petrol));display:block}
+.dots i.on{background:var(--c,var(--petrol))}
+/* Feux de la grille : vert = fort (3), orange = moyen (2), rouge = faible (1) ou pas de données */
+.vert{--c:var(--good);--c-soft:var(--good-soft)}
+.orange{--c:var(--ochre);--c-soft:var(--ochre-soft)}
+.rouge{--c:var(--bad);--c-soft:var(--bad-soft)}
+.crit{border-left:4px solid var(--c,var(--line))}
+.niv{font-size:11px;font-weight:600;color:var(--c);letter-spacing:.02em;white-space:nowrap}
+.feux{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:6px;margin:12px 24px 0}
+.feu{background:var(--c-soft);border-left:4px solid var(--c);border-radius:3px;padding:7px 10px;display:grid;gap:1px;min-width:0}
+.feu span{font-size:12px;color:var(--ink);overflow-wrap:anywhere}
+.feu b{font-size:11.5px;color:var(--c)}
+.mini{display:inline-flex;gap:3px}
+.mini i{width:9px;height:9px;border-radius:2px;background:var(--c);display:block}
+.legende{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin-top:8px}
+.legende span{display:inline-flex;align-items:center;gap:5px}
+.legende i{width:9px;height:9px;border-radius:2px;background:var(--c);display:block}
+@media (max-width:520px){.feux{margin-left:16px;margin-right:16px}}
 .crit .q{font-size:12px;color:var(--muted)}
 .crit p{margin:0;font-size:13.5px}
 
@@ -214,10 +229,21 @@ const S = {dyn: [], vue: 'fiche', id: null, fichiers: [], enCours: null, confirm
 let SAMPLE = null, DB = null, PEUT_ECRIRE = null;
 const toutes = () => [...S.dyn, ...RAW.analyses];
 
+const NIVEAUX = {3: ['vert', 'Fort'], 2: ['orange', 'Moyen'], 1: ['rouge', 'Faible']};
+const niveau = note => NIVEAUX[note] || ['rouge', 'Pas de données'];
+const COURTS = {sponsorship: 'Engagement métier', equipe: 'Équipe', marche: 'Marché', tech: 'Techno & données', traction: 'Traction', finance: 'Maturité financière'};
 function dots(note){
-  if (note == null) return `<span class="dots nd" title="Non noté"><i></i><i></i><i></i></span>`;
-  return `<span class="dots" title="${note} sur 3">${[1,2,3].map(i => `<i class="${i<=note?'on':''}"></i>`).join('')}</span>`;
+  const [c, l] = niveau(note);
+  return `<span class="dots ${c}" title="${note == null ? l : `${note} sur 3 : ${l.toLowerCase()}`}">${[1,2,3].map(i => `<i class="${note != null && i<=note?'on':''}"></i>`).join('')}</span>`;
 }
+const noteDe = (a, cle) => ((a.notes || {})[cle] || {}).note;
+function feuxHtml(a){
+  return `<div class="feux" aria-label="Synthèse de la grille GVI">${RAW.grille.map(g => {
+    const [c, l] = niveau(noteDe(a, g.cle));
+    return `<div class="feu ${c}"><span>${esc(COURTS[g.cle] || g.titre)}</span><b>${l}</b></div>`;
+  }).join('')}</div>`;
+}
+const miniHtml = a => `<span class="mini" title="Grille GVI">${RAW.grille.map(g => `<i class="${niveau(noteDe(a, g.cle))[0]}"></i>`).join('')}</span>`;
 const paire = x => Array.isArray(x) ? x : [x && x.k, x && x.v];
 
 function listHtml(sel){
@@ -231,6 +257,7 @@ function listHtml(sel){
         ${a.origine==='page' ? `<span class="pill exemple">${enAttente(a.web) ? 'Recherche web…' : 'Documents seuls'}</span>` : ''}
         ${a.origine==='web' ? `<span class="pill exemple">${enAttente(a.web) ? 'Recherche web…' : 'Docs + web'}</span>` : ''}
         <span class="mono">${esc(a.date)}</span>
+        ${miniHtml(a)}
       </span>
     </button>`).join('');
 }
@@ -238,8 +265,9 @@ function listHtml(sel){
 function sheetHtml(a){
   const crit = RAW.grille.map(g => {
     const n = (a.notes||{})[g.cle] || {};
-    return `<div class="crit">
-      <div class="ch"><b>${esc(g.titre)}</b>${dots(n.note)}</div>
+    const [c, l] = niveau(n.note);
+    return `<div class="crit ${c}">
+      <div class="ch"><b>${esc(g.titre)}</b><span class="dots-l" style="display:inline-flex;gap:8px;align-items:center"><span class="niv">${l}</span>${dots(n.note)}</span></div>
       <span class="q">${esc(g.question)}</span>
       <p>${esc(n.commentaire || 'Non renseigné.')}</p>
     </div>`;
@@ -263,6 +291,7 @@ function sheetHtml(a){
       <div class="vh"><strong>${esc(VERDICTS[a.verdict]||a.verdict)}</strong><span class="mono">recommandation</span></div>
       <p>${esc(a.verdictTexte)}</p>
     </div>
+    ${feuxHtml(a)}
     <div class="body">
       <div>
         <div class="sec-t">Carte d'identité</div>
@@ -271,6 +300,7 @@ function sheetHtml(a){
       <div>
         <div class="sec-t">Grille GVI</div>
         <div class="grid6">${crit}</div>
+        <div class="legende"><span class="vert"><i></i>Fort (3/3)</span><span class="orange"><i></i>Moyen (2/3)</span><span class="rouge"><i></i>Faible (1/3) ou pas de données</span></div>
       </div>
       <div class="secs">${(a.sections||[]).map(s => `
         <section><h4>${esc(s.titre)}</h4><ul>${(s.points||[]).map(p => `<li>${esc(p)}</li>`).join('')}</ul></section>`).join('')}
@@ -641,6 +671,7 @@ async function exporterPdf(a){
   const doc = new jsPDF({unit: 'mm', format: 'a4'});
   const W = 210, M = 18, L = W - 2 * M, BAS = 297 - 18;
   const PETROLE = [12, 92, 94], ENCRE = [22, 33, 30], GRIS = [108, 120, 115], LIGNE = [203, 211, 205];
+  const FEUX = {vert: [[230, 240, 231], [63, 122, 78]], orange: [[248, 240, 228], [168, 104, 31]], rouge: [[245, 231, 228], [154, 74, 63]]};
   const TEINTES = {etudier: [[230, 240, 231], [63, 122, 78]], surveiller: [[248, 240, 228], [168, 104, 31]], ecarter: [[245, 231, 228], [154, 74, 63]]};
   let y = M;
   const place = h => { if (y + h > BAS) { doc.addPage(); y = M; } };
@@ -679,6 +710,18 @@ async function exporterPdf(a){
   doc.text(pdfTexte(`Recommandation · confiance ${String(a.confiance || '').toLowerCase()}`), W - M - 5, y + 4.5, {align: 'right'});
   y += 8; texte(a.verdictTexte, {retrait: 5, largeur: L - 5}); y = yV + hV;
 
+  // Synthèse tricolore de la grille : 6 pavés
+  y += 3; place(13);
+  const pav = (L - 5 * 2) / 6;
+  RAW.grille.forEach((g, i) => {
+    const [c, l] = niveau(noteDe(a, g.cle)), [f, t] = FEUX[c], x = M + i * (pav + 2);
+    doc.setFillColor(...f); doc.rect(x, y, pav, 11, 'F'); doc.setFillColor(...t); doc.rect(x, y, 1.2, 11, 'F');
+    doc.setFont('helvetica', 'normal'); doc.setFontSize(7.2); doc.setTextColor(...ENCRE);
+    doc.text(doc.splitTextToSize(pdfTexte(COURTS[g.cle] || g.titre), pav - 3.5)[0], x + 2.6, y + 4.3);
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(7.6); doc.setTextColor(...t); doc.text(pdfTexte(l), x + 2.6, y + 8.6);
+  });
+  y += 12;
+
   // Carte d'identité, en deux colonnes
   if ((a.identite || []).length) {
     titreSection("Carte d'identité");
@@ -705,15 +748,17 @@ async function exporterPdf(a){
   for (const g of RAW.grille) {
     const n = (a.notes || {})[g.cle] || {};
     place(14);
-    doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); doc.setTextColor(...ENCRE); doc.text(pdfTexte(g.titre), M, y + 3.6);
+    const [c, l] = niveau(n.note), t = FEUX[c][1], y0 = y;
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); doc.setTextColor(...ENCRE); doc.text(pdfTexte(g.titre), M + 3.5, y + 3.6);
     for (let i = 1; i <= 3; i++) {
       const x = W - M - (3 - i) * 4.6 - 1.8;
-      doc.setLineWidth(0.35); doc.setDrawColor(...(n.note == null ? LIGNE : PETROLE));
-      if (n.note != null && i <= n.note) { doc.setFillColor(...PETROLE); doc.circle(x, y + 2.4, 1.5, 'FD'); } else doc.circle(x, y + 2.4, 1.5, 'S');
+      doc.setLineWidth(0.35); doc.setDrawColor(...t);
+      if (n.note != null && i <= n.note) { doc.setFillColor(...t); doc.circle(x, y + 2.4, 1.5, 'FD'); } else doc.circle(x, y + 2.4, 1.5, 'S');
     }
-    doc.setFont('helvetica', 'normal'); doc.setFontSize(8); doc.setTextColor(...GRIS);
-    doc.text(n.note == null ? 'non noté' : `${n.note}/3`, W - M - 15.5, y + 3.4, {align: 'right'});
-    y += 6; texte(n.commentaire || 'Non renseigné.', {taille: 9.5}); y += 2.5;
+    doc.setFont('helvetica', 'bold'); doc.setFontSize(8); doc.setTextColor(...t);
+    doc.text(pdfTexte(n.note == null ? l : `${l} · ${n.note}/3`), W - M - 15.5, y + 3.4, {align: 'right'});
+    y += 6; texte(n.commentaire || 'Non renseigné.', {taille: 9.5, retrait: 3.5});
+    doc.setFillColor(...t); doc.rect(M, y0, 1.2, y - y0, 'F'); y += 2.5;
   }
 
   // Sections, questions
