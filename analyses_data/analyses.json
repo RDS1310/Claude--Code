@@ -1,11 +1,35 @@
 {
  "grille": [
-  {"cle": "sponsorship", "titre": "Sponsorship métier", "question": "Une entité Groupama porte-t-elle le sujet ?"},
-  {"cle": "equipe", "titre": "Équipe", "question": "Fondateurs crédibles et complémentaires pour ce marché ?"},
-  {"cle": "marche", "titre": "Marché", "question": "Marché réel, en croissance, accessible à Groupama ?"},
-  {"cle": "tech", "titre": "IT, technologie & données", "question": "Avantage technique ou de données défendable ?"},
-  {"cle": "traction", "titre": "Traction commerciale", "question": "Clients, revenus ou partenaires démontrés ?"},
-  {"cle": "finance", "titre": "Maturité financière", "question": "Stade et besoin de financement dans la fenêtre GVI (Seed – Série A) ?"}
+  {
+   "cle": "sponsorship",
+   "titre": "Engagement métier",
+   "question": "Un besoin clairement identifié et porté par un sponsor engagé au sein de Groupama ?"
+  },
+  {
+   "cle": "equipe",
+   "titre": "Équipe",
+   "question": "Une équipe complémentaire disposant de l'expérience et de la capacité d'exécution nécessaires ?"
+  },
+  {
+   "cle": "marche",
+   "titre": "Marché",
+   "question": "Un marché attractif offrant un potentiel de développement significatif ?"
+  },
+  {
+   "cle": "tech",
+   "titre": "Technologie & sécurisation des données",
+   "question": "Une solution robuste répondant aux exigences technologiques, informatiques et de sécurité des données ?"
+  },
+  {
+   "cle": "traction",
+   "titre": "Traction commerciale",
+   "question": "Une solution validée par le marché et portée par une dynamique commerciale démontrée ?"
+  },
+  {
+   "cle": "finance",
+   "titre": "Maturité financière",
+   "question": "Une trajectoire financière crédible et des besoins de financement cohérents avec un ticket GVI (200 k€ – 2 M€, 5 à 20 % du capital) ?"
+  }
  ],
  "analyses": [
   {
@@ -16,64 +40,124 @@
    "secteur": "Assurance des risques IA (agents autonomes)",
    "pitch": "Certifie et assure les agents d'IA autonomes : audit du comportement de l'agent, puis garantie de performance et couverture de responsabilité civile spécifique à l'IA.",
    "verdict": "surveiller",
-   "verdictTexte": "Sujet stratégique pour un assureur (le risque IA des entreprises clientes), équipe avec une expérience de l'assurance, et stade Seed dans la fenêtre GVI. Mais la société est basée à San Francisco, n'a pas de traction publique et son marché reste étroit. À revoir après ses premiers clients ou si une entité Groupama s'intéresse à l'assurance des risques IA.",
+   "verdictTexte": "Sujet stratégique pour un assureur (le risque IA des entreprises clientes, domaine « Entreprises & professionnels ») et équipe avec une expérience de l'assurance. Mais la thèse GVI suppose un partenariat éprouvé avec une entité Groupama, absent ici ; la société est basée à San Francisco, sans traction publique, sur un marché encore étroit. À revoir si une entité Groupama s'intéresse à l'assurance des risques IA et lance une expérimentation.",
    "confiance": "Moyen",
    "identite": [
-    ["Site", "ycombinator.com/companies/klaimee"],
-    ["Siège", "San Francisco (États-Unis)"],
-    ["Création", "2026 (Y Combinator, promotion printemps 2026)"],
-    ["Stade", "Seed"],
-    ["Total levé", "5,5 M$ (≈ 5,1 M€), juillet 2026"],
-    ["Effectif", "non trouvé"]
+    [
+     "Site",
+     "ycombinator.com/companies/klaimee"
+    ],
+    [
+     "Siège",
+     "San Francisco (États-Unis)"
+    ],
+    [
+     "Création",
+     "2026 (Y Combinator, promotion printemps 2026)"
+    ],
+    [
+     "Stade",
+     "Seed"
+    ],
+    [
+     "Total levé",
+     "5,5 M$ (≈ 5,1 M€), juillet 2026"
+    ],
+    [
+     "Effectif",
+     "non trouvé"
+    ]
    ],
    "notes": {
-    "sponsorship": {"note": null, "commentaire": "Aucun contact Groupama connu. À tester auprès des équipes assurance entreprises / risques cyber."},
-    "equipe": {"note": 2, "commentaire": "Deux cofondateurs : Ines Boutemadja (CEO, ex-directrice générale de Nomad Insurance chez SafetyWing) et Julien Catonnet (CTO). Expérience assurance réelle côté CEO ; profil du CTO non documenté."},
-    "marche": {"note": 2, "commentaire": "Les assureurs traditionnels se retirent du risque IA, ce qui ouvre un espace. Mais le marché du transfert de risque « agents IA » est encore étroit à mi-2026."},
-    "tech": {"note": 2, "commentaire": "Évaluation propriétaire : scan de données publiques, questionnaire de gouvernance de 30 questions, plus de 100 tests comportementaux par agent, notation sur 8 dimensions de risque. Défendabilité non démontrée."},
-    "traction": {"note": 1, "commentaire": "Aucun client, revenu ou volume de primes publié. Distribution prévue via courtiers, partenaires intégrés (plateformes d'IA) et vente directe."},
-    "finance": {"note": 3, "commentaire": "Seed de 5,5 M$ bouclé en juillet 2026 : dans la fenêtre GVI. Prochain tour probable dans 12 à 18 mois."}
+    "sponsorship": {
+     "note": null,
+     "commentaire": "Aucun contact Groupama connu. À tester auprès des équipes assurance entreprises / risques cyber."
+    },
+    "equipe": {
+     "note": 2,
+     "commentaire": "Deux cofondateurs : Ines Boutemadja (CEO, ex-directrice générale de Nomad Insurance chez SafetyWing) et Julien Catonnet (CTO). Expérience assurance réelle côté CEO ; profil du CTO non documenté."
+    },
+    "marche": {
+     "note": 2,
+     "commentaire": "Les assureurs traditionnels se retirent du risque IA, ce qui ouvre un espace. Mais le marché du transfert de risque « agents IA » est encore étroit à mi-2026."
+    },
+    "tech": {
+     "note": 2,
+     "commentaire": "Évaluation propriétaire : scan de données publiques, questionnaire de gouvernance de 30 questions, plus de 100 tests comportementaux par agent, notation sur 8 dimensions de risque. Défendabilité non démontrée."
+    },
+    "traction": {
+     "note": 1,
+     "commentaire": "Aucun client, revenu ou volume de primes publié. Distribution prévue via courtiers, partenaires intégrés (plateformes d'IA) et vente directe."
+    },
+    "finance": {
+     "note": 3,
+     "commentaire": "Seed de 5,5 M$ (≈ 5,1 M€) bouclé en juillet 2026. Un ticket GVI de 200 k€ à 2 M€ serait envisageable au tour suivant (probablement dans 12 à 18 mois), mais pas de trajectoire de revenus publiée."
+    }
    },
    "sections": [
-    {"titre": "Secteur & marché", "points": [
-     "Nouveau segment : assurer les erreurs des agents d'IA autonomes (décisions, actions, pertes causées à des tiers).",
-     "Les polices cyber et RC professionnelle classiques excluent souvent ces risques, d'où l'apparition d'offres dédiées.",
-     "Un observateur du marché le décrit en juillet 2026 comme « réel mais étroit » : peu de polices émises, limites rarement publiées."
-    ]},
-    {"titre": "Produit & technologie", "points": [
-     "Produits annoncés : évaluation des risques critiques, certification, garantie financière, police de responsabilité et documentation pour les achats, livrés en moins de 24 heures.",
-     "Premier produit : une garantie contre les défaillances des agents d'IA.",
-     "Capacité d'assurance apportée par un partenaire bermudien noté, non nommé dans les sources."
-    ]},
-    {"titre": "Modèle économique", "points": [
-     "Modèle de type MGA : Klaimee évalue et distribue, le risque est porté par un assureur partenaire.",
-     "Trois canaux : courtiers, partenaires intégrés (plateformes et frameworks d'agents qui incluent l'assurance), vente directe en libre-service.",
-     "Aucune grille tarifaire ni niveau de commission publié."
-    ]},
-    {"titre": "Financement & investisseurs", "points": [
-     "Seed de 5,5 M$ annoncé en juillet 2026.",
-     "Investisseurs cités : FundersClub (Alexander Mittal), Y Combinator, ex/ante, Pioneer Fund, Multimodal Ventures, Kima Ventures, Rebel Fund, Robinhood Ventures et des business angels.",
-     "Le chef de file est incertain : FundersClub selon FinTech Global, Y Combinator selon Signalbase.",
-     "Kima Ventures figure dans le Radar Insurtech VC."
-    ]},
-    {"titre": "Données financières", "points": [
-     "Chiffre d'affaires, primes émises, consommation de trésorerie et valorisation : non trouvés."
-    ]},
-    {"titre": "Concurrence", "points": [
-     "Armilla AI : 25 M$ levés en janvier 2026, police RC IA jusqu'à 25 M$ de limite, adossée au Lloyd's.",
-     "AIUC : standard de certification AIUC-1 plus audit et assurance ; seed d'environ 15 M$ (non confirmé par une source primaire).",
-     "Autres acteurs : Corgi (assureur complet pour start-ups), Testudo (coverholder Lloyd's), Mount (Y Combinator, printemps 2026)."
-    ]},
-    {"titre": "Adéquation Groupama / GVI", "points": [
-     "Intérêt : comprendre et, à terme, couvrir le risque IA des entreprises clientes de Groupama ; la certification pourrait aussi servir en interne pour les agents IA de Groupama.",
-     "Frein : société américaine, orientée clients américains ; l'accès au marché européen n'est pas documenté.",
-     "Stade Seed compatible avec la fenêtre d'investissement GVI."
-    ]},
-    {"titre": "Risques & points de vigilance", "points": [
-     "Homonyme : une autre société « Klaimee », basée à Paris (IA pour l'assurance santé et prévoyance), a levé 1,2 M€ en pré-seed en 2025. Ne pas confondre.",
-     "Dépendance à un seul porteur de risque non nommé.",
-     "Sinistralité inconnue sur un risque nouveau : la tarification n'est pas encore éprouvée."
-    ]}
+    {
+     "titre": "Secteur & marché",
+     "points": [
+      "Nouveau segment : assurer les erreurs des agents d'IA autonomes (décisions, actions, pertes causées à des tiers).",
+      "Les polices cyber et RC professionnelle classiques excluent souvent ces risques, d'où l'apparition d'offres dédiées.",
+      "Un observateur du marché le décrit en juillet 2026 comme « réel mais étroit » : peu de polices émises, limites rarement publiées."
+     ]
+    },
+    {
+     "titre": "Produit & technologie",
+     "points": [
+      "Produits annoncés : évaluation des risques critiques, certification, garantie financière, police de responsabilité et documentation pour les achats, livrés en moins de 24 heures.",
+      "Premier produit : une garantie contre les défaillances des agents d'IA.",
+      "Capacité d'assurance apportée par un partenaire bermudien noté, non nommé dans les sources."
+     ]
+    },
+    {
+     "titre": "Modèle économique",
+     "points": [
+      "Modèle de type MGA : Klaimee évalue et distribue, le risque est porté par un assureur partenaire.",
+      "Trois canaux : courtiers, partenaires intégrés (plateformes et frameworks d'agents qui incluent l'assurance), vente directe en libre-service.",
+      "Aucune grille tarifaire ni niveau de commission publié."
+     ]
+    },
+    {
+     "titre": "Financement & investisseurs",
+     "points": [
+      "Seed de 5,5 M$ annoncé en juillet 2026.",
+      "Investisseurs cités : FundersClub (Alexander Mittal), Y Combinator, ex/ante, Pioneer Fund, Multimodal Ventures, Kima Ventures, Rebel Fund, Robinhood Ventures et des business angels.",
+      "Le chef de file est incertain : FundersClub selon FinTech Global, Y Combinator selon Signalbase.",
+      "Kima Ventures figure dans le Radar Insurtech VC."
+     ]
+    },
+    {
+     "titre": "Données financières",
+     "points": [
+      "Chiffre d'affaires, primes émises, consommation de trésorerie et valorisation : non trouvés."
+     ]
+    },
+    {
+     "titre": "Concurrence",
+     "points": [
+      "Armilla AI : 25 M$ levés en janvier 2026, police RC IA jusqu'à 25 M$ de limite, adossée au Lloyd's.",
+      "AIUC : standard de certification AIUC-1 plus audit et assurance ; seed d'environ 15 M$ (non confirmé par une source primaire).",
+      "Autres acteurs : Corgi (assureur complet pour start-ups), Testudo (coverholder Lloyd's), Mount (Y Combinator, printemps 2026)."
+     ]
+    },
+    {
+     "titre": "Adéquation Groupama / GVI",
+     "points": [
+      "Intérêt : comprendre et, à terme, couvrir le risque IA des entreprises clientes de Groupama ; la certification pourrait aussi servir en interne pour les agents IA de Groupama.",
+      "Frein : société américaine, orientée clients américains ; l'accès au marché européen n'est pas documenté.",
+      "Stade Seed : un ticket GVI (200 k€ – 2 M€) serait envisageable au prochain tour, sous réserve d'un partenariat avec une entité Groupama."
+     ]
+    },
+    {
+     "titre": "Risques & points de vigilance",
+     "points": [
+      "Homonyme : une autre société « Klaimee », basée à Paris (IA pour l'assurance santé et prévoyance), a levé 1,2 M€ en pré-seed en 2025. Ne pas confondre.",
+      "Dépendance à un seul porteur de risque non nommé.",
+      "Sinistralité inconnue sur un risque nouveau : la tarification n'est pas encore éprouvée."
+     ]
+    }
    ],
    "questions": [
     "Quel assureur porte le risque, avec quelle note et quelle capacité ?",
@@ -82,14 +166,71 @@
    ],
    "documentsFournis": [],
    "sources": [
-    {"titre": "Klaimee lands $5.5m to insure autonomous AI agents", "media": "FinTech Global", "date": "22/07/2026", "url": "https://fintech.global/2026/07/22/klaimee-lands-5-5m-to-insure-autonomous-ai-agents/"},
-    {"titre": "Klaimee raises $5.5 million", "media": "Coverager", "date": "07/2026", "url": "https://coverager.com/klaimee-raises-5-5-million/"},
-    {"titre": "Klaimee — fiche société", "media": "Y Combinator", "date": "2026", "url": "https://www.ycombinator.com/companies/klaimee"},
-    {"titre": "Klaimee insures your AI agents (lancement)", "media": "Y Combinator", "date": "2026", "url": "https://www.ycombinator.com/launches/QCC-klaimee-insures-your-ai-agents"},
-    {"titre": "Klaimee secures $5.5M", "media": "Signalbase", "date": "07/2026", "url": "https://www.trysignalbase.com/news/funding/klaimee-secures-55m"},
-    {"titre": "Armilla AI raises $25m to expand AI liability coverage", "media": "FinTech Global", "date": "23/01/2026", "url": "https://fintech.global/2026/01/23/armilla-ai-raises-25m-to-expand-ai-liability-coverage"},
-    {"titre": "Best AI Liability Insurance for AI Companies 2026", "media": "QuoteSweep", "date": "2026", "url": "https://www.quotesweep.com/blog/best-ai-liability-insurance"}
+    {
+     "titre": "Klaimee lands $5.5m to insure autonomous AI agents",
+     "media": "FinTech Global",
+     "date": "22/07/2026",
+     "url": "https://fintech.global/2026/07/22/klaimee-lands-5-5m-to-insure-autonomous-ai-agents/"
+    },
+    {
+     "titre": "Klaimee raises $5.5 million",
+     "media": "Coverager",
+     "date": "07/2026",
+     "url": "https://coverager.com/klaimee-raises-5-5-million/"
+    },
+    {
+     "titre": "Klaimee — fiche société",
+     "media": "Y Combinator",
+     "date": "2026",
+     "url": "https://www.ycombinator.com/companies/klaimee"
+    },
+    {
+     "titre": "Klaimee insures your AI agents (lancement)",
+     "media": "Y Combinator",
+     "date": "2026",
+     "url": "https://www.ycombinator.com/launches/QCC-klaimee-insures-your-ai-agents"
+    },
+    {
+     "titre": "Klaimee secures $5.5M",
+     "media": "Signalbase",
+     "date": "07/2026",
+     "url": "https://www.trysignalbase.com/news/funding/klaimee-secures-55m"
+    },
+    {
+     "titre": "Armilla AI raises $25m to expand AI liability coverage",
+     "media": "FinTech Global",
+     "date": "23/01/2026",
+     "url": "https://fintech.global/2026/01/23/armilla-ai-raises-25m-to-expand-ai-liability-coverage"
+    },
+    {
+     "titre": "Best AI Liability Insurance for AI Companies 2026",
+     "media": "QuoteSweep",
+     "date": "2026",
+     "url": "https://www.quotesweep.com/blog/best-ai-liability-insurance"
+    }
    ]
   }
- ]
+ ],
+ "these": {
+  "source": "Présentation externe GVI, septembre 2026",
+  "these": [
+   "Un partenariat éprouvé : la solution répond à un besoin métier identifié et a démontré sa pertinence dans une expérimentation concluante avec Groupama.",
+   "Des fondamentaux solides : équipe expérimentée, croissance démontrée de l'ARR et du pipeline commercial, trajectoire crédible de rentabilité et de trésorerie.",
+   "Une logique stratégique et financière : renforcer un partenariat structurant tout en recherchant une création de valeur à moyen terme.",
+   "Un accompagnement dans la durée : actionnaire minoritaire actif, aux côtés des dirigeants et d'investisseurs financiers et/ou corporate."
+  ],
+  "domaines": [
+   "Mobilité & foyer : prévenir les risques et développer de nouveaux services autour de l'habitat et des mobilités",
+   "Assurance de personnes : améliorer la prévention, la protection et l'accompagnement des assurés tout au long de leur parcours",
+   "Entreprises & professionnels : accompagner les entreprises et les professionnels dans la prévention et la gestion de leurs risques",
+   "Expérience client & gestion des sinistres : améliorer l'expérience client et optimiser les parcours de gestion des sinistres"
+  ],
+  "modalites": [
+   "Enveloppe d'environ 50 M€ dédiée à l'innovation",
+   "Ticket de 200 k€ à 2 M€",
+   "Participation cible de 5 % à 20 % du capital",
+   "Follower actif ou co-lead"
+  ],
+  "dispositif": "Volt'terre Innovation fait tester et déployer les solutions par les entités de Groupama (caisses régionales GRAA, GCA, GLB, GNE, GGE, GOC, GMED, GCM ; Groupama Gan Vie, GPVL) : besoin métier → expérimentation → déploiement. GVI peut accompagner en capital les partenaires présentant un intérêt stratégique et financier ; l'investissement peut prolonger un partenariat éprouvé, sans être systématique."
+ }
 }
