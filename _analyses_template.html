@@ -118,6 +118,44 @@ a{color:var(--petrol)}
 .sources{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:13.5px}
 .sources li{display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
 .foot{color:var(--muted);font-size:12px;margin-top:22px}
+
+/* Nouvelle analyse : dépôt de documents, analyse par Claude depuis la page */
+.btn{font:inherit;font-size:14px;font-weight:500;border-radius:4px;padding:9px 14px;cursor:pointer;border:1px solid var(--petrol);background:var(--petrol);color:var(--surface)}
+.btn:hover{filter:brightness(1.08)}
+.btn:disabled{opacity:.5;cursor:default;filter:none}
+.btn.ghost{background:transparent;color:var(--petrol)}
+.btn.danger{background:transparent;color:var(--bad);border-color:var(--bad)}
+.btn.wide{width:100%}
+.form{padding:22px 24px 26px;display:grid;gap:18px}
+.form h2{font-family:var(--font-display);font-weight:400;font-size:32px;line-height:1.1;margin:0}
+.form .lead{margin:4px 0 0;color:var(--muted);max-width:68ch}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.field{display:grid;gap:5px;min-width:0}
+.field label{font-size:12.5px;font-weight:500}
+.field label span{color:var(--muted);font-weight:400}
+.field input,.field textarea{font:inherit;font-size:14px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:8px 10px;width:100%}
+.field textarea{min-height:84px;resize:vertical}
+.drop{border:1.5px dashed var(--line);border-radius:6px;padding:22px 16px;text-align:center;background:var(--paper);cursor:pointer;display:grid;gap:4px;justify-items:center}
+.drop.over{border-color:var(--petrol);background:var(--petrol-soft)}
+.drop b{font-weight:500}
+.drop small{color:var(--muted)}
+.files{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.files li{display:flex;gap:10px;align-items:center;justify-content:space-between;border:1px solid var(--line-soft);border-radius:4px;padding:8px 10px;font-size:13.5px}
+.files li > div{min-width:0}
+.files .fn{overflow-wrap:anywhere;font-weight:500}
+.files .st{font-size:12px;color:var(--muted)}
+.files .st.err{color:var(--bad)}
+.files button{font:inherit;font-size:12px;background:none;border:0;color:var(--muted);cursor:pointer;padding:4px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.status{font-size:13.5px;color:var(--muted)}
+.status.err{color:var(--bad)}
+.prog{height:3px;background:var(--line-soft);border-radius:2px;overflow:hidden}
+.prog i{display:block;height:100%;width:30%;background:var(--petrol);animation:slide 1.4s ease-in-out infinite}
+@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(340%)}}
+@media (prefers-reduced-motion:reduce){.prog i{animation:none;width:100%;opacity:.4}}
+.note-page{margin:14px 24px 0;padding:10px 14px;border-left:3px solid var(--ochre);background:var(--ochre-soft);font-size:13px}
+.danger-zone{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+@media (max-width:520px){.form{padding-left:16px;padding-right:16px}.note-page{margin-left:16px;margin-right:16px}}
 @media (max-width:520px){.head h1{font-size:32px}.sheet-top h2{font-size:28px}.sheet-top,.body{padding-left:16px;padding-right:16px}.verdict{margin-left:16px;margin-right:16px}}
 </style>
 
@@ -144,14 +182,15 @@ a{color:var(--petrol)}
 
   <div class="layout">
     <aside class="rail">
+      <button id="btn-new" class="btn wide" type="button" hidden>+ Nouvelle analyse</button>
       <h2 id="rail-count">Fiches</h2>
       <div id="list" style="display:grid;gap:10px"></div>
       <div class="howto">
-        <h3>Demander une analyse</h3>
+        <h3>Lancer une analyse</h3>
         <ol>
-          <li>Dans la conversation Claude du projet, indiquez le nom et le site de la société.</li>
-          <li>Joignez ce que vous avez : deck, business plan, notes de rendez-vous.</li>
-          <li>Claude complète par une recherche web, remplit la grille et publie la fiche ici.</li>
+          <li>« Nouvelle analyse » : nom de la société, site, contexte, et déposez deck, business plan, tableur ou notes.</li>
+          <li>Claude lit les documents, remplit la grille GVI et enregistre la fiche ici (1 à 3 minutes).</li>
+          <li>Pour une vérification sur le web, demandez-la ensuite dans la conversation Claude du projet.</li>
         </ol>
       </div>
     </aside>
@@ -163,24 +202,33 @@ a{color:var(--petrol)}
 </div>
 
 <script>window.__DATA__ = __DATA_JSON__;</script>
+
 <script>
 const RAW = window.__DATA__;
 const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const VERDICTS = {etudier:'À étudier', surveiller:'À surveiller', ecarter:'Ne pas poursuivre'};
+const $ = id => document.getElementById(id);
+
+// Fiches : celles publiées avec la page (vérifiées, RAW) + celles produites sur la page (base partagée de l'artefact).
+const S = {dyn: [], vue: 'fiche', id: null, fichiers: [], enCours: null, confirmSuppr: null, statut: '', statutErr: false};
+let SAMPLE = null, DB = null, PEUT_ECRIRE = null;
+const toutes = () => [...S.dyn, ...RAW.analyses];
 
 function dots(note){
   if (note == null) return `<span class="dots nd" title="Non noté"><i></i><i></i><i></i></span>`;
   return `<span class="dots" title="${note} sur 3">${[1,2,3].map(i => `<i class="${i<=note?'on':''}"></i>`).join('')}</span>`;
 }
+const paire = x => Array.isArray(x) ? x : [x && x.k, x && x.v];
 
 function listHtml(sel){
-  return RAW.analyses.map(a => `
-    <button class="item" type="button" data-id="${esc(a.id)}" aria-current="${a.id===sel}">
+  return toutes().map(a => `
+    <button class="item" type="button" data-id="${esc(a.id)}" aria-current="${S.vue==='fiche' && a.id===sel}">
       <b>${esc(a.nom)}</b>
       <small>${esc(a.secteur)}</small>
       <span class="row">
         <span class="pill ${esc(a.verdict)}">${esc(VERDICTS[a.verdict]||a.verdict)}</span>
         ${a.exemple ? '<span class="pill exemple">Exemple</span>' : ''}
+        ${a.origine==='page' ? '<span class="pill exemple">Documents seuls</span>' : ''}
         <span class="mono">${esc(a.date)}</span>
       </span>
     </button>`).join('');
@@ -197,12 +245,19 @@ function sheetHtml(a){
   }).join('');
   const docs = (a.documentsFournis||[]).length
     ? `<ul class="sources">${a.documentsFournis.map(d => `<li><span class="pill exemple">Document fourni</span> ${esc(d)}</li>`).join('')}</ul>` : '';
+  const page = a.origine === 'page';
+  const suppr = page && PEUT_ECRIRE !== false && DB ? (S.confirmSuppr === a.id
+    ? `<div class="danger-zone"><span class="status">Supprimer définitivement cette fiche ?</span>
+        <button class="btn danger" type="button" data-act="suppr-ok">Supprimer</button>
+        <button class="btn ghost" type="button" data-act="suppr-non">Annuler</button></div>`
+    : `<div class="danger-zone"><button class="btn ghost" type="button" data-act="suppr">Supprimer la fiche</button></div>`) : '';
   return `
     <div class="sheet-top">
       <div class="mono">Pré-analyse du ${esc(a.date)} · confiance ${esc(a.confiance)}${a.exemple ? ' · fiche exemple réalisée sur sources publiques' : ''}</div>
       <h2>${esc(a.nom)}</h2>
       <p class="pitch">${esc(a.pitch)}</p>
     </div>
+    ${page ? `<div class="note-page">Fiche produite par Claude depuis cette page, à partir des seuls documents fournis : rien n'a été vérifié sur le web. Les faits marqués « (doc.) » viennent des documents, ceux marqués « (à vérifier) » de connaissances générales. Pour la compléter, demandez une vérification dans la conversation Claude du projet.</div>` : ''}
     <div class="verdict ${esc(a.verdict)}">
       <div class="vh"><strong>${esc(VERDICTS[a.verdict]||a.verdict)}</strong><span class="mono">recommandation</span></div>
       <p>${esc(a.verdictTexte)}</p>
@@ -210,14 +265,14 @@ function sheetHtml(a){
     <div class="body">
       <div>
         <div class="sec-t">Carte d'identité</div>
-        <dl class="ident">${(a.identite||[]).map(([k,v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
+        <dl class="ident">${(a.identite||[]).map(x => { const [k,v] = paire(x); return `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`; }).join('')}</dl>
       </div>
       <div>
         <div class="sec-t">Grille GVI</div>
         <div class="grid6">${crit}</div>
       </div>
       <div class="secs">${(a.sections||[]).map(s => `
-        <section><h4>${esc(s.titre)}</h4><ul>${s.points.map(p => `<li>${esc(p)}</li>`).join('')}</ul></section>`).join('')}
+        <section><h4>${esc(s.titre)}</h4><ul>${(s.points||[]).map(p => `<li>${esc(p)}</li>`).join('')}</ul></section>`).join('')}
       </div>
       ${(a.questions||[]).length ? `<div><div class="sec-t">Questions à poser à la société</div>
         <ol class="questions">${a.questions.map(q => `<li>${esc(q)}</li>`).join('')}</ol></div>` : ''}
@@ -227,22 +282,345 @@ function sheetHtml(a){
         <ul class="sources">${(a.sources||[]).map(s => `<li><span class="mono">${esc(s.date)}</span>
           <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre)}</a><span class="mono">${esc(s.media)}</span></li>`).join('')}</ul>
       </div>
+      ${suppr}
     </div>`;
 }
 
-function render(id){
-  const a = RAW.analyses.find(x => x.id === id) || RAW.analyses[0];
-  document.getElementById('rail-count').textContent = `${RAW.analyses.length} fiche${RAW.analyses.length>1?'s':''}`;
-  document.getElementById('list').innerHTML = listHtml(a ? a.id : null);
-  document.getElementById('sheet').innerHTML = a ? sheetHtml(a)
-    : '<div class="sheet-top"><h2>Aucune fiche pour l\'instant</h2><p class="pitch">Envoyez le nom d\'une société et ses documents dans la conversation Claude pour lancer la première pré-analyse.</p></div>';
+/* ---------- Formulaire « Nouvelle analyse » ---------- */
+const FORMATS = '.pdf,.docx,.pptx,.xlsx,.xlsm,.xls,.ods,.csv,.txt,.md,.png,.jpg,.jpeg,.webp';
+function formHtml(){
+  const f = S.form || (S.form = {nom:'', site:'', contexte:'', texte:''});
+  const occupe = !!S.enCours;
+  const fichiers = S.fichiers.map((x,i) => `<li><div><div class="fn">${esc(x.file.name)}</div>
+      <div class="st ${x.err?'err':''}">${esc(x.err || x.resume || 'Lecture…')}</div></div>
+      ${occupe ? '' : `<button type="button" data-act="retirer" data-i="${i}" aria-label="Retirer ${esc(x.file.name)}">Retirer</button>`}</li>`).join('');
+  return `<div class="form">
+    <div><h2>Nouvelle analyse</h2>
+      <p class="lead">Déposez les documents de la société. Claude les lit, remplit la grille GVI et enregistre une fiche de pré-analyse sur cette page. Les documents eux-mêmes ne sont pas conservés : seule la fiche l'est.</p></div>
+    <div class="fields">
+      <div class="field"><label for="f-nom">Société</label><input id="f-nom" data-k="nom" value="${esc(f.nom)}" ${occupe?'disabled':''} autocomplete="off"></div>
+      <div class="field"><label for="f-site">Site web <span>(facultatif)</span></label><input id="f-site" data-k="site" value="${esc(f.site)}" ${occupe?'disabled':''} autocomplete="off"></div>
+    </div>
+    <div class="field"><label for="f-ctx">Contexte <span>(facultatif : qui l'a présentée, levée en cours, lien avec une entité Groupama…)</span></label>
+      <textarea id="f-ctx" data-k="contexte" ${occupe?'disabled':''}>${esc(f.contexte)}</textarea></div>
+    <div class="field"><span style="font-size:12.5px;font-weight:500">Documents</span>
+      <div class="drop" id="drop" role="button" tabindex="0" ${occupe?'aria-disabled="true"':''}>
+        <b>Glissez les fichiers ici ou cliquez pour les choisir</b>
+        <small>PDF, PowerPoint (.pptx), Word (.docx), Excel, CSV, texte, images</small>
+      </div>
+      <input id="f-files" type="file" multiple accept="${FORMATS}" hidden>
+      ${fichiers ? `<ul class="files">${fichiers}</ul>` : ''}</div>
+    <div class="field"><label for="f-texte">Ou collez du texte <span>(notes de rendez-vous, e-mail, extrait…)</span></label>
+      <textarea id="f-texte" data-k="texte" ${occupe?'disabled':''}>${esc(f.texte)}</textarea></div>
+    ${occupe ? '<div class="prog"><i></i></div>' : ''}
+    <div class="actions">
+      ${occupe ? '<button class="btn ghost" type="button" data-act="stop">Arrêter</button>'
+               : '<button class="btn" type="button" data-act="lancer">Lancer l\'analyse</button><button class="btn ghost" type="button" data-act="annuler">Annuler</button>'}
+      <span class="status ${S.statutErr?'err':''}" id="f-statut" role="status">${esc(S.statut)}</span>
+    </div>
+  </div>`;
 }
 
-document.getElementById('list').addEventListener('click', e => {
+function render(){
+  const all = toutes();
+  $('rail-count').textContent = `${all.length} fiche${all.length>1?'s':''}`;
+  if (S.vue === 'nouvelle') {
+    $('list').innerHTML = listHtml(null);
+    $('sheet').innerHTML = formHtml();
+    return;
+  }
+  const a = all.find(x => x.id === S.id) || all[0];
+  S.id = a ? a.id : null;
+  $('list').innerHTML = listHtml(S.id);
+  $('sheet').innerHTML = a ? sheetHtml(a)
+    : '<div class="sheet-top"><h2>Aucune fiche pour l\'instant</h2><p class="pitch">Lancez une nouvelle analyse pour créer la première fiche.</p></div>';
+}
+function setHash(h){ try { history.replaceState(null, '', '#' + h); } catch(_) {} }
+function statut(t, err){ S.statut = t; S.statutErr = !!err; const el = $('f-statut'); if (el) { el.textContent = t; el.className = 'status' + (err ? ' err' : ''); } }
+
+/* ---------- Lecture des documents (dans le navigateur) ---------- */
+const LIBS = {
+  pdf: ['https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js'],
+  zip: ['https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js'],
+  xlsx: ['https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'],
+};
+const chargés = {};
+function script(src){
+  return chargés[src] || (chargés[src] = new Promise((ok, ko) => {
+    const s = document.createElement('script'); s.src = src; s.onload = ok;
+    s.onerror = () => { delete chargés[src]; ko(new Error('bibliothèque de lecture indisponible')); };
+    document.head.appendChild(s);
+  }));
+}
+async function lib(nom){ for (const src of LIBS[nom]) await script(src); }
+
+const PAGES_IMAGES_MAX = 8;  // pages de PDF sans texte (diapositives en image) rendues en images, au plus
+async function lirePdf(file){
+  await lib('pdf');  // le worker chargé en script sert de « fake worker » (pas de Web Worker externe possible)
+  const pdf = await pdfjsLib.getDocument({data: new Uint8Array(await file.arrayBuffer())}).promise;
+  const pages = [], vides = [];
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const c = await (await pdf.getPage(i)).getTextContent();
+    const t = c.items.map(it => it.str + (it.hasEOL ? '\n' : ' ')).join('').replace(/[ \t]+/g, ' ').trim();
+    pages.push(`[Page ${i}]\n${t}`);
+    if (t.length < 150) vides.push(i);
+  }
+  const images = [];
+  for (const n of vides.slice(0, PAGES_IMAGES_MAX)) {
+    const p = await pdf.getPage(n), v1 = p.getViewport({scale: 1});
+    const v = p.getViewport({scale: Math.min(2, 1600 / Math.max(v1.width, v1.height))});
+    const cv = document.createElement('canvas'); cv.width = Math.round(v.width); cv.height = Math.round(v.height);
+    const ctx = cv.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height);
+    await p.render({canvasContext: ctx, viewport: v}).promise;
+    const b = await new Promise(r => cv.toBlob(r, 'image/jpeg', 0.82));
+    if (b) images.push({blob: b, legende: `${file.name}, page ${n}`});
+  }
+  return {texte: pages.join('\n\n'), images, info: `${pdf.numPages} page${pdf.numPages>1?'s':''}`};
+}
+async function lireOffice(file, motif, etiquette){
+  await lib('zip');
+  const zip = await JSZip.loadAsync(await file.arrayBuffer());
+  const num = n => +((n.match(/(\d+)\.xml$/) || [0, 0])[1]);
+  const noms = Object.keys(zip.files).filter(n => motif.test(n)).sort((a, b) => num(a) - num(b));
+  const parts = [];
+  for (const [i, n] of noms.entries()) {
+    const doc = new DOMParser().parseFromString(await zip.file(n).async('string'), 'application/xml');
+    const paras = [...doc.getElementsByTagNameNS('*', 'p')]
+      .filter(p => !p.parentNode || p.parentNode.localName !== 'p')
+      .map(p => [...p.getElementsByTagNameNS('*', 't')].map(t => t.textContent).join('')).filter(x => x.trim());
+    parts.push((etiquette ? `[${etiquette} ${i + 1}]\n` : '') + paras.join('\n'));
+  }
+  return {texte: parts.join('\n\n'), images: [], info: etiquette ? `${noms.length} diapositive${noms.length>1?'s':''}` : ''};
+}
+async function lireTableur(file){
+  await lib('xlsx');
+  const wb = XLSX.read(await file.arrayBuffer(), {type: 'array'});
+  const texte = wb.SheetNames.map(n => `[Onglet ${n}]\n` + XLSX.utils.sheet_to_csv(wb.Sheets[n], {blankrows: false})).join('\n\n');
+  return {texte, images: [], info: `${wb.SheetNames.length} onglet${wb.SheetNames.length>1?'s':''}`};
+}
+async function lire(file){
+  const ext = (file.name.split('.').pop() || '').toLowerCase();
+  if (ext === 'pdf') return lirePdf(file);
+  if (ext === 'docx') return lireOffice(file, /^word\/document\.xml$/, '');
+  if (ext === 'pptx') return lireOffice(file, /^ppt\/slides\/slide\d+\.xml$/, 'Diapositive');
+  if (['xlsx', 'xlsm', 'xls', 'ods'].includes(ext)) return lireTableur(file);
+  if (['csv', 'txt', 'md'].includes(ext)) return {texte: await file.text(), images: [], info: ''};
+  if (['png', 'jpg', 'jpeg', 'webp'].includes(ext)) return {texte: '', images: [{blob: file, legende: file.name}], info: 'image'};
+  if (['doc', 'ppt'].includes(ext)) throw new Error('ancien format Office : enregistrez-le en PDF ou en .' + ext + 'x');
+  throw new Error('format non pris en charge : convertissez-le en PDF');
+}
+const nf = n => n.toLocaleString('fr-FR');
+async function ajouterFichiers(liste){
+  for (const file of liste) {
+    const x = {file};
+    S.fichiers.push(x);
+    render();
+    try {
+      const r = await lire(file);
+      Object.assign(x, r);
+      const bouts = [r.info, r.texte.trim() ? `${nf(r.texte.length)} caractères lus` : '', r.images.length && r.info !== 'image' ? `${r.images.length} page${r.images.length>1?'s':''} lue${r.images.length>1?'s':''} comme image` : ''].filter(Boolean);
+      x.resume = bouts.join(' · ') || 'aucun texte trouvé';
+      if (!r.texte.trim() && !r.images.length) x.err = 'aucun texte lisible dans ce fichier';
+    } catch (e) {
+      x.err = 'Illisible : ' + (e && e.message || 'erreur de lecture');
+    }
+    if (S.vue === 'nouvelle') render();
+  }
+}
+
+/* ---------- Analyse par Claude ---------- */
+const BUDGET_TEXTE = 180000;  // caractères de documents envoyés au plus (limite d'environ 256 Ko par appel)
+function couper(docs){
+  const total = docs.reduce((s, d) => s + d.texte.length, 0);
+  if (total <= BUDGET_TEXTE) return docs;
+  return docs.map(d => {
+    const max = Math.floor(BUDGET_TEXTE * d.texte.length / total);
+    return d.texte.length > max ? {...d, texte: d.texte.slice(0, max) + '\n[… document tronqué : trop long pour être lu en entier]'} : d;
+  });
+}
+function prompt(f, docs, legendes){
+  const grille = RAW.grille.map(g => `- ${g.cle} — ${g.titre} : ${g.question}`).join('\n');
+  const corps = docs.map((d, i) => `=== Document ${i + 1} : ${d.nom} ===\n${d.texte}`).join('\n\n');
+  return `Tu es analyste d'investissement chez Groupama Vol'terre Investissement (GVI), le fonds de corporate venture capital du groupe Groupama, assureur mutualiste français (assurance agricole, auto, habitation, santé et prévoyance, assurance des professionnels et des collectivités, banque, prévention, gestion des sinistres, distribution par réseaux d'agences). GVI investit en Seed – Série A dans des start-up insurtech ou adjacentes, principalement européennes, et cherche des synergies avec les métiers de Groupama.
+
+Tâche : rédiger une PRÉ-ANALYSE rapide de la société ci-dessous, pour décider si l'équipe GVI doit l'étudier. Appuie-toi d'abord sur les documents fournis.
+
+Règles absolues :
+- N'invente rien. Un chiffre, un nom, une date n'apparaît que s'il figure dans les documents ou si tu le connais avec certitude ; sinon écris « non trouvé ».
+- Indique l'origine de chaque fait : tiré des documents → suffixe « (doc.) » ; tiré de tes connaissances générales → suffixe « (à vérifier) ». Les affirmations de la société (projections, taille de marché, valorisation visée) sont présentées comme déclaratives (« selon la société »).
+- Tu n'as pas accès au web : ne cite aucune URL ni aucun article.
+- Montants : ajoute l'équivalent en M€ entre parenthèses ($ × 0,92 ; £ × 1,17).
+- Dates : n'indique pas de mois que les documents ne donnent pas.
+- Français, ton factuel et concis, sans superlatifs. Points de 1 à 2 phrases.
+
+Grille de scoring GVI (note 1 = faible, 2 = moyen, 3 = fort ; null si l'information manque) :
+${grille}
+
+Verdict :
+- "etudier" : correspond à la thèse GVI et au stade, signaux positifs → l'équipe devrait l'étudier en détail ;
+- "surveiller" : intéressant mais trop tôt, hors fenêtre de financement ou trop d'informations manquantes → à suivre ;
+- "ecarter" : hors thèse, hors stade ou signaux négatifs.
+"confiance" reflète la qualité de l'information disponible : "Élevé", "Moyen" ou "Faible".
+
+Réponds UNIQUEMENT par un objet JSON de cette forme :
+{"nom": "…", "secteur": "libellé court, ex. Insurtech · cyber des PME", "pitch": "une phrase", "verdict": "etudier|surveiller|ecarter", "verdictTexte": "2 à 4 phrases qui justifient le verdict", "confiance": "Élevé|Moyen|Faible",
+ "identite": [{"k": "Site", "v": "…"}, {"k": "Siège", "v": "…"}, {"k": "Création", "v": "…"}, {"k": "Stade", "v": "…"}, {"k": "Total levé", "v": "…"}, {"k": "Levée en cours", "v": "…"}, {"k": "Effectif", "v": "…"}, {"k": "Fondateurs", "v": "…"}],
+ "notes": {${RAW.grille.map(g => `"${g.cle}": {"note": 1, "commentaire": "…"}`).join(', ')}},
+ "sections": [{"titre": "Secteur & marché", "points": ["…"]}, {"titre": "Produit & technologie", "points": ["…"]}, {"titre": "Management", "points": ["…"]}, {"titre": "Traction & finances", "points": ["…"]}, {"titre": "Levée & valorisation", "points": ["…"]}, {"titre": "Points de vigilance", "points": ["…"]}],
+ "questions": ["5 à 8 questions précises à poser à la société"]}
+
+Société : ${f.nom}
+Site : ${f.site || 'non fourni'}
+Contexte transmis par GVI : ${f.contexte || 'aucun'}
+${legendes.length ? `\nImages jointes (dans l'ordre) : ${legendes.join(' ; ')}.\n` : ''}
+Documents fournis (texte extrait automatiquement, mise en page perdue) :
+${corps || '(aucun texte : seulement les images jointes)'}`;
+}
+const CLES = new Set(RAW.grille.map(g => g.cle));
+const txt = (v, d) => (typeof v === 'string' && v.trim()) ? v.trim() : (d || 'non trouvé');
+function nettoyer(r, f, noms){
+  const notes = {};
+  for (const g of RAW.grille) {
+    const n = (r.notes || {})[g.cle] || {};
+    notes[g.cle] = {note: [1, 2, 3].includes(+n.note) ? +n.note : null, commentaire: txt(n.commentaire, 'Non renseigné.')};
+  }
+  const slug = f.nom.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'societe';
+  const d = new Date();
+  return {
+    id: `p-${slug}-${d.getTime().toString(36)}`,
+    origine: 'page', creeLe: d.toISOString(),
+    date: d.toLocaleDateString('fr-FR', {day: '2-digit', month: '2-digit', year: 'numeric'}),
+    nom: txt(r.nom, f.nom), secteur: txt(r.secteur, ''), pitch: txt(r.pitch, ''),
+    verdict: VERDICTS[r.verdict] ? r.verdict : 'surveiller',
+    verdictTexte: txt(r.verdictTexte, ''),
+    confiance: ['Élevé', 'Moyen', 'Faible'].includes(r.confiance) ? r.confiance : 'Faible',
+    identite: (Array.isArray(r.identite) ? r.identite : []).map(x => { const [k, v] = paire(x); return {k: txt(k, ''), v: txt(v)}; }).filter(x => x.k),
+    notes,
+    sections: (Array.isArray(r.sections) ? r.sections : []).map(s => ({titre: txt(s && s.titre, ''), points: (Array.isArray(s && s.points) ? s.points : []).filter(p => typeof p === 'string' && p.trim())})).filter(s => s.titre && s.points.length),
+    questions: (Array.isArray(r.questions) ? r.questions : []).filter(q => typeof q === 'string' && q.trim()),
+    documentsFournis: noms, sources: [],
+  };
+}
+const ERREURS = {
+  not_granted: "Claude n'est pas autorisé sur cette page. Autorisez-le depuis le menu de l'artefact, puis relancez.",
+  sampling_disabled: "Claude n'est pas disponible pour ce compte.",
+  rate_limited: 'Limite d\'utilisation atteinte. Réessayez dans quelques minutes.',
+  prompt_too_large: 'Documents trop volumineux : retirez-en un ou gardez les parties utiles.',
+  image_rejected: 'Une image a été refusée : retirez-la et relancez.',
+  invalid_json: 'La réponse de Claude était incomplète. Relancez l\'analyse.',
+  refused: 'Claude a refusé ce contenu.',
+  session_expired: 'Session expirée : reconnectez-vous à Claude.',
+};
+async function lancer(){
+  const f = S.form;
+  if (!f.nom.trim()) { statut('Indiquez le nom de la société.', true); $('f-nom') && $('f-nom').focus(); return; }
+  if (S.fichiers.some(x => !x.resume && !x.err)) { statut('Lecture des documents en cours, patientez quelques secondes.', true); return; }
+  const ok = S.fichiers.filter(x => !x.err);
+  const docs = ok.filter(x => x.texte && x.texte.trim()).map(x => ({nom: x.file.name, texte: x.texte}));
+  if (f.texte.trim()) docs.push({nom: 'Texte collé', texte: f.texte.trim()});
+  let images = ok.flatMap(x => x.images || []);
+  if (!docs.length && !images.length && !f.site.trim() && !f.contexte.trim()) { statut('Ajoutez au moins un document, un texte ou le site de la société.', true); return; }
+  const lim = await SAMPLE.limits().catch(() => null);
+  const maxImg = lim && lim.images ? lim.images.maxCount : 0;
+  const omises = Math.max(0, images.length - maxImg);
+  images = images.slice(0, maxImg);
+  const noms = ok.map(x => x.file.name).concat(f.texte.trim() ? ['Texte collé'] : []);
+  const ctl = new AbortController();
+  S.enCours = ctl; S.statut = 'Claude lit les documents… (1 à 3 minutes)'; S.statutErr = false; render();
+  try {
+    const r = await SAMPLE.json(prompt(f, couper(docs), images.map(i => i.legende)), {
+      modelTier: 'complex', signal: ctl.signal, cache: false,
+      images: images.length ? images.map(i => i.blob) : undefined,
+      onText: ({text}) => statut(`Claude rédige la fiche… ${nf(text.length)} caractères`),
+    });
+    if (!r || typeof r !== 'object' || Array.isArray(r)) throw {code: 'invalid_json'};
+    const fiche = nettoyer(r, f, noms);
+    S.enCours = null;
+    let enregistree = false;
+    if (DB && PEUT_ECRIRE !== false) {
+      try { await DB.collection('analyses').doc(fiche.id).set(fiche); enregistree = true; }
+      catch (e) { if (e && e.code === 'invalid_argument') PEUT_ECRIRE = false; }
+    }
+    if (!enregistree) S.dyn.unshift({...fiche, nonEnregistree: true});
+    else if (!S.dyn.some(x => x.id === fiche.id)) S.dyn.unshift(fiche);
+    S.fichiers = []; S.form = null; S.vue = 'fiche'; S.id = fiche.id; S.statut = '';
+    render(); setHash(fiche.id);
+    if (!enregistree) alerteFiche("Fiche affichée mais non enregistrée : vos droits sur cette page ne permettent pas de l'enregistrer. Elle disparaîtra au rechargement.");
+    else if (omises) alerteFiche(`${omises} image${omises>1?'s':''} n'ont pas pu être transmise${omises>1?'s':''} (limite par analyse).`);
+  } catch (e) {
+    S.enCours = null;
+    const code = e && e.code;
+    S.statut = code === 'cancelled' ? 'Analyse arrêtée.' : (ERREURS[code] || 'Erreur de service. Relancez l\'analyse.');
+    S.statutErr = code !== 'cancelled';
+    render();
+  }
+}
+function alerteFiche(t){
+  const top = document.querySelector('.sheet-top');
+  if (top) top.insertAdjacentHTML('afterend', `<div class="note-page" role="status">${esc(t)}</div>`);
+}
+
+/* ---------- Événements ---------- */
+$('list').addEventListener('click', e => {
   const b = e.target.closest('[data-id]');
-  if (!b) return;
-  render(b.dataset.id);
-  try { history.replaceState(null, '', '#' + b.dataset.id); } catch(_) {}
+  if (!b || S.enCours) return;
+  S.vue = 'fiche'; S.id = b.dataset.id; S.confirmSuppr = null;
+  render(); setHash(S.id);
 });
-render((location.hash || '').slice(1));
+$('btn-new').addEventListener('click', () => {
+  if (S.enCours) return;
+  S.vue = 'nouvelle'; S.statut = ''; S.statutErr = false; render(); setHash('nouvelle');
+  const n = $('f-nom'); if (n) n.focus();
+});
+const sheet = $('sheet');
+sheet.addEventListener('input', e => { const k = e.target.dataset && e.target.dataset.k; if (k && S.form) S.form[k] = e.target.value; });
+sheet.addEventListener('click', async e => {
+  if (e.target.closest('#drop') && !S.enCours) { $('f-files').click(); return; }
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  const act = b.dataset.act;
+  if (act === 'lancer') lancer();
+  else if (act === 'stop') S.enCours && S.enCours.abort();
+  else if (act === 'annuler') { S.vue = 'fiche'; S.fichiers = []; S.form = null; S.statut = ''; render(); setHash(S.id || ''); }
+  else if (act === 'retirer') { S.fichiers.splice(+b.dataset.i, 1); render(); }
+  else if (act === 'suppr') { S.confirmSuppr = S.id; render(); }
+  else if (act === 'suppr-non') { S.confirmSuppr = null; render(); }
+  else if (act === 'suppr-ok') {
+    const id = S.confirmSuppr; S.confirmSuppr = null;
+    try { await DB.collection('analyses').doc(id).delete(); S.dyn = S.dyn.filter(x => x.id !== id); S.id = null; render(); }
+    catch (_) { render(); alerteFiche("Suppression impossible : vos droits sur cette page ne le permettent pas."); }
+  }
+});
+sheet.addEventListener('keydown', e => { if (e.target.id === 'drop' && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); if (!S.enCours) $('f-files').click(); } });
+sheet.addEventListener('change', e => { if (e.target.id === 'f-files' && e.target.files.length) ajouterFichiers([...e.target.files]); });
+['dragover', 'dragenter'].forEach(t => sheet.addEventListener(t, e => { const d = e.target.closest && e.target.closest('#drop'); if (d && !S.enCours) { e.preventDefault(); d.classList.add('over'); } }));
+sheet.addEventListener('dragleave', e => { const d = e.target.closest && e.target.closest('#drop'); if (d) d.classList.remove('over'); });
+sheet.addEventListener('drop', e => {
+  const d = e.target.closest && e.target.closest('#drop');
+  if (!d) return;
+  e.preventDefault(); d.classList.remove('over');
+  if (!S.enCours && e.dataTransfer.files.length) ajouterFichiers([...e.dataTransfer.files]);
+});
+
+/* ---------- Démarrage : page statique, puis capacités quand elles arrivent ---------- */
+const h = (location.hash || '').slice(1);
+S.id = h && h !== 'nouvelle' ? h : null;
+render();
+if (window.claude && claude.use) {
+  claude.use('sample').then(s => {
+    if (!s) return;
+    SAMPLE = s; $('btn-new').hidden = false;
+    if (h === 'nouvelle' && !S.enCours) { S.vue = 'nouvelle'; render(); }
+  });
+  claude.use('user').then(u => { if (u && u.can) Promise.resolve(u.can('data.write')).then(v => { PEUT_ECRIRE = v; }).catch(() => {}); });
+  claude.use('db').then(db => {
+    if (!db) return;
+    DB = db;
+    db.collection('analyses').orderBy('creeLe', 'desc').onSnapshot(snap => {
+      const locales = S.dyn.filter(x => x.nonEnregistree);
+      S.dyn = [...locales, ...snap.docs.map(d => d.data()).filter(Boolean)];
+      if (S.vue === 'nouvelle') { $('list').innerHTML = listHtml(null); $('rail-count').textContent = `${toutes().length} fiches`; }
+      else render();
+    }, () => {});
+  });
+}
 </script>
