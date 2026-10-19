@@ -190,7 +190,7 @@ a{color:var(--petrol)}
         <ol>
           <li>« Nouvelle analyse » : nom de la société, site, contexte, et déposez deck, business plan, tableur ou notes.</li>
           <li>Claude lit les documents, remplit la grille GVI et enregistre la fiche ici (1 à 3 minutes).</li>
-          <li>Pour une vérification sur le web, demandez-la ensuite dans la conversation Claude du projet.</li>
+          <li>Pour une vérification sur le web, demandez-la dans la conversation Claude du projet (« vérifie Seedext ») : la fiche est complétée ici, avec ses sources.</li>
         </ol>
       </div>
     </aside>
@@ -228,7 +228,8 @@ function listHtml(sel){
       <span class="row">
         <span class="pill ${esc(a.verdict)}">${esc(VERDICTS[a.verdict]||a.verdict)}</span>
         ${a.exemple ? '<span class="pill exemple">Exemple</span>' : ''}
-        ${a.origine==='page' ? '<span class="pill exemple">Documents seuls</span>' : ''}
+        ${a.origine==='page' ? `<span class="pill exemple">Documents seuls</span>` : ''}
+        ${a.origine==='web' ? '<span class="pill exemple">Docs + web</span>' : ''}
         <span class="mono">${esc(a.date)}</span>
       </span>
     </button>`).join('');
@@ -245,7 +246,7 @@ function sheetHtml(a){
   }).join('');
   const docs = (a.documentsFournis||[]).length
     ? `<ul class="sources">${a.documentsFournis.map(d => `<li><span class="pill exemple">Document fourni</span> ${esc(d)}</li>`).join('')}</ul>` : '';
-  const page = a.origine === 'page';
+  const page = a.origine === 'page' || a.origine === 'web';
   const suppr = page && PEUT_ECRIRE !== false && DB ? (S.confirmSuppr === a.id
     ? `<div class="danger-zone"><span class="status">Supprimer définitivement cette fiche ?</span>
         <button class="btn danger" type="button" data-act="suppr-ok">Supprimer</button>
@@ -257,7 +258,7 @@ function sheetHtml(a){
       <h2>${esc(a.nom)}</h2>
       <p class="pitch">${esc(a.pitch)}</p>
     </div>
-    ${page ? `<div class="note-page">Fiche produite par Claude depuis cette page, à partir des seuls documents fournis : rien n'a été vérifié sur le web. Les faits marqués « (doc.) » viennent des documents, ceux marqués « (à vérifier) » de connaissances générales. Pour la compléter, demandez une vérification dans la conversation Claude du projet.</div>` : ''}
+    ${page ? bandeauWeb(a) : ''}
     <div class="verdict ${esc(a.verdict)}">
       <div class="vh"><strong>${esc(VERDICTS[a.verdict]||a.verdict)}</strong><span class="mono">recommandation</span></div>
       <p>${esc(a.verdictTexte)}</p>
@@ -438,36 +439,54 @@ function couper(docs){
     return d.texte.length > max ? {...d, texte: d.texte.slice(0, max) + '\n[… document tronqué : trop long pour être lu en entier]'} : d;
   });
 }
+function contexteGVI(){
+  const T = RAW.these || {};
+  const liste = a => (a || []).map(x => `- ${x}`).join('\n');
+  return `Tu es analyste d'investissement chez Groupama Volt'terre Investissement (GVI), le fonds d'investissement du groupe Groupama (assureur mutualiste français). Doctrine de GVI (${T.source || 'présentation GVI'}) :
+
+Thèse d'investissement :
+${liste(T.these)}
+
+Domaines d'investissement :
+${liste(T.domaines)}
+
+Modalités :
+${liste(T.modalites)}
+
+Dispositif : ${T.dispositif || ''}
+
+Grille de scoring GVI, six critères (note 1 = faible, 2 = moyen, 3 = fort ; null si l'information manque) :
+${RAW.grille.map(g => `- ${g.cle} — ${g.titre} : ${g.question}`).join('\n')}
+
+Verdict :
+- "etudier" : cohérent avec la thèse et les domaines GVI, signaux positifs → l'équipe devrait l'étudier en détail ;
+- "surveiller" : intéressant mais trop tôt (pas encore d'expérimentation avec Groupama, traction à démontrer), besoin de financement hors modalités GVI, ou trop d'informations manquantes → à suivre ;
+- "ecarter" : hors thèse ou hors domaines, ou signaux négatifs.
+"confiance" reflète la qualité de l'information disponible : "Élevé", "Moyen" ou "Faible".`;
+}
+const REGLES = `- N'invente rien. Un chiffre, un nom, une date n'apparaît que s'il est sourcé ; sinon écris « non trouvé ».
+- Les affirmations de la société (projections, taille de marché, valorisation visée) sont présentées comme déclaratives (« selon la société »).
+- Montants : ajoute l'équivalent en M€ entre parenthèses ($ × 0,92 ; £ × 1,17).
+- Dates : n'indique pas de mois que la source ne donne pas.
+- Français, ton factuel et concis, sans superlatifs. Points de 1 à 2 phrases.`;
+const SCHEMA = () => `{"nom": "…", "secteur": "libellé court, ex. Insurtech · cyber des PME", "pitch": "une phrase", "verdict": "etudier|surveiller|ecarter", "verdictTexte": "2 à 4 phrases qui justifient le verdict au regard de la thèse GVI", "confiance": "Élevé|Moyen|Faible",
+ "identite": [{"k": "Site", "v": "…"}, {"k": "Siège", "v": "…"}, {"k": "Création", "v": "…"}, {"k": "Stade", "v": "…"}, {"k": "Total levé", "v": "…"}, {"k": "Levée en cours", "v": "…"}, {"k": "Effectif", "v": "…"}, {"k": "Fondateurs", "v": "…"}, {"k": "Domaine GVI", "v": "…"}, {"k": "Lien avec Groupama", "v": "…"}],
+ "notes": {${RAW.grille.map(g => `"${g.cle}": {"note": 1, "commentaire": "…"}`).join(', ')}},
+ "sections": [{"titre": "Secteur & marché", "points": ["…"]}, {"titre": "Produit & technologie", "points": ["…"]}, {"titre": "Management", "points": ["…"]}, {"titre": "Traction & finances", "points": ["…"]}, {"titre": "Levée & valorisation", "points": ["…"]}, {"titre": "Points de vigilance", "points": ["…"]}],
+ "questions": ["5 à 8 questions précises à poser à la société"]`;
 function prompt(f, docs, legendes){
-  const grille = RAW.grille.map(g => `- ${g.cle} — ${g.titre} : ${g.question}`).join('\n');
   const corps = docs.map((d, i) => `=== Document ${i + 1} : ${d.nom} ===\n${d.texte}`).join('\n\n');
-  return `Tu es analyste d'investissement chez Groupama Vol'terre Investissement (GVI), le fonds de corporate venture capital du groupe Groupama, assureur mutualiste français (assurance agricole, auto, habitation, santé et prévoyance, assurance des professionnels et des collectivités, banque, prévention, gestion des sinistres, distribution par réseaux d'agences). GVI investit en Seed – Série A dans des start-up insurtech ou adjacentes, principalement européennes, et cherche des synergies avec les métiers de Groupama.
+  return `${contexteGVI()}
 
 Tâche : rédiger une PRÉ-ANALYSE rapide de la société ci-dessous, pour décider si l'équipe GVI doit l'étudier. Appuie-toi d'abord sur les documents fournis.
 
 Règles absolues :
-- N'invente rien. Un chiffre, un nom, une date n'apparaît que s'il figure dans les documents ou si tu le connais avec certitude ; sinon écris « non trouvé ».
-- Indique l'origine de chaque fait : tiré des documents → suffixe « (doc.) » ; tiré de tes connaissances générales → suffixe « (à vérifier) ». Les affirmations de la société (projections, taille de marché, valorisation visée) sont présentées comme déclaratives (« selon la société »).
+${REGLES}
+- Indique l'origine de chaque fait : tiré des documents → suffixe « (doc.) » ; tiré de tes connaissances générales → suffixe « (à vérifier) ».
 - Tu n'as pas accès au web : ne cite aucune URL ni aucun article.
-- Montants : ajoute l'équivalent en M€ entre parenthèses ($ × 0,92 ; £ × 1,17).
-- Dates : n'indique pas de mois que les documents ne donnent pas.
-- Français, ton factuel et concis, sans superlatifs. Points de 1 à 2 phrases.
-
-Grille de scoring GVI (note 1 = faible, 2 = moyen, 3 = fort ; null si l'information manque) :
-${grille}
-
-Verdict :
-- "etudier" : correspond à la thèse GVI et au stade, signaux positifs → l'équipe devrait l'étudier en détail ;
-- "surveiller" : intéressant mais trop tôt, hors fenêtre de financement ou trop d'informations manquantes → à suivre ;
-- "ecarter" : hors thèse, hors stade ou signaux négatifs.
-"confiance" reflète la qualité de l'information disponible : "Élevé", "Moyen" ou "Faible".
 
 Réponds UNIQUEMENT par un objet JSON de cette forme :
-{"nom": "…", "secteur": "libellé court, ex. Insurtech · cyber des PME", "pitch": "une phrase", "verdict": "etudier|surveiller|ecarter", "verdictTexte": "2 à 4 phrases qui justifient le verdict", "confiance": "Élevé|Moyen|Faible",
- "identite": [{"k": "Site", "v": "…"}, {"k": "Siège", "v": "…"}, {"k": "Création", "v": "…"}, {"k": "Stade", "v": "…"}, {"k": "Total levé", "v": "…"}, {"k": "Levée en cours", "v": "…"}, {"k": "Effectif", "v": "…"}, {"k": "Fondateurs", "v": "…"}],
- "notes": {${RAW.grille.map(g => `"${g.cle}": {"note": 1, "commentaire": "…"}`).join(', ')}},
- "sections": [{"titre": "Secteur & marché", "points": ["…"]}, {"titre": "Produit & technologie", "points": ["…"]}, {"titre": "Management", "points": ["…"]}, {"titre": "Traction & finances", "points": ["…"]}, {"titre": "Levée & valorisation", "points": ["…"]}, {"titre": "Points de vigilance", "points": ["…"]}],
- "questions": ["5 à 8 questions précises à poser à la société"]}
+${SCHEMA()}}
 
 Société : ${f.nom}
 Site : ${f.site || 'non fourni'}
@@ -498,7 +517,9 @@ function nettoyer(r, f, noms){
     notes,
     sections: (Array.isArray(r.sections) ? r.sections : []).map(s => ({titre: txt(s && s.titre, ''), points: (Array.isArray(s && s.points) ? s.points : []).filter(p => typeof p === 'string' && p.trim())})).filter(s => s.titre && s.points.length),
     questions: (Array.isArray(r.questions) ? r.questions : []).filter(q => typeof q === 'string' && q.trim()),
-    documentsFournis: noms, sources: [],
+    documentsFournis: noms, site: (f.site || '').trim(),
+    sources: (Array.isArray(r.sources) ? r.sources : []).filter(x => x && typeof x.url === 'string' && /^https?:\/\//.test(x.url))
+      .map(x => ({titre: txt(x.titre, x.url), media: txt(x.media, ''), date: txt(x.date, ''), url: x.url})),
   };
 }
 const ERREURS = {
@@ -535,6 +556,7 @@ async function lancer(){
     });
     if (!r || typeof r !== 'object' || Array.isArray(r)) throw {code: 'invalid_json'};
     const fiche = nettoyer(r, f, noms);
+    fiche.sources = [];
     S.enCours = null;
     let enregistree = false;
     if (DB && PEUT_ECRIRE !== false) {
@@ -558,6 +580,13 @@ async function lancer(){
 function alerteFiche(t){
   const top = document.querySelector('.sheet-top');
   if (top) top.insertAdjacentHTML('afterend', `<div class="note-page" role="status">${esc(t)}</div>`);
+}
+
+/* ---------- Vérification web : faite dans la conversation Claude du projet, qui met la fiche à jour ---------- */
+const jour = iso => { try { return new Date(iso).toLocaleDateString('fr-FR'); } catch (_) { return ''; } };
+function bandeauWeb(a){
+  if (a.origine === 'web') return `<div class="note-page">Fiche vérifiée et complétée sur le web le ${esc(jour(a.web && a.web.fin))}. Faits marqués « (doc.) » : documents fournis ; « (web) » : sources en ligne listées en bas ; « (à vérifier) » : non confirmés.</div>`;
+  return `<div class="note-page">Fiche produite à partir des seuls documents fournis, pas encore vérifiée sur le web. Faits marqués « (doc.) » : documents ; « (à vérifier) » : connaissances générales. Pour la vérifier et la compléter avec des sources, demandez-le dans la conversation Claude du projet (« vérifie ${esc(a.nom)} »).</div>`;
 }
 
 /* ---------- Événements ---------- */
