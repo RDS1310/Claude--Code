@@ -1,13 +1,13 @@
 # Radar Insurtech — project guide for Claude
 
-Suite of 4 web pages built for Rui (Groupama Vol'terre Investissement, GVI — Groupama's CVC) to track European insurtech VC/CVC funds, their portfolio companies, GVI's start-up pipeline, news, and insurance M&A.
+Suite of 5 web pages built for Rui (Groupama Vol'terre Investissement, GVI — Groupama's CVC) to track European insurtech VC/CVC funds, their portfolio companies, GVI's start-up pipeline, news, and insurance M&A.
 
 ## Working with this user
 - Chat in **English**. Everything on the pages stays in **French**. The user writes in both.
 - The user is **cost-sensitive** (Claude plan credits). Be lean: no repo exploration beyond what the task needs, no re-reading history, answer simple questions without tools, and don't burn cloud-session credits on simple writing tasks.
 - Prefer one validated publish over several speculative ones.
 
-## The 4 pages (Claude Artifacts, shared by link)
+## The 5 pages (Claude Artifacts, shared by link)
 
 | Page | Artifact URL | Data | Generator | Template |
 |---|---|---|---|---|
@@ -15,11 +15,15 @@ Suite of 4 web pages built for Rui (Groupama Vol'terre Investissement, GVI — G
 | Stratégie & Pipe GVI | https://claude.ai/artifact/58n6yRVTLgDuhavqhxihGn | `gvi_data/GVI_Status_Report_Startups.xlsx` (tab `Start-up`) | `generer_page_gvi.py` → `gvi_strategie_pipe.html` | `_gvi_template.html` |
 | Veille Insurtech | https://claude.ai/artifact/5FXTpkCo6KvGu6YyeYAHiw | `veille_data/entries.json` | `generer_page_veille.py` → `veille_insurtech.html` | `_veille_template.html` |
 | Étude M&A Assurance | https://claude.ai/artifact/BPSeTnKnWY2PkAGcH5s2ai | `ma_data/deals.json` | `generer_page_ma.py` → `etude_marche_ma.html` | `_ma_template.html` |
+| Analyses GVI (private, internal) | https://claude.ai/artifact/Mor6DTNTSbekT4irHSLyJe | `analyses_data/analyses.json` | `generer_page_analyses.py` → `analyses_gvi.html` | `_analyses_template.html` |
 
-Each page embeds its data as JSON (`window.__DATA__`) in a static HTML file. A cross-nav bar links the 4 pages.
+Each page embeds its data as JSON (`window.__DATA__`) in a static HTML file. A cross-nav bar links the 5 pages.
 
 ### Radar Insurtech VC — tabs
 Fonds (fund sheets: key figures, stages, contacts, participations, news, sources) · Start-ups · Comparateur · Tendances (stacked bars by year × 8 sectors + country breakdown) · Fiabilité (only the exceptions: participations with confidence below Élevé, with their reason, + ~42 open points from the Anomalies sheet — divergences, homonymy risks, approximate/unconfirmed values; types listed in `TYPES_POINTS_OUVERTS` in `generer_site_vc.py`). The full Anomalies log stays in the Excel only (replaced the old Anomalies tab on 02/10, user found it unhelpful). Rail filters include a Récence filter (news-based for funds, year-based for start-ups).
+
+### Analyses GVI — quick screening sheets
+On request, the user sends a start-up name/site/docs in chat; Claude researches (WebSearch, ≤ a few searches), adds one entry to `analyses_data/analyses.json`, regenerates, publishes. Entry: `verdict` (`etudier` / `surveiller` / `ecarter`) + `verdictTexte`, `confiance`, `identite`, `notes` on the 6 GVI criteria of the `grille` (sponsorship, equipe, marche, tech, traction, finance — note 1–3 or null), `sections` (secteur, financements, management, produit…), `questions` for the team, `documentsFournis`, `sources`. Same data rules: no fabrication, "non trouvé". Klaimee is the first example (À surveiller).
 
 ## Data model (Excel, 5 sheets)
 `Fonds` (125 vehicles, 67 cols) · `Participations` (263) · `Tours_de_table` (58) · `Dictionnaire` (106 fields) · `Anomalies` (341, IDs `ANO-0001`…).
@@ -50,6 +54,7 @@ Site tokens: petrol `#0C5C5E`, ochre `#A8681F`, Newsreader (display) + IBM Plex 
 - **Claude routines** (fresh session per run):
   - weekly veille `trig_01C8tsihdPN4XackPZwGAsq7`, Mondays 06:00 UTC — since 02/10 it reads the raw files since `derniereMaj` (≤3 WebSearch), verifies, updates `entries.json`, republishes, and reports feed health + M&A leads; falls back to roundup WebSearch if no raw files. (The 28/09 run found nothing reliable and correctly pushed nothing, ~$1.90 / 38 searches.) 05/10 run: added 2 entries (~$0.41) and published, but its push got 403 (add_repo without push access) — entries merged back by hand on 05/10; prompt now requires `access: "push"` and push-before-publish.
   - monthly M&A `trig_013VoXmnanak2NpoDXPuPUU1`, 1st of the month 06:00 UTC.
+  - **Known issue (unresolved)**: routine sessions can't push — 403, the repo isn't among the routine's sources and `add_repo` isn't available there (19/10 run). The 01/10 M&A and 05/10–19/10 Veille runs published live pages without pushing; their data was merged back into the repo by hand on 19/10. Fix: add `RDS1310/Claude--Code` as a source of both routines (with push access) from the routine settings. Until then, before regenerating Veille/M&A, read the live artifact and merge its data.
 - **n8n** (user's trial, being retired): workflow `fetch_news` and an agent with a knowledge base — superseded by the GitHub Actions collection.
 
 ## Open items

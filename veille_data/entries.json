@@ -1,6 +1,24 @@
 {
  "entries": [
   {
+   "date": "08/10/2026",
+   "type": "fonds",
+   "titre": "Allianz X co-mène le tour de 200 M$ de Ledgebrook",
+   "resume": "L'assureur spécialisé IA de Boston lève 200 M$ en fonds propres, co-menés par Allianz X, pour étendre sa souscription de risques commerciaux complexes aux États-Unis.",
+   "source": "FinTech Global",
+   "url": "https://fintech.global/2026/10/08/ledgebrook-raises-200m-to-scale-ai-underwriting-for-complex-risks/",
+   "theme": "Levées de fonds"
+  },
+  {
+   "date": "07/10/2026",
+   "type": "startup",
+   "titre": "Konsileo lève 5,9 M€ auprès de Committed Capital et ACF Investors",
+   "resume": "Le courtier britannique, qui emploie plus de 220 personnes et place plus de 85 M£ de primes par an, boucle un tour en fonds propres mené par ses actionnaires historiques Committed Capital, avec ACF Investors, après 3,2 M€ levés en avril.",
+   "source": "EU-Startups",
+   "url": "https://www.eu-startups.com/2026/10/uk-based-insurtech-konsileo-raises-e5-9-million-to-expand-its-team-and-integrate-ai/",
+   "theme": "Levées de fonds"
+  },
+  {
    "date": "01/10/2026",
    "type": "fonds",
    "titre": "Zurich Insurance Group finalise le rachat de Beazley (8,1 Md£)",
@@ -127,7 +145,7 @@
    "theme": "Closings de fonds"
   }
  ],
- "derniereMaj": "05/10/2026",
- "prochaine": "12/10/2026",
+ "derniereMaj": "12/10/2026",
+ "prochaine": "19/10/2026",
  "frequence": "Hebdomadaire (lundi)"
 }
