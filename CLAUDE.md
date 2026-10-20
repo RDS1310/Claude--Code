@@ -11,7 +11,7 @@ Suite of 5 web pages built for Rui (Groupama Vol'terre Investissement, GVI — G
 
 | Page | Artifact URL | Data | Generator | Template |
 |---|---|---|---|---|
-| Radar Insurtech VC | https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g | `VC_Database_Standardisee_vN.xlsx` (latest N auto-detected, currently v26) | `generer_site_vc.py` → `radar_insurtech_vc.html` | `_site_template.html` |
+| Radar Insurtech VC | https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g | `VC_Database_Standardisee_vN.xlsx` (latest N auto-detected, currently v27) | `generer_site_vc.py` → `radar_insurtech_vc.html` | `_site_template.html` |
 | Stratégie & Pipe GVI | https://claude.ai/artifact/58n6yRVTLgDuhavqhxihGn | `gvi_data/GVI_Status_Report_Startups.xlsx` (tab `Start-up`) | `generer_page_gvi.py` → `gvi_strategie_pipe.html` | `_gvi_template.html` |
 | Veille Insurtech | https://claude.ai/artifact/5FXTpkCo6KvGu6YyeYAHiw | `veille_data/entries.json` | `generer_page_veille.py` → `veille_insurtech.html` | `_veille_template.html` |
 | Étude M&A Assurance | https://claude.ai/artifact/BPSeTnKnWY2PkAGcH5s2ai | `ma_data/deals.json` | `generer_page_ma.py` → `etude_marche_ma.html` | `_ma_template.html` |
@@ -33,7 +33,9 @@ Grille + doctrine follow GVI's external deck (Sept. 2026): criteria titles/quest
 Local test harness for the upload flow (mocked `window.claude`, libs from npm): scratchpad only, not committed.
 
 ## Data model (Excel, 5 sheets)
-`Fonds` (125 vehicles, 67 cols) · `Participations` (263) · `Tours_de_table` (58) · `Dictionnaire` (106 fields) · `Anomalies` (341, IDs `ANO-0001`…).
+`Fonds` (126 vehicles, 67 cols) · `Participations` (325) · `Tours_de_table` (58) · `Dictionnaire` (106 fields) · `Anomalies` (347, IDs `ANO-0001`…).
+
+v27 (20/10/2026, `maj_radar_v27.py` + `radar_refresh/portefeuille_sagard_2026_10.json`): full Portage (Sagard) portfolio from sagard.com — 62 rows added to Portag3 Venture I/II/III, Portage Ventures IV and the new vehicle **Portage Capital Solutions I** (PCS I). Sagard publishes no date/amount/stage (left empty); "previous" = Exit O. Non-insurance companies are kept but labelled `FinTech (hors assurance)` / `Hors périmètre assurance`; `secteur_bucket` excludes any label containing "hors" from Tendances (ANO-0342…0347).
 
 Last full web refresh: 02/10/2026 → v24 (`maj_radar_v24.py` applies the verified findings stored in `radar_refresh/maj_2026_10.json`: 6 new vehicles, Munich Re Ventures closed to new investments, 2 participations, Alan valuation, 5 news items). Next refresh: same pattern (findings JSON + saved script → vN+1).
 
@@ -62,6 +64,7 @@ Site tokens: petrol `#0C5C5E`, ochre `#A8681F`, Newsreader (display) + IBM Plex 
   - weekly veille `trig_01C8tsihdPN4XackPZwGAsq7`, Mondays 06:00 UTC — since 02/10 it reads the raw files since `derniereMaj` (≤3 WebSearch), verifies, updates `entries.json`, republishes, and reports feed health + M&A leads; falls back to roundup WebSearch if no raw files. (The 28/09 run found nothing reliable and correctly pushed nothing, ~$1.90 / 38 searches.) 05/10 run: added 2 entries (~$0.41) and published, but its push got 403 (add_repo without push access) — entries merged back by hand on 05/10; prompt now requires `access: "push"` and push-before-publish.
   - monthly M&A `trig_013VoXmnanak2NpoDXPuPUU1`, 1st of the month 06:00 UTC.
   - **Push blockage worked around (19/10)**: routine sessions can't push (403 — the repo isn't among their sources and `add_repo` isn't available there; the trigger API can't add sources). Both routine prompts were rewritten: clone read-only → `Artifact read` of the live page → `python3 fusion_depuis_live.py veille|ma <live.html>` (newest `derniereMaj` wins; veille also unions entries by url) → update → regenerate → publish, **no commit/push**. The live page is the reference; **in any session, before regenerating Veille or M&A, read the live artifact and run `fusion_depuis_live.py`, then commit** — that's how the repo catches up. (Adding `RDS1310/Claude--Code` as a push source in the routines' settings on claude.ai would remove the need, but isn't required anymore.)
+- **Fetching blocked websites**: `.github/workflows/recuperer_pages.yml` — put URLs (one per line) in `outils/pages_a_recuperer.txt` and push; GitHub Actions downloads them into `outils/pages/` (+ `_journal.txt` with HTTP codes) and commits (~1 min). Used for sagard.com (WordPress REST: `/wp-json/wp/v2/projects?per_page=100&page=N`, fund tags in `class_list` `cat_source-pv1…`). Wait with a background `git fetch` loop, not sleep.
 - **n8n** (user's trial, being retired): workflow `fetch_news` and an agent with a knowledge base — superseded by the GitHub Actions collection.
 
 ## Open items

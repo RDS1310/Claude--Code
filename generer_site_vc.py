@@ -276,6 +276,7 @@ ADJACENT_SOUS_SECTEUR = {
     "Claims Carbon (Claims Carbon Institute)": "climat", "Sourse (ex-Stratos Solution)": "climat",
     "Cape Analytics": "climat", "NeuWave": "climat",
     # Santé & prévoyance
+    "Ansel": "sante", "Dialogue": "sante",
     "DeinePflege": "sante", "HealthCaters": "sante", "Grace": "sante", "Bliss (Saúde Bliss)": "sante",
     "Human API": "sante", "ifeel": "sante", "iBeat": "sante", "Osigu": "sante", "Ninebarc": "sante",
     # Télématique, mobilité & prévention IoT
@@ -284,8 +285,10 @@ ADJACENT_SOUS_SECTEUR = {
     "ShipIn Systems": "telematique", "Cocoon": "telematique", "Roost": "telematique",
     "Champ Titles": "telematique", "Linkbycar": "telematique",
     # Emploi & avantages sociaux
+    "Happl": "emploi", "Benepass": "emploi",
     "Coverflex": "emploi", "Thatch": "emploi", "Limelight Health": "emploi", "Family First": "emploi",
     # Data, IA & distribution
+    "Socotra": "data", "Xceedance": "data", "Elysian": "data",  # portefeuille Portage (Sagard), 20/10/2026
     "MiTrust": "data", "Complero": "data", "Bdeo": "data", "Digital Fineprint": "data", "Widmee": "data",
     "Zelros": "data", "WeGroup": "data", "Particeep": "data", "AlloBrain": "data", "Indico Data": "data",
     "Shepper": "data", "Certificall": "data", "Notch (notch.cx)": "data", "Ai5": "data", "Protex AI": "data",
@@ -301,6 +304,8 @@ def secteur_bucket(v, startup=None):
     if est_vide(v):
         return None
     s0 = str(v).split("/")[0].strip().lower()
+    if "hors" in s0:  # « FinTech (hors assurance) », « Hors périmètre assurance » : hors du graphique
+        return None
     if "adjacent" in str(v).lower():
         return ADJACENT_SOUS_SECTEUR.get(str(startup).strip()) if startup is not None else None
     if "fintech" in s0:
