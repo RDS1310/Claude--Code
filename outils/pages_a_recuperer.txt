@@ -1,4 +1,6 @@
 # Une URL par ligne
-https://www.sagard.com/fr/portefeuille/
-https://www.sagard.com/portfolio/
-https://www.sagard.com/fr/a-propos-de-portage/
+https://www.sagard.com/wp-content/themes/sagard/build/js/bundle.js
+https://www.sagard.com/wp-json/wp/v2/types
+https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100
+https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100&page=2
+https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100&page=3
