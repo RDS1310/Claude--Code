@@ -1,0 +1,4 @@
+# Une URL par ligne
+https://www.sagard.com/fr/portefeuille/
+https://www.sagard.com/portfolio/
+https://www.sagard.com/fr/a-propos-de-portage/

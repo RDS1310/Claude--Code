@@ -1,0 +1,30 @@
+# Télécharge des pages web inaccessibles depuis les sessions Claude (sites de fonds bloqués par le proxy).
+# Usage : lister une URL par ligne dans outils/pages_a_recuperer.txt, pousser ; les pages arrivent dans outils/pages/.
+name: Récupérer des pages web
+on:
+  push:
+    paths: ['outils/pages_a_recuperer.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recuperer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Télécharger
+        run: |
+          mkdir -p outils/pages
+          grep -v '^\s*#' outils/pages_a_recuperer.txt | grep -v '^\s*$' | while read -r url; do
+            nom=$(echo "$url" | sed -E 's#^https?://##; s#[^A-Za-z0-9._-]+#_#g' | cut -c1-120)
+            curl -sSL -m 60 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" \
+              -o "outils/pages/$nom.html" -w "$url -> %{http_code} %{size_download}\n" "$url" || echo "$url -> échec"
+          done | tee outils/pages/_journal.txt
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outils/pages
+          git diff --cached --quiet && exit 0
+          git commit -m "Pages récupérées ($(date -u +%F))"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
