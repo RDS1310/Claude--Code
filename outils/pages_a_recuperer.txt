@@ -1,6 +1,5 @@
 # Une URL par ligne
-https://www.sagard.com/wp-content/themes/sagard/build/js/bundle.js
-https://www.sagard.com/wp-json/wp/v2/types
-https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100
-https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100&page=2
-https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100&page=3
+https://www.sagard.com/wp-json/wp/v2/taxonomies
+https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=1
+https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=2
+https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=3
