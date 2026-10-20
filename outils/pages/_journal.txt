@@ -1,0 +1,5 @@
+https://www.sagard.com/wp-content/themes/sagard/build/js/bundle.js -> 200 173322
+https://www.sagard.com/wp-json/wp/v2/types -> 200 21982
+https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100 -> 404 114
+https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100&page=2 -> 404 114
+https://www.sagard.com/wp-json/wp/v2/portfolio?per_page=100&page=3 -> 404 114
