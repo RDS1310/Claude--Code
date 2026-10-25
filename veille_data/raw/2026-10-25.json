@@ -1,0 +1,427 @@
+{
+ "collecte": "2026-10-25T10:10:18+00:00",
+ "fenetreJours": 2,
+ "nbArticles": 15,
+ "nbAvecNomSuivi": 0,
+ "flux": {
+  "EU-Startups": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Tech.eu": {
+   "ok": false,
+   "erreur": "HTTP Error 403: Forbidden"
+  },
+  "Sifted": {
+   "ok": true,
+   "items": 24,
+   "retenus": 0
+  },
+  "Maddyness": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "FinSMEs": {
+   "ok": true,
+   "items": 7,
+   "retenus": 0
+  },
+  "Finextra": {
+   "ok": true,
+   "items": 53,
+   "retenus": 0
+  },
+  "FinTech Global": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Coverager": {
+   "ok": true,
+   "items": 10,
+   "retenus": 4
+  },
+  "Insurtech Insights": {
+   "ok": true,
+   "items": 11,
+   "retenus": 0
+  },
+  "Reinsurance News": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Artemis": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Insurance Journal": {
+   "ok": true,
+   "items": 30,
+   "retenus": 0
+  },
+  "Claims Journal": {
+   "ok": true,
+   "items": 15,
+   "retenus": 0
+  },
+  "Insurance Times": {
+   "ok": true,
+   "items": 100,
+   "retenus": 5
+  },
+  "News Assurances Pro": {
+   "ok": true,
+   "items": 59,
+   "retenus": 0
+  },
+  "L'Argus de l'assurance": {
+   "ok": true,
+   "items": 91,
+   "retenus": 2
+  },
+  "FrenchWeb": {
+   "ok": true,
+   "items": 23,
+   "retenus": 0
+  },
+  "CFNEWS": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Décideurs Corporate Finance": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "Les Echos Start": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Journal du Net": {
+   "ok": true,
+   "items": 22,
+   "retenus": 0
+  },
+  "Siècle Digital": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Dynamique Mag": {
+   "ok": true,
+   "items": 5,
+   "retenus": 0
+  },
+  "Entreprendre": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "BFM Business": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "L'Agefi": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Revue Banque": {
+   "ok": true,
+   "items": 37,
+   "retenus": 0
+  },
+  "La Tribune de l'Assurance": {
+   "ok": true,
+   "items": 67,
+   "retenus": 3
+  },
+  "L'Usine Digitale": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "LeMagIT": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "Le Monde Informatique": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "CIO Online": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ZDNet.fr": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "Silicon.fr": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "ActuIA": {
+   "ok": true,
+   "items": 56,
+   "retenus": 0
+  },
+  "IT for Business": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Alliancy": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Solutions Numériques": {
+   "ok": true,
+   "items": 7,
+   "retenus": 0
+  },
+  "InformatiqueNews": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "L'Informaticien": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Distributique": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ChannelNews": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Decideo": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "IT Social": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "LeBigData.fr": {
+   "ok": true,
+   "items": 67,
+   "retenus": 0
+  },
+  "GN insurtech funding": {
+   "ok": true,
+   "items": 55,
+   "retenus": 1
+  },
+  "GN insurtech raises": {
+   "ok": true,
+   "items": 18,
+   "retenus": 0
+  },
+  "GN assurtech levée": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "GN CVC assureur": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN M&A assurance": {
+   "ok": true,
+   "items": 15,
+   "retenus": 0
+  }
+ },
+ "articles": [
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Le Finistère Assurance soutient Kieran Le Borgne sur la route du rhum, à la barre du voilier doublement vainqueur du Vendée Globe - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi7gJBVV95cUxQQ3BfUjAzWHJiZEl1UHQxdkVZSkZ6TXhoYU5aanhncVEtdFpWQVA2QTV4TmFGSE9HVTFFbE1rcmhpa1AzS0J0WUJacThiWUgyRi1sd21aaU5iMHdNWk9iMnVGY3pWQ0dDNV9fZTcweGpkZ3o1NWNmakhtTld0RG5TTE1tbUVMZ19wbmhKMlAwaWVOMTFXbmJEM1pFRnBrTlJqT2d5YUk0d0ZfNUFtZUNNeWZuRzZpUTdNSUVUU3hVcE56WXJIdkFWNUtoY3E1Qm9xSjY1VG9HNnVoNk1pT3J3cHA5bXAxdUNzX1RxVXZHOWxFaVBUaFNJQnpZemdzdFlrbDl6NUpsTkdSOGZZb3pQZUlxMFo5dW16bTZzSnBhREJYVFpsYklvM2NlM2dwQnFDbEtqanVBWFloUEpBUENjWVdXeDYzRnVURk50bEhZTGktY2tFU1Y4TEZ2bzNsR2RzOEYwdHlQRzJ4LWxTT3c?oc=5",
+   "date": "2026-10-25",
+   "extrait": "Le Finistère Assurance soutient Kieran Le Borgne sur la route du rhum, à la barre du voilier doublement vainqueur du Vendée Globe L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "GEICO partners with Entegral on auto claims technology",
+   "lien": "https://coverager.com/geico-partners-with-entegral-on-auto-claims-technology/",
+   "date": "2026-10-24",
+   "extrait": "The goal is to give policyholders and repair partners greater visibility from claim reporting through vehicle repair. The post GEICO partners with Entegral on auto claims technology appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "claims",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Gallagher acquires Texas benefits agency Mund Group",
+   "lien": "https://coverager.com/gallagher-acquires-texas-benefits-agency-mund-group/",
+   "date": "2026-10-24",
+   "extrait": "The Mund Group provides benefits consulting and health and welfare program solutions to businesses across Texas. The post Gallagher acquires Texas benefits agency Mund Group appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Atlian raises pre-seed funding for construction insurance software",
+   "lien": "https://coverager.com/atlian-raises-pre-seed-funding-for-construction-insurance-software/",
+   "date": "2026-10-24",
+   "extrait": "The company plans to onboard its first brokers in November. The post Atlian raises pre-seed funding for construction insurance software appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "broker",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Readily raises $11 million Series A",
+   "lien": "https://coverager.com/readily-raises-11-million-series-a/",
+   "date": "2026-10-24",
+   "extrait": "L.A. Care Health Plan is among the organizations working with Readily. The post Readily raises $11 million Series A appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sonia Habib: Kovrilo launch followed a decade of refusing to accept ‘a limit in the sky’ - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMickFVX3lxTE93ZTRyLTFRUFVDczVLWWxzZ3lfM2FVZjlTM2pSRWcxN1JGeldXTmJWM3ZhcUxPSGM1OXhCOWlPdDRhYklHWEhNZF83MGFBRldHVElYSU1QYl8xMk5wZ3MzLXNWbl8ydU9TWm9rcHB0ZTV3dw?oc=5",
+   "date": "2026-10-24",
+   "extrait": "Sonia Habib: Kovrilo launch followed a decade of refusing to accept ‘a limit in the sky’ Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Gestionnaire d'indemnisation H/F CREDIT AGRICOLE ASSURANCES Villeneuve d'Ascq CDD - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQd3JEeG80NXBtUDU3ZWhWTDZGaVY3VW8tQ3FIVU8tb1d3OEZMcDBmTGJTLXR6bVNJdU1GMlZucGxROTZxMERQN0prTlB1NVc1LXV4eEhIemFPeFpLTzFKTkx0bnFRQmlzTS16TzJyVTNlUFdmNzRqelVLbTFxNllsZm9KaGEyUUVuSVUtUlE2a1B4dUVWZVozZ2c0WVVsQmtLWnhZOExxV0hmeTNhWFhFV2toYWlyS2ZnT2JlX1dYUTE0b0NvakRPQw?oc=5",
+   "date": "2026-10-24",
+   "extrait": "Gestionnaire d'indemnisation H/F CREDIT AGRICOLE ASSURANCES Villeneuve d'Ascq CDD L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "VC funding deals: Slingshot Insurance, BOB AI Holdings, Nirva - InfotechLead",
+   "lien": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNR0xaZ2J6SEMyMEpMbzFWamdkY2ZHZk5hTDlsNk9QZHVidUZPSzFialBGalZmNzBFelo0YjhfUEV0bklHcm50TG8wb0hhSVItQWcwWEkxMXEwa0NyX0wyeVhISVB1MENMSXFBMGtScnF4alhZa0ZwZ19SbzJtMmg2bU12NkYzYW15bDhQRUc2NXZqekVDRjVqb1hB0gGiAUFVX3lxTE44NlU0TGxRa2lCeGZkYXZxdktwRkNTMjJhelduNXZOUVBSdXNhOGlRMURmcGRremtxSVFzbWR1eEFHeWEtRFF5V1ZQX1JIUHBqUjJNcWw5ZDJBdXlyVWthdFlzeDBtcF9Udk83SDBnMlZKU0hvT0RqNUV0dTVfS0NqMFVneVZWMTc4WDA2dUczR0xyaTQ5YTNCTjNQVnVtOWlFQQ?oc=5",
+   "date": "2026-10-24",
+   "extrait": "VC funding deals: Slingshot Insurance, BOB AI Holdings, Nirva InfotechLead",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOeTBLeFAwNWFFZFVHY01wNDh4NDlkZDFsYWZSS3dJWUJROHVnRlNoMkRJVl9ONjY1c2xobFJNTE5hUEk4YVVJd2ptUjNyUG5TV1pEaHN4WmJnMk1ZSlRhVTlBSW1UMngweFRuRUVZTTVraWJkck4xc3poMW0zeXR2ZHpPR2RhR0hOX1ZQR2RSaWtiNWp4Q005M3hESGgxTXM2eGpFa1dDdjBXcXI3TnVncXVyZmZuVTNCaWRBb1VaTGphdUJtMnEwN3h5LUtVbHpDOG45Vy04bjJOcnBEQ05xcTJBbFJ0Y01LREJRTC15dDJYekMxYTFwdU51MmVxZw?oc=5",
+   "date": "2026-10-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOOVlMSGtwZGxHQ1U4ZzhWaEg2Ql9RM1U3bE0tT0tUNGRBakgwcVJVd2MxMXBteGxKOVREQXBqVU1pODc1RFdwaFlFWU1WdlVQdlVGR0JhMWI3MnI2MmFBQTZabmxZTVp2STJ6Z2ZFNTNZcXcycnRpZnpJVXdkZ0dMeEZMUGhLT3YwWWdwLTNMRGFJMFFjVEk1ZG9KSkFoUUo5by1kWFhYNmVzYzdaenNsM2Jld1JJS2pTYVN6N3BDdG1xLUQwM0YyQ0g3a2dodENUWm9XYnFjb0I5aEV0ZThBQ1M3QWJUNFlfdWtGcXNfNVZBWTFBLXIxYU1OQkVxYnpVLWRLZXdKTlNlcWRNX1lXZ1BiamZBUHBOLVQycGJ1OTUtUQ?oc=5",
+   "date": "2026-10-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPVzAzOU90c0Q3b0pnZXhCanRnOXBIMWdiWHVMLTNQdldQZ01xNkFrQndoaGtCa21CMWhuSEIxSlA2TllVR29RbERNblBJVnhxNi1DOHZiZXZpeVEyU0ZZUXNxbUU1QnFUQjlTX2w0Ri1YN01HdlRIaXVPaG1uRERZeS0zNV9TSDRhMTF5X0Utb0JjaEtJaGpKVEdyNjI0YlR1b2pqRHdydl80MHdTbmxwRXNucDlWQUM5S2hpeFFFSTFBWTNRNWZBcldyeERYZW5FVmtmMWF1bk1CS3FzZGVvbENLcXRtdFpnUkczMDU4WTY2RlRMWXlyclRDbXRENzhPYVhxbzlaNXl4WkhQUmMwTQ?oc=5",
+   "date": "2026-10-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNN0l3TkFyb3pfRUNBdzNUQ1FQek9QNmp2QkFsYWpjbHVaSGZaLUd2SThKU2ZoaC1RMUgyNjEwejk1OFd5YWYxcDBUU3JRY1FhNzd3WVdqOW5MamVBUDBvb2JOS2pqMjR4SC1WTlNVVEN5ZjJxcU5QYWJaaHNHZ0doaElLZzkzWVRDNlJSN21qZmlpNWh5NWJGYWlhT1NuVjVSZi0xdHBBV0dGTlFwMUpUbGt1b2FuVWR2Yzg2Qm9yMGhXRGhua0tyZF85VG10T19RVVh6MmVPNnBfTHp3M0tDWTJuRWxiS0pFVmVUNmFGT0NQeWpVRlBmR21ib25qb2EwS043eFhNSTRJel9aSnd5NnpIaC1panJYNHpzMGdPVVNrTXM4a3UyQ0ZkdXM1SlA1S3hTdUViU00wZUlKTmwtcU1ycktERWZUQ3hFQg?oc=5",
+   "date": "2026-10-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Intact Insurance Europe renforce sa gouvernance et son équipe de direction - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQclhpUjFZekZJakVGeWtqbUxtbG16Z1BMclhQRFRBRDFvTlRSVmxiOFU5ZWZqQnlzNDRLbS1Scm9mSkk4a2JqR0RubFc1U3FObkxTaFBpUGpaZ0VydlRxdC00QVdQVU0xNDgxTFZzUHBIY05Sdi1QN3BjU3UxN0tDVVVyTDB2NlNmTVBnUVN0UW5WNkJNcVdOUkEycENJUllEQVIzcWxKU2JHMDRxXzJOdXkxTktGQ2xXSzBHcFYweV85bDEtdVFhNFNhTTgtVTlhelM5TGdTQWxvZXFX?oc=5",
+   "date": "2026-10-23",
+   "extrait": "Intact Insurance Europe renforce sa gouvernance et son équipe de direction La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "USA : la confiance des consommateurs de l'Université du Michigan recule moins que redouté en octobre - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPU19pcmJsVkJhVmZmd3JOc0xTWUtUY0EzWXZ2eng3OEk0bjQ5Z2NqZURTRXlQc0g1blRrWEVHVWdSZFh3bWpKTWRkMjZXNGl2SF9NVldJdEc3Tld0MndXazRvTUdXaXAzVkl1aVFpdmdCMzFEQmVodzZMT2M1MzRUM05PWGxSemZ0bVE2dm4zUHFTOTB4Z0pGazFrdVNJTUNTSGtVMVB0alRhcmE0OUJhcC15TTFHSGNnZjFZbXplVFd2LU5zS0RMQWphVF80N2RsWElwTTU2SlZJWWM0bUVBZ1VwNmVZUUtzRlZ6WUJuX1E2eGJVTDRuZmFPdw?oc=5",
+   "date": "2026-10-23",
+   "extrait": "USA : la confiance des consommateurs de l'Université du Michigan recule moins que redouté en octobre La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "USA : l'expansion du secteur privé ralentit, selon le PMI - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQamJ5YzNQQ1dCSWRic0RJczJVYjFxWnczeWVzckJBQWthVkFwRENYVjN1R0EydFdJemJ5NlItZXBOZnltUS1aaThPQkNRZzJCVFc1QVNmc2ZHSTd0eTJBUG4yLWlxYU8xeVRPQVBUbEFmTnFiUm9uRDFzUTRHUVBpWlJUNmEyelp4eUVfZVAweHZSSGhwUDhMZzFtMEpqcDJ4b2dSSUEwZmdpaWJuNXNYcjhTZFM1TWdJQW4xOHV5NFI?oc=5",
+   "date": "2026-10-23",
+   "extrait": "USA : l'expansion du secteur privé ralentit, selon le PMI La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  }
+ ]
+}
