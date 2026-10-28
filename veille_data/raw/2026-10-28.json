@@ -1,0 +1,1399 @@
+{
+ "collecte": "2026-10-28T11:39:59+00:00",
+ "fenetreJours": 2,
+ "nbArticles": 100,
+ "nbAvecNomSuivi": 6,
+ "flux": {
+  "EU-Startups": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Tech.eu": {
+   "ok": false,
+   "erreur": "HTTP Error 403: Forbidden"
+  },
+  "Sifted": {
+   "ok": true,
+   "items": 24,
+   "retenus": 0
+  },
+  "Maddyness": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "FinSMEs": {
+   "ok": true,
+   "items": 8,
+   "retenus": 0
+  },
+  "Finextra": {
+   "ok": true,
+   "items": 53,
+   "retenus": 2
+  },
+  "FinTech Global": {
+   "ok": true,
+   "items": 10,
+   "retenus": 5
+  },
+  "Coverager": {
+   "ok": true,
+   "items": 10,
+   "retenus": 9
+  },
+  "Insurtech Insights": {
+   "ok": true,
+   "items": 8,
+   "retenus": 2
+  },
+  "Reinsurance News": {
+   "ok": true,
+   "items": 10,
+   "retenus": 10
+  },
+  "Artemis": {
+   "ok": true,
+   "items": 10,
+   "retenus": 6
+  },
+  "Insurance Journal": {
+   "ok": true,
+   "items": 30,
+   "retenus": 8
+  },
+  "Claims Journal": {
+   "ok": true,
+   "items": 15,
+   "retenus": 3
+  },
+  "Insurance Times": {
+   "ok": true,
+   "items": 100,
+   "retenus": 10
+  },
+  "News Assurances Pro": {
+   "ok": true,
+   "items": 57,
+   "retenus": 10
+  },
+  "L'Argus de l'assurance": {
+   "ok": true,
+   "items": 85,
+   "retenus": 12
+  },
+  "FrenchWeb": {
+   "ok": true,
+   "items": 9,
+   "retenus": 0
+  },
+  "CFNEWS": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Décideurs Corporate Finance": {
+   "ok": true,
+   "items": 6,
+   "retenus": 0
+  },
+  "Les Echos Start": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Journal du Net": {
+   "ok": true,
+   "items": 18,
+   "retenus": 0
+  },
+  "Siècle Digital": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Dynamique Mag": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Entreprendre": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "BFM Business": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "L'Agefi": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Revue Banque": {
+   "ok": true,
+   "items": 37,
+   "retenus": 0
+  },
+  "La Tribune de l'Assurance": {
+   "ok": true,
+   "items": 100,
+   "retenus": 14
+  },
+  "L'Usine Digitale": {
+   "ok": true,
+   "items": 7,
+   "retenus": 0
+  },
+  "LeMagIT": {
+   "ok": true,
+   "items": 9,
+   "retenus": 0
+  },
+  "Le Monde Informatique": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "CIO Online": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ZDNet.fr": {
+   "ok": true,
+   "items": 5,
+   "retenus": 0
+  },
+  "Silicon.fr": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "ActuIA": {
+   "ok": true,
+   "items": 39,
+   "retenus": 0
+  },
+  "IT for Business": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Alliancy": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Solutions Numériques": {
+   "ok": true,
+   "items": 5,
+   "retenus": 0
+  },
+  "InformatiqueNews": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "L'Informaticien": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Distributique": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ChannelNews": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Decideo": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "IT Social": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "LeBigData.fr": {
+   "ok": true,
+   "items": 82,
+   "retenus": 0
+  },
+  "GN insurtech funding": {
+   "ok": true,
+   "items": 44,
+   "retenus": 5
+  },
+  "GN insurtech raises": {
+   "ok": true,
+   "items": 11,
+   "retenus": 1
+  },
+  "GN assurtech levée": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN CVC assureur": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN M&A assurance": {
+   "ok": true,
+   "items": 20,
+   "retenus": 3
+  }
+ },
+ "articles": [
+  {
+   "source": "FinTech Global",
+   "titre": "Conquest integrates AI financial advice engine with Claude",
+   "lien": "https://fintech.global/2026/10/28/conquest-integrates-ai-financial-advice-engine-with-claude/?utm_source=rss&utm_medium=rss&utm_campaign=conquest-integrates-ai-financial-advice-engine-with-claude",
+   "date": "2026-10-28",
+   "extrait": "Conquest, a Winnipeg-based FinTech specialising in verifiable AI-powered financial advice, has launched a connector integrating its planning technology with Claude for Financial Advisors, Anthropic’s offering for wealth management professionals. The integration uses the Model Context Protocol (MCP) ",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Conquest (participation)"
+   ]
+  },
+  {
+   "source": "FinTech Global",
+   "titre": "Lovey secures £250m Pollen Street facility for SME lending",
+   "lien": "https://fintech.global/2026/10/28/lovey-secures-250m-pollen-street-facility-for-sme-lending/?utm_source=rss&utm_medium=rss&utm_campaign=lovey-secures-250m-pollen-street-facility-for-sme-lending",
+   "date": "2026-10-28",
+   "extrait": "Birmingham-based FinTech Lovey has secured a senior secured credit facility of up to £250m from alternative asset manager Pollen Street Capital, marking the largest funding line in the SME lender’s history. The facility comprises £50m in committed capital and a £200m accordion, giving Lovey addition",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Committed Capital (fonds)"
+   ]
+  },
+  {
+   "source": "Coverager",
+   "titre": "Wealthsimple valued at C$13.8 billion in new funding round",
+   "lien": "https://coverager.com/wealthsimple-valued-at-c13-8-billion-in-new-funding-round/",
+   "date": "2026-10-28",
+   "extrait": "The company serves more than 4 million Canadians and over 30,000 businesses, and describes its business as profitable. The post Wealthsimple valued at C$13.8 billion in new funding round appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": [
+    "Wealthsimple (participation)"
+   ]
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "UCANSS : Alan et Allianz au chevet des agents de la Sécu - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc0VCQ2FKODJNNlhEM3JSYU5EMGZzY3RkVUdKcmxMclQ1Yi1YU0VWNkliZkJzSEctaTYxd080Zm1YLXhPZ0pUc0xSYW5ySF9aRnEyZGdfM0NDWGJvVFNaM1Jhak10R3hKR0pmNEJDNFRXSFliZkt2R1hRdU8tVV9FWDFzdmlkVnMzY3Rvdi0yUlZDNmU5T3RnY3ljM0VlTUY3dktFa1FyUUJxX1JJajl6Xw?oc=5",
+   "date": "2026-10-28",
+   "extrait": "UCANSS : Alan et Allianz au chevet des agents de la Sécu News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Alan (participation)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "Anthropic expands Claude for Financial Advisors with ne integrations",
+   "lien": "https://www.finextra.com/pressarticle/111473/anthropic-expands-claude-for-financial-advisors-with-ne-integrations?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-10-27",
+   "extrait": "Today, Anthropic announced the next phase of Claude for Financial Advisors, introducing new integrations with FINNY, Jump and Conquest that bring prospecting intelligence, client meeting context and financial planning capabilities directly into Claude.",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Conquest (participation)"
+   ]
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Agent Général Generali – F/H GENERALI Région Occitanie (Pyrénées-Méditerranée) Profession libérale - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNZ2o0OG5nc2c3QnJiaTNtay1KVnhzeVcxMDJsdExxaTBGRmgyTlFrSWt0MWZ1bUE0Nm5TMTVQVGV2XzZGZlpsNmdRTFVOckZ4MnRfaTVmM1lsMmNpWS1JWTlNc2JkV1d5dVRlNXNWeUhqRVdlMURQUEczQmZjUk9kQTh5RXloeUdoV2E3cGNQQmg1WXVEZXBIOEVuZ2VZLVExSUtlMklZbzRiNHlHaXpwY1Awell6eVhNMlZFSlI2Q0U?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Agent Général Generali – F/H GENERALI Région Occitanie (Pyrénées-Méditerranée) Profession libérale L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Generali (fonds)"
+   ]
+  },
+  {
+   "source": "FinTech Global",
+   "titre": "Webull Canada hands trading power to AI assistants",
+   "lien": "https://fintech.global/2026/10/28/webull-canada-hands-trading-power-to-ai-assistants/?utm_source=rss&utm_medium=rss&utm_campaign=webull-canada-hands-trading-power-to-ai-assistants",
+   "date": "2026-10-28",
+   "extrait": "Webull, the online investment platform and subsidiary of NASDAQ-listed Webull Corporation, has opened its brokerage accounts to AI assistants such as ChatGPT, Perplexity, Claude and Grok. Canadian investors can now research markets, check their holdings and submit trades through conversation, withou",
+   "motsCles": [
+    "broker"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Insurance Intake Goes Inbox-First as Canopy Connect Introduces Email Intake",
+   "lien": "https://coverager.com/insurance-intake-goes-inbox-first-as-canopy-connect-introduces-email-intake/",
+   "date": "2026-10-28",
+   "extrait": "Canopy Connect adds email to the ways prospects can share their insurance information. The new feature, Email Intake, lets a prospect send documents to an agent's dedicated address and have the structured data show up in the agent's dashboard. The post Insurance Intake Goes Inbox-First as Canopy Con",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Slide grows profit, expands credit facility to $1.07 billion",
+   "lien": "https://coverager.com/slide-grows-profit-expands-credit-facility-to-1-07-billion/",
+   "date": "2026-10-28",
+   "extrait": "It began writing residential business in Texas in October. The post Slide grows profit, expands credit facility to $1.07 billion appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "RenaissanceRe posts $161 million loss",
+   "lien": "https://coverager.com/renaissancere-posts-161-million-loss/",
+   "date": "2026-10-28",
+   "extrait": "The quarter was a mix of investment losses, a shrinking premium base and property reserve releases supporting underwriting profits. The post RenaissanceRe posts $161 million loss appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "GEICO partners with New York City Marathon",
+   "lien": "https://coverager.com/geico-partners-with-new-york-city-marathon/",
+   "date": "2026-10-28",
+   "extrait": "GEICO will also appear across New York Road Runners’ digital and social channels. The post GEICO partners with New York City Marathon appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Arch reports $1 billion profit as reinsurance premiums decline",
+   "lien": "https://coverager.com/arch-reports-1-billion-profit-as-reinsurance-premiums-decline/",
+   "date": "2026-10-28",
+   "extrait": "Gross premiums written were roughly flat at $5.39 billion. The post Arch reports $1 billion profit as reinsurance premiums decline appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Aon’s Reinsurance Solutions delivers 7% revenue growth to $572m in Q3’26",
+   "lien": "https://www.reinsurancene.ws/aons-reinsurance-solutions-delivers-7-revenue-growth-to-572m-in-q326/",
+   "date": "2026-10-28",
+   "extrait": "Aon’s Reinsurance Solutions business recorded organic revenue growth of 7% in the third quarter of 2026 to $572 million, driven by strong growth in treaty placements, as total revenue across the Group increased by 3% year-on-year to $4.1 billion, with organic revenue growth of 6%. Global broking gro",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Mapfre Re’s 9M’26 profit climbs 11.8% to €286m",
+   "lien": "https://www.reinsurancene.ws/mapfre-res-9m26-profit-climbs-11-8-to-e286m/",
+   "date": "2026-10-28",
+   "extrait": "Mapfre Re, Mapfre’s Reinsurance and Global Risks arm, grew profit 11.8% to €286 million in the first nine months of 2026, helped by a 67.8% rise in its Non-Life financial result, even as its combined ratio worsened and it absorbed the impact of the earthquake in Colombia. Mapfre Re’s premiums were b",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "S&P assigns first-time ratings to Peak Re",
+   "lien": "https://www.reinsurancene.ws/sp-assigns-first-time-ratings-to-peak-re/",
+   "date": "2026-10-28",
+   "extrait": "S&P Global Ratings has assigned a first-time A- long-term issuer credit and financial strength rating to Peak Reinsurance Company Limited (Peak Re), a Hong Kong-based global reinsurer, with a stable outlook. The ratings from S&P complement Peak Re’s existing financial strength ratings of A- (Excelle",
+   "motsCles": [
+    "insurance",
+    "insurer",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Arch’s reinsurance unit delivers $393m underwriting profit in Q3’26 despite lower premiums",
+   "lien": "https://www.reinsurancene.ws/archs-reinsurance-unit-delivers-393m-underwriting-profit-in-q326-despite-lower-premiums/",
+   "date": "2026-10-28",
+   "extrait": "Arch Capital Group’s reinsurance segment generated $393 million in underwriting income in Q3 2026, retaining its position as the group’s largest underwriting contributor and delivering a 78.3% combined ratio despite lower premium volumes than a year earlier. Underwriting income in the reinsurance se",
+   "motsCles": [
+    "insurance",
+    "reinsur",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Jeremy England Lee moves to Lockton Re Bermuda as Chairman",
+   "lien": "https://www.reinsurancene.ws/jeremy-england-lee-moves-to-lockton-re-bermuda-as-chairman/",
+   "date": "2026-10-28",
+   "extrait": "Lockton Re, the reinsurance broking business of independent insurance broker Lockton, has appointed Jeremy (Jez) England Lee as Chairman of Lockton Re Bermuda to build out senior capabilities in the Bermuda office. The appointment is subject to appropriate approvals, while England Lee is expected to",
+   "motsCles": [
+    "broker",
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "RenRe trims property book as underwriting result offsets losses in casualty and specialty segment",
+   "lien": "https://www.reinsurancene.ws/renre-trims-property-book-as-underwriting-result-offsets-losses-in-casualty-and-specialty-segment/",
+   "date": "2026-10-28",
+   "extrait": "Bermuda-based reinsurer RenaissanceRe Holdings Ltd. generated underwriting income of $426.1 million in the third quarter of 2026, as an underwriting gain in the property segment more than offset losses in the casualty and specialty segment, while mark-to-market losses of $879.8 million pushed the fi",
+   "motsCles": [
+    "insurer",
+    "reinsur",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Moody’s Ratings retains stable outlook for Italy’s life and P&C insurance markets",
+   "lien": "https://www.reinsurancene.ws/moodys-ratings-retains-stable-outlook-for-italys-life-and-pc-insurance-markets/",
+   "date": "2026-10-28",
+   "extrait": "Moody’s Ratings, an international credit rating agency specialising in credit assessments and financial research, has kept its outlook for Italy’s life and property and casualty (P&C) insurance sectors stable. In a new report, the company said its assessment was unchanged from the previous year, cit",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Bank of England warns climate risks could widen UK insurance gaps",
+   "lien": "https://www.reinsurancene.ws/bank-of-england-warns-climate-risks-could-widen-uk-insurance-gaps/",
+   "date": "2026-10-28",
+   "extrait": "The Bank of England, the UK’s central bank, has warned that climate change could widen the UK’s insurance protection gap, leaving more households exposed to the financial costs of flooding as extreme weather events become more damaging. In a speech delivered by James Talbot, the Bank’s Executive Dir",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Selective Insurance appoints Jake Rothfuss as EVP of Standard Lines",
+   "lien": "https://www.reinsurancene.ws/selective-insurance-appoints-jake-rothfuss-as-evp-of-standard-lines/",
+   "date": "2026-10-28",
+   "extrait": "Selective Insurance Group, Inc., a US insurance provider operating across commercial and personal lines, has named Jacob E. “Jake” Rothfuss as its new Executive Vice President (EVP) and President of Standard Lines. Rothfuss will be responsible for overseeing its Standard Commercial Lines and Standar",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Insurwave relaunches platform to make dynamic risk measurable",
+   "lien": "https://www.reinsurancene.ws/insurwave-relaunches-platform-to-make-dynamic-risk-measurable/",
+   "date": "2026-10-28",
+   "extrait": "Insurwave, a provider of AI-powered, real-time risk intelligence for specialty risk, has announced a powerful update and relaunch of its dynamic risk platform, connecting insurers, brokers and fleet owners to measure dynamic risk in real time, alongside a new brand identity. The relaunch introduces ",
+   "motsCles": [
+    "broker",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "Morocco targets regulatory framework for insurance securitization, including cat bonds",
+   "lien": "https://www.artemis.bm/news/morocco-targets-regulatory-framework-for-insurance-securitization-including-cat-bonds/?utm_source=rss&utm_medium=rss&utm_campaign=morocco-targets-regulatory-framework-for-insurance-securitization-including-cat-bonds",
+   "date": "2026-10-28",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. The government of Morocco is now aiming to prepare a regulatory framework to allow for the securitization of insurance risks, including through catastrophe bonds, as the country seemingl",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "Lockton Re names Jeremy England Lee as Chairman, Bermuda",
+   "lien": "https://www.artemis.bm/news/lockton-re-names-jeremy-england-lee-as-chairman-bermuda/?utm_source=rss&utm_medium=rss&utm_campaign=lockton-re-names-jeremy-england-lee-as-chairman-bermuda",
+   "date": "2026-10-28",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Lockton Re, part of the independent Lockton broking group, has announced that senior reinsurance and retrocession specialist broker Jeremy England Lee is relocating to become Chairman of",
+   "motsCles": [
+    "broker",
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "RenRe raised $150m for new Lighthouse Cat Bond Fund, reports $81.7m of Q3 fee income",
+   "lien": "https://www.artemis.bm/news/renre-raised-150m-for-new-lighthouse-cat-bond-fund-reports-81-7m-of-q3-fee-income/?utm_source=rss&utm_medium=rss&utm_campaign=renre-raised-150m-for-new-lighthouse-cat-bond-fund-reports-81-7m-of-q3-fee-income",
+   "date": "2026-10-28",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. RenaissanceRe, the Bermuda headquartered reinsurance company and third-party capital manager, raised $150 million of capital for a new catastrophe bond strategy in the third-quarter, wit",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "JD Power: Total Loss Auto Claims Weigh Down Insurance Customer Satisfaction",
+   "lien": "https://www.insurancejournal.com/news/national/2026/10/28/890511.htm",
+   "date": "2026-10-28",
+   "extrait": "Customer satisfaction with total loss auto insurance claims fell for a third straight year, while satisfaction improved for claims involving repairable vehicles, a new study looking at this year shows. Customer satisfaction with total loss claims fell 12 points on …",
+   "motsCles": [
+    "claims",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Black Lung Disease Hits 50-Year High, Report Says, as Claims Payments Climb Steadily",
+   "lien": "https://www.insurancejournal.com/news/southeast/2026/10/28/890519.htm",
+   "date": "2026-10-28",
+   "extrait": "As black lung disease hits a 50-year high among Central Appalachian coal miners, protections and compensation from the federal government are not keeping pace, says a recent report from Reimagine Appalachia and the Appalachian Citizens’ Law Center. The groups found …",
+   "motsCles": [
+    "claims"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Chili’s Workers’ Suit Challenges New York State’s Lower Wage for Tipped Workers",
+   "lien": "https://www.insurancejournal.com/news/east/2026/10/28/890538.htm",
+   "date": "2026-10-28",
+   "extrait": "A lawsuit filed on Friday involving the pay practices of Chili’s operator Brinker International is seeking to strike down New York state’s lower minimum wage for workers who earn tips, which it claims fuels the sexual and racial harassment of …",
+   "motsCles": [
+    "claims"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Claims Journal",
+   "titre": "Guidewire Buying UK Insurance AI Firm Hyperexponential in Deal Worth up to $2.1B",
+   "lien": "https://www.claimsjournal.com/news/national/2026/10/28/340958.htm",
+   "date": "2026-10-28",
+   "extrait": "Insurance software maker Guidewire said this week it would buy hyperexponential for $1.7 billion in cash and up to $400 million more if revenue targets are met, to expand into AI tools that help insurers assess price and risk. London-based …",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Claims Journal",
+   "titre": "Cyber Direct Premiums Are Up but Majority of Policies Are Endorsements: NAIC",
+   "lien": "https://www.claimsjournal.com/news/national/2026/10/28/340931.htm",
+   "date": "2026-10-28",
+   "extrait": "The U.S. domestic cyber insurance market has nearly tripled in size since 2020, with endorsement policies accounting for the largest share of policy counts relative to premium. The observations come from a new report generated by the National Association of …",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Finalists for the Excellence in Fraud Mitigation category announced - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNRFRqekxLWUJDd3V4RnFkUjBiNGZmc2ZLQTRDdFVRbTRfVHVlYXFUWTl3Nkh4R012eWM4eV85dU4tWkNVM3FrRTZWTUJzdjBfNUY1UGpmMGFYclpxS3NMQ18ycjVMenIyamRBMUNQc3ZraEJBQl9mT1BpRWY1VlczVGx5X3FmOFhpUTNjNG45ZWlkbFhadzdTSkJkbm9wV0xGdW1ENkc4Y01xYmpxNG5TQnA1U3dwVlBzeF9NN0d0TlB2QW55bWhjTmhiUnhjZENRRmlXQnNBelgtU2ZhdXBCMUVVSQ?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Insurance Times Awards 2026: Finalists for the Excellence in Fraud Mitigation category announced Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: How Sedgwick is modernising fraud detection - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdFN0SWVlNkVrQWVablhBWjhUM1hnbEVWSVp2S2o4UURyMl9uTC0teS1JWl9la2prbmJlQk41VXRZMjV0ejdPNFRKR1ZOVVc4Zl9adkUxSndQZVAyejM5Nk5qVFZSeHlUTDZEc3pPS09zMnZWSl9IbU0tRW1WVXhqMVI3S0hwcTVBWjNoSDIwemw4S1U1MjItZ0dGTFRyNVpmeWxhXzljZUZVb2l5NHpYYmtmeU41Q0NvMThBMHFwd2pialE?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Insurance Times Awards 2026: How Sedgwick is modernising fraud detection Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Private equity’s insurance love affair – can value outlast the deal? - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTk90T1o4aVhzUWo4bkdaTGF3aXZLcmgxdUlaRXozZjI0SC1rMUs4M0tBc21CakdXTkJKR09UNTNXRjdnMDFxcTNkU1Z3bXdsUTdWWTFlN1F2NTB2a1VnT3RFU25kcTZyN1dHYmVzczJIcWxZMEdObEh5NHYyeklrcDhDTlkyQ3dWMDdPc2FFNlp4R0dJS0Z6TkQ0NmZIRXliZExnUktOUWpOWENPc3dvZGpsM2RzekppUjQ5V0dEMA?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Private equity’s insurance love affair – can value outlast the deal? Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "BHSI France : Virginie Pelletier prend du galon - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdHZua1JDenhpOE9CVWFmUHBjci1CWklaSzhFWU8tUHBXT0VqOF80NzJReFJfa2dqcDhqcVluN3dLZEZBeFRUQ20tbmNyNmNHaGN2Nm9vamhzQVNqbU9TQ19CdU43N19KUlJyamw1OWstbFUxcE5Kek1hN3ZsNEdoTmxMclY2VG9XZURydGdVNEhkSFVEeXc?oc=5",
+   "date": "2026-10-28",
+   "extrait": "BHSI France : Virginie Pelletier prend du galon News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Résultats 2026 T3 : BNP Paribas Cardif retrouve de l’allant - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMGtnWmcxbHcxd1pKTUZXOHprd0RNeW84Sm16UWtQVDJacHdpalI1YmU0LXZWYkhSVXdXeUpNb1BzWDBCNWRWVExNcnRsWWl2Z3dwSC1fVHBSc0I4U256Z3ZKZ3FkV2x3c1NQa2x5dG5ZWFRXcGUzX05Gd0wzRUFlQVE5cE1JRGlVRmlkeGU4WVdIWWJWZkNWLTcyaHd1NnU4UVhtRA?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Résultats 2026 T3 : BNP Paribas Cardif retrouve de l’allant News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Vols de véhicules : l’Assemblée nationale veut faciliter leur localisation et la traque des réseaux à l’étranger - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxOc0h6cHo4bFN6bWRjQUtiandUT2lXVGs3X3BTQlVlNTFva2VfbTFmZXJxdzRhU2VxUk5iLTFUR2RQM0xuZVRRVVlMRW92QWVzSWlGYXNDc2hZeEo2cU1Wb29GdWpHaThMMF9kWkxreTExeHg3LWFTODl3MzFRODY4cHNhSEV2ZTlLQmVhVlc0TlhQTzZkNzVhYVZOZU5VazlqanFfNkpWNXQyMDE0b3o3UWJXa2psc0J6SkVpVzBLLTcwM0VIRjBJbVltOWowM0JMNFhDRmdkY1JSNUVCWE9JLVJZWHZmOFZCNGxxaW1ZLTVpeVNQZGxIQzltVVhxclBVX0VDUmFIQkNZSGQza3E0N1M5ak1LeExkai1jZW1tUVZoNEhXZDVNRDZxeUdZRUZCeXFuS09WR3B3V0syMDBpU2xFUEx0Qll5aElqTVpYdG9CTW9a?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Vols de véhicules : l’Assemblée nationale veut faciliter leur localisation et la traque des réseaux à l’étranger L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Budget 2027 : les députés suppriment la prolongation de la surtaxe exceptionnelle d’impôt sur les sociétés pour les grandes entreprises - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMizwJBVV95cUxOeW9rXy0zdVFXeWlVYWtmVmdfeENmMnduaUhodFpLa05LR3RTUm1Xa2VqanVRUWl2NjYzY2hiUGl2aUVZcGVDcVh1WHRCY1hLdTBxQzhjTWZsdFZlME8yYzR2QWZlMklYS3ZGdmtzc1JiUDEwLWZkd0htdXBGSXE3WF8tSXl0VkRuTi1veHRWdnRWZzExTWlMSTljLU85eDNQYUhycm5VWEpmenBYc3pDSWRfcTQxeFVfX0pkdGxXLUUxbjIxUFVXczAzSUtfQlhCVFNNaTI2SDBKUzJUeVlFWnh6Nk1XdmhDUGoyQ2dsQ2NyTzRxWnhoYTc3SklBbWQ0SjlhR1d3cjZ3ODhya2VmMXlDck13Z09PY2ZIdU9BYkhwUW94RTFGNld4MXFmS3huMG95cWNBT2JnU19MSFBGVzZuTWxOQlgxdWNTUWNVWQ?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Budget 2027 : les députés suppriment la prolongation de la surtaxe exceptionnelle d’impôt sur les sociétés pour les grandes entreprises L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Steven Ezanno rejoint IXI-Groupe à la direction du développement - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxORXA2ZGNUWlZ4MFhLbzV5X2NZbGVXWXJYNUl4NG1iY3BjWTB3Yzg0NzB5LXU0a2QzeEJKcEp4SUpHNjExbFNlOUN6SmxhV2E1N1ZhY2E4dFg0UWprbTc0eENvNzhwS21LUTZwNmNuZDRXbEhTdXFZOWEzT0R2LUNfNkRtQW1VMlVoN3l0LWhjc0xDYnBFNGRXb0ZZNUdDY29oNGxXcmRib2pOUHlfcXhsZFllNVhtQ01sdXI2S0JPeUYwUHMwMVE1d0U0cUgxWDQ?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Steven Ezanno rejoint IXI-Groupe à la direction du développement La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Can your finances handle an unexpected health crisis? - InsuranceNewsNet",
+   "lien": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaGwtQkZQOEFOSXhUdXh6TGdaVWtVQnhNZnJTMkFfMUhZTlk1OW9zalhYcjZPRlRqNGc1bVFIdjhpSnRSUGpxa2RLSUUyQjBEaEM5S1lfMnFBd1VjX0hPc3h5alZrTi1BdW9aRWExSkJQTjBDUW5YNWNfQnAyUHBRRi1Nb0JQMldNWkQtN1NSSkh1VHUwRjFJ?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Can your finances handle an unexpected health crisis? InsuranceNewsNet",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "India Insurance Market 2026-2034: Size, Share, Consumer Trends, Growth Statistics & Industry Report - openPR.com",
+   "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObGRqVmlrOXFFU1cyWVBVSWdBTmhXeHRSWGZXblBRVFIwbm5lVVhsQlNHT2U2NEJBcWEzSEFJZUZrbFJBWFJkeVhCWVZ6MV9YWDFtM0JDdDY3dmp6SzRTT2dfR1F3Y0dJNnVDSHVXYkRpZ3B4LTN4Z1lIV1NlWmFxQ1hfQjFYbHNXdWswMVhoMzJrZw?oc=5",
+   "date": "2026-10-28",
+   "extrait": "India Insurance Market 2026-2034: Size, Share, Consumer Trends, Growth Statistics & Industry Report openPR.com",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN M&A assurance",
+   "titre": "Les marchés principaux de l'assureur Mapfre stimulent la croissance des bénéfices, compensant ainsi les pertes - Boursorama",
+   "lien": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPNFVmTEJsU21sYWMzdWhlWnJoLVZXYjg4MzktS0g2dEFfbzEtakp4bldFUGMwUFVTU0I3elhiTG11cUhMZFpkSHg3Q2hVdmoxdWY1cDE1ZmNRTDFrOTR2YjljXzl0WkdMdUpwZVJxdFFPZTdtMDZqTkxNSFFEUWJDeXJSZ0FnQnlJdkFhWFdnQW9zc19PakVkNzFlLVpkbHJCd25YbVRYSnZQWWVPaExKU2pzelE3S0lMRFc5ZWk4TFdlZFRjc1hielF4MlVIM0ZGMWdvMHc3Y19mTlFzZEQ4VkxoMnNYS19IZG9oNFFkTmNNMVZ5RjE0Y0YxaGhlbjVjSzNYMkVJeEx0OW9EYXpvNUZWa1k2QVFJU21Tc2JwWEV6cmFhYTh2eTRJTnJiSHUzSmU2dHRyaGJzaEJPd2w4SdIBwAJBVV95cUxPNFVmTEJsU21sYWMzdWhlWnJoLVZXYjg4MzktS0g2dEFfbzEtakp4bldFUGMwUFVTU0I3elhiTG11cUhMZFpkSHg3Q2hVdmoxdWY1cDE1ZmNRTDFrOTR2YjljXzl0WkdMdUpwZVJxdFFPZTdtMDZqTkxNSFFEUWJDeXJSZ0FnQnlJdkFhWFdnQW9zc19PakVkNzFlLVpkbHJCd25YbVRYSnZQWWVPaExKU2pzelE3S0lMRFc5ZWk4TFdlZFRjc1hielF4MlVIM0ZGMWdvMHc3Y19mTlFzZEQ4VkxoMnNYS19IZG9oNFFkTmNNMVZ5RjE0Y0YxaGhlbjVjSzNYMkVJeEx0OW9EYXpvNUZWa1k2QVFJU21Tc2JwWEV6cmFhYTh2eTRJTnJiSHUzSmU2dHRyaGJzaEJPd2w4SQ?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Les marchés principaux de l'assureur Mapfre stimulent la croissance des bénéfices, compensant ainsi les pertes Boursorama",
+   "motsCles": [
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN M&A assurance",
+   "titre": "Alliance Assurances mise sur les supporters du MCA pour financer son sponsoring - Twala",
+   "lien": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPN0trTDR4SDRyY3lfdldmclh4RWs2Sm50Y3pycTFqa3pKTV9MbXlfS3dTMUxpU2RyXzczNUJCdUx2ekJYcm9EUkRKYVpVeXdyM1VGM2RLNmN6R3JEUGlTdkQ4VlBLMTVkcFlFTk1pM29yWFBhSGlQdkxaQUQxSkViLXkzcENWRDZ4bnc?oc=5",
+   "date": "2026-10-28",
+   "extrait": "Alliance Assurances mise sur les supporters du MCA pour financer son sponsoring Twala",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Finextra",
+   "titre": "Sezzle applies for national bank charter",
+   "lien": "https://www.finextra.com/pressarticle/111470/sezzle-applies-for-national-bank-charter?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-10-27",
+   "extrait": "Sezzle Inc. (NASDAQ: SEZL) (Sezzle or Company) today announced that it has filed an application with the Office of the Comptroller of the Currency (OCC) to charter a national bank, Sezzle Bank, N.A. and applied to the Federal Deposit Insurance Corporation (FDIC) for deposit insurance.",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "FinTech Global",
+   "titre": "How technology is transforming water risk management",
+   "lien": "https://fintech.global/2026/10/27/the-shift-towards-proactive-water-risk-management/?utm_source=rss&utm_medium=rss&utm_campaign=the-shift-towards-proactive-water-risk-management",
+   "date": "2026-10-27",
+   "extrait": "Insurance has always been a reactive industry. An incident happens, and the insurers pays out on the claim. However, with advances in technology, is the industry moving to a more proactive future? One area where that transition is already becoming a reality is water-related property damage. Property",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "FinTech Global",
+   "titre": "Earnix uses AI to close insurers’ execution gap",
+   "lien": "https://fintech.global/2026/10/27/earnix-uses-ai-to-close-insurers-execution-gap/?utm_source=rss&utm_medium=rss&utm_campaign=earnix-uses-ai-to-close-insurers-execution-gap",
+   "date": "2026-10-27",
+   "extrait": "Earnix, an AI provider specialising in insurance decisioning, has launched its Q4 2026 Release, introducing updates to its pricing, rating and customer engagement tools to reduce manual workloads and improve operational control for insurers. The release focuses on helping insurers implement pricing ",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Qubit and Unified Labs explore tokenized lending insurance",
+   "lien": "https://coverager.com/qubit-and-unified-labs-explore-tokenized-lending-insurance/",
+   "date": "2026-10-27",
+   "extrait": "Unified Labs focuses on risk management and structuring for institutional real-world asset lending vaults. The post Qubit and Unified Labs explore tokenized lending insurance appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "RiverStone plans to merge Malta entity into Irish business",
+   "lien": "https://coverager.com/riverstone-plans-to-merge-malta-entity-into-irish-business/",
+   "date": "2026-10-27",
+   "extrait": "RiverStone plans to merge its Malta business into its Irish entity, subject to court and regulatory approvals. The post RiverStone plans to merge Malta entity into Irish business appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "OfficeHubb connects ChatGPT users with independent agencies",
+   "lien": "https://coverager.com/officehubb-connects-chatgpt-users-with-independent-agencies/",
+   "date": "2026-10-27",
+   "extrait": "OfficeHubb has introduced a ChatGPT app that lets consumers find participating independent insurance agencies. The post OfficeHubb connects ChatGPT users with independent agencies appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurtech Insights",
+   "titre": "$1.7bn deal: Guidewire to acquire AI underwriting and pricing software firm hyperexponential - Insurtech Insights",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQNzVIRVFjd3hKM2tpZWw3VTVmVWlCUXd1ZUVuUlZ5amlETWpWOVdHeUFyS3RsLU5vSTZ2NGxUeVg3YVdROXJSVWFxa0l6cnVSeXpUS2NDdWxBY3kwazhvSlc0WEhDdFNndGtQRGwyeGppb2phYmtkZjZOa3I5QnM2MWJUYTRtblVSMUkteW93OE1QS3hnUndocjE3ZmNyQXJOVEhoMEJRM2lmWlN3OXMzWHVVZzhOUG1sUnpaZllTbElDWDlqQ3FqMlhUa1BkZHdR?oc=5",
+   "date": "2026-10-27",
+   "extrait": "$1.7bn deal: Guidewire to acquire AI underwriting and pricing software firm hyperexponential Insurtech Insights",
+   "motsCles": [
+    "insurtech",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurtech Insights",
+   "titre": "Brown & Brown sees 9M 2026 revenue hit $5.3bn - Insurtech Insights",
+   "lien": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWm8xNldLekRCZUh4V2JaRnBOb2R5RUIzX1MtQjhRS0I3OW1naXIxRlptVjl6Uko2dnBWYzYwQ0lSeWQ3QnRiM2tVX0JrTW1DaU16enVGVUZTNm56ck93SWpXNzhndU9jYURTWlZUX0tBQU1TeFBUZmVPcmNtX3FMZllyZDdhbVdPbFhIVEFNZjA?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Brown & Brown sees 9M 2026 revenue hit $5.3bn Insurtech Insights",
+   "motsCles": [
+    "insurtech"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "Korra Deal Analysis bridges gap between re/insurance and capital markets: Ledger CEO, Shah",
+   "lien": "https://www.artemis.bm/news/korra-deal-analysis-bridges-gap-between-reinsurance-and-capital-markets-ledger-ceo-shah/?utm_source=rss&utm_medium=rss&utm_campaign=korra-deal-analysis-bridges-gap-between-reinsurance-and-capital-markets-ledger-ceo-shah",
+   "date": "2026-10-27",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Following the launch of Korra’s Deal Analysis platform, Samir Shah, Co-founder and CEO of Ledger Investing, the parent company of Korra, outlined during an interview with Artemis how the",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "EU Commission proposes climate resilience framework, highlights cat bonds & reinsurance",
+   "lien": "https://www.artemis.bm/news/eu-commission-proposes-climate-resilience-framework-highlights-cat-bonds-reinsurance/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-proposes-climate-resilience-framework-highlights-cat-bonds-reinsurance",
+   "date": "2026-10-27",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. The European Commission has called for a new climate resilience framework to strengthen Europe’s ability to anticipate, prepare for, and manage climate risks. The initiative calls for th",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "Insurers lean on third-party capital, strategic partnerships to manage operating models: BlackRock",
+   "lien": "https://www.artemis.bm/news/insurers-lean-on-third-party-capital-strategic-partnerships-to-manage-operating-models-blackrock/?utm_source=rss&utm_medium=rss&utm_campaign=insurers-lean-on-third-party-capital-strategic-partnerships-to-manage-operating-models-blackrock",
+   "date": "2026-10-27",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. BlackRock’s 15th annual survey of the global insurance industry found that insurance capital solutions have become a critical part of how insurers manage their businesses, highlighting t",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Turkish Insurer Sinks as Top Executives Arrested in Fund Probe",
+   "lien": "https://www.insurancejournal.com/news/international/2026/10/27/890516.htm",
+   "date": "2026-10-27",
+   "extrait": "Turkiye Sigorta AS shares extended losses after local media reported that two of its top executives were arrested as part of a sweeping probe into allegations of market manipulation in Turkish funds. Chief Executive Officer Taha Cakmak and his deputy …",
+   "motsCles": [
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "PHP Security Flaws Highlight Potential Systemic Risk Aggregation for Cyber Insurers",
+   "lien": "https://www.insurancejournal.com/news/international/2026/10/27/890438.htm",
+   "date": "2026-10-27",
+   "extrait": "Recently discovered security flaws in PHP programming language, used by many websites globally, has highlighted the potential for cyber risk aggregation, which has long worried insurers and made them reluctant to aggressively increase their risk appetites, according to the ratings …",
+   "motsCles": [
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "People Moves: CM Vantage Appoints Finnegan as Managing Director, Casualty; Alliant Adds Sprangler to Midwest Benefits Team",
+   "lien": "https://www.insurancejournal.com/news/midwest/2026/10/27/890483.htm",
+   "date": "2026-10-27",
+   "extrait": "CM Vantage has appointed Amy Finnegan as managing director, casualty, bringing excess and surplus lines expertise and leadership to its underwriting organization. In her new role, Finnegan will lead casualty underwriting strategy and help drive profitable growth while working closely …",
+   "motsCles": [
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Cyber Direct Premiums Are Up but Majority of Policies Are Endorsements: NAIC",
+   "lien": "https://www.insurancejournal.com/news/national/2026/10/27/890440.htm",
+   "date": "2026-10-27",
+   "extrait": "The U.S. domestic cyber insurance market has nearly tripled in size since 2020, with endorsement policies accounting for the largest share of policy counts relative to premium. The observations come from a new report generated by the National Association of …",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Guidewire to Buy UK Insurance AI Firm hyperexponential in Deal Worth Up to $2.1B",
+   "lien": "https://www.insurancejournal.com/news/international/2026/10/27/890423.htm",
+   "date": "2026-10-27",
+   "extrait": "Insurance software maker Guidewire said on Tuesday it would buy hyperexponential for $1.7 billion in cash and up to $400 million more if revenue targets are met, to expand into AI tools that help insurers assess price and risk. London-based …",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Claims Journal",
+   "titre": "JD Power: Total Loss Auto Claims Weigh Down Insurance Customer Satisfaction",
+   "lien": "https://www.claimsjournal.com/news/national/2026/10/27/340929.htm",
+   "date": "2026-10-27",
+   "extrait": "Customer satisfaction with total loss auto insurance claims fell for a third straight year, while satisfaction improved for claims involving repairable vehicles, a new study looking at this year shows. Customer satisfaction with total loss claims fell 12 points on …",
+   "motsCles": [
+    "claims",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Finalists for the Excellence in AI – Service Provider award announced - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOWVN3d1VFVkZraTJmd3lrN21ZeEZWSkdKTjhCMm5ZYVQ0bVluZ3FqNVdEWVE1ZTQ4aVZUbEhiLW0tQ2tDajhnS1FaZGRCTnFoVEs4VjFybkVZQ3BQcjNrV3VFMmNtMmJ3cjZnQ2hlN3FGOHU3aUtKUmJGcjRpcUhhby1aMFZRYlQ4WWhtSU5YRnZ2UDIzU2ZBZGJVaHU0RTlfZHBLYmREMDZOT3EzUzNua2ktUlVOaU5xVFJhcDhaQlIxeFBJaEhLcmJFNHRyMDl4UHNJV2NkcVBaU0dIcXQySV9aMA?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Insurance Times Awards 2026: Finalists for the Excellence in AI – Service Provider award announced Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Allianz on working together to tackle fraud - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOV1hSWlJoY0tDRkdNbjVrV0IzSlB6aWFFaHZrdmpXVUxqOGdjV1prTVl2SFg4bmtsYjJpdzZrczRRcGlxNWNfemxUd0wxVUt5R0ptaERtQjFybzVtdkp1cWpEazVYMDQ1ang1NnJ6eHc0S2t0YzVIN1luYXotLUtsSGxjRHk4Rjh4R1VYMVM5MHJPNXlMSWlzMXUxX2dJSmJhVzZPdXVhMHZKVDFWZWF0RG1GUXlfcTRpVnhXZm5yZVVVZnc?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Insurance Times Awards 2026: Allianz on working together to tackle fraud Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: DAC Beachcroft on combining 'advanced analytics, intelligence-led investigations and legal expertise' - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNQmFwZzVsT3B2WWV1ZzdldzJOV0Q3eWUtSmFfdF9pZlNUUnN1QmxPM193Z2YtQnQ4SUlIUWdPTGJnUVd4V2pQZmN0V1U2bjBObnNUZ2JXZ3dVdWw3dmY4Q0FRazdYeXVGVTk5Y3hHWmV6WFpWcUZLRlNrb0d1TzVvd2hEM1Q5OVBDaV85VDhkcWpjY19zdFNUMDU2amcxZmJ6Yi1iYVdGX3NjZXEzWUJJdWZRYV83SjMxVjBWQzJKOURZRmo3NXZqb0xBdXd4RUN6OFIzaHBWelYyMXBCbk54Q0pxb0M2QjhWUUF3Tkp2YnlSU1pHQkxJRU94T1U4Z2dZUml0a1RkTUpnV3h3?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Insurance Times Awards 2026: DAC Beachcroft on combining 'advanced analytics, intelligence-led investigations and legal expertise' Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: QBE on its 'organisation-wide' commitment to fraud prevention - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPb0RJa25qY050Y1BhSXhLYWM0WGFhVHM4ZG01V19DNVZLTXpYaWdCQkFIUWhiMHBtTnp6ekdJZzlucEJnYkRFLTFuUzZFNDNlOTNOb1pZcGxZdGh2eXFnMnVhb0dMMnktTWthekJMNEpuejBSZnZya04tc2NjXzZORnQ0eURWRVR4aUM2OVM5dDhPaU9SMXozZ215SzkwMTRIanNaRnRXVnZTbWVxc2w2eXo5UWlZQWU4NlJaOS1ob2NpTkIyTks5MmxZanI4Vk5kMEN2akNTOXM?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Insurance Times Awards 2026: QBE on its 'organisation-wide' commitment to fraud prevention Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Company Watch on the benefits of real-time fraud detection - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNUG9LOEFSckFfMjdDc1dLa2liZ25LNXJuS0IxUFhlT2dmTVctR2dNU1ZCcWJDTEdCblQ5MldMVUpOUmNiMkliRlJ1UnNJUDN6Rl90WFFJNXVuVUtLcXgwbmNpb3hadExmSEhFQWw0OFZ1MVdHd2R4VDlCMGZrSkd3M2RLMF9mc1JKd3RpU1pvQ2pGM1NJVHAzU0tHc2paTVNrNlRzcEtEMEpob0hFeE5Jc3dReGZJTTgzZ29rQnEwdmloQktBTXhhd2RwLTZaam5aRzlFWXU0NA?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Insurance Times Awards 2026: Company Watch on the benefits of real-time fraud detection Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Congé supplémentaire de naissance : Erratum sur la mutuelle - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNQkpVQVdqSEtkLUlDSG5sYnhsWXBuN21ITEQyeHhvOGpSdHRzT1l2VHE2NF9Ebnh5M0trOHl3alYwbTRkNERRbXh5TWlndEg3cjZuZVphWl9RM01TaFpEUGduSWt6RmNVVHBRa2M2c05ZMllCUFIzZW5hRldjeVhlU0ZTQXpzU0dZUjJvZkh5UVp5aXQ1ZFFxZXUyQVpiT0t3NXJiWmtn?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Congé supplémentaire de naissance : Erratum sur la mutuelle News Assurances Pro",
+   "motsCles": [
+    "assurance",
+    "mutuelle"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "La Lettre de l’Assurance du… 26 octobre 2026 - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZlpkT0VzSnRrWkpSeXhDb0xIeU5SY3ByNkd4NHh5YjJYR2J5ZFNiTEFMX0twby00bXdRYVE2bFJTa3dkWlJpMjM1ZG1pUVlYUURtTVJ0X1NreTZlNy1SNG1WZDJWYS04Qks4X1hST3drUVNteXNIWmFjRk9jVjNQbS1QdkhiU1RXR0RVTXhtZldOdw?oc=5",
+   "date": "2026-10-27",
+   "extrait": "La Lettre de l’Assurance du… 26 octobre 2026 News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Découvrir RISKCARE - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9aOG9RcjNSRmNCb09lZjFuRHNiOF91ZFp4ZUZfTUk4ZzJwSk1zWm43SUhhbFIzV090ZlRrazNEelJ0bl9tc3N5UTBzYlRBQ2ttSW93eVl4X1RLMkZ0bkRyMw?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Découvrir RISKCARE News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Flashback : Cotisations santé, Wakam et Ucanss au coeur de l’actualité - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOOGQtVmcwWTIzeV85SnMtNWUzazJzX3drX3lqVGlqU2dZQ3p6dG80UEJoWUxlOV9jRy02WEdwOWM2U0MycTNQYWpJb0NhYWRtc3k2dkNBT0FwSmV3Xy1VU3ZKR0kybXQ0bEJReVh1bVpFMGVtdGRndzBTRU84V1FqV0lFTHRybkttNkZ0MUVvR2xkQ1FkQkFhVHp5Nmo2bGctakROYzZYN0NxQ3ZFY2VCel9yWQ?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Flashback : Cotisations santé, Wakam et Ucanss au coeur de l’actualité News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Climat : Bruxelles veut faire de la résilience une priorité européenne - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTlVtR2pYMjFyMHl4UEVnSklRTkN4YWtacjVZYzlxWVFnWHFoQ01kUHBTNmV4WVYwWU1aYk9icjJrX3NMd0QtaE9sMUI1OTlxWll2WkVhNXBlT09sdkNzY0FLYnU3ZVVITHh6S0JxbDVXYktmbG9NR0RPNDBJSVcxUWVaYm1vbFNrWUxldGEtWUxnd21KSENHVnVfZi1hT2RSbGZNanFUQWo0bzQyWG5sSzNSVzI?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Climat : Bruxelles veut faire de la résilience une priorité européenne News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Dépassements d’honoraires : Les négociations sont ouvertes - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMHAxVUNRWXFwbVhhOERudEdhTWxzUV9YVGhRb3p4ZVZadzZzVWcxTzBqZUJUcGF1YmlfQnJtWjBGWmMwRXRWcGtfOHJmdkNOU196SzZQTFJyNkRLa1FRa18wUGFkaTFsRDgtNlVXX3dQa0VELTRYcTdUaTJDbFFxNWZJVmF5WTByTUxTRktrLWdFTEcyX2dZMjVNRWtzOTJPb3pF?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Dépassements d’honoraires : Les négociations sont ouvertes News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Transports : SMABTP obtient un nouvel agrément - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQTmpTTVZCbzNfQ1pTay10RHRvVHBTYzUyOTh2NFhZR1c1amUxRlJFbF9GSUJpSmlISFBxekNPM1dfVG5McHlwT3NZOFU1cFVMdkVzSXdTb0drd2Z1Q3B1alR0NHVtcDVkVGdKblZOdHJFWS12UmcxTzRsMkNsRGFsTG44WUp1WU4zdmFacUgtN1VlUFRI?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Transports : SMABTP obtient un nouvel agrément News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Budget 2027 : les députés confirment l’instauration de trois critères nécessaires pour qu’un contrat étranger bénéficie du régime fiscal de l’assurance vie - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi5wJBVV95cUxOYndVRUdDbmVTQUtTLTFLWmFRQzRJd1BUU1lYX1dSMFd2VTk4cTVIOTVHVWRhX3hTZ1lZV24yeUdGZVh5aXk5YUxINWtUbUhUTHZ4VUNIQ3ZsTkFOUU9MRFZlS1dUOTFrTzlxMVNCZ0FOX1VvVEoxTnBJamlwdXNwVGpkMUYxLVBUSHNjb05TZ2kwS0o2V1lCenpFMFMtRUNfaHJ0aGtPNmNKV1h5a2w4d19RUjlSRkt6clhoMzVuQWhMd1c3Q19hTnFQT1RJdU15NFprUWUxRWdiTDh0MWoweFYxQUNYVU9lMUtld1Z6Yl9MdEpzY3Q2VE9yVUdhMG9qeVZZUmtNUDJLTUtlNU1nbmFJbmpmcFpuMlZ0Ni02VGNTc2VCVVhaSWM4dWhVMWY2VVI0dzZBVDFZSWZfMGNuZk1XZlJrcWhPQUpOOUF4YXhOcnFHdmJ3RWVacHd2M0F4YnN2WC1VRQ?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Budget 2027 : les députés confirment l’instauration de trois critères nécessaires pour qu’un contrat étranger bénéficie du régime fiscal de l’assurance vie L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Organismes mutualistes et paritaires: qui seront les champions de l’innovation 2026 ? - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQblMxT3lXOG5sVHp5MUhpb2R6aUxYekZlQm9yNjd4OXI1ajhQRkZLNjFMX3VsUzQ4czFza1ozTVJva29sNS1KSVNHVU45bjg3MzNFSHBpU2J2Q2RhdlVRNVNFYXhGcTAxUWFGMWFOY1I2dDlOZWYtaWZjOVBWRDhyRGtybDdySjZiUEEtVzVTQWhvNUVCVjlldW1XSUxTY2V2a2xyU01uWlUxUG1kcXpRNV9SMjR4MGtzNDQwQlh6VjlhRVhVOW5ORzg5MjBRVnFTQk1vZFQ4MFVERlNyYWl0aEctOXk5eDQwQlk2SS1R?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Organismes mutualistes et paritaires: qui seront les champions de l’innovation 2026 ? L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Assurance et intelligence artificielle : l’Europe peut-elle encore maîtriser son destin technologique ? - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQRjNCdy1BVUs5MUF5SjZtMVE5VjVTS0Q2X3FlMmVzQnBsLTVSODdSeWUwdUhzTm5PQ3p6aWozajJDdkstcVNQZjRwNzdMT1h4OHZNMUVKZUt3YjhsTlU3ZVdvYTRrOGx2aFF1cTBXVjBhUFRZZXBvSDZYNEY4Wl9jejRDQjAxOWdOUUdQUUptYlJlVHFiS2NKUjJoQnQzQUg3aGFpR3ZKNC13b1FkUTBRM0ZqNTBueTluTGs0U1NWcDdGVThtTU14QnJocFlFR2JiLTNJX2pxTlptbmp2OFVPaEVrYTVqdkhYWUp2OGllMDkxb0Z2N184czRoeFUtdUY5cTVKZGhHSTNpMHM?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Assurance et intelligence artificielle : l’Europe peut-elle encore maîtriser son destin technologique ? L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Laurent Rousseau (Marsh Re) : « Assureurs et réassureurs ont parfois tendance à se replier sur eux-mêmes » - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxNZk5QcURoN096Q29MUVpudmY3VC1hNElDWHRYT1NaMnFHVWl6TkJKOXd4T3VMNTVjZFhNTWZXLV83NUNGR2daU0pTRWpvSjlkRkl3OXF1TTFyWVNZam9lUVE1U0VQc0FDUWFmS3BuYmdJZUFmUURqcm1yRnhSU29UMmwxTVE0T016YXhudkpaWTktd29zdm5DQ0FzdE5sY2swa0xLaFM3RGxJdS1zaGNFeTRBbTBoWjlVT1B4a29wdnpfR0hhRW5OcWRnbm9ueFdVNUNxUHRpNVNaeXJJTWxpX0I5MHZ0b2tHNE0tMnB1WnFFb2RpaUxaV0xEODdjS1B3MXRmR3ZqOER2NlRsSm44bTEwZXI5eVI5NTdZSTJ3?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Laurent Rousseau (Marsh Re) : « Assureurs et réassureurs ont parfois tendance à se replier sur eux-mêmes » L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assureur",
+    "réassur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Le courtier grossiste en assurance professionnelle Kase fait son entrée au Lloyd’s de Londres - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMirgJBVV95cUxOX3UxMmsxVF8tLV9mT1lPZDUzbG4waHExZktFVzNPcW1kZHZGU0JFYjZ2UkFKMUhBSmUxR2lVLWRDN2VKUG9uYmdCUFRXajU1TUVBTmY3Z0x2eEREOHY2ekJIYS1BZnloeEU0S0J5ZEYzelQyMEkzSW5tdnZzZFIzSTdtU0l3b2pqYVlKLTNoNnZJbUxYaTduVnlXQm9wVW1QUXZjLWRNV091aVRKcWJIQ1VFYkpKaHZZTWZXZkpyeG5rZTlWSlpwVml2VnRNMHdKR1Y4TS1TZ3lGTVlzajk0aldkdXVzQ2lzX2NReHRhay1Vc1o4ejloZXZsamxaTlN5M0IzajRyYnNJWHR2Wnl6aDlDeGlXWmRIVWxXenJIdEg5SlZUT3ZqZ3paazA5QQ?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Le courtier grossiste en assurance professionnelle Kase fait son entrée au Lloyd’s de Londres L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "courtier"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Courtage : Solly Azar lance une offre dommages-ouvrage pour les particuliers avec Assursafe - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNR1NVT3FIOG5oSmVDNTJQNThIMjBnV3UtVlQyQXlkM1BWbUR2cHE4cjlxS0dWSEhkc2RtOUgxSUhpNlFWbDYtVHVhMG5RbGFtek92M1dsY05IZmdjZ3lROXgteUJaekN3QXNlOFZBTGdtUkZ4OFdWOTFQenhDLXk4UlZXamhxeUJ1MkhoQUZSTF83b1pNdUpqbHNFQlp5bElhRUJRTXNfejNwSC10TnZGU3BNa2taMnNhV1VSVU82UUMyTmcwdnY0YjFYWG5PTk5pN3ZsdDlFTXNHTDFnM0ttVWVsdjctaXdIZE5qZVVVU0hQNE90NGFoOTJWVjFmVTltaloyX3A0aw?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Courtage : Solly Azar lance une offre dommages-ouvrage pour les particuliers avec Assursafe L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Expertise : Ixi-Groupe poursuit son développement commercial par le recrutement d’un ancien de Liberty Specialty Markets France - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQOWhpaE9xVGVycjgxZlNaeDN4c2otZUlhbWJrMmtBOTdoVEx0Nm5RWHFWV2V6aGQ1TjJRMUwwLXYzcVpRV25EdHdzSmM5V1B0SDlTWG9QMTk2X2R6Y3R4Z01FR3B5MFN5VFF0dXdLUzJuRGtyMl82U0lnT2VibnJKcDN3cC1hdERiM2tQOVpxSmMzQWZmWXBOalhRVVZva3VvY2FGdTM5ZEtNS1VKRUZpZTlVcWExckN3S3pDTE1BT2g2bGdyWjd4MVdtWlRHaDJjWWNnTGRRaE1hbE5ELXZPRUhNMXZqQ0RfbGhEN0NIZ1BJUUFhMVRKb1RGaDNNZlVxUGpTYVVaSFZhWHRSSk40S1VVY1ZKMnRuelFLOTI4RXpxTEZtR3hGSktRejVJbUNTZmlfNHQ3bFNsdDUwTW5ZeQ?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Expertise : Ixi-Groupe poursuit son développement commercial par le recrutement d’un ancien de Liberty Specialty Markets France L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "MGEN : la CFE-CGC Mutualité se mobilise aux côtés de la mutuelle des agents de la fonction publique pour éviter la fin de délégation de gestion du régime obligatoire d’assurance maladie - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMihgNBVV95cUxQQXNwWXNhRnZ2TkRwdVlxZ2JGM0ZGMlBXMGFvaTYzbDM4c0QtTDFmUXFXMFdZajBiSDRQVk1PZ183UU03Umd6eXNqd28wS0s4ZG9vYkxSaWg2OFNWNnkya3d3QW5XZ0MxZ0lfek1iQ2ZWYTB6SncyT0ozX2QwRGd4OGxrUUFjWnFaZkRWTHdCbDNGUmxBemJqVzBiY0RrQWpvWEsxNWZXZDNObjdwYVdtUkdNM2o0UmNHb2puSTBsc1ZwLWRqTE9oY3RnQS0xT1pzTzBtTlVSU1Z1bDZJMG1ZNUV4ZVRsV1hKQTVjVmE4STBFcmFHQkk2VE9GRUctM29OdXJyZmJhdEZxdmxDVDdreWJPbHNfQW1YaXYxdDdVT21nYXBadWxxUzM0eElpN2cyNnhIbmUxcTNZY3pGX2IzUk5DVDM5c25kbXRzMUhfaEphUC02bDd5U0VoNjN2VFNaX3ZFeVlqMTZZRE5WVk55TXVTNFdKSEcza3dSaWpyMzBjMmhxaWc?oc=5",
+   "date": "2026-10-27",
+   "extrait": "MGEN : la CFE-CGC Mutualité se mobilise aux côtés de la mutuelle des agents de la fonction publique pour éviter la fin de délégation de gestion du régime obligatoire d’assurance maladie L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "mutuelle"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Macif : La direction confirme la réduction des moyens syndicaux, la CGT ne signera pas le projet de la mutuelle - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMingJBVV95cUxPQk11OUdHU2lIZWJseDNQMnBnVm84TFRNUDZFazRQRGpOSy1BZlh0UmtwWW9YcHdmMVZsVjZfczJ5cTN5a21SZ2dHcURSVWh2Qy1LOFRfRUE1Q3ppOVZhbUw2ZTYxc3RSUXRkOEkwX0xJaldPRzQxcUNHWFFvZ3Z4Y0J2SFU4bExZYkJ1dGNyUWh1TU1pQ1lOekpJZGhqbXdGekUzRnlUbTlIQ1h2SFN0cGVZNGhPc3hsU21mYndpQjRNY0tUWk1YQk1JNmZGOTZpZXJTTXM0OTNhOGNJRGhta0x6dXJmYXpqNm1OX2I0cmRIcmdYelNMSlFRWnhfV1RpNXBaQmZFYVdxZHo0LXhhQ2JPVlV0REtkMW9OQXB3?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Macif : La direction confirme la réduction des moyens syndicaux, la CGT ne signera pas le projet de la mutuelle L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "mutuelle"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Le groupe Asselio fixe le cap face aux transferts de charges de l'Assurance maladie - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPdWU4Yl8tT2gzcTBucmwzSEtNRkdydVNRLWowcTNqOGVFVjIycTBkYU5RWk10d2pPMTlUbS1fZ1hhaFNGWnhiOUpudUxlVjg3MUkzZGNIV2JHZnJnOERQb0xPX1g5SmNheW9IV1JicWVNckd1V3FmSXpLOEZtck9fZGlGZEYyQnU2RENDSDR5TlU4d0JhN2VxOW56VFNZdndZaWRiSzlrN0loZTNBUXgzYkJfTjBoY3BpTEtVZDE5bGFpdXdLaEhidVRJclA0cFp5UTdFYW40UmEwcjVMSlkwNmZjTkdIc1k?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Le groupe Asselio fixe le cap face aux transferts de charges de l'Assurance maladie La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Béatrice Honnoré prend la tête du pôle santé-prévoyance de Tessi - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOSG0yZnJIVnJJanVHOUo1ZE03QnRKQ2FTS3NFVThjSTZsOGVEQkJieXlTR3hJQ1Yxb0lEV0dlb2Jtb3NmdWJWZkNySFBHSXFqbDVhYnhaS2FxYWRpSHBsVEpNSjdiT2RmdUQ3NXF0Zmd1eFktNjFkTzFuQVlfWWVTT043VXZkcmk4Y0RoeUl4WnNjQWVFZWJxNk5OUGVEMkNPMEhLQzZGTXZZc3g1MHcyMkNQVzNmOU1BZ1BxVVJLNDJuM29FbWI4d2tBLTZBRHM?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Béatrice Honnoré prend la tête du pôle santé-prévoyance de Tessi La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance",
+    "prévoyance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Pour le 100 % santé, le risque a changé de camp - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdVNIMmhwdFNJWklVNHpRUkJoU2JvVktpTXlYZVZaZm1Hb1FoWWVKYlhfQXYta19yLW84a01kcHJ3VkhUdFVNWmQ2bXFKamxYa0dKa1QwNFQzeFBDQUNlVmEtbGFqRWxpMkluQkJiREZNT0JWcmt5cnllZkFHWFc1U3FqZEl6VTFaMUprRVBLZTl0cGxzU3RWM2lLX05JZUxlaU5ualdhLUo0c2hxUzRhZFQxSlJtUQ?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Pour le 100 % santé, le risque a changé de camp La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Centene : les profits se redressent, mais les assurés se raréfient - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPT0MwRkZhNUlpUnRLaXQ5TFpvdm0yb081MHZtWE9QMVBEUTNwNDhSY0FwV21qbXBaZzNSNTRIMzZiVHZjRHFSNGt1YXBqLXhoUkpMeU1ubFhuaDRmQkFiRXMydHRkTXZJX2lMOThVbko3UVdvYnY1eDFHQjRsaTJFbWZNcHcxODZCTno0amZPSktpWkdFNU1uS1F3WGNQUXpmdVFLUjNRR1g1SUVqZTJGdjB5UFZVNGlweEdKdmN4LUl1UGlEZlhhUjNyNENMZw?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Centene : les profits se redressent, mais les assurés se raréfient La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "AbbVie dépose une demande de licence biologique auprès de la FDA - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcURKNFVTYWZVMzF3QWUyMUhsbE94TFh6SkJMb2lBRHI0NDBIZ3dyamF5b1ItdXRzWjJqU05odXNjcmd4cnVLT0RZcGxmYzIxRFh3dkVrblhiWGtxZFRCM0VoNmpDU0xpOVpxU1ZYbHlrTjZlRHFSalFqUlhWUGh1QTQ1Y3R0NHIzSjFjTUlpWjZVYzBsQ2JiSElzS0M1OWJmSFZDUHRIV2VrOS1OeGFLVGpXZFdnRmt4VDVNV0VJRElrWVlwdVdoRlV4M2RScFE?oc=5",
+   "date": "2026-10-27",
+   "extrait": "AbbVie dépose une demande de licence biologique auprès de la FDA La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "AMD et Meta renforcent leur partenariat stratégique pour l'IA - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiygFBVV95cUxON2ZBUGNkYkZ0WG83TXBqeEZiOVZGYUZKRGJRVWVXYURTSVVlS3hOYnlSVGxhV1VoZEIyTFFocWpkU1VNVW1QRkpYckNPX2ZhWklmbVZBeUtOSGZIZVA2RUV2Z0pINVc1NGlZejE1NmZnalVkeG5xVFljRTItWHQ0Vzd0Mkh5UFY1a1JPQzRKUXZWekloQ3djbUhqZTFHeEdLZlhuX1ZtOHlEWnVhR0U2U01rUjAydlRRQ0N0d282MEpmcmxkSDc0M3Rn?oc=5",
+   "date": "2026-10-27",
+   "extrait": "AMD et Meta renforcent leur partenariat stratégique pour l'IA La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Assurance dommages : FM va reverser 855 millions de dollars à ses assurés en 2027 - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOa2NKY3ZCN3hfX21pQm5vRHlEVlFhMHFKaHhDejd0VGdTa0drYnduV0R0dlhxSWlpN1h5RnpFTEkzcHJZc1BHMkRKZWFnTVduUDFtekFmdHR0TS1xajVBV2hvdklaVjRYU0xXZEIxcTBYRGExclZMYk0tQldkSWpsOEdJX2NFVHFSNlZYNmh5NzhNMkh6dEZ2aFkwRnpMRFZVQWVWUkdTZkVsVnJsaFdqemViMTllRlZ6M1JMdEkxRHNtOFNyRVZoY3pUT0pLcHFOT09MZE84dkkwYVR2dW5ub29PVQ?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Assurance dommages : FM va reverser 855 millions de dollars à ses assurés en 2027 La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Pfizer annonce le succès d'Elrexfio en phase 3 - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUDZsTFlkeGJleWNLb1VmMG1nRGhtU095cVhQQThQUThyRHVRNWQwNTFJX0dRb2ZpemFBeVZtNkhoU3NwbnFiQ1BFeUVaa0tFbkVhWVdieWZhYzRtbk55Nk5LV2d2dTNyWFlrWFBEcDdSbHhoY3RIVG02N1BBVjRKTkZrUlhsbW5SUkh4MEVKY1hOaVpYam9NSmZ6eXVfSFVpcGthc2ZQTnlIdVdEMlNtUURHeXlDdw?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Pfizer annonce le succès d'Elrexfio en phase 3 La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Emeutes en France : le coût pour les assureurs devrait rester sous les 1,2 milliard d'euros (Morningstar DBRS) - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQQU1PMkZwZ1dTTjByWXhsaE9DbEdUMlJpVjRKZ3NvSDJ1enhjc0I1aVVMbFNYRVZEMWpzdEVoTmpQWUUtT3JDdUxHeU9CTFNFUnBEN2l4QXdEYUdSamZDVWMzM1dOek51b0RGbTktMjRmMVdjbUpjbVB5Yk9LT1l2STRJR2k0Q0VscW5WajhETVZMaEVPSFoxLTVSZE1yS2lTNi14WXlzU2NJMGUxeV8xX0l0YTM2VGtuM3l1N2VjeEJxSHhNYzF0U3N1TjJaT01jcmJGd2FRTWFQSDhiRzhOSjVyM1ZmaW5KTWZFUElLUVptQkctbUdNc056QTVJRmYxWG5SUA?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Emeutes en France : le coût pour les assureurs devrait rester sous les 1,2 milliard d'euros (Morningstar DBRS) La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance",
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Classement l’assurance en France : jusqu’au ciel ? - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSVBVb0RTeWdjVVBzV2Vwd2M0M0xfU0tUNHZEUDlibzBhanFUOXM3MGVQaTV5eGtrRkNJS1hURlFtaEpIdFZkY0Nsb2lZSlJPSzFrdFlaMXpVU0RFQ0JONVF3ZXh5eXh2RWkxT205Tk5NS1FQMUIzYldmZnczYmUtbEp5cVBwdVp2ekNfVlBxU0p2VGM2MDkxdFh1MzQ3NHJlZ2N4a25uVQ?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Classement l’assurance en France : jusqu’au ciel ? La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "South Korean regulator blocks insurance body’s AI venture - Insurance Business",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQNFFfU0NMVnMxcTRzbHhGLUgwRUkyRnRpOGljLUNkY04zRXNvUm1mS2RsdDNUVzI5NVBfN0JYNjQ1MHk2NF8yTWZWLTBoZjNya3JuN0NBb0llUnpVU1RRLXNQUXduUThNOE0xblFsZEZTZnAwZDdUVmxTUkZ4aGJ0S0NVNU9HVkV0bmVTaThFRTJtOExCbFlYS1V1dGJFUjdjalk4SXRxSVdReWhnZzBLSGxQdzRMcVk0c2w5QXdCT2tod1Vq?oc=5",
+   "date": "2026-10-27",
+   "extrait": "South Korean regulator blocks insurance body’s AI venture Insurance Business",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Climate Risk in Insurance: Rising Losses, Uninsurable Property and Mortgages - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0ZDZiSUVyQkE3d1U1NlV6M1Z5TnhvMzN4eTlNbHhwVUV0eEJQSlhRdUxWQ1hOMUxqZlM3QlpEUGtiWHprSVg2Vk1rYXhMb1dPOHlNMDh6WEpqeEk?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Climate Risk in Insurance: Rising Losses, Uninsurable Property and Mortgages Beinsure",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Luva, backed by EverQuote, launches AI-powered insurance comparison platform - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVWIwc0xPeHN6ZGptbHV1V053U01GSUpfcGVhVWZOTTh2QWx5WlZROGpoVHk0cEh1S29ldlROQlV5R1d5SHhsMG5Ld3c1V19uX2FHMURqNC1ReERrMWsxU29HSDJPaWVFNmRSSFNsbmxLRE1sYXp1a1NFemxpMmdBaFN6SEpCc2Zn?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Luva, backed by EverQuote, launches AI-powered insurance comparison platform Beinsure",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech raises",
+   "titre": "EU unveils climate resilience framework with re/insurance protection gap in focus - Reinsurance News",
+   "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPT2syUVgwNzhhblBlSHFZQ3ExaW1UTy00cnQ5OHN3Q0pjU0U2anhnc2phNF8ySVB3djdUeUZSTXdYVENyekpPeTYxRU9xbEdrMkxURnRJRUo1VVdoTXA0OEFtMVoybmJtV0d6NTA4OWJ3UHFObTBDd1Z0RXh4VUM3TVFzM25xa1ZVS3ZMaEZoZFlSdFNSaEtmZHVXNUpTaktYU1g3YVFIam5HLXVHZVg0Zw?oc=5",
+   "date": "2026-10-27",
+   "extrait": "EU unveils climate resilience framework with re/insurance protection gap in focus Reinsurance News",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN M&A assurance",
+   "titre": "Arnaque au faux courtier : plus d’un milliard d’euros volés aux emprunteurs - https://renseignementeconomique.fr/",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdHFwcmRLc0JMSXcxOXZ0WFhVRmJLZzNRelR1R0xnTlJkV3JYcm95aXA0cnBHMnFlZm5pOUJPREFKdnMzZ1d0UGdqMHg0Q01vTUExQzVheWNRNnJzM2ZIX05LZEJiNl9IbkU4Ym9ueWYwQnJTWWtYMU13NGpGZEJJbkgzMzRPSnVVeW1sVWRwczZCMnNVLXlKS3czRWZvWjZKbHBaeUtfMUg5M3Jw?oc=5",
+   "date": "2026-10-27",
+   "extrait": "Arnaque au faux courtier : plus d’un milliard d’euros volés aux emprunteurs https://renseignementeconomique.fr/",
+   "motsCles": [
+    "courtier"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNMlF5b00ybWlOYjZSeUl1NXVhYXlYVEdtdGlmZm95S0g5c0ZlOTVSRlhuQ1dIQ2g2Z0JwOF9vc05Id0VJZGFvZ2JBMmQ0aW00LU5UYTFwaml5dFQ5Xy1VRWZZRjgwaWc1cDRRbWJrajBTbUV1UkR2QkZpTkpNQnhEVjZuNWxsNmJjRUFHcjZUSzlsa3N2NXZoRXNoZmhTcDNMaUN6bjBzOHJheXZMaURNS18tNFZ1UnBtWWxqaFdPLUgwamhQYVFiY05UZjNmbWtmc2d2dDAtNllsSzltRUY1M1kzTUJlN01NdDBIVzBNTHlVZHJCN2FPZkN3SlhDd0lpeDN5QnlDb0tnUnM?oc=5",
+   "date": "2026-10-26",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "- Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiowNBVV95cUxPYlRva2Z3c3B2MU9ZTU1DQ09tZjhhWlRjbmtsWkJGUmUwNHV6SjI1OS00UXhDQTV1YUotX2pFWFlKYTRTQ0lwaFFCOUE5MERFYTY2QjVnbV84b0lxekVwTmNCRkJLaGNpQkhJcEtkaFdUbFR1cFlzY3BIdFNSdUNLbF9xdGI4SlNsSWFHMHF4TFByME0xQ0NOQjJQdy1uWUhkZjlXXzVWdUdDZzM2aFlwa2RTN1dLNE9ySDBYenhlS3dkTnVYNGU1QllELTliRDc4cVN5cEgzYjNCNmZpcXB5YmRBWXVUUW4ydzk0amFZc2pUekp2R1BaUjJleVNQN3F3Tjh3SmhEUkc5QzRFdGNqU0NtdkZhRHFWWFNnLTU4bkthd29FZXQ2THpZNWZNYWhuVWlucDFBZzBuYl9sT3F3ZGJUM2RsQ09YYTJMei0tZVFUVVpWdklwNUtvX183QzdoNW1nZXc2TDNGel9HRHNSaUs4aDNCWENkX2o5NUpwamtFX19ldVlNSjhDMW9JQ2Jmbm5USjNnUEd6bVZWVU80azdLQQ?oc=5",
+   "date": "2026-10-26",
+   "extrait": "Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "DoorDash en discussions avancées pour acquérir Instacart pour 17 milliards de dollars - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOTVduQkJOVFE1dHlXbUdFZ1ZLQjAtWGR6dDl2X0ZzeUZULUc1ektYV0N5c1ZaNWFTWHV5TXNlZXdrbHBjVEcxaVBoalJxQ2xteDM1M0Y1ZkFjcE03eDZCTkZVbjJvUzZUMm1HQTRGZVRabDVyemxHUGtaY1NHSG8wQTNQWEwwQmFLMUE2VGx0OTN6UlNOOHVFLVc0WVJOWHhHTzhYOGdlQzREbmF3dUJhQjI5ZHVMWlJSclNnNGxoVURHRlVjNVdfYXVTLWxMU0FYc19tYnV3dlFXb0RhU0JoYVNQd3VranFqZnUw?oc=5",
+   "date": "2026-10-26",
+   "extrait": "DoorDash en discussions avancées pour acquérir Instacart pour 17 milliards de dollars La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Le marché auto en pleine charge - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMDEtLWJqeUMwWEU0dHdQSWpTdkhhZE4xWmVabWhhWDBvMFdSb2FscFRNdWtOZ0RKdTB3cTNsdWNlQWVBRWhmR0ZVYWI0OFVqZDdJaUgwV1dnQ3FfaFVzVTlTYXhfS2xGcGdvZ041SE1CRlpLbjNZaGdET29yTmF1R0ZyQ2gxTWsybXR0djVnZHU3czB4VkIxcEhMLVJLeFFKc0dvQXhR?oc=5",
+   "date": "2026-10-26",
+   "extrait": "Le marché auto en pleine charge La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Merck et Kelun-Biotech dévoilent des résultats de phase 3 très encourageants - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQamR1M201ZkVKMUFnU1o4NjZ0SDEyZjh5UExHREx1a2tzQlNhRmZiZFRobERyR3ZjRzhyUUJaUnZsdzFKZ0Q0cGwteHlJS3hKZ29QT0dzaGd5M1F4bnphNUxpYnpFUnhOc1F5QlNpMXZDZ0JWZjFLbnZkU0UtQzhhajFQSDRycHZKNTNFZDZiLXo3MjdfUFNtdEpBamh6SmRYTGdHdUVUWWpJSkg2cy0wdXBIUkZBZDZlMThQTzZiU2d0UEJEQkZNcHlEZzZfU3JYa3h6bjhSRHdjc2RsLU5N?oc=5",
+   "date": "2026-10-26",
+   "extrait": "Merck et Kelun-Biotech dévoilent des résultats de phase 3 très encourageants La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  }
+ ]
+}
