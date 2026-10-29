@@ -1,4 +1,0 @@
-https://www.sagard.com/wp-json/wp/v2/taxonomies -> 200 5122
-https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=1 -> 200 1026705
-https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=2 -> 200 1062714
-https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=3 -> 200 84559

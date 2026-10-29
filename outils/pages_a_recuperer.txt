@@ -1,5 +1,8 @@
 # Une URL par ligne
-https://www.sagard.com/wp-json/wp/v2/taxonomies
-https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=1
-https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=2
-https://www.sagard.com/wp-json/wp/v2/projects?per_page=100&page=3
+https://www.axavp.com/companies/
+https://www.axavp.com/avp/
+https://www.axavp.com/axa-venture-partners-avp-leadership-team-acquires-axas-stake-in-avp/
+https://www.axavp.com/avp-completes-a-e250m-first-closing-for-its-new-growth-fund/
+https://allianzx.com/ourcompanies
+https://www.ternel.vc/portfolio
+https://entreprise.maif.fr/engagements/economie-responsable/maif-avenir
