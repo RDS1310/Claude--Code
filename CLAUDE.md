@@ -11,7 +11,7 @@ Suite of 5 web pages built for Rui (Groupama Vol'terre Investissement, GVI — G
 
 | Page | Artifact URL | Data | Generator | Template |
 |---|---|---|---|---|
-| Radar Insurtech VC | https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g | `VC_Database_Standardisee_vN.xlsx` (latest N auto-detected, currently v27) | `generer_site_vc.py` → `radar_insurtech_vc.html` | `_site_template.html` |
+| Radar Insurtech VC | https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g | `VC_Database_Standardisee_vN.xlsx` (latest N auto-detected, currently v28) | `generer_site_vc.py` → `radar_insurtech_vc.html` | `_site_template.html` |
 | Stratégie & Pipe GVI | https://claude.ai/artifact/58n6yRVTLgDuhavqhxihGn | `gvi_data/GVI_Status_Report_Startups.xlsx` (tab `Start-up`) | `generer_page_gvi.py` → `gvi_strategie_pipe.html` | `_gvi_template.html` |
 | Veille Insurtech | https://claude.ai/artifact/5FXTpkCo6KvGu6YyeYAHiw | `veille_data/entries.json` | `generer_page_veille.py` → `veille_insurtech.html` | `_veille_template.html` |
 | Étude M&A Assurance | https://claude.ai/artifact/BPSeTnKnWY2PkAGcH5s2ai | `ma_data/deals.json` | `generer_page_ma.py` → `etude_marche_ma.html` | `_ma_template.html` |
@@ -33,7 +33,7 @@ Grille + doctrine follow GVI's external deck (Sept. 2026): criteria titles/quest
 Local test harness for the upload flow (mocked `window.claude`, libs from npm): scratchpad only, not committed.
 
 ## Data model (Excel, 5 sheets)
-`Fonds` (126 vehicles, 67 cols) · `Participations` (325) · `Tours_de_table` (58) · `Dictionnaire` (106 fields) · `Anomalies` (347, IDs `ANO-0001`…).
+`Fonds` (126 vehicles, 67 cols) · `Participations` (325) · `Tours_de_table` (58) · `Dictionnaire` (106 fields) · `Anomalies` (350, IDs `ANO-0001`…). v28 (29/10, `maj_radar_v28.py`): exact-equivalent labels merged (Series→Série, Actif→Active, US/UK→États-Unis/Royaume-Uni; ANO-0348…0350).
 
 v27 (20/10/2026, `maj_radar_v27.py` + `radar_refresh/portefeuille_sagard_2026_10.json`): full Portage (Sagard) portfolio from sagard.com — 62 rows added to Portag3 Venture I/II/III, Portage Ventures IV and the new vehicle **Portage Capital Solutions I** (PCS I). Sagard publishes no date/amount/stage (left empty); "previous" = Exit O. Non-insurance companies are kept but labelled `FinTech (hors assurance)` / `Hors périmètre assurance`; `secteur_bucket` excludes any label containing "hors" from Tendances (ANO-0342…0347).
 
@@ -68,7 +68,7 @@ Site tokens: petrol `#0C5C5E`, ochre `#A8681F`, Newsreader (display) + IBM Plex 
 - **n8n** (user's trial, being retired): workflow `fetch_news` and an agent with a knowledge base — superseded by the GitHub Actions collection.
 
 ## Open items
-- Verify TheFamily acquisition (17/02/2026, CB Insights only — ANO-0327). Beazley/Zurich deal completed 01/10/2026: update `ma_data` status at next M&A run.
+- Verify TheFamily acquisition (17/02/2026, CB Insights only — ANO-0327). Beazley/Zurich marked « Finalisée le 01/10/2026 » in `ma_data` on 29/10.
 - Radar template has `VALO_DATES` (dated valuations, e.g. Alan 06/2026) — it was published from an uncommitted session on 01/10 and merged back on 02/10.
 - Review the 4 start-ups tagged "adjacent" but out of insurance scope (ANO-0315: MuchBetter.ai, Gretel, hypt., Value Factory).
 - Collection: watch feed health in the raw files (`flux[].ok`); feeding fund news into the Excel (vN+1) not automated yet.
