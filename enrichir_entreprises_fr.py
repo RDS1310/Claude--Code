@@ -8,9 +8,11 @@ INSEE/INPI) pour chaque société française du Radar (Participations, pays Fran
 (pays France), et enregistre : SIREN, raison sociale, date de création, tranche d'effectif, siège,
 activité, état, et les comptes publiés (CA, résultat net par exercice) quand la société les publie.
 
-Le rapprochement nom → SIREN est prudent : on garde le meilleur candidat seulement si son nom
-(raison sociale, sigle ou enseigne) correspond au nom suivi (score ≥ 0,85) ; sinon la société est
-marquée « non trouvée » avec ses candidats, à trancher à la main. Rien n'est écrit dans le Radar :
+Le rapprochement nom → SIREN est prudent : un candidat n'est retenu que si son nom (raison sociale,
+sigle ou enseigne) correspond au nom suivi (score ≥ 0,85), s'il est actif et si son activité (NAF) est
+plausible pour une start-up ; entre homonymes, la plus grande tranche d'effectif l'emporte, et une
+égalité donne le statut « ambigu ». Sinon la société est « non trouvée » avec ses candidats.
+Le script d'application (maj_radar_vN) vérifie en plus que la création précède l'investissement. Rien n'est écrit dans le Radar :
 le résultat (radar_refresh/entreprises_fr.json) est appliqué ensuite par un script maj_radar_vN.
 
 Lancé par GitHub Actions (.github/workflows/enrichir_entreprises.yml) : l'API n'est pas joignable
@@ -39,6 +41,10 @@ TRANCHES = {"NN": None, "00": "0", "01": "1-2", "02": "3-5", "03": "6-9", "11": 
             "22": "100-199", "31": "200-249", "32": "250-499", "41": "500-999", "42": "1 000-1 999", "51": "2 000-4 999",
             "52": "5 000-9 999", "53": "10 000+"}
 FORMES = r"\b(sas|sasu|sa|sarl|eurl|sci|snc|scop)\b"
+# Activités plausibles pour une start-up suivie (logiciel, données, finance/assurance, conseil, R&D, santé) :
+# sert à départager les homonymes (une « ALAN » créée en 2018 avec 6 salariés n'est pas Alan SA).
+NAF_PLAUSIBLES = ("58.2", "62.", "63.", "64.", "65.", "66.", "70.2", "71.12", "72.", "73.", "74.9", "82.", "85.", "86.")
+RANG_EFFECTIF = {k: i for i, k in enumerate(TRANCHES)}
 
 
 def dernier_classeur() -> Path:
@@ -88,6 +94,7 @@ def resume(r: dict) -> dict:
         "tranche_effectif": TRANCHES.get(str(r.get("tranche_effectif_salarie") or "NN")),
         "annee_effectif": r.get("annee_tranche_effectif_salarie"),
         "activite": r.get("activite_principale"), "commune": siege.get("libelle_commune"),
+        "nature_juridique": r.get("nature_juridique"), "categorie": r.get("categorie_entreprise"),
         "finances": exercices,
         "fiche": f"https://annuaire-entreprises.data.gouv.fr/entreprise/{r.get('siren')}",
     }
@@ -106,15 +113,32 @@ def societes() -> dict[str, set]:
     return noms
 
 
+def plausible(r: dict) -> bool:
+    return str(r.get("activite_principale") or "").startswith(NAF_PLAUSIBLES) and r.get("etat_administratif") == "A"
+
+
 def main() -> int:
     resultats, trouves = {}, 0
     for nom, origines in sorted(societes().items()):
         candidats = appel(cle(nom) or nom)
         time.sleep(0.25)
+        if not candidats and cle(nom) != nom:
+            candidats = appel(nom)
+            time.sleep(0.25)
         notes = sorted(((score(nom, c), c) for c in candidats), key=lambda x: -x[0])
-        if notes and notes[0][0] >= SEUIL:
-            resultats[nom] = {"statut": "trouvé", "score": notes[0][0], "origines": sorted(origines), **resume(notes[0][1])}
-            trouves += 1
+        retenus = [c for s, c in notes if s >= SEUIL]
+        # Homonymes : on ne garde que les activités plausibles, puis la plus grande tranche d'effectif.
+        bons = sorted((c for c in retenus if plausible(c)),
+                      key=lambda c: -RANG_EFFECTIF.get(str(c.get("tranche_effectif_salarie") or "NN"), 0))
+        if bons:
+            ambigu = len(bons) > 1 and (RANG_EFFECTIF.get(str(bons[0].get("tranche_effectif_salarie") or "NN"), 0)
+                                        == RANG_EFFECTIF.get(str(bons[1].get("tranche_effectif_salarie") or "NN"), 0))
+            resultats[nom] = {"statut": "ambigu" if ambigu else "trouvé", "score": score(nom, bons[0]),
+                              "origines": sorted(origines), **resume(bons[0]),
+                              "autres_homonymes": [{"siren": c.get("siren"), "nom": c.get("nom_complet"),
+                                                    "creation": c.get("date_creation"),
+                                                    "activite": c.get("activite_principale")} for c in retenus if c is not bons[0]]}
+            trouves += not ambigu
         else:
             resultats[nom] = {"statut": "non trouvé", "origines": sorted(origines),
                               "candidats": [{"score": s, "siren": c.get("siren"), "nom": c.get("nom_complet")} for s, c in notes[:3]]}
