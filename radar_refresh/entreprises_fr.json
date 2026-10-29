@@ -1,0 +1,2825 @@
+{
+ "date": "2026-10-29",
+ "source": "recherche-entreprises.api.gouv.fr",
+ "societes": {
+  "+simple": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "901679456",
+   "raison_sociale": "SIMPLE",
+   "date_creation": "2021-04-13",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "94.92Z",
+   "commune": "LOUVECIENNES",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/901679456"
+  },
+  "360skillvue": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "951352384",
+   "raison_sociale": "360SKILLVUE",
+   "date_creation": "2023-04-05",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/951352384"
+  },
+  "AI6 TECHNOLOGIES": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "938439742",
+   "raison_sociale": "AI6 TECHNOLOGIES",
+   "date_creation": "2024-12-05",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/938439742"
+  },
+  "ALRJ": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "914790142",
+   "raison_sociale": "ALRJ",
+   "date_creation": "2022-06-13",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "47.91B",
+   "commune": "CENON",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914790142"
+  },
+  "Acheel": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "879605350",
+   "raison_sociale": "ACHEEL",
+   "date_creation": "2019-11-26",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "65.12Z",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 147186264,
+     "resultat_net": 4492418
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879605350"
+  },
+  "Akur8": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "841204720",
+   "raison_sociale": "AKUR8",
+   "date_creation": "2018-07-17",
+   "etat": "A",
+   "tranche_effectif": "100-199",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -18744199
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/841204720"
+  },
+  "Alan": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "837986017",
+   "raison_sociale": "ALAN",
+   "date_creation": "2018-03-01",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "56.10C",
+   "commune": "TOULOUSE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837986017"
+  },
+  "AlloBrain": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "candidats": []
+  },
+  "Alogia (Reveal Care)": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "802671677",
+   "raison_sociale": "ALOGIA",
+   "date_creation": "2014-05-18",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "70.22Z",
+   "commune": "BORDEAUX",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -1285803
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802671677"
+  },
+  "Alphonse": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "847634656",
+   "raison_sociale": "ALPHONSE",
+   "date_creation": "2018-12-27",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "66.30Z",
+   "commune": "SAMOIS-SUR-SEINE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847634656"
+  },
+  "Alpic": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "485114177",
+   "raison_sociale": "ALPIC",
+   "date_creation": "2005-11-01",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "10.71D",
+   "commune": "ANGERS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/485114177"
+  },
+  "Angel start": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": [
+    {
+     "score": 0.667,
+     "siren": "901941658",
+     "nom": "O START (O START)"
+    },
+    {
+     "score": 0.64,
+     "siren": "823014956",
+     "nom": "ANGELE ALCARAZ (START CONSTRUCTION)"
+    },
+    {
+     "score": 0.316,
+     "siren": "492365952",
+     "nom": "CLUB SOPHIA BUSINESS ANGELS"
+    }
+   ]
+  },
+  "Assolia": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "834944530",
+   "raison_sociale": "ASSOLIA",
+   "date_creation": "2017-11-08",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "94.99Z",
+   "commune": "LIMOGES",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/834944530"
+  },
+  "Assurup": {
+   "statut": "trouvé",
+   "score": 0.933,
+   "origines": [
+    "radar"
+   ],
+   "siren": "811686062",
+   "raison_sociale": "ASSUR'UP",
+   "date_creation": "2015-05-08",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "LEVALLOIS-PERRET",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": 929471
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/811686062"
+  },
+  "Beloy": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "888048659",
+   "raison_sociale": "BELOY",
+   "date_creation": "2020-08-05",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "62.02A",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -1103298
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/888048659"
+  },
+  "Bifrost": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "893539353",
+   "raison_sociale": "BIFROST",
+   "date_creation": "2021-01-19",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "64.20Z",
+   "commune": "CREUZIER-LE-VIEUX",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -11182
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/893539353"
+  },
+  "Biolock": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "925043309",
+   "raison_sociale": "BIOLOCK",
+   "date_creation": "2024-03-25",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.02A",
+   "commune": "FONTAINEBLEAU",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/925043309"
+  },
+  "Bleckwen": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "844558304",
+   "raison_sociale": "BLECKWEN",
+   "date_creation": "2018-12-07",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PUTEAUX",
+   "finances": {
+    "2022": {
+     "ca": 0,
+     "resultat_net": -2548378
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/844558304"
+  },
+  "Board of Cyber": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "908185424",
+   "raison_sociale": "BOARD OF CYBER",
+   "date_creation": "2021-12-10",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.02A",
+   "commune": "SEVRES",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -793058
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/908185424"
+  },
+  "BotRank.ai": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "CAREEXPAT": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Caarl": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "851138461",
+   "raison_sociale": "CAARL",
+   "date_creation": "2019-05-22",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/851138461"
+  },
+  "Callendar": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "879252831",
+   "raison_sociale": "CALLENDAR",
+   "date_creation": "2019-11-15",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "74.90B",
+   "commune": "PUTEAUX",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879252831"
+  },
+  "Cartan Trade": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "904596715",
+   "raison_sociale": "CARTAN TRADE",
+   "date_creation": "2021-10-08",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -852465
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/904596715"
+  },
+  "Cautioneo": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "837897370",
+   "raison_sociale": "CAUTIONEO",
+   "date_creation": "2018-02-26",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "68.32A",
+   "commune": "LILLE",
+   "finances": {
+    "2024": {
+     "ca": 1378745,
+     "resultat_net": -341629
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837897370"
+  },
+  "Celest.science": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "949645600",
+   "raison_sociale": "CELEST SCIENCE",
+   "date_creation": "2023-03-03",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "MONTPELLIER",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949645600"
+  },
+  "Certificall": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "921183257",
+   "raison_sociale": "CERTIFICALL",
+   "date_creation": "2022-10-20",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "CASTELNAU-D'ESTRETEFONDS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/921183257"
+  },
+  "Citalid's": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": [
+    {
+     "score": 0.6,
+     "siren": "833926264",
+     "nom": "CITALID CYBERSECURITE"
+    }
+   ]
+  },
+  "ClimateSecure": {
+   "statut": "non trouvé",
+   "origines": [
+    "radar"
+   ],
+   "candidats": [
+    {
+     "score": 0.3,
+     "siren": "807837174",
+     "nom": "AXANTEM (CLIMATESECURE)"
+    }
+   ]
+  },
+  "Continuity": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "878686252",
+   "raison_sociale": "CONTINUITY",
+   "date_creation": "2019-10-15",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -2658145
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/878686252"
+  },
+  "Covalt": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "877606970",
+   "raison_sociale": "COVALT",
+   "date_creation": "2019-09-23",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -569156
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/877606970"
+  },
+  "Covalt (ex-Pono)": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "877606970",
+   "raison_sociale": "COVALT",
+   "date_creation": "2019-09-23",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -569156
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/877606970"
+  },
+  "Coverd": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "843119363",
+   "raison_sociale": "COVERD",
+   "date_creation": "2018-10-09",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "RUEIL-MALMAISON",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/843119363"
+  },
+  "Cyna": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "988073946",
+   "raison_sociale": "CYNA",
+   "date_creation": "2023-01-01",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "68.20A",
+   "commune": "RENNES",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988073946"
+  },
+  "Dalma": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "430348482",
+   "raison_sociale": "DALMA",
+   "date_creation": "1999-03-22",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "90.01Z",
+   "commune": "MIMET",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/430348482"
+  },
+  "Dattak": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "907857817",
+   "raison_sociale": "DATTAK",
+   "date_creation": "2021-12-01",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/907857817"
+  },
+  "Descartes Underwriting": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "843359357",
+   "raison_sociale": "DESCARTES UNDERWRITING SAS",
+   "date_creation": "2018-10-09",
+   "etat": "A",
+   "tranche_effectif": "100-199",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/843359357"
+  },
+  "Descartes Underwritting": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Digital Insure": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "885144030",
+   "raison_sociale": "DIGITAL INSURE",
+   "date_creation": "2020-07-10",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {
+    "2023": {
+     "ca": 32565352,
+     "resultat_net": -6112888
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/885144030"
+  },
+  "DutyAdvisor": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "940569965",
+   "raison_sociale": "DUTYADVISOR",
+   "date_creation": "2025-02-05",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "70.22Z",
+   "commune": "MACON",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/940569965"
+  },
+  "Dylogy": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Epsor": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "candidats": [
+    {
+     "score": 0.167,
+     "siren": "832966956",
+     "nom": "FREMAVI"
+    }
+   ]
+  },
+  "Estaly": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "909874109",
+   "raison_sociale": "ESTALY",
+   "date_creation": "2022-01-20",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {
+    "2023": {
+     "ca": 0,
+     "resultat_net": -726055
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/909874109"
+  },
+  "Eukonomy": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "928761592",
+   "raison_sociale": "EUKONOMY",
+   "date_creation": "2024-05-07",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "70.22Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/928761592"
+  },
+  "Eyst": {
+   "statut": "trouvé",
+   "score": 0.9,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "914735592",
+   "raison_sociale": "EYST TECHNOLOGY",
+   "date_creation": "2022-06-06",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.02A",
+   "commune": "PUTEAUX",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914735592"
+  },
+  "Fasst": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "809035603",
+   "raison_sociale": "FASST",
+   "date_creation": "2015-01-08",
+   "etat": "C",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "68.20B",
+   "commune": "MARSEILLE 15",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/809035603"
+  },
+  "Feelbat": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "884152422",
+   "raison_sociale": "FEELBAT",
+   "date_creation": "2020-06-09",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "71.12B",
+   "commune": "SAINT-PAUL",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": 0
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/884152422"
+  },
+  "Finovox": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "878381961",
+   "raison_sociale": "FINOVOX",
+   "date_creation": "2019-10-07",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.02B",
+   "commune": "SAINT-CLOUD",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -1625934
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/878381961"
+  },
+  "Finres": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "879865525",
+   "raison_sociale": "FINRES",
+   "date_creation": "2019-12-04",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "74.90B",
+   "commune": "PARIS",
+   "finances": {
+    "2022": {
+     "ca": 0,
+     "resultat_net": 463123
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879865525"
+  },
+  "Flitter": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "890340144",
+   "raison_sociale": "FLITTER",
+   "date_creation": "2020-10-19",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "NEUILLY-SUR-SEINE",
+   "finances": {
+    "2023": {
+     "ca": 0,
+     "resultat_net": -1257753
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/890340144"
+  },
+  "Fluo": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "839099546",
+   "raison_sociale": "FLUO",
+   "date_creation": "2018-04-05",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "55.20Z",
+   "commune": "LYON",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/839099546"
+  },
+  "FundShop": {
+   "statut": "non trouvé",
+   "origines": [
+    "radar"
+   ],
+   "candidats": [
+    {
+     "score": 0.235,
+     "siren": "792750283",
+     "nom": "SUPPORTFI (FUNDSHOP)"
+    }
+   ]
+  },
+  "GXP3": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "988701702",
+   "raison_sociale": "GXP3",
+   "date_creation": "2025-09-01",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.01Z",
+   "commune": "PARIS 01",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988701702"
+  },
+  "Garantme": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "832523344",
+   "raison_sociale": "GARANTME",
+   "date_creation": "2017-10-01",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 14535738,
+     "resultat_net": -137527
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832523344"
+  },
+  "Geoya": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "880269246",
+   "raison_sociale": "GEOYA",
+   "date_creation": "2019-12-30",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "66.21Z",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -87963
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/880269246"
+  },
+  "GitGuardian": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "833611742",
+   "raison_sociale": "GITGUARDIAN",
+   "date_creation": "2017-11-20",
+   "etat": "A",
+   "tranche_effectif": "100-199",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/833611742"
+  },
+  "Goodvest": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "889263117",
+   "raison_sociale": "GOODVEST",
+   "date_creation": "2020-09-17",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {
+    "2023": {
+     "ca": 0,
+     "resultat_net": 0
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889263117"
+  },
+  "Grace": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "952444321",
+   "raison_sociale": "GRACE",
+   "date_creation": "2023-03-29",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "47.71Z",
+   "commune": "GUJAN-MESTRAS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/952444321"
+  },
+  "HD Rain": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "839815859",
+   "raison_sociale": "HD RAIN",
+   "date_creation": "2018-05-23",
+   "etat": "A",
+   "tranche_effectif": "0",
+   "annee_effectif": "2024",
+   "activite": "74.90B",
+   "commune": "BONNEUIL-SUR-MARNE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/839815859"
+  },
+  "Hokodo": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "847859352",
+   "raison_sociale": "HOKODO",
+   "date_creation": "2019-01-04",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 2507094,
+     "resultat_net": -8497258
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847859352"
+  },
+  "Horizons Insurance": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "104342514",
+   "raison_sociale": "HORIZONS INSURANCE",
+   "date_creation": "2026-04-24",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "70.10Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/104342514"
+  },
+  "Hugin & Munin": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "100873363",
+   "raison_sociale": "HUGIN & MUNIN",
+   "date_creation": "2026-01-19",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "70.10Z",
+   "commune": "STRASBOURG",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/100873363"
+  },
+  "Huscarl": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "992337022",
+   "raison_sociale": "HUSCARL",
+   "date_creation": "2025-10-03",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/992337022"
+  },
+  "Huwise": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": [
+    {
+     "score": 0.111,
+     "siren": "538168329",
+     "nom": "OPENDATASOFT (HUWISE)"
+    }
+   ]
+  },
+  "Hydroclimat": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "848583043",
+   "raison_sociale": "HYDROCLIMAT",
+   "date_creation": "2019-02-06",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "71.12B",
+   "commune": "LA CADIERE-D'AZUR",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/848583043"
+  },
+  "INFRA": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "314583543",
+   "raison_sociale": "INFRA",
+   "date_creation": "1978-01-01",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "74.20Z",
+   "commune": "STRASBOURG",
+   "finances": {
+    "2024": {
+     "ca": 2311742,
+     "resultat_net": -791
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/314583543"
+  },
+  "In clear terms": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Innovassur": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "343745949",
+   "raison_sociale": "INNOVASSUR",
+   "date_creation": "1987-11-01",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "BOISSY-L'AILLERIE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/343745949"
+  },
+  "Juste Retraite": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": [
+    {
+     "score": 0.385,
+     "siren": "904086923",
+     "nom": "GROUPE JUSTE (JUSTE RETRAITE)"
+    }
+   ]
+  },
+  "Kamaé": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "889362497",
+   "raison_sociale": "KAMAE",
+   "date_creation": "2020-09-19",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.02A",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -763210
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889362497"
+  },
+  "Kapptivate": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "803963214",
+   "raison_sociale": "KAPPTIVATE",
+   "date_creation": "2014-08-01",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -618096
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803963214"
+  },
+  "Kayrros": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "818399651",
+   "raison_sociale": "KAYRROS",
+   "date_creation": "2016-02-03",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/818399651"
+  },
+  "Kelkun": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "979060142",
+   "raison_sociale": "KELKUN",
+   "date_creation": "2023-08-10",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "VENDARGUES",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": 0
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/979060142"
+  },
+  "Klaimy": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "981354749",
+   "raison_sociale": "KLAIMY",
+   "date_creation": "2023-10-31",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/981354749"
+  },
+  "Koala": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "442131538",
+   "raison_sociale": "KOALA",
+   "date_creation": "2002-05-15",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "93.21Z",
+   "commune": "SAINTE-FOY-LES-LYON",
+   "finances": {
+    "2025": {
+     "ca": 3055945,
+     "resultat_net": 217557
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/442131538"
+  },
+  "Korint": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "919444901",
+   "raison_sociale": "KORINT",
+   "date_creation": "2022-10-02",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "NANTERRE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/919444901"
+  },
+  "Kraeken (AEGIR)": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Kunto": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "892798588",
+   "raison_sociale": "KUNTO",
+   "date_creation": "2021-01-08",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "63.11Z",
+   "commune": "ATHIS-MONS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/892798588"
+  },
+  "Letxbe.ai": {
+   "statut": "trouvé",
+   "score": 0.9,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "915341234",
+   "raison_sociale": "LETXBE",
+   "date_creation": "2022-07-05",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "58.29C",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -232513
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/915341234"
+  },
+  "Liberty Rider": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "821070489",
+   "raison_sociale": "LIBERTY RIDER",
+   "date_creation": "2016-06-15",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "63.11Z",
+   "commune": "TOULOUSE",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": 129320
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/821070489"
+  },
+  "Licy": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "951509819",
+   "raison_sociale": "LICY",
+   "date_creation": "2023-04-11",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "68.20B",
+   "commune": "MONS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/951509819"
+  },
+  "Lidix": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Lifeaz": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "814042958",
+   "raison_sociale": "LIFEAZ",
+   "date_creation": "2015-10-02",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "26.60Z",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -1341461
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/814042958"
+  },
+  "Linkbycar": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "892103672",
+   "raison_sociale": "LINKBYCAR",
+   "date_creation": "2021-01-01",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "58.29C",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/892103672"
+  },
+  "Lite": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "825391733",
+   "raison_sociale": "LITE",
+   "date_creation": "2017-01-30",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "58.29C",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": 0
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/825391733"
+  },
+  "Little John": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "930449251",
+   "raison_sociale": "LITTLE JOHN",
+   "date_creation": "2024-06-26",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/930449251"
+  },
+  "Localia": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "927783167",
+   "raison_sociale": "LOCALIA",
+   "date_creation": "2024-04-17",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/927783167"
+  },
+  "Lovys": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "832028021",
+   "raison_sociale": "LOVYS",
+   "date_creation": "2017-09-06",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "SAINT-DENIS",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": 672588
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832028021"
+  },
+  "Luko": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "801246810",
+   "raison_sociale": "LUKO",
+   "date_creation": "2014-03-25",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "56.10C",
+   "commune": "TOULOUSE",
+   "finances": {
+    "2024": {
+     "ca": 833853,
+     "resultat_net": 15937
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/801246810"
+  },
+  "MedSmart": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "882977226",
+   "raison_sociale": "MEDSMART",
+   "date_creation": "2020-04-17",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "NEUILLY-SUR-SEINE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/882977226"
+  },
+  "Meelo": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "829051317",
+   "raison_sociale": "MEELO",
+   "date_creation": "2017-04-07",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.02A",
+   "commune": "MARCQ-EN-BARŒUL",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -444623
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/829051317"
+  },
+  "MeetMeCall": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Messaging Me": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "948692231",
+   "raison_sociale": "MESSAGING ME",
+   "date_creation": "2023-01-31",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "70.21Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948692231"
+  },
+  "MiTrust": {
+   "statut": "non trouvé",
+   "origines": [
+    "radar"
+   ],
+   "candidats": []
+  },
+  "MincaAI": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "939159604",
+   "raison_sociale": "MINCAAI",
+   "date_creation": "2024-12-18",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.02A",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/939159604"
+  },
+  "Mindflow": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "795131697",
+   "raison_sociale": "MINDFLOW",
+   "date_creation": "2013-07-01",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "62.02A",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/795131697"
+  },
+  "Miralia (ex-Golem.ai)": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "108190182",
+   "raison_sociale": "MIRALIA",
+   "date_creation": "2026-07-28",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "68.20B",
+   "commune": "RUAUDIN",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/108190182"
+  },
+  "Modeinspect": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "MokN": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "980821474",
+   "raison_sociale": "MOKN",
+   "date_creation": "2023-10-19",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/980821474"
+  },
+  "Mon Petit Placement": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "831051453",
+   "raison_sociale": "MON PETIT PLACEMENT",
+   "date_creation": "2017-07-07",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "66.19B",
+   "commune": "LYON",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -2980101
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/831051453"
+  },
+  "MoneyTrack": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "837473511",
+   "raison_sociale": "MONEYTRACK",
+   "date_creation": "2018-02-06",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 1014671,
+     "resultat_net": -942041
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837473511"
+  },
+  "MuchBetter.ai": {
+   "statut": "non trouvé",
+   "origines": [
+    "radar"
+   ],
+   "candidats": [
+    {
+     "score": 0.588,
+     "siren": "928375013",
+     "nom": "ROUNDTABLE - MUCHBETTER"
+    }
+   ]
+  },
+  "My Pension": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "881739858",
+   "raison_sociale": "MY PENSION",
+   "date_creation": "2020-02-17",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "70.22Z",
+   "commune": "BEGLES",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/881739858"
+  },
+  "MySofie": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Nalo": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "101343762",
+   "raison_sociale": "NALO",
+   "date_creation": "2026-02-10",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "56.30Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/101343762"
+  },
+  "Neat": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "913676581",
+   "raison_sociale": "NEAT",
+   "date_creation": "2022-05-18",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "BORDEAUX",
+   "finances": {
+    "2023": {
+     "ca": 0,
+     "resultat_net": -3792853
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913676581"
+  },
+  "Neat Protect": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Netiful": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "841658610",
+   "raison_sociale": "NETIFUL",
+   "date_creation": "2018-07-31",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "62.02A",
+   "commune": "TETHIEU",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/841658610"
+  },
+  "Nexelec": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "993456383",
+   "raison_sociale": "NEXELEC",
+   "date_creation": "2025-10-27",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "43.21A",
+   "commune": "LA ROCHELLE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/993456383"
+  },
+  "Nopillo": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "913946125",
+   "raison_sociale": "NOPILLO",
+   "date_creation": "2022-05-23",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -1242140
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913946125"
+  },
+  "OIB Solutions": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "978439263",
+   "raison_sociale": "OIB SOLUTIONS",
+   "date_creation": "2023-09-01",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/978439263"
+  },
+  "OKOA": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "917579740",
+   "raison_sociale": "OKOA",
+   "date_creation": "2022-07-01",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "47.59B",
+   "commune": "ANTIBES",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/917579740"
+  },
+  "Olino (ex-Riskee)": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "512242728",
+   "raison_sociale": "OLINO",
+   "date_creation": "2009-04-20",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "68.32A",
+   "commune": "SIX-FOURS-LES-PLAGES",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/512242728"
+  },
+  "Omniscient": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "981759996",
+   "raison_sociale": "OMNISCIENT",
+   "date_creation": "2023-11-20",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/981759996"
+  },
+  "Orakle Weather": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "979438967",
+   "raison_sociale": "ORAKLE WEATHER",
+   "date_creation": "2023-09-01",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/979438967"
+  },
+  "Orus": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "899793632",
+   "raison_sociale": "ORUS",
+   "date_creation": "2021-05-26",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "SAINT-MANDE",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -888466
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/899793632"
+  },
+  "Paladin": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "929033199",
+   "raison_sociale": "PALADIN",
+   "date_creation": "2024-05-16",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/929033199"
+  },
+  "Panora": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "103247284",
+   "raison_sociale": "PANORA",
+   "date_creation": "2026-03-26",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.01Z",
+   "commune": "MONTROUGE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/103247284"
+  },
+  "Particeep": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "790884084",
+   "raison_sociale": "PARTICEEP",
+   "date_creation": "2013-01-24",
+   "etat": "C",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "NEUILLY-SUR-SEINE",
+   "finances": {
+    "2023": {
+     "ca": 2194356,
+     "resultat_net": -1531122
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/790884084"
+  },
+  "Peppers": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "989453295",
+   "raison_sociale": "PEPPERS",
+   "date_creation": "2025-07-21",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.01Z",
+   "commune": "MONTROUGE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/989453295"
+  },
+  "Qantev": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "847752789",
+   "raison_sociale": "QANTEV",
+   "date_creation": "2019-01-28",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "SAINT-MANDE",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": 0
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847752789"
+  },
+  "Qevlar AI": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "952849115",
+   "raison_sociale": "QEVLAR AI",
+   "date_creation": "2023-05-19",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "58.29C",
+   "commune": "ISSY-LES-MOULINEAUX",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -1672786
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/952849115"
+  },
+  "Quartz": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "508585270",
+   "raison_sociale": "QUARTZ",
+   "date_creation": "2008-10-01",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "10.71C",
+   "commune": "BOULOGNE-BILLANCOURT",
+   "finances": {
+    "2025": {
+     "ca": 1102921,
+     "resultat_net": 89588
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/508585270"
+  },
+  "Quideos": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "912196227",
+   "raison_sociale": "QUIDEOS",
+   "date_creation": "2022-03-29",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "62.02B",
+   "commune": "SAINT-MAUR-DES-FOSSES",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/912196227"
+  },
+  "RIZLUM AI": {
+   "statut": "trouvé",
+   "score": 0.9,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "987810330",
+   "raison_sociale": "RIZLUM",
+   "date_creation": "2024-03-19",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": "2024",
+   "activite": "58.29C",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 16667,
+     "resultat_net": -20137
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/987810330"
+  },
+  "Ringover": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": [
+    {
+     "score": 0.4,
+     "siren": "480234210",
+     "nom": "BJT PARTNERS (BJT PARTNERS - RINGOVER GROUP) (BJT)"
+    }
+   ]
+  },
+  "SESAMm": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "802024737",
+   "raison_sociale": "SESAMM",
+   "date_creation": "2014-04-28",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "58.29C",
+   "commune": "METZ",
+   "finances": {
+    "2019": {
+     "ca": 0,
+     "resultat_net": -538649
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802024737"
+  },
+  "Sami": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "417520459",
+   "raison_sociale": "SAMI",
+   "date_creation": "1998-01-01",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "56.10A",
+   "commune": "LORIENT",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/417520459"
+  },
+  "SesameIT": {
+   "statut": "non trouvé",
+   "origines": [
+    "radar"
+   ],
+   "candidats": []
+  },
+  "Seyna": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "808540132",
+   "raison_sociale": "SEYNA",
+   "date_creation": "2015-01-01",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "47.71Z",
+   "commune": "PARIS",
+   "finances": {
+    "2024": {
+     "ca": 19228,
+     "resultat_net": -2668
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/808540132"
+  },
+  "Shift Technology": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "791862618",
+   "raison_sociale": "SHIFT TECHNOLOGY",
+   "date_creation": "2013-03-11",
+   "etat": "A",
+   "tranche_effectif": "250-499",
+   "annee_effectif": "2024",
+   "activite": "58.29A",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/791862618"
+  },
+  "SideCare (ex-Hoggo)": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": [
+    {
+     "score": 0.143,
+     "siren": "831322367",
+     "nom": "LOUNNA (SIDECARE)"
+    }
+   ]
+  },
+  "Sillage (Kaizenn)": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "380288050",
+   "raison_sociale": "SILLAGE",
+   "date_creation": "1991-01-03",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "68.20B",
+   "commune": "FORT-MAHON-PLAGE",
+   "finances": {
+    "2024": {
+     "ca": 502771,
+     "resultat_net": -7097
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/380288050"
+  },
+  "Skarlett": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "948423652",
+   "raison_sociale": "SKARLETT",
+   "date_creation": "2023-01-18",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "68.20B",
+   "commune": "NEUILLY-SUR-SEINE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948423652"
+  },
+  "Skilify.ai": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Spareka": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "834272387",
+   "raison_sociale": "SPAREKA",
+   "date_creation": "2017-12-27",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "47.91B",
+   "commune": "MONTREUIL",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -3452846
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/834272387"
+  },
+  "Stoïk": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "900293887",
+   "raison_sociale": "STOIK",
+   "date_creation": "2021-06-01",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "64.20Z",
+   "commune": "PARIS",
+   "finances": {
+    "2022": {
+     "ca": 104372,
+     "resultat_net": -3010476
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/900293887"
+  },
+  "Sylviacare": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "900832197",
+   "raison_sociale": "SYLVIACARE",
+   "date_creation": "2021-06-25",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "72.19Z",
+   "commune": "METTRAY",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/900832197"
+  },
+  "Synaps": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "801221862",
+   "raison_sociale": "SYNAPS",
+   "date_creation": "2014-03-15",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "85.59A",
+   "commune": "COMPIEGNE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/801221862"
+  },
+  "Tchek.ai": {
+   "statut": "trouvé",
+   "score": 0.9,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "824170393",
+   "raison_sociale": "TCHEK",
+   "date_creation": "2016-12-02",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "MARSEILLE",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -521118
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/824170393"
+  },
+  "TerraStab": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "988609350",
+   "raison_sociale": "TERRASTAB",
+   "date_creation": "2025-04-09",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "62.01Z",
+   "commune": "ESSEY-LES-NANCY",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988609350"
+  },
+  "Testamento": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": [
+    {
+     "score": 0.645,
+     "siren": "812422475",
+     "nom": "SOWEFUNDED TESTAMENTO"
+    },
+    {
+     "score": 0.167,
+     "siren": "795229491",
+     "nom": "CONTRAT FACILE (TESTAMENTO)"
+    }
+   ]
+  },
+  "Testamento (Contrat Facile)": {
+   "statut": "non trouvé",
+   "origines": [
+    "radar"
+   ],
+   "candidats": [
+    {
+     "score": 0.645,
+     "siren": "812422475",
+     "nom": "SOWEFUNDED TESTAMENTO"
+    },
+    {
+     "score": 0.167,
+     "siren": "795229491",
+     "nom": "CONTRAT FACILE (TESTAMENTO)"
+    }
+   ]
+  },
+  "Tolk.ai": {
+   "statut": "trouvé",
+   "score": 0.9,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "804933992",
+   "raison_sociale": "TOLK",
+   "date_creation": "2014-10-02",
+   "etat": "A",
+   "tranche_effectif": "1-2",
+   "annee_effectif": "2024",
+   "activite": "70.21Z",
+   "commune": "PARIS",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": 6747
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/804933992"
+  },
+  "Trustpair": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "832940670",
+   "raison_sociale": "TRUSTPAIR",
+   "date_creation": "2017-10-26",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {
+    "2019": {
+     "ca": 0,
+     "resultat_net": -281281
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832940670"
+  },
+  "Tuita": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "953045127",
+   "raison_sociale": "TUITA",
+   "date_creation": "2023-05-24",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "81.22Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953045127"
+  },
+  "Uncov.AI": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": [
+    {
+     "score": 0.714,
+     "siren": "993443522",
+     "nom": "UNCOVR"
+    },
+    {
+     "score": 0.667,
+     "siren": "989913918",
+     "nom": "UNCOVER"
+    },
+    {
+     "score": 0.667,
+     "siren": "823454772",
+     "nom": "UNCOVER"
+    }
+   ]
+  },
+  "Urlab": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "929199347",
+   "raison_sociale": "URLAB",
+   "date_creation": "2024-05-21",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "58.29C",
+   "commune": "COURBEVOIE",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/929199347"
+  },
+  "Weathermind": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "949418933",
+   "raison_sociale": "WEATHERMIND",
+   "date_creation": "2023-02-24",
+   "etat": "A",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949418933"
+  },
+  "Webyn": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "949963136",
+   "raison_sociale": "WEBYN",
+   "date_creation": "2023-03-16",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "BOIS COLOMBES",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": -531403
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949963136"
+  },
+  "Weenat": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "803450287",
+   "raison_sociale": "WEENAT",
+   "date_creation": "2014-07-08",
+   "etat": "A",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.03Z",
+   "commune": "NANTES",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": -1179257
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803450287"
+  },
+  "Welfaire": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "883356511",
+   "raison_sociale": "WELFAIRE",
+   "date_creation": "2020-04-28",
+   "etat": "A",
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "FONTENAY-SOUS-BOIS",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": 0
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/883356511"
+  },
+  "Widmee": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "radar"
+   ],
+   "siren": "512175530",
+   "raison_sociale": "WIDMEE",
+   "date_creation": "2009-05-01",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "46.51Z",
+   "commune": "GRADIGNAN",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": 9364
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/512175530"
+  },
+  "Wilov": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "822100665",
+   "raison_sociale": "WILOV",
+   "date_creation": "2016-08-12",
+   "etat": "A",
+   "tranche_effectif": "6-9",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "finances": {
+    "2022": {
+     "ca": 763549,
+     "resultat_net": -342348
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/822100665"
+  },
+  "YesWeHack": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  },
+  "Zaion": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe",
+    "radar"
+   ],
+   "siren": "832291256",
+   "raison_sociale": "ZAION",
+   "date_creation": "2017-09-18",
+   "etat": "A",
+   "tranche_effectif": "50-99",
+   "annee_effectif": "2024",
+   "activite": "63.11Z",
+   "commune": "PARIS",
+   "finances": {
+    "2021": {
+     "ca": 0,
+     "resultat_net": -3145826
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832291256"
+  },
+  "Zelros": {
+   "statut": "non trouvé",
+   "origines": [
+    "radar"
+   ],
+   "candidats": []
+  },
+  "inTouch": {
+   "statut": "trouvé",
+   "score": 1.0,
+   "origines": [
+    "pipe"
+   ],
+   "siren": "829823780",
+   "raison_sociale": "INTOUCH",
+   "date_creation": "2017-05-19",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "63.12Z",
+   "commune": "PUTEAUX",
+   "finances": {
+    "2024": {
+     "ca": 8842970,
+     "resultat_net": 1185085
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/829823780"
+  },
+  "my bakup": {
+   "statut": "non trouvé",
+   "origines": [
+    "pipe"
+   ],
+   "candidats": []
+  }
+ }
+}
