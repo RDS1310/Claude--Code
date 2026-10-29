@@ -16,7 +16,7 @@ Le script d'application (maj_radar_vN) vérifie en plus que la création précè
 le résultat (radar_refresh/entreprises_fr.json) est appliqué ensuite par un script maj_radar_vN.
 
 Lancé par GitHub Actions (.github/workflows/enrichir_entreprises.yml) : l'API n'est pas joignable
-depuis les sessions Claude. Limite de l'API : 7 requêtes/s → pause de 0,25 s entre deux appels.
+depuis les sessions Claude. Limite de l'API : 7 requêtes/s, mais des 429 surviennent en rafale → pause de 0,6 s et reprises.
 """
 from __future__ import annotations
 
@@ -58,12 +58,12 @@ def cle(nom: str) -> str:
 
 def appel(q: str) -> list[dict]:
     url = API + urllib.parse.urlencode({"q": q, "per_page": 5, "page": 1})
-    for essai in range(3):
+    for essai in range(6):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "radar-insurtech"}), timeout=20) as r:
                 return json.loads(r.read().decode()).get("results", [])
-        except Exception as e:  # 429 / réseau : on réessaie après une pause
-            time.sleep(2 + 3 * essai)
+        except Exception as e:  # 429 / réseau : on réessaie après une pause croissante
+            time.sleep(5 * 2 ** essai)
             err = e
     raise RuntimeError(f"API injoignable pour {q!r} : {err}")
 
@@ -121,10 +121,10 @@ def main() -> int:
     resultats, trouves = {}, 0
     for nom, origines in sorted(societes().items()):
         candidats = appel(cle(nom) or nom)
-        time.sleep(0.25)
+        time.sleep(0.6)
         if not candidats and cle(nom) != nom:
             candidats = appel(nom)
-            time.sleep(0.25)
+            time.sleep(0.6)
         notes = sorted(((score(nom, c), c) for c in candidats), key=lambda x: -x[0])
         retenus = [c for s, c in notes if s >= SEUIL]
         # Homonymes : on ne garde que les activités plausibles, puis la plus grande tranche d'effectif.

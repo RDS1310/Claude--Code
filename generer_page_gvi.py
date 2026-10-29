@@ -195,6 +195,23 @@ def main() -> int:
         p["analyseUrl"] = f"{URLS['analyses']}#{e['analyse']}" if e["analyse"] else None
         p["actus"] = dates_desc(e["actus"])
 
+    # Registre public (API Recherche d'entreprises, radar_refresh/entreprises_fr.json) : sociétés françaises
+    # rapprochées sans ambiguïté ; écarté si l'année de création du pipe contredit celle du registre.
+    pub_f = BASE_DIR / "radar_refresh" / "entreprises_fr.json"
+    pub = json.loads(pub_f.read_text(encoding="utf-8"))["societes"] if pub_f.exists() else {}
+    for p in pipe:
+        e = pub.get(p["nom"])
+        if not e or e["statut"] != "trouvé" or "pipe" not in e["origines"]:
+            continue
+        creation = (e.get("date_creation") or "")[:4]
+        annee_pipe = re.search(r"(19|20)\d\d", str(p.get("creation") or ""))
+        if annee_pipe and creation and abs(int(annee_pipe.group(0)) - int(creation)) > 1:
+            continue
+        ca = [(an, v["ca"]) for an, v in e["finances"].items() if v.get("ca")]
+        p["registre"] = {"siren": e["siren"], "creation": creation or None, "effectif": e.get("tranche_effectif"),
+                         "anneeEffectif": e.get("annee_effectif"),
+                         "ca": round(ca[-1][1] / 1e6, 2) if ca else None, "exerciceCa": ca[-1][0] if ca else None}
+
     pipe.sort(key=lambda p: (ORDRE_STATUT.index(p["statutKey"]), p["nom"].lower()))
 
     data = {

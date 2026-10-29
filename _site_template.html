@@ -729,43 +729,49 @@ function renderStartup(s){
     ${s.secteur ? `<span class="chip on">${esc(s.secteur)}</span>` : ''}
     ${s.stage ? `<span class="chip">Stage financé : ${esc(s.stage)}</span>` : ''}
     ${s.dateCreation ? `<span class="chip">Créée en ${esc(fmtDate(s.dateCreation))}</span>` : ''}
+    ${s.effectif ? `<span class="chip">${esc(s.effectif.replace(/^(\S+) \((\d{4})\)$/, '$1 salariés ($2)'))}</span>` : ''}
     ${s.position ? `<span class="chip q">${esc(s.position)} du tour</span>` : ''}
     ${s.exit==='O' ? `<span class="chip good">Sortie réalisée</span>` : ''}
     ${s.statutDetail ? `<span class="chip">${esc(s.statutDetail)}</span>` : ''}
     ${s.confiance ? `<span class="confiance ${confClass(s.confiance)}">Confiance ${esc(s.confiance)}</span>` : ''}
   </div>
-  ${(s.pipeUrl || s.analyseUrl) ? `<div class="xlinks">
+  ${(s.pipeUrl || s.analyseUrl || s.siren) ? `<div class="xlinks">
+    ${s.siren ? `<a class="xl" href="https://annuaire-entreprises.data.gouv.fr/entreprise/${esc(s.siren)}" target="_blank" rel="noopener">Registre (SIREN ${esc(s.siren)}) ↗</a>` : ''}
     ${s.pipeUrl ? `<a class="xl" href="${esc(s.pipeUrl)}" target="_blank" rel="noopener">Suivie dans le pipe GVI ↗</a>` : ''}
     ${s.analyseUrl ? `<a class="xl" href="${esc(s.analyseUrl)}" target="_blank" rel="noopener">Analyse GVI ↗</a>` : ''}
   </div>` : ''}
 
-  <dl class="band">
-    ${figure('Valorisation' + (valoDate(s) ? ' ' + valoDate(s) : ''), s.valorisation, ' M€')}
-    ${s.totalLeve !== null
-      ? figure("Total levé", s.totalLeve, ' M€', 1)
-      : figure("Tour d'entrée (total)", s.tailleDuTour, ' M€', 1)}
-    ${figure('Capital social', s.capitalSocial, ' k€')}
-    ${figure(s.nbToursFonds > 1 ? `Investi par le fonds (cumul ${s.nbToursFonds} tours)` : 'Investi par le fonds', s.montantFonds, ' M€', 1)}
-    ${figure('CA', s.ca, ' M€', 1)}
-    ${figure('Tours réalisés', s.nbToursTotal)}
-  </dl>
+  ${(() => {
+    // Seules les cases renseignées sont affichées ; aucune → mention explicite plutôt qu'une rangée de tirets
+    const figs = [
+      s.valorisation !== null && figure('Valorisation' + (valoDate(s) ? ' ' + valoDate(s) : ''), s.valorisation, ' M€'),
+      s.totalLeve !== null ? figure("Total levé", s.totalLeve, ' M€', 1)
+        : s.tailleDuTour !== null && figure("Tour d'entrée (total)", s.tailleDuTour, ' M€', 1),
+      s.montantFonds !== null && figure(s.nbToursFonds > 1 ? `Investi par le fonds (cumul ${s.nbToursFonds} tours)` : 'Investi par le fonds', s.montantFonds, ' M€', 1),
+      s.ca !== null && figure('CA' + (s.exerciceCa ? ' ' + s.exerciceCa : ''), s.ca, ' M€', s.ca < 1 ? 2 : 1),
+      s.capitalSocial !== null && figure('Capital social', s.capitalSocial, ' k€'),
+      s.nbToursTotal !== null && figure('Tours réalisés', s.nbToursTotal),
+    ].filter(Boolean);
+    return figs.length ? `<dl class="band">${figs.join('')}</dl>`
+      : `<p class="note nil-band">Montants non publiés : ni le tour ni l'investissement du fonds ne sont communiqués dans les sources consultées.</p>`;
+  })()}
 
   <div class="grid2">
     <div>
       <h3 class="sec">Implantation</h3>
       <table class="kv">
         <tr><td>Pays d'origine</td><td>${esc(s.pays||'—')}</td></tr>
-        <tr><td>Nombre de pays</td><td>${fmtN(s.nbPays) ?? '—'}</td></tr>
+        ${s.nbPays ? `<tr><td>Nombre de pays</td><td>${fmtN(s.nbPays)}</td></tr>` : ''}
         <tr><td>Date d'investissement</td><td>${s.dateInvest?esc(fmtDate(s.dateInvest)):'—'}</td></tr>
       </table>
     </div>
     <div>
       <h3 class="sec">Tours et sortie</h3>
       <table class="kv">
-        <tr><td>Fonds au capital</td><td>${fmtN(s.nbFonds) ?? '—'}</td></tr>
-        <tr><td>Tours menés par le fonds</td><td>${fmtN(s.nbToursFonds) ?? '—'}</td></tr>
-        <tr><td>Repositionnement</td><td>${s.repositionnement || '—'}</td></tr>
-        <tr><td>MoC / MoEP à la sortie</td><td>${fmtN(s.mocExit,2) ?? '—'} / ${fmtN(s.moepExit,2) ?? '—'}</td></tr>
+        ${s.nbFonds ? `<tr><td>Fonds au capital</td><td>${fmtN(s.nbFonds)}</td></tr>` : ''}
+        ${s.nbToursFonds ? `<tr><td>Tours suivis par le fonds</td><td>${fmtN(s.nbToursFonds)}</td></tr>` : ''}
+        ${s.repositionnement ? `<tr><td>Repositionnement</td><td>${esc(s.repositionnement)}</td></tr>` : ''}
+        ${(s.mocExit || s.moepExit) ? `<tr><td>MoC / MoEP à la sortie</td><td>${fmtN(s.mocExit,2) ?? '—'} / ${fmtN(s.moepExit,2) ?? '—'}</td></tr>` : ''}
         ${(s.tailleDuTour && s.totalLeve !== null) ? `<tr><td>Taille du tour</td><td>${fmtN(s.tailleDuTour,1)} M€</td></tr>` : ''}
         ${s.pctDetention ? `<tr><td>% de détention</td><td>${esc(s.pctDetention)}</td></tr>` : ''}
         ${s.roleDetail ? `<tr><td>Rôle du véhicule</td><td>${esc(s.roleDetail)}</td></tr>` : ''}
