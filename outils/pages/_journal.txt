@@ -1,8 +1,0 @@
-https://jobs.axavp.com/companies -> 000 0
-https://jobs.axavp.com/companies -> échec
-http://www.axavp.com/companies/ -> 200 222795
-https://ecosystem.lafrenchtech.com/investors/atlantic_vantage_point/portfolio -> 000 0
-https://ecosystem.lafrenchtech.com/investors/atlantic_vantage_point/portfolio -> échec
-https://ecosystem.lafrenchtech.com/investors/maif_avenir/portfolio -> 000 0
-https://ecosystem.lafrenchtech.com/investors/maif_avenir/portfolio -> échec
-https://www.ternel.vc/ -> 429 40687

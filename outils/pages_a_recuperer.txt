@@ -1,6 +1,3 @@
 # Une URL par ligne
-https://jobs.axavp.com/companies
-http://www.axavp.com/companies/
-https://ecosystem.lafrenchtech.com/investors/atlantic_vantage_point/portfolio
-https://ecosystem.lafrenchtech.com/investors/maif_avenir/portfolio
-https://www.ternel.vc/
+https://maif-avenir.fr/portefeuille/
+http://maif-avenir.fr/portefeuille/
