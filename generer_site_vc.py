@@ -289,6 +289,12 @@ ADJACENT_SOUS_SECTEUR = {
     "Coverflex": "emploi", "Thatch": "emploi", "Limelight Health": "emploi", "Family First": "emploi",
     # Data, IA & distribution
     "Socotra": "data", "Xceedance": "data", "Elysian": "data",  # portefeuille Portage (Sagard), 20/10/2026
+    # Enrichissement CVC 29/10/2026 (Allianz X, AVP, MAIF Avenir)
+    "ControlExpert": "data", "GT Motive": "data", "Finanzen.de": "data", "Securkeys": "data",
+    "Urgent.ly": "telematique", "Idelic": "telematique",
+    "American Well (Amwell)": "sante", "Halodoc": "sante",
+    "SecurityScorecard": "cyber",
+    "Gravie": "emploi", "Club Employés": "emploi",
     "MiTrust": "data", "Complero": "data", "Bdeo": "data", "Digital Fineprint": "data", "Widmee": "data",
     "Zelros": "data", "WeGroup": "data", "Particeep": "data", "AlloBrain": "data", "Indico Data": "data",
     "Shepper": "data", "Certificall": "data", "Notch (notch.cx)": "data", "Ai5": "data", "Protex AI": "data",

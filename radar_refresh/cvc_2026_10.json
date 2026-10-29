@@ -1,0 +1,1201 @@
+{
+ "date": "2026-10-29",
+ "sources_pages": {
+  "Allianz X": "https://allianzx.com/ourcompanies",
+  "AVP": "http://www.axavp.com/companies/ (redirige vers avpcap.com)",
+  "MAIF Avenir": "https://maif-avenir.fr/portefeuille/"
+ },
+ "fonds": {
+  "Allianz X": {
+   "vehicule": "Allianz X",
+   "maj": {
+    "AuM (M€)": 1700,
+    "Montant alloué (M€)": 1000,
+    "Nb participations (déclaré)": 40,
+    "Nb exits": 14,
+    "Deal_01_Nom": "Ledgebrook",
+    "Deal_01_Secteur": "InsurTech (cœur)",
+    "Deal_01_Stage": "Croissance (tour de 200 M$ en fonds propres, co-mené)",
+    "Deal_01_Date_invest": 2026
+   },
+   "commentaire": "AuM > 1,7 Md€ et > 25 sociétés (communiqué AlTi Tiedemann / Allianz X, 31/07/2024) ; enveloppe portée à 1 Md€ par Allianz en 2019 ; la page officielle liste 40 sociétés dont 14 sorties (29/10/2026). Ticket non publié.",
+   "sources": [
+    "https://www.businesswire.com/news/home/20240731842155/en/AlTi-Tiedemann-Global-announces-closing-of-previously-announced-strategic-investment-from-Allianz-X",
+    "https://www.fintechfutures.com/insurtech/allianz-x-boosts-fund-size-to-1bn-for-insurtech-action",
+    "https://allianzx.com/ourcompanies"
+   ]
+  },
+  "MAIF Avenir": {
+   "vehicule": "MAIF Avenir",
+   "maj": {
+    "Nb participations (déclaré)": 42,
+    "Nb exits": 15,
+    "Ticket min (M€)": 1,
+    "Ticket max (M€)": 8
+   },
+   "commentaire": "Sortie du giron MAIF en avril 2024, adossé à Capital Croissance sous le nom Ternel ; nouveau véhicule visé de 120 M€ dont 25-30 % MAIF (Maddyness, 25/04/2024). 42 sociétés depuis 2015 dont 15 sorties (ternel.vc) ; 175 M€ investis et 40 M€ cédés (JDN) ; tickets 1-8 M€ (Impact France) — Crunchbase indique 1-5 M€. La page maif-avenir.fr/portefeuille liste 36 sociétés dont 9 cédées.",
+   "sources": [
+    "https://www.maddyness.com/2024/04/25/maif-avenir-prend-son-independance-et-va-investir-120-millions-deuros-en-europe/",
+    "https://www.ternel.vc/portfolio",
+    "https://www.journaldunet.com/fintech/1488847-maif-avenir-175-millions-d-euros-investis-40-millions-d-euros-cedes/",
+    "https://www.impactfrance.eco/mappings-financeurs-de-limpact/maif-avenir",
+    "https://maif-avenir.fr/portefeuille/"
+   ]
+  }
+ },
+ "nouveau_fonds": {
+  "nom": "AVP (ex-AXA Venture Partners)",
+  "vehicules": [
+   {
+    "vehicule": "AVP Venture & Growth",
+    "Stages pratiqués": "Série A ; Série B ; Croissance",
+    "porte_participations": true
+   },
+   {
+    "vehicule": "AVP Late Growth",
+    "Stages pratiqués": "Croissance",
+    "commentaire_vehicule": "Stratégie late growth de 1,5 Md€ annoncée en 2023, AXA ancre à hauteur de 750 M€ (FinTech Global, 25/05/2023) ; montant levé à date non trouvé."
+   }
+  ],
+  "commun": {
+   "AuM (M€)": 1360,
+   "Géographie": "Europe ; Amérique",
+   "Stratégie": "Logiciel B2B ; FinTech/InsurTech ; Santé numérique ; Consumer",
+   "Type d'investisseur": "VC indépendant",
+   "Site web": "https://avpcap.com",
+   "Statut": "Actif",
+   "Contact_01_Nom": "François Robinet",
+   "Contact_01_Titre": "Investment partner, AVP",
+   "Contact_02_Nom": "Benoit Fosseprez",
+   "Contact_02_Titre": "Investment partner, AVP"
+  },
+  "commentaire": "Ex-AXA Venture Partners (créé en 2015-2016 comme bras VC d'AXA). En 2024, l'équipe dirigeante rachète les 70 % d'AXA (MBO) : AVP (Atlantic Vantage Point) devient une société de gestion indépendante, AXA restant investisseur. AuM : 1 360,28 M€ (déclaration climat ADEME, exercice 2024) — le communiqué du MBO annonçait plus de 2 Md€ sur quatre stratégies (venture, growth, late stage, fonds de fonds). Contacts : associés d'investissement listés sur la page portefeuille.",
+  "sources": [
+   "https://coverager.com/axa-venture-partners-leadership-team-acquires-axas-stake-in-avp/",
+   "https://www.cfnews.net/L-actualite/Capital-innovation/Vie-des-acteurs/AVP-prend-son-independance-494964",
+   "https://climate-transparency-hub.ademe.fr/?p=3210873",
+   "https://fintech.global/2023/05/25/axa-venture-partners-launched-e1-5bn-fund-to-support-fintech-and-insurtech-industry-growth/",
+   "http://www.axavp.com/companies/"
+  ]
+ },
+ "participations": {
+  "Allianz X": [
+   {
+    "startup": "1QBit",
+    "slug": "1qbit",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Quantum computing software company",
+    "url": "https://allianzx.com/ourcompanies/1qbit"
+   },
+   {
+    "startup": "99.co",
+    "slug": "99co",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Southeast Asia’s fastest growing property platform.",
+    "url": "https://allianzx.com/ourcompanies/99co"
+   },
+   {
+    "startup": "AlTi Tiedemann Global",
+    "slug": "alti",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "AlTi is a leading independent global wealth and alternatives manager.",
+    "url": "https://allianzx.com/ourcompanies/alti"
+   },
+   {
+    "startup": "American Well (Amwell)",
+    "slug": "amwell",
+    "exit": true,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "sante",
+    "description": "American Well offers telemedicine solutions to improve people’s access to quality care.",
+    "url": "https://allianzx.com/ourcompanies/amwell"
+   },
+   {
+    "startup": "BIMA",
+    "slug": "bima",
+    "exit": true,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "BIMA is a leading digital microinsurer utilizing mobile technology to serve low-income customers in emerging markets.",
+    "url": "https://allianzx.com/ourcompanies/bima"
+   },
+   {
+    "startup": "Cambridge Mobile Telematics",
+    "slug": "cambridge-mobile-telematics",
+    "exit": false,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "telematique",
+    "description": "World's largest telematics and AI company for safer mobility.",
+    "url": "https://allianzx.com/ourcompanies/cambridge-mobile-telematics"
+   },
+   {
+    "startup": "C2FO",
+    "slug": "c2fo",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "C2FO is the world’s first working capital marketplace.",
+    "url": "https://allianzx.com/ourcompanies/c2fo"
+   },
+   {
+    "startup": "Clark",
+    "slug": "clark",
+    "exit": false,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "Clark is a leading European digital insurance broker.",
+    "url": "https://allianzx.com/ourcompanies/clark"
+   },
+   {
+    "startup": "Coalition",
+    "slug": "coalition-inc",
+    "exit": false,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "The world’s first Active Insurance company designed to prevent digital risk before it strikes",
+    "url": "https://allianzx.com/ourcompanies/coalition-inc"
+   },
+   {
+    "startup": "ControlExpert",
+    "slug": "controlexpert",
+    "exit": false,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "data",
+    "description": "ControlExpert is a leading technology-driven automotive claims processing company.",
+    "url": "https://allianzx.com/ourcompanies/controlexpert"
+   },
+   {
+    "startup": "Coterie Insurance",
+    "slug": "coterie-insurance",
+    "exit": false,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "A small business insurance company putting agents first",
+    "url": "https://allianzx.com/ourcompanies/coterie-insurance"
+   },
+   {
+    "startup": "Nauto (Empiric Earth)",
+    "slug": "nauto",
+    "exit": false,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "telematique",
+    "description": "Empiric Earth is an independent infrastructure platform for physical AI.",
+    "url": "https://allianzx.com/ourcompanies/nauto"
+   },
+   {
+    "startup": "ESG Book",
+    "slug": "esgbook",
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Leading global data provider of ESG metrics.",
+    "url": "https://allianzx.com/ourcompanies/esgbook"
+   },
+   {
+    "startup": "EthiFinance",
+    "slug": "ethifinance",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Independent European credit and sustainability rating agency",
+    "url": "https://allianzx.com/ourcompanies/ethifinance"
+   },
+   {
+    "startup": "Finanzen.de",
+    "slug": "finanzen-de",
+    "exit": true,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "data",
+    "description": "Finanzen.de is a leading B2B leads marketplace in Europe.",
+    "url": "https://allianzx.com/ourcompanies/finanzen-de"
+   },
+   {
+    "startup": "Fundbox",
+    "slug": "fundbox",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "The world’s first B2B payments and credit platform.",
+    "url": "https://allianzx.com/ourcompanies/fundbox"
+   },
+   {
+    "startup": "Gojek",
+    "slug": "gojek",
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Indonesian on-demand service provider",
+    "url": "https://allianzx.com/ourcompanies/gojek"
+   },
+   {
+    "startup": "GT Motive",
+    "slug": "gtmotive",
+    "exit": false,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "data",
+    "description": "SaaS company whose solutions estimate and manage automotive insurance claims, as well as maintenance and mechanical breakdowns.",
+    "url": "https://allianzx.com/ourcompanies/gtmotive"
+   },
+   {
+    "startup": "Halodoc",
+    "slug": "halodoc",
+    "exit": false,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "sante",
+    "description": "Health app that offers telehealth, laboratory and presecreption services.",
+    "url": "https://allianzx.com/ourcompanies/halodoc"
+   },
+   {
+    "startup": "HeavenHR",
+    "slug": "heavenhr",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "HeavenHR is a HR management platform for small and medium enterprises.",
+    "url": "https://allianzx.com/ourcompanies/heavenhr"
+   },
+   {
+    "startup": "heycar",
+    "slug": "heycar",
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "heycar is the fastest growing platform for quality used cars in the European automotive industry.",
+    "url": "https://allianzx.com/ourcompanies/heycar"
+   },
+   {
+    "startup": "Innovation Group",
+    "slug": "innovation-group",
+    "exit": false,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "data",
+    "description": "Innovation Group is a global leading InsurTech business that delivers transformation expertise and revolutionary solutions to help managing millions of claims each year.",
+    "url": "https://allianzx.com/ourcompanies/innovation-group"
+   },
+   {
+    "startup": "Ledgebrook",
+    "slug": "ledgebrook",
+    "exit": false,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "Ledgebrook is an AI-native speciality insurance platform.",
+    "url": "https://allianzx.com/ourcompanies/ledgebrook"
+   },
+   {
+    "startup": "Lemonade",
+    "slug": "lemonade",
+    "exit": true,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "Lemonade Insurance Company is a licensed insurance carrier, offering homeowners and renters insurance powered by artificial intelligence and behavioral economics.",
+    "url": "https://allianzx.com/ourcompanies/lemonade"
+   },
+   {
+    "startup": "N26",
+    "slug": "n26",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "N26 is a pan-European Mobile Bank for the smartphone. N26 has redesigned banking to make it simple, fast and contemporary.",
+    "url": "https://allianzx.com/ourcompanies/n26"
+   },
+   {
+    "startup": "NEXT Insurance",
+    "slug": "next-insurance",
+    "exit": true,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "NEXT Insurance is transforming small business insurance with simple, digital, and affordable coverage tailored to the self-employed.",
+    "url": "https://allianzx.com/ourcompanies/next-insurance"
+   },
+   {
+    "startup": "OpenGamma",
+    "slug": "opengamma",
+    "exit": true,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Derivatives analytics firm helping to drive trading and treasury costs down",
+    "url": "https://allianzx.com/ourcompanies/opengamma"
+   },
+   {
+    "startup": "Openly",
+    "slug": "openly",
+    "exit": false,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "Openly provides premium home insurance by cutting-edge technology and sophisticated underwriting capabilities.",
+    "url": "https://allianzx.com/ourcompanies/openly"
+   },
+   {
+    "startup": "Pie Insurance",
+    "slug": "pie-insurance",
+    "exit": false,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "Pie Insurance is modernizing small business insurance",
+    "url": "https://allianzx.com/ourcompanies/pie-insurance"
+   },
+   {
+    "startup": "Purpose Financial",
+    "slug": "purpose-financial",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Platform bringing together entrepreneurs to innovate the next generation of asset management, wealth management, and SMB banking.",
+    "url": "https://allianzx.com/ourcompanies/purpose-financial"
+   },
+   {
+    "startup": "SafeBoda",
+    "slug": "safeboda",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "SafeBoda is an African ride-hailing and financial services platform.",
+    "url": "https://allianzx.com/ourcompanies/safeboda"
+   },
+   {
+    "startup": "SandboxAQ",
+    "slug": "sandboxaq",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "SandboxAQ is an enterprise SaaS company, providing solutions at the interface between AI and Quantum technology (AQ).",
+    "url": "https://allianzx.com/ourcompanies/sandboxaq"
+   },
+   {
+    "startup": "SDA SE",
+    "slug": "sdase",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Digital service platform provider with a unique architecture.",
+    "url": "https://allianzx.com/ourcompanies/sdase"
+   },
+   {
+    "startup": "simplesurance",
+    "slug": "simplesurance",
+    "exit": true,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "description": "simplesurance is a platform for simple access to insurance. The company has found innovative and digital distribution channels for insurance.",
+    "url": "https://allianzx.com/ourcompanies/simplesurance"
+   },
+   {
+    "startup": "Stripe",
+    "slug": "stripe",
+    "exit": true,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Stripe is increasing the GDP of the internet.",
+    "url": "https://allianzx.com/ourcompanies/stripe"
+   },
+   {
+    "startup": "Ualá",
+    "slug": "uala",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Ualá is the fastest growing online bank in the LatAm region.",
+    "url": "https://allianzx.com/ourcompanies/uala"
+   },
+   {
+    "startup": "Urgent.ly",
+    "slug": "urgently",
+    "exit": true,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "telematique",
+    "description": "Urgent.ly is a digital platform for on-demand roadside assistance services.",
+    "url": "https://allianzx.com/ourcompanies/urgently"
+   },
+   {
+    "startup": "Wayhome",
+    "slug": "wayhome",
+    "exit": true,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Wayhome revolutionizes the real estate market by helping customers to buy homes without a mortgage.",
+    "url": "https://allianzx.com/ourcompanies/wayhome"
+   },
+   {
+    "startup": "Wealthsimple",
+    "slug": "wealthsimple",
+    "exit": true,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Financial roboadvisor that combines cutting-edge technology and a human touch.",
+    "url": "https://allianzx.com/ourcompanies/wealthsimple"
+   },
+   {
+    "startup": "WeLab",
+    "slug": "welab",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "WeLab is a leading provider of online lending and digital banking solutions in China and Southeast Asia.",
+    "url": "https://allianzx.com/ourcompanies/welab"
+   }
+  ],
+  "AVP (ex-AXA Venture Partners)": [
+   {
+    "startup": "Abstract",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "The complete data platform for security",
+    "url": "https://avpcap.com/avp/abstract/"
+   },
+   {
+    "startup": "Agicap",
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Manage and forecast cash flows",
+    "url": "https://avpcap.com/avp/agicap/"
+   },
+   {
+    "startup": "Alice & Bob",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Quantum computing company",
+    "url": "https://avpcap.com/avp/alice-bob/"
+   },
+   {
+    "startup": "Arta",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Transforming the post-purchase experience",
+    "url": "https://avpcap.com/avp/arta/"
+   },
+   {
+    "startup": "Axoniq",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Event-driven microservices",
+    "url": "https://avpcap.com/avp/axoniq/"
+   },
+   {
+    "startup": "Basetwo",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Enhance manufacturing efficiency",
+    "url": "https://avpcap.com/avp/basetwo/"
+   },
+   {
+    "startup": "Blockstream",
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Extending bitcoins with Sidechains",
+    "url": "https://avpcap.com/avp/blockstream/"
+   },
+   {
+    "startup": "Cognism",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "The world’s best all-in-one globally compliant prospecting solution",
+    "url": "https://avpcap.com/avp/cognism/"
+   },
+   {
+    "startup": "Contrast Security",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Self-protecting software",
+    "url": "https://avpcap.com/avp/contrast-security/"
+   },
+   {
+    "startup": "Cryptonext",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Revolutionizing the field of cybersecurity",
+    "url": "https://avpcap.com/avp/cryptonext/"
+   },
+   {
+    "startup": "Deepgram",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Powering the Voice AI economy",
+    "url": "https://avpcap.com/avp/deepgram/"
+   },
+   {
+    "startup": "Defense Unicorns",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Continuous software delivery for national security missions",
+    "url": "https://avpcap.com/avp/defense-unicorns/"
+   },
+   {
+    "startup": "deskbird",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "A desk booking app designed to be simple, powerful, and collaborative",
+    "url": "https://avpcap.com/avp/deskbird/"
+   },
+   {
+    "startup": "D-ID",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "D-ID protects identities from facial recognition",
+    "url": "https://avpcap.com/avp/d-id/"
+   },
+   {
+    "startup": "Didask",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "E-learning platform",
+    "url": "https://avpcap.com/avp/didask/"
+   },
+   {
+    "startup": "DocAuthority",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "A data governance platform",
+    "url": "https://avpcap.com/avp/docauthority/"
+   },
+   {
+    "startup": "Ethyca",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "World leader in data privacy and AI governance",
+    "url": "https://avpcap.com/avp/ethyca/"
+   },
+   {
+    "startup": "Evercontact",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Contacts automatically up to date",
+    "url": "https://avpcap.com/avp/evercontact/"
+   },
+   {
+    "startup": "Finbourne",
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Market leading provider of investment management solutions",
+    "url": "https://avpcap.com/avp/finbourne/"
+   },
+   {
+    "startup": "Finom",
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Digital financial services platform",
+    "url": "https://avpcap.com/avp/finom/"
+   },
+   {
+    "startup": "Flatpay",
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Affordable and transparent payments solution",
+    "url": "https://avpcap.com/avp/flatpay/"
+   },
+   {
+    "startup": "Blackwall",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "AI-enabled security and web infrastructure",
+    "url": "https://avpcap.com/avp/blackwall/"
+   },
+   {
+    "startup": "Florence",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Revolutionising social care staffing",
+    "url": "https://avpcap.com/avp/florence/"
+   },
+   {
+    "startup": "Futurae",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "The new standard in usable authentication",
+    "url": "https://avpcap.com/avp/futurae/"
+   },
+   {
+    "startup": "Geomiq",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "UK's leading digital manufacturing marketplace",
+    "url": "https://avpcap.com/avp/geomiq/"
+   },
+   {
+    "startup": "Gladly",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Customer experience AI built to engage, not deflect",
+    "url": "https://avpcap.com/avp/gladly/"
+   },
+   {
+    "startup": "Gravie",
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "emploi",
+    "description": "Health benefits employees can actually use",
+    "url": "https://avpcap.com/avp/gravie/"
+   },
+   {
+    "startup": "Hackajob",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Fast track your recruitment process",
+    "url": "https://avpcap.com/avp/hackajob/"
+   },
+   {
+    "startup": "Idelic",
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "telematique",
+    "description": "To bring your drivers home safe each night",
+    "url": "https://avpcap.com/avp/idelic/"
+   },
+   {
+    "startup": "Isometric",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Agentic certification for the industrial economy",
+    "url": "https://avpcap.com/avp/isometric/"
+   },
+   {
+    "startup": "Jobble",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "The marketplace for the Gig economy",
+    "url": "https://avpcap.com/avp/jobble/"
+   },
+   {
+    "startup": "K4Connect",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Smart solutions for today’s older adults",
+    "url": "https://avpcap.com/avp/k4connect/"
+   },
+   {
+    "startup": "LinqAlpha",
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "AI for global markets & research",
+    "url": "https://avpcap.com/avp/linqalpha/"
+   },
+   {
+    "startup": "Lyric",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "A new way to live while you travel",
+    "url": "https://avpcap.com/avp/lyric/"
+   },
+   {
+    "startup": "Mercanis",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "The agentic-AI procurement suite",
+    "url": "https://avpcap.com/avp/mercanis/"
+   },
+   {
+    "startup": "Mindoula Health",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Better behavioral healthcare",
+    "url": "https://avpcap.com/avp/mindoula-health/"
+   },
+   {
+    "startup": "My traffic",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Help companies make quicker and better decisions",
+    "url": "https://avpcap.com/avp/my-traffic/"
+   },
+   {
+    "startup": "Odoo",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Scalable and functional applications",
+    "url": "https://avpcap.com/avp/odoo/"
+   },
+   {
+    "startup": "Offor Health",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Changing the way healthcare is delivered",
+    "url": "https://avpcap.com/avp/offor-health/"
+   },
+   {
+    "startup": "Orkes",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Modern workflow orchestration platform",
+    "url": "https://avpcap.com/avp/orkes/"
+   },
+   {
+    "startup": "PayNearMe",
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "description": "Making payments easy—for everyone",
+    "url": "https://avpcap.com/avp/paynearme/"
+   },
+   {
+    "startup": "Phenom",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Talent relationship marketing platform",
+    "url": "http://www.axavp.com/companies/"
+   },
+   {
+    "startup": "Qdrant",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "High performance vector search at scale",
+    "url": "https://avpcap.com/avp/qdrant/"
+   },
+   {
+    "startup": "Qloo",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "The leading cultural AI data platform",
+    "url": "https://avpcap.com/avp/qloo/"
+   },
+   {
+    "startup": "Radius Agent",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Empowering real estate entrepreneurs",
+    "url": "https://avpcap.com/avp/radius-agent/"
+   },
+   {
+    "startup": "SecurityScorecard",
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "cyber",
+    "description": "Security ratings for your entire business ecosystem",
+    "url": "https://avpcap.com/avp/securityscorecard/"
+   },
+   {
+    "startup": "Sedai",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Autonomous cloud management platform",
+    "url": "https://avpcap.com/avp/sedai/"
+   },
+   {
+    "startup": "Selector",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Industry leading AIOps platform for operational intelligence",
+    "url": "https://avpcap.com/avp/selector/"
+   },
+   {
+    "startup": "Sendcloud",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Leading e-commerce shipping platform in Europe",
+    "url": "https://avpcap.com/avp/sendcloud/"
+   },
+   {
+    "startup": "Simundia",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Enabling business managers to develop their soft skills",
+    "url": "https://avpcap.com/avp/simundia/"
+   },
+   {
+    "startup": "Strider Technologies",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Securing your technology, talent and innovations",
+    "url": "https://avpcap.com/avp/strider-technologies/"
+   },
+   {
+    "startup": "Tive",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Ensuring shipments arrive on time and in full",
+    "url": "https://avpcap.com/avp/tive/"
+   },
+   {
+    "startup": "Tradespace",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "AI-powered IP management",
+    "url": "https://avpcap.com/avp/tradespace/"
+   },
+   {
+    "startup": "Unlatch",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Accelerate your real estate sale",
+    "url": "https://avpcap.com/avp/unlatch/"
+   },
+   {
+    "startup": "Valera Health",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Amplifying behavioral healthcare",
+    "url": "https://avpcap.com/avp/valera-health/"
+   },
+   {
+    "startup": "Versa Networks",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Elastic network services platform",
+    "url": "https://avpcap.com/avp/versa-networks/"
+   },
+   {
+    "startup": "Vida Health",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Virtual care platform",
+    "url": "https://avpcap.com/avp/vida-health/"
+   },
+   {
+    "startup": "Wellth",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "Behavior change platform",
+    "url": "https://avpcap.com/avp/wellth/"
+   },
+   {
+    "startup": "Zenjob",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "The on-demand staffing platform",
+    "url": "https://avpcap.com/avp/zenjob/"
+   },
+   {
+    "startup": "Zinc",
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "description": "The essential element for hiring at scale",
+    "url": "https://avpcap.com/avp/zinc/"
+   }
+  ],
+  "MAIF Avenir": [
+   {
+    "startup": "Strong By Form",
+    "description": "Wood-based composites for lightweight high-performance applications.",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Juno",
+    "description": "No-code tool enabling factories to digitize their shop floor operations",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Carbo",
+    "description": "SaaS for measuring and managing the carbon footprint of businesses",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Beeldi",
+    "description": "Building Technical Data Management Solution",
+    "stage": "Série A",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Naboo",
+    "description": "B2B Offsite Booking Platform",
+    "stage": "Pré-seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Napta",
+    "description": "SaaS solution for project staffing and employee engagement",
+    "stage": "Série A",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Club Employés",
+    "description": "Employee benefits platform for Employee Works Councils",
+    "stage": "Série A",
+    "exit": false,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "emploi",
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Mayday",
+    "description": "Knowledge Management Solution for the customer relations industry",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Edflex",
+    "description": "Content curation tool for corporate training",
+    "stage": "Série A",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Golem.ai",
+    "description": "AI based on universal linguistics for business process automation",
+    "stage": "Série A",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Expensya",
+    "description": "Automated expense management solution for all businesses",
+    "stage": null,
+    "exit": true,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Certideal",
+    "description": "E-commerce platform specialized in refurbished electronic devices",
+    "stage": "Série A",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Santé Académie",
+    "description": "On-demand online medical training",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Rise Up",
+    "description": "Learning Management System",
+    "stage": "Série A",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Yescapa",
+    "description": "Motorhome and van peer-to-peer rental",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Lovys",
+    "description": "Platform offering 100% digital, all-in-one and flexible insurance solutions",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "InsurTech (cœur)",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Ledger",
+    "description": "Security solutions for cryptocurrencies and e-wallets",
+    "stage": null,
+    "exit": true,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Ulule",
+    "description": "Crowdfunding platform for responsible projects",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Je Stocke",
+    "description": "P2P and B2B furniture storage and storage unit rental",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Securkeys",
+    "description": "Key loss and door slamming assistance service",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "InsurTech (adjacent)",
+    "sous_secteur_adjacent": "data",
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Home Exchange",
+    "description": "Temporary peer-to-peer home exchange",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Travelcar",
+    "description": "Car sharing between travelers",
+    "stage": null,
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Welcome to the Jungle",
+    "description": "Media and recruitment platform",
+    "stage": "Série B",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Snips",
+    "description": "Privacy-by-design embedded artificial intelligence",
+    "stage": null,
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Dreem",
+    "description": "Connected headbands to improve sleep quality",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Zenpark",
+    "description": "Platform for automated shared parking lots",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Pop Valet",
+    "description": "On-demand vehicle movement",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "My Coach Sport",
+    "description": "Digital solutions for the sports industry",
+    "stage": "Série A",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Smiile",
+    "description": "Trading of goods and services within a neighborhood",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Linxo",
+    "description": "Fintech for the aggregation and management of savings and payment accounts",
+    "stage": null,
+    "exit": true,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Active Asset Allocation",
+    "description": "Risk-based investment solutions",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "FinTech (hors assurance)",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "MesDépanneurs",
+    "description": "Connecting individuals and repairmen",
+    "stage": null,
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Klaxit",
+    "description": "Carpooling from home to work",
+    "stage": null,
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "cozy",
+    "description": "Personal data storage and aggregation solution",
+    "stage": "Seed",
+    "exit": false,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Needhelp",
+    "description": "Platform for peer-to-peer handiwork and services",
+    "stage": null,
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   },
+   {
+    "startup": "Samboat",
+    "description": "Peer-to-peer boat rental",
+    "stage": null,
+    "exit": true,
+    "secteur": "Hors périmètre assurance",
+    "sous_secteur_adjacent": null,
+    "url": "https://maif-avenir.fr/portefeuille/"
+   }
+  ]
+ },
+ "complements": {
+  "Allianz X|Ledgebrook": {
+   "Date d’investissement": 2026,
+   "Taille du tour (M€)": 184,
+   "Rôle du véhicule (détail)": "Co-lead du tour de 200 M$ en fonds propres",
+   "Source(s)": "FinTech Global (08/10/2026) https://fintech.global/2026/10/08/ledgebrook-raises-200m-to-scale-ai-underwriting-for-complex-risks/ ; https://allianzx.com/ourcompanies/ledgebrook"
+  }
+ }
+}

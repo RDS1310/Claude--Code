@@ -11,7 +11,7 @@ Suite of 5 web pages built for Rui (Groupama Vol'terre Investissement, GVI — G
 
 | Page | Artifact URL | Data | Generator | Template |
 |---|---|---|---|---|
-| Radar Insurtech VC | https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g | `VC_Database_Standardisee_vN.xlsx` (latest N auto-detected, currently v28) | `generer_site_vc.py` → `radar_insurtech_vc.html` | `_site_template.html` |
+| Radar Insurtech VC | https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g | `VC_Database_Standardisee_vN.xlsx` (latest N auto-detected, currently v29) | `generer_site_vc.py` → `radar_insurtech_vc.html` | `_site_template.html` |
 | Stratégie & Pipe GVI | https://claude.ai/artifact/58n6yRVTLgDuhavqhxihGn | `gvi_data/GVI_Status_Report_Startups.xlsx` (tab `Start-up`) | `generer_page_gvi.py` → `gvi_strategie_pipe.html` | `_gvi_template.html` |
 | Veille Insurtech | https://claude.ai/artifact/5FXTpkCo6KvGu6YyeYAHiw | `veille_data/entries.json` | `generer_page_veille.py` → `veille_insurtech.html` | `_veille_template.html` |
 | Étude M&A Assurance | https://claude.ai/artifact/BPSeTnKnWY2PkAGcH5s2ai | `ma_data/deals.json` | `generer_page_ma.py` → `etude_marche_ma.html` | `_ma_template.html` |
@@ -35,7 +35,9 @@ Grille + doctrine follow GVI's external deck (Sept. 2026): criteria titles/quest
 Local test harness for the upload flow (mocked `window.claude`, libs from npm): scratchpad only, not committed.
 
 ## Data model (Excel, 5 sheets)
-`Fonds` (126 vehicles, 67 cols) · `Participations` (325) · `Tours_de_table` (58) · `Dictionnaire` (106 fields) · `Anomalies` (350, IDs `ANO-0001`…). v28 (29/10, `maj_radar_v28.py`): exact-equivalent labels merged (Series→Série, Actif→Active, US/UK→États-Unis/Royaume-Uni; ANO-0348…0350).
+`Fonds` (128 vehicles, 67 cols) · `Participations` (448) · `Tours_de_table` (58) · `Dictionnaire` (106 fields) · `Anomalies` (368, IDs `ANO-0001`…).
+
+v29 (29/10, `maj_radar_v29.py` + `radar_refresh/cvc_2026_10.json`): CVC enrichment from official portfolio pages (fetched via `recuperer_pages.yml`; axavp.com only answers over **http**, ternel.vc is behind a Vercel bot check): **Allianz X** (+28, 40 listed / 14 exits, AuM 1,7 Md€, 1 Md€ envelope, Ledgebrook 2026 co-lead), **MAIF Avenir / Ternel** (+35, entry stages from maif-avenir.fr, tickets 1–8 M€, 42 cos / 15 exits per Ternel), new firm **AVP (ex-AXA Venture Partners)** — vehicles « AVP Venture & Growth » (+60 participations) and « AVP Late Growth », classed VC indépendant since the 2024 MBO, AuM 1 360 M€ (ADEME FY2024; >2 Md€ claimed), contacts F. Robinet / B. Fosseprez. No investment years published → these rows don't feed Tendances (ANO-0351…0368). v28 (29/10, `maj_radar_v28.py`): exact-equivalent labels merged (Series→Série, Actif→Active, US/UK→États-Unis/Royaume-Uni; ANO-0348…0350).
 
 v27 (20/10/2026, `maj_radar_v27.py` + `radar_refresh/portefeuille_sagard_2026_10.json`): full Portage (Sagard) portfolio from sagard.com — 62 rows added to Portag3 Venture I/II/III, Portage Ventures IV and the new vehicle **Portage Capital Solutions I** (PCS I). Sagard publishes no date/amount/stage (left empty); "previous" = Exit O. Non-insurance companies are kept but labelled `FinTech (hors assurance)` / `Hors périmètre assurance`; `secteur_bucket` excludes any label containing "hors" from Tendances (ANO-0342…0347).
 
