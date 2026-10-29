@@ -1,0 +1,26 @@
+# Données publiques des start-ups françaises (API Recherche d'entreprises, gratuite) — l'API n'est pas
+# joignable depuis les sessions Claude. Se lance quand le script change, ou à la main.
+name: Enrichir les entreprises françaises
+on:
+  push:
+    paths: ['enrichir_entreprises_fr.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  enrichir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pandas openpyxl
+      - run: python enrichir_entreprises_fr.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add radar_refresh/entreprises_fr.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Données publiques des entreprises françaises ($(date -u +%F))"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
