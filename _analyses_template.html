@@ -170,6 +170,12 @@ a{color:var(--petrol)}
 @media (prefers-reduced-motion:reduce){.prog i{animation:none;width:100%;opacity:.4}}
 .note-page{margin:14px 24px 0;padding:10px 14px;border-left:3px solid var(--ochre);background:var(--ochre-soft);font-size:13px}
 .danger-zone{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.xlinks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.xl{font-size:11.5px;padding:2px 9px;border-radius:20px;border:1px solid var(--petrol);color:var(--petrol);text-decoration:none;background:var(--surface);white-space:nowrap}
+.xl:hover{background:var(--petrol-soft)}
+.xactus{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px;font-size:13.5px}
+.xactus a{color:var(--ink)}
+.xactus .m{color:var(--muted);font-size:12px}
 @media (max-width:520px){.form{padding-left:16px;padding-right:16px}.note-page{margin-left:16px;margin-right:16px}}
 @media (max-width:520px){.head h1{font-size:32px}.sheet-top h2{font-size:28px}.sheet-top,.body{padding-left:16px;padding-right:16px}.verdict{margin-left:16px;margin-right:16px}}
 </style>
@@ -244,6 +250,17 @@ function feuxHtml(a){
   }).join('')}</div>`;
 }
 const miniHtml = a => `<span class="mini" title="Grille GVI">${RAW.grille.map(g => `<i class="${niveau(noteDe(a, g.cle))[0]}"></i>`).join('')}</span>`;
+// Même normalisation que liens_croises.norm (Python) pour retrouver la société dans l'index RAW.liens
+const normNom = n => String(n || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+  .replace(/[™®]/g, '').replace(/[^a-z0-9]+/g, ' ').trim().replace(/\b(sas|sa|ltd|gmbh|inc|ag|bv|srl)$/, '').trim();
+function liensHtml(a){
+  const l = (RAW.liens || {})[normNom(a.nom)];
+  if (!l) return '';
+  const chips = (l.radar ? `<a class="xl" href="${esc(l.radar)}" target="_blank" rel="noopener">Fiche Radar ↗</a>` : '')
+    + (l.pipe ? `<a class="xl" href="${esc(l.pipe)}" target="_blank" rel="noopener">Pipe GVI ↗</a>` : '');
+  const actus = (l.actus || []).length ? `<ul class="xactus">${l.actus.map(x => `<li><a href="${esc(x.url || x.page)}" target="_blank" rel="noopener">${esc(x.titre)}</a> <span class="m">${esc(x.date || '')}${x.source ? ' — ' + esc(x.source) : ''}</span></li>`).join('')}</ul>` : '';
+  return `<div><div class="sec-t">Sur les autres pages</div>${chips ? `<div class="xlinks">${chips}</div>` : ''}${actus}</div>`;
+}
 const paire = x => Array.isArray(x) ? x : [x && x.k, x && x.v];
 
 function listHtml(sel){
@@ -305,6 +322,7 @@ function sheetHtml(a){
       <div class="secs">${(a.sections||[]).map(s => `
         <section><h4>${esc(s.titre)}</h4><ul>${(s.points||[]).map(p => `<li>${esc(p)}</li>`).join('')}</ul></section>`).join('')}
       </div>
+      ${liensHtml(a)}
       ${(a.questions||[]).length ? `<div><div class="sec-t">Questions à poser à la société</div>
         <ol class="questions">${a.questions.map(q => `<li>${esc(q)}</li>`).join('')}</ol></div>` : ''}
       <div>

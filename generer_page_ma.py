@@ -46,6 +46,13 @@ def calculer_comps(data: dict) -> list[dict]:
 def main() -> int:
     data = json.loads(ENTREE.read_text(encoding="utf-8"))
     data["tendances"] = calculer_tendances(data)
+    # Liens vers les fiches Radar des acquéreurs / cibles suivis
+    from liens_croises import construire_index, liens_texte
+    idx = construire_index()
+    for d in data.get("confirmees", []):
+        d["liens"] = liens_texte(idx, f"{d.get('acquereur', '')} {d.get('cible', '')}")
+    for d in data.get("rumeurs", []):
+        d["liens"] = liens_texte(idx, f"{d.get('acteurs_pressentis', '')} {d.get('cible', '')}")
     data["comps"] = calculer_comps(data)
     template = (BASE_DIR / "_ma_template.html").read_text(encoding="utf-8")
     html = template.replace("__DATA_JSON__", json.dumps(data, ensure_ascii=False))

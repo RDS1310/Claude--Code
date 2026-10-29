@@ -454,6 +454,22 @@ def construire_startups(part: pd.DataFrame) -> list[dict]:
     return out
 
 
+def relier_startups(startups: list[dict]) -> None:
+    """Liens vers Pipe GVI / Analyses GVI, autres fonds au capital et actualités (liens_croises)."""
+    from liens_croises import construire_index, norm, URLS, dates_desc
+    idx = construire_index()["societes"]
+    for s in startups:
+        e = idx.get(norm(s["nom"]))
+        if not e:
+            continue
+        s["slug"] = e["slug"]
+        s["pipeUrl"] = f"{URLS['pipe']}#p-{e['slug']}" if e["pipe"] else None
+        s["analyseUrl"] = f"{URLS['analyses']}#{e['analyse']}" if e["analyse"] else None
+        autres = {r["fid"]: r["vehicule"] or r["fonds"] for r in e["radar"] if r["fid"] != s["fid"]}
+        s["autresFonds"] = [{"fid": k, "nom": v} for k, v in autres.items()]
+        s["actus"] = dates_desc(e["actus"])
+
+
 def main() -> int:
     entree = localiser_dernier_classeur()
     version = re.search(r"_v(\d+)\.xlsx$", entree.name).group(1)
@@ -468,6 +484,7 @@ def main() -> int:
     fonds = construire_fonds(fonds_df)
     rattacher_actus(fonds)
     startups = construire_startups(part_df)
+    relier_startups(startups)
     tendances = construire_tendances(part_df)
     pays = construire_pays(part_df)
     points_ouverts = construire_points_ouverts(ano_df)

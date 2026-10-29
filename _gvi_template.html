@@ -133,6 +133,15 @@ table.data tr.detail td{background:var(--paper);padding:14px 16px}
   .wrap{padding:24px 16px 60px}
   h1.title{font-size:29px}
 }
+
+/* Liens entre les pages (liens_croises.py) */
+.xlinks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.xl{font-size:11.5px;padding:2px 9px;border-radius:20px;border:1px solid var(--petrol);color:var(--petrol);text-decoration:none;background:var(--surface);white-space:nowrap}
+.xl:hover{background:var(--petrol-soft)}
+.xl.fonds{border-color:var(--ochre);color:var(--ochre)}
+.xactus{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:4px;font-size:13px}
+.xactus a{color:var(--ink)}
+.xactus .m{color:var(--muted);font-size:12px}
 </style>
 
 <header class="topbar">
@@ -318,6 +327,17 @@ fillSelect('f-statut', [...new Set(PIPE.map(p=>p.statut))].sort());
 fillSelect('f-secteur', [...new Set(PIPE.map(p=>p.secteur).filter(Boolean))].sort());
 fillSelect('f-maturite', [...new Set(PIPE.map(p=>p.maturite).filter(Boolean))]);
 
+function liensPipe(p){
+  const chips = [
+    p.radarUrl ? `<a class="xl" href="${esc(p.radarUrl)}" target="_blank" rel="noopener">Fiche Radar ↗</a>` : '',
+    p.analyseUrl ? `<a class="xl" href="${esc(p.analyseUrl)}" target="_blank" rel="noopener">Analyse GVI ↗</a>` : '',
+  ].join('');
+  const fonds = (p.radarFonds||[]).length ? `<div class="m" style="font-size:12.5px;color:var(--muted);margin-top:6px">Au capital (fonds suivis dans le Radar) : ${p.radarFonds.map(esc).join(', ')}</div>` : '';
+  const actus = (p.actus||[]).length ? `<ul class="xactus">${p.actus.map(a => `<li><a href="${esc(a.url||a.page)}" target="_blank" rel="noopener">${esc(a.titre)}</a> <span class="m">${esc(a.date||'')}${a.source?' — '+esc(a.source):''}</span></li>`).join('')}</ul>` : '';
+  if (!chips && !fonds && !actus) return '';
+  return `<div class="pitch-full"><dt style="color:var(--muted);font-size:13px;margin-bottom:4px">Liens et actualité</dt>${chips?`<div class="xlinks">${chips}</div>`:''}${fonds}${actus}</div>`;
+}
+
 function detailRow(p){
   const vcChips = (p.fondsVc||[]).map(f =>
     `<span class="vc-chip${f.connu?' known':''}">${esc(f.nom)}${f.connu?' ↗':''}</span>`).join(' ') || '—';
@@ -341,6 +361,7 @@ function detailRow(p){
     ${dl("Volt'terre Inno.", p.voltInno)}
     ${dl("Volt'terre GVI", p.voltGVI)}
     <div><dt>Fonds VC</dt><dd>${vcChips}</dd></div>
+    ${liensPipe(p)}
     ${p.pitch ? `<div class="pitch-full"><dt style="color:var(--muted);font-size:13px;margin-bottom:4px">Pitch</dt>${esc(p.pitch)}</div>` : ''}
     ${p.commentaires ? `<div class="pitch-full"><dt style="color:var(--muted);font-size:13px;margin-bottom:4px">Commentaires</dt>${esc(p.commentaires)}</div>` : ''}
   </div></td></tr>`;
@@ -364,8 +385,8 @@ function renderPipe(){
 
   const body = document.getElementById('pipe-body');
   body.innerHTML = filtered.map(p => {
-    const rowHtml = `<tr class="row" data-nom="${esc(p.nom)}">
-      <td><b>${esc(p.nom)}</b></td>
+    const rowHtml = `<tr class="row" data-nom="${esc(p.nom)}" id="p-${esc(p.slug||'')}">
+      <td><b>${esc(p.nom)}</b>${(p.actus||[]).length ? ` <span class="xl" title="${esc(p.actus[0].titre)} (${esc(p.actus[0].date||'')})" style="padding:0 7px;font-size:10.5px">actu</span>` : ''}</td>
       <td><span class="badge ${statutClass(p.statutKey)}">${esc(p.statut)}</span></td>
       <td>${esc(p.secteur||'—')}</td>
       <td>${esc(p.maturite||'—')}</td>
@@ -387,7 +408,14 @@ document.getElementById('q').addEventListener('input', renderPipe);
 document.getElementById('f-statut').addEventListener('change', renderPipe);
 document.getElementById('f-secteur').addEventListener('change', renderPipe);
 document.getElementById('f-maturite').addEventListener('change', renderPipe);
+// Lien profond depuis les autres pages : #p-<slug> ouvre la fiche de la start-up
+(function(){
+  const h = decodeURIComponent((location.hash || '').slice(1));
+  const p = h.startsWith('p-') ? PIPE.find(x => x.slug === h.slice(2)) : null;
+  if (p){ openNom = p.nom; }
+})();
 renderPipe();
+if (openNom){ const tr = document.querySelector('tr.row[data-nom="' + CSS.escape(openNom) + '"]'); if (tr) tr.scrollIntoView({block:'center'}); }
 
 /* ---------- pertinence pour GVI : relecture d'une fiche par les 6 critères ---------- */
 const pSelect = document.getElementById('p-select');

@@ -92,6 +92,15 @@ a{color:inherit}
   .story .headline{font-size:22px}
   .story.lead .headline{font-size:26px}
 }
+
+/* Liens entre les pages (liens_croises.py) */
+.xlinks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.xl{font-size:11.5px;padding:2px 9px;border-radius:20px;border:1px solid var(--petrol);color:var(--petrol);text-decoration:none;background:var(--surface);white-space:nowrap}
+.xl:hover{background:var(--petrol-soft)}
+.xl.fonds{border-color:var(--ochre);color:var(--ochre)}
+.xactus{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:4px;font-size:13px}
+.xactus a{color:var(--ink)}
+.xactus .m{color:var(--muted);font-size:12px}
 </style>
 
 <nav class="crossnav">
@@ -154,11 +163,12 @@ document.getElementById('method-freq').textContent = RAW.frequence || 'à défin
 document.getElementById('stat-next').textContent = RAW.prochaine || '—';
 
 function storyHtml(e, i){
-  return `<article class="story${i===0?' lead':''}">
+  return `<article class="story${i===0?' lead':''}" id="${esc(e.ancre||'')}">
     <span class="kicker ${e.type}">${e.type==='fonds'?'Fonds':'Start-up'}</span>
     <a class="headline" href="${esc(e.url||'#')}" target="_blank" rel="noopener">${esc(e.titre)}</a>
     <p class="dek">${esc(e.resume)}</p>
     <div class="byline">${esc(e.date)}${e.source?` — ${esc(e.source)}`:''}${e.url?` — <a href="${esc(e.url)}" target="_blank" rel="noopener">lire la source ↗</a>`:''}</div>
+    ${(e.liens||[]).length ? `<div class="xlinks">${e.liens.map(l => `<a class="xl ${l.type}" href="${esc(l.url)}" target="_blank" rel="noopener">Radar · ${esc(l.nom)}</a>`).join('')}</div>` : ''}
   </article>`;
 }
 

@@ -167,6 +167,15 @@ h1,h2,h3,p{text-wrap:balance}
 .chip.good{border-color:var(--good);color:var(--good);background:var(--good-soft)}
 .chip.bad{border-color:var(--bad);color:var(--bad);background:var(--bad-soft)}
 .chip.doute{border-style:dashed;color:var(--muted)}
+/* Liens entre les pages (liens_croises.py) */
+.xlinks{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.xl{font-size:11.5px;padding:2px 9px;border-radius:20px;border:1px solid var(--petrol);color:var(--petrol);text-decoration:none;background:var(--surface);white-space:nowrap}
+.xl:hover{background:var(--petrol-soft)}
+.xl.fonds{border-color:var(--ochre);color:var(--ochre)}
+.xactus{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:4px;font-size:13px}
+.xactus a{color:var(--ink)}
+.xactus .m{color:var(--muted);font-size:12px}
+
 .a-remplacer{margin-top:6px;font-size:12px;color:var(--ochre);background:var(--ochre-soft);padding:3px 8px;border-radius:3px;display:inline-block}
 
 .band{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line);background:var(--surface)}
@@ -712,6 +721,10 @@ function renderStartup(s){
     ${s.statutDetail ? `<span class="chip">${esc(s.statutDetail)}</span>` : ''}
     ${s.confiance ? `<span class="confiance ${confClass(s.confiance)}">Confiance ${esc(s.confiance)}</span>` : ''}
   </div>
+  ${(s.pipeUrl || s.analyseUrl) ? `<div class="xlinks">
+    ${s.pipeUrl ? `<a class="xl" href="${esc(s.pipeUrl)}" target="_blank" rel="noopener">Suivie dans le pipe GVI ↗</a>` : ''}
+    ${s.analyseUrl ? `<a class="xl" href="${esc(s.analyseUrl)}" target="_blank" rel="noopener">Analyse GVI ↗</a>` : ''}
+  </div>` : ''}
 
   <dl class="band">
     ${figure('Valorisation' + (valoDate(s) ? ' ' + valoDate(s) : ''), s.valorisation, ' M€')}
@@ -747,7 +760,17 @@ function renderStartup(s){
     </div>
   </div>
 
-  <p class="note">Fonds investisseur : <a href="#" data-goto-fund="${esc(s.fid)}">${esc(s.vehicule||s.fondsNom||'')}</a></p>
+  <p class="note">Fonds investisseur : <a href="#" data-goto-fund="${esc(s.fid)}">${esc(s.vehicule||s.fondsNom||'')}</a>${(s.autresFonds||[]).length ? ` · aussi au capital (Radar) : ${s.autresFonds.map(o => `<a href="#" data-goto-fund="${esc(o.fid)}">${esc(o.nom)}</a>`).join(', ')}` : ''}</p>
+
+  ${(s.actus && s.actus.length) ? `
+  <h3 class="sec">Actualité liée</h3>
+  <div class="actus">${s.actus.map(a => `
+    <a class="actu" href="${esc(a.url || a.page)}" target="_blank" rel="noopener">
+      <span class="actu-tag ${a.type}">${a.type==='veille'?'Veille':'M&A'}</span>
+      <span class="actu-titre">${esc(a.titre)}</span>
+      <span class="actu-meta">${esc(a.date||'')}${a.source?` — ${esc(a.source)}`:''}</span>
+    </a>`).join('')}
+  </div>` : ''}
 
   ${s.commentaires ? `<p class="note">${esc(s.commentaires)}</p>` : ''}
 
@@ -1193,6 +1216,20 @@ document.getElementById('file').onchange = async e => {
   }
 };
 
+// Liens profonds depuis les autres pages : #s-<slug> (start-up) ou #f-<Fonds_ID> (fonds)
+function appliquerHash(){
+  const h = decodeURIComponent((location.hash || '').slice(1));
+  if (h.startsWith('s-')){
+    const s = STARTUPS.find(x => x.slug === h.slice(2));
+    if (s){ S.view = 'startups'; S.selStartup = s.fid + '|' + s.nom; }
+  } else if (h.startsWith('f-')){
+    const f = FONDS.find(x => x.fid === h.slice(2));
+    if (f){ S.view = 'funds'; S.selFund = f.fid; }
+  }
+}
+window.addEventListener('hashchange', () => { appliquerHash(); render(); });
+
 fillFilters();
+appliquerHash();
 render();
 </script>

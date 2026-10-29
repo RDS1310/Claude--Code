@@ -32,6 +32,15 @@ def main() -> int:
         assert not inconnues, f"{a['nom']} : critères inconnus {inconnues}"
         for c, n in a.get("notes", {}).items():
             assert n.get("note") in (None, 1, 2, 3), f"{a['nom']} / {c} : note hors échelle"
+    # Index des liens vers Radar / Pipe / actualités, par nom normalisé (les fiches créées sur la
+    # page sont rapprochées dans le navigateur avec la même normalisation que liens_croises.norm)
+    from liens_croises import construire_index, URLS, dates_desc
+    data["liens"] = {
+        n: {"radar": f"{URLS['radar']}#s-{e['slug']}" if e["radar"] else None,
+            "pipe": f"{URLS['pipe']}#p-{e['slug']}" if e["pipe"] else None,
+            "actus": dates_desc(e["actus"])[:5]}
+        for n, e in construire_index()["societes"].items() if e["radar"] or e["pipe"] or e["actus"]
+    }
     html = TEMPLATE.read_text(encoding="utf-8").replace(
         "__DATA_JSON__", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
     SORTIE.write_text(html, encoding="utf-8")

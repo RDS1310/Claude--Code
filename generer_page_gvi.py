@@ -181,6 +181,20 @@ def main() -> int:
             "voltGVI": vg,
         })
 
+    # Liens vers le Radar, les actualités et les analyses (liens_croises)
+    from liens_croises import construire_index, norm, URLS, dates_desc
+    idx = construire_index()["societes"]
+    for p in pipe:
+        e = idx.get(norm(p["nom"]))
+        if not e:
+            continue
+        p["slug"] = e["slug"]
+        if e["radar"]:
+            p["radarUrl"] = f"{URLS['radar']}#s-{e['slug']}"
+            p["radarFonds"] = sorted({r["vehicule"] or r["fonds"] for r in e["radar"]})
+        p["analyseUrl"] = f"{URLS['analyses']}#{e['analyse']}" if e["analyse"] else None
+        p["actus"] = dates_desc(e["actus"])
+
     pipe.sort(key=lambda p: (ORDRE_STATUT.index(p["statutKey"]), p["nom"].lower()))
 
     data = {

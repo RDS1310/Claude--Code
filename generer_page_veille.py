@@ -50,6 +50,12 @@ def main() -> int:
     data = json.loads(ENTREE.read_text(encoding="utf-8"))
     data["entries"] = sorted(data.get("entries", []), key=cle_date, reverse=True)
     data["tendances"] = calculer_tendances(data["entries"])
+    # Liens vers les fiches Radar des fonds et start-ups cités (jamais le pipe GVI)
+    from liens_croises import construire_index, liens_texte, cle_url
+    idx = construire_index()
+    for e in data["entries"]:
+        e["ancre"] = cle_url(e.get("url"))
+        e["liens"] = liens_texte(idx, f"{e.get('titre', '')} {e.get('resume', '')}")
 
     template = (BASE_DIR / "_veille_template.html").read_text(encoding="utf-8")
     html = template.replace("__DATA_JSON__", json.dumps(data, ensure_ascii=False))
