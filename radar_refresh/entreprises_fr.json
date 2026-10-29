@@ -8,16 +8,44 @@
    "origines": [
     "pipe"
    ],
-   "siren": "901679456",
+   "siren": "842840738",
    "raison_sociale": "SIMPLE",
-   "date_creation": "2021-04-13",
+   "date_creation": "2018-10-03",
    "etat": "A",
    "tranche_effectif": null,
    "annee_effectif": null,
-   "activite": "94.92Z",
-   "commune": "LOUVECIENNES",
+   "activite": "70.21Z",
+   "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/901679456"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/842840738",
+   "autres_homonymes": [
+    {
+     "siren": "901679456",
+     "nom": "SIMPLE",
+     "creation": "2021-04-13",
+     "activite": "94.92Z"
+    },
+    {
+     "siren": "444518765",
+     "nom": "SIMPLE",
+     "creation": "2002-11-27",
+     "activite": "59.20Z"
+    },
+    {
+     "siren": "944845023",
+     "nom": "SIMPLE (SIMPLE POST PRODUCTION)",
+     "creation": "2025-05-24",
+     "activite": "59.12Z"
+    },
+    {
+     "siren": "314502816",
+     "nom": "SIMPLE",
+     "creation": "1978-01-01",
+     "activite": "56.10C"
+    }
+   ]
   },
   "360skillvue": {
    "statut": "trouvé",
@@ -33,8 +61,11 @@
    "annee_effectif": null,
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/951352384"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/951352384",
+   "autres_homonymes": []
   },
   "AI6 TECHNOLOGIES": {
    "statut": "trouvé",
@@ -50,28 +81,32 @@
    "annee_effectif": null,
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/938439742"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/938439742",
+   "autres_homonymes": []
   },
   "ALRJ": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "914790142",
-   "raison_sociale": "ALRJ",
-   "date_creation": "2022-06-13",
-   "etat": "A",
-   "tranche_effectif": "1-2",
-   "annee_effectif": "2024",
-   "activite": "47.91B",
-   "commune": "CENON",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914790142"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "914790142",
+     "nom": "ALRJ (ALRJ)"
+    },
+    {
+     "score": 1.0,
+     "siren": "939520045",
+     "nom": "SCI ALRJ (SCI ALRJ)"
+    }
+   ]
   },
   "Acheel": {
-   "statut": "trouvé",
+   "statut": "ambigu",
    "score": 1.0,
    "origines": [
     "pipe",
@@ -85,13 +120,35 @@
    "annee_effectif": "2024",
    "activite": "65.12Z",
    "commune": "PARIS",
+   "nature_juridique": "5599",
+   "categorie": "ETI",
    "finances": {
     "2025": {
      "ca": 147186264,
      "resultat_net": 4492418
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879605350"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879605350",
+   "autres_homonymes": [
+    {
+     "siren": "895323525",
+     "nom": "ACHEEL FRANCE",
+     "creation": "2021-03-05",
+     "activite": "66.22Z"
+    },
+    {
+     "siren": "994197655",
+     "nom": "ACHEEL ASU",
+     "creation": "2025-11-01",
+     "activite": "66.22Z"
+    },
+    {
+     "siren": "904520483",
+     "nom": "ACHEEL CALL-CENTER AND SERVICES (A.C.S.)",
+     "creation": "2021-10-19",
+     "activite": "82.20Z"
+    }
+   ]
   },
   "Akur8": {
    "statut": "trouvé",
@@ -108,31 +165,40 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -18744199
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/841204720"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/841204720",
+   "autres_homonymes": []
   },
   "Alan": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe",
     "radar"
    ],
-   "siren": "837986017",
-   "raison_sociale": "ALAN",
-   "date_creation": "2018-03-01",
-   "etat": "A",
-   "tranche_effectif": "6-9",
-   "annee_effectif": "2024",
-   "activite": "56.10C",
-   "commune": "TOULOUSE",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837986017"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "837986017",
+     "nom": "ALAN (BEST OF INDIA)"
+    },
+    {
+     "score": 1.0,
+     "siren": "401386297",
+     "nom": "ALAN"
+    },
+    {
+     "score": 1.0,
+     "siren": "106229610",
+     "nom": "ALAN"
+    }
+   ]
   },
   "AlloBrain": {
    "statut": "non trouvé",
@@ -156,13 +222,23 @@
    "annee_effectif": "2024",
    "activite": "70.22Z",
    "commune": "BORDEAUX",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -1285803
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802671677"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802671677",
+   "autres_homonymes": [
+    {
+     "siren": "487964074",
+     "nom": "ALOGIA",
+     "creation": "2005-12-27",
+     "activite": "41.10A"
+    }
+   ]
   },
   "Alphonse": {
    "statut": "trouvé",
@@ -178,8 +254,36 @@
    "annee_effectif": null,
    "activite": "66.30Z",
    "commune": "SAMOIS-SUR-SEINE",
+   "nature_juridique": "6599",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847634656"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847634656",
+   "autres_homonymes": [
+    {
+     "siren": "883053795",
+     "nom": "ALPHONSE",
+     "creation": "2020-04-22",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "131267106",
+     "nom": "ALPHONSE",
+     "creation": "2026-10-08",
+     "activite": "68.10Z"
+    },
+    {
+     "siren": "840149900",
+     "nom": "ALPHONSE",
+     "creation": "2018-06-02",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "944466341",
+     "nom": "ALPHONSE",
+     "creation": "2025-05-09",
+     "activite": "55.20Z"
+    }
+   ]
   },
   "Alpic": {
    "statut": "trouvé",
@@ -187,16 +291,49 @@
    "origines": [
     "pipe"
    ],
-   "siren": "485114177",
+   "siren": "480060110",
    "raison_sociale": "ALPIC",
-   "date_creation": "2005-11-01",
+   "date_creation": "2005-01-01",
    "etat": "A",
    "tranche_effectif": "6-9",
    "annee_effectif": "2024",
-   "activite": "10.71D",
-   "commune": "ANGERS",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/485114177"
+   "activite": "85.59A",
+   "commune": "BERNIN",
+   "nature_juridique": "5710",
+   "categorie": "ETI",
+   "finances": {
+    "2025": {
+     "ca": 607534,
+     "resultat_net": -92423
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/480060110",
+   "autres_homonymes": [
+    {
+     "siren": "485114177",
+     "nom": "ALPIC",
+     "creation": "2005-11-01",
+     "activite": "10.71D"
+    },
+    {
+     "siren": "989649736",
+     "nom": "ALPIC",
+     "creation": "2025-07-23",
+     "activite": "62.02A"
+    },
+    {
+     "siren": "882344013",
+     "nom": "ALPIC",
+     "creation": "2020-03-02",
+     "activite": "70.10Z"
+    },
+    {
+     "siren": "799325022",
+     "nom": "ALPIC",
+     "creation": "2013-09-25",
+     "activite": "94.99Z"
+    }
+   ]
   },
   "Angel start": {
    "statut": "non trouvé",
@@ -227,16 +364,31 @@
    "origines": [
     "pipe"
    ],
-   "siren": "834944530",
+   "siren": "880674692",
    "raison_sociale": "ASSOLIA",
-   "date_creation": "2017-11-08",
+   "date_creation": "2020-01-03",
    "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "94.99Z",
-   "commune": "LIMOGES",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/834944530"
+   "tranche_effectif": "10-19",
+   "annee_effectif": "2024",
+   "activite": "70.22Z",
+   "commune": "FRANCON",
+   "nature_juridique": "5710",
+   "categorie": "PME",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": 0
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/880674692",
+   "autres_homonymes": [
+    {
+     "siren": "834944530",
+     "nom": "ASSOLIA",
+     "creation": "2017-11-08",
+     "activite": "94.99Z"
+    }
+   ]
   },
   "Assurup": {
    "statut": "trouvé",
@@ -252,13 +404,16 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "LEVALLOIS-PERRET",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": 929471
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/811686062"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/811686062",
+   "autres_homonymes": []
   },
   "Beloy": {
    "statut": "trouvé",
@@ -274,13 +429,23 @@
    "annee_effectif": "2024",
    "activite": "62.02A",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -1103298
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/888048659"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/888048659",
+   "autres_homonymes": [
+    {
+     "siren": "993843259",
+     "nom": "SCI BELOY",
+     "creation": "2025-10-29",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Bifrost": {
    "statut": "trouvé",
@@ -296,13 +461,41 @@
    "annee_effectif": null,
    "activite": "64.20Z",
    "commune": "CREUZIER-LE-VIEUX",
+   "nature_juridique": "5499",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -11182
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/893539353"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/893539353",
+   "autres_homonymes": [
+    {
+     "siren": "102002193",
+     "nom": "BIFROST",
+     "creation": "2026-03-01",
+     "activite": "47.78A"
+    },
+    {
+     "siren": "922624085",
+     "nom": "BIFROST",
+     "creation": "2023-01-01",
+     "activite": "33.12Z"
+    },
+    {
+     "siren": "900600669",
+     "nom": "BIFROST",
+     "creation": "2021-06-10",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "852353218",
+     "nom": "BIFROST",
+     "creation": "2019-06-28",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Biolock": {
    "statut": "trouvé",
@@ -318,8 +511,11 @@
    "annee_effectif": null,
    "activite": "62.02A",
    "commune": "FONTAINEBLEAU",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/925043309"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/925043309",
+   "autres_homonymes": []
   },
   "Bleckwen": {
    "statut": "trouvé",
@@ -335,13 +531,16 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PUTEAUX",
+   "nature_juridique": "5710",
+   "categorie": "GE",
    "finances": {
     "2022": {
      "ca": 0,
      "resultat_net": -2548378
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/844558304"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/844558304",
+   "autres_homonymes": []
   },
   "Board of Cyber": {
    "statut": "trouvé",
@@ -357,20 +556,43 @@
    "annee_effectif": "2024",
    "activite": "62.02A",
    "commune": "SEVRES",
+   "nature_juridique": "5710",
+   "categorie": "ETI",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -793058
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/908185424"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/908185424",
+   "autres_homonymes": [
+    {
+     "siren": "994122760",
+     "nom": "BOARD OF CYBER MANAGEMENT",
+     "creation": "2025-11-18",
+     "activite": "70.10Z"
+    }
+   ]
   },
   "BotRank.ai": {
-   "statut": "non trouvé",
+   "statut": "trouvé",
+   "score": 1.0,
    "origines": [
     "pipe"
    ],
-   "candidats": []
+   "siren": "106860315",
+   "raison_sociale": "BOTRANK.AI",
+   "date_creation": "2026-06-25",
+   "etat": "A",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "73.11Z",
+   "commune": "LYON",
+   "nature_juridique": "5710",
+   "categorie": null,
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/106860315",
+   "autres_homonymes": []
   },
   "CAREEXPAT": {
    "statut": "non trouvé",
@@ -393,8 +615,24 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/851138461"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/851138461",
+   "autres_homonymes": [
+    {
+     "siren": "389925736",
+     "nom": "CONSULT ADMINI AMIABLE RELATIONS LITIGES (CAARL)",
+     "creation": "1993-01-01",
+     "activite": "74.1G"
+    },
+    {
+     "siren": "106391048",
+     "nom": "CAARL MAAKANI",
+     "creation": "2026-06-15",
+     "activite": "61.90Z"
+    }
+   ]
   },
   "Callendar": {
    "statut": "trouvé",
@@ -410,8 +648,11 @@
    "annee_effectif": "2024",
    "activite": "74.90B",
    "commune": "PUTEAUX",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879252831"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879252831",
+   "autres_homonymes": []
   },
   "Cartan Trade": {
    "statut": "trouvé",
@@ -427,35 +668,29 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -852465
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/904596715"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/904596715",
+   "autres_homonymes": []
   },
   "Cautioneo": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "radar"
    ],
-   "siren": "837897370",
-   "raison_sociale": "CAUTIONEO",
-   "date_creation": "2018-02-26",
-   "etat": "A",
-   "tranche_effectif": "20-49",
-   "annee_effectif": "2024",
-   "activite": "68.32A",
-   "commune": "LILLE",
-   "finances": {
-    "2024": {
-     "ca": 1378745,
-     "resultat_net": -341629
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "837897370",
+     "nom": "CAUTIONEO"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837897370"
+   ]
   },
   "Celest.science": {
    "statut": "trouvé",
@@ -471,8 +706,11 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "MONTPELLIER",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949645600"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949645600",
+   "autres_homonymes": []
   },
   "Certificall": {
    "statut": "trouvé",
@@ -489,8 +727,11 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "CASTELNAU-D'ESTRETEFONDS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/921183257"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/921183257",
+   "autres_homonymes": []
   },
   "Citalid's": {
    "statut": "non trouvé",
@@ -533,13 +774,29 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -2658145
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/878686252"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/878686252",
+   "autres_homonymes": [
+    {
+     "siren": "825240492",
+     "nom": "CONTINUITY LABS",
+     "creation": "2017-01-13",
+     "activite": "46.69C"
+    },
+    {
+     "siren": "103025987",
+     "nom": "CONTINUITY PROGRAM",
+     "creation": "2026-03-25",
+     "activite": "85.59A"
+    }
+   ]
   },
   "Covalt": {
    "statut": "trouvé",
@@ -555,13 +812,23 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -569156
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/877606970"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/877606970",
+   "autres_homonymes": [
+    {
+     "siren": "106526957",
+     "nom": "COVALT SERVICING",
+     "creation": "2026-06-05",
+     "activite": "66.30Z"
+    }
+   ]
   },
   "Covalt (ex-Pono)": {
    "statut": "trouvé",
@@ -577,13 +844,23 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -569156
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/877606970"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/877606970",
+   "autres_homonymes": [
+    {
+     "siren": "106526957",
+     "nom": "COVALT SERVICING",
+     "creation": "2026-06-05",
+     "activite": "66.30Z"
+    }
+   ]
   },
   "Coverd": {
    "statut": "trouvé",
@@ -599,8 +876,11 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "RUEIL-MALMAISON",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/843119363"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/843119363",
+   "autres_homonymes": []
   },
   "Cyna": {
    "statut": "trouvé",
@@ -608,33 +888,67 @@
    "origines": [
     "pipe"
    ],
-   "siren": "988073946",
+   "siren": "944527324",
    "raison_sociale": "CYNA",
-   "date_creation": "2023-01-01",
+   "date_creation": "2025-05-15",
    "etat": "A",
    "tranche_effectif": null,
    "annee_effectif": null,
-   "activite": "68.20A",
-   "commune": "RENNES",
+   "activite": "66.30Z",
+   "commune": "ELANCOURT",
+   "nature_juridique": "5499",
+   "categorie": null,
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988073946"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/944527324",
+   "autres_homonymes": [
+    {
+     "siren": "988073946",
+     "nom": "CYNA (CYNA)",
+     "creation": "2023-01-01",
+     "activite": "68.20A"
+    },
+    {
+     "siren": "832929285",
+     "nom": "CYNA",
+     "creation": "2017-10-26",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "848202354",
+     "nom": "CYNA",
+     "creation": "2019-02-07",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "952007680",
+     "nom": "CYNA",
+     "creation": "2023-03-01",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Dalma": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "430348482",
-   "raison_sociale": "DALMA",
-   "date_creation": "1999-03-22",
-   "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "90.01Z",
-   "commune": "MIMET",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/430348482"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "430348482",
+     "nom": "DALMA"
+    },
+    {
+     "score": 1.0,
+     "siren": "478568595",
+     "nom": "DALMA (SCI DALMA)"
+    },
+    {
+     "score": 1.0,
+     "siren": "830122958",
+     "nom": "DALMA"
+    }
+   ]
   },
   "Dattak": {
    "statut": "trouvé",
@@ -651,8 +965,18 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/907857817"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/907857817",
+   "autres_homonymes": [
+    {
+     "siren": "944430719",
+     "nom": "DATTAK TECHNOLOGIES",
+     "creation": "2025-05-05",
+     "activite": "62.02A"
+    }
+   ]
   },
   "Descartes Underwriting": {
    "statut": "trouvé",
@@ -668,8 +992,11 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/843359357"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/843359357",
+   "autres_homonymes": []
   },
   "Descartes Underwritting": {
    "statut": "non trouvé",
@@ -692,13 +1019,41 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "ETI",
    "finances": {
     "2023": {
      "ca": 32565352,
      "resultat_net": -6112888
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/885144030"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/885144030",
+   "autres_homonymes": [
+    {
+     "siren": "831382601",
+     "nom": "DIGITAL INSURE",
+     "creation": "2017-07-13",
+     "activite": "66.30Z"
+    },
+    {
+     "siren": "815028162",
+     "nom": "DIGITAL INSURE SERVICES",
+     "creation": "2015-11-17",
+     "activite": "66.22Z"
+    },
+    {
+     "siren": "824390579",
+     "nom": "DIGITAL INSURE DISTRIBUTION",
+     "creation": "2016-11-24",
+     "activite": "66.22Z"
+    },
+    {
+     "siren": "877850610",
+     "nom": "DIGITAL INSURE RISQUES SPECIAUX",
+     "creation": "2019-09-24",
+     "activite": "66.22Z"
+    }
+   ]
   },
   "DutyAdvisor": {
    "statut": "trouvé",
@@ -714,8 +1069,11 @@
    "annee_effectif": null,
    "activite": "70.22Z",
    "commune": "MACON",
+   "nature_juridique": "5710",
+   "categorie": null,
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/940569965"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/940569965",
+   "autres_homonymes": []
   },
   "Dylogy": {
    "statut": "non trouvé",
@@ -752,13 +1110,16 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2023": {
      "ca": 0,
      "resultat_net": -726055
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/909874109"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/909874109",
+   "autres_homonymes": []
   },
   "Eukonomy": {
    "statut": "trouvé",
@@ -774,8 +1135,11 @@
    "annee_effectif": null,
    "activite": "70.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/928761592"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/928761592",
+   "autres_homonymes": []
   },
   "Eyst": {
    "statut": "trouvé",
@@ -791,25 +1155,41 @@
    "annee_effectif": null,
    "activite": "62.02A",
    "commune": "PUTEAUX",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914735592"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914735592",
+   "autres_homonymes": [
+    {
+     "siren": "988206405",
+     "nom": "EYST INVEST",
+     "creation": "2025-06-12",
+     "activite": "70.10Z"
+    }
+   ]
   },
   "Fasst": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "809035603",
-   "raison_sociale": "FASST",
-   "date_creation": "2015-01-08",
-   "etat": "C",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "68.20B",
-   "commune": "MARSEILLE 15",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/809035603"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "809035603",
+     "nom": "FASST"
+    },
+    {
+     "score": 1.0,
+     "siren": "901714048",
+     "nom": "FASST LTD"
+    },
+    {
+     "score": 0.833,
+     "siren": "832017446",
+     "nom": "F.ASS.T"
+    }
+   ]
   },
   "Feelbat": {
    "statut": "trouvé",
@@ -825,13 +1205,16 @@
    "annee_effectif": "2024",
    "activite": "71.12B",
    "commune": "SAINT-PAUL",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": 0
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/884152422"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/884152422",
+   "autres_homonymes": []
   },
   "Finovox": {
    "statut": "trouvé",
@@ -847,13 +1230,16 @@
    "annee_effectif": "2024",
    "activite": "62.02B",
    "commune": "SAINT-CLOUD",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -1625934
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/878381961"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/878381961",
+   "autres_homonymes": []
   },
   "Finres": {
    "statut": "trouvé",
@@ -869,13 +1255,16 @@
    "annee_effectif": "2024",
    "activite": "74.90B",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2022": {
      "ca": 0,
      "resultat_net": 463123
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879865525"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/879865525",
+   "autres_homonymes": []
   },
   "Flitter": {
    "statut": "trouvé",
@@ -891,13 +1280,16 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "NEUILLY-SUR-SEINE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2023": {
      "ca": 0,
      "resultat_net": -1257753
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/890340144"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/890340144",
+   "autres_homonymes": []
   },
   "Fluo": {
    "statut": "trouvé",
@@ -905,16 +1297,49 @@
    "origines": [
     "radar"
    ],
-   "siren": "839099546",
+   "siren": "791484876",
    "raison_sociale": "FLUO",
-   "date_creation": "2018-04-05",
+   "date_creation": "2013-03-01",
    "etat": "A",
    "tranche_effectif": null,
    "annee_effectif": null,
-   "activite": "55.20Z",
-   "commune": "LYON",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/839099546"
+   "activite": "64.20Z",
+   "commune": "LOIRE-SUR-RHONE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
+   "finances": {
+    "2025": {
+     "ca": 0,
+     "resultat_net": 201138
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/791484876",
+   "autres_homonymes": [
+    {
+     "siren": "839099546",
+     "nom": "FLUO",
+     "creation": "2018-04-05",
+     "activite": "55.20Z"
+    },
+    {
+     "siren": "809858483",
+     "nom": "FLUO",
+     "creation": "2015-01-22",
+     "activite": "90.01Z"
+    },
+    {
+     "siren": "827748179",
+     "nom": "FLUO",
+     "creation": "2017-02-13",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "899782890",
+     "nom": "FLUO",
+     "creation": "2021-05-25",
+     "activite": "70.10Z"
+    }
+   ]
   },
   "FundShop": {
    "statut": "non trouvé",
@@ -943,8 +1368,11 @@
    "annee_effectif": null,
    "activite": "62.01Z",
    "commune": "PARIS 01",
+   "nature_juridique": "5710",
+   "categorie": null,
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988701702"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988701702",
+   "autres_homonymes": []
   },
   "Garantme": {
    "statut": "trouvé",
@@ -960,13 +1388,23 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 14535738,
      "resultat_net": -137527
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832523344"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832523344",
+   "autres_homonymes": [
+    {
+     "siren": "935098442",
+     "nom": "GARANTME TECH",
+     "creation": "2024-10-30",
+     "activite": "62.01Z"
+    }
+   ]
   },
   "Geoya": {
    "statut": "trouvé",
@@ -982,13 +1420,16 @@
    "annee_effectif": null,
    "activite": "66.21Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "GE",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -87963
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/880269246"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/880269246",
+   "autres_homonymes": []
   },
   "GitGuardian": {
    "statut": "trouvé",
@@ -1004,8 +1445,11 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/833611742"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/833611742",
+   "autres_homonymes": []
   },
   "Goodvest": {
    "statut": "trouvé",
@@ -1021,13 +1465,16 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2023": {
      "ca": 0,
      "resultat_net": 0
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889263117"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889263117",
+   "autres_homonymes": []
   },
   "Grace": {
    "statut": "trouvé",
@@ -1035,16 +1482,44 @@
    "origines": [
     "radar"
    ],
-   "siren": "952444321",
+   "siren": "914099155",
    "raison_sociale": "GRACE",
-   "date_creation": "2023-03-29",
+   "date_creation": "2022-05-27",
    "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "47.71Z",
-   "commune": "GUJAN-MESTRAS",
+   "tranche_effectif": "3-5",
+   "annee_effectif": "2024",
+   "activite": "66.22Z",
+   "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/952444321"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914099155",
+   "autres_homonymes": [
+    {
+     "siren": "952444321",
+     "nom": "GRACE (GRACE)",
+     "creation": "2023-03-29",
+     "activite": "47.71Z"
+    },
+    {
+     "siren": "818224800",
+     "nom": "GRACE (GRACE MARIAGE)",
+     "creation": "2015-10-26",
+     "activite": "47.71Z"
+    },
+    {
+     "siren": "833002686",
+     "nom": "GRACE",
+     "creation": "2017-11-02",
+     "activite": "56.10A"
+    },
+    {
+     "siren": "423842624",
+     "nom": "GRACE",
+     "creation": "1999-05-20",
+     "activite": "56.10C"
+    }
+   ]
   },
   "HD Rain": {
    "statut": "trouvé",
@@ -1060,8 +1535,11 @@
    "annee_effectif": "2024",
    "activite": "74.90B",
    "commune": "BONNEUIL-SUR-MARNE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/839815859"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/839815859",
+   "autres_homonymes": []
   },
   "Hokodo": {
    "statut": "trouvé",
@@ -1077,47 +1555,52 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 2507094,
      "resultat_net": -8497258
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847859352"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847859352",
+   "autres_homonymes": []
   },
   "Horizons Insurance": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "104342514",
-   "raison_sociale": "HORIZONS INSURANCE",
-   "date_creation": "2026-04-24",
-   "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "70.10Z",
-   "commune": "PARIS",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/104342514"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "104342514",
+     "nom": "HORIZONS INSURANCE"
+    }
+   ]
   },
   "Hugin & Munin": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "100873363",
-   "raison_sociale": "HUGIN & MUNIN",
-   "date_creation": "2026-01-19",
-   "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "70.10Z",
-   "commune": "STRASBOURG",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/100873363"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "100873363",
+     "nom": "HUGIN & MUNIN"
+    },
+    {
+     "score": 0.9,
+     "siren": "819644519",
+     "nom": "BAPTISTE CLEMOT"
+    },
+    {
+     "score": 0.667,
+     "siren": "788638419",
+     "nom": "HUGIN ET MUNIN - LE CLAN"
+    }
+   ]
   },
   "Huscarl": {
    "statut": "trouvé",
@@ -1133,8 +1616,24 @@
    "annee_effectif": null,
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": null,
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/992337022"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/992337022",
+   "autres_homonymes": [
+    {
+     "siren": "101007755",
+     "nom": "HUSCARL",
+     "creation": "2026-02-06",
+     "activite": "41.20A"
+    },
+    {
+     "siren": "989195003",
+     "nom": "HUSCARL",
+     "creation": "2025-07-12",
+     "activite": "81.21Z"
+    }
+   ]
   },
   "Huwise": {
    "statut": "non trouvé",
@@ -1163,8 +1662,18 @@
    "annee_effectif": "2024",
    "activite": "71.12B",
    "commune": "LA CADIERE-D'AZUR",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/848583043"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/848583043",
+   "autres_homonymes": [
+    {
+     "siren": "334956547",
+     "nom": "HYDROCLIMAT",
+     "creation": "1986-02-11",
+     "activite": "53.01"
+    }
+   ]
   },
   "INFRA": {
    "statut": "trouvé",
@@ -1172,21 +1681,44 @@
    "origines": [
     "pipe"
    ],
-   "siren": "314583543",
+   "siren": "977676394",
    "raison_sociale": "INFRA",
-   "date_creation": "1978-01-01",
+   "date_creation": "2023-07-06",
    "etat": "A",
-   "tranche_effectif": "10-19",
+   "tranche_effectif": "1-2",
    "annee_effectif": "2024",
-   "activite": "74.20Z",
-   "commune": "STRASBOURG",
-   "finances": {
-    "2024": {
-     "ca": 2311742,
-     "resultat_net": -791
+   "activite": "62.01Z",
+   "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/977676394",
+   "autres_homonymes": [
+    {
+     "siren": "314583543",
+     "nom": "INFRA (INFRA)",
+     "creation": "1978-01-01",
+     "activite": "74.20Z"
+    },
+    {
+     "siren": "390009330",
+     "nom": "INFRA",
+     "creation": "1992-07-01",
+     "activite": "68.20A"
+    },
+    {
+     "siren": "929435717",
+     "nom": "INFRA (INFRA)",
+     "creation": "2024-06-01",
+     "activite": "71.12B"
+    },
+    {
+     "siren": "932304934",
+     "nom": "INFRA",
+     "creation": "2024-07-31",
+     "activite": "43.99C"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/314583543"
+   ]
   },
   "In clear terms": {
    "statut": "non trouvé",
@@ -1196,7 +1728,7 @@
    "candidats": []
   },
   "Innovassur": {
-   "statut": "trouvé",
+   "statut": "ambigu",
    "score": 1.0,
    "origines": [
     "pipe"
@@ -1209,8 +1741,30 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "BOISSY-L'AILLERIE",
+   "nature_juridique": "5599",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/343745949"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/343745949",
+   "autres_homonymes": [
+    {
+     "siren": "352244487",
+     "nom": "INNOVASSUR",
+     "creation": "1989-10-10",
+     "activite": "67.2Z"
+    },
+    {
+     "siren": "522840016",
+     "nom": "SARL INNOV'ASSUR",
+     "creation": "2010-07-01",
+     "activite": "65.12Z"
+    },
+    {
+     "siren": "942838624",
+     "nom": "INNOVASSUR CONSULTING",
+     "creation": "2025-03-28",
+     "activite": "70.22Z"
+    }
+   ]
   },
   "Juste Retraite": {
    "statut": "non trouvé",
@@ -1239,13 +1793,41 @@
    "annee_effectif": "2024",
    "activite": "62.02A",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -763210
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889362497"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889362497",
+   "autres_homonymes": [
+    {
+     "siren": "793829318",
+     "nom": "KAMAE",
+     "creation": "2013-06-14",
+     "activite": "71.11Z"
+    },
+    {
+     "siren": "323245670",
+     "nom": "KAMAE",
+     "creation": "1981-12-04",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "849324645",
+     "nom": "KAMAEE",
+     "creation": "2019-03-13",
+     "activite": "59.11A"
+    },
+    {
+     "siren": "100122480",
+     "nom": "KAMAE AIKIDO",
+     "creation": "2025-09-04",
+     "activite": "93.12Z"
+    }
+   ]
   },
   "Kapptivate": {
    "statut": "trouvé",
@@ -1261,13 +1843,16 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -618096
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803963214"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803963214",
+   "autres_homonymes": []
   },
   "Kayrros": {
    "statut": "trouvé",
@@ -1283,8 +1868,24 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/818399651"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/818399651",
+   "autres_homonymes": [
+    {
+     "siren": "887629350",
+     "nom": "KAYRROS LIMITED",
+     "creation": "2020-07-01",
+     "activite": "47.91A"
+    },
+    {
+     "siren": "929288405",
+     "nom": "KAYRROS SOUVERAINETE",
+     "creation": "2024-05-24",
+     "activite": "62.01Z"
+    }
+   ]
   },
   "Kelkun": {
    "statut": "trouvé",
@@ -1300,13 +1901,23 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "VENDARGUES",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": 0
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/979060142"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/979060142",
+   "autres_homonymes": [
+    {
+     "siren": "803274091",
+     "nom": "KELKUN PRODUCTION",
+     "creation": "2014-07-14",
+     "activite": "59.11A"
+    }
+   ]
   },
   "Klaimy": {
    "statut": "trouvé",
@@ -1323,8 +1934,11 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/981354749"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/981354749",
+   "autres_homonymes": []
   },
   "Koala": {
    "statut": "trouvé",
@@ -1332,21 +1946,49 @@
    "origines": [
     "radar"
    ],
-   "siren": "442131538",
+   "siren": "893651133",
    "raison_sociale": "KOALA",
-   "date_creation": "2002-05-15",
+   "date_creation": "2021-01-15",
    "etat": "A",
-   "tranche_effectif": "20-49",
-   "annee_effectif": "2024",
-   "activite": "93.21Z",
-   "commune": "SAINTE-FOY-LES-LYON",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "66.30Z",
+   "commune": "MOUVAUX",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
-     "ca": 3055945,
-     "resultat_net": 217557
+     "ca": 0,
+     "resultat_net": 416832
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/442131538"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/893651133",
+   "autres_homonymes": [
+    {
+     "siren": "442131538",
+     "nom": "KOALA",
+     "creation": "2002-05-15",
+     "activite": "93.21Z"
+    },
+    {
+     "siren": "502360118",
+     "nom": "KOALA (KOALA)",
+     "creation": "2008-01-29",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "885176271",
+     "nom": "KOALA (ADDICT MARQUES)",
+     "creation": "2020-07-10",
+     "activite": "47.71Z"
+    },
+    {
+     "siren": "882093545",
+     "nom": "KOALA",
+     "creation": "2020-02-20",
+     "activite": "68.31Z"
+    }
+   ]
   },
   "Korint": {
    "statut": "trouvé",
@@ -1363,8 +2005,18 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "NANTERRE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/919444901"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/919444901",
+   "autres_homonymes": [
+    {
+     "siren": "952666543",
+     "nom": "KORINT INTERMEDIARY SERVICES",
+     "creation": "2023-05-02",
+     "activite": "66.22Z"
+    }
+   ]
   },
   "Kraeken (AEGIR)": {
    "statut": "non trouvé",
@@ -1387,8 +2039,24 @@
    "annee_effectif": "2024",
    "activite": "63.11Z",
    "commune": "ATHIS-MONS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/892798588"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/892798588",
+   "autres_homonymes": [
+    {
+     "siren": "308197102",
+     "nom": "KUNTO SA",
+     "creation": null,
+     "activite": "86.10"
+    },
+    {
+     "siren": "311833560",
+     "nom": "KUNTO 7",
+     "creation": null,
+     "activite": "96.18"
+    }
+   ]
   },
   "Letxbe.ai": {
    "statut": "trouvé",
@@ -1404,13 +2072,16 @@
    "annee_effectif": "2024",
    "activite": "58.29C",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -232513
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/915341234"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/915341234",
+   "autres_homonymes": []
   },
   "Liberty Rider": {
    "statut": "trouvé",
@@ -1426,13 +2097,23 @@
    "annee_effectif": "2024",
    "activite": "63.11Z",
    "commune": "TOULOUSE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": 129320
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/821070489"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/821070489",
+   "autres_homonymes": [
+    {
+     "siren": "927493007",
+     "nom": "LIBERTY RIDER MCP 17",
+     "creation": "2015-04-23",
+     "activite": "82.30Z"
+    }
+   ]
   },
   "Licy": {
    "statut": "trouvé",
@@ -1440,16 +2121,44 @@
    "origines": [
     "pipe"
    ],
-   "siren": "951509819",
+   "siren": "931418529",
    "raison_sociale": "LICY",
-   "date_creation": "2023-04-11",
+   "date_creation": "2024-07-01",
    "etat": "A",
    "tranche_effectif": null,
    "annee_effectif": null,
-   "activite": "68.20B",
-   "commune": "MONS",
+   "activite": "82.11Z",
+   "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/951509819"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/931418529",
+   "autres_homonymes": [
+    {
+     "siren": "951509819",
+     "nom": "LICY",
+     "creation": "2023-04-11",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "888834751",
+     "nom": "LICY",
+     "creation": "2020-09-19",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "845051218",
+     "nom": "LICY (NOOSA)",
+     "creation": "2019-01-03",
+     "activite": "47.91B"
+    },
+    {
+     "siren": "508885928",
+     "nom": "SCI LICY",
+     "creation": "2008-10-27",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Lidix": {
    "statut": "non trouvé",
@@ -1459,26 +2168,17 @@
    "candidats": []
   },
   "Lifeaz": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "814042958",
-   "raison_sociale": "LIFEAZ",
-   "date_creation": "2015-10-02",
-   "etat": "A",
-   "tranche_effectif": "20-49",
-   "annee_effectif": "2024",
-   "activite": "26.60Z",
-   "commune": "PARIS",
-   "finances": {
-    "2025": {
-     "ca": 0,
-     "resultat_net": -1341461
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "814042958",
+     "nom": "LIFEAZ (LIFEAZ) (LIFE)"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/814042958"
+   ]
   },
   "Linkbycar": {
    "statut": "trouvé",
@@ -1494,8 +2194,11 @@
    "annee_effectif": "2024",
    "activite": "58.29C",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/892103672"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/892103672",
+   "autres_homonymes": []
   },
   "Lite": {
    "statut": "trouvé",
@@ -1511,13 +2214,41 @@
    "annee_effectif": "2024",
    "activite": "58.29C",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": 0
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/825391733"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/825391733",
+   "autres_homonymes": [
+    {
+     "siren": "837710391",
+     "nom": "LITE",
+     "creation": "2018-01-01",
+     "activite": "47.71Z"
+    },
+    {
+     "siren": "519142400",
+     "nom": "LITE",
+     "creation": "2010-01-02",
+     "activite": "47.71Z"
+    },
+    {
+     "siren": "381302462",
+     "nom": "LITE",
+     "creation": "1990-12-03",
+     "activite": "74.4B"
+    },
+    {
+     "siren": "420237554",
+     "nom": "LITE",
+     "creation": "1998-09-21",
+     "activite": "68.20A"
+    }
+   ]
   },
   "Little John": {
    "statut": "trouvé",
@@ -1533,8 +2264,30 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/930449251"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/930449251",
+   "autres_homonymes": [
+    {
+     "siren": "799138516",
+     "nom": "LITTLE JOHN",
+     "creation": "2013-01-01",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "823900725",
+     "nom": "LITTLE JOHN",
+     "creation": "2016-10-14",
+     "activite": "94.99Z"
+    },
+    {
+     "siren": "428938385",
+     "nom": "SCI LITTLE JOHN",
+     "creation": "1986-01-01",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Localia": {
    "statut": "trouvé",
@@ -1550,8 +2303,36 @@
    "annee_effectif": null,
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/927783167"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/927783167",
+   "autres_homonymes": [
+    {
+     "siren": "484074471",
+     "nom": "LOCALIA",
+     "creation": "2005-09-01",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "819993031",
+     "nom": "SCI LOCALIA",
+     "creation": "2016-03-02",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "980483671",
+     "nom": "SCI LOCALIA",
+     "creation": "2023-09-25",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "507393668",
+     "nom": "LOCALIA ATLANTIQUE",
+     "creation": "2008-07-24",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Lovys": {
    "statut": "trouvé",
@@ -1568,13 +2349,16 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "SAINT-DENIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": 672588
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832028021"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832028021",
+   "autres_homonymes": []
   },
   "Luko": {
    "statut": "trouvé",
@@ -1582,21 +2366,38 @@
    "origines": [
     "radar"
    ],
-   "siren": "801246810",
+   "siren": "932082126",
    "raison_sociale": "LUKO",
-   "date_creation": "2014-03-25",
+   "date_creation": "2024-08-06",
    "etat": "A",
-   "tranche_effectif": "10-19",
-   "annee_effectif": "2024",
-   "activite": "56.10C",
-   "commune": "TOULOUSE",
-   "finances": {
-    "2024": {
-     "ca": 833853,
-     "resultat_net": 15937
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "70.22Z",
+   "commune": "NICE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/932082126",
+   "autres_homonymes": [
+    {
+     "siren": "801246810",
+     "nom": "LUKO",
+     "creation": "2014-03-25",
+     "activite": "56.10C"
+    },
+    {
+     "siren": "482859253",
+     "nom": "LUKO",
+     "creation": "2005-06-02",
+     "activite": "43.34Z"
+    },
+    {
+     "siren": "829495985",
+     "nom": "LUKO (LES PETITS PLUS)",
+     "creation": "2017-05-09",
+     "activite": "70.22Z"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/801246810"
+   ]
   },
   "MedSmart": {
    "statut": "trouvé",
@@ -1612,8 +2413,11 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "NEUILLY-SUR-SEINE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/882977226"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/882977226",
+   "autres_homonymes": []
   },
   "Meelo": {
    "statut": "trouvé",
@@ -1629,13 +2433,23 @@
    "annee_effectif": "2024",
    "activite": "62.02A",
    "commune": "MARCQ-EN-BARŒUL",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -444623
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/829051317"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/829051317",
+   "autres_homonymes": [
+    {
+     "siren": "819315797",
+     "nom": "SCI MEELO",
+     "creation": "2016-03-25",
+     "activite": "68.20B"
+    }
+   ]
   },
   "MeetMeCall": {
    "statut": "non trouvé",
@@ -1658,8 +2472,11 @@
    "annee_effectif": null,
    "activite": "70.21Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948692231"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948692231",
+   "autres_homonymes": []
   },
   "MiTrust": {
    "statut": "non trouvé",
@@ -1682,8 +2499,11 @@
    "annee_effectif": null,
    "activite": "62.02A",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/939159604"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/939159604",
+   "autres_homonymes": []
   },
   "Mindflow": {
    "statut": "trouvé",
@@ -1691,33 +2511,54 @@
    "origines": [
     "pipe"
    ],
-   "siren": "795131697",
+   "siren": "893124511",
    "raison_sociale": "MINDFLOW",
-   "date_creation": "2013-07-01",
+   "date_creation": "2021-01-07",
    "etat": "A",
-   "tranche_effectif": "1-2",
+   "tranche_effectif": "20-49",
    "annee_effectif": "2024",
-   "activite": "62.02A",
+   "activite": "62.01Z",
    "commune": "PARIS",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/795131697"
+   "nature_juridique": "5710",
+   "categorie": "PME",
+   "finances": {
+    "2024": {
+     "ca": 0,
+     "resultat_net": 155438
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/893124511",
+   "autres_homonymes": [
+    {
+     "siren": "795131697",
+     "nom": "MINDFLOW (MINDFLOW)",
+     "creation": "2013-07-01",
+     "activite": "62.02A"
+    }
+   ]
   },
   "Miralia (ex-Golem.ai)": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "108190182",
-   "raison_sociale": "MIRALIA",
-   "date_creation": "2026-07-28",
-   "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "68.20B",
-   "commune": "RUAUDIN",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/108190182"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "108190182",
+     "nom": "MIRALIA"
+    },
+    {
+     "score": 1.0,
+     "siren": "903066868",
+     "nom": "SCI MIRALIA"
+    },
+    {
+     "score": 0.357,
+     "siren": "903832392",
+     "nom": "MALVINA CORINNE MORIN (MIRALIA CREATION)"
+    }
+   ]
   },
   "Modeinspect": {
    "statut": "non trouvé",
@@ -1740,8 +2581,11 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/980821474"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/980821474",
+   "autres_homonymes": []
   },
   "Mon Petit Placement": {
    "statut": "trouvé",
@@ -1757,13 +2601,16 @@
    "annee_effectif": "2024",
    "activite": "66.19B",
    "commune": "LYON",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -2980101
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/831051453"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/831051453",
+   "autres_homonymes": []
   },
   "MoneyTrack": {
    "statut": "trouvé",
@@ -1779,13 +2626,16 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 1014671,
      "resultat_net": -942041
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837473511"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837473511",
+   "autres_homonymes": []
   },
   "MuchBetter.ai": {
    "statut": "non trouvé",
@@ -1814,8 +2664,11 @@
    "annee_effectif": "2024",
    "activite": "70.22Z",
    "commune": "BEGLES",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/881739858"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/881739858",
+   "autres_homonymes": []
   },
   "MySofie": {
    "statut": "non trouvé",
@@ -1830,16 +2683,49 @@
    "origines": [
     "radar"
    ],
-   "siren": "101343762",
+   "siren": "818577090",
    "raison_sociale": "NALO",
-   "date_creation": "2026-02-10",
+   "date_creation": "2016-02-12",
    "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "56.30Z",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "70.22Z",
    "commune": "PARIS",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/101343762"
+   "nature_juridique": "5710",
+   "categorie": "GE",
+   "finances": {
+    "2025": {
+     "ca": 4499043,
+     "resultat_net": -1836406
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/818577090",
+   "autres_homonymes": [
+    {
+     "siren": "101343762",
+     "nom": "NALO",
+     "creation": "2026-02-10",
+     "activite": "56.30Z"
+    },
+    {
+     "siren": "104546205",
+     "nom": "NALO (LA PATAGONIA - EMPANADAS ARGENTINES)",
+     "creation": "2026-05-01",
+     "activite": "56.21Z"
+    },
+    {
+     "siren": "929575694",
+     "nom": "NALO",
+     "creation": "2024-05-17",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "494816424",
+     "nom": "NALO",
+     "creation": "2007-02-23",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Neat": {
    "statut": "trouvé",
@@ -1855,13 +2741,41 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "BORDEAUX",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2023": {
      "ca": 0,
      "resultat_net": -3792853
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913676581"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913676581",
+   "autres_homonymes": [
+    {
+     "siren": "830454278",
+     "nom": "NEAT",
+     "creation": "2017-05-02",
+     "activite": "70.22Z"
+    },
+    {
+     "siren": "979226800",
+     "nom": "NEAT",
+     "creation": "2023-09-06",
+     "activite": "00.00Z"
+    },
+    {
+     "siren": "423781848",
+     "nom": "NEAT",
+     "creation": "1999-06-26",
+     "activite": "56.10A"
+    },
+    {
+     "siren": "942612102",
+     "nom": "NEAT SERVICES",
+     "creation": "2025-03-20",
+     "activite": "95.29Z"
+    }
+   ]
   },
   "Neat Protect": {
    "statut": "non trouvé",
@@ -1884,25 +2798,34 @@
    "annee_effectif": "2024",
    "activite": "62.02A",
    "commune": "TETHIEU",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/841658610"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/841658610",
+   "autres_homonymes": []
   },
   "Nexelec": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "993456383",
-   "raison_sociale": "NEXELEC",
-   "date_creation": "2025-10-27",
-   "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "43.21A",
-   "commune": "LA ROCHELLE",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/993456383"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "993456383",
+     "nom": "NEXELEC"
+    },
+    {
+     "score": 1.0,
+     "siren": "101283224",
+     "nom": "NEXELEC"
+    },
+    {
+     "score": 1.0,
+     "siren": "518790449",
+     "nom": "NEXELEC"
+    }
+   ]
   },
   "Nopillo": {
    "statut": "trouvé",
@@ -1918,13 +2841,16 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -1242140
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913946125"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913946125",
+   "autres_homonymes": []
   },
   "OIB Solutions": {
    "statut": "trouvé",
@@ -1940,8 +2866,11 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/978439263"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/978439263",
+   "autres_homonymes": []
   },
   "OKOA": {
    "statut": "trouvé",
@@ -1949,33 +2878,55 @@
    "origines": [
     "pipe"
    ],
-   "siren": "917579740",
+   "siren": "978553162",
    "raison_sociale": "OKOA",
-   "date_creation": "2022-07-01",
-   "etat": "A",
-   "tranche_effectif": "1-2",
-   "annee_effectif": "2024",
-   "activite": "47.59B",
-   "commune": "ANTIBES",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/917579740"
-  },
-  "Olino (ex-Riskee)": {
-   "statut": "trouvé",
-   "score": 1.0,
-   "origines": [
-    "radar"
-   ],
-   "siren": "512242728",
-   "raison_sociale": "OLINO",
-   "date_creation": "2009-04-20",
+   "date_creation": "2023-08-07",
    "etat": "A",
    "tranche_effectif": null,
    "annee_effectif": null,
-   "activite": "68.32A",
-   "commune": "SIX-FOURS-LES-PLAGES",
+   "activite": "82.11Z",
+   "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/512242728"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/978553162",
+   "autres_homonymes": [
+    {
+     "siren": "917579740",
+     "nom": "OKOA",
+     "creation": "2022-07-01",
+     "activite": "47.59B"
+    },
+    {
+     "siren": "824614630",
+     "nom": "OKOA",
+     "creation": "2017-01-02",
+     "activite": "93.13Z"
+    }
+   ]
+  },
+  "Olino (ex-Riskee)": {
+   "statut": "non trouvé",
+   "origines": [
+    "radar"
+   ],
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "512242728",
+     "nom": "OLINO"
+    },
+    {
+     "score": 0.909,
+     "siren": "499618023",
+     "nom": "OLINOS"
+    },
+    {
+     "score": 0.9,
+     "siren": "796871812",
+     "nom": "OLINO BORIAMCI"
+    }
+   ]
   },
   "Omniscient": {
    "statut": "trouvé",
@@ -1991,8 +2942,36 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/981759996"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/981759996",
+   "autres_homonymes": [
+    {
+     "siren": "805177045",
+     "nom": "OMNISCIENT",
+     "creation": "2013-10-03",
+     "activite": "94.99Z"
+    },
+    {
+     "siren": "985294396",
+     "nom": "OMNISCIENT",
+     "creation": "2024-03-01",
+     "activite": "85.59B"
+    },
+    {
+     "siren": "927789370",
+     "nom": "OMNISCIENTE",
+     "creation": "2024-04-15",
+     "activite": "46.45Z"
+    },
+    {
+     "siren": "924221799",
+     "nom": "OMNISCIENT ESPORT (OMNI)",
+     "creation": "2023-10-23",
+     "activite": "93.12Z"
+    }
+   ]
   },
   "Orakle Weather": {
    "statut": "trouvé",
@@ -2008,8 +2987,11 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/979438967"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/979438967",
+   "autres_homonymes": []
   },
   "Orus": {
    "statut": "trouvé",
@@ -2026,13 +3008,41 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "SAINT-MANDE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -888466
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/899793632"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/899793632",
+   "autres_homonymes": [
+    {
+     "siren": "980681373",
+     "nom": "ORUS",
+     "creation": "2023-10-12",
+     "activite": "32.99Z"
+    },
+    {
+     "siren": "378313209",
+     "nom": "ORUS",
+     "creation": "1990-06-01",
+     "activite": "68.20A"
+    },
+    {
+     "siren": "984607671",
+     "nom": "ORUS",
+     "creation": "2024-01-01",
+     "activite": "74.90B"
+    },
+    {
+     "siren": "411391113",
+     "nom": "ORUS",
+     "creation": "1997-03-02",
+     "activite": "68.20A"
+    }
+   ]
   },
   "Paladin": {
    "statut": "trouvé",
@@ -2048,8 +3058,36 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/929033199"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/929033199",
+   "autres_homonymes": [
+    {
+     "siren": "488299793",
+     "nom": "PALADIN",
+     "creation": "2005-11-09",
+     "activite": "94.99Z"
+    },
+    {
+     "siren": "490415411",
+     "nom": "PALADIN",
+     "creation": "2006-02-27",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "930442033",
+     "nom": "PALADIN",
+     "creation": "2024-06-21",
+     "activite": "68.10Z"
+    },
+    {
+     "siren": "842987893",
+     "nom": "PALADIN",
+     "creation": "2018-10-05",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Panora": {
    "statut": "trouvé",
@@ -2066,30 +3104,49 @@
    "annee_effectif": null,
    "activite": "62.01Z",
    "commune": "MONTROUGE",
+   "nature_juridique": "5710",
+   "categorie": null,
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/103247284"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/103247284",
+   "autres_homonymes": [
+    {
+     "siren": "809109507",
+     "nom": "PANORA",
+     "creation": "2015-01-10",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "823098470",
+     "nom": "PANORA (PANORA)",
+     "creation": "2016-10-01",
+     "activite": "68.10Z"
+    },
+    {
+     "siren": "101317378",
+     "nom": "PANORA",
+     "creation": "2026-02-10",
+     "activite": "47.19B"
+    },
+    {
+     "siren": "999770217",
+     "nom": "PANORA",
+     "creation": "2026-01-13",
+     "activite": "47.91B"
+    }
+   ]
   },
   "Particeep": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "radar"
    ],
-   "siren": "790884084",
-   "raison_sociale": "PARTICEEP",
-   "date_creation": "2013-01-24",
-   "etat": "C",
-   "tranche_effectif": "20-49",
-   "annee_effectif": "2024",
-   "activite": "62.01Z",
-   "commune": "NEUILLY-SUR-SEINE",
-   "finances": {
-    "2023": {
-     "ca": 2194356,
-     "resultat_net": -1531122
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "790884084",
+     "nom": "PARTICEEP"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/790884084"
+   ]
   },
   "Peppers": {
    "statut": "trouvé",
@@ -2105,8 +3162,24 @@
    "annee_effectif": null,
    "activite": "62.01Z",
    "commune": "MONTROUGE",
+   "nature_juridique": "5710",
+   "categorie": null,
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/989453295"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/989453295",
+   "autres_homonymes": [
+    {
+     "siren": "525004263",
+     "nom": "PEPPERS",
+     "creation": "2010-09-20",
+     "activite": "47.52B"
+    },
+    {
+     "siren": "488195728",
+     "nom": "PEPPERS",
+     "creation": "2006-01-03",
+     "activite": "47.71Z"
+    }
+   ]
   },
   "Qantev": {
    "statut": "trouvé",
@@ -2122,13 +3195,16 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "SAINT-MANDE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": 0
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847752789"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847752789",
+   "autres_homonymes": []
   },
   "Qevlar AI": {
    "statut": "trouvé",
@@ -2144,13 +3220,16 @@
    "annee_effectif": "2024",
    "activite": "58.29C",
    "commune": "ISSY-LES-MOULINEAUX",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -1672786
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/952849115"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/952849115",
+   "autres_homonymes": []
   },
   "Quartz": {
    "statut": "trouvé",
@@ -2158,21 +3237,49 @@
    "origines": [
     "radar"
    ],
-   "siren": "508585270",
+   "siren": "877954016",
    "raison_sociale": "QUARTZ",
-   "date_creation": "2008-10-01",
+   "date_creation": "2019-10-03",
    "etat": "A",
-   "tranche_effectif": "10-19",
-   "annee_effectif": "2024",
-   "activite": "10.71C",
-   "commune": "BOULOGNE-BILLANCOURT",
+   "tranche_effectif": null,
+   "annee_effectif": null,
+   "activite": "70.22Z",
+   "commune": "LYON",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
-    "2025": {
-     "ca": 1102921,
-     "resultat_net": 89588
+    "2023": {
+     "ca": 0,
+     "resultat_net": 0
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/508585270"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/877954016",
+   "autres_homonymes": [
+    {
+     "siren": "508585270",
+     "nom": "QUARTZ",
+     "creation": "2008-10-01",
+     "activite": "10.71C"
+    },
+    {
+     "siren": "792417404",
+     "nom": "QUARTZ",
+     "creation": "2013-04-12",
+     "activite": "68.31Z"
+    },
+    {
+     "siren": "904633666",
+     "nom": "QUARTZ",
+     "creation": "2021-10-21",
+     "activite": "47.75Z"
+    },
+    {
+     "siren": "809585995",
+     "nom": "QUARTZ",
+     "creation": "2015-01-16",
+     "activite": "68.20B"
+    }
+   ]
   },
   "Quideos": {
    "statut": "trouvé",
@@ -2188,8 +3295,18 @@
    "annee_effectif": "2024",
    "activite": "62.02B",
    "commune": "SAINT-MAUR-DES-FOSSES",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/912196227"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/912196227",
+   "autres_homonymes": [
+    {
+     "siren": "477971352",
+     "nom": "QUIDEO",
+     "creation": "2004-07-20",
+     "activite": "45.31Z"
+    }
+   ]
   },
   "RIZLUM AI": {
    "statut": "trouvé",
@@ -2205,13 +3322,16 @@
    "annee_effectif": "2024",
    "activite": "58.29C",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 16667,
      "resultat_net": -20137
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/987810330"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/987810330",
+   "autres_homonymes": []
   },
   "Ringover": {
    "statut": "non trouvé",
@@ -2240,30 +3360,46 @@
    "annee_effectif": "2024",
    "activite": "58.29C",
    "commune": "METZ",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2019": {
      "ca": 0,
      "resultat_net": -538649
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802024737"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802024737",
+   "autres_homonymes": [
+    {
+     "siren": "900627555",
+     "nom": "SESAMM",
+     "creation": "2021-06-15",
+     "activite": "70.10Z"
+    }
+   ]
   },
   "Sami": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "417520459",
-   "raison_sociale": "SAMI",
-   "date_creation": "1998-01-01",
-   "etat": "A",
-   "tranche_effectif": "3-5",
-   "annee_effectif": "2024",
-   "activite": "56.10A",
-   "commune": "LORIENT",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/417520459"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "417520459",
+     "nom": "SAMI"
+    },
+    {
+     "score": 1.0,
+     "siren": "339193542",
+     "nom": "SAMI"
+    },
+    {
+     "score": 1.0,
+     "siren": "978554996",
+     "nom": "SAMI"
+    }
+   ]
   },
   "SesameIT": {
    "statut": "non trouvé",
@@ -2279,21 +3415,43 @@
     "pipe",
     "radar"
    ],
-   "siren": "808540132",
+   "siren": "843974635",
    "raison_sociale": "SEYNA",
-   "date_creation": "2015-01-01",
+   "date_creation": "2018-11-21",
    "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "47.71Z",
-   "commune": "PARIS",
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "65.12Z",
+   "commune": "NEUILLY-SUR-SEINE",
+   "nature_juridique": "5599",
+   "categorie": "ETI",
    "finances": {
-    "2024": {
-     "ca": 19228,
-     "resultat_net": -2668
+    "2018": {
+     "ca": 0,
+     "resultat_net": -791
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/808540132"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/843974635",
+   "autres_homonymes": [
+    {
+     "siren": "808540132",
+     "nom": "SEYNA",
+     "creation": "2015-01-01",
+     "activite": "47.71Z"
+    },
+    {
+     "siren": "979562394",
+     "nom": "SEYNA TECHNOLOGIES",
+     "creation": "2023-09-14",
+     "activite": "62.01Z"
+    },
+    {
+     "siren": "878883933",
+     "nom": "SEYNA BEAUTE",
+     "creation": "2019-10-21",
+     "activite": "96.02A"
+    }
+   ]
   },
   "Shift Technology": {
    "statut": "trouvé",
@@ -2310,8 +3468,11 @@
    "annee_effectif": "2024",
    "activite": "58.29A",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "ETI",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/791862618"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/791862618",
+   "autres_homonymes": []
   },
   "SideCare (ex-Hoggo)": {
    "statut": "non trouvé",
@@ -2327,44 +3488,73 @@
    ]
   },
   "Sillage (Kaizenn)": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "380288050",
-   "raison_sociale": "SILLAGE",
-   "date_creation": "1991-01-03",
-   "etat": "A",
-   "tranche_effectif": "10-19",
-   "annee_effectif": "2024",
-   "activite": "68.20B",
-   "commune": "FORT-MAHON-PLAGE",
-   "finances": {
-    "2024": {
-     "ca": 502771,
-     "resultat_net": -7097
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "380288050",
+     "nom": "SILLAGE"
+    },
+    {
+     "score": 1.0,
+     "siren": "912093465",
+     "nom": "SILLAGE"
+    },
+    {
+     "score": 1.0,
+     "siren": "379070436",
+     "nom": "SILLAGE"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/380288050"
+   ]
   },
   "Skarlett": {
    "statut": "trouvé",
-   "score": 1.0,
+   "score": 0.9,
    "origines": [
     "pipe",
     "radar"
    ],
-   "siren": "948423652",
-   "raison_sociale": "SKARLETT",
-   "date_creation": "2023-01-18",
+   "siren": "952369577",
+   "raison_sociale": "SKARLETT ASSURANCES",
+   "date_creation": "2023-05-05",
    "etat": "A",
-   "tranche_effectif": "3-5",
+   "tranche_effectif": "10-19",
    "annee_effectif": "2024",
-   "activite": "68.20B",
+   "activite": "66.22Z",
    "commune": "NEUILLY-SUR-SEINE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948423652"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/952369577",
+   "autres_homonymes": [
+    {
+     "siren": "948423652",
+     "nom": "SKARLETT",
+     "creation": "2023-01-18",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "881073290",
+     "nom": "SKARLETT (ELLE ET LUI)",
+     "creation": "2020-03-01",
+     "activite": "47.71Z"
+    },
+    {
+     "siren": "106944051",
+     "nom": "SKARLETT",
+     "creation": "2026-06-25",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "980252910",
+     "nom": "SKARLET (SKARLET)",
+     "creation": "2023-10-10",
+     "activite": "62.02A"
+    }
+   ]
   },
   "Skilify.ai": {
    "statut": "non trouvé",
@@ -2374,49 +3564,73 @@
    "candidats": []
   },
   "Spareka": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "834272387",
-   "raison_sociale": "SPAREKA",
-   "date_creation": "2017-12-27",
-   "etat": "A",
-   "tranche_effectif": "20-49",
-   "annee_effectif": "2024",
-   "activite": "47.91B",
-   "commune": "MONTREUIL",
-   "finances": {
-    "2025": {
-     "ca": 0,
-     "resultat_net": -3452846
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "834272387",
+     "nom": "SPAREKA"
+    },
+    {
+     "score": 0.56,
+     "siren": "937691046",
+     "nom": "SOWEFUNDED SPAREKA"
+    },
+    {
+     "score": 0.222,
+     "siren": "488348574",
+     "nom": "TELECOMMANDE EXPRESS (TELECOMMANDE EXPRESS - PRO BIP)"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/834272387"
+   ]
   },
   "Stoïk": {
    "statut": "trouvé",
-   "score": 1.0,
+   "score": 0.9,
    "origines": [
     "pipe",
     "radar"
    ],
-   "siren": "900293887",
-   "raison_sociale": "STOIK",
-   "date_creation": "2021-06-01",
+   "siren": "923382881",
+   "raison_sociale": "STOIK FRANCE",
+   "date_creation": "2023-04-11",
    "etat": "A",
-   "tranche_effectif": "6-9",
+   "tranche_effectif": "20-49",
    "annee_effectif": "2024",
-   "activite": "64.20Z",
+   "activite": "66.22Z",
    "commune": "PARIS",
-   "finances": {
-    "2022": {
-     "ca": 104372,
-     "resultat_net": -3010476
+   "nature_juridique": "5710",
+   "categorie": "PME",
+   "finances": {},
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/923382881",
+   "autres_homonymes": [
+    {
+     "siren": "900293887",
+     "nom": "STOIK",
+     "creation": "2021-06-01",
+     "activite": "64.20Z"
+    },
+    {
+     "siren": "109100206",
+     "nom": "STOIK",
+     "creation": "2026-05-13",
+     "activite": "58.11Z"
+    },
+    {
+     "siren": "902535947",
+     "nom": "STOIK",
+     "creation": "2021-08-11",
+     "activite": "63.12Z"
+    },
+    {
+     "siren": "951381243",
+     "nom": "STOIK CERT",
+     "creation": "2023-04-03",
+     "activite": "70.22Z"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/900293887"
+   ]
   },
   "Sylviacare": {
    "statut": "trouvé",
@@ -2432,8 +3646,11 @@
    "annee_effectif": "2024",
    "activite": "72.19Z",
    "commune": "METTRAY",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/900832197"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/900832197",
+   "autres_homonymes": []
   },
   "Synaps": {
    "statut": "trouvé",
@@ -2441,16 +3658,49 @@
    "origines": [
     "pipe"
    ],
-   "siren": "801221862",
+   "siren": "882019110",
    "raison_sociale": "SYNAPS",
-   "date_creation": "2014-03-15",
+   "date_creation": "2020-02-17",
    "etat": "A",
-   "tranche_effectif": null,
-   "annee_effectif": null,
-   "activite": "85.59A",
-   "commune": "COMPIEGNE",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/801221862"
+   "tranche_effectif": "20-49",
+   "annee_effectif": "2024",
+   "activite": "62.01Z",
+   "commune": "LYON",
+   "nature_juridique": "5710",
+   "categorie": "PME",
+   "finances": {
+    "2023": {
+     "ca": 0,
+     "resultat_net": -249500
+    }
+   },
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/882019110",
+   "autres_homonymes": [
+    {
+     "siren": "801221862",
+     "nom": "SYNAPS (SYNAPS) (SYNAPS)",
+     "creation": "2014-03-15",
+     "activite": "85.59A"
+    },
+    {
+     "siren": "483832754",
+     "nom": "SYNAPS",
+     "creation": "2005-09-01",
+     "activite": "58.29C"
+    },
+    {
+     "siren": "882094923",
+     "nom": "SYNAPS",
+     "creation": "2020-03-01",
+     "activite": "70.22Z"
+    },
+    {
+     "siren": "485159180",
+     "nom": "SYNAPS",
+     "creation": "2005-10-17",
+     "activite": "59.20Z"
+    }
+   ]
   },
   "Tchek.ai": {
    "statut": "trouvé",
@@ -2466,13 +3716,29 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "MARSEILLE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -521118
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/824170393"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/824170393",
+   "autres_homonymes": [
+    {
+     "siren": "109855619",
+     "nom": "TCHEK",
+     "creation": "2026-02-26",
+     "activite": "94.99Z"
+    },
+    {
+     "siren": "943470450",
+     "nom": "TCHEK",
+     "creation": "2025-04-04",
+     "activite": "68.20B"
+    }
+   ]
   },
   "TerraStab": {
    "statut": "trouvé",
@@ -2488,8 +3754,11 @@
    "annee_effectif": null,
    "activite": "62.01Z",
    "commune": "ESSEY-LES-NANCY",
+   "nature_juridique": "5710",
+   "categorie": null,
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988609350"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988609350",
+   "autres_homonymes": []
   },
   "Testamento": {
    "statut": "non trouvé",
@@ -2541,13 +3810,16 @@
    "annee_effectif": "2024",
    "activite": "70.21Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": 6747
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/804933992"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/804933992",
+   "autres_homonymes": []
   },
   "Trustpair": {
    "statut": "trouvé",
@@ -2563,30 +3835,34 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2019": {
      "ca": 0,
      "resultat_net": -281281
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832940670"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832940670",
+   "autres_homonymes": []
   },
   "Tuita": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "pipe"
    ],
-   "siren": "953045127",
-   "raison_sociale": "TUITA",
-   "date_creation": "2023-05-24",
-   "etat": "A",
-   "tranche_effectif": "3-5",
-   "annee_effectif": "2024",
-   "activite": "81.22Z",
-   "commune": "PARIS",
-   "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953045127"
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "953045127",
+     "nom": "TUITA (TUITA)"
+    },
+    {
+     "score": 0.9,
+     "siren": "882555451",
+     "nom": "TUITA VALUGOFULU"
+    }
+   ]
   },
   "Uncov.AI": {
    "statut": "non trouvé",
@@ -2625,8 +3901,11 @@
    "annee_effectif": null,
    "activite": "58.29C",
    "commune": "COURBEVOIE",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/929199347"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/929199347",
+   "autres_homonymes": []
   },
   "Weathermind": {
    "statut": "trouvé",
@@ -2642,8 +3921,11 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {},
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949418933"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949418933",
+   "autres_homonymes": []
   },
   "Webyn": {
    "statut": "trouvé",
@@ -2659,13 +3941,23 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "BOIS COLOMBES",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2025": {
      "ca": 0,
      "resultat_net": -531403
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949963136"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949963136",
+   "autres_homonymes": [
+    {
+     "siren": "131380826",
+     "nom": "WEBYN PARTNERS",
+     "creation": "2026-10-09",
+     "activite": "70.10Z"
+    }
+   ]
   },
   "Weenat": {
    "statut": "trouvé",
@@ -2681,13 +3973,16 @@
    "annee_effectif": "2024",
    "activite": "62.03Z",
    "commune": "NANTES",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": -1179257
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803450287"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803450287",
+   "autres_homonymes": []
   },
   "Welfaire": {
    "statut": "trouvé",
@@ -2703,35 +3998,36 @@
    "annee_effectif": "2024",
    "activite": "66.22Z",
    "commune": "FONTENAY-SOUS-BOIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 0,
      "resultat_net": 0
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/883356511"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/883356511",
+   "autres_homonymes": [
+    {
+     "siren": "342379047",
+     "nom": "WELFAIRE",
+     "creation": "1987-09-09",
+     "activite": "71.12B"
+    }
+   ]
   },
   "Widmee": {
-   "statut": "trouvé",
-   "score": 1.0,
+   "statut": "non trouvé",
    "origines": [
     "radar"
    ],
-   "siren": "512175530",
-   "raison_sociale": "WIDMEE",
-   "date_creation": "2009-05-01",
-   "etat": "A",
-   "tranche_effectif": "6-9",
-   "annee_effectif": "2024",
-   "activite": "46.51Z",
-   "commune": "GRADIGNAN",
-   "finances": {
-    "2025": {
-     "ca": 0,
-     "resultat_net": 9364
+   "candidats": [
+    {
+     "score": 1.0,
+     "siren": "512175530",
+     "nom": "WIDMEE"
     }
-   },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/512175530"
+   ]
   },
   "Wilov": {
    "statut": "trouvé",
@@ -2747,13 +4043,35 @@
    "annee_effectif": "2024",
    "activite": "62.01Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2022": {
      "ca": 763549,
      "resultat_net": -342348
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/822100665"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/822100665",
+   "autres_homonymes": [
+    {
+     "siren": "514316314",
+     "nom": "WILOV",
+     "creation": "2009-09-17",
+     "activite": "47.91A"
+    },
+    {
+     "siren": "901485748",
+     "nom": "SCI WILOV",
+     "creation": "2021-07-13",
+     "activite": "68.20B"
+    },
+    {
+     "siren": "528552441",
+     "nom": "THERESE PIERRE-NOEL (WILOV'S COFFE)",
+     "creation": "2010-11-24",
+     "activite": "56.10A"
+    }
+   ]
   },
   "YesWeHack": {
    "statut": "non trouvé",
@@ -2777,13 +4095,35 @@
    "annee_effectif": "2024",
    "activite": "63.11Z",
    "commune": "PARIS",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2021": {
      "ca": 0,
      "resultat_net": -3145826
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832291256"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832291256",
+   "autres_homonymes": [
+    {
+     "siren": "109932889",
+     "nom": "ZAION CARRIERES",
+     "creation": "2026-10-15",
+     "activite": "53.20Z"
+    },
+    {
+     "siren": "985037373",
+     "nom": "ZAION NACEUR",
+     "creation": "2024-06-01",
+     "activite": "47.89Z"
+    },
+    {
+     "siren": "853590248",
+     "nom": "ZAION KALONJI",
+     "creation": "2019-09-01",
+     "activite": "81.21Z"
+    }
+   ]
   },
   "Zelros": {
    "statut": "non trouvé",
@@ -2793,7 +4133,7 @@
    "candidats": []
   },
   "inTouch": {
-   "statut": "trouvé",
+   "statut": "ambigu",
    "score": 1.0,
    "origines": [
     "pipe"
@@ -2806,13 +4146,35 @@
    "annee_effectif": null,
    "activite": "63.12Z",
    "commune": "PUTEAUX",
+   "nature_juridique": "5710",
+   "categorie": "PME",
    "finances": {
     "2024": {
      "ca": 8842970,
      "resultat_net": 1185085
     }
    },
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/829823780"
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/829823780",
+   "autres_homonymes": [
+    {
+     "siren": "828180646",
+     "nom": "IN'TOUCH",
+     "creation": "2017-01-02",
+     "activite": "82.99Z"
+    },
+    {
+     "siren": "519731673",
+     "nom": "INTOUCH MEDIA",
+     "creation": "2010-02-01",
+     "activite": "85.59A"
+    },
+    {
+     "siren": "480316470",
+     "nom": "INTOUCH HEALTH",
+     "creation": "2004-12-01",
+     "activite": "74.8K"
+    }
+   ]
   },
   "my bakup": {
    "statut": "non trouvé",
