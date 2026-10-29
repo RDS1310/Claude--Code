@@ -442,7 +442,7 @@ def construire_startups(part: pd.DataFrame) -> list[dict]:
             "capitalSocial": j(r.get("Capital social (k€)")),
             "ca": j(r.get("CA (M€)")),
             "exerciceCa": j(r.get("Exercice CA")),
-            "siren": j(r.get("SIREN")),
+            "siren": str(int(float(r["SIREN"]))).zfill(9) if pd.notna(r.get("SIREN")) else None,
             "effectif": j(r.get("Effectif (tranche INSEE)")),
             "valorisation": j(r.get("Valorisation (M€)")),
             "nbFonds": j(r.get("Nb fonds investisseurs")),

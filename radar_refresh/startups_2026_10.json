@@ -1,0 +1,206 @@
+{
+ "date": "2026-10-29",
+ "maj": [
+  {
+   "fonds": "Allianz X",
+   "startup": "BIMA",
+   "champs": {
+    "Date d’investissement": 2017,
+    "Stage financé": "Croissance",
+    "Montant investi par le fonds (M€)": 88.9,
+    "Taille du tour (M€)": 98.4,
+    "Positionnement (Leader/Minoritaire)": "Leader",
+    "Rôle du véhicule (détail)": "Leader ; devient le premier actionnaire stratégique (dont rachat de la part de LeapFrog)",
+    "Nb tours (fonds)": 1
+   },
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.allianz.com/en/press/news/financials/stakes_investments/171219_allianz-invests-in-microinsurer-BIMA/",
+    "https://coverager.com/bima-announces-107-million-financing-led-by-allianz-x/"
+   ],
+   "commentaire": "96,6 M$ investis par Allianz X (déc. 2017), dans un financement total de 107 M$ ; une partie est secondaire (rachat à LeapFrog). Valorisation citée : 260 M$ pré-money ou 290 M$ dette incluse (sources divergentes, non retenue)."
+  },
+  {
+   "fonds": "Allianz X",
+   "startup": "American Well (Amwell)",
+   "champs": {
+    "Date d’investissement": 2018,
+    "Stage financé": "Croissance",
+    "Montant investi par le fonds (M€)": 54.5,
+    "Positionnement (Leader/Minoritaire)": "Leader",
+    "Rôle du véhicule (détail)": "Leader de l'investissement de 2018 + siège au conseil ; a remis au tour de 194 M$ (2020)",
+    "Nb tours (fonds)": 2
+   },
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.allianz.com/en/press/news/financials/stakes_investments/180108_Allianz-in-partnership-with-American-Well/",
+    "https://mercomcapital.com/telehealth-company-amwell-closes-a-194-million-financing-round/"
+   ],
+   "commentaire": "59,2 M$ investis en janvier 2018 (partenariat stratégique) ; participation au tour de 194 M$ de 2020, montant non publié — le montant indiqué ne couvre que 2018."
+  },
+  {
+   "fonds": "Allianz X",
+   "startup": "Halodoc",
+   "champs": {
+    "Date d’investissement": 2019,
+    "Stage financé": "Série B",
+    "Taille du tour (M€)": 59.8,
+    "Positionnement (Leader/Minoritaire)": "Minoritaire",
+    "Rôle du véhicule (détail)": "Entrée lors de l'extension de la Série B (juillet 2019), avec la Fondation Gates et Prudential"
+   },
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.halodoc.com/media/halodoc-completes-strategic-funding-round-as-it-continues-to-expand-its-portfolio-of-services",
+    "https://e27.co/bill-melinda-gates-foundation-invests-in-indonesian-healthtech-startup-halodoc-20190725/"
+   ],
+   "commentaire": "Montant d'Allianz X non publié ; 65 M$ = Série B initiale (mars 2019) que l'extension complète."
+  },
+  {
+   "fonds": "Allianz X",
+   "startup": "Finanzen.de",
+   "champs": {
+    "Date d’investissement": 2019,
+    "Stage financé": "Acquisition majoritaire",
+    "Positionnement (Leader/Minoritaire)": "Leader"
+   },
+   "confiance": "Moyen",
+   "sources": [
+    "https://coverager.com/allianz-acquires-majority-stake-in-controlexpert/"
+   ],
+   "commentaire": "Prise de participation majoritaire en mai 2019 (citée par Coverager à propos de ControlExpert) ; prix non publié."
+  },
+  {
+   "fonds": "Allianz X",
+   "startup": "ControlExpert",
+   "champs": {
+    "Date d’investissement": 2020,
+    "Stage financé": "Acquisition majoritaire",
+    "Positionnement (Leader/Minoritaire)": "Leader"
+   },
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/allianz-acquires-majority-stake-in-controlexpert/",
+    "https://www.versicherungsbote.de/id/4908111/Allianz-schluckt-Schadenmanager/"
+   ],
+   "commentaire": "Majorité acquise en mars 2020 ; prix non publié."
+  },
+  {
+   "fonds": "Allianz X",
+   "startup": "GT Motive",
+   "champs": {
+    "Date d’investissement": 2021,
+    "Stage financé": "Acquisition majoritaire",
+    "Positionnement (Leader/Minoritaire)": "Leader"
+   },
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.allianz.com/en/mediacenter/news/financials/stakes_investments/210916_Allianz-X-to-invest-in-GT-Motive.html"
+   ],
+   "commentaire": "Accord du 16/09/2021 pour acquérir la majorité auprès de Mitchell et Einsa ; prix non publié."
+  },
+  {
+   "fonds": "Allianz X",
+   "startup": "Urgent.ly",
+   "champs": {
+    "Stage financé": "Série A",
+    "Taille du tour (M€)": 6.4,
+    "Positionnement (Leader/Minoritaire)": "Minoritaire",
+    "Rôle du véhicule (détail)": "Via Allianz Digital Corporate Ventures (prédécesseur d'Allianz X), avec Verizon Ventures"
+   },
+   "confiance": "Moyen",
+   "sources": [
+    "https://globalventuring.com/urgent.ly-flags-down-corporates-for-7m"
+   ],
+   "commentaire": "Série A de 7 M$ (date non trouvée)."
+  },
+  {
+   "fonds": "AVP (ex-AXA Venture Partners)",
+   "startup": "Gravie",
+   "champs": {
+    "Date d’investissement": 2021,
+    "Stage financé": "Série D",
+    "Taille du tour (M€)": 25.8,
+    "Positionnement (Leader/Minoritaire)": "Leader",
+    "Rôle du véhicule (détail)": "Leader de la Série D (mars 2021) ; a remis à la Série E de 75 M$ (2022, menée par Georgian)",
+    "Nb tours (fonds)": 2
+   },
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.gravie.com/blog/gravie-secures-28-million-in-financing-led-by-axa-venture-partners/",
+    "https://globalventuring.com/corporate/gravie-gravitates-to-75m-series-e-round/"
+   ],
+   "commentaire": "Montant propre d'AVP non publié."
+  },
+  {
+   "fonds": "AVP (ex-AXA Venture Partners)",
+   "startup": "SecurityScorecard",
+   "champs": {
+    "Stage financé": "Série D",
+    "Taille du tour (M€)": 46.0,
+    "Positionnement (Leader/Minoritaire)": "Minoritaire",
+    "Rôle du véhicule (détail)": "Participant à la Série D (50 M$, menée par Riverwood) puis à la Série E (180 M$)",
+    "Nb tours (fonds)": 2
+   },
+   "confiance": "Moyen",
+   "sources": [
+    "https://globalventuring.com/securityscorecard-marks-off-50m-series-d",
+    "https://globalventuring.com/securityscorecard-succeeds-with-180m"
+   ],
+   "commentaire": "Dates des tours non précisées dans les sources consultées ; lead de la Série E divergent selon les sources."
+  },
+  {
+   "fonds": "MAIF Avenir",
+   "startup": "Club Employés",
+   "champs": {
+    "Stage financé": "Série A",
+    "Taille du tour (M€)": 7.0,
+    "Rôle du véhicule (détail)": "Seul investisseur cité (« lève 7 M€ auprès de MAIF Avenir »)"
+   },
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.frenchweb.fr/tag/maif-avenir"
+   ],
+   "commentaire": "Date de la Série A non trouvée."
+  },
+  {
+   "fonds": "MAIF Avenir",
+   "startup": "Securkeys",
+   "champs": {
+    "Nb fonds investisseurs": 6,
+    "Rôle du véhicule (détail)": "Co-investisseur du premier tour avec Waterstart Capital, Bouygues Telecom Initiatives, SWEN Capital Partners, Matmut Innovation et EDF Pulse Croissance"
+   },
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.lemondedudroit.fr/deals/68991-harlay-avocats-intervient-societe-securkeys.html",
+    "https://www.cfnews.net/L-actualite/Capital-innovation-developpement/Operations/1er-tour/SecurKeys-ouvre-son-capital-325051"
+   ],
+   "commentaire": "Date et montant du tour non trouvés."
+  },
+  {
+   "fonds": "Groupama",
+   "startup": "AlloBrain",
+   "champs": {
+    "Date d’investissement": 2026,
+    "Stage financé": "Seed",
+    "Taille du tour (M€)": 6.4,
+    "Total levé par la start-up (M€)": 6.4,
+    "Positionnement (Leader/Minoritaire)": "Minoritaire",
+    "Rôle du véhicule (détail)": "Participant au premier tour institutionnel (7 M$) mené par Varsity, avec des business angels ; Groupama est aussi client (Groupama Gan Vie)"
+   },
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/allobrain-raises-7-million-with-participation/",
+    "https://www.cfnews.net/L-actualite/Capital-innovation/Operations/Amorcage/AlloBrain-gere-ses-relations-avec-de-premiers-investisseurs-744785",
+    "https://www.vcbacked.co/company/allobrain"
+   ],
+   "commentaire": "Le stage « Pré-seed » saisi précédemment n'est pas confirmé : CFNews parle des « premiers investisseurs » d'AlloBrain pour ce tour de 7 M$ (sept./oct. 2026) ; total levé connu = 7 M$ (VCBacked, FundedIQ)."
+  }
+ ],
+ "doublons": [
+  {
+   "fonds": "Allianz X",
+   "garder": "Coalition, Inc.",
+   "supprimer": "Coalition"
+  }
+ ]
+}

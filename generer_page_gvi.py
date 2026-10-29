@@ -182,7 +182,7 @@ def main() -> int:
         })
 
     # Liens vers le Radar, les actualités et les analyses (liens_croises)
-    from liens_croises import construire_index, norm, URLS, dates_desc
+    from liens_croises import construire_index, norm, URLS, dates_desc, DENY
     idx = construire_index()["societes"]
     for p in pipe:
         e = idx.get(norm(p["nom"]))
@@ -201,7 +201,7 @@ def main() -> int:
     pub = json.loads(pub_f.read_text(encoding="utf-8"))["societes"] if pub_f.exists() else {}
     for p in pipe:
         e = pub.get(p["nom"])
-        if not e or e["statut"] != "trouvé" or "pipe" not in e["origines"]:
+        if not e or e["statut"] != "trouvé" or "pipe" not in e["origines"] or norm(p["nom"]) in DENY:
             continue
         creation = (e.get("date_creation") or "")[:4]
         annee_pipe = re.search(r"(19|20)\d\d", str(p.get("creation") or ""))
