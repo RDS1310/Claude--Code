@@ -413,6 +413,18 @@ const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filter
 
 const STAGES = ["Pré-Seed","Seed","Pré-Série A","Série A","Série B","Série C","Série D"];
 const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
+// Clé de rapprochement souple : sans parenthèses ni ponctuation ; deux noms sont la même société si clés égales,
+// si l'une commence par l'autre, ou si leurs bigrammes se recoupent à 85 % (coquilles type « UnderWritting »).
+const cleNom = s => norm(String(s||'').replace(/\(.*?\)/g, '')).replace(/[^a-z0-9]+/g, ' ').trim();
+function memeSociete(a, b){
+  const x = cleNom(a), y = cleNom(b);
+  if (!x || !y) return false;
+  if (x === y || x.startsWith(y + ' ') || y.startsWith(x + ' ')) return true;
+  const bg = t => { const r = []; for (let i = 0; i < t.length - 1; i++) r.push(t.slice(i, i + 2)); return r; };
+  const A = bg(x), B = bg(y); let n = 0; const pool = B.slice();
+  for (const g of A){ const k = pool.indexOf(g); if (k >= 0){ n++; pool.splice(k, 1); } }
+  return (2 * n) / (A.length + B.length) >= 0.85;
+}
 const esc  = s => (s==null?'':String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmtN = (n,d=0) => (n===null||n===undefined||Number.isNaN(n)) ? null
   : n.toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d});
@@ -587,9 +599,9 @@ function renderFund(f){
   const portfolioRows = [
     ...linked.map(s => ({
       nom:s.nom, secteur:s.secteur, montant:s.montantFonds, tour:s.tailleDuTour, valo:s.valorisation, valoDate:valoDate(s),
-      stage:s.stage, exit:s.exit, confiance:s.confiance, goto:s.fid+'|'+s.nom
+      stage:s.stage, exit:s.exit, confiance:s.confiance, goto:s.fid+'|'+s.nom, nbTours:s.nbToursFonds
     })),
-    ...f.deals.filter(d => !linked.some(s => norm(s.nom)===norm(d.nom))).map(d => ({
+    ...f.deals.filter(d => !linked.some(s => memeSociete(s.nom, d.nom))).map(d => ({
       nom:d.nom, secteur:d.secteur, montant:d.montant, tour:null, valo:null, valoDate:null, stage:d.stage, exit:null, confiance:null, goto:null
     }))
   ];
@@ -677,18 +689,19 @@ function renderFund(f){
   ${portfolioRows.length ? `
   <h3 class="sec">Sociétés suivies dans la base (${portfolioRows.length})</h3>
   <div class="tbl-wrap"><table class="data">
-    <thead><tr><th>Société</th><th>Secteur</th><th>Stage</th><th>Taille du tour</th><th>Investi (fonds)</th><th>Valorisation</th><th>Exit</th><th>Confiance</th></tr></thead>
+    <thead><tr><th>Société</th><th>Secteur</th><th>Stage d'entrée</th><th title="Montant total levé par la start-up lors du tour où le fonds est entré, tous investisseurs confondus">Tour d'entrée (total)</th><th title="Montant apporté par ce fonds, cumulé sur tous ses tours quand il a réinvesti">Investi par le fonds</th><th>Valorisation</th><th>Exit</th><th>Confiance</th></tr></thead>
     <tbody>${portfolioRows.map(p => `<tr>
       <td>${p.goto ? `<a href="#" data-goto="${esc(p.goto)}">${esc(p.nom)}</a>` : esc(p.nom)}</td>
       <td>${esc(p.secteur||'—')}</td>
       <td>${esc(p.stage||'—')}</td>
       <td class="num">${fmtN(p.tour,1) ? fmtN(p.tour,1)+' M€' : '—'}</td>
-      <td class="num">${fmtN(p.montant,1) ? fmtN(p.montant,1)+' M€' : '—'}</td>
+      <td class="num">${fmtN(p.montant,1) ? fmtN(p.montant,1)+' M€' + ((p.nbTours > 1 || (p.tour && p.montant > p.tour)) ? `<br><small class="valo-date">cumul${p.nbTours > 1 ? ' sur ' + p.nbTours + ' tours' : ' sur plusieurs tours'}</small>` : '') : '—'}</td>
       <td class="num">${fmtN(p.valo) ? fmtN(p.valo)+' M€'+(p.valoDate?`<br><small class="valo-date">${esc(p.valoDate)}</small>`:'') : '—'}</td>
       <td>${p.exit==='O' ? '<span class="role lead">Oui</span>' : (p.exit==='N' ? '—' : (p.exit||'—'))}</td>
       <td>${p.confiance ? `<span class="confiance ${confClass(p.confiance)}">${esc(p.confiance)}</span>` : '—'}</td>
     </tr>`).join('')}</tbody>
-  </table></div>` : ''}
+  </table></div>
+  <p class="note" style="margin-top:6px">Tour d'entrée : montant total levé par la start-up lors du tour où le fonds est entré (tous investisseurs). Investi par le fonds : sa propre mise, cumulée sur l'ensemble de ses tours lorsqu'il a réinvesti — elle peut donc dépasser le tour d'entrée.</p>` : ''}
 
   ${(f.actus && f.actus.length) ? `
   <h3 class="sec">Actualité liée</h3>
@@ -730,9 +743,9 @@ function renderStartup(s){
     ${figure('Valorisation' + (valoDate(s) ? ' ' + valoDate(s) : ''), s.valorisation, ' M€')}
     ${s.totalLeve !== null
       ? figure("Total levé", s.totalLeve, ' M€', 1)
-      : figure("Taille du tour", s.tailleDuTour, ' M€', 1)}
+      : figure("Tour d'entrée (total)", s.tailleDuTour, ' M€', 1)}
     ${figure('Capital social', s.capitalSocial, ' k€')}
-    ${figure('Investi par le fonds', s.montantFonds, ' M€', 1)}
+    ${figure(s.nbToursFonds > 1 ? `Investi par le fonds (cumul ${s.nbToursFonds} tours)` : 'Investi par le fonds', s.montantFonds, ' M€', 1)}
     ${figure('CA', s.ca, ' M€', 1)}
     ${figure('Tours réalisés', s.nbToursTotal)}
   </dl>
