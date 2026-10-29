@@ -1,8 +1,6 @@
 # Une URL par ligne
-https://www.axavp.com/companies/
-https://www.axavp.com/avp/
-https://www.axavp.com/axa-venture-partners-avp-leadership-team-acquires-axas-stake-in-avp/
-https://www.axavp.com/avp-completes-a-e250m-first-closing-for-its-new-growth-fund/
-https://allianzx.com/ourcompanies
-https://www.ternel.vc/portfolio
-https://entreprise.maif.fr/engagements/economie-responsable/maif-avenir
+https://jobs.axavp.com/companies
+http://www.axavp.com/companies/
+https://ecosystem.lafrenchtech.com/investors/atlantic_vantage_point/portfolio
+https://ecosystem.lafrenchtech.com/investors/maif_avenir/portfolio
+https://www.ternel.vc/
