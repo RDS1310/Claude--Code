@@ -1,0 +1,1 @@
+{"firme": "Step Venture", "site": "https://www.stepventure.eu", "date": "2026-10-31", "accueil": {"url": "https://www.stepventure.eu", "erreur": "Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.stepventure.eu/\nCall log:\n  - navigating to \"https://www.stepventure.eu/\", waiting until \"domcontentloaded\"\n"}, "sitemap": [], "pages": []}

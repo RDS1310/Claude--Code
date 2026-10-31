@@ -1,0 +1,67 @@
+360 Capital Partners	https://www.360cap.vc/portfolios/gr3n-recycling	OK 1083 car. 2 logos
+360 Capital Partners	https://www.360cap.vc/portfolios/noc-energy	OK 1046 car. 2 logos
+360 Capital Partners	https://www.360cap.vc/portfolios/spark-cleantech	OK 783 car. 2 logos
+360 Capital Partners	https://www.360cap.vc/portfolios/adaptronics	OK 837 car. 2 logos
+360 Capital Partners	https://www.360cap.vc/portfolios/diffly	OK 816 car. 2 logos
+Alven Capital	https://alven.co/portfolio/akeneo	OK 1953 car. 0 logos
+Alven Capital	https://alven.co/portfolio/algolia	OK 1754 car. 0 logos
+Alven Capital	https://alven.co/portfolio/altrove	OK 1090 car. 0 logos
+Alven Capital	https://alven.co/portfolio/amo	OK 1394 car. 0 logos
+Alven Capital	https://alven.co/portfolio/ankorstore	OK 1719 car. 0 logos
+BlackFin Capital Partners	https://www.blackfincapital.com/portfolio	403
+BlackFin Capital Partners	https://www.blackfincapital.com/en/portfolio	403
+BlackFin Capital Partners	https://www.blackfincapital.com/portefeuille	403
+BlackFin Capital Partners	https://www.blackfincapital.com/fr/portefeuille	403
+BlackFin Capital Partners	https://www.blackfincapital.com/companies	403
+BlackFin Capital Partners	https://www.blackfincapital.com/our-companies	403
+BlackFin Capital Partners	https://www.blackfincapital.com/investments	403
+BlackFin Capital Partners	https://www.blackfincapital.com/participations	403
+Committed Capital	https://www.committedcapital.co.uk/portfolio	520
+Committed Capital	https://www.committedcapital.co.uk/en/portfolio	520
+Committed Capital	https://www.committedcapital.co.uk/portefeuille	520
+Committed Capital	https://www.committedcapital.co.uk/fr/portefeuille	520
+Committed Capital	https://www.committedcapital.co.uk/companies	520
+Committed Capital	https://www.committedcapital.co.uk/our-companies	520
+Committed Capital	https://www.committedcapital.co.uk/investments	520
+Committed Capital	https://www.committedcapital.co.uk/participations	520
+Eurazeo	https://www.eurazeo.com/fr/groupe/investissement-eurazeo	OK 2155 car. 9 logos
+Eurazeo	https://www.eurazeo.com/fr/investissements	OK 3069 car. 8 logos
+Howden Ventures	https://www.howdengroupholdings.com/howden-ventures	404
+Howden Ventures	https://www.howdengroupholdings.com/portfolio	404
+Howden Ventures	https://www.howdengroupholdings.com/en/portfolio	404
+Howden Ventures	https://www.howdengroupholdings.com/portefeuille	404
+Howden Ventures	https://www.howdengroupholdings.com/fr/portefeuille	404
+Howden Ventures	https://www.howdengroupholdings.com/companies	404
+Howden Ventures	https://www.howdengroupholdings.com/our-companies	404
+Howden Ventures	https://www.howdengroupholdings.com/investments	404
+MAIF Avenir	https://maif-avenir.fr/portefeuille	OK 2538 car. 1 logos
+MAIF Avenir	https://maif-avenir.fr/startup	OK 3977 car. 1 logos
+MAIF Avenir	https://maif-avenir.fr/category/investissement	OK 1112 car. 1 logos
+Open CNP	https://open.cnp.fr/portfolio	OK 125 car. 0 logos
+Open CNP	https://open.cnp.fr/en/portfolio	OK 125 car. 0 logos
+Open CNP	https://open.cnp.fr/portefeuille	OK 125 car. 0 logos
+Open CNP	https://open.cnp.fr/fr/portefeuille	OK 125 car. 0 logos
+Open CNP	https://open.cnp.fr/companies	OK 125 car. 0 logos
+Schumpeter Ventures	https://www.schumpeter.vc/portfolio	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Schumpeter Ventures	https://www.schumpeter.vc/en/portfolio	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Schumpeter Ventures	https://www.schumpeter.vc/portefeuille	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Schumpeter Ventures	https://www.schumpeter.vc/fr/portefeuille	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Schumpeter Ventures	https://www.schumpeter.vc/companies	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Schumpeter Ventures	https://www.schumpeter.vc/our-companies	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Schumpeter Ventures	https://www.schumpeter.vc/investments	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Schumpeter Ventures	https://www.schumpeter.vc/participations	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Step Venture	https://www.stepventure.eu/portfolio	Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.step
+Step Venture	https://www.stepventure.eu/en/portfolio	Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.step
+Step Venture	https://www.stepventure.eu/portefeuille	Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.step
+Step Venture	https://www.stepventure.eu/fr/portefeuille	Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.step
+Step Venture	https://www.stepventure.eu/companies	Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.step
+Step Venture	https://www.stepventure.eu/our-companies	Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.step
+Step Venture	https://www.stepventure.eu/investments	Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.step
+Step Venture	https://www.stepventure.eu/participations	Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.step
+TomCat	https://www.tomcat.eu/portfolio-de-tomcat	OK 1401 car. 50 logos
+Zurich Insurance Group	https://www.zurich.com/en/about-us/zurich-ventures	404
+Zurich Insurance Group	https://www.zurich.com/products-and-services/protect-who-you-love/savings-and-investments	OK 2696 car. 4 logos
+Zurich Insurance Group	https://www.zurich.com/products-and-services/zurich-investment-solutions	OK 2058 car. 6 logos
+Zurich Insurance Group	https://www.zurich.com/products-and-services/zurich-investment-solutions/climate-focus	OK 11228 car. 23 logos
+Zurich Insurance Group	https://www.zurich.com/products-and-services/zurich-investment-solutions/green-bond-fund	OK 18564 car. 19 logos
+Zurich Insurance Group	https://www.zurich.com/products-and-services/boxx-zurich	OK 7332 car. 25 logos
