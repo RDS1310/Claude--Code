@@ -1,0 +1,47 @@
+Accel Partners	https://www.accel.com/companies	OK 114 car. 432 logos
+Atlantic Vantage Point	https://www.avpcap.com/portfolio	404
+Atlantic Vantage Point	https://avpcap.com/companies	OK 7135 car. 1 logos
+Atlantic Vantage Point	https://avpcap.com/category/portfolio	OK 2842 car. 3 logos
+Atlantic Vantage Point	https://avpcap.com/europe-wants-startup-sovereignty-but-62-of-founders-are-reliant-on-us-ai-infrastructure	OK 7342 car. 4 logos
+Cadence Growth Capital	https://www.cadencegrowthcapital.com/portfolio	404
+Cadence Growth Capital	https://www.cadencegrowthcapital.com/en/portfolio	404
+Cadence Growth Capital	https://www.cadencegrowthcapital.com/portefeuille	404
+Cadence Growth Capital	https://www.cadencegrowthcapital.com/fr/portefeuille	404
+Cadence Growth Capital	https://www.cadencegrowthcapital.com/companies	404
+Cadence Growth Capital	https://www.cadencegrowthcapital.com/our-companies	404
+Cadence Growth Capital	https://www.cadencegrowthcapital.com/investments	OK 0 car. 0 logos
+Cadence Growth Capital	https://www.cadencegrowthcapital.com/participations	404
+Elaia Partners	https://elaia.com/portfolio	OK 3932 car. 12 logos
+Elaia Partners	https://elaia.com/portfolio/dexory	OK 1044 car. 1 logos
+Elaia Partners	https://elaia.com/portfolio/alice-bob	OK 1096 car. 1 logos
+Elaia Partners	https://elaia.com/portfolio/aqemia	OK 1070 car. 1 logos
+Elaia Partners	https://elaia.com/portfolio/gleamer	OK 1013 car. 1 logos
+Generali Ventures	https://www.generali.com/our-responsibilities/innovation	OK 3943 car. 7 logos
+Generali Ventures	https://www.generali.com/what-we-do/what-is-insurance/insurance-for-companies	OK 7154 car. 6 logos
+Generali Ventures	https://www.generali.com/sustainability/responsible-investor/sustainability-into-investments	OK 6848 car. 7 logos
+Generali Ventures	https://www.generali.com/sustainability/responsible-investor/real-estate-investments	OK 8154 car. 16 logos
+Generali Ventures	https://www.generali.com/sustainability/our-commitment-to-the-environment-and-climate/participation-in-public-debate	OK 8767 car. 4 logos
+Insurtech Gateway	https://www.insurtechgateway.com/portfolio	OK 1788 car. 39 logos
+Insurtech Gateway	https://www.insurtechgateway.com/portfolio/bondaval	OK 4666 car. 10 logos
+Insurtech Gateway	https://www.insurtechgateway.com/portfolio/klaimy	OK 5188 car. 10 logos
+Insurtech Gateway	https://www.insurtechgateway.com/portfolio/novee-ai	OK 4914 car. 9 logos
+NCA (Next Commerce Accelerator)	https://nca.vc/portfolio	OK 2007 car. 107 logos
+NCA (Next Commerce Accelerator)	https://nca.vc/en/portfolio	404
+NCA (Next Commerce Accelerator)	https://nca.vc/portefeuille	404
+NCA (Next Commerce Accelerator)	https://nca.vc/fr/portefeuille	404
+NCA (Next Commerce Accelerator)	https://nca.vc/companies	404
+NCA (Next Commerce Accelerator)	https://nca.vc/our-companies	404
+NCA (Next Commerce Accelerator)	https://nca.vc/investments	404
+NCA (Next Commerce Accelerator)	https://nca.vc/participations	404
+Ring Capital	https://www.ringcp.com/portfolio	OK 1796 car. 0 logos
+Ring Capital	https://www.ringcp.com/portfolio/zeffy	OK 1773 car. 0 logos
+Ring Capital	https://www.ringcp.com/portfolio/isaac	OK 1663 car. 0 logos
+Ring Capital	https://www.ringcp.com/portfolio/lixo	OK 2937 car. 0 logos
+Ring Capital	https://www.ringcp.com/portfolio/everdye	OK 2880 car. 0 logos
+Serena Capital	https://www.serena.vc/our-team	OK 1614 car. 33 logos
+Serena Capital	https://www.serena.vc/our-portfolio	OK 1303 car. 114 logos
+The Moon Venture	https://themoonventure.com/startups	OK 5885 car. 2 logos
+The Moon Venture	https://themoonventure.com/startups/axonaut	OK 4164 car. 3 logos
+The Moon Venture	https://themoonventure.com/startups/buybox	OK 971 car. 2 logos
+The Moon Venture	https://themoonventure.com/startups/elmut	OK 962 car. 2 logos
+The Moon Venture	https://themoonventure.com/startups/ramdam	OK 963 car. 2 logos
