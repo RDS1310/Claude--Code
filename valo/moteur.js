@@ -517,6 +517,10 @@ window.ValoApp = function (root, opts) {
 
   /* ---------- Démarrage ---------- */
   if (opts.id) VS.id = opts.id;
+  // Données publiées avec la page (démonstration) : affichées sans compte ni base ; la base, si elle
+  // répond avec des fiches, prend le relais (modifications des éditeurs).
+  const STATIQUES = Array.isArray(opts.donnees) ? opts.donnees.slice().sort((x, y) => String(x.nom).localeCompare(String(y.nom))) : [];
+  if (STATIQUES.length) { VS.docs = STATIQUES; VS.charge = true; }
   render();
   if (window.claude && claude.use) {
     claude.use('user').then(u => { if (u && u.canEdit) Promise.resolve(u.canEdit()).then(v => { PEUT = !!v; if (VS.charge) render(); }).catch(() => {}); });
@@ -524,7 +528,8 @@ window.ValoApp = function (root, opts) {
       if (!db) return;
       VDB = db; render();
       db.collection(COLL).orderBy('nom').onSnapshot(snap => {
-        VS.docs = snap.docs.map(x => x.data()).filter(Boolean);
+        const docs = snap.docs.map(x => x.data()).filter(Boolean);
+        VS.docs = docs.length ? docs : STATIQUES;
         VS.charge = true;
         if (!VS.sale) render();
       }, () => { VS.charge = true; render(); });
