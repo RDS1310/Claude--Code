@@ -1,0 +1,52 @@
+115K	https://www.115k.fr/portfolio	200
+115K	https://www.115k.fr/en/portfolio	200
+115K	https://www.115k.fr/portefeuille	404
+115K	https://www.115k.fr/fr/portefeuille	404
+115K	https://www.115k.fr/companies	404
+115K	https://www.115k.fr/our-companies	404
+115K	https://www.115k.fr/investments	404
+115K	https://www.115k.fr/participations	404
+Achmea Innovation Fund	https://www.achmea-impact.ventures/startup	OK 11648 car. 3 logos
+Achmea Innovation Fund	https://www.achmea-impact.ventures/startup/meld-je-aan	OK 10387 car. 2 logos
+Aviva Ventures	https://www.aviva.com/about-us/aviva-ventures	OK 9841 car. 2 logos
+Aviva Ventures	https://www.aviva.com/portfolio	404
+Aviva Ventures	https://www.aviva.com/en/portfolio	404
+Aviva Ventures	https://www.aviva.com/portefeuille	404
+Aviva Ventures	https://www.aviva.com/fr/portefeuille	404
+Aviva Ventures	https://www.aviva.com/companies	404
+Aviva Ventures	https://www.aviva.com/our-companies	404
+Aviva Ventures	https://www.aviva.com/investments	404
+Cathay	https://cathayinnovation.com/portfolio	OK 3677 car. 117 logos
+Cathay	https://cathayinnovation.com/philosophy	OK 6894 car. 1 logos
+Elevation Capital Partners	https://elevation-cp.com/portfolio	OK 2224 car. 12 logos
+Elevation Capital Partners	https://elevation-cp.com/a-propos	OK 7092 car. 42 logos
+Goldsmith Ventures	https://www.goldsmithventures.com/portfolio	404
+Goldsmith Ventures	https://www.goldsmithventures.com/en/portfolio	404
+Goldsmith Ventures	https://www.goldsmithventures.com/portefeuille	404
+Goldsmith Ventures	https://www.goldsmithventures.com/fr/portefeuille	404
+Goldsmith Ventures	https://www.goldsmithventures.com/companies	404
+Goldsmith Ventures	https://www.goldsmithventures.com/our-companies	404
+Goldsmith Ventures	https://www.goldsmithventures.com/investments	404
+Goldsmith Ventures	https://www.goldsmithventures.com/participations	404
+Kickstart Innovation	https://www.kickstart-innovation.com/join-startup	OK 2852 car. 5 logos
+Kickstart Innovation	https://www.kickstart-innovation.com/community-investors	OK 1257 car. 15 logos
+Kickstart Innovation	http://kickstart-innovation.com/apply	OK 2394 car. 1 logos
+Kickstart Innovation	https://www.kickstart-innovation.com/community-startups-alumni	OK 848 car. 435 logos
+NewAlpha Asset Management	https://www.newalpha.com/en/investment-strategies	OK 3833 car. 0 logos
+NewAlpha Asset Management	https://www.newalpha.com/en/expertise	OK 4286 car. 0 logos
+SCOR Ventures	https://www.scor.com/en/scor-ventures	200
+SCOR Ventures	https://www.scor.com/en/sustainable-investments	OK 5567 car. 10 logos
+SCOR Ventures	https://www.scor.com/en/investments	OK 1278 car. 5 logos
+SCOR Ventures	https://www.scor.com/en/expert-views/claims-operations-lh-strategic-investment-claims-operations-driver-long-term-value	OK 3439 car. 6 logos
+The Net Street Capital	https://thenetstreet.com/investor-for-your-company	OK 2410 car. 3 logos
+The Net Street Capital	https://thenetstreet.com/impact-investment	OK 3021 car. 3 logos
+The Net Street Capital	https://thenetstreet.com/sell-your-company	OK 3104 car. 3 logos
+The Net Street Capital	https://thenetstreet.com/sell-your-insurtech-company	OK 2933 car. 5 logos
+White Star Capital	https://whitestarcapital.com/companies	OK 4489 car. 0 logos
+White Star Capital	https://whitestarcapital.com/companies/ledn	200
+White Star Capital	https://whitestarcapital.com/companies/vention	200
+White Star Capital	https://whitestarcapital.com/companies/freshly	200
+White Star Capital	https://whitestarcapital.com/companies/exclusible	200
+White Star Capital	https://whitestarcapital.com/companies/butternut-box	200
+White Star Capital	https://whitestarcapital.com/companies/seyna	200
+White Star Capital	https://whitestarcapital.com/companies/finn-auto	200
