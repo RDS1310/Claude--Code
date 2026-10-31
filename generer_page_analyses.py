@@ -21,6 +21,24 @@ ENTREE = BASE_DIR / "analyses_data" / "analyses.json"
 TEMPLATE = BASE_DIR / "_analyses_template.html"
 SORTIE = BASE_DIR / "analyses_gvi.html"
 VERDICTS = {"etudier", "surveiller", "ecarter"}
+# Onglets de la page : « Pré-analyses » / « Valorisation du portefeuille » (module partagé valo/)
+ONGLET = """(() => {
+  let app = null;
+  const vue = document.getElementById('vue-valo');
+  function onglet(nom){
+    document.querySelectorAll('.vtabs [data-onglet]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.onglet === nom)));
+    document.getElementById('vue-analyses').hidden = nom !== 'analyses';
+    vue.hidden = nom !== 'valo';
+    if (nom === 'valo' && !app) app = window.ValoApp(vue, {id: (location.hash.match(/^#valo-(.+)$/) || [])[1] || null,
+      intro: 'Juste valeur indicative des participations de GVI : prix du dernier tour ajusté du % du business plan atteint, recoupé par les multiples, droits de GVI appliqués.',
+      onSelect: id => { try { history.replaceState(null, '', '#valo-' + id); } catch (_) {} }});
+  }
+  document.querySelectorAll('.vtabs [data-onglet]').forEach(b => b.addEventListener('click', () => {
+    onglet(b.dataset.onglet);
+    try { history.replaceState(null, '', b.dataset.onglet === 'valo' ? '#valo' : '#'); } catch (_) {}
+  }));
+  if (/^#valo/.test(location.hash)) onglet('valo');
+})();"""
 
 
 def main() -> int:
@@ -41,7 +59,8 @@ def main() -> int:
             "actus": dates_desc(e["actus"])[:5]}
         for n, e in construire_index()["societes"].items() if e["radar"] or e["pipe"] or e["actus"]
     }
-    html = TEMPLATE.read_text(encoding="utf-8").replace(
+    from generer_page_valo import injecter_valo
+    html = injecter_valo(TEMPLATE.read_text(encoding="utf-8")).replace("/*__VALO_ONGLET__*/", ONGLET).replace(
         "__DATA_JSON__", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
     SORTIE.write_text(html, encoding="utf-8")
     print(f"Page produite : {SORTIE.name} — {len(data['analyses'])} analyse(s)")
