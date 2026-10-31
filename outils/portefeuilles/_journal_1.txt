@@ -1,0 +1,56 @@
+13books Capital (ex-Element Ventures)	https://www.13bookscapital.com/portfolio	403
+13books Capital (ex-Element Ventures)	https://www.13bookscapital.com/en/portfolio	403
+13books Capital (ex-Element Ventures)	https://www.13bookscapital.com/portefeuille	403
+13books Capital (ex-Element Ventures)	https://www.13bookscapital.com/fr/portefeuille	403
+13books Capital (ex-Element Ventures)	https://www.13bookscapital.com/companies	403
+13books Capital (ex-Element Ventures)	https://www.13bookscapital.com/our-companies	403
+13books Capital (ex-Element Ventures)	https://www.13bookscapital.com/investments	403
+13books Capital (ex-Element Ventures)	https://www.13bookscapital.com/participations	403
+Allianz X	https://www.allianzx.com/ourcompanies	OK 3930 car. 3 logos
+Allianz X	https://allianzx.com/ourcompanies/uala	OK 2177 car. 14 logos
+Allianz X	https://allianzx.com/ourcompanies/coalition-inc	OK 2659 car. 14 logos
+BPI France	https://www.bpifrance.fr/nos-solutions/innovation	OK 5223 car. 5 logos
+BPI France	https://www.bpifrance.fr/nos-solutions/investissement	OK 6390 car. 5 logos
+BPI France	https://www.bpifrance.fr/nos-solutions/international	OK 5222 car. 5 logos
+BPI France	https://lehub.bpifrance.fr	OK 5668 car. 15 logos
+CommerzVentures	https://commerzventures.com/portfolio	OK 1171 car. 32 logos
+Ethias Ventures	https://www.ethias.be/portfolio	404
+Ethias Ventures	https://www.ethias.be/en/portfolio	404
+Ethias Ventures	https://www.ethias.be/portefeuille	404
+Ethias Ventures	https://www.ethias.be/fr/portefeuille	404
+Ethias Ventures	https://www.ethias.be/companies	404
+Ethias Ventures	https://www.ethias.be/our-companies	404
+Ethias Ventures	https://www.ethias.be/investments	OK 2953 car. 2 logos
+Ethias Ventures	https://www.ethias.be/participations	404
+Helsana HealthInvest	https://www.helsana.ch/en/helsana-group/about-us/healthinvest.html	OK 2278 car. 20 logos
+Helsana HealthInvest	https://www.helsana.ch/portfolio	404
+Helsana HealthInvest	https://www.helsana.ch/en/portfolio	404
+Helsana HealthInvest	https://www.helsana.ch/portefeuille	404
+Helsana HealthInvest	https://www.helsana.ch/fr/portefeuille	404
+Helsana HealthInvest	https://www.helsana.ch/companies	OK 1507 car. 6 logos
+Helsana HealthInvest	https://www.helsana.ch/our-companies	404
+Helsana HealthInvest	https://www.helsana.ch/investments	404
+Kima Venture Capital	https://www.kimaventures.com/portfolio	OK 39999 car. 679 logos
+NewFund Capital	https://newfundcap.com/portfolio/1	OK 8544 car. 0 logos
+NewFund Capital	https://newfundcap.com/company/shareid	OK 1784 car. 3 logos
+NewFund Capital	https://newfundcap.com/company/rwazi	OK 2062 car. 3 logos
+NewFund Capital	https://newfundcap.com/company/infinite-orbits	OK 1988 car. 4 logos
+NewFund Capital	https://newfundcap.com/company/tin-can-0	OK 1922 car. 4 logos
+Samaipata Ventures	https://www.samaipata.vc/our-portfolio	OK 8974 car. 2 logos
+Samaipata Ventures	https://www.samaipata.vc/portfolio-companies/matera	200
+Samaipata Ventures	https://www.samaipata.vc/portfolio-companies/legl	200
+Samaipata Ventures	https://www.samaipata.vc/portfolio-companies/deporvillage	200
+Samaipata Ventures	https://www.samaipata.vc/portfolio-companies/fintecture	200
+Samaipata Ventures	https://www.samaipata.vc/portfolio-companies/big-blue	200
+Samaipata Ventures	https://www.samaipata.vc/portfolio-companies/colvin	200
+Samaipata Ventures	https://www.samaipata.vc/portfolio-companies/spotahome	200
+South East Angels	https://www.southeastangels.co.uk/portfolio	OK 5179 car. 43 logos
+South East Angels	https://www.southeastangels.co.uk/news/limini-wins-brighton-startup-roadshow-2026	OK 3237 car. 1 logos
+The49	https://the49.com/privacy	OK 2764 car. 1 logos
+The49	https://the49.com/portfolio	OK 2428 car. 1 logos
+The49	https://the49.com/en/portfolio	OK 2429 car. 1 logos
+The49	https://the49.com/portefeuille	OK 2429 car. 1 logos
+The49	https://the49.com/fr/portefeuille	OK 2428 car. 1 logos
+XAnge Capital	https://www.xange.vc/portfolio	OK 5173 car. 147 logos
+XAnge Capital	https://www.xange.vc/startup-success	OK 4878 car. 12 logos
+XAnge Capital	http://jobs.xange.vc/jobs	OK 40000 car. 47 logos
