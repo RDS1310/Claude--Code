@@ -198,7 +198,7 @@ a{color:var(--petrol)}
   <span class="sep">·</span>
   <a href="https://claude.ai/artifact/BPSeTnKnWY2PkAGcH5s2ai">Étude M&amp;A Assurance</a>
   <span class="sep">·</span>
-  <a href="https://claude.ai/artifact/SEX7fRjPSzew5YCbFrxnqc">Valorisation du portefeuille</a>
+  <a href="https://claude.ai/artifact/Mor6DTNTSbekT4irHSLyJe#valo">Valorisation du portefeuille</a>
 </nav>
 
 <div class="wrap">
@@ -252,7 +252,8 @@ const $ = id => document.getElementById(id);
 // Fiches : celles publiées avec la page (vérifiées, RAW) + celles produites sur la page (base partagée de l'artefact).
 const S = {dyn: [], vue: 'fiche', id: null, fichiers: [], enCours: null, confirmSuppr: null, statut: '', statutErr: false};
 let SAMPLE = null, DB = null, PEUT_ECRIRE = null;
-const toutes = () => [...S.dyn, ...RAW.analyses];
+// Fiches créées sur la page : embarquées à la publication (lisibles sans compte) jusqu'à ce que la base réponde
+const toutes = () => { const ids = new Set(S.dyn.map(x => x.id)); return [...S.dyn, ...(S.dbOk ? [] : (RAW.analysesPage || []).filter(x => !ids.has(x.id))), ...RAW.analyses]; };
 
 const NIVEAUX = {3: ['vert', 'Fort'], 2: ['orange', 'Moyen'], 1: ['rouge', 'Faible']};
 const niveau = note => NIVEAUX[note] || ['rouge', 'Pas de données'];
@@ -893,6 +894,7 @@ if (window.claude && claude.use) {
     if (!db) return;
     DB = db;
     db.collection('analyses').orderBy('creeLe', 'desc').onSnapshot(snap => {
+      S.dbOk = true;
       const locales = S.dyn.filter(x => x.nonEnregistree);
       S.dyn = [...locales, ...snap.docs.map(d => d.data()).filter(Boolean)];
       if (S.vue === 'nouvelle') { $('list').innerHTML = listHtml(null); $('rail-count').textContent = `${toutes().length} fiches`; }
@@ -902,6 +904,7 @@ if (window.claude && claude.use) {
 }
 </script>
 
+<script>window.__VALO__ = __VALO_JSON__;</script>
 <script>
 /*__VALO_JS__*/
 </script>

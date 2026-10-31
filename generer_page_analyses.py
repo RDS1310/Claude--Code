@@ -29,7 +29,7 @@ ONGLET = """(() => {
     document.querySelectorAll('.vtabs [data-onglet]').forEach(b => b.setAttribute('aria-selected', String(b.dataset.onglet === nom)));
     document.getElementById('vue-analyses').hidden = nom !== 'analyses';
     vue.hidden = nom !== 'valo';
-    if (nom === 'valo' && !app) app = window.ValoApp(vue, {id: (location.hash.match(/^#valo-(.+)$/) || [])[1] || null,
+    if (nom === 'valo' && !app) app = window.ValoApp(vue, {donnees: window.__VALO__, id: (location.hash.match(/^#valo-(.+)$/) || [])[1] || null,
       intro: 'Juste valeur indicative des participations de GVI : prix du dernier tour ajusté du % du business plan atteint, recoupé par les multiples, droits de GVI appliqués.',
       onSelect: id => { try { history.replaceState(null, '', '#valo-' + id); } catch (_) {} }});
   }
@@ -59,8 +59,17 @@ def main() -> int:
             "actus": dates_desc(e["actus"])[:5]}
         for n, e in construire_index()["societes"].items() if e["radar"] or e["pipe"] or e["actus"]
     }
+    # Données de la base de l'artefact embarquées pour une lecture sans compte : export local HORS DÉPÔT
+    # (valo_data/export/<collection>/*.json, via ArtifactData list … out_dir) — confidentiel.
+    def export(coll):
+        return [json.loads(f.read_text(encoding="utf-8")) for f in sorted((BASE_DIR / "valo_data" / "export" / coll).glob("*.json"))]
+    data["analysesPage"] = sorted(export("analyses"), key=lambda a: a.get("creeLe", ""), reverse=True)
+    valos = export("valorisations")
+    if not valos:
+        print("ATTENTION : valo_data/export/valorisations absent — onglet Valorisation vide sans compte claude.ai")
     from generer_page_valo import injecter_valo
-    html = injecter_valo(TEMPLATE.read_text(encoding="utf-8")).replace("/*__VALO_ONGLET__*/", ONGLET).replace(
+    html = injecter_valo(TEMPLATE.read_text(encoding="utf-8")).replace(
+        "__VALO_JSON__", json.dumps(valos, ensure_ascii=False).replace("</", "<\\/")).replace("/*__VALO_ONGLET__*/", ONGLET).replace(
         "__DATA_JSON__", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
     SORTIE.write_text(html, encoding="utf-8")
     print(f"Page produite : {SORTIE.name} — {len(data['analyses'])} analyse(s)")
