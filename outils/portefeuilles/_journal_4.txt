@@ -1,0 +1,53 @@
+AVP (ex-AXA Venture Partners)	http://www.axavp.com/companies	OK 7135 car. 1 logos
+AVP (ex-AXA Venture Partners)	https://avpcap.com/companies	OK 7135 car. 1 logos
+AVP (ex-AXA Venture Partners)	https://avpcap.com/category/portfolio	OK 2842 car. 3 logos
+AVP (ex-AXA Venture Partners)	https://avpcap.com/europe-wants-startup-sovereignty-but-62-of-founders-are-reliant-on-us-ai-infrastructure	OK 7342 car. 4 logos
+Astorya.vc	https://astorya.vc/portfolio	OK 51 car. 0 logos
+Astorya.vc	https://astorya.vc/en/portfolio	OK 51 car. 0 logos
+Astorya.vc	https://astorya.vc/portefeuille	OK 51 car. 0 logos
+Astorya.vc	https://astorya.vc/fr/portefeuille	OK 51 car. 0 logos
+Astorya.vc	https://astorya.vc/companies	OK 51 car. 0 logos
+Breega Capital	https://www.breega.com/portfolio	404
+Breega Capital	https://www.breega.com/en/portfolio	404
+Breega Capital	https://www.breega.com/portefeuille	404
+Breega Capital	https://www.breega.com/fr/portefeuille	404
+Breega Capital	https://www.breega.com/companies	404
+Breega Capital	https://www.breega.com/our-companies	404
+Breega Capital	https://www.breega.com/investments	404
+Breega Capital	https://www.breega.com/participations	404
+EOS Venture	https://eosvc.com/portfolio	OK 836 car. 0 logos
+EOS Venture	https://eosvc.com/portfolio-company-elpha-secure	OK 252 car. 0 logos
+EOS Venture	https://eosvc.com/portfolio-company-players-health	OK 288 car. 0 logos
+EOS Venture	https://eosvc.com/portfolio-company-dpl	OK 277 car. 0 logos
+EOS Venture	https://eosvc.com/portfolio-company-mulberri	OK 291 car. 0 logos
+Founders Future VC	https://www.foundersfuture.com/expertises/co-investissement	OK 3475 car. 13 logos
+Founders Future VC	https://www.foundersfuture.com/portefeuille	OK 27742 car. 136 logos
+Index Venture	https://www.indexventures.com/companies	OK 1685 car. 0 logos
+Index Venture	https://www.indexventures.com/perspectives/simulating-society-at-scale-our-investment-in-similes-200m-series-b	OK 3256 car. 1 logos
+Index Venture	https://www.indexventures.com/perspectives/cloud-captains-how-assaf-rappaport-and-his-extraordinary-co-founders-built-the-worlds-fastest-growing-company	OK 25838 car. 4 logos
+Index Venture	https://www.indexventures.com/perspectives/making-quantum-computing-real-our-investment-in-oratomic	OK 8003 car. 0 logos
+Index Venture	https://www.indexventures.com/perspectives/ai-that-owns-business-outcomes-our-investment-in-hone	OK 5053 car. 0 logos
+Munich Re Ventures	https://www.munichreventures.com/portfolio	Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.
+Munich Re Ventures	https://www.munichre.com/mrv/en/portfolio.html	Page.goto: Navigation to "https://www.munichre.com/mrv/en/po
+Portage Venture	https://www.sagard.com/portfolio	OK 8232 car. 181 logos
+Portage Venture	https://portageinvest.com/portfolio	OK 24855 car. 111 logos
+Seraphim Space	https://seraphim.vc/portfolio	OK 2983 car. 0 logos
+Seraphim Space	https://seraphim.vc/seraphim-spacetech-investment-tracker	OK 2403 car. 6 logos
+Seraphim Space	https://seraphim.vc/news/seraphim-portfolio-launch-on-spacex-bandwagon-5	OK 3976 car. 0 logos
+Seraphim Space	https://seraphim.vc/news/mp-space-raises-16m-in-seed-funding	OK 8500 car. 0 logos
+The Family	https://www.thefamily.co/portfolio	404
+The Family	https://www.thefamily.co/en/portfolio	404
+The Family	https://www.thefamily.co/portefeuille	404
+The Family	https://www.thefamily.co/fr/portefeuille	404
+The Family	https://www.thefamily.co/companies	404
+The Family	https://www.thefamily.co/our-companies	404
+The Family	https://www.thefamily.co/investments	404
+The Family	https://www.thefamily.co/participations	404
+UNIQA Ventures	https://www.uniqagroup.com/portfolio	404
+UNIQA Ventures	https://www.uniqagroup.com/en/portfolio	404
+UNIQA Ventures	https://www.uniqagroup.com/portefeuille	404
+UNIQA Ventures	https://www.uniqagroup.com/fr/portefeuille	404
+UNIQA Ventures	https://www.uniqagroup.com/companies	404
+UNIQA Ventures	https://www.uniqagroup.com/our-companies	404
+UNIQA Ventures	https://www.uniqagroup.com/investments	404
+UNIQA Ventures	https://www.uniqagroup.com/participations	404
