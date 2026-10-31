@@ -1,0 +1,34 @@
+# Relevé des pages portefeuille des fonds avec un navigateur (sites inaccessibles depuis les sessions Claude).
+# Déclenché par un push du script (ou à la main) ; résultat : outils/portefeuilles/releve.json.
+name: Relever les portefeuilles des fonds
+on:
+  push:
+    paths: ['outils/scraper_portefeuilles.py', 'outils/portefeuilles/_demande.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  relever:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installer
+        run: |
+          pip install -q pandas openpyxl playwright
+          python -m playwright install --with-deps chromium
+      - name: Relever
+        run: |
+          FIRMES=$(grep -v '^\s*#' outils/portefeuilles/_demande.txt 2>/dev/null | grep -v '^\s*$' | tr '\n' '\0' | xargs -0 -I{} printf '%q ' "{}")
+          eval python outils/scraper_portefeuilles.py $FIRMES
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add outils/portefeuilles
+          git diff --cached --quiet && exit 0
+          git commit -m "Relevé des portefeuilles ($(date -u +%F))"
+          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
