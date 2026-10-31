@@ -293,6 +293,11 @@ ADJACENT_SOUS_SECTEUR = {
     "ControlExpert": "data", "GT Motive": "data", "Finanzen.de": "data", "Securkeys": "data",
     "Urgent.ly": "telematique", "Idelic": "telematique",
     "American Well (Amwell)": "sante", "Halodoc": "sante",
+    # Relevé des sites des fonds (31/10/2026) : Helsana HealthInvest, Founders Future, Kima, Tenity
+    "Eterno": "sante", "humanoo": "sante", "Kenbi": "sante", "Yazen": "sante", "compassana": "sante",
+    "HederaDx": "sante", "Entyre": "sante", "sqior": "sante", "Lunabill": "sante",
+    "Bastion Technologies": "cyber", "Klaimy": "data", "Pints.ai": "data", "AAZZUR": "data",
+    "Carpe Data": "data", "Nattergal": "climat",
     "SecurityScorecard": "cyber",
     "Gravie": "emploi", "Club Employés": "emploi",
     "MiTrust": "data", "Complero": "data", "Bdeo": "data", "Digital Fineprint": "data", "Widmee": "data",

@@ -1,0 +1,234 @@
+{
+ "date": "2026-10-31",
+ "source": "Pages portefeuille officielles des fonds, rendues par navigateur (outils/scraper_portefeuilles.py, GitHub Actions)",
+ "fonds": [
+  {
+   "fonds_id": "helsana-healthinvest_helsana-healthinvest",
+   "page": "https://www.helsana.ch/en/helsana-group/about-us/healthinvest.html",
+   "note": "Logos de la page HealthInvest ; SHS Capital, Moonfire et Amino Collective (fonds) et Akademie Dialog Santé (association) non repris.",
+   "ajouts": [
+    {
+     "nom": "Eterno",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Allemagne"
+    },
+    {
+     "nom": "humanoo",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Allemagne"
+    },
+    {
+     "nom": "Kenbi",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Allemagne"
+    },
+    {
+     "nom": "Yazen",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Suède"
+    },
+    {
+     "nom": "compassana",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Suisse"
+    },
+    {
+     "nom": "HederaDx",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Suisse"
+    },
+    {
+     "nom": "Entyre",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Allemagne"
+    },
+    {
+     "nom": "sqior",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Allemagne"
+    }
+   ]
+  },
+  {
+   "fonds_id": "insurtech-gateway_insurtech-gateway-seed-fund-i-ii",
+   "page": "https://www.insurtechgateway.com/portfolio/",
+   "note": "Fiches /portfolio/marrow et /portfolio/today ; les 35 participations déjà suivies figurent toutes sur la page.",
+   "ajouts": [
+    {
+     "nom": "Marrow",
+     "secteur": "InsurTech"
+    },
+    {
+     "nom": "TODAY",
+     "secteur": "InsurTech"
+    }
+   ]
+  },
+  {
+   "fonds_id": "founders-future-vc_founders-future-fund-ii",
+   "page": "https://www.foundersfuture.com/portefeuille",
+   "note": "Véhicule non précisé par le fonds : rattaché au véhicule dont le millésime correspond (2025).",
+   "ajouts": [
+    {
+     "nom": "Lunabill",
+     "secteur": "InsurTech (adjacent)",
+     "annee": 2025,
+     "description": "agents vocaux IA qui automatisent le suivi des demandes de remboursement d'assurance (santé)"
+    }
+   ]
+  },
+  {
+   "fonds_id": "founders-future-vc_founders-future-fund-i",
+   "page": "https://www.foundersfuture.com/portefeuille",
+   "note": "Véhicule non précisé par le fonds : rattaché au Fund I (millésime 2018) ; « Exit » affiché pour Cautioneo.",
+   "ajouts": [
+    {
+     "nom": "Welfaire",
+     "secteur": "InsurTech",
+     "annee": 2022,
+     "pays": "France"
+    },
+    {
+     "nom": "Cautioneo",
+     "secteur": "InsurTech",
+     "pays": "France",
+     "sortie": true,
+     "statut": "Exit (page Founders Future)"
+    }
+   ]
+  },
+  {
+   "fonds_id": "kima-venture-capital_kima-venture",
+   "page": "https://www.kimaventures.com/portfolio",
+   "note": "Sociétés d'assurance repérées sur la page portefeuille (descriptions publiées par Kima).",
+   "ajouts": [
+    {
+     "nom": "Bastion Technologies",
+     "secteur": "InsurTech (adjacent)",
+     "description": "suite de gestion active du risque cyber pour l'assurance cyber"
+    },
+    {
+     "nom": "EVY",
+     "secteur": "InsurTech",
+     "description": "protection produit avec des solutions d'assurance sur mesure"
+    },
+    {
+     "nom": "Dalma",
+     "secteur": "InsurTech",
+     "pays": "France",
+     "description": "assurance santé animale"
+    }
+   ]
+  },
+  {
+   "fonds_id": "tenity_tenity-incubation-fund-i-ii",
+   "page": "https://www.tenity.com/portfolio/",
+   "note": "Sociétés d'assurance de la page portefeuille Tenity (pays indiqué par Tenity).",
+   "ajouts": [
+    {
+     "nom": "Frankly Insure",
+     "secteur": "InsurTech",
+     "pays": "Danemark"
+    },
+    {
+     "nom": "InsureCow",
+     "secteur": "InsurTech",
+     "pays": "Singapour"
+    },
+    {
+     "nom": "Klaimy",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "France"
+    },
+    {
+     "nom": "Lyfery",
+     "secteur": "InsurTech",
+     "pays": "Estonie"
+    },
+    {
+     "nom": "Pints.ai",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Singapour"
+    },
+    {
+     "nom": "Riskwolf",
+     "secteur": "InsurTech",
+     "pays": "Suisse"
+    },
+    {
+     "nom": "AAZZUR",
+     "secteur": "InsurTech (adjacent)",
+     "description": "plateforme d'intégration de services financiers, dont l'assurance"
+    }
+   ]
+  },
+  {
+   "fonds_id": "seraphim-space_seraphim-space-ventures-ssvii-ssit",
+   "page": "https://seraphim.vc/portfolio/",
+   "note": "Seule autre société d'assurance du portefeuille Seraphim.",
+   "ajouts": [
+    {
+     "nom": "Delos Insurance Solutions",
+     "secteur": "InsurTech",
+     "pays": "États-Unis"
+    }
+   ]
+  },
+  {
+   "fonds_id": "south-east-angels_south-east-angels",
+   "page": "https://www.southeastangels.co.uk/portfolio",
+   "note": "« Invested July 2021 » selon la page (mois non repris).",
+   "ajouts": [
+    {
+     "nom": "Husmus",
+     "secteur": "InsurTech",
+     "annee": 2021,
+     "pays": "Royaume-Uni",
+     "description": "permet aux assureurs de proposer une couverture personnalisée selon le comportement des locataires"
+    }
+   ]
+  },
+  {
+   "fonds_id": "aviva-ventures_aviva-ventures",
+   "page": "https://www.aviva.com/about-us/aviva-ventures/",
+   "note": "Liste « some of the companies » d'Aviva Ventures : Nattergal, Shepper, Carpe Data, Indico Data (les deux dernières déjà suivies sauf Carpe Data).",
+   "ajouts": [
+    {
+     "nom": "Nattergal",
+     "secteur": "InsurTech (adjacent)",
+     "pays": "Royaume-Uni",
+     "description": "restauration de la biodiversité à grande échelle"
+    },
+    {
+     "nom": "Carpe Data",
+     "secteur": "InsurTech (adjacent)",
+     "description": "données de nouvelle génération pour l'assurance"
+    }
+   ]
+  }
+ ],
+ "maj": [
+  {
+   "fonds_id": "founders-future-vc_founders-future-good",
+   "startup": "Napo",
+   "annee": 2022,
+   "page": "https://www.foundersfuture.com/portefeuille"
+  },
+  {
+   "fonds_id": "founders-future-vc_founders-future-good",
+   "startup": "Neat",
+   "annee": 2023,
+   "page": "https://www.foundersfuture.com/portefeuille"
+  }
+ ],
+ "corrections": [
+  {
+   "fonds": "Allianz X",
+   "startup": "Innovation Group",
+   "champ": "Exit (O/N)",
+   "valeur": "N",
+   "page": "https://www.allianzx.com/ourcompanies",
+   "motif": "La page d'Allianz X n'affiche pas « EXIT » pour Innovation Group (contrairement à heycar qui le précède) ; Allianz X en a pris le contrôle (Coverager)."
+  }
+ ]
+}

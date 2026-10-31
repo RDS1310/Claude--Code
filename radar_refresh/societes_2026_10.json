@@ -2700,7 +2700,7 @@
   },
   "Innovation Group": {
    "exit": {
-    "type": "Acquisition",
+    "type": "Prise de contrôle",
     "acquereur": "Allianz X (titre Coverager) ; auparavant Carlyle (2015, ≈ 500 M£)",
     "note": "détails de l'opération Allianz X non lus"
    },
@@ -3111,6 +3111,33 @@
    "sources": [
     "https://finder.techleap.nl/news/feed/vitaance-raises-2m-in-funding",
     "https://www.cbinsights.com/company/vitaance/financials"
+   ]
+  },
+  "Etvas": {
+   "total_note": "≈ 2,6 M$ sur 7 tours (CB Insights, non vérifié)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 0.9,
+    "annee": 2022,
+    "lead": "High-Tech Gründerfonds"
+   },
+   "pays": "Allemagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://coverager.com/etvas-raises-1-million/",
+    "https://www.htgf.de/htgf-investment-etvas/"
+   ]
+  },
+  "Sourse (ex-Stratos Solution)": {
+   "dernier_tour": {
+    "montant": 3.65,
+    "annee": 2025,
+    "lead": "Ethias Ventures, Namur Invest et investisseurs existants"
+   },
+   "pays": "Belgique",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.dhnet.be/regions/namur/2025/01/21/sourse-leve-365-millions-deuros-pour-revolutionner-lobservation-de-la-terre-ZZEOHFJN75G77LWEWW4PZOGZQ4/"
    ]
   }
  }

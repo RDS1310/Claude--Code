@@ -161,6 +161,7 @@ def appliquer_portefeuilles(fonds: pd.DataFrame, part: pd.DataFrame, j: JournalV
     if not PORTEFEUILLES.exists():
         return part, 0, 0
     data = json.loads(PORTEFEUILLES.read_text(encoding="utf-8"))
+    part = part.copy()
     nouvelles, sorties = [], 0
     for f in data["fonds"]:
         fid = f["fonds_id"]
@@ -172,8 +173,10 @@ def appliquer_portefeuilles(fonds: pd.DataFrame, part: pd.DataFrame, j: JournalV
                 continue
             nouvelles.append({"Fonds_ID": fid, "Nom du fonds": ref["Nom du fonds"], "Véhicule": ref["Véhicule"],
                               "Start-up": s["nom"], "Secteur": s.get("secteur"), "Pays d’origine": s.get("pays"),
+                              "Date d’investissement": s.get("annee"),
                               "Exit (O/N)": "O" if s.get("sortie") else "N", "Statut start-up (détail)": s.get("statut"),
                               "Confiance": "Moyen", "Source(s)": f["page"],
+                              "Rôle du véhicule (détail)": f.get("note") if "Véhicule non précisé" in f.get("note", "") else None,
                               "Commentaires": f"[Portefeuille du fonds 31/10/2026] Listée sur la page portefeuille officielle."
                                               + (f" Description publiée : {s['description']}" if s.get("description") else "")})
         for s in f.get("sorties", []):
@@ -189,6 +192,22 @@ def appliquer_portefeuilles(fonds: pd.DataFrame, part: pd.DataFrame, j: JournalV
             j.add("Enrichissement source publique", ref["Nom du fonds"], "Participations", f["page"],
                   f"+{sum(1 for n in nouvelles if n['Fonds_ID'] == fid)} participations", "Moyen",
                   "Ajout depuis la page portefeuille officielle (date et montant non publiés)", f.get("note", ""))
+    for m in data.get("maj", []):  # année d'investissement publiée par le fonds
+        for i in part.index[(part["Fonds_ID"] == m["fonds_id"]) & (part["Start-up"] == m["startup"])]:
+            avant = part.at[i, "Date d’investissement"]
+            if vide(avant):
+                part.at[i, "Date d’investissement"] = m["annee"]
+                ajouter(part, i, "Source(s)", m["page"], sep=" ; ")
+            elif str(avant)[:4] != str(m["annee"]):
+                j.add("Divergence entre sources", m["startup"], "Date d’investissement", str(avant), str(avant), "Moyen",
+                      "Valeur existante conservée", f"La page du fonds indique {m['annee']} : {m['page']}")
+    for c in data.get("corrections", []):
+        for i in part.index[(part["Nom du fonds"] == c["fonds"]) & (part["Start-up"] == c["startup"])]:
+            avant = part.at[i, c["champ"]]
+            if str(avant) != c["valeur"]:
+                part.at[i, c["champ"]] = c["valeur"]
+                j.add("Correction", f"{c['fonds']} / {c['startup']}", c["champ"], str(avant), c["valeur"], "Moyen",
+                      "Corrigé d'après la page portefeuille du fonds", f"{c['motif']} {c['page']}")
     if nouvelles:
         part = pd.concat([part, pd.DataFrame(nouvelles)], ignore_index=True)
     return part, len(nouvelles), sorties
@@ -205,8 +224,8 @@ def main() -> int:
             apres = "Valorisation (M€)" if col == "Valorisation (année)" else "Total levé par la start-up (M€)"
             decalage = list(NOUVELLES_COLONNES).index(col) if col.startswith("Dernier") else 0
             part.insert(part.columns.get_loc(apres) + 1 + decalage, col, None)
+    part, nb_ajouts, nb_sorties_fonds = appliquer_portefeuilles(fonds, part, j)  # d'abord les lignes, puis les données société
     nb_soc, nb_lignes, nb_sorties = appliquer_societes(part, j)
-    part, nb_ajouts, nb_sorties_fonds = appliquer_portefeuilles(fonds, part, j)
 
     dico = feuilles["Dictionnaire"]
     for col, (type_, unite, comm) in NOUVELLES_COLONNES.items():
