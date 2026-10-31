@@ -15,13 +15,15 @@ Pour chaque société de gestion du dernier classeur Radar (colonne « Site web 
 
 Aucune interprétation ici : le rapprochement avec les participations est fait ensuite en session, et
 chaque ajout au Radar passe par un script maj_radar_vN avec la page comme source.
-Sortie : outils/portefeuilles/releve.json (+ _journal.txt).
+Sortie : un fichier par société de gestion dans outils/portefeuilles/fonds/ (écrit au fil de l'eau, pour ne rien
+perdre si le job est interrompu) + _journal_<lot>.txt. Usage : scraper_portefeuilles.py [--lot i/n] [firmes…]
 """
 from __future__ import annotations
 
 import json
 import re
 import sys
+import time
 import urllib.request
 from datetime import date
 from pathlib import Path
@@ -51,7 +53,9 @@ CONNUES = {
     "Portage Venture": ["https://www.sagard.com/portfolio/"],
     "Atlantic Vantage Point": ["https://www.avpcap.com/portfolio"],
 }
-MAX_PAGES = 6
+MAX_PAGES = 5
+MAX_ESSAIS = 8          # adresses tentées par société de gestion
+BUDGET_S = 50 * 60      # arrêt propre avant la limite du job GitHub
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
 
@@ -115,17 +119,26 @@ def rendre(page, url: str) -> dict:
 
 
 def main() -> int:
+    args = sys.argv[1:]
+    lot, nb_lots = 0, 1
+    if args[:1] == ["--lot"]:
+        lot, nb_lots = (int(x) for x in args[1].split("/"))
+        args = args[2:]
+    seulement = set(args)
     fonds = pd.read_excel(dernier_classeur(), sheet_name="Fonds")
-    sites = fonds.groupby("Nom du fonds")["Site web"].first().dropna().to_dict()
-    seulement = set(sys.argv[1:])
-    SORTIE.mkdir(parents=True, exist_ok=True)
-    releve, journal = {}, []
+    sites = sorted(fonds.groupby("Nom du fonds")["Site web"].first().dropna().to_dict().items())
+    sites = [x for k, x in enumerate(sites) if k % nb_lots == lot and (not seulement or x[0] in seulement)]
+    dossier = SORTIE / "fonds"
+    dossier.mkdir(parents=True, exist_ok=True)
+    journal, debut = [], time.time()
     with sync_playwright() as pw:
         nav = pw.chromium.launch()
         ctx = nav.new_context(user_agent=UA, viewport={"width": 1400, "height": 2000}, locale="fr-FR")
+        ctx.set_default_timeout(20000)
         page = ctx.new_page()
-        for firme, site in sorted(sites.items()):
-            if seulement and firme not in seulement:
+        for firme, site in sites:
+            if time.time() - debut > BUDGET_S:
+                journal.append(f"{firme}\t-\tnon traité (budget de temps)")
                 continue
             accueil = rendre(page, site)
             dom = urlparse(accueil.get("final") or site).netloc.replace("www.", "")
@@ -133,13 +146,15 @@ def main() -> int:
             candidats += [l["h"].split("#")[0] for l in accueil.get("liens", [])
                           if dom in urlparse(l["h"]).netloc and MOTIF.search(urlparse(l["h"]).path + " " + l["t"])
                           and urlparse(l["h"]).path.count("/") <= 3]
-            candidats += [urljoin(accueil.get("final") or site, c) for c in CHEMINS]
-            vus, pages = {(accueil.get("final") or site).rstrip("/")}, []
+            if len(candidats) < 2:  # chemins usuels seulement si la page d'accueil n'expose rien
+                candidats += [urljoin(accueil.get("final") or site, c) for c in CHEMINS]
+            vus, pages, essais = {(accueil.get("final") or site).rstrip("/")}, [], 0
             for u in candidats:
                 u = u.rstrip("/")
-                if u in vus or len(pages) >= MAX_PAGES:
+                if u in vus or len(pages) >= MAX_PAGES or essais >= MAX_ESSAIS:
                     continue
                 vus.add(u)
+                essais += 1
                 r = rendre(page, u)
                 if r.get("erreur") or (r.get("statut") or 200) >= 400 or r.get("final", "").rstrip("/") in vus - {u}:
                     journal.append(f"{firme}\t{u}\t{r.get('statut') or r.get('erreur', '')[:60]}")
@@ -147,13 +162,13 @@ def main() -> int:
                 vus.add(r.get("final", "").rstrip("/"))
                 pages.append(r)
                 journal.append(f"{firme}\t{u}\tOK {len(r['texte'])} car. {len(r['alts'])} logos")
-            releve[firme] = {"site": site, "accueil": accueil,  # sites d'une seule page : le portefeuille y est
-                             "sitemap": sitemap(accueil.get("final") or site), "pages": pages}
-            print(firme, len(pages), "pages", flush=True)
+            fiche = {"firme": firme, "site": site, "date": date.today().isoformat(), "accueil": accueil,
+                     "sitemap": sitemap(accueil.get("final") or site), "pages": pages}
+            (dossier / f"{re.sub(r'[^a-z0-9]+', '-', firme.lower()).strip('-')}.json").write_text(
+                json.dumps(fiche, ensure_ascii=False), encoding="utf-8")
+            print(firme, len(pages), "pages", round(time.time() - debut), "s", flush=True)
         nav.close()
-    (SORTIE / "releve.json").write_text(json.dumps({"date": date.today().isoformat(), "fonds": releve},
-                                                   ensure_ascii=False), encoding="utf-8")
-    (SORTIE / "_journal.txt").write_text("\n".join(journal), encoding="utf-8")
+    (SORTIE / f"_journal_{lot}.txt").write_text("\n".join(journal), encoding="utf-8")
     return 0
 
 

@@ -10,7 +10,11 @@ permissions:
 jobs:
   relever:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        lot: [0, 1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,12 +27,12 @@ jobs:
       - name: Relever
         run: |
           FIRMES=$(grep -v '^\s*#' outils/portefeuilles/_demande.txt 2>/dev/null | grep -v '^\s*$' | tr '\n' '\0' | xargs -0 -I{} printf '%q ' "{}")
-          eval python outils/scraper_portefeuilles.py $FIRMES
+          eval python outils/scraper_portefeuilles.py --lot ${{ matrix.lot }}/6 $FIRMES
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add outils/portefeuilles
           git diff --cached --quiet && exit 0
-          git commit -m "Relevé des portefeuilles ($(date -u +%F))"
-          for i in 1 2 3; do git pull --rebase && git push && break; sleep 5; done
+          git commit -m "Relevé des portefeuilles ($(date -u +%F), lot ${{ matrix.lot }})"
+          for i in 1 2 3 4 5 6; do git pull --rebase && git push && break; sleep $((RANDOM % 10 + 5)); done
