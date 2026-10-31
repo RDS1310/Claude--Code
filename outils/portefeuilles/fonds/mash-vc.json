@@ -1,0 +1,1 @@
+{"firme": "Mash VC", "site": "https://www.mash.vc", "date": "2026-10-31", "accueil": {"url": "https://www.mash.vc", "erreur": "Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc/\nCall log:\n  - navigating to \"https://www.mash.vc/\", waiting until \"domcontentloaded\"\n"}, "sitemap": [], "pages": []}

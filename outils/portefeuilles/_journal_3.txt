@@ -1,0 +1,46 @@
+365.fintech	https://www.365fintech.sk/news/pentech-sme-invoice-factoring-startup-joins-365fintech-portfolio	OK 1675 car. 1 logos
+365.fintech	https://www.365fintech.sk/news/365fintech-invests-startup-wise-guys	OK 1532 car. 1 logos
+365.fintech	https://www.365fintech.sk/news/365fintech-invests-dateio-card-linked-offers-startup	OK 2879 car. 1 logos
+365.fintech	https://www.365fintech.sk/news/365fintech-secured-its-first-large-investments-also-thanks-help-booster-labs-experts-incubation	OK 2855 car. 1 logos
+365.fintech	https://www.365fintech.sk/news/365fintech-startup-investment-platform-launches-core-component-365-ecosystem	OK 2896 car. 1 logos
+Aris Occitanie VC	https://aris-occitanie.fr/portfolio	404
+Aris Occitanie VC	https://aris-occitanie.fr/en/portfolio	404
+Aris Occitanie VC	https://aris-occitanie.fr/portefeuille	404
+Aris Occitanie VC	https://aris-occitanie.fr/fr/portefeuille	404
+Aris Occitanie VC	https://aris-occitanie.fr/companies	404
+Aris Occitanie VC	https://aris-occitanie.fr/our-companies	404
+Aris Occitanie VC	https://aris-occitanie.fr/investments	404
+Aris Occitanie VC	https://aris-occitanie.fr/participations	404
+Blast.Club	https://www.blast.club/blast-market	OK 5759 car. 15 logos
+Blast.Club	https://www.blast.club/nos-levees	OK 3941 car. 28 logos
+Concentric	https://concentric.vc/investments	OK 9891 car. 13 logos
+Concentric	https://concentric.vc/news/how-bvnks-culture-helped-turn-a-4-million-startup-into-mastercards-1-8-billion-acquisition	OK 7949 car. 1 logos
+Evolem Start	https://evolem.com/activites/immobilier	OK 4891 car. 3 logos
+Evolem Start	https://evolem.com/inqom-by-visma-fait-lacquisition-de-notre-participation-wineriz	OK 3357 car. 1 logos
+ISAI	https://www.isai.fr/portfolio	OK 1020 car. 121 logos
+Mash VC	https://www.mash.vc/portfolio	Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc
+Mash VC	https://www.mash.vc/en/portfolio	Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc
+Mash VC	https://www.mash.vc/portefeuille	Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc
+Mash VC	https://www.mash.vc/fr/portefeuille	Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc
+Mash VC	https://www.mash.vc/companies	Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc
+Mash VC	https://www.mash.vc/our-companies	Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc
+Mash VC	https://www.mash.vc/investments	Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc
+Mash VC	https://www.mash.vc/participations	Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mash.vc
+Partech	https://partechpartners.com/companies	OK 1536 car. 34 logos
+Partech	https://partechpartners.com/companies/studocu	OK 2777 car. 4 logos
+Partech	https://partechpartners.com/companies/track-titan	OK 2300 car. 4 logos
+Partech	https://partechpartners.com/companies/alassio	OK 2611 car. 4 logos
+Partech	https://partechpartners.com/companies/fyld	OK 2579 car. 4 logos
+Seed X Liechtenstein	https://www.seedx.li/portfolio	OK 4715 car. 0 logos
+Tenity	https://www.tenity.com/for-startups	OK 5571 car. 4 logos
+Tenity	https://www.tenity.com/portfolio	OK 23371 car. 3 logos
+Truffle Capital	https://www.truffle.com/fintech/about	OK 3243 car. 9 logos
+Truffle Capital	https://www.truffle.com/portfolio	OK 2664 car. 16 logos
+Truffle Capital	https://www.truffle.com/en/portfolio	OK 2664 car. 16 logos
+Truffle Capital	https://www.truffle.com/portefeuille	OK 1936 car. 10 logos
+Truffle Capital	https://www.truffle.com/fr/portefeuille	404
+Truffle Capital	https://www.truffle.com/companies	404
+Truffle Capital	https://www.truffle.com/our-companies	404
+Truffle Capital	https://www.truffle.com/investments	404
+speedInvest	https://www.speedinvest.com/portfolio	403
+speedInvest	https://www.speedinvest.com/network-and-portfolio-success	403
