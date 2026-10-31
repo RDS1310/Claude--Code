@@ -489,6 +489,184 @@ def relier_startups(startups: list[dict]) -> None:
         s["actus"] = dates_desc(e["actus"])
 
 
+# ---------------------------------------------------------------------------
+# Onglets « Marché » et « Cibles GVI » (31/10/2026)
+# ---------------------------------------------------------------------------
+# Thèse GVI (présentation externe, sept. 2026) : ticket 200 k€–2 M€ pour 5–20 % du capital, follower actif
+# ou co-lead, Europe. Priorités du moment indiquées par l'utilisateur le 31/10/2026 : santé ; gestion des
+# sinistres, prévention et gestion des primes ; transition énergétique et catastrophes naturelles.
+PRIORITES_GVI = {
+    "sante": ("Santé", re.compile(r"santé|sante|health|médic|medic|care\b|soins|prévoyance|mutuelle|dentaire|patient|"
+                                   r"hospital|hôpital|clinic|bien-être|wellbeing|wellness|longévit|longevity|telehealth|télémédecine|pflege", re.I)),
+    "sinistres": ("Sinistres & prévention", re.compile(r"sinistre|claims?\b|fraud|fraude|prévention|prevention|telemati|"
+                                                        r"télémati|inspection|expertise|réparation|repair|assistance|"
+                                                        r"roadside|loss\b|dommage", re.I)),
+    "primes": ("Primes & tarification", re.compile(r"\bprimes?\b|pricing|tarif|souscription|underwrit|actuar|premium|"
+                                                    r"encaissement|recouvrement", re.I)),
+    "climat": ("Climat & transition énergétique", re.compile(r"climat|climate|catastroph|cat nat|paramétri|parametric|flood|"
+                                                              r"inondation|weather|météo|wildfire|incendie|renewable|"
+                                                              r"renouvelable|solar|solaire|transition énergétique|energy transition|"
+                                                              r"carbon|carbone|"
+                                                              r"biodiversit|resilien|résilien", re.I)),
+}
+PAYS_EUROPE = re.compile(r"france|allemagne|royaume|espagne|italie|belgique|pays-bas|suisse|suède|portugal|autriche|irlande|"
+                         r"danemark|norvège|finlande|pologne|estonie|luxembourg|grèce|hongrie|lituanie|lettonie|tchèq|"
+                         r"roumanie|europe|uk\b|liechtenstein|islande|croatie|slovénie|slovaquie|bulgarie|chypre|malte", re.I)
+# Classement manuel des domaines prioritaires (31/10/2026), prioritaire sur les mots-clés ci-dessus, dont les
+# descriptions trop pauvres faisaient rater Riskwolf, Akur8, IBISA… Liste vide = hors des priorités du moment
+# (l'assurance animale n'est pas classée en « santé »).
+DOMAINES_GVI = {
+    # Santé & prévoyance des personnes
+    "Alan": ["sante"], "ottonova": ["sante"], "Welfaire": ["sante"], "Lyfery": ["sante"], "Vitaance": ["sante"],
+    "Blueberry Life": ["sante"], "Skarlett": ["sante"], "Onsi (ex-Collective Benefits)": ["sante"], "ifeel": ["sante"],
+    "Exakt": ["sante"], "DeinePflege": ["sante"], "HealthCaters": ["sante"], "Eterno": ["sante"], "humanoo": ["sante"],
+    "Kenbi": ["sante"], "Yazen": ["sante"], "compassana": ["sante"], "HederaDx": ["sante"], "Entyre": ["sante"],
+    "sqior": ["sante"], "Klaimy": ["sante", "sinistres"],
+    # Gestion des sinistres & prévention
+    "ClaimSorted": ["sinistres"], "Shift Technology": ["sinistres"], "FRISS": ["sinistres", "primes"],
+    "Acheel": ["sinistres"], "Ai5": ["sinistres"], "AlloBrain": ["sinistres"], "Bdeo": ["sinistres"],
+    "Certificall": ["sinistres"], "Yarowa": ["sinistres"], "Shepper": ["sinistres"], "CetoAI": ["sinistres"],
+    "Cocoon": ["sinistres"], "Husmus": ["sinistres"], "Protex AI": ["sinistres"], "Liberty Rider": ["sinistres"],
+    "DC Connected Car": ["sinistres"], "Linkbycar": ["sinistres"], "My Policy": ["sinistres"], "Ticker": ["sinistres"],
+    "Dattak": ["sinistres"], "Stoïk": ["sinistres"], "CyberSmart": ["sinistres"],
+    # Gestion des primes, tarification & souscription
+    "Akur8": ["primes"], "Continuity": ["primes"], "Concirrus": ["primes"], "Wenalyze": ["primes"], "Ominimo": ["primes"],
+    # Climat, catastrophes naturelles & transition énergétique
+    "Descartes Underwriting": ["climat"], "Riskwolf": ["climat"], "IBISA": ["climat"], "Kita": ["climat"],
+    "Renew Risk": ["climat"], "ClimateSecure": ["climat"], "Wetterheld": ["climat"], "Claims Carbon": ["climat"],
+    "Claims Carbon (Claims Carbon Institute)": ["climat"], "Sourse (ex-Stratos Solution)": ["climat"],
+    "Nattergal": ["climat"], "NeuWave": ["climat"],
+    # Explicitement hors priorités (faux positifs des mots-clés)
+    "Dalma": [], "Napo": [], "Qover": [], "Hokodo": [], "Grace": [], "WeGroup": [], "Seyna": [],
+}
+RACHETEE = re.compile(r"rachet[ée]e? par|acquired by|acquise? par|en liquidation|liquidée", re.I)
+SORTIE_SOCIETE = re.compile(r"^(acquisition|cession|liquidation|faillite|introduction|prise de contrôle|prise de participation majoritaire)", re.I)
+
+
+def _annee(v):
+    try:
+        y = int(float(v))
+        return y if 1990 <= y <= 2035 else None
+    except (TypeError, ValueError):
+        m = re.search(r"(19|20)\d\d", str(v or ""))
+        return int(m.group(0)) if m else None
+
+
+def construire_marche_cibles(startups: list[dict], fonds: list[dict]) -> tuple[dict, list[dict]]:
+    from liens_croises import norm
+    cvc = {f["nom"] for f in fonds if f.get("typeInvestisseur") == "CVC"}
+    societes: dict[str, dict] = {}
+    for s in startups:  # une entrée par société (données société identiques sur toutes ses lignes)
+        k = norm(s["nom"])
+        e = societes.setdefault(k, {"nom": s["nom"], "ref": f"{s['fid']}|{s['nom']}", "lignes": [], "fonds": set()})
+        e["lignes"].append(s)
+        e["fonds"].add(s.get("fondsNom") or "")
+    annee_ref = pd.Timestamp.now().year
+
+    def champ(e, cle):
+        return next((l.get(cle) for l in e["lignes"] if l.get(cle) not in (None, "")), None)
+
+    marche_levees, valos, sorties, cibles = [], [], [], []
+    actifs = {}
+    for e in societes.values():
+        base = e["lignes"][0]
+        statut = champ(e, "statutDetail") or ""
+        dt_an, dt_mt = _annee(champ(e, "dtAnnee")), champ(e, "dtMontant")
+        bucket = secteur_bucket(base.get("secteur"), base.get("nom"))
+        # description seule : les notes ajoutées par les mises à jour ([Recherche …], [Données publiques …])
+        # citent des investisseurs (« Mutuelle des Motards »…) et fausseraient le domaine
+        desc = re.split(r"\s\[", str(champ(e, "commentaires") or ""))[0]
+        texte = " ".join(str(x or "") for x in (base.get("secteur"), base.get("nom"), desc))
+        if e["nom"] in DOMAINES_GVI:
+            domaines = list(DOMAINES_GVI[e["nom"]])
+        else:
+            domaines = [c for c, (_, rx) in PRIORITES_GVI.items() if rx.search(texte)]
+            for b, d in (("sante", "sante"), ("climat", "climat"), ("telematique", "sinistres")):
+                if bucket == b and d not in domaines:
+                    domaines.append(d)
+        if dt_an and dt_an >= annee_ref - 1 and dt_mt:
+            marche_levees.append({"nom": e["nom"], "ref": e["ref"], "annee": dt_an, "montant": dt_mt,
+                                  "stade": champ(e, "dtStade"), "lead": champ(e, "dtLead"), "pays": champ(e, "pays"),
+                                  "domaines": domaines})
+        if champ(e, "valorisation"):
+            valos.append({"nom": e["nom"], "ref": e["ref"], "valo": champ(e, "valorisation"),
+                          "annee": _annee(champ(e, "valoAnnee")), "pays": champ(e, "pays")})
+        an_sortie = _annee(re.search(r"\((\d{4})\)", statut).group(1)) if re.search(r"\((\d{4})\)", statut) else None
+        if SORTIE_SOCIETE.match(statut) and an_sortie and an_sortie >= annee_ref - 3:
+            sorties.append({"nom": e["nom"], "ref": e["ref"], "statut": statut, "annee": an_sortie})
+        for l in e["lignes"]:
+            a = _annee(l.get("dateInvest"))
+            if a and a >= annee_ref - 2 and l.get("fondsNom"):
+                actifs[l["fondsNom"]] = actifs.get(l["fondsNom"], 0) + 1
+
+        # ----- cibles GVI -----
+        pays = champ(e, "pays") or ""
+        if (bucket is None and "adjacent" not in str(base.get("secteur") or "").lower()) or "hors" in str(base.get("secteur") or "").lower():
+            continue
+        if SORTIE_SOCIETE.match(statut) or RACHETEE.search(desc) or not PAYS_EUROPE.search(pays):
+            continue
+        score, raisons = 0, []
+        if domaines:
+            score += 35
+            raisons.append("priorité : " + ", ".join(PRIORITES_GVI[d][0] for d in domaines))
+        if bucket in ("coeur", "fintech", "data", "telematique", "sante", "cyber", "emploi", "climat"):
+            score += 10
+        tour = dt_mt if dt_mt is not None else champ(e, "tailleDuTour")
+        total = champ(e, "totalLeve")
+        if tour is None:
+            score += 8
+            raisons.append("taille de tour non publiée")
+        elif tour <= 15:
+            score += 20
+            raisons.append(f"tour de {str(round(tour, 1)).replace('.', ',')} M€ compatible avec un ticket de 0,2 à 2 M€")
+        elif tour <= 40:
+            score += 10
+            raisons.append(f"tour de {round(tour)} M€ : ticket GVI minoritaire")
+        else:
+            raisons.append(f"tour de {round(tour)} M€ : au-delà du ticket GVI")
+        if total is not None and total > 100:
+            score -= 10
+        if dt_an and dt_an >= annee_ref - 1:
+            score += 15
+            raisons.append(f"dernière levée en {dt_an}")
+        elif dt_an and dt_an >= annee_ref - 3:
+            score += 8
+            raisons.append(f"dernière levée en {dt_an}")
+        portefeuille = "Groupama" in e["fonds"]
+        assureurs = sorted(f for f in e["fonds"] if f in cvc and f != "Groupama")
+        if assureurs:
+            score += 10
+            raisons.append("CVC déjà au capital")
+        if not domaines:
+            score = min(score, 45)  # hors priorités du moment : jamais en tête de liste
+        if tour is not None and tour > 40:
+            score = min(score, 50)  # tour sans commune mesure avec un ticket de 0,2 à 2 M€
+        valo = champ(e, "valorisation")
+        if (valo is not None and valo > 100) or (total is not None and total > 60):
+            # 0,2–2 M€ pour 5–20 % du capital ≈ valorisation de 40 M€ au plus
+            score = min(score, 50)
+            raisons.append("valorisation ou montant levé trop élevés pour 5–20 % du capital")
+        cibles.append({"nom": e["nom"], "ref": e["ref"], "score": max(score, 0), "domaines": domaines, "pays": pays,
+                       "dtAnnee": dt_an, "dtMontant": dt_mt, "dtStade": champ(e, "dtStade"), "totalLeve": total,
+                       "fonds": sorted(f for f in e["fonds"] if f), "pipe": bool(champ(e, "pipeUrl")), "portefeuille": portefeuille,
+                       "pipeUrl": champ(e, "pipeUrl"), "raisons": raisons})
+    cibles.sort(key=lambda c: (-c["score"], c["nom"].lower()))
+    nb_dom = {d: sum(1 for l in marche_levees if d in l["domaines"]) for d in PRIORITES_GVI}
+    marche = {
+        "anneeRef": annee_ref,
+        "nbSocietes": len(societes),
+        "nbLevees": len(marche_levees),
+        "montantLevees": round(sum(l["montant"] for l in marche_levees), 1),
+        "nbSorties": len(sorties),
+        "levees": sorted(marche_levees, key=lambda l: (-l["annee"], -l["montant"]))[:25],
+        "valos": sorted(valos, key=lambda v: -v["valo"])[:12],
+        "sorties": sorted(sorties, key=lambda x: -x["annee"])[:18],
+        "fondsActifs": sorted(({"nom": k, "n": v} for k, v in actifs.items()), key=lambda x: -x["n"])[:10],
+        "domaines": [{"cle": d, "nom": PRIORITES_GVI[d][0], "n": nb_dom[d]} for d in PRIORITES_GVI],
+    }
+    return marche, cibles
+
+
 def main() -> int:
     entree = localiser_dernier_classeur()
     version = re.search(r"_v(\d+)\.xlsx$", entree.name).group(1)
@@ -506,6 +684,7 @@ def main() -> int:
     relier_startups(startups)
     tendances = construire_tendances(part_df)
     pays = construire_pays(part_df)
+    marche, cibles = construire_marche_cibles(startups, fonds)
     points_ouverts = construire_points_ouverts(ano_df)
 
     data = {
@@ -517,6 +696,9 @@ def main() -> int:
         "tendances": tendances,
         "pays": pays,
         "pointsOuverts": points_ouverts,
+        "marche": marche,
+        "cibles": cibles,
+        "prioritesGvi": {k: v[0] for k, v in PRIORITES_GVI.items()},
     }
 
     template = (BASE_DIR / "_site_template.html").read_text(encoding="utf-8")
@@ -529,6 +711,8 @@ def main() -> int:
     print(f"Sociétés de gestion : {len(set(f['nom'] for f in fonds))}")
     print(f"Tendances : {tendances['total']} participations classées ({tendances['exclues']} exclues : date ou secteur non exploitable)")
     print(f"Pays d'origine : {pays['total']} participations réparties sur {len(pays['pays'])} pays ({pays['exclues']} exclues : pays non identifiable)")
+    print(f"Marché : {marche['nbLevees']} levées depuis {marche['anneeRef'] - 1}, {marche['nbSorties']} sorties récentes · "
+          f"Cibles GVI : {len(cibles)} sociétés éligibles, {sum(1 for c in cibles if c['score'] >= 60 and not c['portefeuille'])} à 60 points ou plus hors portefeuille")
     print(f"Fiabilité : {len(points_ouverts)} points ouverts publiés (sur {len(ano_df)} lignes d'anomalies)")
     return 0
 

@@ -216,6 +216,31 @@ table.data td{padding:7px 10px;border-bottom:1px solid var(--line-soft);vertical
 table.data td.num{text-align:right;font-variant-numeric:tabular-nums}
 table.data tr:hover td{background:var(--paper)}
 .tbl-wrap{overflow-x:auto}
+.panel{min-width:0}
+/* ---------- Marché & Cibles GVI ---------- */
+.mk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin-top:28px}
+.mk-grid > div{min-width:0}
+.bars{display:flex;flex-direction:column;gap:7px;font-size:13.5px}
+.bar-row{display:grid;grid-template-columns:minmax(110px,40%) 1fr auto;gap:10px;align-items:center}
+.bar-row .lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{height:10px;background:var(--line-soft);border-radius:2px;overflow:hidden}
+.bar-fill{height:100%;background:var(--petrol)}
+.bar-row .val{font-variant-numeric:tabular-nums;color:var(--muted);font-size:12.5px}
+.score{display:inline-flex;align-items:center;gap:6px;font-variant-numeric:tabular-nums;font-weight:600}
+.score i{display:inline-block;width:46px;height:6px;background:var(--line-soft);border-radius:2px;overflow:hidden}
+.score i b{display:block;height:100%;background:var(--petrol)}
+.score.hi{color:var(--petrol)}
+.dom{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:1px 6px;font-size:11.5px;margin:0 3px 3px 0;color:var(--muted);white-space:nowrap}
+.dom.sante{border-color:var(--good);color:var(--good)}
+.dom.sinistres{border-color:var(--petrol);color:var(--petrol)}
+.dom.primes{border-color:var(--ochre);color:var(--ochre)}
+.dom.climat{border-color:var(--bad);color:var(--bad)}
+.gvi-badge{font-size:11.5px;font-weight:600;white-space:nowrap}
+.cib-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 6px}
+.cib-controls button{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:5px 11px;border-radius:3px;font:inherit;font-size:13px;cursor:pointer}
+.cib-controls button[aria-pressed="true"]{border-color:var(--petrol);background:var(--petrol-soft);color:var(--petrol)}
+.cib-controls label{font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:center;margin-left:6px}
+.raisons{font-size:12px;color:var(--muted);max-width:420px;margin-top:3px;line-height:1.4}
 .role{font-size:11px;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted)}
 .role.lead{border-color:var(--ochre);color:var(--ochre);background:var(--ochre-soft)}
 .confiance{font-size:11px;padding:1px 7px;border-radius:20px;font-weight:500}
@@ -326,12 +351,14 @@ table.trend-table tr:hover td{background:var(--paper)}
 .foot{max-width:1100px;margin-top:40px;padding-top:14px;border-top:1px solid var(--line-soft);color:var(--muted);font-size:12px}
 
 @media (max-width:860px){
-  .layout{grid-template-columns:1fr}
+  .layout{grid-template-columns:minmax(0,1fr)}
   .rail{position:static;max-height:340px;border-right:0;border-bottom:1px solid var(--line)}
   .panel{padding:20px 16px 60px}
   .sheet-name{font-size:29px}
   .topbar{padding:12px 16px}
-  .tabs{margin-left:0;width:100%;order:3}
+  .tabs{margin-left:0;width:100%;order:3;overflow-x:auto;scrollbar-width:none}
+  .tab{flex:0 0 auto;padding:6px 10px}
+  .tools{flex-wrap:wrap}
 }
 .crossnav{display:flex;flex-wrap:wrap;align-items:center;gap:0;font-size:12px;padding:7px 24px;border-bottom:1px solid var(--line-soft);background:var(--paper)}
 .crossnav a{color:var(--muted);text-decoration:none;padding:2px 0}
@@ -351,8 +378,10 @@ table.trend-table tr:hover td{background:var(--paper)}
   <div class="brand">Radar <span>Insurtech VC</span></div>
   <div class="count" id="count">—</div>
   <nav class="tabs" role="tablist">
-    <button class="tab" role="tab" data-view="funds" aria-selected="true">Fonds</button>
+    <button class="tab" role="tab" data-view="marche" aria-selected="true">Marché</button>
+    <button class="tab" role="tab" data-view="funds" aria-selected="false">Fonds</button>
     <button class="tab" role="tab" data-view="startups" aria-selected="false">Start-ups</button>
+    <button class="tab" role="tab" data-view="cibles" aria-selected="false">Cibles GVI</button>
     <button class="tab" role="tab" data-view="compare" aria-selected="false">Comparateur</button>
     <button class="tab" role="tab" data-view="trends" aria-selected="false">Tendances</button>
     <button class="tab" role="tab" data-view="fiabilite" aria-selected="false">Fiabilité</button>
@@ -409,7 +438,7 @@ window.__DATA__ = __DATA_JSON__;
    ============================================================ */
 
 const RAW = window.__DATA__;
-const S = { view:'funds', selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:'',recence:''}, trendsTable:false, fiabQ:'' };
+const S = { view:'marche', cibDom:'', cibTout:false, cibPipe:true, selFund:null, selStartup:null, pinned:[], q:'', filters:{type:'',strat:'',stage:'',statut:'',quart:'',recence:''}, trendsTable:false, fiabQ:'' };
 
 const STAGES = ["Pré-Seed","Seed","Pré-Série A","Série A","Série B","Série C","Série D"];
 const norm = s => (s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
@@ -1080,6 +1109,85 @@ function hideTrendTooltip(){
   document.querySelectorAll('.trend-band').forEach(b => b.classList.remove('is-active'));
 }
 
+
+/* ---------- Marché (tableau de bord) ---------- */
+const fmtM = v => v === null || v === undefined ? '—' : (v >= 1000 ? fmtN(v/1000, 2) + ' Md€' : fmtN(v, v < 10 ? 1 : 0) + ' M€');
+const lienSoc = (ref, nom) => `<a href="#" data-goto="${esc(ref)}">${esc(nom)}</a>`;
+const domChips = ds => (ds||[]).map(d => `<span class="dom ${d}">${esc(RAW.prioritesGvi[d])}</span>`).join('');
+function barres(items, max){
+  return `<div class="bars">${items.map(i => `<div class="bar-row"><span class="lbl" title="${esc(i.lbl)}">${esc(i.lbl)}</span>
+    <span class="bar-track"><span class="bar-fill" style="display:block;width:${max ? Math.max(2, 100*i.v/max) : 0}%"></span></span>
+    <span class="val">${esc(i.txt)}</span></div>`).join('')}</div>`;
+}
+function renderMarche(){
+  const m = RAW.marche, a = m.anneeRef;
+  const doms = m.domaines.map(d => ({lbl: d.nom, v: d.n, txt: d.n + (d.n > 1 ? ' levées' : ' levée')}));
+  const actifs = m.fondsActifs.map(f => ({lbl: f.nom, v: f.n, txt: f.n + ' inv.'}));
+  return `
+  <h1 class="sheet-name">Marché insurtech</h1>
+  <p class="cmp-hint">Vue d'ensemble des ${m.nbSocietes} sociétés suivies dans le Radar : levées, valorisations et sorties connues. Les montants viennent des fiches start-ups (sources citées sur chaque fiche) ; les années sont celles publiées, sans mois.</p>
+  <dl class="band">
+    ${figure('Sociétés suivies', m.nbSocietes)}
+    ${figure(`Levées ${a-1}–${a}`, m.nbLevees)}
+    ${figure(`Montant levé ${a-1}–${a}`, m.montantLevees >= 1000 ? m.montantLevees/1000 : m.montantLevees, m.montantLevees >= 1000 ? ' Md€' : ' M€', 1)}
+    ${figure(`Sorties ${a-3}–${a}`, m.nbSorties)}
+  </dl>
+  <div class="mk-grid">
+    <div><h3 class="sec">Levées récentes par priorité GVI</h3>${barres(doms, Math.max(...doms.map(d=>d.v), 1))}
+      <p class="note">Une même levée peut relever de plusieurs priorités. Détail dans l'onglet « Cibles GVI ».</p></div>
+    <div><h3 class="sec">Fonds les plus actifs depuis ${a-2}</h3>${actifs.length ? barres(actifs, actifs[0].v) : '<p class="note">Aucune année d\'investissement récente renseignée.</p>'}
+      <p class="note">Nombre de participations datées de ${a-2} ou après dans le Radar.</p></div>
+  </div>
+  <h3 class="sec" style="margin-top:32px">Dernières levées (${a-1}–${a})</h3>
+  <div class="tbl-wrap"><table class="data"><thead><tr><th>Société</th><th>Année</th><th>Tour</th><th class="num">Montant</th><th>Chef de file</th><th>Pays</th><th>Priorité GVI</th></tr></thead><tbody>
+    ${m.levees.map(l => `<tr><td>${lienSoc(l.ref, l.nom)}</td><td>${l.annee}</td><td>${esc(l.stade||'—')}</td><td class="num">${fmtM(l.montant)}</td><td>${esc(l.lead||'—')}</td><td>${esc(l.pays||'—')}</td><td>${domChips(l.domaines)}</td></tr>`).join('')}
+  </tbody></table></div>
+  <div class="mk-grid">
+    <div><h3 class="sec">Valorisations les plus élevées</h3>
+      <table class="data"><tbody>${m.valos.map(v => `<tr><td>${lienSoc(v.ref, v.nom)}</td><td class="num">${fmtM(v.valo)}</td><td>${v.annee || '—'}</td></tr>`).join('')}</tbody></table></div>
+    <div><h3 class="sec">Sorties récentes</h3>
+      <table class="data"><tbody>${m.sorties.map(x => `<tr><td>${lienSoc(x.ref, x.nom)}</td><td class="raisons">${esc(x.statut)}</td></tr>`).join('')}</tbody></table></div>
+  </div>`;
+}
+
+/* ---------- Cibles GVI ---------- */
+function cibVisibles(){
+  return RAW.cibles.filter(c => (!S.cibDom || c.domaines.includes(S.cibDom))
+    && (S.cibTout || c.score >= 50) && (S.cibPipe || (!c.pipe && !c.portefeuille)));
+}
+function cibTable(){
+  const v = cibVisibles();
+  return v.length ? `<div class="tbl-wrap"><table class="data"><thead><tr><th>Score</th><th>Société et motifs</th><th>Priorité</th><th>Dernier tour</th><th>Pays</th><th>GVI</th></tr></thead><tbody>
+    ${v.map(c => `<tr>
+      <td><span class="score${c.score >= 70 ? ' hi' : ''}">${c.score}<i><b style="width:${c.score}%"></b></i></span></td>
+      <td>${lienSoc(c.ref, c.nom)}<div class="raisons">${esc(c.raisons.filter(r => !r.startsWith('priorité')).join(' · '))}${c.fonds.length ? `<br>Au capital : ${esc(c.fonds.join(', '))}` : ''}</div></td>
+      <td>${domChips(c.domaines) || '<span style="color:var(--muted)">—</span>'}</td>
+      <td>${c.dtAnnee || c.dtMontant ? [c.dtAnnee, c.dtMontant != null ? fmtM(c.dtMontant) : null, c.dtStade].filter(Boolean).map(esc).join(' · ') : '—'}</td>
+      <td>${esc(c.pays||'—')}</td>
+      <td>${c.portefeuille ? '<span class="gvi-badge" style="color:var(--good)">Portefeuille GVI</span>' : c.pipe ? `<a class="gvi-badge" href="${esc(c.pipeUrl)}" target="_blank" rel="noopener">Dans le pipe ↗</a>` : '<span class="gvi-badge" style="color:var(--ochre)">Nouveau</span>'}</td>
+</tr>`).join('')}
+  </tbody></table></div>` : '<p class="note">Aucune société ne correspond à ces filtres.</p>';
+}
+function renderCibles(){
+  const n = RAW.cibles.filter(c => c.score >= 50 && !c.pipe && !c.portefeuille).length;
+  return `
+  <h1 class="sheet-name">Cibles GVI</h1>
+  <p class="cmp-hint">Sociétés européennes du Radar, non rachetées, classées selon la thèse GVI : ticket de 200 k€ à 2 M€ pour 5 à 20 % du capital, et priorités du moment (santé ; gestion des sinistres et prévention ; gestion des primes ; climat, catastrophes naturelles et transition énergétique). <strong>${n}</strong> sociétés à 50 points ou plus ne sont encore ni dans le pipe ni au portefeuille.</p>
+  <div class="cib-controls" id="cib-ctl">
+    <button data-dom="" aria-pressed="${!S.cibDom}">Toutes priorités</button>
+    ${Object.entries(RAW.prioritesGvi).map(([k, v]) => `<button data-dom="${k}" aria-pressed="${S.cibDom===k}">${esc(v)}</button>`).join('')}
+    <label><input type="checkbox" id="cib-tout" ${S.cibTout?'checked':''}> Afficher aussi les scores < 50</label>
+    <label><input type="checkbox" id="cib-pipe" ${S.cibPipe?'checked':''}> Inclure pipe et portefeuille</label>
+  </div>
+  <div id="cib-res">${cibTable()}</div>
+  <p class="note">Barème sur 100 : priorité du moment 35 · périmètre assurance 10 · taille du dernier tour compatible avec le ticket 20 (10 si 15–40 M€) · levée récente 15 (8 si 2–3 ans) · CVC d'assureur déjà au capital 10. Plafonds : 45 hors priorités, 50 au-delà de 40 M€ de tour, de 100 M€ de valorisation ou de 60 M€ levés. Les domaines viennent d'un classement manuel pour les sociétés connues, sinon des mots-clés de la description. Outil d'aide au sourcing : à confirmer par l'analyse GVI.</p>`;
+}
+function wireCibles(){
+  document.querySelectorAll('#cib-ctl button').forEach(b => b.onclick = () => { S.cibDom = b.dataset.dom; render(); });
+  document.getElementById('cib-tout').onchange = e => { S.cibTout = e.target.checked; document.getElementById('cib-res').innerHTML = cibTable(); };
+  document.getElementById('cib-pipe').onchange = e => { S.cibPipe = e.target.checked; document.getElementById('cib-res').innerHTML = cibTable(); };
+}
+
 /* ---------- rendu global ---------- */
 function render(){
   document.getElementById('count').textContent =
@@ -1088,6 +1196,8 @@ function render(){
   renderRail();
 
   const panel = document.getElementById('panel');
+  if (S.view === 'marche'){ panel.innerHTML = renderMarche(); return; }
+  if (S.view === 'cibles'){ panel.innerHTML = renderCibles(); wireCibles(); return; }
   if (S.view === 'compare'){ panel.innerHTML = renderCompare(); return; }
   if (S.view === 'trends'){ panel.innerHTML = renderTrends(); return; }
   if (S.view === 'fiabilite'){ panel.innerHTML = renderFiabilite(); wireFiabiliteControls(); return; }
@@ -1244,6 +1354,8 @@ function appliquerHash(){
   if (h.startsWith('s-')){
     const s = STARTUPS.find(x => x.slug === h.slice(2));
     if (s){ S.view = 'startups'; S.selStartup = s.fid + '|' + s.nom; }
+  } else if (h === 'marche' || h === 'cibles'){
+    S.view = h;
   } else if (h.startsWith('f-')){
     const f = FONDS.find(x => x.fid === h.slice(2));
     if (f){ S.view = 'funds'; S.selFund = f.fid; }
