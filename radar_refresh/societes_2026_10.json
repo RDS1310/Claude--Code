@@ -1,0 +1,3117 @@
+{
+ "date": "2026-10-31",
+ "regles": "M€ ($×0,92, £×1,17) ; année seule ; valeurs issues des sources citées, agrégateurs = confiance Moyen",
+ "societes": {
+  "Alan": {
+   "total_leve": 1200,
+   "total_note": "plus de 1,2 Md€ selon la société",
+   "dernier_tour": {
+    "stage": "Série G",
+    "montant": 480,
+    "annee": 2026,
+    "lead": "Prosus"
+   },
+   "valorisation": 5500,
+   "valo_annee": 2026,
+   "pays": "France",
+   "creation": 2016,
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2026/06/25/french-health-insurance-outfit-alan-agrees-eur480m-funding-round/",
+    "https://fintech.global/2026/03/12/alan-valued-at-e5b-after-e100m-funding-round/"
+   ]
+  },
+  "Luko": {
+   "total_leve": 78.2,
+   "total_note": "≈ 85 M$ (agrégateurs CB Insights / Village)",
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Allianz Direct",
+    "annee": 2024,
+    "montant": 4.3,
+    "note": "activité habitation France reprise pour 4,3 M€ après redressement judiciaire"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://techcrunch.com/2024/01/25/luko-insurtech-allianz-direct/",
+    "https://www.cbinsights.com/company/luko/financials"
+   ]
+  },
+  "Descartes Underwriting": {
+   "total_leve": 130.4,
+   "total_note": "≈ 141,8 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Investissement stratégique (extension Série B)",
+    "annee": 2025,
+    "lead": "Battery Ventures"
+   },
+   "tour_precedent": {
+    "stage": "Série B",
+    "montant": 110.4,
+    "annee": 2022,
+    "lead": "Highland Europe"
+   },
+   "valo_note": "> 500 M$ (source unique, non retenue)",
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://descartesunderwriting.com/newsroom/descartes-underwriting-raises-120-million-become-category-leader-corporate-insurance",
+    "https://finder.techleap.nl/news/feed/descartes-secures-investment-from-battery-ventures",
+    "https://www.cbinsights.com/company/descartes-underwriting/financials"
+   ]
+  },
+  "Clark": {
+   "alias": [
+    "CLARK"
+   ],
+   "total_leve": 117.8,
+   "total_note": "≈ 128 M$ (Multiples.vc, CB Insights)",
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 69,
+    "annee": 2020,
+    "lead": "Tencent"
+   },
+   "valo_note": "non publiée (la société ne commente pas)",
+   "pays": "Allemagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://fintech.global/2021/12/01/german-insurtech-clark-said-to-close-e69m-series-c/",
+    "https://multiples.vc/private-comps/clark"
+   ]
+  },
+  "Stoïk": {
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 25,
+    "annee": 2024,
+    "lead": "Alven"
+   },
+   "total_note": "divergent selon les agrégateurs (53,9 M$ à 116 M$), non retenu",
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2024/10/15/french-cyber-insurance-leader-stoik-secures-eur25m-series-b/"
+   ]
+  },
+  "Seyna": {
+   "total_leve": 57,
+   "dernier_tour": {
+    "stage": "Série A (extension)",
+    "montant": 10,
+    "annee": 2025,
+    "lead": "115K"
+   },
+   "ca": {
+    "montant": 91,
+    "annee": 2024
+   },
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.maddyness.com/2025/09/15/assurtech-seyna-leve-10-millions-deuros-pour-passer-la-vitesse-superieure/",
+    "https://fintech.global/2025/09/16/parisian-insurtech-seyna-bags-e10m-funding-round/"
+   ]
+  },
+  "By Miles": {
+   "total_leve": 25.1,
+   "total_note": "≈ 27,2 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 17.6,
+    "annee": 2020,
+    "lead": "CommerzVentures",
+    "note": "15 M£"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Direct Line Group",
+    "annee": 2023
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cbinsights.com/company/just-miles/financials",
+    "https://www.crowdfundinsider.com/?p=161843",
+    "https://app.dealroom.co/companies/by_miles"
+   ]
+  },
+  "Artificial Labs": {
+   "total_leve": 66.7,
+   "total_note": "≈ 72,5 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 41.4,
+    "annee": 2026,
+    "lead": "CommerzVentures"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://artificial.io/company/blog/artificial-labs-raises-usd45m-series-b-to-accelerate-global-growth",
+    "https://www.cbinsights.com/company/artificial-labs/financials"
+   ]
+  },
+  "Epsor": {
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 16,
+    "annee": 2025,
+    "lead": "Fonds Stratégique des Transitions (ISALT)"
+   },
+   "total_note": "près de 30 M€ à fin 2022 (communiqué) + 16 M€ en 2025",
+   "total_leve": 46,
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://finyear.com/Epsor-fait-entrer-le-Fonds-Strategique-des-Transitions-FST-a-son-capital_a52284.html",
+    "https://www.frenchweb.fr/fintech-le-francais-epsor-leve-20-millions-deuros-aupres-de-gaia-capital/422697"
+   ]
+  },
+  "Faye": {
+   "total_leve": 45.1,
+   "total_note": "49 M$ (communiqué Série B)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 28.5,
+    "annee": 2024,
+    "lead": "Portage"
+   },
+   "pays": "États-Unis / Israël",
+   "confiance": "Élevé",
+   "sources": [
+    "https://techcrunch.com/2024/07/30/packing-travel-insurance-products-into-an-app-helped-faye-to-a-31m-series-b",
+    "https://www.argophilia.com/news/faye/235648/"
+   ]
+  },
+  "Coverflex": {
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 15,
+    "annee": 2023
+   },
+   "total_note": "20 à 29 M$ selon les agrégateurs, non retenu",
+   "pays": "Portugal",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.forbespt.com/?p=59864",
+    "https://seedtable.com/companies/coverflex/funding-rounds/series-a-2023-02"
+   ]
+  },
+  "Dialogue": {
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Sun Life",
+    "annee": 2023,
+    "note": "5,15 CAD par action, valeur des fonds propres ≈ 365 M CAD ; société cotée à Toronto auparavant"
+   },
+   "pays": "Canada",
+   "confiance": "Élevé",
+   "sources": [
+    "https://osler.com/en/about-us/representative-work/dialogue-health-technologies-inc-en",
+    "https://www.sunlife.com/en/newsroom/news-releases/announcement/sun-life-strengthens-investment-in-virtual-care/123609/"
+   ]
+  },
+  "Goodvest": {
+   "total_leve": 25.4,
+   "total_note": "≈ 27,6 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 12,
+    "annee": 2025,
+    "lead": "Serena (InnovAllianz III)"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.comparateurbanque.com/?p=163670",
+    "https://www.cbinsights.com/company/goodvest/financials"
+   ]
+  },
+  "Gravie": {
+   "total_leve": 426,
+   "total_note": "463 M$ au total après le tour mené par General Atlantic (2026)",
+   "dernier_tour": {
+    "stage": "Croissance",
+    "annee": 2026,
+    "lead": "General Atlantic"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://pulse2.com/gravie-raises-new-funding-led-by-general-atlantic-and-brings-total-capital-to-463-million/",
+    "https://fintech.global/2026/07/31/gravie-lands-general-atlantic-backing-total-hits-463m/"
+   ]
+  },
+  "FloodFlash": {
+   "total_leve": 16.5,
+   "total_note": "≈ 17,9 M$ (amorçage 1,9 M£ + Série A 15 M$)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 13.8,
+    "annee": 2022,
+    "lead": "Buoyant Ventures"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "NormanMax Insurance Solutions",
+    "annee": 2025,
+    "note": "rapporté par CB Insights uniquement"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://insurtechdigital.com/insurtech/insurtech-floodflash-hits-us-15mn-in-series-a-funding-round",
+    "https://www.cbinsights.com/company/floodflash"
+   ]
+  },
+  "Garantme": {
+   "total_leve": 20,
+   "total_note": "près de 20 M€ (communiqué Série B)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 15,
+    "annee": 2023,
+    "lead": "Bpifrance (Digital Venture)"
+   },
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.frenchweb.fr/serie-b-proptech-garantme-leve-15-millions-deuros-aupres-de-bpifrance-bonsai-115k-new-alpha-et-axeleo/439649"
+   ]
+  },
+  "Concirrus": {
+   "total_leve": 37.8,
+   "total_note": "≈ 41,1 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B (extension)",
+    "montant": 5.5,
+    "annee": 2020,
+    "lead": "CommerzVentures"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://fintech.global/?p=46178",
+    "https://tech.eu/brief/londons-concirrus-raises-20-million-to-expand-insurtech-platform-for-smarter-risk-assessment"
+   ]
+  },
+  "Coverfy": {
+   "total_leve": 4.5,
+   "total_note": "≈ 4,5 M€ (0,75 M€ 2016 + 3,5 M€ 2017)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 3.5,
+    "annee": 2017
+   },
+   "pays": "Espagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.eu-startups.com/2017/10/barcelona-based-insurtech-startup-coverfy-secures-e3-5-million-to-fuel-the-expansion/",
+    "https://techma.bakertilly.es/en/mayores-rondas-inversion-insurtech-coverfy-app-espanola-gestion-seguros-capta-e35m/"
+   ]
+  },
+  "Continuity": {
+   "total_leve": 15,
+   "total_note": "5 M€ (2021) + 10 M€ (2024)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 10,
+    "annee": 2024,
+    "lead": "115K"
+   },
+   "pays": "France",
+   "creation": 2019,
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2024/06/10/continuity-raises-10m-for-ml-powered-risk-detection",
+    "https://elaia.com/wp-content/uploads/2024/06/PR_Continuity-Raises-E10-Million-to-Boost-Enterprise-Insurance-with-AI-Driven-Risk-Detection.pdf"
+   ]
+  },
+  "Cartan Trade": {
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Acquéreur canadien (nom non lu dans la source)",
+    "note": "« Cartan Trade passe sous pavillon canadien » (CFNews) — date à confirmer"
+   },
+   "pays": "France",
+   "confiance": "Faible",
+   "sources": [
+    "https://www.cfnews.net/L-actualite/International/Operations/M-A/Cartan-Trade-passe-sous-pavillon-canadien-645134"
+   ]
+  },
+  "Idelic": {
+   "total_leve": 29.2,
+   "total_note": "≈ 31,8 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 18.4,
+    "annee": 2021,
+    "lead": "Highland Capital Partners"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Descartes Systems Group",
+    "annee": 2026,
+    "montant": 25.8,
+    "note": "≈ 28 M$ en numéraire + complément de prix jusqu'à 12 M$ (source secondaire)"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://freightwaves.com/news/idelic-raises-20m-to-expand-driver-analytics-solution",
+    "https://yespress.io/idelic"
+   ]
+  },
+  "Cachet": {
+   "total_leve": 11,
+   "total_note": "≈ 11 M€ au total après le tour mené par Spintop Ventures (oct. 2026)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "annee": 2026,
+    "lead": "Spintop Ventures"
+   },
+   "pays": "Estonie",
+   "confiance": "Élevé",
+   "sources": [
+    "https://thenextweb.com/news/cachet-funding-spintop-ventures",
+    "https://fintech.global/2026/10/22/cachet-raises-funding-to-expand-adaptive-insurance-platform/"
+   ]
+  },
+  "Bondaval": {
+   "total_leve": 23,
+   "total_note": "plus de 25 M$ depuis la création",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 13.8,
+    "annee": 2022,
+    "lead": "Talis Capital"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://techcrunch.com/2022/12/14/bondaval-series-a",
+    "https://coverager.com/bondaval-raises-15-million/"
+   ]
+  },
+  "Acheel": {
+   "total_leve": 29,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 29,
+    "annee": 2021,
+    "lead": "Portag3 Ventures, Serena Capital, NJJ Capital"
+   },
+   "ca": {
+    "montant": 79,
+    "annee": 2022,
+    "note": "BusinessCoot"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.frenchweb.fr/acheel-nouvel-acteur-francais-de-lassurtech-leve-29-millions-deuros-aupres-de-xavier-niel/422155",
+    "https://www.businesscoot.com/en/company/acheel"
+   ]
+  },
+  "NEXT Insurance": {
+   "total_leve": 1012,
+   "total_note": "plus de 1,1 Md$ depuis la création",
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "ERGO (Munich Re)",
+    "annee": 2025,
+    "montant": 2392,
+    "note": "2,6 Md$ en numéraire pour 100 % ; ERGO détenait déjà ~29 %"
+   },
+   "valorisation": 2392,
+   "valo_annee": 2025,
+   "valo_note": "prix d'acquisition",
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://techcrunch.com/2025/03/20/next-insurance-gets-scooped-up-by-munich-re-for-2-6b",
+    "https://www.bloomberg.com/news/articles/2025-03-20/munich-re-s-ergo-to-buy-next-insurance-in-2-6-billion-deal"
+   ]
+  },
+  "Nalo": {
+   "total_leve": 2,
+   "total_note": "2 M€ auprès de 67 investisseurs (première levée, date non précisée)",
+   "pays": "France",
+   "creation": 2016,
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.francetransactions.com/actus/news-finances/la-fintech-nalo-poursuit-son-developpement-et-leve-2-millions-d-euros-aupres-de.html"
+   ]
+  },
+  "Qover": {
+   "total_leve": 92,
+   "total_note": "plus de 100 M$ (fonds propres + dette), annonce du 31/03/2026",
+   "dernier_tour": {
+    "stage": "Dette de croissance",
+    "montant": 10,
+    "annee": 2026,
+    "lead": "CIBC Innovation Banking"
+   },
+   "tour_precedent": {
+    "stage": "Série C",
+    "montant": 27.6,
+    "annee": 2023
+   },
+   "pays": "Belgique",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.qover.com/press/10-years-embedded-insurance-12m-funding",
+    "https://www.qover.com/press/insurtech-qover-series-c-funding-round"
+   ]
+  },
+  "Roadzen": {
+   "exit": {
+    "type": "Introduction en bourse (SPAC)",
+    "acquereur": "Nasdaq (RDZN), fusion avec Vahanna Tech Edge Acquisition I",
+    "annee": 2023,
+    "note": "valeur des fonds propres pré-money 683 M$ ; transaction valorisée 965 M$"
+   },
+   "valorisation": 628,
+   "valo_annee": 2023,
+   "valo_note": "683 M$ pré-money (SPAC)",
+   "pays": "Inde / États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2023/09/26/roadzen-secures-nasdaq-listing-with-683m-equity-value/",
+    "https://www.kitco.com/news/off-the-wire/2023-02-13/insurance-tech-firm-roadzen-go-public-965-mln-spac-deal"
+   ]
+  },
+  "Shift Technology": {
+   "total_leve": 294,
+   "total_note": "≈ 320 M$ après la Série D",
+   "dernier_tour": {
+    "stage": "Série D",
+    "montant": 202,
+    "annee": 2021,
+    "lead": "Advent International"
+   },
+   "valorisation": 920,
+   "valo_annee": 2021,
+   "valo_note": "« plus de 1 Md$ » (licorne)",
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2021/05/06/add-another-unicorn-to-the-list-paris-based-shift-technology-raises-220-million-in-series-d-round-valued-at-over-1-billion"
+   ]
+  },
+  "TheGuarantors": {
+   "total_leve": 101,
+   "total_note": "plus de 110 M$ (fonds propres et dette, 2023)",
+   "dernier_tour": {
+    "stage": "Dette",
+    "montant": 32.2,
+    "annee": 2023,
+    "lead": "CIBC Innovation Banking"
+   },
+   "tour_precedent": {
+    "stage": "Série C",
+    "montant": 46,
+    "annee": 2022,
+    "lead": "Portage Ventures"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://pulse2.com/theguarantors-35-million-funding/",
+    "https://coverager.com/theguarantors-raises-50-million/"
+   ]
+  },
+  "Particeep": {
+   "total_note": "plusieurs levées en capital et dette (1,35 M€ selon FrenchWeb, non daté) ; dernier tour « Corporate Majority » selon CB Insights (prise de contrôle non confirmée)",
+   "dernier_tour": {
+    "stage": "Entrée minoritaire de Truffle Capital et Sopra Steria",
+    "annee": 2021
+   },
+   "pays": "France",
+   "confiance": "Faible",
+   "sources": [
+    "https://www.financialafrik.com/2021/02/20/fintech-truffle-capital-et-sopra-steria-dans-le-capital-de-particeep/",
+    "https://www.cbinsights.com/company/particeep/financials"
+   ]
+  },
+  "Olino (ex-Riskee)": {
+   "total_leve": 2.2,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 2.2,
+    "annee": 2022,
+    "lead": "Newfund"
+   },
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2022/10/06/french-insurtech-startup-olino-scores-eur22-million-to-bolster-its-embedded-insurance-product-for-european-smes/"
+   ]
+  },
+  "Insify": {
+   "total_leve": 41.3,
+   "total_note": "Série A 25 M€ + Série B 16,3 M€",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 16.3,
+    "annee": 2025,
+    "lead": "Evli Growth Partners"
+   },
+   "pays": "Pays-Bas",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cbinsights.com/company/insify/financials",
+    "https://www.startbase.com/news/insify-erweitert-series-a-auf-25-mio-euro/"
+   ]
+  },
+  "Lovys": {
+   "total_leve": 20.7,
+   "total_note": "≈ 20,7 M€ depuis 2017 (Journal du Net, janv. 2021)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 17,
+    "annee": 2021,
+    "lead": "Heartcore"
+   },
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.journaldunet.com/fintech/1496925-assurance-en-ligne-lovys-leve-17-millions-d-euros/",
+    "https://tech.eu/2021/01/19/lovys-series-a-funding"
+   ]
+  },
+  "Orus": {
+   "total_leve": 41,
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 25,
+    "annee": 2025,
+    "lead": "Singular"
+   },
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.maddyness.com/2025/06/24/assurtech-orus-leve-25-millions-deuros-pour-cibler-les-25-millions-de-tpe-et-pme-europeennes/",
+    "https://www.journaldunet.com/fintech/1542539-l-assurance-pro-pour-les-tpe-pme-orus-leve-25-millions-d-euros/"
+   ]
+  },
+  "Marshmallow": {
+   "total_leve": 207,
+   "total_note": "≈ 225 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série C (fonds propres + dette)",
+    "montant": 82.8,
+    "annee": 2025,
+    "lead": "Portage"
+   },
+   "valorisation": 1840,
+   "valo_annee": 2025,
+   "valo_note": "> 2 Md$",
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.bloomberg.com/news/articles/2025-04-15/marshmallow-valued-at-2-billion-as-blackrock-joins-fundraise",
+    "https://coverager.com/marshmallow-raises-90-million/"
+   ]
+  },
+  "Zelros": {
+   "total_leve": 15.2,
+   "total_note": "16,5 M$ après la Série A (2021)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 10.1,
+    "annee": 2021,
+    "lead": "Benhamou Global Ventures"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Earnix",
+    "annee": 2025,
+    "note": "conditions financières non communiquées"
+   },
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.businesswire.com/news/home/20250429126257/en/Earnix-the-Category-Leader-in-Dynamic-AI-for-the-Insurance-Industry-Acquires-Zelros-to-Transform-Insurers-Business-Performance",
+    "https://www.crowdfundinsider.com/?p=172657"
+   ]
+  },
+  "Calingo": {
+   "dernier_tour": {
+    "stage": "Pré-série A",
+    "annee": 2024,
+    "lead": "emma Ventures",
+    "note": "3,2 M CHF"
+   },
+   "total_note": "2,5 à 8 M$ selon les agrégateurs ; investissement de « Die Höhle der Löwen Schweiz » en 2025 (montant non publié)",
+   "pays": "Suisse",
+   "confiance": "Moyen",
+   "sources": [
+    "https://finder.techleap.nl/news/feed/calingo-secures-chf-3-2m-for-expansion",
+    "https://pitchbook.com/profiles/company/466054-84"
+   ]
+  },
+  "Buckle": {
+   "total_leve": 106,
+   "total_note": "≈ 115 M$ (fonds propres + dette)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 55.2,
+    "annee": 2021,
+    "lead": "Volery Capital Partners"
+   },
+   "exit": {
+    "type": "Faillite (filiale)",
+    "annee": 2025,
+    "note": "Chapter 7 déposé pour Buckle Services, LLC (avril 2025) ; sort de la maison mère non précisé"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://coverager.com/buckle-raises-60-million/",
+    "https://www.cbinsights.com/company/buckle/financials"
+   ]
+  },
+  "Cambridge Mobile Telematics": {
+   "total_note": "plus de 875 M$ selon Tamradar (non retenu)",
+   "dernier_tour": {
+    "stage": "Investissement stratégique (100 % secondaire)",
+    "montant": 322,
+    "annee": 2026,
+    "lead": "TPG et Allianz X"
+   },
+   "valo_note": "non publiée ; 1–2,5 Md$ selon Dealroom (estimation)",
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.fortune.com/2026/03/24/exclusive-cambridge-mobile-telematics-secures-350-million-from-tpg-allianz-to-make-driving-safer",
+    "https://files.hugheshubbard.com/pdfs/hughes-hubbard-advises-allianz-x-as-co-lead-investor-alongside-tpg-in-350-million-strategic-investment-in-cambridge-mobile-telematics.pdf"
+   ]
+  },
+  "Bifrost": {
+   "total_leve": 1.0,
+   "total_note": "≈ 1,14 M$ (seed janv. 2022, CB Insights) — courtier en réassurance bifrost.re, rapprochement probable",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1.0,
+    "annee": 2022
+   },
+   "pays": "France",
+   "creation": 2021,
+   "confiance": "Faible",
+   "sources": [
+    "https://seedtable.com/startups/bifrost-re"
+   ]
+  },
+  "Benepass": {
+   "total_leve": 68.6,
+   "total_note": "≈ 74,6 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 36.8,
+    "annee": 2026,
+    "lead": "Centana Growth Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cbinsights.com/company/benepass/financials",
+    "https://www.preqin.com/data/profile/asset/benepass-inc-/377051"
+   ]
+  },
+  "Bdeo": {
+   "total_leve": 14,
+   "total_note": "≈ 15,2 M$ sur 3 tours (Seedtable)",
+   "dernier_tour": {
+    "stage": "Série A (extension)",
+    "montant": 7.5,
+    "annee": 2023,
+    "lead": "K Fund et BlackFin"
+   },
+   "tour_precedent": {
+    "stage": "Série A",
+    "montant": 5,
+    "annee": 2020,
+    "lead": "BlackFin"
+   },
+   "pays": "Espagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.theinsurer.com/news/madrid-based-insurtech-bdeo-raises-e7-5mn-for-international-expansion/",
+    "https://tech.eu/brief/bdeo-series-a"
+   ]
+  },
+  "BOXX Insurance": {
+   "total_leve": 22.5,
+   "total_note": "24,5 M$ au total",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 13.2,
+    "annee": 2023,
+    "lead": "Zurich Insurance"
+   },
+   "pays": "Canada",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.insurancebusinessmag.com/ca/news/breaking-news/zurich-leads-series-b-funding-round-for-insurtech-boxx-insurance-434757.aspx",
+    "https://www.helpnetsecurity.com/2023/02/01/boxx-insurance-funding/"
+   ]
+  },
+  "BIMA": {
+   "total_leve": 184,
+   "total_note": "plus de 200 M$ (2020)",
+   "dernier_tour": {
+    "stage": "Croissance",
+    "montant": 27.6,
+    "annee": 2020,
+    "lead": "CreditEase (fonds fintech)"
+   },
+   "pays": "Suède",
+   "confiance": "Élevé",
+   "sources": [
+    "https://techcrunch.com/2020/09/07/bima-nabs-30m-more-for-micro-health-and-life-insurance-aimed-at-emerging-markets"
+   ]
+  },
+  "Branch Insurance": {
+   "total_leve": 211,
+   "total_note": "229,5 M$ à la Série C (2022)",
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 135,
+    "annee": 2022,
+    "lead": "Weatherford Capital"
+   },
+   "valorisation": 966,
+   "valo_annee": 2022,
+   "valo_note": "1,05 Md$ post-money",
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://techcrunch.com/?p=2331736",
+    "https://www.ourbranch.com/s/blog/series-c"
+   ]
+  },
+  "Blueberry Life": {
+   "total_leve": 3.7,
+   "total_note": "> 2,67 M£ d'investisseurs stratégiques + 0,5 M£ Crowdcube (2025)",
+   "dernier_tour": {
+    "stage": "Financement participatif (Crowdcube)",
+    "montant": 0.6,
+    "annee": 2025
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://healthcareandprotection.com/blueberry-exceeds-500k-crowdfunding-goal/",
+    "https://fintech.global/?p=202282"
+   ]
+  },
+  "Bliss (Saúde Bliss)": {
+   "total_leve": 15.8,
+   "total_note": "≈ 17,2 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 10.1,
+    "annee": 2026,
+    "lead": "Kfund et Grupo Bradesco"
+   },
+   "pays": "Brésil",
+   "confiance": "Élevé",
+   "sources": [
+    "https://latamlist.com/bliss-raises-11m-series-a",
+    "https://www.infomoney.com.br/business/startups-bliss-levanta-r-57m-para-turbinar-venda-de-planos-de-saude-com-ia/"
+   ]
+  },
+  "Butter Insurance": {
+   "dernier_tour": {
+    "stage": "Seed",
+    "annee": 2023,
+    "note": "1,3 M AUD"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Acquéreur non communiqué",
+    "annee": 2025
+   },
+   "pays": "Australie",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.insurancenews.com.au/insurtech/bittersweet-for-butter-boss-as-buyout-completed",
+    "https://coverager.com/?p=158781"
+   ]
+  },
+  "Caarl": {
+   "total_leve": 0.6,
+   "total_note": "≈ 630 k$ (CB Insights, seed)",
+   "dernier_tour": {
+    "stage": "Seed"
+   },
+   "pays": "France",
+   "confiance": "Faible",
+   "sources": [
+    "https://www.cbinsights.com/company/caarl"
+   ]
+  },
+  "Akur8": {
+   "total_leve": 165.6,
+   "total_note": "180 M$ après la Série C (communiqué)",
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 110.4,
+    "annee": 2024,
+    "lead": "One Peak"
+   },
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/akur8-raises-120-million/",
+    "https://cloud.bernama.com/en/press/news.php?id=2341137"
+   ]
+  },
+  "Amplify Life Insurance": {
+   "total_leve": 46.7,
+   "total_note": "≈ 50,8 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 18.4,
+    "annee": 2024,
+    "lead": "Crosslink Capital et Anthemis"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://coverager.com/amplify-life-raises-20-million/",
+    "https://www.cbinsights.com/company/amplify-life-insurance/financials"
+   ]
+  },
+  "Coherent": {
+   "total_leve": 12.9,
+   "total_note": "seul tour public : Série A 14 M$",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 12.9,
+    "annee": 2020,
+    "lead": "Cathay Innovation"
+   },
+   "pays": "Hong Kong",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.cathaycapital.com/insurtech-start-up-coherent-secures-us14m-series-a-investment-led-by-cathay-innovation/"
+   ]
+  },
+  "Cocoon": {
+   "total_leve": 5.2,
+   "total_note": "≈ 2 M£ (2015) + 2,46 M£ Crowdcube (2017)",
+   "dernier_tour": {
+    "stage": "Financement participatif (Crowdcube)",
+    "montant": 2.9,
+    "annee": 2017
+   },
+   "statut_note": "« Closed » selon Craft.co (non confirmé)",
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://tech.eu/2017/03/27/cocoon-raises-funding",
+    "https://www.uktech.news/news/investment-news/home-security-startup-cocoon-raises-3m-20151208"
+   ]
+  },
+  "Coalition, Inc.": {
+   "alias": [
+    "Coalition"
+   ],
+   "total_note": "755 à 800 M$ selon les agrégateurs, non retenu",
+   "dernier_tour": {
+    "stage": "Série F",
+    "montant": 230,
+    "annee": 2022,
+    "lead": "Allianz X (participant), Valor Equity Partners, Kinetic Partners"
+   },
+   "valorisation": 4600,
+   "valo_annee": 2022,
+   "valo_note": "5 Md$",
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.darkreading.com/cyberattacks-data-breaches/coalition-closes-250-million-in-series-f-funding-valuing-the-cyber-insurance-provider-at-5-billion",
+    "https://www.reinsurancene.ws/coalition-raises-250m-in-series-f-funding-to-support-its-cyber-insurance-solution/"
+   ]
+  },
+  "Club Employés": {
+   "total_leve": 23.5,
+   "total_note": "1,5 M€ + 7 M€ (mai 2022) + 15 M€ (déc. 2025)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 15,
+    "annee": 2025
+   },
+   "tour_precedent": {
+    "stage": "Série A",
+    "montant": 7,
+    "annee": 2022,
+    "lead": "MAIF Avenir"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.journaldunet.com/start-up/1546703-club-employes-leve-15-millions-d-euros-pour-sa-plateforme-d-avantages-salaries/",
+    "https://www.maddyness.com/2025/12/15/la-scale-up-club-employes-leve-15-millions-deuros/"
+   ]
+  },
+  "Claims Carbon": {
+   "alias": [
+    "Claims Carbon (Claims Carbon Institute)"
+   ],
+   "total_leve": 1.1,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1.1,
+    "annee": 2022
+   },
+   "pays": "Suède",
+   "confiance": "Élevé",
+   "sources": [
+    "https://insurance-edge.net/2022/11/27/successful-funding-round-for-claims-carbon/",
+    "https://funding.tech.eu/companies/82F194A8-AF86-4193-9345-EC2FF0DE3554"
+   ]
+  },
+  "CetoAI": {
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 4.4,
+    "annee": 2025,
+    "lead": "Dynamo Ventures"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.reinsurancene.ws/ceto-to-use-4-8m-investment-to-expand-data-driven-marine-insurance-product/",
+    "https://www.howdengroupholdings.com/about-us/howden-ventures/cetoai"
+   ]
+  },
+  "ClaimSorted": {
+   "total_leve": 15,
+   "total_note": "≈ 16,3 M$ (pré-seed 3 M$ + seed 13,3 M$)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 12.2,
+    "annee": 2025,
+    "lead": "Atomico"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://claimsjournal.com/services/newswire/2025/10/20/333606.htm",
+    "https://fintech.global/?p=178181"
+   ]
+  },
+  "Champ Titles": {
+   "total_leve": 41.4,
+   "total_note": "45 M$ après la Série C (2024) ; une série de 55 M$ en déc. 2025 n'est citée que par Multiples.vc",
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 16.6,
+    "annee": 2024,
+    "lead": "Point72 Ventures"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://jotup.co/taxonomy/term/1272061",
+    "https://kslaw.com/news-and-insights/eos-venture-partners-invests-in-champ-titles"
+   ]
+  },
+  "ChAI Insurance": {
+   "total_leve": 4.4,
+   "total_note": "≈ 4,4 M€ sur 4 tours (Tech.eu)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "annee": 2022,
+    "note": "montant non communiqué ; Insurtech Gateway participant"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.reinsurancene.ws/chai-secures-seed-round-funding-to-expand-into-ai-insurance-services/",
+    "https://funding.tech.eu/companies/2ABE5D57-6487-4AD6-9E63-23932EC2FD7A"
+   ]
+  },
+  "CoverTree": {
+   "total_leve": 21.2,
+   "total_note": "23 M$ au total",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 12,
+    "annee": 2024,
+    "lead": "Portage"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.businesswire.com/news/home/20240509918079/en/CoverTree-Secures-13-Million-in-Series-A-Funding-to-Revolutionize-Manufactured-Home-Insurance"
+   ]
+  },
+  "Coterie Insurance": {
+   "total_leve": 93.8,
+   "total_note": "plus de 102 M$ (communiqué, mars 2024)",
+   "dernier_tour": {
+    "stage": "Série C",
+    "annee": 2025,
+    "note": "date selon CB Insights ; montant non confirmé"
+   },
+   "tour_precedent": {
+    "stage": "Croissance",
+    "montant": 24.8,
+    "annee": 2024,
+    "lead": "Hiscox"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://pulse2.com/coterie-insurtech-mga-company-raises-27-million/",
+    "https://www.cbinsights.com/company/coterie-applications/financials"
+   ]
+  },
+  "DC Connected Car": {
+   "total_leve": 2.1,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 2.1,
+    "annee": 2024,
+    "lead": "Venpace"
+   },
+   "pays": "Allemagne",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2024/09/12/dc-connected-raises-eur21m-for-ai-driven-vehicle-diagnostics-platform/"
+   ]
+  },
+  "Cygnvs": {
+   "total_leve": 50.6,
+   "total_note": "55 M$ (Série A)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 50.6,
+    "annee": 2023,
+    "lead": "Andreessen Horowitz"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/cygnvs-raises-55-million/",
+    "https://www.securityweek.com/cygnvs-emerges-from-stealth-mode-with-incident-response-platform/"
+   ]
+  },
+  "Dattak": {
+   "total_leve": 18,
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 11,
+    "annee": 2023,
+    "lead": "Breega (avec XAnge)"
+   },
+   "pays": "France",
+   "creation": 2021,
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.frenchweb.fr/serie-a-linsurtech-specialisee-cyber-dattak-securise-11me-pour-accelerer-sa-conquete-europeenne/444851",
+    "https://www.cfnews.net/L-actualite/Capital-innovation/Operations/1er-tour/Dattak-securise-sa-serie-A-452562"
+   ]
+  },
+  "DeinePflege": {
+   "dernier_tour": {
+    "stage": "Série A",
+    "annee": 2022,
+    "lead": "Prosenio GmbH",
+    "note": "montant « à sept chiffres » non précisé"
+   },
+   "pays": "Allemagne",
+   "creation": 2020,
+   "confiance": "Moyen",
+   "sources": [
+    "https://cms.law/en/deu/news-information/cms-advises-digital-care-start-up-ucura-deinepflege-on-series-a-financing-round",
+    "https://www.preqin.com/data/profile/asset/deinepflege/515547"
+   ]
+  },
+  "Dayforward": {
+   "total_leve": 41.4,
+   "total_note": "45 M$ au total",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 23,
+    "annee": 2023,
+    "lead": "AXA Venture Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.theinsurer.com/?p=27572",
+    "https://coverager.com/dayforward-raises-25-million-acquires-commercial-travelers-life-insurance-company/"
+   ]
+  },
+  "Digital Fineprint": {
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "hubb (courtier)",
+    "annee": 2022,
+    "note": "montant non communiqué"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://insuranceage.co.uk/broker/7905341/hubb-buys-insurtech-provider-digital-fineprint"
+   ]
+  },
+  "Digital Insurance Group": {
+   "dernier_tour": {
+    "stage": "Croissance",
+    "montant": 15,
+    "annee": 2018,
+    "lead": "Zurich et Finch Capital"
+   },
+   "pays": "Pays-Bas",
+   "confiance": "Élevé",
+   "sources": [
+    "https://eqs-news.com/news/corporate/digital-insurance-group-signs-multi-year-collaboration-agreement-with-zurich-insurance-group/1078517",
+    "https://globalventuring.com/blog/2018/06/19/digital-insurance-group-gets-money-from-zurich/"
+   ]
+  },
+  "Digital Insure": {
+   "exit": {
+    "type": "Prise de contrôle",
+    "acquereur": "Odealim (TA Associates)",
+    "note": "entrée minoritaire fin 2020 puis prise de contrôle ; montant et date exacte non publiés"
+   },
+   "pays": "France",
+   "creation": 2013,
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cfnews.net/L-actualite/Build-up/Digital-Insure-passe-sous-le-controle-d-un-de-ses-actionnaires-413431",
+    "https://monimmeuble.com/tag/assurtech"
+   ]
+  },
+  "Doma (ex-States Title)": {
+   "exit": {
+    "type": "Acquisition (retrait de la cote)",
+    "acquereur": "Title Resources Group (Centerbridge)",
+    "annee": 2024,
+    "montant": 78,
+    "note": "6,29 $ par action, fonds propres ≈ 85 M$ ; finalisée le 27/09/2024"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://alta.org/news-and-publications/news/20240402-TRG-to-Acquire-Doma-for-85M",
+    "https://hl.com/about-us/transactions/doma-title-resources-centerbridge-sca-fo/"
+   ]
+  },
+  "Coverd": {
+   "total_leve": 1.2,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1.2,
+    "annee": 2020,
+    "lead": "Newfund"
+   },
+   "pays": "France",
+   "creation": 2019,
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.frenchweb.fr/assurtech-12-million-deuros-pour-coverd-lassurance-smartphone-en-ligne/396025"
+   ]
+  },
+  "Cuvva": {
+   "dernier_tour": {
+    "stage": "Financement participatif",
+    "annee": 2022,
+    "note": "valorisation ≈ 138 M$ selon Caplight"
+   },
+   "tour_precedent": {
+    "stage": "Série A",
+    "montant": 17.6,
+    "annee": 2019,
+    "note": "15 M£"
+   },
+   "ca": {
+    "montant": 32.1,
+    "annee": 2024,
+    "note": "27,4 M£ ; bénéfice ajusté 12,8 M£"
+   },
+   "statut_note": "cession à l'étude (Insurance Business, 2025)",
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://businesscloud.co.uk/news/insurance-provider-financially-cuvvad-as-profits-triple-to-12-8m/",
+    "https://www.insurancebusinessmag.com/uk/news/technology/insurtech-pioneer-cuvva-looks-at-sale-544863.aspx",
+    "https://fintech.global/2019/12/03/cuvva-scores-15m-in-funding-as-it-sets-sights-on-competing-with-the-uks-large-insurers/"
+   ]
+  },
+  "CyberSmart": {
+   "total_leve": 24.8,
+   "total_note": "≈ 27 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 14.9,
+    "annee": 2023,
+    "lead": "Oxx",
+    "note": "12,75 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://osborneclarke.com/news/osborne-clarke-advises-sme-cybersecurity-market-leader-cybersmart-it-attracts-ps1275m",
+    "https://www.cbinsights.com/company/cybersmart/financials"
+   ]
+  },
+  "Coincover": {
+   "total_leve": 38.3,
+   "total_note": "41,6 M$ selon le dirigeant",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 27.6,
+    "annee": 2023,
+    "lead": "Foundation Capital"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.theblock.co/post/210061/crypto-protection-startup-coincover-raises-30-million",
+    "https://coverager.com/coincover-raises-30-million/"
+   ]
+  },
+  "EMIL": {
+   "total_leve": 1.6,
+   "total_note": "≈ 1,78 M$ (CB Insights) — tour d'amorçage « à sept chiffres »",
+   "pays": "Allemagne",
+   "confiance": "Faible",
+   "sources": [
+    "https://www.cbinsights.com/company/emil-group/financials"
+   ]
+  },
+  "Drivit": {
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Zego",
+    "annee": 2020,
+    "note": "numéraire + actions, montant non communiqué"
+   },
+   "pays": "Portugal",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2020/12/09/zego-acquires-drivit",
+    "https://zego.com/blog/zego-acquires-telematics-pioneer-drivit-to-the"
+   ]
+  },
+  "FRISS": {
+   "total_leve": 77.4,
+   "total_note": "≈ 84,1 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 59.8,
+    "annee": 2021,
+    "lead": "Accel-KKR"
+   },
+   "pays": "Pays-Bas",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.ftpartners.com/transactions/friss-seriesb",
+    "https://www.cbinsights.com/company/friss/financials"
+   ]
+  },
+  "Finabro": {
+   "alias": [
+    "FINABRO"
+   ],
+   "total_leve": 5,
+   "dernier_tour": {
+    "annee": 2022,
+    "montant": 5
+   },
+   "pays": "Autriche",
+   "confiance": "Faible",
+   "sources": [
+    "https://funding.tech.eu/companies/5416E294-5248-4D93-93A6-E0502A045843"
+   ]
+  },
+  "Fenix24": {
+   "total_leve": 4.6,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 4.6,
+    "annee": 2023,
+    "lead": "Eos Venture Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2023/03/21/cyber-disaster-recovery-firm-fenix24-bags-5m/"
+   ]
+  },
+  "Energetic Insurance": {
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 6.4,
+    "annee": 2021,
+    "lead": "MS&AD Ventures (avec SCOR)"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.theinsurer.com/?p=8854",
+    "https://coverager.com/energetic-insurance-raises-7-million/"
+   ]
+  },
+  "Elpha Secure": {
+   "total_leve": 18.4,
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 18.4,
+    "annee": 2022,
+    "lead": "Canapi Ventures"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://businesswire.com/news/home/20221006005343/en/Elpha-Secure-Raises-20-Million-in-Series-A-Funding-Led-by-Canapi-Ventures"
+   ]
+  },
+  "Family First": {
+   "total_note": "16 à 18 M$ selon les agrégateurs",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 10.1,
+    "annee": 2023,
+    "lead": "RPM Ventures et Eos Venture Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2023/07/21/family-first-secures-11m-series-a-for-tech-driven-caregiver-support/",
+    "https://www.cbinsights.com/company/family-first-2/financials"
+   ]
+  },
+  "Exakt": {
+   "alias": [
+    "Exakt Health"
+   ],
+   "total_leve": 4,
+   "total_note": "plus de 4 M€ depuis 2021 (communiqué) — rapprochement avec « Exakt » du Radar à confirmer",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 2.2,
+    "annee": 2024,
+    "lead": "Barmenia Next Strategies"
+   },
+   "pays": "Allemagne",
+   "confiance": "Faible",
+   "sources": [
+    "https://www.startbase.com/news/exakt-health-schliesst-seed-finanzierungsrunde-ab/"
+   ]
+  },
+  "Black Insurance": {
+   "dernier_tour": {
+    "stage": "Investissement minoritaire",
+    "annee": 2018,
+    "lead": "Fineqia International",
+    "note": "montant non communiqué"
+   },
+   "pays": "Estonie / Royaume-Uni",
+   "confiance": "Faible",
+   "sources": [
+    "https://fintech.global/2018/07/10/fineqia-international-invests-into-blockchain-based-insurtech-black-insurance/"
+   ]
+  },
+  "Capitola": {
+   "total_leve": 19,
+   "total_note": "seed 5 M$ (2021) + Série A 15,6 M$ (2023)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 14.4,
+    "annee": 2023,
+    "lead": "Munich Re Ventures et Lightspeed"
+   },
+   "pays": "États-Unis / Israël",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.businesswire.com/news/home/20230417005052/en/Capitola-Secures-%2415.6M-in-Series-A-Funding-Round-Led-by-Munich-Re-Ventures-along-with-Lightspeed-Venture-Partners"
+   ]
+  },
+  "Cape Analytics": {
+   "total_leve": 69,
+   "total_note": "≈ 75 M$ (CB Insights)",
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Moody's",
+    "annee": 2025,
+    "note": "annoncée le 13/01/2025, conditions non communiquées"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://ir.moodys.com/press-releases/news-details/2025/Moodys-to-Acquire-CAPE-Analytics-Adding-AI-Powered-Geospatial-Property-Risk-Intelligence-to-Its-Industry-Leading-Insurance-Risk-Models/default.aspx"
+   ]
+  },
+  "Cautioneo": {
+   "total_leve": 0.35,
+   "dernier_tour": {
+    "stage": "Pré-seed",
+    "montant": 0.35,
+    "lead": "Founders Future et Kima Ventures"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.universfreebox.com/?p=46230"
+   ]
+  },
+  "At-Bay": {
+   "total_leve": 250,
+   "total_note": "≈ 272 M$ après la Série D",
+   "dernier_tour": {
+    "stage": "Série D",
+    "montant": 170,
+    "annee": 2021,
+    "lead": "Icon Ventures et Lightspeed"
+   },
+   "valorisation": 1242,
+   "valo_annee": 2021,
+   "valo_note": "1,35 Md$ post-money",
+   "pays": "États-Unis / Israël",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.businesswire.com/news/home/20210727005722/en/Cyber-Insurance-Startup-At-Bay-Closes-185-Million-Series-D-Valuing-Company-at-1.35-Billion%20"
+   ]
+  },
+  "Acre": {
+   "total_leve": 13.4,
+   "total_note": "≈ 14,5 M$ (CB Insights) : 5 M£ (2019) + 6,5 M£ (2023)",
+   "dernier_tour": {
+    "stage": "Seed (tardif)",
+    "montant": 7.6,
+    "annee": 2023,
+    "lead": "McPike Global Family Office"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "ClearScore Group",
+    "annee": 2026
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2023/04/04/mortgage-intermediaries-platform-acre-bags-6-5m/",
+    "https://www.cbinsights.com/company/acre-platforms-ltd"
+   ]
+  },
+  "Humn": {
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 11.8,
+    "annee": 2021,
+    "lead": "BXR Group et Shell Ventures",
+    "note": "10,1 M£"
+   },
+   "exit": {
+    "type": "Cession d'actifs",
+    "acquereur": "Aon (technologie et propriété intellectuelle)",
+    "annee": 2024,
+    "note": "société signalée comme fermée"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.coverager.com/humn-raises-13-7-million/",
+    "https://insights.persana.ai/HUMN.ai"
+   ]
+  },
+  "Human API": {
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "LexisNexis Risk Solutions (RELX)",
+    "annee": 2023,
+    "note": "montant non communiqué"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://risk.lexisnexis.com/about-us/press-room/press-release/20230425-humanapi-acquisition"
+   ]
+  },
+  "Honcho": {
+   "total_leve": 3.5,
+   "total_note": "≈ 3 M£ depuis 2018 (dont financement participatif)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1.4,
+    "annee": 2020,
+    "lead": "Insurtech Gateway",
+    "note": "1,2 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://insurance-edge.net/2020/04/09/start-ups-honcho-raises-another-1-2m-in-funding-aims-for-growth/"
+   ]
+  },
+  "Hokodo": {
+   "total_leve": 58.8,
+   "total_note": "≈ 63,9 M$ (Seedtable), hors extension Citi non publiée",
+   "dernier_tour": {
+    "stage": "Levée pré-Série C",
+    "montant": 10,
+    "annee": 2025,
+    "lead": "Korelya Capital et Opera Tech Ventures"
+   },
+   "tour_precedent": {
+    "stage": "Série B",
+    "montant": 36.8,
+    "annee": 2022,
+    "lead": "Notion Capital"
+   },
+   "pays": "Royaume-Uni / France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.hokodo.co/resources/hokodo-secures-eu10m-equity-raise-led-by-korelya-capital-and-opera-tech-ventures-for-digital-trade-credit-product-innovation",
+    "https://www.hokodo.co/blog/hokodo-announces-40-million-series-b-fundraise"
+   ]
+  },
+  "Hellas Direct": {
+   "total_leve": 56,
+   "dernier_tour": {
+    "stage": "Croissance (dont 10 M€ convertibles BERD)",
+    "montant": 32,
+    "annee": 2021
+   },
+   "pays": "Grèce",
+   "confiance": "Élevé",
+   "sources": [
+    "https://lifeinsuranceinternational.com/news/insurtech-hellas-direct-raises-e32m-to-accelerate-business-growth",
+    "https://www.crowdfundinsider.com/?p=176821"
+   ]
+  },
+  "Happl": {
+   "total_leve": 15.8,
+   "total_note": "≈ 17,2 M$ (agrégateurs)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 10.1,
+    "annee": 2026,
+    "lead": "Portage"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://portageinvest.com/blog/happl-raises-11m-series-a-led-by-portage-to-power-global-benefits-infrastructure-for-multinational-employers/",
+    "https://thenextweb.com/news/happl-11m-series-a-global-benefits"
+   ]
+  },
+  "Helvengo": {
+   "dernier_tour": {
+    "stage": "Seed",
+    "annee": 2022,
+    "lead": "TX Ventures",
+    "note": "plus de 4,2 M CHF"
+   },
+   "exit": {
+    "type": "Liquidation",
+    "annee": 2024,
+    "note": "inscrite au registre suisse du commerce (FOSC)"
+   },
+   "pays": "Suisse",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tx.group/news-events/detail/tx-group-invests-in-insurtech-helvengo/",
+    "https://swissinfo.ch/eng/banking-fintech/tx-groups-investment-helvengo-enters-liquidation/85766587"
+   ]
+  },
+  "Gretel": {
+   "dernier_tour": {
+    "montant": 0.9,
+    "annee": 2022,
+    "note": "1 M$ (annuaire VCBacked)"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Faible",
+   "sources": [
+    "https://www.vcbacked.co/directory/industries/insurtech?page=12"
+   ]
+  },
+  "Anansi": {
+   "total_leve": 5,
+   "total_note": "≈ 5,4 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "annee": 2025,
+    "lead": "Guinness Ventures et Alea Capital Partners",
+    "note": "montant non publié"
+   },
+   "pays": "Royaume-Uni / Portugal",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.brownejacobson.com/api/pdf/createarticlepdf/6a8df469-651f-4bde-b7b8-33672471509e/en-GB",
+    "https://www.cbinsights.com/company/anansi-1/financials"
+   ]
+  },
+  "AnchorWatch": {
+   "total_leve": 2.8,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 2.8,
+    "annee": 2023,
+    "lead": "Ten31"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://bitcoinmagazine.com/business/bitcoin-insurance-company-anchorwatch-raises-3-million-to-bring-multisig-mainstream"
+   ]
+  },
+  "Ansel": {
+   "total_leve": 18.4,
+   "total_note": "≈ 20 M$ (CB Insights)",
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Renaissance Life & Health",
+    "annee": 2025,
+    "note": "montant non communiqué"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/renaissance-to-acquire-ansel-health/",
+    "https://www.insurancebusinessmag.com/us/news/mergers-acquisitions/renaissance-life-and-health-to-acquire-ansel-health-550096.aspx"
+   ]
+  },
+  "Getsafe": {
+   "total_leve": 106,
+   "total_note": "≈ 115 M$ (Dealroom)",
+   "dernier_tour": {
+    "stage": "Série B (extension)",
+    "montant": 58,
+    "annee": 2022,
+    "note": "Série B portée à 93 M$"
+   },
+   "statut_note": "portefeuille d'assurance transféré à andsafe (groupe Provinzial), approuvé par la BaFin le 27/10/2025 ; Getsafe a racheté le portefeuille allemand de Luko et helden.de",
+   "pays": "Allemagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.theinsurer.com/?p=20717",
+    "https://dealroom.co/companies/getsafe/",
+    "https://www.clydeco.com/en/news/2025/11/clyde-co-advises-getsafe-on-the-transfer-of-its-in"
+   ]
+  },
+  "INSHUR": {
+   "total_leve": 32.2,
+   "total_note": "35 M$ au total en 2021 (communiqué) ; agrégateurs jusqu'à 126 M$",
+   "dernier_tour": {
+    "stage": "Série B",
+    "annee": 2021,
+    "lead": "JVP"
+   },
+   "pays": "Royaume-Uni / États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://inshur.com/news/inshur-growth-plans",
+    "https://insuranceinsiderus.com/article/28qj5xqltoars10hd0ykg/inshur-completes-series-b-round-brings-total-raised-to-35mn"
+   ]
+  },
+  "INSTANDA": {
+   "total_leve": 78.2,
+   "total_note": "plus de 85 M$ au total",
+   "dernier_tour": {
+    "stage": "Croissance",
+    "montant": 18.4,
+    "annee": 2025,
+    "lead": "CommerzVentures"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://instanda.com/news/instanda-secures-20-million-investment-round-led-by-commerzventures-to-accelerate-global-expansion"
+   ]
+  },
+  "Insly": {
+   "total_note": "5,8 M€ en 2022 + 3,2 M€ en 2023 ; ≈ 11,2 M$ selon CB Insights",
+   "total_leve": 9,
+   "dernier_tour": {
+    "montant": 3.2,
+    "annee": 2023,
+    "lead": "Concentric et UNIQA Ventures"
+   },
+   "pays": "Estonie",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cbinsights.com/company/insly/financials",
+    "https://insurance-edge.net/2022/09/14/insly-raises-1m-in-funding-round/"
+   ]
+  },
+  "Napo": {
+   "total_leve": 35.1,
+   "total_note": "≈ 30 M£ au total",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 14,
+    "annee": 2025,
+    "lead": "Mercia Ventures",
+    "note": "12 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2025/02/26/napo-secures-ps12m-series-b-funding-to-transform-pet-insurance/"
+   ]
+  },
+  "Openly": {
+   "total_note": "361 à 471 M$ selon les agrégateurs",
+   "dernier_tour": {
+    "stage": "Croissance (113 M$ fonds propres + 64 M$ dette Allianz X)",
+    "montant": 177.6,
+    "annee": 2025,
+    "lead": "Eden Global Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2025/02/03/insurtech-firm-openly-secures-193m-to-expand-homeowners-insurance/"
+   ]
+  },
+  "Pie Insurance": {
+   "total_leve": 566,
+   "total_note": "plus de 615 M$ depuis 2017",
+   "dernier_tour": {
+    "stage": "Série D",
+    "montant": 290,
+    "annee": 2022,
+    "lead": "Allianz X et Centerbridge Partners"
+   },
+   "valo_note": "non publiée (« hausse significative »)",
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://techcrunch.com/?p=2403957",
+    "https://www.cbinsights.com/company/pie-insurance/financials"
+   ]
+  },
+  "PolicyGenius": {
+   "total_leve": 250,
+   "total_note": "plus de 270 M$ (2022)",
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Zinnia",
+    "annee": 2023,
+    "note": "conditions non communiquées"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://zinnia.com/news/zinnia-to-acquire-policygenius-a-leading-digital-insurance-marketplace",
+    "https://www.carriermanagement.com/news/2023/04/26/247646.htm"
+   ]
+  },
+  "Snapsheet": {
+   "total_leve": 92,
+   "total_note": "plus de 100 M$ (2021)",
+   "dernier_tour": {
+    "stage": "Série E2",
+    "montant": 27.6,
+    "annee": 2021,
+    "lead": "Ping An Global Voyager Fund et Pivot Investment Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.fintechfutures.com/press-releases/snapsheet-a-claims-management-platform-leader-secures-30mm-in-series-e2-financing"
+   ]
+  },
+  "Socotra": {
+   "total_leve": 88.3,
+   "total_note": "96 M$ après la Série C",
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 46,
+    "annee": 2022,
+    "lead": "Insight Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://insightpartners.com/ideas/socotra-raises-50-million-series-c-funding-round-led-by-insight-partners-to-fuel-growth-as-the-trusted-core-platform-for-insurtechs-and-innovative-carriers"
+   ]
+  },
+  "Superscript (ex-Digital Risks)": {
+   "total_leve": 62.2,
+   "total_note": "Série A 10,4 M$ + Série B 45 M£",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 52.7,
+    "annee": 2023,
+    "lead": "BHL UK (Comparethemarket)",
+    "note": "45 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://theinsurer.com/?p=26948",
+    "https://coverager.com/digital-risks-raises-10-4-million-in-series-a-funding/"
+   ]
+  },
+  "Thimble (ex-Verifly)": {
+   "total_leve": 23,
+   "total_note": "plus de 25 M$",
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Arch Insurance",
+    "annee": 2023
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.businesswire.com/news/home/20230410005297/en/Arch-Insurance-Acquires-Thimble"
+   ]
+  },
+  "Trov": {
+   "total_leve": 92.2,
+   "total_note": "≈ 100,2 M$ (CB Insights)",
+   "exit": {
+    "type": "Cession d'actifs",
+    "acquereur": "Travelers (technologie et équipe)",
+    "annee": 2022,
+    "note": "conditions non communiquées"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://insuranceage.co.uk/insight/7932876/travelers-snaps-up-trovs-technology-assets",
+    "https://www.cbinsights.com/company/trov"
+   ]
+  },
+  "Ualá": {
+   "dernier_tour": {
+    "stage": "Croissance",
+    "montant": 179,
+    "annee": 2026,
+    "lead": "Allianz X"
+   },
+   "valorisation": 2944,
+   "valo_annee": 2026,
+   "valo_note": "3,2 Md$ post-money",
+   "total_note": "0,9 à 1,2 Md$ selon les agrégateurs",
+   "pays": "Argentine",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.fintechfutures.com/challenger-banks/uala-hits-3-2bn-valuation-following-195m-investment",
+    "https://www.batimes.com.ar/news/amp/economy/argentinas-uala-reaches-us32-billion-valuation-in-new-funding-round.phtml"
+   ]
+  },
+  "Kovrr": {
+   "total_leve": 8.7,
+   "total_note": "≈ 9,5 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Seed (extension)",
+    "montant": 3.7,
+    "annee": 2023
+   },
+   "pays": "Israël",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cbinsights.com/company/kovrr/financials",
+    "https://pulse2.com/kovrr-raises-5-5-million-funding/"
+   ]
+  },
+  "Igloo": {
+   "dernier_tour": {
+    "stage": "Série B (extension)",
+    "montant": 24.8,
+    "annee": 2022,
+    "note": "Série B portée à 46 M$"
+   },
+   "total_note": "62 à 103 M$ selon les agrégateurs",
+   "pays": "Singapour",
+   "confiance": "Élevé",
+   "sources": [
+    "https://technode.global/2022/11/29/singapores-igloo-raises-additional-27m-bringing-series-b-total-funding-round-to-46m/"
+   ]
+  },
+  "ottonova": {
+   "total_leve": 160.5,
+   "total_note": "≈ 174 M$ depuis 2016",
+   "dernier_tour": {
+    "stage": "Série F",
+    "montant": 34,
+    "annee": 2022,
+    "lead": "Cadence Growth Capital"
+   },
+   "pays": "Allemagne",
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/ottonova-raises-e34-million/",
+    "https://fintech.global/2022/09/06/german-digital-health-insurer-ottonova-closes-series-f/"
+   ]
+  },
+  "simplesurance": {
+   "total_leve": 77.1,
+   "total_note": "≈ 77 M€ (Madrimasd) ; 87,5 M$ selon CB Insights",
+   "exit": {
+    "type": "Cession partielle",
+    "acquereur": "CLARK (activité de courtage)",
+    "annee": 2023
+   },
+   "pays": "Allemagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cbinsights.com/company/simplesurance-brokerage-business",
+    "https://ecosystem.madrimasd.org/companies/simplesurance"
+   ]
+  },
+  "hepster": {
+   "total_leve": 29.6,
+   "total_note": "≈ 32,2 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 10,
+    "annee": 2023
+   },
+   "pays": "Allemagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://tech.eu/2023/07/13/rostock-based-insurtech-hepster-raises-eur10-million-to-focus-on-profitability-and-suautainable-growth",
+    "https://www.cbinsights.com/company/hepster/financials"
+   ]
+  },
+  "Kita": {
+   "total_leve": 4.9,
+   "total_note": "≈ 5,3 M$ sur 2 tours",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 4.7,
+    "annee": 2023,
+    "lead": "Octopus Ventures",
+    "note": "4 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2023/02/23/carbon-credit-insurtech-kita-bags-4m/"
+   ]
+  },
+  "Loadsure": {
+   "total_leve": 11.4,
+   "total_note": "≈ 12,4 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 10.1,
+    "annee": 2022,
+    "lead": "MMC Ventures"
+   },
+   "pays": "Royaume-Uni / États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.crowdfundinsider.com/2022/03/188200-embedded-insurance-insurtech-mga-loadsure-raises-11-million-series-a/"
+   ]
+  },
+  "Ominimo": {
+   "total_leve": 30,
+   "total_note": "≈ 30 M€ de financement externe",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 20.1,
+    "annee": 2026,
+    "lead": "BERD"
+   },
+   "valorisation": 1400,
+   "valo_annee": 2026,
+   "pays": "Hongrie",
+   "confiance": "Élevé",
+   "sources": [
+    "https://thenextweb.com/news/ominimo-ebrd-series-b-1-4-billion-insurtech-unicorn",
+    "https://fintech.global/2026/07/28/ominimo-hits-1-6bn-valuation-with-profit-first-model/"
+   ]
+  },
+  "Quantee": {
+   "total_leve": 2.7,
+   "total_note": "≈ 2,9 M$ (CB Insights)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 0.65,
+    "annee": 2022,
+    "lead": "Nunatak Capital et FundingBox"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Guidewire",
+    "annee": 2025
+   },
+   "pays": "Pologne",
+   "confiance": "Élevé",
+   "sources": [
+    "https://en.ain.ua/2022/05/13/quantee-secures-e650k",
+    "https://www.vcbacked.co/company/quantee-acquired-by-guidewire-software-inc"
+   ]
+  },
+  "Protex AI": {
+   "total_note": "≈ 54 M$ selon les agrégateurs",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 33.1,
+    "annee": 2025,
+    "note": "date selon agrégateurs"
+   },
+   "tour_precedent": {
+    "stage": "Série A",
+    "montant": 16.6,
+    "annee": 2022,
+    "lead": "Notion Capital"
+   },
+   "pays": "Irlande",
+   "confiance": "Moyen",
+   "sources": [
+    "https://protex.ai/news/protex-ai-raises-18-million-to-help-protect-workers-using-ai",
+    "https://www.cbinsights.com/company/protex-ai/financials"
+   ]
+  },
+  "Nauto": {
+   "total_leve": 160,
+   "total_note": "≈ 174 M$ (CNBC / Craft.co)",
+   "tour_precedent": {
+    "stage": "Série B",
+    "montant": 146,
+    "annee": 2017,
+    "lead": "SoftBank et Greylock"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://fintech.global/2017/07/21/nauto-secures-159m-for-its-series-b-investment-round/",
+    "https://craft.co/nauto"
+   ]
+  },
+  "Roost": {
+   "total_leve": 15.5,
+   "total_note": "≈ 16,9 M$ sur 3 tours",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 9.6,
+    "annee": 2017,
+    "lead": "Aviva Ventures"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Acquéreur non communiqué",
+    "note": "Security360 arrêté par le repreneur (Coverager) ; année à confirmer"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://aviva.com/newsroom/news-releases/2017/08/aviva-ventures-makes-first-investment-in-the-us-with-home-telematics-start-up-roost-17815",
+    "https://coverager.com/roost-acquired-new-owner-discontinues-security360/"
+   ]
+  },
+  "WeGroup": {
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 3,
+    "annee": 2020,
+    "lead": "Truffle Capital et Seeder Fund"
+   },
+   "pays": "Belgique",
+   "creation": 2017,
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cbinsights.com/company/wegroup/financials",
+    "https://wegroup.be/en/about-us"
+   ]
+  },
+  "bsurance": {
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 4,
+    "annee": 2019,
+    "note": "≈ 4,4 M$ selon Dealroom (non vérifié)"
+   },
+   "pays": "Autriche",
+   "confiance": "Faible",
+   "sources": [
+    "https://dealroom.co/companies/bsurance/"
+   ]
+  },
+  "Wetterheld": {
+   "total_leve": 0.4,
+   "total_note": "≈ 411 k$ (agrégateurs, seed 2019)",
+   "pays": "Allemagne",
+   "creation": 2019,
+   "confiance": "Faible",
+   "sources": [
+    "https://www.cbinsights.com/company/wetterheld"
+   ]
+  },
+  "Liberty Rider": {
+   "total_leve": 1.6,
+   "total_note": "1,6 à 1,9 M€ selon les sources",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1.6,
+    "lead": "Matmut, IMA, Macif, Mutuelle des Motards, Racer"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.lejournaldesentreprises.com/breve/liberty-rider-leve-16-million-deuros-et-sassocie-inter-mutuelle-assistance-111824"
+   ]
+  },
+  "Mon Petit Placement": {
+   "total_leve": 18.2,
+   "total_note": "1,5 M€ (2020) + 6 M€ (2021) + 6,5 M€ (2023) + 4,2 M€ financement participatif (2024)",
+   "dernier_tour": {
+    "stage": "Financement participatif (Sowefund)",
+    "montant": 4.2,
+    "annee": 2024
+   },
+   "exit": {
+    "type": "Prise de contrôle",
+    "acquereur": "Malakoff Humanis (actionnaire majoritaire)",
+    "annee": 2025,
+    "note": "prix non communiqué"
+   },
+   "pays": "France",
+   "creation": 2017,
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.mysweetimmo.com/2023/10/31/immobilier-mon-petit-placement-leve-65-millions-deuros-aupres-de-la-france-mutualiste-et-de-ses-investisseurs-historiques/",
+    "https://www.monpetitplacement.fr/investir/mon-petit-placement-levee-de-fonds"
+   ]
+  },
+  "Neat": {
+   "total_leve": 60,
+   "dernier_tour": {
+    "stage": "Série A (60 % fonds propres, 40 % dette)",
+    "montant": 50,
+    "annee": 2024,
+    "lead": "Hedosophia"
+   },
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.lejournaldesentreprises.com/article/neat-leve-50-millions-deuros-pour-deployer-son-modele-dassurance-embarquee-2102704",
+    "https://www.neat.eu/en/about-us"
+   ]
+  },
+  "Korint": {
+   "total_leve": 7,
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 5,
+    "annee": 2024,
+    "lead": "Ventech"
+   },
+   "pays": "France",
+   "creation": 2022,
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2024/09/06/insurtech-korint-raises-5m/",
+    "https://ventechvc.com/stories/insurtech-startup-korint-raises-eu5m-led-by-ventech"
+   ]
+  },
+  "Koala": {
+   "total_leve": 3.6,
+   "total_note": "1,6 M€ (2020) + 2 M€ (2023 environ)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 2,
+    "annee": 2023
+   },
+   "tour_precedent": {
+    "stage": "Seed",
+    "montant": 1.6,
+    "annee": 2020,
+    "lead": "Insurtech Gateway"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.lechotouristique.com/article/assurance-voyage-koala-leve-16-million-deuros",
+    "https://business-cool.com/entreprendre/levee-fonds/koala-leve-2-millions-deuros/"
+   ]
+  },
+  "Zaion": {
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 11,
+    "annee": 2025,
+    "lead": "115K"
+   },
+   "total_note": "11,5 à 22,4 M$ selon les agrégateurs ; 9 M€ levés auparavant (Fortino Capital)",
+   "pays": "France",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.labanquepostale.com/en/newsroom-publications/press-area/press-releases/2025/zaion-115K-levee-de-fonds.html",
+    "https://www.fortinocapital.com/news/zaion-raises-eu9-million-funding-revolutionize-customer-experience-voice-and-artificial"
+   ]
+  },
+  "Welfaire": {
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 3,
+    "lead": "Daphni, Founders Future, Kima Ventures, Purple"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://journaldunet.com/start-up/1527889-welfaire-leve-3-millions-d-euros-pour-digitaliser-l-assurance-sante-des-professionnels/"
+   ]
+  },
+  "Lemonade": {
+   "dernier_tour": {
+    "stage": "Série D",
+    "montant": 276,
+    "annee": 2019,
+    "lead": "SoftBank (avec Allianz SE)"
+   },
+   "exit": {
+    "type": "Introduction en bourse",
+    "acquereur": "NYSE (LMND)",
+    "annee": 2020,
+    "montant": 309,
+    "note": "336 M$ nets levés à 29 $ par action ; valorisation ≈ 1,6 Md$ à l'introduction"
+   },
+   "valorisation": 1472,
+   "valo_annee": 2020,
+   "valo_note": "à l'introduction en bourse",
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.sec.gov/Archives/edgar/data/1691421/000110465920141027/filename1.htm",
+    "https://www.thejakartapost.com/news/2020/07/02/softbank-backed-lemonade-raises-319-million-in-ipo"
+   ]
+  },
+  "Indico Data": {
+   "total_note": "30 à 55,6 M$ selon les agrégateurs",
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 17.5,
+    "annee": 2024,
+    "lead": "Guidewire et .406 Ventures"
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://coverager.com/guidewire-backs-indico-data/",
+    "https://www.cbinsights.com/company/indico-data-ai/financials"
+   ]
+  },
+  "Measured (Analytics and Insurance)": {
+   "total_leve": 8.5,
+   "total_note": "≈ 9,25 M$ (Coverager)",
+   "statut_note": "« Out of Business » au 08/05/2025 selon PitchBook (non confirmé)",
+   "pays": "États-Unis",
+   "creation": 2018,
+   "confiance": "Faible",
+   "sources": [
+    "https://coverager.com/company/measured-analytics-and-insurance/",
+    "https://pitchbook.com/profiles/company/268375-42"
+   ]
+  },
+  "OnRe (ex-Nayms)": {
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 4.6,
+    "annee": 2026,
+    "lead": "Forward Industries et RockawayX"
+   },
+   "total_note": "Nayms : 12 M$ levés (vente privée de jetons, valorisation 80 M$)",
+   "pays": "Royaume-Uni / Bermudes",
+   "confiance": "Moyen",
+   "sources": [
+    "https://pluang.com/en/news-feed/forward-industries-dan-rockawayx-pimpin-investasi-strategis-onre-percepat",
+    "https://theinsurer.com/news/on-chain-insurtech-nayms-hits-80mn-valuation-with-private-token-sale-round"
+   ]
+  },
+  "Onsi (ex-Collective Benefits)": {
+   "total_leve": 20.8,
+   "total_note": "22,6 M$ au total",
+   "dernier_tour": {
+    "stage": "Investissement stratégique",
+    "annee": 2024,
+    "lead": "Zurich"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2024/12/02/uk-based-insurtech-onsi-secures-strategic-investment-from-zurich/"
+   ]
+  },
+  "Thatch": {
+   "total_leve": 177,
+   "total_note": "192,5 M$ de fonds propres au total",
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 99.4,
+    "annee": 2026
+   },
+   "valorisation": 920,
+   "valo_annee": 2026,
+   "valo_note": "1 Md$",
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://medcitynews.com/2026/09/thatch-secures-108m-reaches-1b-valuation/",
+    "https://www.mobihealthnews.com/news/thatch-raises-108m-1b-valuation"
+   ]
+  },
+  "Players Health": {
+   "total_leve": 92,
+   "total_note": "plus de 100 M$ (dette incluse)",
+   "dernier_tour": {
+    "stage": "Série C",
+    "montant": 55.2,
+    "annee": 2024,
+    "lead": "Bluestone Equity Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/players-health-raises-60-million/",
+    "https://fintech.global/2024/12/12/players-health-raises-60m-to-enhance-athlete-safety-and-expand-insurance-solutions/"
+   ]
+  },
+  "Truvi": {
+   "total_leve": 7.2,
+   "total_note": "≈ 7,8 M$ (CB Insights) ; ex-Superhog",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 6.2,
+    "annee": 2023
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.cbinsights.com/company/superhog/financials"
+   ]
+  },
+  "Yarowa": {
+   "total_leve": 11.9,
+   "total_note": "≈ 12,9 M$ (VCBacked)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 11.9,
+    "annee": 2022
+   },
+   "pays": "Suisse",
+   "creation": 2017,
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.vcbacked.co/company/yarowa",
+    "https://prod.actual.seedtable.com/funding-rounds/jarowa-ch-series-a-2022"
+   ]
+  },
+  "Riskwolf": {
+   "total_leve": 1.1,
+   "total_note": "≈ 1,15 M$ (agrégateurs, dont subventions)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "annee": 2021,
+    "note": "750 k CHF (SICTIC)"
+   },
+   "pays": "Suisse",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.startupticker.ch/en/news/riskwolf-raises-chf750k-to-turbocharge-its-b2b-insurance-platform",
+    "https://www.cbinsights.com/company/riskwolf/financials"
+   ]
+  },
+  "IBISA": {
+   "total_leve": 4.3,
+   "total_note": "seed 1,5 M€ (2021) + 2,8 M€ (2024)",
+   "dernier_tour": {
+    "stage": "Seed (extension)",
+    "montant": 2.8,
+    "annee": 2024,
+    "lead": "Acumen Resilient Agriculture Fund et Equator"
+   },
+   "pays": "Luxembourg",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.eu-startups.com/2024/06/luxembourg-based-ibisa-raises-e2-8-million-to-expand-climate-insurtech-across-emerging-markets",
+    "https://www.eu-startups.com/2021/12/luxembourg-based-ibisa-raises-e1-5-million-for-its-climate-insurtech-platform/"
+   ]
+  },
+  "Wenalyze": {
+   "total_leve": 2.7,
+   "total_note": "1,7 M€ (2022) + plus de 1 M€ (2024)",
+   "dernier_tour": {
+    "stage": "Seed (extension)",
+    "montant": 1,
+    "annee": 2024,
+    "lead": "Athos Capital (avec Íope Ventures)"
+   },
+   "pays": "Espagne",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2022/03/24/spanish-platform-raises-eur17-million-to-support-european-insurtech-framework/",
+    "https://www.telefonica.com/en/communication-room/press-room/iope-ventures-invests-in-wenalyze-in-a-e1m-investment-round/"
+   ]
+  },
+  "Weecover": {
+   "total_leve": 6.5,
+   "total_note": "seed 2,3 M€ (2021) + 4,2 M€ (2025)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 4.2,
+    "annee": 2025,
+    "lead": "Swanlaab Venture Factory et Nauta"
+   },
+   "pays": "Espagne",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2025/01/23/spanish-insurtech-weecover-closes-4-2m-round-for-embedded-insurance/"
+   ]
+  },
+  "WeatherPromise": {
+   "total_leve": 20.2,
+   "total_note": "plus de 22 M$ au total (PhocusWire)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 11.8,
+    "annee": 2026,
+    "lead": "Maveron"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.phocuswire.com/weatherpromise-series-a-round",
+    "https://pulse2.com/weatherpromise-12-8-million-series-a/"
+   ]
+  },
+  "Westhill": {
+   "dernier_tour": {
+    "montant": 12.4,
+    "annee": 2023,
+    "note": "13,5 M$ (Westhill Global)"
+   },
+   "pays": "États-Unis / Canada",
+   "confiance": "Faible",
+   "sources": [
+    "https://vcnewsdaily.com/westhill/venture-capital-funding/rxcllxqjgp"
+   ]
+  },
+  "Whitespace Software": {
+   "exit": {
+    "type": "Prise de participation majoritaire",
+    "acquereur": "Verisk (Sequel)",
+    "annee": 2021
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://verisk.com/newsroom/whitespace-joins-forces-with-verisks-sequel-to-accelerate-digital-transformation-of-the-global-specialty-market"
+   ]
+  },
+  "Tembo Money": {
+   "total_leve": 43.3,
+   "total_note": "2,5 M£ (2021) + 5 M£ (2023) + 14 M£ (2024) + 16 M£ (2026)",
+   "dernier_tour": {
+    "stage": "Croissance",
+    "montant": 18.7,
+    "annee": 2026,
+    "lead": "Gresham House Ventures",
+    "note": "16 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.mortgagesolutions.co.uk/mortgage-news/2026/02/12/tembo-raises-16m-in-growth-investment-led-by-gresham-house-ventures/",
+    "https://www.mortgagesolutions.co.uk/mortgage-news/2024/11/29/tembo-raises-14m-to-support-first-time-buyers/"
+   ]
+  },
+  "Ticker": {
+   "total_note": "≈ 22,9 M$ sur 5 tours (agrégateur, non confirmé)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 11.7,
+    "annee": 2020,
+    "lead": "Eos Venture Partners",
+    "note": "10 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://jobs.ticker.co.uk/about-us",
+    "https://www.thecompanycheck.com/company/b/ticker/5z9r1fdfuvf261mdy"
+   ]
+  },
+  "Shepper": {
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 5,
+    "lead": "Aviva Ventures et Idekapital",
+    "note": "5,4 M$, date non publiée"
+   },
+   "pays": "Royaume-Uni",
+   "creation": 2016,
+   "confiance": "Moyen",
+   "sources": [
+    "https://coverager.com/aviva-backs-on-demand-startup-shepper/"
+   ]
+  },
+  "ShipIn Systems": {
+   "total_leve": 70,
+   "total_note": "≈ 76 M$ (Série A 24 M$ + 52 M$ en 2026), calcul",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 47.8,
+    "annee": 2026
+   },
+   "valorisation": 191,
+   "valo_annee": 2026,
+   "valo_note": "208 M$ selon Dealroom (non confirmé)",
+   "pays": "Israël / États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://shipin.ai/insights/52-million-financing-connected-ship",
+    "https://www.seatrade-maritime.com/maritime-technology/zeev-ventures-leads-24m-series-a-funding-for-shipin-systems"
+   ]
+  },
+  "Rainwalk": {
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 3.7,
+    "annee": 2024,
+    "lead": "ManchesterStory"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/rainwalk-raises-4-million/"
+   ]
+  },
+  "Renew Risk": {
+   "total_note": "1,7 M£ (2023) + 5 M£ (2025)",
+   "total_leve": 7.8,
+   "dernier_tour": {
+    "stage": "Seed (extension)",
+    "montant": 5.9,
+    "annee": 2025,
+    "lead": "Molten Ventures",
+    "note": "5 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2025/02/13/renew-risk-secures-ps5m-for-renewable-energy-risk-modelling/"
+   ]
+  },
+  "Notch (notch.cx)": {
+   "total_leve": 41.4,
+   "total_note": "45 M$ au total",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 27.6,
+    "annee": 2026,
+    "lead": "Headline"
+   },
+   "pays": "Israël",
+   "creation": 2021,
+   "confiance": "Élevé",
+   "sources": [
+    "https://siliconangle.com/2026/03/25/notch-raises-30m-expand-ai-operating-system-regulated-industries/",
+    "https://fintech.global/2026/03/26/notch-raises-30m-series-a-for-ai-agents-in-insurance/"
+   ]
+  },
+  "Neos": {
+   "alias": [
+    "Neos Insurance"
+   ],
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Aviva (majorité, 2018) puis Sky UK (2021)",
+    "annee": 2021,
+    "note": "montants non communiqués"
+   },
+   "pays": "Royaume-Uni",
+   "creation": 2016,
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.aviva.com/newsroom/news-releases/2018/11/aviva-to-acquire-majority-shareholding-in-neos-ventures/",
+    "https://sonr.global/_/s/L1Q6HEJxirh686R5"
+   ]
+  },
+  "Meshed": {
+   "total_leve": 1.1,
+   "dernier_tour": {
+    "stage": "Pré-seed",
+    "montant": 1.1,
+    "annee": 2025,
+    "lead": "Haatch",
+    "note": "950 k£"
+   },
+   "pays": "Royaume-Uni",
+   "creation": 2022,
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/haatch-backs-small-business-broker-meshed/",
+    "https://businesscloud.co.uk/news/ai-insurtech-meshed-gains-aviva-and-haatch-backing/"
+   ]
+  },
+  "Juniper Insurance": {
+   "total_leve": 1.8,
+   "dernier_tour": {
+    "stage": "Pré-seed",
+    "montant": 1.8,
+    "annee": 2024,
+    "lead": "Insurtech Gateway",
+    "note": "1,5 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2024/02/20/london-startup-juniper-raises-1-5m-for-dental-insurance-but-for-your-genitals/"
+   ]
+  },
+  "Konsileo": {
+   "total_leve": 23.7,
+   "total_note": "2,7 M£ + 4,7 M£ (2022) + 8 M£ (2024) + 5 M£ (2026)",
+   "dernier_tour": {
+    "stage": "Croissance",
+    "montant": 5.9,
+    "annee": 2026,
+    "lead": "Committed Capital et ACF Investors",
+    "note": "5 M£"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2026/10/07/konsileo-raises-ps5m-to-scale-technology-enabled-insurance-broking/",
+    "https://fintech.global/2024/11/21/konsileo-raises-8m-to-drive-uk-expansion-in-commercial-broking/"
+   ]
+  },
+  "Koba Insurance": {
+   "total_note": "≈ 2,5 M$ (CB Insights) : financement participatif Birchal + business angels (montants en A$)",
+   "dernier_tour": {
+    "stage": "Obligations convertibles",
+    "annee": 2023
+   },
+   "statut_note": "« Out of Business » au 01/02/2026 selon PitchBook (non confirmé)",
+   "pays": "Australie",
+   "confiance": "Faible",
+   "sources": [
+    "https://www.cbinsights.com/company/koba-insurance/financials",
+    "https://pitchbook.com/profiles/company/454600-00"
+   ]
+  },
+  "Innovation Group": {
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Allianz X (titre Coverager) ; auparavant Carlyle (2015, ≈ 500 M£)",
+    "note": "détails de l'opération Allianz X non lus"
+   },
+   "pays": "Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://coverager.com/allianz-x-to-acquire-innovation-group/",
+    "https://www.einpresswire.com/article/305353157/the-innovation-group-completes-acquisition-by-the-carlyle-group-and-the-global-rebranding-of-its-software-business-to-1insurer"
+   ]
+  },
+  "Insurdata": {
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Big Ticket",
+    "annee": 2022,
+    "note": "année déduite par Lloyd's Lab"
+   },
+   "pays": "États-Unis / Royaume-Uni",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.lloyds.com/insights/lloyds-lab/programmes-and-initiatives/lloyds-lab-accelerator/alumni/insurdata"
+   ]
+  },
+  "Limelight Health": {
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "FINEOS",
+    "annee": 2020,
+    "montant": 69,
+    "note": "75 M$"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/fineos-acquires-limelight-health-for-75-million/"
+   ]
+  },
+  "Mulberri": {
+   "total_leve": 9.9,
+   "total_note": "10,75 M$ au total",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 6.2,
+    "annee": 2023,
+    "lead": "Eos Venture Partners"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://coverager.com/mulberri-raises-6-75-million/"
+   ]
+  },
+  "Osigu": {
+   "dernier_tour": {
+    "stage": "Série B (extension)",
+    "montant": 9.2,
+    "annee": 2025,
+    "lead": "Eos Ventures"
+   },
+   "tour_precedent": {
+    "stage": "Série B",
+    "montant": 23,
+    "annee": 2024,
+    "lead": "IDC Ventures"
+   },
+   "total_note": "≈ 52 M$ selon BounceWatch (non vérifié)",
+   "pays": "États-Unis / Guatemala",
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2024/10/28/osigus-25m-series-b-to-help-revolutionise-healthcare-payments-in-latin-america/",
+    "https://refreshmiami.com/news/osigu-secures-10m-from-eos-ventures-to-reshape-healthcare-payments-in-latin-america/"
+   ]
+  },
+  "INZMO": {
+   "total_leve": 5.2,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 3.1,
+    "annee": 2021,
+    "lead": "Helvetia Venture Fund"
+   },
+   "pays": "Estonie / Allemagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://tech.eu/brief/inzmo-seed-funding",
+    "https://www.cbinsights.com/company/inzmo/financials"
+   ]
+  },
+  "Savari": {
+   "exit": {
+    "type": "Acquisition (actifs)",
+    "acquereur": "Harman (Samsung)",
+    "annee": 2021,
+    "note": "conditions non communiquées"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.businesswire.com/news/home/20210226005046/en"
+   ]
+  },
+  "Jumpstart": {
+   "total_note": "1 à 2,75 M$ selon les agrégateurs",
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Neptune Flood",
+    "annee": 2021,
+    "note": "conditions non communiquées"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.reinsurancene.ws/neptune-flood-acquires-parametric-insurtech-jumpstart-insurance/"
+   ]
+  },
+  "Afilio": {
+   "total_leve": 12,
+   "total_note": "≈ 13 M$ (Série A)",
+   "dernier_tour": {
+    "stage": "Série A",
+    "montant": 12,
+    "annee": 2021,
+    "lead": "CommerzVentures et Speedinvest"
+   },
+   "pays": "Allemagne",
+   "creation": 2017,
+   "confiance": "Élevé",
+   "sources": [
+    "https://tech.eu/2021/08/11/berlins-peace-of-mind-as-a-service-afilio-raises-13-million"
+   ]
+  },
+  "ARTA": {
+   "total_leve": 82.8,
+   "total_note": "≈ 90 M$ (Série A 2022) + tour 2024 non chiffré",
+   "dernier_tour": {
+    "stage": "Croissance",
+    "annee": 2024,
+    "lead": "EDBI et Peak XV"
+   },
+   "tour_precedent": {
+    "stage": "Série A",
+    "montant": 82.8,
+    "annee": 2022
+   },
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.preqin.com/data/profile/asset/arta-finance-inc-/455669",
+    "https://www.clay.com/dossier/arta-finance-funding"
+   ]
+  },
+  "Adaptive Insurance": {
+   "total_leve": 9.2,
+   "total_note": "10 M$ au total",
+   "dernier_tour": {
+    "stage": "Seed (extension)",
+    "montant": 4.6,
+    "annee": 2026,
+    "note": "IAG Firemark, Sunna, Room & Pillar, Connecticut Innovations"
+   },
+   "tour_precedent": {
+    "stage": "Seed",
+    "montant": 4.6,
+    "annee": 2025,
+    "lead": "Congruent Ventures"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.reinsurancene.ws/adaptive-insurance-reaches-10m-in-funding-with-new-capital-injection/",
+    "https://www.reinsurancene.ws/adaptive-insurance-secures-5m-in-seed-funding-led-by-congruent-ventures/"
+   ]
+  },
+  "AuditCover": {
+   "total_note": "seed d'environ 1,7 M A$ (2022) ; 1,27 M$ sur 3 tours selon CB Insights",
+   "dernier_tour": {
+    "stage": "Seed",
+    "annee": 2022,
+    "lead": "Hunter Equity Group",
+    "note": "montant en A$"
+   },
+   "pays": "Australie",
+   "confiance": "Moyen",
+   "sources": [
+    "https://insurancebusinessmag.com/au/news/breaking-news/insurtech-auditcover-closes-seed-round-funding-254378.aspx",
+    "https://www.cbinsights.com/company/auditcover/financials"
+   ]
+  },
+  "Eusoh": {
+   "total_leve": 3,
+   "total_note": "3,3 à 5,3 M$ selon les sources",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1.2,
+    "annee": 2021,
+    "lead": "Insurtech Gateway"
+   },
+   "statut_note": "« Out of Business » (déc. 2022) selon PitchBook, « Inactive » selon Coverager",
+   "pays": "États-Unis",
+   "confiance": "Moyen",
+   "sources": [
+    "https://insurance-edge.net/2021/02/03/eusoh-raises-1-3m-aims-to-expand-into-healthcare-market/",
+    "https://pitchbook.com/profiles/company/227387-80"
+   ]
+  },
+  "Quovo": {
+   "total_leve": 19.3,
+   "total_note": "21 M$ levés",
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Plaid",
+    "annee": 2019,
+    "montant": 184,
+    "note": "jusqu'à 200 M$ selon Bloomberg, prix non confirmé"
+   },
+   "pays": "États-Unis",
+   "creation": 2010,
+   "confiance": "Moyen",
+   "sources": [
+    "https://techcrunch.com/2019/01/08/plaid-snags-quovo-to-build-full-service-financial-api-offering",
+    "https://www.fintechfutures.com/fintech/plaid-buys-fintech-rival-quovo-for-200m"
+   ]
+  },
+  "Novisto": {
+   "total_note": "≈ 40 M CAD au total (BetaKit)",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 18.4,
+    "annee": 2023,
+    "lead": "Inovia Capital (avec Portage et SCOR Ventures)"
+   },
+   "pays": "Canada",
+   "confiance": "Élevé",
+   "sources": [
+    "https://betakit.com/novisto-closes-27-million-cad-series-b-to-help-companies-improve-their-esg-reporting/",
+    "https://www.esgtoday.com/esg-data-management-startup-novisto-raises-20-million/"
+   ]
+  },
+  "Elysian": {
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 5.5,
+    "annee": 2025,
+    "lead": "Portage"
+   },
+   "pays": "États-Unis",
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.businesswire.com/news/home/20250904799064/en/Elysian-Raises-%246M-Seed-Round-to-Redefine-Insurance-Claims-Services-with-AI-Native-Platform"
+   ]
+  },
+  "MoneyTrack": {
+   "total_note": "4,3 M€ sur 2 tours (Tech.eu) ; 2,3 M€ levés avec le rachat de Proxegia",
+   "dernier_tour": {
+    "montant": 2.3,
+    "lead": "Truffle Capital"
+   },
+   "exit": {
+    "type": "Acquisition",
+    "acquereur": "Un acteur du secteur (nom non lu)",
+    "note": "« MoneyTrack racheté par un confrère » (CFNews) — date à confirmer"
+   },
+   "pays": "France",
+   "creation": 2018,
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.frenchweb.fr/blockchain-la-fintech-moneytrack-leve-23-millions-deuros-et-mene-sa-premiere-acquisition/418599",
+    "https://www.cfnews.net/L-actualite/M-A-Corporate/Operations/100/MoneyTrack-rachete-par-un-confrere-749092"
+   ]
+  },
+  "Assurup": {
+   "total_leve": 1,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1,
+    "annee": 2017,
+    "lead": "Kima Ventures et Keyrus Innovation Factory"
+   },
+   "pays": "France",
+   "creation": 2015,
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.frenchweb.fr/assurup-leve-1-million-deuros-pour-assurer-les-start-up/306445"
+   ]
+  },
+  "Skarlett": {
+   "total_leve": 12,
+   "total_note": "près de 12 M€ (mars 2026)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 8.6,
+    "annee": 2025,
+    "lead": "115K"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.optionfinance.fr/info-financiere-en-continu/d/2026-03-25-skarlett-assure-un-accompagnement-digital-pour-les-plus-de-60-ans.html",
+    "https://seedtable.com/companies/skarlett/funding-rounds/seed-2025-06"
+   ]
+  },
+  "Certificall": {
+   "total_leve": 1,
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1,
+    "annee": 2025,
+    "lead": "InsurAngels France, Groupama, TomCat"
+   },
+   "pays": "France",
+   "creation": 2022,
+   "confiance": "Élevé",
+   "sources": [
+    "https://www.lejournaldesentreprises.com/breve/certificall-leve-1-million-deuros-pour-renforcer-sa-position-sur-le-marche-europeen-2129036",
+    "https://www.vcbacked.co/company/certificall"
+   ]
+  },
+  "Klaimy": {
+   "total_leve": 1.2,
+   "dernier_tour": {
+    "stage": "Pré-seed",
+    "montant": 1.2,
+    "annee": 2025,
+    "lead": "Insurtech Gateway"
+   },
+   "pays": "France",
+   "creation": 2023,
+   "confiance": "Élevé",
+   "sources": [
+    "https://fintech.global/2025/04/16/french-insurtech-klaimy-raises-e1-2m-to-transform-medical-document-processing-with-ai/"
+   ]
+  },
+  "Testamento (Contrat Facile)": {
+   "alias": [
+    "Testamento"
+   ],
+   "total_note": "≈ 342 k€ en financement participatif (2015) + 3 M€ (France Mutualiste, InnovAllianz, MM Innov') ; activité réorientée selon CFNews",
+   "dernier_tour": {
+    "stage": "Entrée minoritaire",
+    "lead": "Macif Innovation"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.lemondedudroit.fr/deals/62612-lerins-bcw-conseille-testamento.html",
+    "https://www.lemondedudroit.fr/deals/86648-lerins-accompagne-testamento-dans-le-cadre-de-sa-levee-de-fonds-aupres-de-macif-innovation.html",
+    "https://www.cfnews.net/Breves/Testamento-fait-une-place-a-un-partenaire-436107"
+   ]
+  },
+  "Linkbycar": {
+   "total_leve": 1.4,
+   "total_note": "≈ 1,5 M$ (agrégateurs)",
+   "dernier_tour": {
+    "stage": "Seed",
+    "montant": 1.4,
+    "annee": 2024,
+    "lead": "Ethias Ventures et LeanSquare"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://qorusglobal.com/content/29019-ethias-ventures-and-leansquare-invest-in-the-future-of-connected-mobility-with-linkbycar",
+    "https://www.cbinsights.com/company/linkbycar/financials"
+   ]
+  },
+  "Fluo": {
+   "total_note": "150 k€ Bpifrance + premier tour (Bruno Rousset, 2015) + ≈ 2 M€ (Crédit Mutuel Arkéa, 2017)",
+   "dernier_tour": {
+    "montant": 2,
+    "annee": 2017,
+    "lead": "Crédit Mutuel Arkéa"
+   },
+   "pays": "France",
+   "confiance": "Moyen",
+   "sources": [
+    "https://www.frenchweb.fr/insurtech-fluo-attire-credit-mutuel-arkea-a-son-capital-qui-investit-2-millions-deuros/280844",
+    "https://www.cbinsights.com/company/fluo"
+   ]
+  },
+  "ifeel": {
+   "total_leve": 36.8,
+   "total_note": "≈ 40 M$ au total",
+   "dernier_tour": {
+    "stage": "Série B",
+    "montant": 18.4,
+    "annee": 2024,
+    "lead": "FinTLV Ventures et Korelya Capital"
+   },
+   "pays": "Espagne",
+   "confiance": "Moyen",
+   "sources": [
+    "https://elreferente.es/inversiones/ifeel-levanta-una-ronda-de-184-millones-de-euros/",
+    "https://finder.techleap.nl/news/feed/ifeel-raises-20m-for-mental-health"
+   ]
+  },
+  "Vitaance": {
+   "total_leve": 5.6,
+   "total_note": "≈ 5,6 M€ (Tech.eu)",
+   "dernier_tour": {
+    "montant": 2,
+    "annee": 2025,
+    "lead": "K Fund"
+   },
+   "statut_note": "opération avec PIB Group (oct. 2025) classée « acquisition » par CB Insights, non confirmée",
+   "pays": "Espagne",
+   "creation": 2021,
+   "confiance": "Moyen",
+   "sources": [
+    "https://finder.techleap.nl/news/feed/vitaance-raises-2m-in-funding",
+    "https://www.cbinsights.com/company/vitaance/financials"
+   ]
+  }
+ }
+}

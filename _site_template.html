@@ -442,6 +442,7 @@ const VALO_DATES = {
 const valoDate = s => {
   if (!s || s.valorisation===null || s.valorisation===undefined) return null;
   if (VALO_DATES[s.nom]) return 'au ' + VALO_DATES[s.nom];
+  if (s.valoAnnee) return 'en ' + Math.round(s.valoAnnee);
   const d = fmtDate(s.dateInvest);
   return d ? "à l'investissement (" + d + ")" : null;
 };
@@ -747,6 +748,7 @@ function renderStartup(s){
       s.valorisation !== null && figure('Valorisation' + (valoDate(s) ? ' ' + valoDate(s) : ''), s.valorisation, ' M€'),
       s.totalLeve !== null ? figure("Total levé", s.totalLeve, ' M€', 1)
         : s.tailleDuTour !== null && figure("Tour d'entrée (total)", s.tailleDuTour, ' M€', 1),
+      s.dtMontant !== null && figure('Dernier tour' + (s.dtAnnee ? ' (' + Math.round(s.dtAnnee) + ')' : ''), s.dtMontant, ' M€', 1),
       s.montantFonds !== null && figure(s.nbToursFonds > 1 ? `Investi par le fonds (cumul ${s.nbToursFonds} tours)` : 'Investi par le fonds', s.montantFonds, ' M€', 1),
       s.ca !== null && figure('CA' + (s.exerciceCa ? ' ' + s.exerciceCa : ''), s.ca, ' M€', s.ca < 1 ? 2 : 1),
       s.capitalSocial !== null && figure('Capital social', s.capitalSocial, ' k€'),
@@ -774,6 +776,7 @@ function renderStartup(s){
         ${(s.mocExit || s.moepExit) ? `<tr><td>MoC / MoEP à la sortie</td><td>${fmtN(s.mocExit,2) ?? '—'} / ${fmtN(s.moepExit,2) ?? '—'}</td></tr>` : ''}
         ${(s.tailleDuTour && s.totalLeve !== null) ? `<tr><td>Taille du tour</td><td>${fmtN(s.tailleDuTour,1)} M€</td></tr>` : ''}
         ${s.pctDetention ? `<tr><td>% de détention</td><td>${esc(s.pctDetention)}</td></tr>` : ''}
+        ${(s.dtStade || s.dtLead) ? `<tr><td>Dernier tour connu</td><td>${esc([s.dtStade, s.dtAnnee && Math.round(s.dtAnnee), s.dtLead && 'mené par ' + s.dtLead].filter(Boolean).join(' · '))}</td></tr>` : ''}
         ${s.roleDetail ? `<tr><td>Rôle du véhicule</td><td>${esc(s.roleDetail)}</td></tr>` : ''}
       </table>
     </div>
