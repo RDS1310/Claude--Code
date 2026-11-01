@@ -1,0 +1,380 @@
+{
+ "collecte": "2026-11-01T12:02:42+00:00",
+ "fenetreJours": 2,
+ "nbArticles": 11,
+ "nbAvecNomSuivi": 4,
+ "flux": {
+  "EU-Startups": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Tech.eu": {
+   "ok": false,
+   "erreur": "HTTP Error 403: Forbidden"
+  },
+  "Sifted": {
+   "ok": true,
+   "items": 24,
+   "retenus": 0
+  },
+  "Maddyness": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "FinSMEs": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "Finextra": {
+   "ok": true,
+   "items": 53,
+   "retenus": 0
+  },
+  "FinTech Global": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Coverager": {
+   "ok": true,
+   "items": 10,
+   "retenus": 2
+  },
+  "Insurtech Insights": {
+   "ok": true,
+   "items": 29,
+   "retenus": 0
+  },
+  "Reinsurance News": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Artemis": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Insurance Journal": {
+   "ok": true,
+   "items": 30,
+   "retenus": 0
+  },
+  "Claims Journal": {
+   "ok": true,
+   "items": 15,
+   "retenus": 0
+  },
+  "Insurance Times": {
+   "ok": true,
+   "items": 100,
+   "retenus": 2
+  },
+  "News Assurances Pro": {
+   "ok": true,
+   "items": 43,
+   "retenus": 0
+  },
+  "L'Argus de l'assurance": {
+   "ok": true,
+   "items": 83,
+   "retenus": 2
+  },
+  "FrenchWeb": {
+   "ok": true,
+   "items": 36,
+   "retenus": 1
+  },
+  "CFNEWS": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Décideurs Corporate Finance": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Les Echos Start": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Journal du Net": {
+   "ok": true,
+   "items": 9,
+   "retenus": 0
+  },
+  "Siècle Digital": {
+   "ok": true,
+   "items": 12,
+   "retenus": 0
+  },
+  "Dynamique Mag": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "Entreprendre": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "BFM Business": {
+   "ok": true,
+   "items": 100,
+   "retenus": 1
+  },
+  "L'Agefi": {
+   "ok": true,
+   "items": 100,
+   "retenus": 2
+  },
+  "Revue Banque": {
+   "ok": true,
+   "items": 25,
+   "retenus": 0
+  },
+  "La Tribune de l'Assurance": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "L'Usine Digitale": {
+   "ok": true,
+   "items": 8,
+   "retenus": 0
+  },
+  "LeMagIT": {
+   "ok": true,
+   "items": 6,
+   "retenus": 0
+  },
+  "Le Monde Informatique": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "CIO Online": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ZDNet.fr": {
+   "ok": true,
+   "items": 46,
+   "retenus": 0
+  },
+  "Silicon.fr": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "ActuIA": {
+   "ok": true,
+   "items": 35,
+   "retenus": 0
+  },
+  "IT for Business": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Alliancy": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "Solutions Numériques": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "InformatiqueNews": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "L'Informaticien": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Distributique": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ChannelNews": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Decideo": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "IT Social": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "LeBigData.fr": {
+   "ok": true,
+   "items": 47,
+   "retenus": 0
+  },
+  "GN insurtech funding": {
+   "ok": true,
+   "items": 32,
+   "retenus": 1
+  },
+  "GN insurtech raises": {
+   "ok": true,
+   "items": 7,
+   "retenus": 0
+  },
+  "GN assurtech levée": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN CVC assureur": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN M&A assurance": {
+   "ok": true,
+   "items": 13,
+   "retenus": 0
+  }
+ },
+ "articles": [
+  {
+   "source": "FrenchWeb",
+   "titre": "Alice & Bob : activité, actualités et archives - Frenchweb.fr",
+   "lien": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE15b0ZkT25MWDUxc1hqd2ltUmtiRG5ZWWFMeTI3WDVqb3lvbWJIdmE0Y3VoRTdVOW00RUx6b1d0Q2FlTGdSWFpKazRB?oc=5",
+   "date": "2026-10-31",
+   "extrait": "Alice & Bob : activité, actualités et archives Frenchweb.fr",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Alice & Bob (participation)"
+   ]
+  },
+  {
+   "source": "L'Agefi",
+   "titre": "Data analyst - Stage 6 mois H/F chez Groupama | Dogfinance - L'Agefi",
+   "lien": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1ORDFKYjFPTFQtdEZMVk5naVZueXo1UGE5SFZYbXBNck1PNnM2MXRONnMtaDBBalpSUEJZa0VRTU1XM05QYlY3U2lEekVqZw?oc=5",
+   "date": "2026-10-31",
+   "extrait": "Data analyst - Stage 6 mois H/F chez Groupama | Dogfinance L'Agefi",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Groupama (fonds)"
+   ]
+  },
+  {
+   "source": "L'Agefi",
+   "titre": "Conseiller en gestion de patrimoine H/F chez Groupama | Dogfinance - L'Agefi",
+   "lien": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbVBUZ3dZOWFMNVB4SGpBWkJzZm5POUFzdDhRbmlNcWI4a0w2TzNyd3g2Tm52Y2Y3ZWlsRlJaWHRuVmtHWk93TE9SOTZnNUNUOGotemtTb1UtUUpPZnhhNTFaNDhySDR6Y0xaSTExZlpodVVFR01iMTdBLWdncmk3SUpIbzd5R19BVFE?oc=5",
+   "date": "2026-10-30",
+   "extrait": "Conseiller en gestion de patrimoine H/F chez Groupama | Dogfinance L'Agefi",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Groupama (fonds)"
+   ]
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Fintech Wealthsimple secures C$425 mn funding at C$13.8 bn valuation - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5TLXJVc0RoWjl3WkQtT00wRjBxZTJaMVFNclFGTmNYaFBYY2VhVkdDSjZBQzJKNHJDR0VzQzRES1ptYTY5cjN5LWRVd29kMi10NjZ5ZlpBNnhOYUU2Rl85bGc1QkVBZm5ZOXRmZHRHZw?oc=5",
+   "date": "2026-10-30",
+   "extrait": "Fintech Wealthsimple secures C$425 mn funding at C$13.8 bn valuation Beinsure",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Wealthsimple (participation)"
+   ]
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Assurance auto : le coût des réparations continue d’augmenter, l’utilisation de pièces de réemploi aussi - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNQWhMNTQ3WndDT1ZLZ0hRLXFRcWhVeU9KTXFDdk10NnZrRmEwUUZNY21fYWZycjRkbUJzaE05ZWpDUktoQlctYjRadDRfaEtseklhQ2F4N3dBa3lUQ213VDF1QjVxckZJSWFnZnFBdC1LMGhiSnVVZ1ZmdWdQR3VSLWZ0M3VoNkFLalEtaTJOY3RJTU53RVpjVmhuQ1FTRlZHZE9sQjZtdVRYYWZpVTVvVzI1dmVoa2N3MlQ5TUI0OFNSQ0R6dWJJMWxiZDI1dm1hQVpiRFZIQW4xN2xTNmJmYzVrTlRIamVDOHRDVm9jRmdwV0NXRzZTZ3FtMlZtaTdJUW9xeUo3UDJzV2hNOGhvNkZubzF4ZmkzOEh6WmJCSDFBMFpBNUhzV1docWVYZ1JENFBPLWhR?oc=5",
+   "date": "2026-11-01",
+   "extrait": "Assurance auto : le coût des réparations continue d’augmenter, l’utilisation de pièces de réemploi aussi L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "L’assurance des campings confrontée à la montée des risques climatiques et à la raréfaction des capacités - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxNbXpuT1E4Z2JZMHF3eGdnX3dmOG1KOVo3T1NydlN0V25hUWQ3bGxKd01pNUtONmt2Z3M5dVBKZHJMYXZmZ1BIT05vSG1rUF85ZFpiTUJrOGFGcWhPcW1DMG5lRFc4cFJTNFhZWXQ4Xy1XeDhfdHhfcXZUQ05za2YxaVc3R2dPbGpDMlA1RVBILU4yMVJraWFWelJpb2tPc1BBMVVSSUxrQlVnVHNnNUN0a3U5cDF3VzRiRXRqSmM4VTNIazByYmc2WVVpcUxHVHBtVzVRcW12U1NqT0p5bWpSaVJDLWtyekU1Q1NyQkoyY1pKekJSbnZDb0x2NkVMTWJQajFyRHhYdG9hcVl2RGtxb3dDeFlIcjdPX3hfNXBLLTlNdzFuM0p6bEx5Y2JjN0pQYk1VMGJ0R0ZiLUtRMWtZbmxZSGJJT0IwNGRJOFJxbjRrdUFhUWxiYmFR?oc=5",
+   "date": "2026-11-01",
+   "extrait": "L’assurance des campings confrontée à la montée des risques climatiques et à la raréfaction des capacités L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Arch to acquire Premier Dealer Services",
+   "lien": "https://coverager.com/arch-to-acquire-premier-dealer-services/",
+   "date": "2026-10-31",
+   "extrait": "PDS provides automotive protection and loyalty products, administration services, technology and training to dealerships. The post Arch to acquire Premier Dealer Services appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Corgi raises $30 million",
+   "lien": "https://coverager.com/corgi-raises-30-million/",
+   "date": "2026-10-31",
+   "extrait": "Corgi was incorporated in Delaware in 2024. The post Corgi raises $30 million appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdlZsNE1FUnBJYWRyZmpwOE1md2IyRDdJT0pDQW00TTc2LWtid0QyQXktcFozREhpcmFLRVZVb3Uybkczay1UZmJmdTJGYWNyVm01V3FYU2dnTTdwZFZKOWFrX0d3MTBCOXFjbkxwZGFiaUExcllyTlNaZEdpYW16SHNKUWpPZW1Ib3U4TV81dDZBZGIwUnRicVVDR096S0lBRFdfZkFyQTBBM3BiTi1KeUR4Vy11S3BITnQ3bXAzOW0wVFY5Vm04cXpvdVBUZ3pxZTlyb09qdk1ZQWZCbHhzRG9rbw?oc=5",
+   "date": "2026-10-31",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNbUJHeW5nUlZZR3FMaTU0RlQwLUtCb1lsNkVMTEdXR0ctRG5PZzJ3T25WeU1HZ295cHhpOGE3QTM2ZEEzTGdCaEFfcE5PekNuSWR6M1dqU3MyYld4c0tpNDVyQUlmQlBjcjMtX2xsbV9GZjdUdHFlTHJ2MjhzNFV3UkgwTlFXVmhnOUJIWFRzYmtOUjQ4ZWN3aG01NnltYVBVU0dwcEZMRkE3RFI0NFA3TGZidDdhWGhKRzFxLUYyM3djelJqN0FSWktfZmZrdEZCdGpJTFAzZGlHcHhPT3UwSEZDSlpXSEJZNXZGb1o0cFhpQU53OGVoSWJveGVWWkpVclBkQVExTHcyM1V4?oc=5",
+   "date": "2026-10-31",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "BFM Business",
+   "titre": "Michel Ruggaber (Assithèque et InsurAngels Suisse) : Assithèque, un cabinet de conseil en assurance - 31/10 - BFM",
+   "lien": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQdGkzdzVWaWtvTW14dG1QVzlsN3BFMC1weURsY0U1bGk4MG1ZTUF4YXJXdTlNZVRHWjJVSUM0d01GM0d1elNpX0N3b2FpNC1VclF5OG1tSmVsSEVCalJybjZ3YnRNUElGcmFSYnZTZ2tTT1VNYVpyUG81X3c4RktRU091OEdHYXBtU2dKVmpaZmNGeHhxcHpHcGY5WjdpNUxEZjZ5bFZ4dTZ3ZU1mWktfaDB1al9DVDNWOUpMdHhYZXFHYUJxbHhrVFgza0J1VG1vdE5UOWdib2cyV2ZfSEM0RGl2ckt0NzluLXJpOWVnMVBtVTYyWHpmVFdmNTJwbDhubjdDMDZlbVNVNVRkc2c?oc=5",
+   "date": "2026-10-31",
+   "extrait": "Michel Ruggaber (Assithèque et InsurAngels Suisse) : Assithèque, un cabinet de conseil en assurance - 31/10 BFM",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  }
+ ]
+}
