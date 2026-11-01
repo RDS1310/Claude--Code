@@ -1,13 +1,34 @@
 {
  "entries": [
   {
+   "date": "28/10/2026",
+   "type": "startup",
+   "titre": "Alan remporte, avec Allianz, le contrat santé de la Sécurité sociale (3 Md€)",
+   "resume": "L'assurtech française Alan décroche, en coassurance avec Allianz, le marché de la couverture santé complémentaire des agents de la Sécurité sociale (UCANSS), évalué à environ 3 Md€ ; les assureurs sortants annoncent un recours.",
+   "source": "Maddyness",
+   "url": "https://www.maddyness.com/2026/10/28/alan-remporte-un-contrat-de-3-milliards-deuros-avec-la-securite-sociale/",
+   "theme": "Partenariats & contrats",
+   "ancre": "v-9b00bd78"
+  },
+  {
+   "date": "26/10/2026",
+   "type": "startup",
+   "titre": "Celest.Science et Liberty Mutual Re explorent une méthode de repli pour les déclencheurs paramétriques",
+   "resume": "Liberty Mutual Re et Celest.Science annoncent une collaboration pour étudier une méthodologie de données de repli (fallback) destinée aux déclencheurs de l'assurance paramétrique.",
+   "source": "Artemis",
+   "url": "https://www.artemis.bm/news/liberty-mutual-re-and-celest-science-explore-parametric-trigger-data-fallback/",
+   "theme": "Partenariats & contrats",
+   "ancre": "v-2b0e0fdc"
+  },
+  {
    "date": "16/10/2026",
    "type": "startup",
    "titre": "AlloBrain lève 7 M$, avec la participation de Groupama",
    "resume": "L'éditeur français d'agents IA et d'assistance en temps réel pour les conseillers du service client lève 7 M$ (≈ 6,4 M€) dans un tour mené par Varsity, avec Groupama, client de longue date, et des business angels ; les fonds financent l'expansion en Europe, au Moyen-Orient et en Afrique et la R&D.",
    "source": "Coverager",
    "url": "https://coverager.com/allobrain-raises-7-million-with-participation/",
-   "theme": "Levées de fonds"
+   "theme": "Levées de fonds",
+   "ancre": "v-aedee8bc"
   },
   {
    "date": "16/10/2026",
@@ -16,7 +37,8 @@
    "resume": "La fintech 3Pay acquiert MoneyTrack, spécialiste de la suppression de l'avance des frais de santé, pour changer d'échelle.",
    "source": "Maddyness",
    "url": "https://www.maddyness.com/2026/10/16/3pay-rachete-moneytrack-la-fintech-veut-en-finir-avec-lavance-des-frais-de-sante/",
-   "theme": "M&A & consolidation"
+   "theme": "M&A & consolidation",
+   "ancre": "v-9098f1b3"
   },
   {
    "date": "15/10/2026",
@@ -25,7 +47,8 @@
    "resume": "L'éditeur d'optimisation du taux de conversion pour l'e-commerce, déjà soutenu par Tomcat, Sharpstone Capital et Sphere Ventures (2,7 M€ levés en deux tours), accueille un nouvel investisseur ; le montant n'est pas communiqué.",
    "source": "CFNEWS",
    "url": "https://www.cfnews.net/L-actualite/Capital-innovation/Operations/2nd-tour/Webyn-s-entoure-d-un-quatrieme-fonds-748141",
-   "theme": "Levées de fonds"
+   "theme": "Levées de fonds",
+   "ancre": "v-bbf7973b"
   },
   {
    "date": "14/10/2026",
@@ -34,7 +57,8 @@
    "resume": "L'insurtech estonienne, courtier d'assurance pour les plateformes de mobilité et les travailleurs indépendants (Bolt, Voi, Turo), porte son financement total à environ 11 M€ ; Truffle Capital et Icebreaker.vc remettent au pot, et la société est rentable (EBITDA positif en 2025).",
    "source": "The Next Web",
    "url": "https://thenextweb.com/news/cachet-funding-spintop-ventures",
-   "theme": "Levées de fonds"
+   "theme": "Levées de fonds",
+   "ancre": "v-cf37bb69"
   },
   {
    "date": "08/10/2026",
@@ -43,7 +67,8 @@
    "resume": "L'assureur spécialisé IA de Boston lève 200 M$ en fonds propres, co-menés par Allianz X, pour étendre sa souscription de risques commerciaux complexes aux États-Unis.",
    "source": "FinTech Global",
    "url": "https://fintech.global/2026/10/08/ledgebrook-raises-200m-to-scale-ai-underwriting-for-complex-risks/",
-   "theme": "Levées de fonds"
+   "theme": "Levées de fonds",
+   "ancre": "v-34869711"
   },
   {
    "date": "07/10/2026",
@@ -52,7 +77,8 @@
    "resume": "Le courtier britannique, qui emploie plus de 220 personnes et place plus de 85 M£ de primes par an, boucle un tour en fonds propres mené par ses actionnaires historiques Committed Capital, avec ACF Investors, après 3,2 M€ levés en avril.",
    "source": "EU-Startups",
    "url": "https://www.eu-startups.com/2026/10/uk-based-insurtech-konsileo-raises-e5-9-million-to-expand-its-team-and-integrate-ai/",
-   "theme": "Levées de fonds"
+   "theme": "Levées de fonds",
+   "ancre": "v-4bfd748a"
   },
   {
    "date": "01/10/2026",
@@ -61,7 +87,8 @@
    "resume": "Zurich Insurance Group a finalisé l'acquisition de l'assureur du Lloyd's Beazley, effective au 1er octobre ; le titre Beazley a été retiré de la cote de Londres le 2 octobre.",
    "source": "Insurance Journal",
    "url": "https://www.insurancejournal.com/news/international/2026/10/01/887514.htm",
-   "theme": "M&A & consolidation"
+   "theme": "M&A & consolidation",
+   "ancre": "v-62f0734c"
   },
   {
    "date": "01/10/2026",
@@ -70,7 +97,8 @@
    "resume": "La start-up française Voltaback, qui rembourse la recharge de véhicules électriques pour les flottes, lève 2,8 M€ auprès du fonds Serena et de business angels, dont le cofondateur d'Electra.",
    "source": "Tech.eu",
    "url": "https://tech.eu/2026/10/01/voltaback-raises-eur28m-to-scale-ev-charging-reimbursement-across-europe/",
-   "theme": "Activité des fonds hors insurtech"
+   "theme": "Activité des fonds hors insurtech",
+   "ancre": "v-2920f964"
   },
   {
    "date": "22/09/2026",
@@ -79,7 +107,8 @@
    "titre": "La High Court valide le rachat de Beazley par Zurich Insurance Group (8,1 Md£)",
    "resume": "La High Court d'Angleterre et du pays de Galles a homologué le 22 septembre le scheme of arrangement du rachat de Beazley par Zurich, sans opposition. Dernière étape avant la prise d'effet prévue le 1er octobre 2026.",
    "source": "Bdaily",
-   "url": "https://www.bdaily.co.uk/articles/2026/09/22/zurich-81-billion-beazley-takeover-approved"
+   "url": "https://www.bdaily.co.uk/articles/2026/09/22/zurich-81-billion-beazley-takeover-approved",
+   "ancre": "v-6848ad25"
   },
   {
    "date": "21/09/2026",
@@ -88,7 +117,8 @@
    "resume": "Un tribunal fédéral de New York approuve l'accord amiable de 10,5 M$ conclu par Lemonade dans une action de groupe : son outil de devis auto en ligne avait exposé les numéros de permis de conduire de jusqu'à 190 644 conducteurs entre avril 2023 et septembre 2024.",
    "source": "Claims Journal",
    "url": "https://www.claimsjournal.com/news/national/2026/09/21/340219.htm",
-   "theme": "Contentieux & conformité"
+   "theme": "Contentieux & conformité",
+   "ancre": "v-38ad7e8b"
   },
   {
    "date": "16/09/2026",
@@ -97,7 +127,8 @@
    "resume": "ETFbook, plateforme de données sur les ETF, lève 13 M$ lors d'un tour mené par Expedition Growth Capital, avec BlackFin Capital Partners (actionnaire existant, lead de la série A de 4 M€). Opération fintech, hors assurtech.",
    "source": "FinTech Global",
    "url": "https://fintech.global/2026/09/16/etfbook-raises-13m-to-close-etf-datas-global-gap/",
-   "theme": "Activité des fonds hors insurtech"
+   "theme": "Activité des fonds hors insurtech",
+   "ancre": "v-e5babe59"
   },
   {
    "date": "16/09/2026",
@@ -106,7 +137,8 @@
    "titre": "Veridion lève 20 M$ en série A menée par Hoxton Ventures",
    "resume": "Veridion, plateforme de données d'entreprises alimentée par l'IA (plus de 640 millions de sociétés cartographiées en temps réel), lève 20 M$ en série A menée par Hoxton Ventures, avec ses investisseurs existants Underline Ventures, OTB Ventures, Gapminder, Day One Capital et Launchub. Les fonds serviront notamment à accélérer son développement aux États-Unis.",
    "source": "FinSMEs",
-   "url": "https://www.finsmes.com/2026/09/veridion-raises-20m-in-series-a-funding.html"
+   "url": "https://www.finsmes.com/2026/09/veridion-raises-20m-in-series-a-funding.html",
+   "ancre": "v-ef642e48"
   },
   {
    "date": "16/09/2026",
@@ -115,7 +147,8 @@
    "resume": "La plateforme fintech de Sagard annonce le closing final de son quatrième fonds de venture (~600 M$), avec de nouveaux LPs stratégiques (Broadridge, Fifth Third Bank). Elle revendique 7,0 Md$ d'actifs et plus de 140 participations, dont en assurance.",
    "source": "FinTech Global",
    "url": "https://fintech.global/2026/09/21/portage-closes-600m-fund-to-back-fintechs-next-wave/",
-   "theme": "Closings de fonds"
+   "theme": "Closings de fonds",
+   "ancre": "v-f8277d32"
   },
   {
    "date": "14/09/2026",
@@ -124,7 +157,8 @@
    "titre": "Alven acte sa succession et prépare un nouveau fonds",
    "resume": "Rodolphe Menegaux devient directeur général d'Alven Capital, qui finalise la transmission progressive du capital à sa nouvelle génération d'associés et prévoit le lancement d'une nouvelle levée d'ici la fin d'année.",
    "source": "Maddyness",
-   "url": "https://www.maddyness.com/2026/09/14/apres-des-mois-dincertitude-alven-acte-sa-succession-et-prepare-un-nouveau-fonds/"
+   "url": "https://www.maddyness.com/2026/09/14/apres-des-mois-dincertitude-alven-acte-sa-succession-et-prepare-un-nouveau-fonds/",
+   "ancre": "v-6ac5c74b"
   },
   {
    "date": "14/09/2026",
@@ -133,7 +167,8 @@
    "resume": "Zurich et Beazley confirment que toutes les autorisations réglementaires pour l'acquisition en numéraire de 8,1 Md£ (10,9 Md$) sont réunies ; audience au tribunal le 22 septembre, finalisation prévue le 1er octobre 2026.",
    "source": "Reinsurance News",
    "url": "https://www.reinsurancene.ws/zurichs-8-1bn-beazley-acquisition-to-complete-october-1-following-regulatory-clearance/",
-   "theme": "M&A & consolidation"
+   "theme": "M&A & consolidation",
+   "ancre": "v-65d8d5b6"
   },
   {
    "date": "10/09/2026",
@@ -142,7 +177,8 @@
    "titre": "XAnge (via La Poste Ventures) et Ring Capital au tour de seed de Ed.ai (5 M€)",
    "resume": "La start-up Ed.ai (correction de copies assistée par IA) lève 5 M€ en seed avec la participation de La Poste Ventures — fonds géré par XAnge — et de Ring Capital, aux côtés de Bpifrance (Digital Venture) et 50 Partners. Hors périmètre insurtech, mais mouvement notable de deux fonds suivis dans Radar Insurtech VC.",
    "source": "Maddyness",
-   "url": "https://www.maddyness.com/2026/09/10/ed-ai-leve-5-millions-deuros-pour-aider-les-enseignants-a-mieux-tirer-profit-des-copies-de-leurs-eleves-avec-lia/"
+   "url": "https://www.maddyness.com/2026/09/10/ed-ai-leve-5-millions-deuros-pour-aider-les-enseignants-a-mieux-tirer-profit-des-copies-de-leurs-eleves-avec-lia/",
+   "ancre": "v-a070645b"
   },
   {
    "date": "11/08/2026",
@@ -151,7 +187,8 @@
    "resume": "Accel annonce 3,5 Md$ répartis sur quatre fonds, dont 800 M$ dédiés à l'early-stage en Europe et en Israël, en hausse par rapport aux 650 M$ du fonds précédent.",
    "source": "Tech.eu",
    "url": "https://tech.eu/2026/08/12/monzo-and-lovable-backer-accel-raises-enlarged-800m-early-stage-fund/",
-   "theme": "Closings de fonds"
+   "theme": "Closings de fonds",
+   "ancre": "v-3c9bf1d5"
   },
   {
    "date": "05/08/2026",
@@ -160,7 +197,8 @@
    "resume": "Le fonds transatlantique finalise son quatrième véhicule (Séries A et B) et dépasse 350 M$ de capital frais avec un fonds seed nord-américain et des SPV ; il cible notamment l'IA verticale et l'IA « physique ».",
    "source": "Tech.eu",
    "url": "https://tech.eu/2026/08/05/white-star-capital-closes-250m-fund-iv-to-back-global-startups-from-series-a-to-b/",
-   "theme": "Closings de fonds"
+   "theme": "Closings de fonds",
+   "ancre": "v-e780a14b"
   },
   {
    "date": "22/07/2026",
@@ -169,7 +207,8 @@
    "resume": "Issue de Y Combinator, Klaimee certifie les agents IA et adosse leurs performances à une couverture de responsabilité spécifique. Le seed est mené par FundersClub, avec notamment Kima Ventures et Robinhood Ventures.",
    "source": "FinTech Global",
    "url": "https://fintech.global/2026/07/22/klaimee-lands-5-5m-to-insure-autonomous-ai-agents/",
-   "theme": "Levées de fonds"
+   "theme": "Levées de fonds",
+   "ancre": "v-8c16b204"
   },
   {
    "date": "25/06/2026",
@@ -178,10 +217,11 @@
    "resume": "L'assureur santé français boucle une série G de 480 M€ menée par Prosus, avec ses investisseurs historiques Teachers' Venture Growth et Index Ventures et l'entrée de Dara Holdings. Les fonds financeront l'international, l'IA et les services de santé.",
    "source": "FrenchWeb",
    "url": "https://www.frenchweb.fr/alan-depasse-le-milliard-deuros-leves-avec-larrivee-de-prosus/462572",
-   "theme": "Levées de fonds"
+   "theme": "Levées de fonds",
+   "ancre": "v-25a48be5"
   }
  ],
- "derniereMaj": "26/10/2026",
- "prochaine": "02/11/2026",
+ "derniereMaj": "01/11/2026",
+ "prochaine": "08/11/2026",
  "frequence": "Hebdomadaire (lundi)"
 }
