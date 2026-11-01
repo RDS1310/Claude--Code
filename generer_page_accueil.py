@@ -44,8 +44,7 @@ def nb(x, d=0) -> str:
 
 def nav() -> str:
     items = [("Accueil", None), ("Radar Insurtech VC", URL["radar"]), ("Stratégie &amp; Pipe GVI", URL["pipe"]),
-             ("Analyses GVI", URL["analyses"]), ("Veille Insurtech", URL["veille"]), ("Étude M&amp;A Assurance", URL["ma"]),
-             ("Valorisation du portefeuille", URL["analyses"] + "#valo")]
+             ("Analyses GVI", URL["analyses"]), ("Veille Insurtech", URL["veille"]), ("Étude M&amp;A Assurance", URL["ma"])]
     corps = '\n  <span class="sep">·</span>\n  '.join(
         f'<span class="current">{n}</span>' if u is None else f'<a href="{u}">{n}</a>' for n, u in items)
     js = ("<script>(() => { const e = document.querySelector('.entete-fixe'); if (!e) return; const f = () => "
