@@ -125,6 +125,9 @@ table.comps a:hover{color:var(--petrol);text-decoration:underline}
 .crossnav{flex-wrap:nowrap!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 .crossnav::-webkit-scrollbar{display:none}
 html{scroll-padding-top:var(--entete-h,0px)}
+.anciennes{margin:18px 0 0;border-top:1px solid var(--line);padding-top:12px}
+.anciennes summary{cursor:pointer;font-size:13px;color:var(--petrol);font-weight:500}
+.anciennes .story{opacity:.85}
 </style>
 
 <div class="entete-fixe pad">
@@ -232,11 +235,30 @@ function rumeurHtml(d){
   </article>`;
 }
 
-const cEl = document.getElementById('stories-confirmees');
-cEl.innerHTML = RAW.confirmees.length ? RAW.confirmees.map(confirmeeHtml).join('') : '<div class="empty">Aucune opération confirmée suivie pour l\'instant.</div>';
-
-const rEl = document.getElementById('stories-rumeurs');
-rEl.innerHTML = RAW.rumeurs.length ? RAW.rumeurs.map(rumeurHtml).join('') : '<div class="empty">Aucune rumeur suivie pour l\'instant.</div>';
+// Fraîcheur (01/11/2026) : tri du plus récent au plus ancien ; les opérations de plus de 6 mois
+// avant l'édition passent dans un bloc replié « antérieures » (conservées, pas présentées comme actualité).
+const MOIS_FR = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+function cleMois(s){
+  s = String(s || '').trim(); let m;
+  if ((m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/))) return +m[3] * 12 + (+m[2] - 1);
+  if ((m = s.match(/^(\d{1,2})\/(\d{4})$/))) return +m[2] * 12 + (+m[1] - 1);
+  if ((m = s.match(/^(\d{4})-(\d{2})/))) return +m[1] * 12 + (+m[2] - 1);
+  if ((m = s.match(/^(\d{4})$/))) return +m[1] * 12;   // année seule : rangée en début d'année
+  return null;
+}
+const REF = cleMois(RAW.derniereMaj) ?? (new Date().getFullYear() * 12 + new Date().getMonth());
+const SEUIL = REF - 6;
+const recente = d => { const k = cleMois(d.date); return k == null || k >= SEUIL || (/^\d{4}$/.test(String(d.date).trim()) && +d.date >= Math.floor(REF / 12)); };
+const cleJour = s => { const k = cleMois(s); if (k == null) return -1; const m = String(s).trim().match(/^(\d{1,2})\/\d{1,2}\/\d{4}$/); return k * 32 + (m ? +m[1] : 0); };
+const parDate = (a, b) => cleJour(b.date) - cleJour(a.date);
+function rendre(id, liste, html, vide, libelle){
+  const el = document.getElementById(id);
+  const tri = liste.slice().sort(parDate), rec = tri.filter(recente), anc = tri.filter(d => !recente(d));
+  el.innerHTML = (rec.length ? rec.map(html).join('') : `<div class="empty">${vide}</div>`)
+    + (anc.length ? `<details class="anciennes"><summary>${libelle} antérieures à ${MOIS_FR[SEUIL % 12]} ${Math.floor(SEUIL / 12)} (${anc.length})</summary>${anc.map(html).join('')}</details>` : '');
+}
+rendre('stories-confirmees', RAW.confirmees, confirmeeHtml, 'Aucune opération confirmée sur les six derniers mois.', 'Opérations');
+rendre('stories-rumeurs', RAW.rumeurs, rumeurHtml, 'Aucune rumeur sur les six derniers mois.', 'Rumeurs');
 
 const ctx = RAW.contexteMarche;
 if (ctx){
