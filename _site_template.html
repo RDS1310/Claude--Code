@@ -98,7 +98,9 @@
   --v7-onfill:var(--label-dark);
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;height:100%}
+html,body{margin:0;padding:0}
+html{height:100%}
+body{min-height:100%}
 body{
   background:var(--paper);
   color:var(--ink);
@@ -136,7 +138,7 @@ h1,h2,h3,p{text-wrap:balance}
 .layout{display:grid;grid-template-columns:var(--rail) 1fr;min-height:calc(100vh - 58px)}
 
 /* ---------- rail ---------- */
-.rail{border-right:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;max-height:calc(100vh - 58px);position:sticky;top:0}
+.rail{border-right:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;max-height:calc(100vh - var(--entete-h,58px));position:sticky;top:var(--entete-h,0px)}
 .rail-head{padding:14px;border-bottom:1px solid var(--line-soft);display:grid;gap:9px}
 .search{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:3px;background:var(--paper);color:var(--ink);font-size:14px}
 .search::placeholder{color:var(--muted)}
@@ -333,14 +335,26 @@ table.cmp tr:hover td,table.cmp tr:hover th{background:var(--paper)}
 /* ---------- répartition par pays (bar-list horizontal) ---------- */
 .pays-section{margin-top:40px}
 .pays-list{display:flex;flex-direction:column;gap:3px;background:var(--surface);border:1px solid var(--line);padding:10px 14px}
-.pays-row{display:grid;grid-template-columns:120px 1fr 34px;align-items:center;gap:10px;padding:4px 0;border-radius:3px}
+.pays-row{display:grid;grid-template-columns:22px 130px 1fr 74px;align-items:center;gap:10px;padding:4px 0;border-radius:3px}
+.pays-rang{font-size:11.5px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.pays-row.fr .pays-bar{background:var(--ochre)}
+.pays-row.fr .pays-name,.pays-row.fr .pays-value{font-weight:600}
+.pays-row.autres .pays-bar{background:var(--muted);opacity:.5}
+.pays-value small{display:inline-block;min-width:34px;margin-left:6px;color:var(--muted);font-weight:400}
+.pz{margin:0 0 14px}
+.pz-barre{display:flex;gap:2px;height:30px;border-radius:4px;overflow:hidden}
+.pz-seg{display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:600;min-width:3px}
+.pz-seg.z1,.pz-leg i.z1{background:var(--v1)}.pz-seg.z2,.pz-leg i.z2{background:var(--v2)}.pz-seg.z3,.pz-leg i.z3{background:var(--v3)}.pz-seg.z4,.pz-leg i.z4{background:var(--v4)}
+.pz-leg{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px;font-size:12.5px;color:var(--ink)}
+.pz-leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.pz-leg small{color:var(--muted)}
 .pays-row:hover{background:var(--paper)}
 .pays-name{font-size:13px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pays-track{height:18px;background:var(--paper);border-radius:0 3px 3px 0;overflow:hidden}
-.pays-bar{height:100%;background:var(--petrol);border-radius:0 3px 3px 0;min-width:2px}
+.pays-bar{display:block;height:100%;background:var(--petrol);border-radius:0 3px 3px 0;min-width:2px}
 .pays-value{font-size:12.5px;font-variant-numeric:tabular-nums;color:var(--ink);text-align:right;font-weight:500}
 @media (max-width:860px){
-  .pays-row{grid-template-columns:92px 1fr 30px}
+  .pays-row{grid-template-columns:18px 92px 1fr 66px}
 }
 table.trend-table{border-collapse:collapse;width:100%;font-size:13.5px}
 table.trend-table th,table.trend-table td{padding:8px 10px;border-bottom:1px solid var(--line-soft);text-align:right;font-variant-numeric:tabular-nums}
@@ -372,8 +386,17 @@ table.trend-table tr:hover td{background:var(--paper)}
   .panel{padding:0;max-width:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+@media (max-width:700px){.topbar .tools,.topbar .count{display:none}.topbar{padding-block:8px;gap:8px}.brand{font-size:18px}}
+/* Navigation figée en haut (01/11) : barre des pages + onglets restent visibles au défilement */
+.entete-fixe{position:sticky;top:0;z-index:60;background:var(--paper)}
+.entete-fixe.pad{padding-top:env(safe-area-inset-top,0px)}
+.crossnav{flex-wrap:nowrap!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.crossnav::-webkit-scrollbar{display:none}
+html{scroll-padding-top:var(--entete-h,0px)}
 </style>
 
+<div class="entete-fixe">
 <header class="topbar">
   <div class="brand">Radar <span>Insurtech VC</span></div>
   <div class="count" id="count">—</div>
@@ -394,6 +417,8 @@ table.trend-table tr:hover td{background:var(--paper)}
   </div>
 </header>
 <nav class="crossnav">
+  <a href="https://claude.ai/artifact/3XXDgSBc7G557ghyD4ysqL">Accueil</a>
+  <span class="sep">·</span>
   <span class="current">Radar Insurtech VC</span>
   <span class="sep">·</span>
   <a href="https://claude.ai/artifact/58n6yRVTLgDuhavqhxihGn">Stratégie &amp; Pipe GVI</a>
@@ -406,6 +431,8 @@ table.trend-table tr:hover td{background:var(--paper)}
   <span class="sep">·</span>
   <a href="https://claude.ai/artifact/Mor6DTNTSbekT4irHSLyJe#valo">Valorisation du portefeuille</a>
 </nav>
+</div>
+<script>(() => { const e = document.querySelector('.entete-fixe'); if (!e) return; const f = () => document.documentElement.style.setProperty('--entete-h', e.offsetHeight + 'px'); f(); if (window.ResizeObserver) new ResizeObserver(f).observe(e); })();</script>
 
 <div class="layout">
   <aside class="rail" id="rail">
@@ -962,22 +989,46 @@ function renderTrends(){
     ${renderPaysHtml()}`;
 }
 
+const ZONES_PAYS = [
+  {cle: 'fr', nom: 'France', test: n => n === 'France'},
+  {cle: 'eu', nom: 'Reste de l\'Europe', test: n => ['Royaume-Uni','Allemagne','Suisse','Espagne','Estonie','Belgique','Suède','Pays-Bas','Pologne','Portugal','Luxembourg','Irlande','Autriche','Hongrie','Grèce','Danemark','Italie','Finlande','Norvège','Lituanie','Lettonie','République tchèque','Roumanie','Bulgarie','Croatie','Slovénie','Slovaquie','Islande','Chypre','Malte','Monaco','Liechtenstein','Ukraine','Serbie'].includes(n)},
+  {cle: 'an', nom: 'Amérique du Nord', test: n => ['États-Unis','Canada','Mexique'].includes(n)},
+  {cle: 'rm', nom: 'Reste du monde', test: () => true}];
 function renderPaysHtml(){
   const p = RAW.pays;
   if (!p || !p.pays || !p.pays.length) return '';
-  const maxVal = Math.max(...p.pays.map(x => x.valeur));
-  const rows = p.pays.map(x => {
+  const tot = p.pays.reduce((a, x) => a + x.valeur, 0) || 1;
+  const part = v => Math.round(v / tot * 100);
+  // 1. Répartition par zone (barre 100 %)
+  const zones = ZONES_PAYS.map(z => ({...z, v: 0}));
+  p.pays.forEach(x => { zones.find(z => z.test(x.nom)).v += x.valeur; });
+  const zonesVisibles = zones.filter(z => z.v > 0);
+  const barreZones = zonesVisibles.map((z, i) => `<span class="pz-seg z${i + 1}" style="flex:${z.v}" title="${esc(z.nom)} : ${z.v} participations (${part(z.v)} %)">${part(z.v) >= 8 ? part(z.v) + ' %' : ''}</span>`).join('');
+  const legende = zonesVisibles.map((z, i) => `<span><i class="z${i + 1}"></i>${esc(z.nom)} <b>${part(z.v)} %</b> <small>(${z.v})</small></span>`).join('');
+  // 2. Classement décroissant : 12 premiers pays, puis le reste regroupé
+  const tri = p.pays.slice().sort((a, b) => b.valeur - a.valeur);
+  const tete = tri.slice(0, 12), reste = tri.slice(12);
+  const lignes = reste.length ? [...tete, {nom: `Autres pays (${reste.length})`, valeur: reste.reduce((a, x) => a + x.valeur, 0), autres: true}] : tete;
+  const maxVal = Math.max(...lignes.map(x => x.valeur));
+  const rows = lignes.map((x, i) => {
     const pct = Math.max(2, Math.round((x.valeur / maxVal) * 100));
-    return `<div class="pays-row">
+    return `<div class="pays-row ${x.nom === 'France' ? 'fr' : ''} ${x.autres ? 'autres' : ''}">
+      <span class="pays-rang">${x.autres ? '' : i + 1}</span>
       <span class="pays-name" title="${esc(x.nom)}">${esc(x.nom)}</span>
       <span class="pays-track"><span class="pays-bar" style="width:${pct}%"></span></span>
-      <span class="pays-value">${x.valeur}</span>
+      <span class="pays-value">${x.valeur}<small>${part(x.valeur)} %</small></span>
     </div>`;
   }).join('');
+  const fr = tri.find(x => x.nom === 'France'), second = tri.find(x => x.nom !== 'France');
+  const phrase = fr && second ? `La <b>France</b> est le premier pays d'origine des participations : <b>${fr.valeur}</b> (${part(fr.valeur)}&nbsp;%), devant ${esc(second.nom)} (${second.valeur}, ${part(second.valeur)}&nbsp;%).` : '';
   return `
     <div class="pays-section">
       <h3 class="sec">Répartition par pays d'origine</h3>
-      <p class="cmp-hint" style="margin-top:0">Nombre de participations par pays d'origine de la start-up, tous secteurs et années confondus.</p>
+      <p class="cmp-hint" style="margin-top:0">${phrase} Nombre de participations par pays d'origine de la start-up, tous secteurs et années confondus.</p>
+      <div class="pz">
+        <div class="pz-barre" role="img" aria-label="Répartition par zone">${barreZones}</div>
+        <div class="pz-leg">${legende}</div>
+      </div>
       <div class="pays-list">${rows}</div>
       <p class="trends-caption">${p.total} participations réparties sur ${p.pays.length} pays. Pour une start-up à pays multiples (ex. « Royaume-Uni / États-Unis »), seul le premier pays cité est compté. ${p.exclues} participation${p.exclues>1?'s':''} exclue${p.exclues>1?'s':''} (pays d'origine non renseigné ou trop générique, ex. « Europe »).</p>
     </div>`;
@@ -1356,7 +1407,7 @@ function appliquerHash(){
   if (h.startsWith('s-')){
     const s = STARTUPS.find(x => x.slug === h.slice(2));
     if (s){ S.view = 'startups'; S.selStartup = s.fid + '|' + s.nom; }
-  } else if (h === 'marche' || h === 'cibles'){
+  } else if (['marche', 'cibles', 'trends', 'funds', 'startups', 'compare', 'fiabilite'].includes(h)){
     S.view = h;
   } else if (h.startsWith('f-')){
     const f = FONDS.find(x => x.fid === h.slice(2));

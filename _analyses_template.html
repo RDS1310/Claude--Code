@@ -180,14 +180,24 @@ a{color:var(--petrol)}
 @media (max-width:520px){.head h1{font-size:32px}.sheet-top h2{font-size:28px}.sheet-top,.body{padding-left:16px;padding-right:16px}.verdict{margin-left:16px;margin-right:16px}}
 
 /* Onglets de page */
-.vtabs{display:flex;gap:4px;margin:0 0 18px;border-bottom:1px solid var(--line);overflow-x:auto}
+.vtabs{display:flex;gap:4px;margin:0 0 18px;border-bottom:1px solid var(--line);overflow-x:auto;position:sticky;top:var(--entete-h,0px);z-index:50;background:var(--paper)}
 .vtabs button{flex:0 0 auto;background:none;border:0;border-bottom:2px solid transparent;padding:9px 14px;font:500 14px var(--font-body);color:var(--muted);cursor:pointer;margin-bottom:-1px}
 .vtabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--petrol)}
 #vue-valo[hidden],#vue-analyses[hidden]{display:none}
 /*__VALO_CSS__*/
+
+/* Navigation figée en haut (01/11) : barre des pages + onglets restent visibles au défilement */
+.entete-fixe{position:sticky;top:0;z-index:60;background:var(--paper)}
+.entete-fixe.pad{padding-top:env(safe-area-inset-top,0px)}
+.crossnav{flex-wrap:nowrap!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.crossnav::-webkit-scrollbar{display:none}
+html{scroll-padding-top:var(--entete-h,0px)}
 </style>
 
+<div class="entete-fixe pad">
 <nav class="crossnav">
+  <a href="https://claude.ai/artifact/3XXDgSBc7G557ghyD4ysqL">Accueil</a>
+  <span class="sep">·</span>
   <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>
   <span class="sep">·</span>
   <a href="https://claude.ai/artifact/58n6yRVTLgDuhavqhxihGn">Stratégie &amp; Pipe GVI</a>
@@ -200,6 +210,8 @@ a{color:var(--petrol)}
   <span class="sep">·</span>
   <a href="https://claude.ai/artifact/Mor6DTNTSbekT4irHSLyJe#valo">Valorisation du portefeuille</a>
 </nav>
+</div>
+<script>(() => { const e = document.querySelector('.entete-fixe'); if (!e) return; const f = () => document.documentElement.style.setProperty('--entete-h', e.offsetHeight + 'px'); f(); if (window.ResizeObserver) new ResizeObserver(f).observe(e); })();</script>
 
 <div class="wrap">
   <div class="head">

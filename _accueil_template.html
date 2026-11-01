@@ -1,0 +1,101 @@
+<title>Radar Insurtech · Accueil</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Page d'accueil : une colonne de lecture ; chiffres clés, six pages en cartes, levées par priorité, parcours, mise à jour, lexique. */
+:root{
+  --ink:#16211E; --paper:#E7EBE6; --surface:#FFFFFF;
+  --petrol:#0C5C5E; --petrol-soft:#E3EEEE;
+  --ochre:#A8681F; --ochre-soft:#F8F0E4;
+  --muted:#6C7873; --line:#CBD3CD; --line-soft:#E1E6E1;
+  --good:#3F7A4E; --good-soft:#E6F0E7;
+  --bad:#9A4A3F; --bad-soft:#F5E7E4;
+  --font-display:"Newsreader",Georgia,serif;
+  --font-body:"IBM Plex Sans",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono","SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E9EDE8; --paper:#12100E; --surface:#1B1816;
+    --petrol:#5BC2B7; --petrol-soft:#17302E;
+    --ochre:#E3AD70; --ochre-soft:#2E2416;
+    --muted:#A39C93; --line:#332E29; --line-soft:#242019;
+    --good:#7BBF8C; --good-soft:#1B2A1E;
+    --bad:#E0978C; --bad-soft:#33201C;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E9EDE8; --paper:#12100E; --surface:#1B1816;
+  --petrol:#5BC2B7; --petrol-soft:#17302E;
+  --ochre:#E3AD70; --ochre-soft:#2E2416;
+  --muted:#A39C93; --line:#332E29; --line-soft:#242019;
+  --good:#7BBF8C; --good-soft:#1B2A1E;
+  --bad:#E0978C; --bad-soft:#33201C;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--petrol)}
+:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+.crossnav{display:flex;flex-wrap:wrap;align-items:center;font-size:12px;padding-block:9px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));border-bottom:1px solid var(--line-soft);background:var(--surface)}
+.crossnav a{color:var(--muted);text-decoration:none;padding:2px 0}
+.crossnav a:hover{color:var(--petrol)}
+.crossnav .current{color:var(--ink);font-weight:500}
+.crossnav .sep{margin:0 9px;color:var(--line)}
+.crossnav{flex-wrap:nowrap!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.crossnav::-webkit-scrollbar{display:none}
+.wrap{max-width:1120px;margin:0 auto;padding-block:30px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+.hero h1{font:400 46px/1.05 var(--font-display);letter-spacing:-.015em;margin:0 0 12px;text-wrap:balance}
+.hero p{margin:0;max-width:68ch;font-size:16.5px;color:var(--ink)}
+.hero .sous{color:var(--muted);font-size:14px;margin-top:10px}
+h2{font:400 26px/1.15 var(--font-display);margin:0 0 6px;text-wrap:balance}
+.intro{color:var(--muted);margin:0 0 16px;max-width:70ch}
+.chiffres{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.chiffre{background:var(--surface);border:1px solid var(--line-soft);border-radius:8px;padding:14px 16px;display:grid;gap:4px;text-decoration:none;color:var(--ink);min-width:0}
+.chiffre:hover{border-color:var(--petrol)}
+.chiffre b{font:500 30px/1.05 var(--font-display);font-variant-numeric:tabular-nums}
+.chiffre span{font-size:13.5px}
+.chiffre small{font-size:12px;color:var(--muted)}
+.pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.page{background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:18px 20px;display:grid;gap:10px;align-content:start;min-width:0}
+.page .q{font:400 20px/1.25 var(--font-display);margin:0;text-wrap:balance}
+.page .nom{font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--petrol);font-weight:600}
+.page p{margin:0;font-size:14px}
+.page .voir{display:flex;flex-wrap:wrap;gap:6px}
+.page .voir a{font-size:12.5px;padding:3px 9px;border-radius:999px;background:var(--petrol-soft);color:var(--petrol);text-decoration:none}
+.page .voir a:hover{background:var(--petrol);color:var(--surface)}
+.page .ouvrir{font-weight:500;text-decoration:none}
+.page .pour{font-size:12.5px;color:var(--muted)}
+.bars{display:grid;gap:8px;max-width:760px}
+.bar{display:grid;grid-template-columns:minmax(0,230px) 1fr 40px;gap:12px;align-items:center;font-size:14px}
+.bar .t{height:16px;background:var(--line-soft);border-radius:3px;overflow:hidden}
+.bar .t i{display:block;height:100%;background:var(--petrol);border-radius:0 3px 3px 0}
+.bar b{text-align:right;font-variant-numeric:tabular-nums}
+.etapes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;counter-reset:e}
+.etapes li{counter-increment:e;background:var(--surface);border:1px solid var(--line-soft);border-radius:10px;padding:16px 18px 16px 58px;position:relative;font-size:14px}
+.etapes li::before{content:counter(e);position:absolute;left:18px;top:14px;width:28px;height:28px;border-radius:50%;background:var(--ochre);color:var(--surface);display:grid;place-items:center;font:600 14px var(--font-body)}
+.etapes b{display:block;margin-bottom:4px}
+.maj{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}
+.maj th,.maj td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.maj th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.table-w{overflow-x:auto}
+.lexique{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 28px;margin:0}
+.lexique div{padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.lexique dt{font-weight:600;font-size:14px}
+.lexique dd{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+.foot{color:var(--muted);font-size:12px}
+@media (max-width:520px){.hero h1{font-size:34px}.bar{grid-template-columns:minmax(0,130px) 1fr 32px}}
+.entete-fixe{position:sticky;top:0;z-index:60;background:var(--surface)}
+.entete-fixe.pad{padding-top:env(safe-area-inset-top,0px)}
+.crossnav{flex-wrap:nowrap!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.crossnav::-webkit-scrollbar{display:none}
+</style>
+
+__NAV__
+
+<div class="wrap">
+__CONTENU__
+</div>

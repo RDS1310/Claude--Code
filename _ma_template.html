@@ -118,9 +118,19 @@ table.comps a:hover{color:var(--petrol);text-decoration:underline}
 .xactus{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:4px;font-size:13px}
 .xactus a{color:var(--ink)}
 .xactus .m{color:var(--muted);font-size:12px}
+
+/* Navigation figée en haut (01/11) : barre des pages + onglets restent visibles au défilement */
+.entete-fixe{position:sticky;top:0;z-index:60;background:var(--paper)}
+.entete-fixe.pad{padding-top:env(safe-area-inset-top,0px)}
+.crossnav{flex-wrap:nowrap!important;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.crossnav::-webkit-scrollbar{display:none}
+html{scroll-padding-top:var(--entete-h,0px)}
 </style>
 
+<div class="entete-fixe pad">
 <nav class="crossnav">
+  <a href="https://claude.ai/artifact/3XXDgSBc7G557ghyD4ysqL">Accueil</a>
+  <span class="sep">·</span>
   <a href="https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g">Radar Insurtech VC</a>
   <span class="sep">·</span>
   <a href="https://claude.ai/artifact/58n6yRVTLgDuhavqhxihGn">Stratégie &amp; Pipe GVI</a>
@@ -133,6 +143,8 @@ table.comps a:hover{color:var(--petrol);text-decoration:underline}
   <span class="sep">·</span>
   <a href="https://claude.ai/artifact/Mor6DTNTSbekT4irHSLyJe#valo">Valorisation du portefeuille</a>
 </nav>
+</div>
+<script>(() => { const e = document.querySelector('.entete-fixe'); if (!e) return; const f = () => document.documentElement.style.setProperty('--entete-h', e.offsetHeight + 'px'); f(); if (window.ResizeObserver) new ResizeObserver(f).observe(e); })();</script>
 
 <div class="masthead">
   <div class="kicker">Suivi mensuel — prototype</div>

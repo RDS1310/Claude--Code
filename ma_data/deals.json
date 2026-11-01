@@ -479,6 +479,36 @@
    "resume": "Le consolidateur britannique Jensten, adossé à Bain Capital, rachète le courtier VRG, spécialiste des risques technologiques et des sciences de la vie. Il s'agit d'au moins sa cinquième acquisition de l'année.",
    "source": "Insurance Times ; Insurance Business UK",
    "url": "https://www.insurancetimes.co.uk/news/jensten-group-to-acquire-technology-focused-corporate-broker/1459686.article"
+  },
+  {
+   "date": "02/10/2026",
+   "acquereur": "Generali",
+   "cible": "Banco de Crédito Social Cooperativo (BCC, holding de Grupo Cooperativo Cajamar) — 9,9 %",
+   "secteur": "Bancassurance (Espagne)",
+   "type": "Prise de participation minoritaire",
+   "statut": "Annoncée ; finalisation attendue au 2e semestre 2027 (accord réglementaire requis)",
+   "valorisation": "≈150 M€ pour 9,9 % (≈1,5 Md€ de valorisation implicite)",
+   "valorisationM": 150,
+   "multiple": null,
+   "theme": "Bancassurance",
+   "resume": "Generali prend 9,9 % de la holding de Cajamar pour environ 150 M€, transformant son partenariat de bancassurance (Cajamar Vida et Cajamar Seguros Generales) en participation au capital. Crédit Agricole avait pris une participation de taille similaire en juin.",
+   "source": "Reinsurance News ; Insurance Business",
+   "url": "https://www.reinsurancene.ws/generalis-minority-investment-in-bcc-to-strengthen-partnership-with-grupo-cooperativo-cajamar/"
+  },
+  {
+   "date": "13/10/2026",
+   "acquereur": "Shinhan Financial Group",
+   "cible": "Lotte Non-Life Insurance (77,04 %, cédée par JKL Partners)",
+   "secteur": "Assurance dommages (Corée du Sud)",
+   "type": "Acquisition",
+   "statut": "Annoncée (conseil d'administration du 13/10/2026) ; approbation réglementaire requise",
+   "valorisation": "≈693 Md KRW pour 77,04 % (≈900 Md KRW pour 100 %)",
+   "valorisationM": null,
+   "multiple": null,
+   "theme": "Consolidation assureurs",
+   "resume": "Shinhan achète 77,04 % de Lotte Non-Life à JKL Partners, puis prévoit de fusionner l'assureur avec Shinhan EZ General Insurance. Mouvement hors Europe, signalé comme veille de consolidation mondiale.",
+   "source": "Shinhan Financial Group (Form 6-K, SEC) ; Korea Herald",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001263043/000119312526419664/6k_261013_lotte.htm"
   }
  ],
  "rumeurs": [
@@ -559,7 +589,7 @@
   "partCourtageDansOperations": "≈90% des opérations de M&A assurance en Europe",
   "note": "Source : baromètre FTI Consulting / Argus de l'assurance. Fitch anticipe une accélération du M&A assurance européen en 2026, portée par la position Solvency II des acteurs et la réforme prévue au 01/01/2027. Périmètre élargi à l'Europe et aux mouvements des réassureurs/courtiers mondiaux dès lors qu'ils éclairent la dynamique concurrentielle de Groupama."
  },
- "derniereMaj": "01/10/2026",
- "prochaine": "01/11/2026",
+ "derniereMaj": "01/11/2026",
+ "prochaine": "01/12/2026",
  "frequence": "Mensuelle (1er du mois)"
 }
