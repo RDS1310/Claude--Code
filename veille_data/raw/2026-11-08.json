@@ -1,0 +1,396 @@
+{
+ "collecte": "2026-11-08T12:13:37+00:00",
+ "fenetreJours": 2,
+ "nbArticles": 12,
+ "nbAvecNomSuivi": 0,
+ "flux": {
+  "EU-Startups": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Tech.eu": {
+   "ok": false,
+   "erreur": "HTTP Error 403: Forbidden"
+  },
+  "Sifted": {
+   "ok": true,
+   "items": 24,
+   "retenus": 0
+  },
+  "Maddyness": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "FinSMEs": {
+   "ok": true,
+   "items": 7,
+   "retenus": 0
+  },
+  "Finextra": {
+   "ok": true,
+   "items": 52,
+   "retenus": 0
+  },
+  "FinTech Global": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Coverager": {
+   "ok": true,
+   "items": 10,
+   "retenus": 6
+  },
+  "Insurtech Insights": {
+   "ok": true,
+   "items": 26,
+   "retenus": 0
+  },
+  "Reinsurance News": {
+   "ok": true,
+   "items": 10,
+   "retenus": 1
+  },
+  "Artemis": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Insurance Journal": {
+   "ok": true,
+   "items": 30,
+   "retenus": 0
+  },
+  "Claims Journal": {
+   "ok": true,
+   "items": 15,
+   "retenus": 0
+  },
+  "Insurance Times": {
+   "ok": true,
+   "items": 58,
+   "retenus": 0
+  },
+  "News Assurances Pro": {
+   "ok": true,
+   "items": 54,
+   "retenus": 0
+  },
+  "L'Argus de l'assurance": {
+   "ok": true,
+   "items": 67,
+   "retenus": 3
+  },
+  "FrenchWeb": {
+   "ok": true,
+   "items": 54,
+   "retenus": 0
+  },
+  "CFNEWS": {
+   "ok": true,
+   "items": 68,
+   "retenus": 0
+  },
+  "Décideurs Corporate Finance": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "Les Echos Start": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Journal du Net": {
+   "ok": true,
+   "items": 22,
+   "retenus": 0
+  },
+  "Siècle Digital": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Dynamique Mag": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "Entreprendre": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "BFM Business": {
+   "ok": true,
+   "items": 100,
+   "retenus": 1
+  },
+  "L'Agefi": {
+   "ok": true,
+   "items": 88,
+   "retenus": 0
+  },
+  "Revue Banque": {
+   "ok": true,
+   "items": 20,
+   "retenus": 0
+  },
+  "La Tribune de l'Assurance": {
+   "ok": true,
+   "items": 67,
+   "retenus": 0
+  },
+  "L'Usine Digitale": {
+   "ok": true,
+   "items": 6,
+   "retenus": 0
+  },
+  "LeMagIT": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Le Monde Informatique": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "CIO Online": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ZDNet.fr": {
+   "ok": true,
+   "items": 13,
+   "retenus": 0
+  },
+  "Silicon.fr": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "ActuIA": {
+   "ok": true,
+   "items": 11,
+   "retenus": 0
+  },
+  "IT for Business": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Alliancy": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Solutions Numériques": {
+   "ok": true,
+   "items": 8,
+   "retenus": 0
+  },
+  "InformatiqueNews": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "L'Informaticien": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Distributique": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ChannelNews": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Decideo": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "IT Social": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "LeBigData.fr": {
+   "ok": true,
+   "items": 63,
+   "retenus": 0
+  },
+  "GN insurtech funding": {
+   "ok": true,
+   "items": 31,
+   "retenus": 0
+  },
+  "GN insurtech raises": {
+   "ok": true,
+   "items": 19,
+   "retenus": 0
+  },
+  "GN assurtech levée": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "GN CVC assureur": {
+   "ok": true,
+   "items": 5,
+   "retenus": 0
+  },
+  "GN M&A assurance": {
+   "ok": true,
+   "items": 15,
+   "retenus": 1
+  }
+ },
+ "articles": [
+  {
+   "source": "Coverager",
+   "titre": "GEICO Q3 underwriting profit drops to $982 million",
+   "lien": "https://coverager.com/geico-q3-underwriting-profit-drops-to-982-million/",
+   "date": "2026-11-08",
+   "extrait": "GEICO ended 2025 with 29,541 employees, up from 28,247 in 2024. The post GEICO Q3 underwriting profit drops to $982 million appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "BFM Business",
+   "titre": "Voiture électrique: le prix des assurances flambe - BFM",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZ0lhTC0zdjBEdm84Y2hrSDFQcHM4VHBNM3VRU0xZLWJ4TERpejZuVG1XeFVzU0QwT3BNM2dJclJFREpzQVM4VENMcFo3NlR0LWtpZU1KckJLcFFWbmx6ZVRLVFZkZUdTVTVPd2pfZEs0MWZ0TVJmVi1ZNV9GZ1dkajltRllBQVRWZmlMQmpUdVoxVmpvRHJUcnhJOW96aks2UEFrMGl2SUZWTWZyaWNlYkx4RFBHTndOdGEtQTNhNFZrc2ZjQ21JQ1JPcGZNVUZa?oc=5",
+   "date": "2026-11-08",
+   "extrait": "Voiture électrique: le prix des assurances flambe BFM",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN M&A assurance",
+   "titre": "Assurance résidence secondaire : sinistre dans une maison inoccupée, que paie l'assureur et comment contester le refus (2026) - Kohen Avocats",
+   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxObmN5SzlzU1d4Ylk2QXNIT1hBLUtWeEFsUVNONWI4RkF5eEpMNXdlNW9fV2QyeVF1Z2ppeXJxVmx2TWdQaHF6Rk1LUVF6QWJDczR2V3JoNXRIa29rQ2tpaDRBZG9nUnNSZ1UyRkFzU2ZyUTVscUtqWENRQzZFVDB5TkdsTklzVTZtS3lzR0RVbGljNUM5dERqUWY5Tk9DVU8zVmJMLWFVanpaQUtzWEhYMXRDWnJpMUdaVjdUdzJSc0Y0LXNYZmc?oc=5",
+   "date": "2026-11-08",
+   "extrait": "Assurance résidence secondaire : sinistre dans une maison inoccupée, que paie l'assureur et comment contester le refus (2026) Kohen Avocats",
+   "motsCles": [
+    "assurance",
+    "assureur",
+    "sinistre"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Assurant acquires Protection Point Service Plans",
+   "lien": "https://coverager.com/assurant-acquires-protection-point-service-plans/",
+   "date": "2026-11-07",
+   "extrait": "Protection Point specializes in extended service plans and related protection for equipment used in agriculture, construction, material handling and forestry. The post Assurant acquires Protection Point Service Plans appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Progressive expands Denny Hamlin sponsorship",
+   "lien": "https://coverager.com/progressive-expands-denny-hamlin-sponsorship/",
+   "date": "2026-11-07",
+   "extrait": "The partnership began in March 2025. The post Progressive expands Denny Hamlin sponsorship appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Trucordia expands BYU sponsorship",
+   "lien": "https://coverager.com/trucordia-expands-byu-sponsorship/",
+   "date": "2026-11-07",
+   "extrait": "Trucordia has sponsored Brigham Young University Athletics since 2024. The post Trucordia expands BYU sponsorship appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Automation Anywhere to acquire Boost.ai",
+   "lien": "https://coverager.com/automation-anywhere-to-acquire-boost-ai/",
+   "date": "2026-11-07",
+   "extrait": "The deal follows Automation Anywhere’s acquisition of Aisera in late 2025, which added AI tools for employee support and enterprise knowledge. The post Automation Anywhere to acquire Boost.ai appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Westfield Specialty premiums rise 27% to $1.82 billion",
+   "lien": "https://coverager.com/westfield-specialty-premiums-rise-27-to-1-82-billion/",
+   "date": "2026-11-07",
+   "extrait": "Westfield operates across the US, London, Dubai and Luxembourg. The post Westfield Specialty premiums rise 27% to $1.82 billion appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Berkshire Hathaway underwriting earnings fall 43% in Q3 as Tokio Marine deal supports P&C reinsurance premiums",
+   "lien": "https://www.reinsurancene.ws/berkshire-hathaway-underwriting-earnings-fall-43-in-q3-as-tokio-marine-deal-supports-pc-reinsurance-premiums/",
+   "date": "2026-11-07",
+   "extrait": "Berkshire Hathaway reported a 43% decline in net underwriting earnings across its insurance and reinsurance operations to $1.352 billion for the third quarter of 2026, while earnings for the first nine months fell 16% to $4.8 billion. Meanwhile, premium volumes in its P&C reinsurance business contin",
+   "motsCles": [
+    "insurance",
+    "reinsur",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Technicien SAV PAC / Climatisation (H/F) Harry Hope Rouen CDI - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOXRmelpqTFpiREJILW1WUEl3UWswQWZEVUM4MTY4RzNRTjhlcVhtbTlkdUlkdEVtRmtPQktmTzhCQ05QT3RKUFJxNlVWbWdGVUNLRE1EcWFYTy12SGhNSDhVemV1UXd0UmFUbVYtM1N0Z09LWk5hQXpTdG9MVGJONVhyYzFlQmx3d0NuRXZMQzNTdGx4aEpZSEtYSWlaY01PRi04aUFKbGhfRVF4TDloOFFDSTY0Z1I0SERoRWdpTlJPTkFGOGJ4QlBlVmxndw?oc=5",
+   "date": "2026-11-07",
+   "extrait": "Technicien SAV PAC / Climatisation (H/F) Harry Hope Rouen CDI L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Ressources humaines : actualités, décryptages, interviews et vidéos - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORmV2VnNzSUc4V21MVVBHQ2R0SWdsRWRGV0pNVHphT2xfQV9ZMzd3cVFzajNqMVRTajhWbjc0dTJyOXA2Z2tNWVVHSDVybUU0UElnWFdHQTBUaTZlNVVSR0UxUk5oQ3d0U0d0a1d1bjA2RFo0X0dRQktRVlluVkZfRVk0ZjgwYVZFejRLN1FvbXV1WlBxY21TWm1hc2N6OUtLbVp2WnR2UE90OG5Nazd5bkhSVFVLeGFJNjJiS1Vvemxjb0w5Y1hjb0dHc0VTZDVu?oc=5",
+   "date": "2026-11-07",
+   "extrait": "Ressources humaines : actualités, décryptages, interviews et vidéos L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Maxime François | La rédaction L'Argus de l'assurance - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xVDE4SHpJcG5iQVh4M0ZmSWNTWkxOTm83enFSMHhhNHFUbjZtRlNzU29RTS1yN2pmWTNhQ0RnNUY1LXFrT3VOaW5Hb3UzeVRoMUw4V1AzWnU4VGJRdEhVMkhRbTFWSWJCMGYwdjY3Z28?oc=5",
+   "date": "2026-11-06",
+   "extrait": "Maxime François | La rédaction L'Argus de l'assurance L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  }
+ ]
+}
