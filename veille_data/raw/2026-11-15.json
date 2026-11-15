@@ -1,0 +1,373 @@
+{
+ "collecte": "2026-11-15T12:58:06+00:00",
+ "fenetreJours": 2,
+ "nbArticles": 10,
+ "nbAvecNomSuivi": 1,
+ "flux": {
+  "EU-Startups": {
+   "ok": false,
+   "erreur": "HTTP Error 403: Forbidden"
+  },
+  "Tech.eu": {
+   "ok": false,
+   "erreur": "HTTP Error 403: Forbidden"
+  },
+  "Sifted": {
+   "ok": true,
+   "items": 24,
+   "retenus": 0
+  },
+  "Maddyness": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "FinSMEs": {
+   "ok": true,
+   "items": 5,
+   "retenus": 0
+  },
+  "Finextra": {
+   "ok": false,
+   "erreur": "HTTP Error 403: Forbidden"
+  },
+  "FinTech Global": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Coverager": {
+   "ok": true,
+   "items": 10,
+   "retenus": 3
+  },
+  "Insurtech Insights": {
+   "ok": true,
+   "items": 31,
+   "retenus": 0
+  },
+  "Reinsurance News": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Artemis": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Insurance Journal": {
+   "ok": true,
+   "items": 30,
+   "retenus": 0
+  },
+  "Claims Journal": {
+   "ok": true,
+   "items": 15,
+   "retenus": 0
+  },
+  "Insurance Times": {
+   "ok": true,
+   "items": 60,
+   "retenus": 0
+  },
+  "News Assurances Pro": {
+   "ok": true,
+   "items": 63,
+   "retenus": 2
+  },
+  "L'Argus de l'assurance": {
+   "ok": true,
+   "items": 59,
+   "retenus": 2
+  },
+  "FrenchWeb": {
+   "ok": true,
+   "items": 43,
+   "retenus": 0
+  },
+  "CFNEWS": {
+   "ok": true,
+   "items": 65,
+   "retenus": 0
+  },
+  "Décideurs Corporate Finance": {
+   "ok": true,
+   "items": 4,
+   "retenus": 0
+  },
+  "Les Echos Start": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Journal du Net": {
+   "ok": true,
+   "items": 17,
+   "retenus": 0
+  },
+  "Siècle Digital": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Dynamique Mag": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "Entreprendre": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "BFM Business": {
+   "ok": true,
+   "items": 100,
+   "retenus": 2
+  },
+  "L'Agefi": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Revue Banque": {
+   "ok": true,
+   "items": 26,
+   "retenus": 0
+  },
+  "La Tribune de l'Assurance": {
+   "ok": true,
+   "items": 30,
+   "retenus": 0
+  },
+  "L'Usine Digitale": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "LeMagIT": {
+   "ok": true,
+   "items": 8,
+   "retenus": 0
+  },
+  "Le Monde Informatique": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "CIO Online": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ZDNet.fr": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Silicon.fr": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "ActuIA": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "IT for Business": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Alliancy": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "Solutions Numériques": {
+   "ok": true,
+   "items": 6,
+   "retenus": 0
+  },
+  "InformatiqueNews": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "L'Informaticien": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "Distributique": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ChannelNews": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Decideo": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "IT Social": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "LeBigData.fr": {
+   "ok": true,
+   "items": 62,
+   "retenus": 0
+  },
+  "GN insurtech funding": {
+   "ok": true,
+   "items": 30,
+   "retenus": 1
+  },
+  "GN insurtech raises": {
+   "ok": true,
+   "items": 14,
+   "retenus": 0
+  },
+  "GN assurtech levée": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN CVC assureur": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "GN M&A assurance": {
+   "ok": true,
+   "items": 12,
+   "retenus": 0
+  }
+ },
+ "articles": [
+  {
+   "source": "BFM Business",
+   "titre": "Décider soi-même d'être en arrêt maladie: la proposition de Mélenchon fait hurler ses opposants, pourtant au Royaume-Uni c'est possible depuis 44 ans... grâce à Margaret Thatcher - BFM",
+   "lien": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxNYzdtUHRsdGF5c1VsakFMSTBodTE2b19lM3U0OF9tNHhESVFVOGN3ckRpM1NyS0gxd0Q4ZS1ZdTV1NDAzQ2h6U1JreVlVejhTSmxkSXlSa3VDUnhCT2I3V09xYUY2MWJDVG9FVTNobWcyVFJkMS16cG1oRVotZ2RIVl9ORWZEU0RadjFiUVVCYlZuT2otM2taXzBWcFUwVHc5LWJucnE0N3hnZEVNaWFYVnlibFpVSEszZjlfbi1BN0dNSnJNbV9EOS1tM2ZZcHEzMzViNVVNVS1LM1F5alU3ZkliUktpSUd4VExEb3Q3U2R3US0tNkNGMlBGYUliNzNQbTYwQXlJT0lUenFtYVYwaU96ajNxd0J5MUdUbnAtMTN5V2d4c01zUWdLbFRHOEljd1MzQ1JaQ3htS2VueDVLb3FkOW40QVNKME50eGRDcFUwSkprNTc2UWxSblVlUQ?oc=5",
+   "date": "2026-11-15",
+   "extrait": "Décider soi-même d'être en arrêt maladie: la proposition de Mélenchon fait hurler ses opposants, pourtant au Royaume-Uni c'est possible depuis 44 ans... grâce à Margaret Thatcher BFM",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Grace (participation)"
+   ]
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "- News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQMmk0ZDVzYUdKTXdfS2U3Nk9jUUJqenpOMkFBODJFOFNtbWhMVi1hUFgyUzN6MUFQaVI1VUV2VDRVZkRQM1RCd3lxZ3k2TjU0NGVzSGZnc2ZkOVo5ZlZWMjVzYkxDbE9RWGdzclVHMExsTDhEUThTTm9VZmRETlk1eXRldWs4VkxlalRyMEUxakRpMkFyVkQ3RlotOVRLeWQ0TzhfVjJWMllHRVdjd3VJdi1TdlQ1Z2E2NnY0X2h2TlJIenRsVFB4UXBualREQ25jdGFJWFliT3FhQTRjbmhwaGZ5UG4yR2c?oc=5",
+   "date": "2026-11-15",
+   "extrait": "News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Climat : comment le réchauffement menace aussi les placements financiers, la valeur des actifs et l’équilibre du bilan des assureurs - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMizAJBVV95cUxPdlFYZ0tjRnNZYVZWR1h4bUlneFI4UEhpMHllQkhRYk54VC1sbWhUbmt3bC1RN3h6blZ0ZWxpYkU5VmFibUUyMTVQUjBER2MtWlVuUWh5THlKUjZNZGNsMEVBcko3WUN0Z2RsZ3Q1SjIzOUdQSjlkemNQTjh1WWZtY2owRUg5Q1lWdUQ5SFJxNVczOGd5czNDeDJqb2dPSFRxMnpBaTFodmpzWkRGTjg4WnNBaE5Oemx5VUtFbUJiYUtVTTcwV2ZNd1U5SndRS1hnUkpIUmVheDY2LWFwOFNWYnl0d2xOTWUtYWhPR3RoZnpfUG5GMmgwZ04xX2dPZUlNNzBEVW5qRHhxYVI5TEJ3aEc4RVpYb1EwSkI3bHYwNzA3ODljWU8zNFN1cHphRHZ1V1ZwUk94SU05Tjg2aGFsczEzUkd3bkpuX3FVTw?oc=5",
+   "date": "2026-11-15",
+   "extrait": "Climat : comment le réchauffement menace aussi les placements financiers, la valeur des actifs et l’équilibre du bilan des assureurs L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "BFM Business",
+   "titre": "Pillages et dégradations: les assureurs prêts à durcir leurs conditions - BFM",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQaVpfLUFlSmNGemgwR1pDRE40enltS3pXLVFpanpoWkUtQ09mellpcVN4N0JxV0Jyd282enhFdndnRkpKbnBoRGdPQ25NcjQ5aHlqS3pQN2NMZ1BQM0k2OGN0TVctenNDQnpvT3NXTkdaSFZqRU8zUEp6cU9ua0plZmkxNnZIQk5waEcya3h0YW8wVzJ3SmVtRzAxanNZdEsxN3RZNTBZVF90SlktcGRsYURCMUZWcUduRThYU1BSTkF2SlN3bzJZ?oc=5",
+   "date": "2026-11-15",
+   "extrait": "Pillages et dégradations: les assureurs prêts à durcir leurs conditions BFM",
+   "motsCles": [
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Ethos Risk Services acquires IME",
+   "lien": "https://coverager.com/ethos-risk-services-acquires-ime/",
+   "date": "2026-11-14",
+   "extrait": "The acquisition, announced September 29, follows Ethos’ purchase of workers’ compensation medical cost containment provider Definiti in May. The post Ethos Risk Services acquires IME appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Rockpool Investments backs vMobility",
+   "lien": "https://coverager.com/rockpool-investments-backs-vmobility/",
+   "date": "2026-11-14",
+   "extrait": "vMobility helps insurers, accident management companies and fleet operators arrange replacement vehicles and repairs after an accident. The post Rockpool Investments backs vMobility appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Northbridge names Evan Di Bella chief claims officer",
+   "lien": "https://coverager.com/northbridge-names-evan-di-bella-chief-claims-officer/",
+   "date": "2026-11-14",
+   "extrait": "Di Bella will continue to lead the Canadian insurer’s claims team. The post Northbridge names Evan Di Bella chief claims officer appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "claims",
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Toute l'actualité sur \"Les débriefs\" - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBuOERoZDNoTDRPLUFoV2tLY0NMZi1nSEFHbjZtLV8wSXNjTEZVcjJ6RmV3WThuUHk4b0pHbXp4OHVzUXV4cUwxOXdfTEViVWVUaVdmdjdOX2F3QUlsZm5waFhCZkJZZw?oc=5",
+   "date": "2026-11-14",
+   "extrait": "Toute l'actualité sur \"Les débriefs\" News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Sécheresse : Thierry Derez révèle une facture record de 5 à 6 milliards d’euros pour les assureurs en 2026 - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOazcwT1FtSzM3aE90bFJzby1WMEhhb1NLaFRjYU9HYlRoMDB1U0M0VTVOSEFtS00tM2x6eExIX0hPempuMndoNHRCd1d0WW1qTFBmZHdQZVAxSlRvMVRYT3hOZVd1cUlrMi1aRms1QkhsQVVJX0FQckhPYmlnNzhJMjRsVk9XeHVvUXREcWRoZEplX1BxX0JycjZBSEJ5WU5ncFg5TGo1T1dUYzFaZWFnUXlyelpyTzM3cmhSR1BSeHRkblhrMkg3YWNxUjhTdEM0Ul9KMVRXTHZHRXFHa0R4Q0pZa1UwcWlKMUc2eTNGcnhxRE1kbUVJLU5mVF9LVlNTOF84dHRSVXhQcGdiemRLZ0tjdw?oc=5",
+   "date": "2026-11-14",
+   "extrait": "Sécheresse : Thierry Derez révèle une facture record de 5 à 6 milliards d’euros pour les assureurs en 2026 L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Insurtech StitchStudio raises $8 mn to expand AI automation in insurance - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMikAFBVV95cUxObzZjU3E0WXFtUXhUVTNFU0s4WjE3VXczNmxYdXBfUi1SR3JZNjNzX2VyZVVkV2NpNnB1MmRJUkRmN0FHbTNaOGR5bDRzY2pRSDhIV1Q3U0VXRHFPNHgzTW5UR3lGMm5IbzFOLTFsY1dQQVZfcnFVNWU2bVpiYmlwQVRJdnNBMlVqT2NfMzRuZHg?oc=5",
+   "date": "2026-11-14",
+   "extrait": "Insurtech StitchStudio raises $8 mn to expand AI automation in insurance Beinsure",
+   "motsCles": [
+    "insurance",
+    "insurtech"
+   ],
+   "nomsSuivis": []
+  }
+ ]
+}
