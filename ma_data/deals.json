@@ -13,7 +13,8 @@
    "theme": "Prévoyance & mutualité",
    "resume": "Rapprochement de deux acteurs de la protection sociale : Kerialis accède aux synergies produits/distribution de Malakoff Humanis pour accélérer sur les professions juridiques et comptables ; Malakoff Humanis renforce sa présence sur ces marchés ainsi que sur l'épargne, les TPE/PME et les indépendants.",
    "source": "Newsroom Malakoff Humanis",
-   "url": "https://newsroom.malakoffhumanis.com/actualites/kerialis-rejoint-malakoff-humanis-une-nouvelle-etape-structurante-pour-le-developpement-des-deux-groupes-bddfc-63a59.html"
+   "url": "https://newsroom.malakoffhumanis.com/actualites/kerialis-rejoint-malakoff-humanis-une-nouvelle-etape-structurante-pour-le-developpement-des-deux-groupes-bddfc-63a59.html",
+   "liens": []
   },
   {
    "date": "2026",
@@ -28,7 +29,8 @@
    "theme": "Courtage — consolidation",
    "resume": "Malakoff Humanis remporte les enchères face à AG2R La Mondiale, Odealim et CNP Assurances pour prendre le contrôle de Magnolia, spécialiste du courtage en assurance emprunteur alternative — renforce le pôle assurance de prêt du groupe, après les rapprochements avec La France Mutualiste (2024) et Union notariale financière (été 2025).",
    "source": "Argus de l'assurance / En-Contact",
-   "url": "https://www.argusdelassurance.com/assurance-de-personnes/rachat-du-courtier-magnolia-decouvrez-quel-groupe-de-protection-sociale-a-remporte-la-mise.237799"
+   "url": "https://www.argusdelassurance.com/assurance-de-personnes/rachat-du-courtier-magnolia-decouvrez-quel-groupe-de-protection-sociale-a-remporte-la-mise.237799",
+   "liens": []
   },
   {
    "date": "2026",
@@ -43,7 +45,8 @@
    "theme": "Prévoyance & mutualité",
    "resume": "Naissance de Matmut Santé Prévoyance, regroupant les activités santé et prévoyance des deux mutuelles — environ 1,4 M de personnes protégées, positionnement sur tous les segments (particuliers, entreprises, fonction publique).",
    "source": "Argus de l'assurance",
-   "url": "https://www.argusdelassurance.com/les-assureurs/mutuelles/mutuelles-vers-une-nouvelle-fusion.232366"
+   "url": "https://www.argusdelassurance.com/les-assureurs/mutuelles/mutuelles-vers-une-nouvelle-fusion.232366",
+   "liens": []
   },
   {
    "date": "2026",
@@ -58,7 +61,8 @@
    "theme": "Prévoyance & mutualité",
    "resume": "Transfert par fusion-absorption du portefeuille de bulletins d'adhésion et de contrats de La Protection Mutuelle et Familiale vers La Prévoyance artisanale, commerciale et salariale, deux mutuelles basées à Strasbourg.",
    "source": "Légifrance (avis officiel)",
-   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054556125"
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054556125",
+   "liens": []
   },
   {
    "date": "05/2026",
@@ -73,7 +77,8 @@
    "theme": "Courtage — consolidation",
    "resume": "Diot-Siaci renforce son offre de courtage aviation/spatial (assurance et réassurance) en rachetant Aerial and Space Reunion, société fondée en 1953 — s'inscrit dans la stratégie de croissance externe du courtier, dont le CA a dépassé 1,3 Md€ en 2025.",
    "source": "Tracxn / Argus de l'assurance",
-   "url": "https://www.argusdelassurance.com/courtiers/diot-siaci-booste-par-linternational-le-courtier-depasse-13-milliard-deuros-de-chiffre-daffaires-en-2025.22SQGOQV55EV3K4H5OMHM7GRYM.html"
+   "url": "https://www.argusdelassurance.com/courtiers/diot-siaci-booste-par-linternational-le-courtier-depasse-13-milliard-deuros-de-chiffre-daffaires-en-2025.22SQGOQV55EV3K4H5OMHM7GRYM.html",
+   "liens": []
   },
   {
    "date": "08/2025",
@@ -88,7 +93,8 @@
    "theme": "Courtage — consolidation",
    "resume": "L'un des quatre méga-deals du courtage mondial en 2024-2025 (plus de 44 Md$ cumulés avec NFP/Aon, McGriff/Marsh McLennan) — illustre l'intensité de la consolidation chez les leaders mondiaux du courtage, dont Groupama est aussi client/partenaire indirect via ses propres courtiers.",
    "source": "Insurance Business Magazine",
-   "url": "https://richiecarchia.substack.com/p/reflections-on-arthur-j-gallaghers"
+   "url": "https://richiecarchia.substack.com/p/reflections-on-arthur-j-gallaghers",
+   "liens": []
   },
   {
    "date": "19/08/2026",
@@ -103,7 +109,14 @@
    "theme": "Assurtech — cyber",
    "resume": "Munich Re rachète At-Bay, spécialiste américain de la cyber-assurance et de la cybersécurité proactive pour PME — mouvement notable d'un réassureur européen de premier plan sur l'assurtech cyber, segment stratégique pour Groupama. Multiple ≈2x les primes brutes émises (278 M$), selon Insurance Business.",
    "source": "Munich Re (communiqué officiel)",
-   "url": "https://www.munichre.com/en/company/media-relations/media-information-and-corporate-news/media-information/2026/media-release-2026-08-19.html"
+   "url": "https://www.munichre.com/en/company/media-relations/media-information-and-corporate-news/media-information/2026/media-release-2026-08-19.html",
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "At-Bay",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-at-bay"
+    }
+   ]
   },
   {
    "date": "28/11/2025",
@@ -118,7 +131,8 @@
    "theme": "Assurtech — distribution digitale",
    "resume": "AXA l'emporte face à Allianz au terme d'un processus compétitif pour le contrôle de Prima Assicurazioni, assurtech milanaise spécialiste de l'auto low-cost — Generali et CNP Assurances étaient également positionnés sur le dossier, signe de l'appétit des grands assureurs européens pour l'assurtech depuis 2025.",
    "source": "Il Sole 24 Ore / Atlas Magazine",
-   "url": "https://www.atlas-mag.net/en/articles/axa-ahead-allianz-acquisition-prima-assicurazioni-0"
+   "url": "https://www.atlas-mag.net/en/articles/axa-ahead-allianz-acquisition-prima-assicurazioni-0",
+   "liens": []
   },
   {
    "date": "03/2026",
@@ -133,7 +147,8 @@
    "theme": "Assurtech — consolidation France",
    "resume": "Consolidation supplémentaire côté assurtech française — opération de taille plus modeste mais qui confirme le mouvement de rapprochement entre plateformes assurtech en 2026.",
    "source": "Argus de l'assurance",
-   "url": "https://www.argusdelassurance.com/tech/assurtech/"
+   "url": "https://www.argusdelassurance.com/tech/assurtech/",
+   "liens": []
   },
   {
    "date": "02/09/2026",
@@ -148,7 +163,14 @@
    "theme": "Assurtech — expansion internationale",
    "resume": "Alan a finalisé le rachat de Tanel, acteur de santé digitale basé à Dakar — première implantation du groupe en Afrique. Les fondateurs de Tanel conservent la direction des opérations locales.",
    "source": "Agence Ecofin ; Maddyness",
-   "url": "https://www.maddyness.com/2026/09/02/alan-met-le-cap-sur-lafrique-avec-une-acquisition-au-senegal/"
+   "url": "https://www.maddyness.com/2026/09/02/alan-met-le-cap-sur-lafrique-avec-une-acquisition-au-senegal/",
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "Alan",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-alan"
+    }
+   ]
   },
   {
    "date": "12/06/2026",
@@ -163,7 +185,8 @@
    "theme": "Assurtech — distribution digitale",
    "resume": "Belfius Insurance acquiert 100 % d'Insurlytech — première opération du bancassureur belge hors de Belgique. Leocare revendique 1,3 M d'utilisateurs et plus de 750 courtiers/partenaires B2B2C.",
    "source": "La Libre ; Bretagne Économique",
-   "url": "https://www.lalibre.be/economie/entreprises-startup/2026/06/12/belfius-sort-de-ses-frontieres-avec-une-acquisition-qui-lui-ouvre-les-portes-du-marche-de-lassurance-digitale-en-france-IQZCUAMHH5CRJGAWHPMO7CNJD4/"
+   "url": "https://www.lalibre.be/economie/entreprises-startup/2026/06/12/belfius-sort-de-ses-frontieres-avec-une-acquisition-qui-lui-ouvre-les-portes-du-marche-de-lassurance-digitale-en-france-IQZCUAMHH5CRJGAWHPMO7CNJD4/",
+   "liens": []
   },
   {
    "date": "05/06/2026",
@@ -178,7 +201,8 @@
    "theme": "Prévoyance & mutualité",
    "resume": "Macif Santé Prévoyance prévoit d'absorber la mutuelle Math et renforce son partenariat avec MNFCT sur la protection sociale complémentaire des agents territoriaux/hospitaliers — ensemble protégeant près de 2,3 M de personnes.",
    "source": "Asquare Partners (reprend le communiqué Macif)",
-   "url": "https://presse.macif.fr/actualites/la-macif-finalise-l-unification-de-ses-activites-sante-et-prevoyance-au-service-de-son-developpement-strategique-8a26e-821df.html"
+   "url": "https://presse.macif.fr/actualites/la-macif-finalise-l-unification-de-ses-activites-sante-et-prevoyance-au-service-de-son-developpement-strategique-8a26e-821df.html",
+   "liens": []
   },
   {
    "date": "22/06/2026",
@@ -193,7 +217,8 @@
    "theme": "Bancassurance",
    "resume": "Cardif acquiert 19 % supplémentaires de BCC Vita et prolonge le partenariat avec BCC Iccrea jusqu'en 2039.",
    "source": "Asquare Partners — ⚠️ réserve : le lien source original pointe vers un article sans rapport avec l'opération ; à vérifier directement sur le site BNP Paribas Cardif avant citation externe",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "30/04/2026",
@@ -208,7 +233,8 @@
    "theme": "Épargne patrimoniale",
    "resume": "LCL et CAA finalisent le rachat de Milleis, troisième banque privée indépendante française (64 000 familles clientes, 13 Md€ d'encours). Milleis Vie est intégrée à Spirica.",
    "source": "Asquare Partners (reprend le communiqué Crédit Agricole)",
-   "url": "https://presse.credit-agricole.com/lcl-et-credit-agricole-assurances-finalisent-lacquisition-du-groupe-milleis-et-consolident-leur-strategie-patrimoniale/?lang=fra"
+   "url": "https://presse.credit-agricole.com/lcl-et-credit-agricole-assurances-finalisent-lacquisition-du-groupe-milleis-et-consolident-leur-strategie-patrimoniale/?lang=fra",
+   "liens": []
   },
   {
    "date": "11/2025",
@@ -223,7 +249,8 @@
    "theme": "Prévoyance & mutualité",
    "resume": "Malakoff Humanis prend 85 % d'Unofi dans le cadre de sa stratégie de diversification vers l'épargne. ⚠️ Source secondaire uniquement (France Épargne Research) — date et pourcentage à recouper avec un communiqué officiel.",
    "source": "France Épargne Research — source secondaire, à vérifier",
-   "url": "https://www.france-epargne.fr/research/fr/french-insurance-2026-positioning-paper-mutuelle-prevoyance-borrower-insurance"
+   "url": "https://www.france-epargne.fr/research/fr/french-insurance-2026-positioning-paper-mutuelle-prevoyance-borrower-insurance",
+   "liens": []
   },
   {
    "date": "02/03/2026",
@@ -238,7 +265,14 @@
    "theme": "Consolidation spécialités",
    "resume": "Offre 100 % numéraire à 1 335 pence/action (prime de 59,8 % sur le cours du 16/01/2026), financée par cash, dette nouvelle et une augmentation de capital de 5 Md$. L'ensemble revendiquerait ≈15 Md$ de primes de spécialités pro forma.",
    "source": "Reinsurance News ; Insurance Times ; communiqué Zurich ; Insurance Journal (finalisation)",
-   "url": "https://www.reinsurancene.ws/zurichs-8-1bn-beazley-acquisition-to-complete-october-1-following-regulatory-clearance/"
+   "url": "https://www.reinsurancene.ws/zurichs-8-1bn-beazley-acquisition-to-complete-october-1-following-regulatory-clearance/",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Zurich Insurance Group",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-zurich-insurance-group_investissements-strategiques"
+    }
+   ]
   },
   {
    "date": "08/2026",
@@ -253,7 +287,8 @@
    "theme": "Cyber & prévention",
    "resume": "AXA XL prend le contrôle total de S-RM (conseil en renseignement et cybersécurité) pour développer une offre de prévention au-delà de la couverture d'assurance.",
    "source": "InsurTech.me Investment Intelligence Report",
-   "url": "https://insurtech.me/reports/2026-08-08/"
+   "url": "https://insurtech.me/reports/2026-08-08/",
+   "liens": []
   },
   {
    "date": "08/2026",
@@ -268,7 +303,8 @@
    "theme": "Bancassurance",
    "resume": "Ageas sort d'une coentreprise de 25 ans avec Maybank ; plus-value nette estimée ≈450 M€ pour Ageas. Multiple ≈P/B 2x des fonds propres IFRS 2025.",
    "source": "InsurTech.me Investment Intelligence Report — source secondaire, à recouper avec le communiqué Ageas",
-   "url": "https://insurtech.me/reports/2026-08-08/"
+   "url": "https://insurtech.me/reports/2026-08-08/",
+   "liens": []
   },
   {
    "date": "07/12/2025",
@@ -283,7 +319,8 @@
    "theme": "Bancassurance",
    "resume": "Ageas rachète la participation minoritaire de BNP Paribas Fortis dans AG Insurance (n°1 belge vie et non-vie) et formalise un partenariat de long terme avec BNP Paribas.",
    "source": "Communiqué Ageas",
-   "url": "https://www.ageas.com/en/newsroom/ageas-to-take-full-ownership-of-ag-insurance-and-formalise-long-term-partnership-with-bnp-paribas-3201192"
+   "url": "https://www.ageas.com/en/newsroom/ageas-to-take-full-ownership-of-ag-insurance-and-formalise-long-term-partnership-with-bnp-paribas-3201192",
+   "liens": []
   },
   {
    "date": "05/12/2025",
@@ -298,7 +335,8 @@
    "theme": "Consolidation domestique",
    "resume": "Plus grande opération vie/santé mondiale de 2025 selon Milliman (parité : 1 action Baloise = 1,0119 action HBAN). L'ensemble devient le premier assureur multibranche suisse (≈20 % de part de marché domestique).",
    "source": "Communiqué Helvetia Baloise ; Milliman",
-   "url": "https://www.helvetia-baloise.com/corporate/hb/en/home/news-stories/publications/media-releases/2025/20251205.html"
+   "url": "https://www.helvetia-baloise.com/corporate/hb/en/home/news-stories/publications/media-releases/2025/20251205.html",
+   "liens": []
   },
   {
    "date": "15/04/2026",
@@ -313,7 +351,8 @@
    "theme": "Épargne & Retraite",
    "resume": "Standard Life a conclu un accord pour acquérir 100 % d'Aegon UK pour 2 Md£ (0,83x P/2025A Unrestricted Tier 1), financé par 750 M£ de cash et l'émission d'actions (15,3 % du groupe élargi). Finalisation attendue fin 2026.",
    "source": "Standard Life Half Year 2026 Results (document investisseur)",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "29/06/2026",
@@ -328,7 +367,8 @@
    "theme": "Consolidation réassurance vie",
    "resume": "Sixth Street signe pour acquérir une participation majoritaire dans le consolidateur européen Monument Re ; Hannover Re reste actionnaire de référence. Vise à accélérer le transfert de risques de portefeuilles vie en Europe.",
    "source": "BusinessWire (communiqué Sixth Street)",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "12/02/2026",
@@ -343,7 +383,8 @@
    "theme": "Assurtech — télématique flottes",
    "resume": "Admiral Group acquiert l'insurtech britannique Flock, télématique connectée pour flottes automobiles, pour intégrer sa tarification en temps réel au projet pilote Admiral Pioneer.",
    "source": "RBC Capital Market Research",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "28/07/2026",
@@ -358,7 +399,8 @@
    "theme": "Embedded Insurance",
    "resume": "Cover Genius acquiert l'insurtech berlinoise Friendsurance, dont la technologie de distribution intégrée équipe des applications bancaires DACH — permet le déploiement de produits de protection conformes GDPR/PSD2.",
    "source": "Cover Genius (communiqué officiel)",
-   "url": "https://www.covergenius.com/press/cover-genius-acquires-friendsurance-to-accelerate-embedded-protection-across-european-banking"
+   "url": "https://www.covergenius.com/press/cover-genius-acquires-friendsurance-to-accelerate-embedded-protection-across-european-banking",
+   "liens": []
   },
   {
    "date": "31/07/2026",
@@ -373,7 +415,8 @@
    "theme": "Assurtech — IA & tarification",
    "resume": "Mapfre rachète 38,9 % de l'insurtech espagnole Tuio via une augmentation de capital, pour s'appuyer sur son expertise IA de tarification et financer son expansion Europe/Amérique latine.",
    "source": "Banco Sabadell Broker Research ; Beinsure",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "07/07/2026",
@@ -388,7 +431,8 @@
    "theme": "Logiciels d'assurance",
    "resume": "KAPIA-RGI rachète l'activité de Cegid Assurex dédiée aux éditeurs/distributeurs de produits d'assurance de personnes — consolide sa position sur les marchés vie/prévoyance/retraite en France (+20 clients institutionnels).",
    "source": "RGI Group (communiqué de presse)",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "01/03/2026",
@@ -403,7 +447,8 @@
    "theme": "Transfert de risques de pension",
    "resume": "Athora finalise l'acquisition de PICG, spécialiste de la gestion des régimes de retraite à prestations définies au Royaume-Uni, financée en partie par une levée de fonds propres de 3,5 Md€.",
    "source": "Athora HY 2026 Results (présentation investisseurs)",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "18/09/2025",
@@ -418,7 +463,8 @@
    "theme": "Réassurance spécialités",
    "resume": "Radian rachète 100 % d'Inigo Ltd auprès de ses actionnaires (dont la Caisse de dépôt et placement du Québec et Qatar Investment Authority), en numéraire.",
    "source": "Financial Data — M&A Deals Database",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "28/08/2026",
@@ -433,7 +479,8 @@
    "theme": "Assurance dommages commerciale",
    "resume": "Tokio Marine HCC finalise l'acquisition de Direct Commercial Ltd pour 359,94 M$, soit un multiple EV/Revenue de 7,70x — comparable de valorisation utile pour le segment commercial.",
    "source": "Financial Data — M&A Deals Database",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "27/01/2026",
@@ -448,7 +495,8 @@
    "theme": "Courtage — consolidation",
    "resume": "AUB Group (courtier australien) acquiert 95,90 % de Prestige Insurance Holdings, basé au Royaume-Uni, en numéraire.",
    "source": "Financial Data — M&A Deals Database",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "16/02/2026",
@@ -463,7 +511,8 @@
    "theme": "Intégration verticale santé",
    "resume": "Reale Mutua acquiert 78 % de l'entreprise italienne de cliniques et services médicaux Lifenet — intégration verticale d'un assureur santé vers les soins.",
    "source": "Financial Data — M&A Deals Database",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "17/09/2026",
@@ -478,7 +527,8 @@
    "theme": "Consolidation courtage",
    "resume": "Le consolidateur britannique Jensten, adossé à Bain Capital, rachète le courtier VRG, spécialiste des risques technologiques et des sciences de la vie. Il s'agit d'au moins sa cinquième acquisition de l'année.",
    "source": "Insurance Times ; Insurance Business UK",
-   "url": "https://www.insurancetimes.co.uk/news/jensten-group-to-acquire-technology-focused-corporate-broker/1459686.article"
+   "url": "https://www.insurancetimes.co.uk/news/jensten-group-to-acquire-technology-focused-corporate-broker/1459686.article",
+   "liens": []
   },
   {
    "date": "02/10/2026",
@@ -493,7 +543,8 @@
    "theme": "Bancassurance",
    "resume": "Generali prend 9,9 % de la holding de Cajamar pour environ 150 M€, transformant son partenariat de bancassurance (Cajamar Vida et Cajamar Seguros Generales) en participation au capital. Crédit Agricole avait pris une participation de taille similaire en juin.",
    "source": "Reinsurance News ; Insurance Business",
-   "url": "https://www.reinsurancene.ws/generalis-minority-investment-in-bcc-to-strengthen-partnership-with-grupo-cooperativo-cajamar/"
+   "url": "https://www.reinsurancene.ws/generalis-minority-investment-in-bcc-to-strengthen-partnership-with-grupo-cooperativo-cajamar/",
+   "liens": []
   },
   {
    "date": "13/10/2026",
@@ -508,7 +559,8 @@
    "theme": "Consolidation assureurs",
    "resume": "Shinhan achète 77,04 % de Lotte Non-Life à JKL Partners, puis prévoit de fusionner l'assureur avec Shinhan EZ General Insurance. Mouvement hors Europe, signalé comme veille de consolidation mondiale.",
    "source": "Shinhan Financial Group (Form 6-K, SEC) ; Korea Herald",
-   "url": "https://www.sec.gov/Archives/edgar/data/0001263043/000119312526419664/6k_261013_lotte.htm"
+   "url": "https://www.sec.gov/Archives/edgar/data/0001263043/000119312526419664/6k_261013_lotte.htm",
+   "liens": []
   },
   {
    "date": "14/10/2026",
@@ -523,7 +575,8 @@
    "theme": "Expansion internationale – assurance caution",
    "resume": "Liberty Mutual a annoncé l'acquisition d'Austral Seguradora, assureur caution parmi les cinq premiers du Brésil (caution, lignes financières, casualty). Conditions financières non communiquées ; l'opération doit encore être autorisée par les régulateurs.",
    "source": "Insurance Journal",
-   "url": "https://www.insurancejournal.com/news/international/2026/10/14/888906.htm"
+   "url": "https://www.insurancejournal.com/news/international/2026/10/14/888906.htm",
+   "liens": []
   }
  ],
  "rumeurs": [
@@ -539,7 +592,14 @@
    "statut": "Rumeur de marché — non confirmée par les parties",
    "resume": "Belfius étudierait le rachat d'Acheel pour s'implanter sur le marché français dans le cadre de sa stratégie d'internationalisation à horizon 2030. Acheel revendique 850 000 contrats (+40 %) et une rentabilité atteinte dès 2023 ; CNP Assurances serait également positionné sur le dossier.",
    "source": "Presse spécialisée assurance (à recouper)",
-   "url": null
+   "url": null,
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "Acheel",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-acheel"
+    }
+   ]
   },
   {
    "date": "15/05/2026",
@@ -553,7 +613,8 @@
    "statut": "Rumeur de marché — aucune offre formelle, discussions exploratoires rapportées",
    "resume": "Selon Insurance Post, Intact étudierait une offre sur Hiscox ; le titre a bondi d'environ 15 %. Aucune confirmation des deux groupes à ce stade.",
    "source": "Insurance Business ; Global Banking & Finance (citant Insurance Post)",
-   "url": "https://www.insurancebusinessmag.com/uk/news/mergers-acquisitions/intacthiscox-deal-talk-adds-to-wave-of-foreign-bids-for-uk-names-report-575592.aspx"
+   "url": "https://www.insurancebusinessmag.com/uk/news/mergers-acquisitions/intacthiscox-deal-talk-adds-to-wave-of-foreign-bids-for-uk-names-report-575592.aspx",
+   "liens": []
   },
   {
    "date": "01/07/2026",
@@ -567,7 +628,8 @@
    "statut": "En cours de discussions",
    "resume": "KKR négocierait des partenariats stratégiques avec de grands assureurs vie britanniques pour se positionner sur le marché des transferts de risques de pension (PRT), en déployant du capital via des véhicules gérés par KKR plutôt qu'en acquérant un acteur — stratégie inspirée du projet étudié avec Standard Life.",
    "source": "Financial Times via MT Newswires",
-   "url": null
+   "url": null,
+   "liens": []
   },
   {
    "date": "25/08/2026",
@@ -581,7 +643,8 @@
    "statut": "Rumeur (FT) — discussions en cours, aucune offre confirmée",
    "resume": "Selon le Financial Times, Tokio Marine, adossé à Berkshire Hathaway, viserait Suncorp comme cible préférée après avoir écarté Intact (trop gros) ; IAG était aussi examiné. Ce serait sa plus grande acquisition.",
    "source": "Insurance Journal ; DealStreetAsia (citant FT)",
-   "url": "https://www.insurancejournal.com/news/international/2026/08/25/882714.htm"
+   "url": "https://www.insurancejournal.com/news/international/2026/08/25/882714.htm",
+   "liens": []
   },
   {
    "date": "23/09/2026",
@@ -595,7 +658,8 @@
    "statut": "Discussions préliminaires confirmées par la société — aucune offre à ce stade",
    "resume": "Pollen Street, propriétaire de Markerstudy, a lancé une revue stratégique incluant une éventuelle sortie de cote (take-private) ; des discussions très préliminaires ont lieu avec un nombre limité de tiers.",
    "source": "Insurance Times ; Insurance Business UK",
-   "url": "https://www.insurancetimes.co.uk/news/markerstudy-owner-in-talks-about-possible-sale-and-delisting-from-stock-exchange/1459748.article"
+   "url": "https://www.insurancetimes.co.uk/news/markerstudy-owner-in-talks-about-possible-sale-and-delisting-from-stock-exchange/1459748.article",
+   "liens": []
   }
  ],
  "contexteMarche": {

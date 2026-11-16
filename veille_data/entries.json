@@ -1,6 +1,56 @@
 {
  "entries": [
   {
+   "date": "12/11/2026",
+   "type": "fonds",
+   "titre": "Accel mène la série A de 30 M$ de SE3 (IA spatiale, défense)",
+   "resume": "Accel mène un tour de série A de 30 M$ dans SE3, start-up munichoise d'IA spatiale pour les systèmes autonomes de défense, sortie du mode furtif en juin 2026.",
+   "source": "Sifted",
+   "url": "https://sifted.eu/articles/accel-30m-spatial-ai-defence-startup-se3/",
+   "theme": "Activité des fonds hors insurtech",
+   "ancre": "v-7e2d9c16",
+   "liens": []
+  },
+  {
+   "date": "10/11/2026",
+   "type": "startup",
+   "titre": "Sumary lève 25 M$ en seed, tour mené par Singular",
+   "resume": "La start-up danoise Sumary, qui développe une IA pour les cabinets d'expertise comptable, boucle un tour de seed de 25 M$ mené par Singular, avec la participation de ses investisseurs historiques byFounders, Partech et Tenity. Elle présente ce tour comme le plus gros seed européen dans le logiciel comptable.",
+   "source": "Sifted",
+   "url": "https://sifted.eu/articles/sumary-seed-fundraise/",
+   "theme": "Levées de fonds",
+   "ancre": "v-be1f681c",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Partech",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-partech_partech-seed-i-to-iv"
+    },
+    {
+     "type": "fonds",
+     "nom": "Tenity",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-tenity_tenity-incubation-fund-i-ii"
+    }
+   ]
+  },
+  {
+   "date": "06/11/2026",
+   "type": "startup",
+   "titre": "Synctera (Portage) lève 24,5 M$ pour atteindre l'équilibre",
+   "resume": "La plateforme américaine de banking-as-a-service Synctera, participation de Portage, lève 24,5 M$ auprès de Fin Capital, Multiplier Capital, 1st & Main Growth Partners, Diagram et NAventures, portant son financement total à 126,7 M$ ; elle ajoute Main Street Bank à son réseau de banques partenaires.",
+   "source": "Beinsure",
+   "url": "https://beinsure.com/news/synctera-raises-24-5-mn-to-expand-banking-as-a-service/",
+   "theme": "Levées de fonds",
+   "ancre": "v-884f23dc",
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "Synctera",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-synctera"
+    }
+   ]
+  },
+  {
    "date": "28/10/2026",
    "type": "startup",
    "titre": "Alan remporte, avec Allianz, le contrat santé de la Sécurité sociale (3 Md€)",
@@ -8,7 +58,25 @@
    "source": "Maddyness",
    "url": "https://www.maddyness.com/2026/10/28/alan-remporte-un-contrat-de-3-milliards-deuros-avec-la-securite-sociale/",
    "theme": "Partenariats & contrats",
-   "ancre": "v-9b00bd78"
+   "ancre": "v-9b00bd78",
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "Alan",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-alan"
+    }
+   ]
+  },
+  {
+   "date": "27/10/2026",
+   "type": "startup",
+   "titre": "Guidewire rachète hyperexponential pour 1,7 Md$ (jusqu'à 2,1 Md$)",
+   "resume": "L'éditeur américain Guidewire annonce l'acquisition de la scale-up londonienne hyperexponential (tarification et souscription par IA pour l'assurance dommages) pour 1,7 Md$ en numéraire, jusqu'à 2,1 Md$ avec complément de prix ; clôture attendue au T2 de l'exercice 2027. L'Argus la qualifie de plus grosse opération de l'histoire de l'assurtech européenne.",
+   "source": "iTWire",
+   "url": "https://itwire.com/it-industry-news/deals/guidewire-signs-definitive-agreement-to-acquire-hyperexponential",
+   "theme": "M&A & consolidation",
+   "ancre": "v-2cff225c",
+   "liens": []
   },
   {
    "date": "26/10/2026",
@@ -18,7 +86,8 @@
    "source": "Artemis",
    "url": "https://www.artemis.bm/news/liberty-mutual-re-and-celest-science-explore-parametric-trigger-data-fallback/",
    "theme": "Partenariats & contrats",
-   "ancre": "v-2b0e0fdc"
+   "ancre": "v-2b0e0fdc",
+   "liens": []
   },
   {
    "date": "16/10/2026",
@@ -28,7 +97,19 @@
    "source": "Coverager",
    "url": "https://coverager.com/allobrain-raises-7-million-with-participation/",
    "theme": "Levées de fonds",
-   "ancre": "v-aedee8bc"
+   "ancre": "v-aedee8bc",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Groupama",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-groupama_gvi"
+    },
+    {
+     "type": "startup",
+     "nom": "AlloBrain",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-allobrain"
+    }
+   ]
   },
   {
    "date": "16/10/2026",
@@ -38,7 +119,14 @@
    "source": "Maddyness",
    "url": "https://www.maddyness.com/2026/10/16/3pay-rachete-moneytrack-la-fintech-veut-en-finir-avec-lavance-des-frais-de-sante/",
    "theme": "M&A & consolidation",
-   "ancre": "v-9098f1b3"
+   "ancre": "v-9098f1b3",
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "MoneyTrack",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-moneytrack"
+    }
+   ]
   },
   {
    "date": "15/10/2026",
@@ -48,7 +136,14 @@
    "source": "CFNEWS",
    "url": "https://www.cfnews.net/L-actualite/Capital-innovation/Operations/2nd-tour/Webyn-s-entoure-d-un-quatrieme-fonds-748141",
    "theme": "Levées de fonds",
-   "ancre": "v-bbf7973b"
+   "ancre": "v-bbf7973b",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "TomCat",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-tomcat_tomcat-ventures-i"
+    }
+   ]
   },
   {
    "date": "14/10/2026",
@@ -58,7 +153,19 @@
    "source": "The Next Web",
    "url": "https://thenextweb.com/news/cachet-funding-spintop-ventures",
    "theme": "Levées de fonds",
-   "ancre": "v-cf37bb69"
+   "ancre": "v-cf37bb69",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Truffle Capital",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-truffle-capital_truffle-fintech-et-insurtech-fund-ii"
+    },
+    {
+     "type": "startup",
+     "nom": "Cachet",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-cachet"
+    }
+   ]
   },
   {
    "date": "08/10/2026",
@@ -68,7 +175,19 @@
    "source": "FinTech Global",
    "url": "https://fintech.global/2026/10/08/ledgebrook-raises-200m-to-scale-ai-underwriting-for-complex-risks/",
    "theme": "Levées de fonds",
-   "ancre": "v-34869711"
+   "ancre": "v-34869711",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Allianz X",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-allianz-x_allianz-x"
+    },
+    {
+     "type": "startup",
+     "nom": "Ledgebrook",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-ledgebrook"
+    }
+   ]
   },
   {
    "date": "07/10/2026",
@@ -78,7 +197,19 @@
    "source": "EU-Startups",
    "url": "https://www.eu-startups.com/2026/10/uk-based-insurtech-konsileo-raises-e5-9-million-to-expand-its-team-and-integrate-ai/",
    "theme": "Levées de fonds",
-   "ancre": "v-4bfd748a"
+   "ancre": "v-4bfd748a",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Committed Capital",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-committed-capital_committed-capital-eis-fund"
+    },
+    {
+     "type": "startup",
+     "nom": "Konsileo",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-konsileo"
+    }
+   ]
   },
   {
    "date": "01/10/2026",
@@ -88,7 +219,14 @@
    "source": "Insurance Journal",
    "url": "https://www.insurancejournal.com/news/international/2026/10/01/887514.htm",
    "theme": "M&A & consolidation",
-   "ancre": "v-62f0734c"
+   "ancre": "v-62f0734c",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Zurich Insurance Group",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-zurich-insurance-group_investissements-strategiques"
+    }
+   ]
   },
   {
    "date": "01/10/2026",
@@ -98,7 +236,8 @@
    "source": "Tech.eu",
    "url": "https://tech.eu/2026/10/01/voltaback-raises-eur28m-to-scale-ev-charging-reimbursement-across-europe/",
    "theme": "Activité des fonds hors insurtech",
-   "ancre": "v-2920f964"
+   "ancre": "v-2920f964",
+   "liens": []
   },
   {
    "date": "22/09/2026",
@@ -108,7 +247,14 @@
    "resume": "La High Court d'Angleterre et du pays de Galles a homologué le 22 septembre le scheme of arrangement du rachat de Beazley par Zurich, sans opposition. Dernière étape avant la prise d'effet prévue le 1er octobre 2026.",
    "source": "Bdaily",
    "url": "https://www.bdaily.co.uk/articles/2026/09/22/zurich-81-billion-beazley-takeover-approved",
-   "ancre": "v-6848ad25"
+   "ancre": "v-6848ad25",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Zurich Insurance Group",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-zurich-insurance-group_investissements-strategiques"
+    }
+   ]
   },
   {
    "date": "21/09/2026",
@@ -118,7 +264,14 @@
    "source": "Claims Journal",
    "url": "https://www.claimsjournal.com/news/national/2026/09/21/340219.htm",
    "theme": "Contentieux & conformité",
-   "ancre": "v-38ad7e8b"
+   "ancre": "v-38ad7e8b",
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "Lemonade",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-lemonade"
+    }
+   ]
   },
   {
    "date": "16/09/2026",
@@ -128,7 +281,14 @@
    "source": "FinTech Global",
    "url": "https://fintech.global/2026/09/16/etfbook-raises-13m-to-close-etf-datas-global-gap/",
    "theme": "Activité des fonds hors insurtech",
-   "ancre": "v-e5babe59"
+   "ancre": "v-e5babe59",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "BlackFin Capital Partners",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-blackfin-capital-partners_blackfintech-1"
+    }
+   ]
   },
   {
    "date": "16/09/2026",
@@ -138,7 +298,8 @@
    "resume": "Veridion, plateforme de données d'entreprises alimentée par l'IA (plus de 640 millions de sociétés cartographiées en temps réel), lève 20 M$ en série A menée par Hoxton Ventures, avec ses investisseurs existants Underline Ventures, OTB Ventures, Gapminder, Day One Capital et Launchub. Les fonds serviront notamment à accélérer son développement aux États-Unis.",
    "source": "FinSMEs",
    "url": "https://www.finsmes.com/2026/09/veridion-raises-20m-in-series-a-funding.html",
-   "ancre": "v-ef642e48"
+   "ancre": "v-ef642e48",
+   "liens": []
   },
   {
    "date": "16/09/2026",
@@ -148,7 +309,8 @@
    "source": "FinTech Global",
    "url": "https://fintech.global/2026/09/21/portage-closes-600m-fund-to-back-fintechs-next-wave/",
    "theme": "Closings de fonds",
-   "ancre": "v-f8277d32"
+   "ancre": "v-f8277d32",
+   "liens": []
   },
   {
    "date": "14/09/2026",
@@ -158,7 +320,14 @@
    "resume": "Rodolphe Menegaux devient directeur général d'Alven Capital, qui finalise la transmission progressive du capital à sa nouvelle génération d'associés et prévoit le lancement d'une nouvelle levée d'ici la fin d'année.",
    "source": "Maddyness",
    "url": "https://www.maddyness.com/2026/09/14/apres-des-mois-dincertitude-alven-acte-sa-succession-et-prepare-un-nouveau-fonds/",
-   "ancre": "v-6ac5c74b"
+   "ancre": "v-6ac5c74b",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Alven Capital",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-alven-capital_alven-iv"
+    }
+   ]
   },
   {
    "date": "14/09/2026",
@@ -168,7 +337,14 @@
    "source": "Reinsurance News",
    "url": "https://www.reinsurancene.ws/zurichs-8-1bn-beazley-acquisition-to-complete-october-1-following-regulatory-clearance/",
    "theme": "M&A & consolidation",
-   "ancre": "v-65d8d5b6"
+   "ancre": "v-65d8d5b6",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Zurich Insurance Group",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-zurich-insurance-group_investissements-strategiques"
+    }
+   ]
   },
   {
    "date": "10/09/2026",
@@ -178,7 +354,14 @@
    "resume": "La start-up Ed.ai (correction de copies assistée par IA) lève 5 M€ en seed avec la participation de La Poste Ventures — fonds géré par XAnge — et de Ring Capital, aux côtés de Bpifrance (Digital Venture) et 50 Partners. Hors périmètre insurtech, mais mouvement notable de deux fonds suivis dans Radar Insurtech VC.",
    "source": "Maddyness",
    "url": "https://www.maddyness.com/2026/09/10/ed-ai-leve-5-millions-deuros-pour-aider-les-enseignants-a-mieux-tirer-profit-des-copies-de-leurs-eleves-avec-lia/",
-   "ancre": "v-a070645b"
+   "ancre": "v-a070645b",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "Ring Capital",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-ring-capital_mission-i"
+    }
+   ]
   },
   {
    "date": "11/08/2026",
@@ -188,7 +371,8 @@
    "source": "Tech.eu",
    "url": "https://tech.eu/2026/08/12/monzo-and-lovable-backer-accel-raises-enlarged-800m-early-stage-fund/",
    "theme": "Closings de fonds",
-   "ancre": "v-3c9bf1d5"
+   "ancre": "v-3c9bf1d5",
+   "liens": []
   },
   {
    "date": "05/08/2026",
@@ -198,7 +382,14 @@
    "source": "Tech.eu",
    "url": "https://tech.eu/2026/08/05/white-star-capital-closes-250m-fund-iv-to-back-global-startups-from-series-a-to-b/",
    "theme": "Closings de fonds",
-   "ancre": "v-e780a14b"
+   "ancre": "v-e780a14b",
+   "liens": [
+    {
+     "type": "fonds",
+     "nom": "White Star Capital",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#f-white-star-capital_wsc-i"
+    }
+   ]
   },
   {
    "date": "22/07/2026",
@@ -208,7 +399,14 @@
    "source": "FinTech Global",
    "url": "https://fintech.global/2026/07/22/klaimee-lands-5-5m-to-insure-autonomous-ai-agents/",
    "theme": "Levées de fonds",
-   "ancre": "v-8c16b204"
+   "ancre": "v-8c16b204",
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "Klaimee",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-klaimee"
+    }
+   ]
   },
   {
    "date": "25/06/2026",
@@ -218,10 +416,17 @@
    "source": "FrenchWeb",
    "url": "https://www.frenchweb.fr/alan-depasse-le-milliard-deuros-leves-avec-larrivee-de-prosus/462572",
    "theme": "Levées de fonds",
-   "ancre": "v-25a48be5"
+   "ancre": "v-25a48be5",
+   "liens": [
+    {
+     "type": "startup",
+     "nom": "Alan",
+     "url": "https://claude.ai/artifact/X6o5LvDnYe6Qo5fPYFkX7g#s-alan"
+    }
+   ]
   }
  ],
- "derniereMaj": "01/11/2026",
- "prochaine": "08/11/2026",
+ "derniereMaj": "16/11/2026",
+ "prochaine": "23/11/2026",
  "frequence": "Hebdomadaire (lundi)"
 }
