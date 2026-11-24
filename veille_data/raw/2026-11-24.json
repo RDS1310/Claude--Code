@@ -1,0 +1,1627 @@
+{
+ "collecte": "2026-11-24T16:28:58+00:00",
+ "fenetreJours": 2,
+ "nbArticles": 120,
+ "nbAvecNomSuivi": 24,
+ "flux": {
+  "EU-Startups": {
+   "ok": true,
+   "items": 10,
+   "retenus": 1
+  },
+  "Tech.eu": {
+   "ok": false,
+   "erreur": "HTTP Error 403: Forbidden"
+  },
+  "Sifted": {
+   "ok": true,
+   "items": 24,
+   "retenus": 0
+  },
+  "Maddyness": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "FinSMEs": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Finextra": {
+   "ok": true,
+   "items": 50,
+   "retenus": 9
+  },
+  "FinTech Global": {
+   "ok": true,
+   "items": 10,
+   "retenus": 2
+  },
+  "Coverager": {
+   "ok": true,
+   "items": 10,
+   "retenus": 10
+  },
+  "Insurtech Insights": {
+   "ok": true,
+   "items": 16,
+   "retenus": 0
+  },
+  "Reinsurance News": {
+   "ok": true,
+   "items": 10,
+   "retenus": 8
+  },
+  "Artemis": {
+   "ok": true,
+   "items": 10,
+   "retenus": 2
+  },
+  "Insurance Journal": {
+   "ok": true,
+   "items": 30,
+   "retenus": 8
+  },
+  "Claims Journal": {
+   "ok": true,
+   "items": 15,
+   "retenus": 3
+  },
+  "Insurance Times": {
+   "ok": true,
+   "items": 100,
+   "retenus": 27
+  },
+  "News Assurances Pro": {
+   "ok": true,
+   "items": 80,
+   "retenus": 12
+  },
+  "L'Argus de l'assurance": {
+   "ok": true,
+   "items": 77,
+   "retenus": 10
+  },
+  "FrenchWeb": {
+   "ok": true,
+   "items": 44,
+   "retenus": 0
+  },
+  "CFNEWS": {
+   "ok": true,
+   "items": 100,
+   "retenus": 0
+  },
+  "Décideurs Corporate Finance": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Les Echos Start": {
+   "ok": true,
+   "items": 100,
+   "retenus": 1
+  },
+  "Journal du Net": {
+   "ok": true,
+   "items": 27,
+   "retenus": 1
+  },
+  "Siècle Digital": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "Dynamique Mag": {
+   "ok": true,
+   "items": 3,
+   "retenus": 1
+  },
+  "Entreprendre": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "BFM Business": {
+   "ok": true,
+   "items": 100,
+   "retenus": 3
+  },
+  "L'Agefi": {
+   "ok": true,
+   "items": 100,
+   "retenus": 2
+  },
+  "Revue Banque": {
+   "ok": true,
+   "items": 25,
+   "retenus": 0
+  },
+  "La Tribune de l'Assurance": {
+   "ok": true,
+   "items": 48,
+   "retenus": 8
+  },
+  "L'Usine Digitale": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "LeMagIT": {
+   "ok": true,
+   "items": 8,
+   "retenus": 0
+  },
+  "Le Monde Informatique": {
+   "ok": true,
+   "items": 16,
+   "retenus": 0
+  },
+  "CIO Online": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ZDNet.fr": {
+   "ok": true,
+   "items": 10,
+   "retenus": 0
+  },
+  "Silicon.fr": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "ActuIA": {
+   "ok": true,
+   "items": 44,
+   "retenus": 0
+  },
+  "IT for Business": {
+   "ok": true,
+   "items": 3,
+   "retenus": 0
+  },
+  "Alliancy": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "Solutions Numériques": {
+   "ok": true,
+   "items": 8,
+   "retenus": 0
+  },
+  "InformatiqueNews": {
+   "ok": true,
+   "items": 5,
+   "retenus": 0
+  },
+  "L'Informaticien": {
+   "ok": true,
+   "items": 5,
+   "retenus": 0
+  },
+  "Distributique": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "ChannelNews": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "Decideo": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "IT Social": {
+   "ok": true,
+   "items": 2,
+   "retenus": 0
+  },
+  "LeBigData.fr": {
+   "ok": true,
+   "items": 74,
+   "retenus": 0
+  },
+  "GN insurtech funding": {
+   "ok": true,
+   "items": 63,
+   "retenus": 12
+  },
+  "GN insurtech raises": {
+   "ok": true,
+   "items": 9,
+   "retenus": 0
+  },
+  "GN assurtech levée": {
+   "ok": true,
+   "items": 1,
+   "retenus": 0
+  },
+  "GN CVC assureur": {
+   "ok": true,
+   "items": 0,
+   "retenus": 0
+  },
+  "GN M&A assurance": {
+   "ok": true,
+   "items": 15,
+   "retenus": 0
+  }
+ },
+ "articles": [
+  {
+   "source": "EU-Startups",
+   "titre": "Frankfurt-based CommerzVentures closes €50 million Fund IV, betting on early-stage FinTech and AI",
+   "lien": "https://www.eu-startups.com/2026/11/frankfurt-based-commerzventures-closes-e50-million-fund-iv-betting-on-early-stage-fintech-and-ai/",
+   "date": "2026-11-24",
+   "extrait": "CommerzVentures, a Frankfurt-based specialist venture capital firm focused on financial services, has closed its fourth fund at €50 million. The fourth fund — CommerzVentures IV (Fund IV) — is anchored by Commerzbank and is deliberately smaller than its predecessors; the firm managed over €550 milli",
+   "motsCles": [],
+   "nomsSuivis": [
+    "CommerzVentures (fonds)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "CommerzVentures launches €50m fund for AI fintechs",
+   "lien": "https://www.finextra.com/newsarticle/48804/commerzventures-launches-50m-fund-for-ai-fintechs?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-24",
+   "extrait": "German fintech investor CommerzVentures has launched a €50 million fund that will back early-stage firms working on the intersection of AI and financial services.",
+   "motsCles": [],
+   "nomsSuivis": [
+    "CommerzVentures (fonds)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "Form3 partners picks Coinbase infrastructure for stablecoin money movement",
+   "lien": "https://www.finextra.com/pressarticle/111760/form3-partners-picks-coinbase-infrastructure-for-stablecoin-money-movement?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-24",
+   "extrait": "Form3, a leading global fintech offering account-to-account payments technology, today announced it is using Coinbase infrastructure to bring stablecoin money movement to its global customer base, offering clients a single hub for money movement.",
+   "motsCles": [],
+   "nomsSuivis": [
+    "TODAY (participation)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "Pliant secures €200m in debt financing",
+   "lien": "https://www.finextra.com/pressarticle/111768/pliant-secures-200m-in-debt-financing?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-24",
+   "extrait": "Pliant, a global fintech specializing in highly modular B2B payment solutions, today announced that it has secured more than €200 million in additional debt financing capacity through three transactions with Ascory Bank AG and Viola Credit.",
+   "motsCles": [],
+   "nomsSuivis": [
+    "TODAY (participation)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "Enfuce appoints Vanessa Schotes COO",
+   "lien": "https://www.finextra.com/pressarticle/111769/enfuce-appoints-vanessa-schotes-coo?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-24",
+   "extrait": "Enfuce, Europe’s card issuing and processing powerhouse, today announces that Vanessa Schotes will take on the newly created role of Chief Operating Officer alongside her marketing remit.",
+   "motsCles": [],
+   "nomsSuivis": [
+    "TODAY (participation)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "Worldline relaunches dedicated cross-border payments brand for travel an digital commerce",
+   "lien": "https://www.finextra.com/pressarticle/111770/worldline-relaunches-dedicated-cross-border-payments-brand-for-travel-an-digital-commerce?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-24",
+   "extrait": "Worldline [Euronext: WLN], a European leader in payment services, today announces the relaunch of Global Collect brand, giving its e-commerce platform for global Travel and Digital singular market positioning backed by the scale, infrastructure and capabilities of Worldline.",
+   "motsCles": [],
+   "nomsSuivis": [
+    "TODAY (participation)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "UK retail group Frasers partners Visa for virtual card",
+   "lien": "https://www.finextra.com/pressarticle/111771/uk-retail-group-frasers-partners-visa-for-virtual-card?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-24",
+   "extrait": "Leading retail powerhouse Frasers Group today announces a partnership with Visa, a world leader in digital payments, to launch the Frasers Plus Virtual Visa card.",
+   "motsCles": [],
+   "nomsSuivis": [
+    "TODAY (participation)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "ETS Connect Plus adds UK OTC derivatives post-trade data",
+   "lien": "https://www.finextra.com/pressarticle/111772/ets-connect-plus-adds-uk-otc-derivatives-post-trade-data?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-24",
+   "extrait": "Etrading Software’s ETS Connect Plus today announced that UK OTC derivatives post-trade data is now available on the platform.",
+   "motsCles": [],
+   "nomsSuivis": [
+    "TODAY (participation)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "Deel launches card that lets contractors spend stablecoin balance",
+   "lien": "https://www.finextra.com/pressarticle/111773/deel-launches-card-that-lets-contractors-spend-stablecoin-balance?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-24",
+   "extrait": "Deel, the global payroll and HR platform trusted by 40,000+ businesses to hire, manage, and pay teams across 150+ countries, today launched a new Deel Card that lets contractors spend their DLUSD balance,",
+   "motsCles": [],
+   "nomsSuivis": [
+    "TODAY (participation)"
+   ]
+  },
+  {
+   "source": "FinTech Global",
+   "titre": "CommerzVentures unveils €50m fund for AI and FinTech founders",
+   "lien": "https://fintech.global/2026/11/24/commerzventures-unveils-e50m-fund-for-ai-and-fintech-founders/?utm_source=rss&utm_medium=rss&utm_campaign=commerzventures-unveils-e50m-fund-for-ai-and-fintech-founders",
+   "date": "2026-11-24",
+   "extrait": "CommerzVentures, a specialist FinTech investor established in 2014, has unveiled a fourth vehicle worth €50m that will back early-stage founders working where artificial intelligence meets financial services. Commerzbank is serving as the anchor investor for the new fund, known as CommerzVentures IV",
+   "motsCles": [],
+   "nomsSuivis": [
+    "CommerzVentures (fonds)"
+   ]
+  },
+  {
+   "source": "Coverager",
+   "titre": "Lovys partners with Payshift",
+   "lien": "https://coverager.com/lovys-partners-with-payshift/",
+   "date": "2026-11-24",
+   "extrait": "Payshift provides payment technology for European insurers. The post Lovys partners with Payshift appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": [
+    "Lovys (participation)"
+   ]
+  },
+  {
+   "source": "Coverager",
+   "titre": "Aviva launches pet insurance via price comparison websites",
+   "lien": "https://coverager.com/aviva-launches-pet-insurance-via-price-comparison-websites/",
+   "date": "2026-11-24",
+   "extrait": "The product will initially be available through MoneySuperMarket. The post Aviva launches pet insurance via price comparison websites appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": [
+    "Aviva (fonds)"
+   ]
+  },
+  {
+   "source": "Artemis",
+   "titre": "Howden-backed Novark strengthens Bermuda team with four senior appointments",
+   "lien": "https://www.artemis.bm/news/howden-backed-novark-strengthens-bermuda-team-with-four-senior-appointments/?utm_source=rss&utm_medium=rss&utm_campaign=howden-backed-novark-strengthens-bermuda-team-with-four-senior-appointments",
+   "date": "2026-11-24",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Novark Group, the Howden-backed insurance management and securities administration business for insurance-linked securities (ILS) and alternative capital, has appointed four key senior e",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": [
+    "Howden (fonds)"
+   ]
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Aviva launches lifetime pet cover as it targets UK market growth - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNejlUS3JBN3dsZkZkZTVkYUJEYVQ5ckQ3MnloaGYxaDRjakkzZVBrZU5pMmw3WHN4bDVjbk9HRFRaRFZIRkF0WTJ5YUROTlZJbGRTaHRmX0N4WHBTbjJzbk9lbDh4UWFPTjB5SlpoRU44dklKMWg2MHJDQ1NfallVTjlrc1JBUGdRSGNNT3hQVkxvOUliZV9heVdadkhuMW5mYmFhS2FwdjIwVjNJOHhac25XNVIyMlhDTFE?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Aviva launches lifetime pet cover as it targets UK market growth Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": [
+    "Aviva (fonds)"
+   ]
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Courtage : Phuong Nguyen intègre Howden France - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPT3Vnd242U21qU2pubHFJR1Fob0lBekd5NGNFWS0yMjc0VVI0ZGJHNDhfZF9KSlRYMXFCV1VSWUlPVms2Q3BUSGU5dEFGM2s1SzZzUWdQdlFrVnVmcV9hRFY3ZnJoZWlyOXNyWm01b0pwQTl2RmZYQktWT09VVXlYTlkwRnNWb0NDV3U1NG05MGM0aFJQ?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Courtage : Phuong Nguyen intègre Howden France News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Howden (fonds)"
+   ]
+  },
+  {
+   "source": "Dynamique Mag",
+   "titre": "Le portage salarial : la liberté de l’indépendant mariée à la sécurité du salarié - Dynamique Entrepreneuriale",
+   "lien": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWmFERkVKQVRFOW53Q3lZekhoLUFyYTZwUzZtVzVIenhtbDFYX19kUzVmV0tjZ25tWTY5WlFnb2JydmtNdS1oVEhnMUMxVVNoNmJENGp6aFVXLWdpbG15U2NFV0Z4akxJVTRSSm9HcXl6Y2lyODhkZWhYMFJkZEtmM2tYOS1uZUc3VnBkU0FWVUNrT2tDX1NZWUp4MnpvTGRZb09lcmhnQ3luSXlaWlJoMTNGU1JmOTDSAbcBQVVfeXFMUFphREZFSkFURTlud0N5WXpIaC1BcmE2cFM2bVc1SHp4bWwxWF9fZFM1ZldLY2dubVk2OVpRZ29icnZrTXUtaFRIZzFDMVVTaDZiRDRqemhVVy1naWxteVNjRVdGeGpMSVU0UkpvR3F5emNpcjg4ZGVoWDBSZGRLZjNrWDktbmVHN1ZwZFNBVlVDa09rQ19TWVlKeDJ6b0xkWW9PZXJoZ0N5bkl5WlpSaDEzRlNSZjkw?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Le portage salarial : la liberté de l’indépendant mariée à la sécurité du salarié Dynamique Entrepreneuriale",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Portage (fonds)"
+   ]
+  },
+  {
+   "source": "BFM Business",
+   "titre": "Morning Meeting : Wall Street signe sa meilleure séance depuis avril 2025 grâce au rebond de Nvidia - 24/11 - BFM",
+   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxONllMb2hnMmRXUmp3eGk4QW9LYTdMTUpSZW9Sc1JORnVGNWhlVFB1QjJsR0dra2ZQc1JrSnZhYWQ2ZWhodVJQM2k0RjloMklCbTRsWmxNLXo0U2FYTkd0NjdvMjI5MzhvU2lWUUVfTEw5STBfaDJwaWlNTUNYc3JCeEptZVlSXzJXcl9sSW1VNWt5UnBwNXNPVU9qSEVZclJNU3RGejZuNXlJNDZBSFhlRzUzRTAwazhZTlZlTnJYclJKU1BqelR2YWRjUnE4RFpiMmVadGZpMEVLa0E3S21yWGFpYTVQODJwZjkxT1hnVUpSNm8?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Morning Meeting : Wall Street signe sa meilleure séance depuis avril 2025 grâce au rebond de Nvidia - 24/11 BFM",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Grace (participation)"
+   ]
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Howden France étoffe son expertise en protection sociale - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNQ3EzcWJneUNXd0pxR2x0ZWdoUjdId2o2ZGhpMnBUa2ZzYXJjOFE5QVZybGstVm14N2pvd0tHVjlfWVo5bnJxZl9pbXkweVplMEw2Wm53Mnp6XzdQeUtBUnpoMnowVDZFQnZfcUZXS1J5OVp1cXdmbkJEVkNxY0RHaGxFa0RQR1FSd3Y3UlA2VDhIX21WLXBZbkFlNHFWbXNWT3RleDdJRHNDZjJ0NEpkQzJneHU1Z3BIdTdaNC1tVG8wQ1Iz?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Howden France étoffe son expertise en protection sociale La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Howden (fonds)"
+   ]
+  },
+  {
+   "source": "Finextra",
+   "titre": "State Street joins Equilend 1Source DLT platform",
+   "lien": "https://www.finextra.com/pressarticle/111764/state-street-joins-equilend-1source-dlt-platform?utm_medium=rssfinextra&utm_source=finextrafeed",
+   "date": "2026-11-23",
+   "extrait": "Equilend, the global financial technology, data and analytics company for the securities finance industry, today announced that State Street Corporation (\"State Street\") (NYSE: STT) has signed on to join Equilend 1Source, the distributed ledger technology (DLT) platform built to create a single, gol",
+   "motsCles": [],
+   "nomsSuivis": [
+    "Ledger (participation)",
+    "TODAY (participation)"
+   ]
+  },
+  {
+   "source": "Coverager",
+   "titre": "Wellness Wag offers pet insurance through Rainwalk",
+   "lien": "https://coverager.com/wellness-wag-offers-pet-insurance-through-rainwalk/",
+   "date": "2026-11-23",
+   "extrait": "and renters insurance through Lemonade. The post Wellness Wag offers pet insurance through Rainwalk appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": [
+    "Lemonade (participation)",
+    "Rainwalk (participation)"
+   ]
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Présentation Generali Wealth Solutions - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMingFBVV95cUxNUkIwVjlBbTc2LWNyWFgtREZHTE44WmlER1V6bzRjNFNraVAtc0IxQWYxVUZYOWpnNHBDYkhrUU1GX3JrcUJRT3FEbzB1UlM4RWQ5TFJXaDV2TF9QQ2RGY2hkSzg3a1JvMjFFS3RFWnl2NkZFNWR2dzRnZXdlbGc4UUNuUVVDLUFEeFhiYlJmZ2xWYkItU2taMjUzVjZzUQ?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Présentation Generali Wealth Solutions News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": [
+    "Generali (fonds)"
+   ]
+  },
+  {
+   "source": "Les Echos Start",
+   "titre": "Isai recrute un pilote pour sa stratégie data et IA - Les Echos",
+   "lien": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPT2x6VkxwQWNScDJ6bHdlX01lYjRuT3JWQmxaM29fWjJXYVRCVTMwdDZtSUNmdmpkYUJOWWJjd0o4N3VVeThoRlM0SGpHY3Y0UGtfT3oxVEtkamdlRGlFOW5RWGdYMVF6aXNWLVh2Rl9VRlRrQnF5emFZcU1kejMwVjExekdGR0l1VnNLay1kRG5naFlJTHhlOHM2eVd4UENOeGR4UXBEb3hmcHk4S2c?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Isai recrute un pilote pour sa stratégie data et IA Les Echos",
+   "motsCles": [],
+   "nomsSuivis": [
+    "ISAI (fonds)"
+   ]
+  },
+  {
+   "source": "L'Agefi",
+   "titre": "Harmonie Mutuelle entre en négociations exclusives avec le spécialiste de l'épargne salariale Epsor - L'Agefi",
+   "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQzNPelAzZUFybGdhcnFYeklvUDhmemR1UEJrVVNleG5OY3hidmEyNFY3Q2pfREVfWkpVYzBjcFRFc3NtRGhtTTBIOEUweWh5dHpxeUdwaDJJOVhKTDMxam43dC1SOUlpanIwQWFrLWg5REZHUVBqaWJOLTNCQW1ueFVCTHBlQ29HaTAwZGJ1WVhmNVYyWDAtcHp4clpXM2ktR3pnaEpnWjZjNUZONFpKZXVfYnlrcnhYc1I4TnhfaDJzWUVTWldDc3d4TWRQdzYxMl8tSg?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Harmonie Mutuelle entre en négociations exclusives avec le spécialiste de l'épargne salariale Epsor L'Agefi",
+   "motsCles": [
+    "mutuelle"
+   ],
+   "nomsSuivis": [
+    "Epsor (participation)"
+   ]
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Loadsure launches High Deductible cargo insurance for freight brokers and carriers - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNT0d4RGg0Sm1aT3RGeVpDM0tlLVhJekQ4MElQYXhEdWExZDlVV0VNeEZGN0QyaXp2SVZ1bUFrcjlMVHBIVzZwd1ZwZzNoOWcwWi10MDVfVDVhRVdnMzdBa3V5WU1hNVRTY05pdVNKLVA0aWszTlQyQ3otVDRuRVVxVEJn?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Loadsure launches High Deductible cargo insurance for freight brokers and carriers Beinsure",
+   "motsCles": [
+    "broker",
+    "insurance"
+   ],
+   "nomsSuivis": [
+    "Loadsure (participation)"
+   ]
+  },
+  {
+   "source": "FinTech Global",
+   "titre": "Cytora and GBG move financial crime checks into underwriting",
+   "lien": "https://fintech.global/2026/11/24/cytora-and-gbg-move-financial-crime-checks-into-underwriting/?utm_source=rss&utm_medium=rss&utm_campaign=cytora-and-gbg-move-financial-crime-checks-into-underwriting",
+   "date": "2026-11-24",
+   "extrait": "Cytora has teamed up with GBG, an AI-driven trust intelligence provider, to embed identity, business verification and financial crime screening directly into underwriting workflows. Under the tie-up, Cytora’s platform will call on GBG as each commercial risk is digitised to identify the insured enti",
+   "motsCles": [
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Primerica authorizes $500 million share buyback for 2027",
+   "lien": "https://coverager.com/primerica-authorizes-500-million-share-buyback-for-2027/",
+   "date": "2026-11-24",
+   "extrait": "Primerica insured more than 5.5 million lives and had about 3.1 million client investment accounts as of 2025. The post Primerica authorizes $500 million share buyback for 2027 appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Supertake raises $20 million",
+   "lien": "https://coverager.com/supertake-raises-20-million/",
+   "date": "2026-11-24",
+   "extrait": "Supertake allows people to turn their beliefs into investment portfolios, using frontier AI models and trading agents. The post Supertake raises $20 million appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "BrokerLink acquires two Alberta insurance brokerages",
+   "lien": "https://coverager.com/brokerlink-acquires-two-alberta-insurance-brokerages/",
+   "date": "2026-11-24",
+   "extrait": "Touchstone and Reliance Insurance Agencies. The post BrokerLink acquires two Alberta insurance brokerages appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "broker",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Coface acquires UK debt collection firm Baker Ing",
+   "lien": "https://coverager.com/coface-acquires-uk-debt-collection-firm-baker-ing/",
+   "date": "2026-11-24",
+   "extrait": "Baker Ing helps clients, including multinational companies, manage credit and recover complex, high-value debts. The post Coface acquires UK debt collection firm Baker Ing appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Meta launches Muse in the UK",
+   "lien": "https://coverager.com/meta-launches-muse-in-the-uk/",
+   "date": "2026-11-24",
+   "extrait": "It could help with car insurance renewals. The post Meta launches Muse in the UK appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Applied Systems acquires InsurTech Tailwind",
+   "lien": "https://www.reinsurancene.ws/applied-systems-acquires-insurtech-tailwind/",
+   "date": "2026-11-24",
+   "extrait": "Applied Systems, a global provider of cloud-based software for the insurance industry, has acquired Tailwind, a document and data retrieval InsurTech company, to accelerate integrated artificial intelligence (AI) automation across the assembly line of insurance. Through Tailwind’s AI-powered technol",
+   "motsCles": [
+    "insurance",
+    "insurtech"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Lower reinsurance costs support improving returns for US homeowners insurers: Aon",
+   "lien": "https://www.reinsurancene.ws/lower-reinsurance-costs-support-improving-returns-for-us-homeowners-insurers-aon/",
+   "date": "2026-11-24",
+   "extrait": "Lower reinsurance costs are helping US homeowners insurers improve underwriting margins and prospective returns on equity (ROE), although catastrophe exposure continues to constrain profitability, according to global insurance and reinsurance broker and risk advisory firm Aon. In its latest Homeowne",
+   "motsCles": [
+    "broker",
+    "insurance",
+    "insurer",
+    "reinsur",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Lloyd’s, LMA & IUA highlight resilience of UK insurance market following PRA stress test",
+   "lien": "https://www.reinsurancene.ws/lloyds-lma-iua-highlight-resilience-of-uk-insurance-market-following-pra-stress-test/",
+   "date": "2026-11-24",
+   "extrait": "Lloyd’s, the Lloyd’s Market Association (LMA), and the International Underwriting Association (IUA) have all welcomed the recent results of Prudential Regulation Authority’s (PRA) 2026 Dynamic General Insurance Stress Test (DyGIST), highlighting the resilience of the UK insurance market in respondin",
+   "motsCles": [
+    "insurance",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Tera Underwriters expands into computing hardware risks",
+   "lien": "https://www.reinsurancene.ws/tera-underwriters-expands-into-computing-hardware-risks/",
+   "date": "2026-11-24",
+   "extrait": "Ryan Specialty Underwriting Managers (RSUM), the underwriting management division of Ryan Specialty, has expanded international underwriting capacity for its managing general underwriter, Tera Underwriters, to include industrial-scale computing hardware risks to approved territories outside the Unit",
+   "motsCles": [
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Reinsurance News NYC Legacy Market Roundtable 2026",
+   "lien": "https://www.reinsurancene.ws/reinsurance-news-nyc-legacy-market-roundtable-2026/",
+   "date": "2026-11-24",
+   "extrait": "In October, we hosted our first Legacy Market Roundtable in New York City, in partnership with global legacy acquirer RiverStone International. Held at Mayer Brown LLP’s office in the city, the session brought together eight leaders from across the run-off world to discuss the evolution of the secto",
+   "motsCles": [
+    "insurance",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Markel names Karanikolas as Senior Underwriter, Transport & Logistics, London",
+   "lien": "https://www.reinsurancene.ws/markel-names-karanikolas-as-senior-underwriter-transport-logistics-london/",
+   "date": "2026-11-24",
+   "extrait": "Markel Insurance, the specialty insurance division of US-based Markel Group, has appointed Manos Karanikolas as Senior Underwriter for Transport & Logistics (T&L) within its London Market operations. He will report to Dean Johnson, who was recently appointed as Head of Transport & Logistics, London.",
+   "motsCles": [
+    "insurance",
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "RiverStone International completes first RT1 issuance by a legacy run-off insurer",
+   "lien": "https://www.reinsurancene.ws/riverstone-international-completes-first-rt1-issuance-by-a-legacy-run-off-insurer/",
+   "date": "2026-11-24",
+   "extrait": "RiverStone International has completed its inaugural Restricted Tier 1 (RT1) capital issuance of $400 million, with a coupon of 9.875%, marking the first RT1 issuance by a legacy run-off insurer and its largest public debt transaction to date. RiverStone said the Notes qualify as Restricted Tier 1 r",
+   "motsCles": [
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Reinsurance News",
+   "titre": "Everest names Reynolds as Head of Group Corporate & Operational Risk and CRO, Bermuda",
+   "lien": "https://www.reinsurancene.ws/everest-names-reynolds-as-head-of-group-corporate-operational-risk-and-cro-bermuda/",
+   "date": "2026-11-24",
+   "extrait": "Everest Group, Ltd., a global specialty insurer and reinsurer, has appointed Bríd Reynolds as Head of Group Corporate & Operational Risk and Chief Risk Officer (CRO) for Bermuda. In her new role, Reynolds will help advance the industry giant’s enterprise risk management capabilities across the organ",
+   "motsCles": [
+    "insurer",
+    "reinsur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Artemis",
+   "titre": "MS Amlin syndicate gets upsized $150m aggregate retro from Kanata Re 2026-1 cat bond",
+   "lien": "https://www.artemis.bm/news/ms-amlin-syndicate-gets-upsized-150m-aggregate-retro-from-kanata-re-2026-1-cat-bond/?utm_source=rss&utm_medium=rss&utm_campaign=ms-amlin-syndicate-gets-upsized-150m-aggregate-retro-from-kanata-re-2026-1-cat-bond",
+   "date": "2026-11-24",
+   "extrait": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Lloyd’s syndicate 2001, which is aligned with Mitsui Sumitomo underwriting entity MS Amlin, has now priced and secured its first catastrophe bond, with the Arthur Re Ltd. – Kanata Re 202",
+   "motsCles": [
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Liberty Mutual, Security National, Cimarron Auto Must Refund $122M in Excess Profits",
+   "lien": "https://www.insurancejournal.com/news/southeast/2026/11/24/893613.htm",
+   "date": "2026-11-24",
+   "extrait": "Florida’s excess profits law has triggered again, forcing Liberty Mutual and two other auto insurers to provide refunds or renewal credits to policyholders, the state’s insurance commissioner announced. Liberty Mutual must return $73.1 million; Security National Insurance, an AmTrust subsidiary, …",
+   "motsCles": [
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Applied Systems Acquires Insurtech Tailwind",
+   "lien": "https://www.insurancejournal.com/news/national/2026/11/24/893608.htm",
+   "date": "2026-11-24",
+   "extrait": "Applied Systems said it has acquired Tailwind to bolster its automation of carrier documents and intake into Applied’s agency management systems. Tailwind’s artificial intelligence-powered technology automates document retrieval, data normalization, and client reporting for new business and renewals",
+   "motsCles": [
+    "insurtech"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Markets/Coverages: Marsh Starts Dedicated Cyber Coverage for Airlines",
+   "lien": "https://www.insurancejournal.com/news/national/2026/11/24/893585.htm",
+   "date": "2026-11-24",
+   "extrait": "Marsh announced the launch of Cyber Aviation, a broad aviation-specific cyber insurance form designed to help global airlines. The product is structured around how cyber losses develop in aviation, offering airlines tailored coverage for first- and third-party exposures such as …",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Nationwide Insurance Sues Government Over Collision it Says ICE Agent Caused",
+   "lien": "https://www.insurancejournal.com/news/east/2026/11/24/893562.htm",
+   "date": "2026-11-24",
+   "extrait": "Nationwide Insurance is suing the federal government to recover $21,586.64 it paid as a result of a car crash it says was caused by an Immigration and Customs Enforcement (ICE) agent driving negligently in Providence, Rhode Island. According to Nationwide’s …",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Claims Journal",
+   "titre": "Construction-Defect Lawsuit Clock Starts at Occupancy, NC Appeals Court Says",
+   "lien": "https://www.claimsjournal.com/news/national/2026/11/24/341502.htm",
+   "date": "2026-11-24",
+   "extrait": "Insurers hoping to sue contractors in subrogation over construction defects are strictly bound by North Carolina’s six-year statute of repose—which starts at occupancy, even if some repairs were made years after a structure was completed, the state’s Court of Appeals …",
+   "motsCles": [
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Intact on its 'commitment to putting customers at heart of everything' - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSmdlM0tpeWE5VHRCTks1cjlzbkQxVUx4anV5VGF4RlN0VTFPQV9vQ3p2UU1xclYtWlpmbTBrLThNTDF6RkprRVFpU3lNRlZkRklfaURkajR5TTVFZ1E1X0JKMVZTM3haMFRvWjZ0VldlQTJHcHVjY0Q5TWQ5VGJPZHhIM09mODZ4QUFiWDRyZnlGOU5jVThfOTc1ejRudUpRYmlHNS10UDFsdHFuX0RVM1dSVHNRTFJzUTF2cjRQbFRaSHg1SGlpNmFjT25wdXVJMTJiRUwyMFRjd2NYNUpxRkV2dnc?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Insurance Times Awards 2026: Intact on its 'commitment to putting customers at heart of everything' Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Axa on why social housing insurance is ‘more than just insurance policies’ - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOaG9ZN2owbEJaWXV6MTFBSnV6RjhjSzh3N29fazVsSGFIN0FObi1JMjE2YlVlUHlFQzlmSzZtaXVkNm93VDFaaUJra3RmMnN4SjVxWE52eHNRUVk0YkZvSlB2LWZsYUo4WlkwcmUyNEtZdlRRR3lZQkdOS2ZQdnNWU0stdzJtQzFPQ1otWTFYTVMxVGRSaGhYNTZiWVk4NGRES2hYZEdkeGptRnpXaXF6dmdUM1RNV21SN3Z3bkRCdkxWdTR2a0dwLVZ0NHZldmp4eF9XMVpQZi1OLVJ1TzlNQWo4OTBFUTdiSGc?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Insurance Times Awards 2026: Axa on why social housing insurance is ‘more than just insurance policies’ Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Axa on its redesigned total loss motor claims process - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPckI0SlBRb3pvajJ3TGIyNVltX1V2N2ppZjlFSzhjN05PUTRYQTJnVTNrMlFuaFFwZDBHRm9RbDl4Z1c1VHhpS25DNWJyeGgtd3hJa1FKZ0s5X2htSHpXcWY2VHJSRjlRaFZnWGF3bm5YYUFIWExJR0JhOFVITURWUklkU0FBX0FHQ1oxOW5rcVBGTzZOMWhOOVlsc1VRMkNUQmo3QUZBaElKcjJRQlFpdi1FMm1Gcm1uTEozbGlNS3J3Qjlwb2N4a2VSb1NyQXlm?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Insurance Times Awards 2026: Axa on its redesigned total loss motor claims process Insurance Times",
+   "motsCles": [
+    "claims",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "PRA’s DyGIST exercise ‘went well beyond conventional stress test’ - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNM0RGRVJ5X1RERWZBTm84QURzbXMzOUZoNUN6ZndnRTE1eEdSVWlWTlFCZ1VUSnlRa2l1ckxKLXNvd3Z2RExEM0NodzlTMXMtSzdLcTNGVmJVdllFQTRJX1lBMUZ0dkFOU1pJd2ttaW1RUmQzNGVEQ2xqNDV1S0wxNmdoRjBrVVRnbzVEVmFYblV0VWktbV8wVWJkcWNUNVNySm1IenlTVHdFNnphVHNTSlUzbXpqMlk?oc=5",
+   "date": "2026-11-24",
+   "extrait": "PRA’s DyGIST exercise ‘went well beyond conventional stress test’ Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "MSIG UK appoints ex-Hiscox financial controller as new CFO - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZ0U5WTVHOXhjZE9BcXVMZnVRU0p3UnBQSXFHVDRVcVpKTmpBTGxQZHRSbnYtYWNPcjB2ODVOQ1E2NmVNN08xWl9qRzFPYkUtVWplRGM1ejhBanY2NVRVV1lNZTl3NDNzQk5KZ0E3MWJycDJfLWo5VDhEMTQ0V1NSTmczb1V6b3NXNGJ4N1pJMS1pa0tiQXJObVJuYkVHZ0pieTB5UElHQkx1d01iemV4RTR3?oc=5",
+   "date": "2026-11-24",
+   "extrait": "MSIG UK appoints ex-Hiscox financial controller as new CFO Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Intact urges brokers to tackle widening gap in UK firms’ risk preparedness - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTEh0Q1hONTYtM1pzOXZFWGpsMHZPM0VVbkpDSThMSjR0WHBaR2dzTXRSWVhpMVdWWnJyZG8zT1daNVNITG1LLUZSTEpldzg3eGdWU0lkbjB6dnAxUEZwSzZsQ0oyZHNmZllTb2JHY3pCUnA2UEFpdkNsbGJZNVI3cFdpdkpsbVMyUWNUbnV2QUtjUjVlMloycTZrNy1iYU50Qk92MDJlNTMtSHlMSE4xaUV4YkRtd0xwVjlGNWZNTFZFVVVPYkE?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Intact urges brokers to tackle widening gap in UK firms’ risk preparedness Insurance Times",
+   "motsCles": [
+    "broker",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNSG5kM0FQN0FyWnc2b0hIWlo2eTM3UnhiVDIxb2M1MHBteUNlamtycDlpX3Y2WWloeGN6X2tQNVJfd3ViS0lmRmJ1TGk1YVlqc2JjcW9lNEwtQjZQa1Z6WFpOQU1yTUQ5bndqZTVqWjFCNlFBbTJJM0JJdnJjN0YzWHlmUzFEWk43T3RCb25LSTZoUkoyazRvWGNjeVNnS1hKQ0JTUFQzbl91Q0dXazZHTTdRWnVpWGZITEx6c1F0R3NCVGVURWFrQ2lVa1VqelJHam1hZHZ2am5TSWlkN3o3eUZCZFBsUnRpMV9HeDJqWDZ1bDNfS0pTTU15R3JoZmt4TnlYNFRIaWNCZFl5eHEzdnVMWHUwQ2VWRFhNemgxS0NnWktw?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Malakoff Humanis : Éric Vaudaine redistribue les responsabilités - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOb3FwTENPM0dRVVBCWnZEWTRBLXlRU3NYU1hJbkFEanUxS3NpS0YxRzR0dWlKcEpXQVpVaDNHVzJhcE92aWg2bExhd0ZTRThHSGlNMnotOU1CR3BKRVN6aVBpUWd2Mnl5eTZPZ2wxdXRhSjZ3QlFOY2RidER2R3NCWllYakFScGdpZnJvTFpmanhnRmx5X1RGSXV6MW1hN2ljanh1NWJ1QWlUWmZR?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Malakoff Humanis : Éric Vaudaine redistribue les responsabilités News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "L'offre PRO/ENTREPRISE Sedgwick - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNW82ejNjN0JoVXVaUW1vVVktUjA3UWRVUlBxek5RNXFOOXROd3dTOUVlQkxaX2h5ZWxjWWJtSGNQeU1OQ2xOOTE0RlRzZUFBREVyeWNrODBXa3RVOGRqUDdsMXRqbzBMSlRydG1iWmFyUGFIVUF3cHFkQ0tIbzJZZQ?oc=5",
+   "date": "2026-11-24",
+   "extrait": "L'offre PRO/ENTREPRISE Sedgwick News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Allianz France : Muriel Toledano sur le départ - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNllRSUlKQ29GNUE4c0x3dy0tZlVoblRFc1EzaHo5NXBITXVwMXBHb3lxX0xxblFfaTI1VlRlR0VpRUp5Q1FnRlpfcWN3LVlsbmFlMGxtSmJUNThNbXBSYVVNYXNIbThqQmVaNm5YYVBaeW9BNGdac01lay1ULThHMzdMTGVXeFcyMVloOE53NXFYZmJX?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Allianz France : Muriel Toledano sur le départ News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Courtage : Sonia Ferraz Da Garça rejoint Satec - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTF9tYVB2STVOMVNYUUZ4cS1UM3FXSFRXb2dNYlRhMG9XRm5na0pSU2ZiLTNoSDFNNnJjYWFMTFFHN0xJdWpKSjF5ZnYtMHRmU0l3bmZ1NnlwT1FvS1dmRmozSWEwamZJejEtS1hwUzk2Vm5BVlpEbkxlUHpwRHV5TXpQZUU4OG83VERnT2s1ZVNTRmwy?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Courtage : Sonia Ferraz Da Garça rejoint Satec News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Sécheresse : L'assurance prairie déclenchée dans 78% des communes herbagères - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSWl5em53b1RKaEtXTWp6THpseGdRd0Z0bDQ2SndnUXhTLXQ0dnlDTmtXUjNwNHAwUThkazRPWUdNUGVOVC1CUi14cC1uZl84TGYwbkNEWFl6eG1kcTRrdENNMUp3WnM1WC01d0xRQWlmZU03T1BvYlAzSkg3LU9hZGFSc2ZXWVg0NHB1TjVzT0lxT1VIXzg4d1N6X2RjbHhSdVpSRENrcnByMHY4MUV6OGJfeDcxci1zNUE?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Sécheresse : L'assurance prairie déclenchée dans 78% des communes herbagères News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "IA : Un Français sur deux rapporte un incident dans son entreprise - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWVJWTzRnLUQybXNjbi1FZGFmN0lmWjVRNXlSMUJiM01QbkdWajFVbmZwZ3VHd1I1V0RhMEhRdnZ2U3ZGY2NWc01jVlUxUWxZVG9LeEJFY1ZBNGRnbzI4ZEF0YzNERFROWjlaTmlEYnNPeV9Ya0dvS2JwTldTYm1zRTJTajNVU1BvbXNXMFQ0dHNHclFvVklVWlNyU1FPM2x1YWh5VldyMWVFSFlINGVn?oc=5",
+   "date": "2026-11-24",
+   "extrait": "IA : Un Français sur deux rapporte un incident dans son entreprise News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Groupe Vyv : Départ de Valérie Bompard - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUVBWb1JwdXZiU1ZvV1ZydGYwZnNWLWhVV3BjN0lxREZMVjFGREYwdFdhOWtfdzRWX3hTTXBlWEkzYkNoaldqOHVyTjZTTTIwTmd6X0hNSUlaWkpNUmtrU0djQnZsZU5hU0Rsb1hweVh1bExyUnZ5cXFUMGZyNXktWEg5OGlCWUU1dHc?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Groupe Vyv : Départ de Valérie Bompard News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Heomi lance EcoMix, une complémentaire santé non responsable modulable - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNkN6LVhfRUZNWlBya0hsUkNoOG5FSVQtVEtJc1pzN09QYUM0NzBmR2owTHd1QTZiWkQ3N3FHZWpOWk5vYXJybmJSWUtDYVZNc25GQmx3VWJicUhaRXhZWUNSWG1NNEVzTkI3dHhNVTEwYjZONnY0NjlWa1dhSmFqbVlRV0pPaGduNWNSSU5UcE5VMUVYb2dQWi10dVVnYTdOQ29yQ1N2TlNGZnRJWUpqRTRSRTJ1dw?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Heomi lance EcoMix, une complémentaire santé non responsable modulable News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "AG2R La Mondiale : La Mutuelle des Professions Judiciaires s'en va - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMmtOY0Vza25uclkyUjJxVlI2NXpxcGRUNVc5RU1FOEZyWTA2bmc2SUpUOWpRcmVqaUJRTHhkY2c4OXFxQXNTeGNJX1pJS240X1VKQ0dpUldxV3FDQzFvV2daRi05bnFtSGpZNnh4NGFQQmI5c2owMjBrNHBlRm14OXc5a1J0Y25lbVp1OTlLM3VKeXY3alJBUkFqX0xKRjJpdlF2ZFZxV1c4Nk9waklz?oc=5",
+   "date": "2026-11-24",
+   "extrait": "AG2R La Mondiale : La Mutuelle des Professions Judiciaires s'en va News Assurances Pro",
+   "motsCles": [
+    "assurance",
+    "mutuelle"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "James Huet (Comité des Assureurs Réunion-Mayotte) : « La maîtrise du risque passe par une meilleure qualité du bâti » - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMivAJBVV95cUxPekJ5UVc5TFV3MkJuNWNrLXo1Q1BUWHBCUWVlQ3RuZDJ6VDJoNUpyN3ZwcXRCWlNiRHVXTEQ1WmI1QXktM1B4SE1ZU0dIb2N5N0dMZnU3c1lVakFyeHk0RzFoRm11VFV6WV9jZzJWWjNtV0FSVnBQV0ZlR0NGSVM0UlFvQmZFY1pQUW9HWjU3VXJTd0pNdDE2N2tPUWhZcFpnZXVqMjBHTDBhdGNEOURqZlhicWJIQW81Rk4zbXh6QUROclA1MWczVm50dzFXekxIeVFBY0dDcm9rR1lZakg5WEo1OUwwbDk2ZEpMUkRKUGxNLVlaN0FFaFZDNE1aMnZpamEya2NmZWFlUjFrOWdoZ2cyazhVa2Y1VUhWMWVaeE9uVlJydGdFZllPeWhPaTlJSmIwREk4MDF1OGYy?oc=5",
+   "date": "2026-11-24",
+   "extrait": "James Huet (Comité des Assureurs Réunion-Mayotte) : « La maîtrise du risque passe par une meilleure qualité du bâti » L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Comment CNP Assurances et la Banque postale veulent protéger et accompagner les victimes de violences intrafamiliales - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiswJBVV95cUxOeXJhcmJScGRzem9xdVp3TTFiQkRMZTllOVFGemRscXJHNFYwRThKM21CSk5pMGg3azVQdjJOOUg2RzVnTGRFSk8xY0ZuU0ZMSTJZSmY4NDRfY2RXQlF2TFdKelU4MXQ3YzNiZnN6bW41SmhRQUQ0X3loT2hNMFhfY2d3ak56UkRkRFYta3U1ZGZiT0FQLTl0ZkFZQVAwX0hkV3ZSUEw2blQ4a0ZXTHJ6UWpvdmNQVmxZTEdOZXdnZGpGa0JiU01IcVNzVjZFS0hMcmtkQk1UVk5iamFTR2J4QnVPM2VnQl9MMGVKclhvTDVIVWlTRUlqbHVZWGtCOVFUX2U3Qy00YjF3TWZPYk56SVpqZVlVRzdNWVMzNFNra1cwSlV3V2M2eGtOSTRmd1NMRW9v?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Comment CNP Assurances et la Banque postale veulent protéger et accompagner les victimes de violences intrafamiliales L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "La franchise contractuelle est opposable à l’assureur subrogé dans les droits de la victime - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQLWdiTE11N3hHUmMwcVEtNm80OVVjTDRMRjdLWFFSSXFBRXNyNk1GS2tybUcxZ0s2dHh1Sm9CLVJWXzVlUHhQY1JOaFlZbFc4WkkwTGIzdUM3c3FIOE5teGVTWjhxOHh2NHk0bGxGWGJrckdWN0FYX3h3ZjRXN0RIZTY3RVhrNXMwZDlLNGR1VW01Zll6SnZQT3pmemxtZTVmZ09ZcE5JZVpyXzFiM2JIaXJjczhuVUJoTXhCRFg3M0lqWjdsR2JaZEZINHRGRHlFMkcxODdzV2ZERWdZVE5wano5MFRLdkFQRG1hUVlBeEN3dEREMTgtRVE3Z0JOV2NHZU1YQTZzbGZfZ0Rpc2hvSVJOOA?oc=5",
+   "date": "2026-11-24",
+   "extrait": "La franchise contractuelle est opposable à l’assureur subrogé dans les droits de la victime L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assureur"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "La société Legalplace poursuit son développement dans l’assurance en proposant deux nouveaux produits - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQYTFNZFFtRWY2T0FvMEJ5elkwNW82Y0o2b1BLaFBRNUVIVnBtOW5HZ2phTDJrY1VpWFhudGdOTS1BWEVUSHprWmhKNS1GekFHbjZ0QWNaWl9LaUJ1d1psajNnWFQzZWd1aXc2V2tlTGRWUk93MU5pRjRFUXFZY251Y3NCN1JKWnIxTlp6NDlaLWRJTDZaXzBNQjN0S1JGU2c3dUM3alZVYm82MzJZbnRGMFBXUHpFUHFxdlZyaGdZQzc4ZjhCS2lBUUl1Um1PSHUwdzRDN0dLWnhMNGtIRFBCRHVwcjRSUzUxQ0FJcVJyNTU4eWo2eXNHdnM5ckM4RHJj?oc=5",
+   "date": "2026-11-24",
+   "extrait": "La société Legalplace poursuit son développement dans l’assurance en proposant deux nouveaux produits L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Corgi, ou l’histoire de l’assurtech qui veut devenir… une banque - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOd3NZbmhYd0tGX040OVFiWG9WOXEwZlF2VUFCZ3FQNFEzOWl5ZUtKM2poeGo1d3JMODhrZ1dGcmhUUWNMcjJWT0MxLVpNTlZ6SHd5YW1CWmgzdU9WODZ4Wmo5SGpMcTdpRWpqRF9DWGRtc3FIVlJfTHotdGxtaFRzZTFFOElhdm0wZWxVdG1PejBBbkN1WUJvLTdzM0EtLVdLdEllNEVIWDZ2ZFY0TjhMTTJYZ0Q2SF9Jd1dmTFc1V0tKVThOemsxcWRMTW5yY293cGNDTm5XZFE?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Corgi, ou l’histoire de l’assurtech qui veut devenir… une banque L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "assurtech"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Téléconseiller Indémnisation Clients (F/H) Thélem assurances Chécy CDD - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOd3c3UFRXWmFMQ3ZBMS14MUNDVTZjSG1KSzVzSHRwWm9lYk15WmRwTmxodUxBTUxxVTEwS2EwTEZXSXBjRHdvdjA0YVc2UFdaVDdVSExaVW5TNHV5UFdMSU5MSzZnNE16MmJhRFVvLTFNODNMUzFRWEJiOFBDSnIwcHZ5SV95SDFjVFpCdmtGd2dUbUloYnJ3UXhyeHJnZ0hEVTlEVkpIeVF5MldxNURCSkswa25Ka0dOa0h4b09hajBOakZtUkRmRjdZWUNHenY2SUo0?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Téléconseiller Indémnisation Clients (F/H) Thélem assurances Chécy CDD L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Inspecteur vie épargne et retraite (F/H) Thélem assurances Chécy CDI - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOeHhhaFRSZEpCcmFqaTh4a0lTMGIxTnhlWTE1VmxISnJBVUY1ejMxV0V5dFJtb3h4eFBFbEtKd0lUbG1BZ2FhenFMSEJJdnNjdjQ4aXRkdC1WQ0tFSjdHU2lLaF9sbW1CRlRzMXdURjlKdmJ2X3dMVWlDNlZTckVreWYxVXdmRmpOV2luT05DS1FuWDhrSDNmS212dmxXQzl0WUh5VnNXc3pmOEV3dHdpM1QzX0UyQ3NyOWQ3MmdQVWQ5bXRoMmhZempBSE95anZw?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Inspecteur vie épargne et retraite (F/H) Thélem assurances Chécy CDI L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Assistant commercial en assurances H/F HAYS Brou - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPR1VzV3pmRnc5dk9IR1RaVFNpUG10VGlUYmF3TzlKNjdQc0FHZkxwUEl3ek8xcDBMV2NTRmlMYVVBQ2xELUJqalFROXVwVjJjeVQ3NVFGNFEtTzBERUJ0SjZ4OHNoWGRSTE02V3FkOTlacUVpZEtpOEFZemZWc05UdDFpLUtja250NTZDSVpzSm53dE5za2N1ZU1ZVUFWeTA2ZkNoOVN0Z2xweEkwVHlJV3RMLW9tdXVGdEVtVGRPQXE5LWpfbFl5S2Fybi1OZ043?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Assistant commercial en assurances H/F HAYS Brou L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Courtage : Satec poursuit son développement dans la gestion de sinistres par la nomination d’une ancienne directrice indemnisation d’Allianz France - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQY1BzZ2h5TXhxLVd4djRwRU1yR1BDRHdYaW1DNm1vM2lFaUhtcU9vd1ZQRUpvTVZ0eTVkdlp3aXBsUmFQTjBVUHAzUTlqYkhwbnpHZUFXTUdVMGJKbzd5Ql9wZjh6cU42LTd1ekZIQ25HbE5GdDJRV3NTRjUxaWNRek1lZG1RV1pQb2t1ckZQbHM5RElzRDlteEFPamdreERaRzQ3UkwzOWZqZU9qUFBnU193VGNxeEJLLTF2blJaNVpWYU1BY1lVdTZ2ZW5rSFlPaHN2RU5PMGdGQVBybmx0RmtURmlQN3pwTTYxSE44enotZlZINmVOYkQ5TEZUODJKblBTV1ZObG1Zd19CMzlfZTYwNHB3U0ttQXdTTWVrb3VpbFdzMTItbDVUdTRPWU1kWGdPbWoxejc2UE1RWXVMVw?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Courtage : Satec poursuit son développement dans la gestion de sinistres par la nomination d’une ancienne directrice indemnisation d’Allianz France L'Argus de l'assurance",
+   "motsCles": [
+    "assurance",
+    "sinistre"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Journal du Net",
+   "titre": "Crédit immobilier : pourquoi l'assurance déléguée séduit de plus en plus ? - JDN",
+   "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPN3hvUzA5TVlsTGRJMXp3cHVLS3pOLUxfMXhYM2hMTC1hZC1ESjVIbEFDNmV3RTduaUJubTZybmwxdkN0a2hmNHhmNGRhZmhsUE1yY3ZUaS1GQWF0NlBabHQ5X0dtaDl1a1dWcmZJQ3NIbHlCMndrU3FpbmVVQkhpdGRqMnk1SXNhTDJGRzFMbHY1WlZZdUJwRkpRd0wwenYycUJIVjgyc2JvdDRYb3RibDNGR1d5ekthYklwTkRWaHFUQWFPaVN3?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Crédit immobilier : pourquoi l'assurance déléguée séduit de plus en plus ? JDN",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "BFM Business",
+   "titre": "Valeur ajoutée : Ils apprécient Mon Courtier Energie - 24/11 - BFM",
+   "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPUGo2UjU0R0t4MUs4dXU1aGVrY0tPLXNBSmN1T0d0aTVsY08tdGp4bnBRTERXVXljQ0ktalRQT3B2NVdaNmVuUFJKTVd4MGhSWGNyQ3N5a0RjMVB6NWMtSk92UmFRdDBESGxHU3EzZVZScjV1V2MzMWxVTVg1M3p4NUZfNjBQOWxISWJhN2RBUDZraEV5ckZOWVgxRHI1NlZ4bEVsOFNUM25ldG1ON3FiTklMby1PNDdPd2M3WlJDbWNKQ1ZGTUlhM0lnOE9HMEpRNUdQWlJ3Q09pZw?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Valeur ajoutée : Ils apprécient Mon Courtier Energie - 24/11 BFM",
+   "motsCles": [
+    "courtier"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "BFM Business",
+   "titre": "PODCAST : Valeur ajoutée : Ils apprécient Mon Courtier Energie – 24/11 - BFM",
+   "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPTHM3ZnVKNGdnLU5SRkVYTXJRM1RGM01Bc3M1NkxlQVN0d2JRNjMtb2lQUGp6ZU95T1dtenVrTTdSTHFWQ1V1T21RSTlRZ295a2pfVU5Qd3E0N1VmUVU1XzU4SFZWZXg3NGZ2WGpOZEU1N0R2YW4yQnZ5ZHhrYnE0eXVBVmZ5dVNjN0dYSGUydTh1OTZwbGlCaUZKbVBfQ0FnZ25JMkJ2elNIUUpjcnhCSUVSclc5eEFfTFNXSm1felRxOE5OOFNJU3JycXNsSHNUOVE?oc=5",
+   "date": "2026-11-24",
+   "extrait": "PODCAST : Valeur ajoutée : Ils apprécient Mon Courtier Energie – 24/11 BFM",
+   "motsCles": [
+    "courtier"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Agefi",
+   "titre": "HLD va lancer une offre publique sur Clariane avec le soutien de Crédit Agricole Assurances - L'Agefi",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQY204UjBNMzJfbmJaSjc3WnhqNnBLak9FNkhId29mNF9EWjRwRDZMc0JFb3FrVlVJTVRhZ1ItWG5sTUR2NFBVeVZYT1NuZWYydGlsTmtmWER5ZFc3RW9wMklZNUE0TDJ1NVRObDNsZ25SOVotX21oNEZCOWJQYlI5V0d1RXI2cFNHWlFNRGppSEx4Vl9NVVRFYjNjRkdkYlh0QnMxbW41dThuWjk1WDk1dklrdjhHVkw3MlN4MEFHRDY?oc=5",
+   "date": "2026-11-24",
+   "extrait": "HLD va lancer une offre publique sur Clariane avec le soutien de Crédit Agricole Assurances L'Agefi",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Coface acquiert Baker Ing - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUDJncUlrU2kxRGZEZGo2MWZCU0FXVV9HWmxWVU5SZGlEUmxpZWhFcEZtOWt3bVd4T0lDaFFNcmhvNDhCUFIyZGxjWC02ajgwTDhOQk1FMmVVOHVsd1BOSnZ2WmNiZVZWZ0JNeGNJc212dHNkTmc4Z3JqQjNDWlZvcmhvZmduMldDTlBPcnh1U3EwSWdPZUpOaGx4bw?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Coface acquiert Baker Ing La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Planète CSCA prend acte du rejet européen de la directive Omnibus - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOLU9CcnlsalRlSHA5MFctTkFPQ19CSmZtelp6bF94aDcwMlRkWWdiVUZiMml6M0EwOGNMOVA4bUR4SVV4Y2pKcU1SSjlWTEVpa1FncFp0MGM4aFhRdXRjVkY2SWJMNkNfZUVGWDMxTGRFSUVVWTJ5TFo3dC1scGtzUHpQRk1LN0gxemtoRzYyR2VTQjZaZHJPWTNvM0t0MzJBRkZGeVpBRGpWdDVpX2kwZk4zd3pEVHRNUFFzVWdqOHZOM3JMa29XczVPOG11LUlS?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Planète CSCA prend acte du rejet européen de la directive Omnibus La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Créance d’indemnité d’assurance automobile : la cession est valide - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdWdLaTZEUHpweC1XajZLcUlGNjM1eGQ4S1Z4akJUSzlQaFRHcEkyaFVHTUd3UVR2Xy1pNG9GQ1Zzam4tTmoyUERtLXBOVjctNE5ZSXZNSFAzZEdhRjU4eUloSWV4OVNBR21fMTJxMjRGMnpSQmIwZ3lZVVhNSjczYkFGY3A2aGVBZmFsSmVVUHF1VzBNZHJvdU5udjMtU2k5WlJCUnRJa2FqQjZYRUNvMVJwczBRR1ZMckxzSzc3dDJUalpy?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Créance d’indemnité d’assurance automobile : la cession est valide La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "La MPJ rejoint France mutuelle à compter de 2027 - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOVGdPeU13enB5dHRmU2x4NFNBODFQd0VlMFJkSE5aWWJuZEFEZmlNYTJVUE1YT0dQRkJ3UjRCZUtBNWVuWTJ3b2RGM2xFLS1pV2RDdkVVTUJPQWZNS3ozSGloMWdpQm9GaU5Bd243N2ZyWkVJVGd6Mkl0YVVBTlBPd3BGemx4ZUlBSTZnaWc4aTI5WDJMWXV1dTRyaGlEYkxET1NsS2dQSEFZRFoxQ2t4UHJqM1NKTUg1UFE?oc=5",
+   "date": "2026-11-24",
+   "extrait": "La MPJ rejoint France mutuelle à compter de 2027 La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance",
+    "mutuelle"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Axa France rachète Prasco via sa filiale Prefikar - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQN2d5NDU3MnN2a3pQWTNLXzVhbUNpZjdOT3BvS1dOX2lKUkpOMGFRb3ZfaDZmTUtnVldDQnVKazIwMTdOQ3c4TUhkYVBSZmczZEUtbE1zanBqd29SY3BtWkxiLVJ6OXZYS3MtQV82YzZqYk0zeGo4NGVNckxfUS11NXQ4S1ByWm5vMEZGcF9uN2p6ZWtlZnlHU1pUZUlOTG9WZEllcFN1VXFkNnlScEo4ekw2eDQ2NGpXTUJz?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Axa France rachète Prasco via sa filiale Prefikar La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Batteries électriques : éviter le grand boom en avant - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNWkJaRDUtZmZWdVp5bXd6SnpJYkJma0hjLVQzdWxhUjdqMUFTd0hrdVZlM1pnSWJHbDVzdXJYQmZxSHRvc0pZY1pqQnZ4VXJBa3lBWHNJbmFIUWdXb0RFdklzUHNPakhTTkhMZ2s5TW5faVA0SXk1dXBKYmdKaUhOTk5kUTZuakNhMjlDQTFWZldOMWdYSVJhWmxiN0RGaV9EeEhla1lYV2tIMjhQZG5VVHYyWUtIWHpKc3RWUjdhQk0?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Batteries électriques : éviter le grand boom en avant La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "La Tribune de l'Assurance",
+   "titre": "Assurance embarquée : industrialiser pour rester rentable - La Tribune de l'Assurance",
+   "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcVdPN0JxUWU5aGE5UmtOd2VXQnU4Sm1MaXVfalRNTEktMlA2bnRVbmRvX3FNaXYxWUNJaHNKNll2bXBCOEVRV05zbmpxeGs5bUdNQzhDVENBbXM2NVRlbnJhcVdvRHJGemwwWTYzOU01bmpNcDdrNGJYU19EaktNdUpVTWxDbjNMMmNuQlgxbjFqTXN2TTI3NjNSeS1ZLWFKZ08xdDRwYmRUQ0FtZGhuWUtXVGRVMDhqZTl3?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Assurance embarquée : industrialiser pour rester rentable La Tribune de l'Assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Out-of-pocket health insurance costs for 1.36 million patients with rare and intractable diseases to be lowered to 7% - 재경일보",
+   "lien": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBHN0JXbEZHUHFTbGlsVVFrd01HZGJabGxJVnpFaGZaaXJma3lKTXlTb2dkZDE0SVpuaHpZSndVc2d4RUdxanZhWW1MQW9jREF5RGxUbnZNY0xPVTBQRDdVc1JB?oc=5",
+   "date": "2026-11-24",
+   "extrait": "Out-of-pocket health insurance costs for 1.36 million patients with rare and intractable diseases to be lowered to 7% 재경일보",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Marsh launches cyber insurance for airlines",
+   "lien": "https://coverager.com/marsh-launches-cyber-insurance-for-airlines/",
+   "date": "2026-11-23",
+   "extrait": "Airlines can also add coverage for certain passenger and cargo costs. The post Marsh launches cyber insurance for airlines appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Coverager",
+   "titre": "Starr files trademark for claims portal",
+   "lien": "https://coverager.com/starr-files-trademark-for-claims-portal/",
+   "date": "2026-11-23",
+   "extrait": "Starr One. The post Starr files trademark for claims portal appeared first on Coverager - Insurance news and insights .",
+   "motsCles": [
+    "claims",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Former Iowa Insurance Agency Owner Sentenced for Wire Fraud",
+   "lien": "https://www.insurancejournal.com/news/midwest/2026/11/23/893535.htm",
+   "date": "2026-11-23",
+   "extrait": "The former owner of an Iowa insurance agency was sentenced to prison last week for creating and falsely submitting insurance claims under policyholders’ accounts. April Johnson, 46, of Montrose, Iowa, was sentenced on Nov. 17 to three years in federal …",
+   "motsCles": [
+    "claims",
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Wisconsin Regulator Urges Prompt Claims Settlement Processes From July Storms",
+   "lien": "https://www.insurancejournal.com/news/midwest/2026/11/23/893520.htm",
+   "date": "2026-11-23",
+   "extrait": "The Wisconsin Office of the Insurance Commissioner (OCI) issued a bulletin on Nov. 20 reminding insurers that the office expects a timely claims settlement process for property damage losses resulting from the late July storms that hit the state. On …",
+   "motsCles": [
+    "claims",
+    "insurance",
+    "insurer"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Texas Manufacturer Earns Lone Star Safety Award",
+   "lien": "https://www.insurancejournal.com/news/southcentral/2026/11/23/893517.htm",
+   "date": "2026-11-23",
+   "extrait": "The Texas Department of Insurance, Division of Workers’ Compensation (DWC) has renewed the Lone Star Safety Award for WPT Power Corporation in Wichita Falls. The award honors Texas employers whose safety and health programs serve as models for other businesses. …",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Journal",
+   "titre": "Former Kia Dealership Owner Failed to Fund Warranty, Insurance Policies",
+   "lien": "https://www.insurancejournal.com/news/east/2026/11/23/893381.htm",
+   "date": "2026-11-23",
+   "extrait": "The former owner of a Kia car dealership in New Hampshire has been sentenced for stealing more than $89,000 in funds that was intended to pay for customers’ warranty and insurance contacts. According to prosecutors, between 2016 and 2017, Said …",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Claims Journal",
+   "titre": "YouTube Finalizing Multibillion-Dollar Settlement With Schools Over Social Media Addiction Claims",
+   "lien": "https://www.claimsjournal.com/news/national/2026/11/23/341454.htm",
+   "date": "2026-11-23",
+   "extrait": "Google’s YouTube is finalizing a multibillion-dollar settlement payout to school districts across the U.S. that have accused the company of designing an addictive video platform that has damaged the mental health of students, people familiar with the matter said. YouTube …",
+   "motsCles": [
+    "claims"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Claims Journal",
+   "titre": "New Cars Crossed The $50,000-mark. Will Sticker Shock Waves Flow to Claims?",
+   "lien": "https://www.claimsjournal.com/news/national/2026/11/23/341464.htm",
+   "date": "2026-11-23",
+   "extrait": "Americans love their cars, and it’s an affair that auto manufacturers have been putting to the test in recent years. The average price of a new vehicle has crossed the $50,000 mark. The average new vehicle sold for a record …",
+   "motsCles": [
+    "claims"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Superscript on 'going beyond' digitising the SME insurance journey - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNX2FJeE1oTDJMR1FqMVNNMjhNMU5RWGd1cXU4ZWdpUTBZOVM0dWhxb0ZYUG1lU2x6V09UajhfUjRyUDMyZXJpcGhsUVQ3R3NldnVtcU85NmNZN2U1bDJqOU1CN250S29TWk8yaUZ2WnR4WWhHMkR6aXRmSXFwZ1Y5Q1BUOEF5OVlkVVhSWW9sS3FsNTN0RVF3a2pXSXBIb1NHZ0tDRzJfMnhrMXNydWVjS09WcDI5bi1QSnlMSzAzR0dHRkZ4TDJ6MmVJby1xV0VGT1RmR1JjSERFSDhYY3JN?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Insurance Times Awards 2026: Superscript on 'going beyond' digitising the SME insurance journey Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Insurance Times Awards 2026: Atec on championing ‘human-in-the-lead insurance’ - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSWtmZTczMC1ITlVDejlic05panBQQzY0MnBjWm1jTXNHYW11NXJ2RFZtOG4xTW5uZXY4ZjN5dTZ5WkJSNVJyNktIelZpdkI0YjNOZTZzRWJ1WmtrOWtHUGtCSkFRVl8ydmNZR0phRV9sRlNqY0w2NnpNVmhwRU0tRFdsU1ZObXFGQm03ci1JVDIxYXcwWGt5SXh5Rkw0aWV3ZWdEOUZoYUQ5WVozekZsYnhkRDNJY0xCRE9xVXpERDFHNjRxQlMzVw?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Insurance Times Awards 2026: Atec on championing ‘human-in-the-lead insurance’ Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Five Star 2025 Commercial Lines Overall Ratings - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcVdkYTIxYUdLOHRNWnBLZll6eDBOb1BKSnlNU1U3dUdzbXhBN19JQ1dkbGY4U1VzWkJid3ZCRnRMN0U0U3p0dzlKTUxqZm5xVk1tZEhGbWtyU0RjWDJSWU5yY2VWc1JLUUhybFRxUnZudnNRdXdISm9OU1BvemtBcHl6M2R0eklhTXdlUHM3cXBqUQ?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Five Star 2025 Commercial Lines Overall Ratings Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQS1lCSlpSVF8yNTkxMHk1U2xaQVZGc0JUWW5MNkFBbnVyX3hCbUFjR0hBc25LLXY3VGRLQ2YwZ3F0UjlHQjFLQ0c0d0g4WVRndk52TDlyRmNGUlVocmpFYmlYWE9seVQ3bWxyeGw2eHhkNVp5YUh4Z0ZDMktLUmVEbmVVYWg0R184aG5faXZUeFRQX18xUzdXNEViYmFJOUlVekZrV1hGbUhqSHg2R2JiU3BPcnE4czJ1Qi0tNkhHbDZaYWY3SEt1M0pxTWlWaDVfb3c4X0FGSnpjN3hiSWZOcHpZWnMxM3lQNk9vZ2cxU2tzX1FYU0xkamxNUXlKeFpRdFB1MTJqOA?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNN0dPTGtMdjhwUFUxV3NEX0duZFI5a1NTV3gteF9NV1BRYUhHY1V3azJyTHF0OVZXWmt3c3NvNjFRMXNpTUxtbUpyYm9QSkx0NzNLaVRVVTdJSGFUWHMwWG5GWE03ZC1xRjQweGVpTUtSZlZRLU8wY21jU1VEZUFTY0s1cVhZLTltVWt5YWZLMXlIcGZlSDJwd3Y0Y1JXVHI2NmhLSzJVUmwyWjJLeG92RERhZnBoSXMtS0F2OEw4dHRDTElpR2x4d0QtSUY2akdTTzB0YW5jTHNnU21kTjJWRnBsWnZEbzZSYnk2VTEwNTFmV3pQb01aRTVGVTliZDRxQVJ3WThJQTB0UG50eVE3SlgzLUJQaGJ2eGxjV3R6ZnA?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQLWZLVzlCSnlnS19naDdWSnpVOG9ZVmdvUnY0MHFnajN2QVV6aWxvRV9GSXNYelBJZFNVQnE4QVh1cVIwNmZDQ2RwUXdrUGlHUGV6YVVrc0QyTllKd3ZSamVJTmRSM3ZiY09Rd3pzOEZmVDYzcDNIUTNhY3NwNzIzSzhfMFk3b2tJRHFORERORThnOEowQ19KMXdNeUpRZTV0MUlDUXRqbmdwRDF5dTZYZlJQZlczMmpwM0RWNzJvRmFJZk5LMXIyQnlkWVlJdXM2ZkNJZEV2VTBhamY0Y3ZNcWx2NFhJZDJRM2ZqVmhBX2xzQUs4WXJfNnJIOHdvRlB2c2MydGFpMDVqUDhBNV84S3pYczdXdw?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQTDJ3M3R5NGh4QV9EaEVUN0wwbnU3SkR6bDVHaFpzd1otYkgtakNEdEduM2VINDRPejNkUXEtbnBnOEtodlBpdDlQYXVrcnBPTmNBOHJDZkczTWZTY2xGa2JCcXNCQ0NTTFlTd1l5XzN6MGVRQUlnOUJMWWRZZGpTVmJvVXZGRndFczJFVkZIbGRQc29nWEdVZ19LSHpGV2h6T1BQSXVjMHZlUDZfUHFrSnFYV1pESGtmaXVuZk1iX2lEYnFrcEczazlGMHJKNWp0WDRfX3FvNHAzclJiZTk0c3VrNGRrSUo4Y2pCQlpSandWYXZDTEdNYlFLOXB0YzBwdXVrZ3lZR09zOVRJ?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQdzZBa1NLUjFDeDhqMHlQTG41X2hTRW1xd0pmVERlaEloNG56eS1RaDViaWZiSUpubkpraXUtWTJQck9aSjVYYkszUGNzbDNTT29SMUg3ZVNHZ0Itbm1rZ3RHMU9IVGxwdHE2aGlkYTJaMXp3VUFwLWZlWHdYS3hESGxaejA0RmJBMzVJZzZHd1I2MWd6VWJTOFRCNXpxOUFSdTBmS3lBSVg2bzJHeTVCU1JzV1BwTjFGeHNBSlR6aGdtbGVPcjJZdFNzeTl1WnZLbHRZNVNaX0Fsa2IzSGp4YzZXeG1KLXctaGxZdkMwWURIWDBfaTlUVFVUcHpVWUNySGNCYTBn?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQMURjenJ3LUdpZDVkcTF0QkRZUUZ0Y2EwQ2ZuZFJ1VlRIeDNzSVp0dWlXd3hLSE0xN0dnZ2xCUFBSZ2ptX3BITjFrRUJWRG5jQm9KdGs3azRXbThoQlprVDRuQktxb2JUWllKZ1ZRQWpjYWdWbjJRNHJFVVI4S0VDRnZoNDlWZGdTeDk3TlpqUzRlc0RFWWM1ZV9Wd2E0QUs1VkdYWWc3WlJXRThqaFUtOUU5LXM1enFpeFh2ckg1Y0NUSHUwTlZlYVFnbHdvWWtHZ2dfbHJCVGs1cFFvclhfRkFnbDh5YTJqbmRsZ0VQY1h2aFRO?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPal9RZXZLb3J4YUtPZlJGWFkzTTVjZW5mUjN5V3pTU1YtZEZzd0MzS2RpcEozTEVURDFKekFHU0NGOE1DR3JJVnM4dEtrcGFRLWlVMUk0el90T3JaMlppeVZGNGFtc0w0SFRDTkN6SWNvdnZSN21sUWtiSnJWaW5JYTZROEdKQjNfZ21GeHNaalQwcGc5WEVIZ1FQQUJYOFRWUWNrc1R5R0tvU2ZURXVlSU9lLXFMMHFYaFEtbHZGdHd3UUs5dTZvNkZhRkw0cWF1cmZuWGxFZjhhSGNJYVZHSHJqVWhKYUVkcDJFN09Hd2s?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQQXFVekVQX24zM1F2VG5CRGF0bUxRWGM4VWdhZ0ExVGhMTlhEMzdrZlhhS0dyakNycVIzcmFFM1VKMVZFZExXMXZBMFczRHpoTlNqNHVISGZmeG1IX3FTQ1NwM0xoWmRYc3l1MVlVNm96Uk8xUjJ6Mk03SUF4NFp2MXBaNHVLek1hdzBKWTd2QmxHZEdyNXFLUm85RjZTNGt3azFKamlKYmM3VEQybzNnSjlvdER6aTVIUFhmQVJMNVkzLWFmR0JKNy1tczdmMGNMS1dYUmFpTVlIMkxOT09zdUtiblBoZ1R2SXdsd04xMzBIcjF6VXc?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "- Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNdFp1T0IyYkZfVTJCVzNuR2RjTXVwNEh3SkNtQjBXMkdHSnpSY0JpQllMcWRERnVld2xZTUJxdl9hS3dkT0xLV0dHUjFIWHNCSk9KSGVFRXVVd0NZV1RtUFVOdU82TmlfSDJCVUEwUkZ3YXY3T3NEYnBfbXgtaUVveHhnaXRKbnVRQUEyUkZnLWZiUTJXenlWNEdteUp2MmpTLTRYdzk2cFdibU5sajR3UHFPMmdOZE5zYmg3OVBfYkN6NU82ZW42TjVOTDBtUEhpTERCaW9IQ0hUQWhnSkE2RDJRRHhpUTZZeDNGYlBweDE0MU92ODAwRE9RbmxpdWtRaFE?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "News Assurances Pro",
+   "titre": "Toute l'actualité sur le tag \"GSL\" - News Assurances Pro",
+   "lien": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBSa3BXeWVLQ3dzLVMyTkw1WHdJcUM0MWQ1c1pRd19PemlsbkFmWnY1T1RNR0dmazR6TC1KZzN5ZHNNSU5JZDJ6VmRBTm9PTlJ0X2NZ?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Toute l'actualité sur le tag \"GSL\" News Assurances Pro",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "L'Argus de l'assurance",
+   "titre": "Conférence Assurer pour le climat : de la résilience à la transformation, l’assurance au coeur de la transition climatique et écologique - L'Argus de l'assurance",
+   "lien": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxPTGc4bHFuSDhJbm1EWU9CeWRBY3c5LTExb0N5WkZEeTRKZVMzYmNtdzVMcFVqXzZGdXJCYUJvQ3NNTl9pT3R1QXFRRjI3UXpJODlrUXpSbHpTNkU1OHB5RzZKaDZjSmV1bHR2QVVtZ1pGX1ZrYVBuUFhjQ2RxcW9WWjREdWJWTmlEOW5neWxGZG83a01fckZrVFFyRy1melhKVGNCUUdDTWp5QW9ObGJDcDdlWWNoQUVlSm5hLWdIcWYtMUNpWFVIRHNiT01sNEtUUWlFcnRzd2tYbExVV1pvbFFfSmJJeFYxVC1STzJCaTFBb1NTV0hfSnczcmp6OG9XcHp0QVBpLUE4bFk1cEh4dGxELVEzZDdzUnN2MkRUMWJVZUNiaUZhT29LWTVRcV9WaWhLWVMyMFlRcndnMTRPeHk1MmVKSHEzZTN4SzloLVMzUQ?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Conférence Assurer pour le climat : de la résilience à la transformation, l’assurance au coeur de la transition climatique et écologique L'Argus de l'assurance",
+   "motsCles": [
+    "assurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Germany's exxis put AI underwriting live on three lines in two months - MarketScale",
+   "lien": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNOXBsc0NGazRSWVJtNUxVaWlCcnhBbFVUdndIODlRZGlxVi00X3BpVzhGWDlvd2dickt1Y3BVZWM1MkF1QXFXd0EzMENfbE9XeHRhclNEa1F4eHJvdDBmVk5DTmVSbW1JNWZSdk5IanFCbXdERko2ckpfRFZkU0F6djBlZ19vX05EQjVIQVMyakFCQW5OcVpCd05vYlkyb0pZdlJMWTdQclFkd2J3TFdtdHB5QkpVRVZDUVAxNENMWTRUc28?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Germany's exxis put AI underwriting live on three lines in two months MarketScale",
+   "motsCles": [
+    "underwrit"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "This week in insurance: Cyber insurance premiums to rise 10%, Insurtech funding plunge 44.6%, Hong Kong non-life face easing pressures - Insurance Asia",
+   "lien": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPX0tVNTZ5VmR5dkFYTS1nVGlPSFZoZnNsRTBnTFcwR3dISlAzSVpVS0pUUXhpSl82Q0x3YkNrRDMtaWVVZGl4cTZ0Yi12cGFFLTNmT0ZFR2JYQ1E4SlJsMEFLZy1aNmpHdl9sWkdzOGp6cS1LNTdFRVpXMkxjT0otZ21jbkhjY0JoZVhUMjJGaElFckZscm9wMHpSZUhhVHg2Y3MxMGVPa2dGanBuN0NveFUzV0RpTTREVkJCNHZjX0tCUFFYeGJ4czhicWRFdmJYbTRPSXF1Z1J6X0IwSlFRR2VqUS05M1dJdjUxQzNNZVZMTjg?oc=5",
+   "date": "2026-11-23",
+   "extrait": "This week in insurance: Cyber insurance premiums to rise 10%, Insurtech funding plunge 44.6%, Hong Kong non-life face easing pressures Insurance Asia",
+   "motsCles": [
+    "insurance",
+    "insurtech"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Insurtech Cover Genius launches Agentic Embedded Protection for AI commerce - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQd3U2c3NVOHVpNENRQk8wUG5VQzlPZXZYTkpPN1FzajE0TWR6OVNRTFNzZ2ozeWdZR0NVeXJlb3JUaTJDMkNpZTVFMUkydklSWjB5NUFXaUZkQy1Ham9pR2FDQ2JwQVEzUW5YMkVOb1dXQ0gtWmRpMmNON3ZNUlUySHB3?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Insurtech Cover Genius launches Agentic Embedded Protection for AI commerce Beinsure",
+   "motsCles": [
+    "insurtech"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Fitch affirms Cigna ‘s ‘A+’ insurance strength, upgrades credit rating to ‘A-‘ - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1UOFRRRFRSMERTdGNNX3p2eWZSeGZSOEhhdTZOWktOcTNjdDNLQUtJMXZYVnpmMHdyanZPS2ZjZE5GT0ZER1oyMHZIbkFua0JROElQVWdGdTdVb1hhb3g5eVRzcmJmZnFCRWFPOTlUTjlXVkZ6ZmNR?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Fitch affirms Cigna ‘s ‘A+’ insurance strength, upgrades credit rating to ‘A-‘ Beinsure",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Five principles for winning international life insurance cases – Insurance News - Insurance News Net",
+   "lien": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNmpjSExPOHJvV2FsUDBDbkZrTFJNMzBhNVRvYTBqWkNhUUdiemlNMWhWYUFRVzFCVDZ5REZZaFBxWk5iMDR6dGVzM1BpM3lKRTRpVW9PRXJnbW1jLVpnb0lQbUVJS0g1Uk8xVmp5NzBlY3ZnWTdNbDVPSmkxQmV1SXdWQlJlSjZyMDN2VDZPSXljbmoxTXN6dFVJR0VzRVJXMEFjXw?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Five principles for winning international life insurance cases – Insurance News Insurance News Net",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Ohio House passes Bill 792 to ease surplus lines insurance regulations - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdE43V3lRa1pLaUN5bHBMc2VIdFNoY3VhUXBfaHgwcE9LMG45Z3pzVWV3MlBubTJRVXlKdEQ2SzJPeGlYbFRSMUl5ZG40ZER4cy1KWGgwTlMwRk9ac0RfN1dPbmU0LXNPdzhMWjVrRDM2TkZsU0RJdExIRVUzYTZJYzI1LXhmRlBMUC1xeWtRX2xRQWp3TUlqM2h0VXdSdw?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Ohio House passes Bill 792 to ease surplus lines insurance regulations Beinsure",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Pacific Palisades fire survivors face home insurance gaps and soaring rebuilding costs - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSGVZQUVGNkJQTVdBcFJGMnpIWkxGcXBmY2VFX1hnZXpvR1NWUzFURXdNTzVWY016SmhSd2xBYWpEdWtGUFVVRkJQNlluQjhyQ2Z4MUxoaVk1Slp1MzR2cTJQRmtPVk5UY2ZDdHExMzlpcUJBNnJFWmhmVVRiMWJkRWszeFVVQQ?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Pacific Palisades fire survivors face home insurance gaps and soaring rebuilding costs Beinsure",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "El Niño flood risks expose US insurance coverage gaps ahead of winter - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPV2tPY3VtWDhvdlI3MlBuUTk2Qnh6OG9oZmoyem8yQm53OVJ4dHVMcWpQa1NhSHgwdzJCNWw5Y0N4MW5sTWJ3elMtQnRMSEN0TW15VnBzZElFYUFscDU1T3NLNXRBa3BoZnExZ2ctU1pvUm9wcWhqUXJQVUhsbmY5ckNQMjZZdFU?oc=5",
+   "date": "2026-11-23",
+   "extrait": "El Niño flood risks expose US insurance coverage gaps ahead of winter Beinsure",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "FHA mortgage insurance changes could cut premiums by 36% for homeowners - Beinsure",
+   "lien": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOemZKVU1BaktaTzNZVXhpeUFMRmlqMHZwWUVTbjlTMFFCT2dWY3llT25NYnJMa3dyWW00NEh6TEk5S0N5R0JzYnR2emg2bTJ6aENhUHhvSmx3ZS1tcFlxeExZZnFXeUlFOHlLTV9YS3RoV2NIVDJyY3p0Y0UxWFlUT0lB?oc=5",
+   "date": "2026-11-23",
+   "extrait": "FHA mortgage insurance changes could cut premiums by 36% for homeowners Beinsure",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "GN insurtech funding",
+   "titre": "Hanwha General Insurance Wins Top Prize at Financial AI Contest - Seoul Economic Daily",
+   "lien": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQnowcll6cXVTRFpyUno5RFdMa09WSXVtODdUQzFZMHhxN050QzNKV1NnR3dPRkNLS2VJWFN0d0tqVGtsa2dOUzlkUU10b1E1SE9Wa0NKQWlDaUxmblRuUUF1dDZGMm1NTnF6Smc4bzRIekcxUi1HaXZsZmp0TGtCT3VyQmpwem4wOXpIYXdJRHV6V2pFNWhKQnFOWFJMZw?oc=5",
+   "date": "2026-11-23",
+   "extrait": "Hanwha General Insurance Wins Top Prize at Financial AI Contest Seoul Economic Daily",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMikwJBVV95cUxObGhnTW1rN29HLVlIdWFzVUhyaHM0bjRJdnhzVmtmLWJQdlI3RlhxdmhWTzZ1ZURFdkJZcVd1YmhBb2JHcjlIb0xTQ0dQZGFBdS1wUUlPMDBjcnVGQTJScUVOMWZfV29GYkxoSUhrWThKTWxrNzAzU0R1RUkyVlNNbkttbk44UGYwSDVialJhN2JWcHZDUmVOcEdlRmROS2Z5czduaGM0MklhWG02MURBM2xpLXJoTWFUVlYwTjZtbGZ4bGgtdl85aVY2V2h3OTNFc3FDS3V2ME9sZHVJeWctbGZBb05iaUgta2dIQzFORFZVZ2xCTG5ZTjZvbjlYTVlKWG5YNWpZdXpPM3VxMUdLM1pIVQ?oc=5",
+   "date": "2026-11-22",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPR25fTThIdUhjVG9Vek5KUTlpQVc5eFpTRWpFTUozd3dQaWRpQTd3amgyckRfYTNLeWdqcU1jdzhNMjh5b1ZIYThuUW9CZTNCTjFxTVgzZTl0NWpHcWE0ZDd2NEdxXzR4S3JUNFBoOEFabk9jcmZtY2MtS0oteUhuenRLcHY0Z0tTM0twcWF5X211a2VINzJsTzZ1cHNoWGV5VWNWVlVPcDNiSFhja2lHZkhZMUczV3MtT2YwUmZST09LU25LTXN2R3J5cm1qTFpSWWJ3UU1hQ29admR2MnFrSU9UdU14WmwwVXFJRXBPd2loWHFuTEh6TnpjX1p0NkwzMEJoaVY4SWg1MnFVT3drTk9hUXVJZw?oc=5",
+   "date": "2026-11-22",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMioAJBVV95cUxORGdpRWNiY0JDRzFBYWl6QTB1N1RQNDA3b08xNmxoeHNMV2RHS2JrczhmZlBZckc5dk05WXowYV9xdWdEQmlCUk5RakMwZ2FRTzhFZElQaGlQVzlMOVAwejNCRkRDdlF3ZGtHOW91MGo5N3phTEVlcjV0NnZVdEZHMElINE1uVTZPbjN2b0ExdHdmUURIVk52d3F5UFpCUmc2UFdQY2lpc0ZRTEVTU3kyRVl5Vy1RdXBlTURVdW1FTFJ5QVhLZmFXQUtCTnFEbFlSTzdTT0RBc1JadjNONXRCckVRY1FuV3VGLXVWVlh5R1p5R0NSMDV0YnBwZDhYZkJGVTVPREw1OVpyNm52dEtuenNKbHA5X0EyRkxwc1hPSU4?oc=5",
+   "date": "2026-11-22",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNYm1wVWJ4MWdaV3pXNUUzQlBDc0p0blZzNjFMUjVjZTQ2TnZKaU5PWmh3eWI1a2M2eE8ya0Z3QVcwZFlSQVozUExNMDg0SDFzeWI4emJycFdoYUdTNmdiVGRUSEdXTFRFTnd4N1JYUG02SHE2WmFpeFNSQy1YdmFDY1NVXzB4SU1pdldvUE1wU01MWHk2TmplN1RjUnd2V2E2SEJPSWtFSkJ6YWRZQ0owQUw4WGFVVmVnWjkyR29UeDZNeEgzbS1ZS2h3TW5lTjFDX0FBNFhzc2wxM3NpeDZGMmo1c3lCc0k3SFM5Y2FfcHJEb25mYml2ODd6UmJJRWc?oc=5",
+   "date": "2026-11-22",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNbFlENDFWZVNnOTdMVGtHOE5RUW9Yc09qZjJSUEc0V2hzUWF1SHFIekFvV1NjbFpkbEVnaGh3bjRJbE9hNzJJdDhYb2lRd2ZTT3F0b24wS2pVNk96UlJUX2t4Q3lXM2MycDh1WjRhYl9tbl8yR1RTU011a3V0bWE4VTRzd3dPRkF3TFVYUlIwN1c0OTlNcHZFTk52VUdMSTIyb0RNcFRFV1A3U2Qwakp6eHNOSmRKSmh0RE1ZM2tkc0VMQ0htU3liMTdIRXFpWDA4Y1Zra2pxdU9kVFItd243VXFaSENKZU9NNWpxSktpWldIemdlRGVV?oc=5",
+   "date": "2026-11-22",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQNDNwM0JJd050aGhDSWFmVFRlZU9YMTlrY3llamlNa19xRzRaUzZDZ1BpSTFMalBKYlAzbGFCeVNZOFlicEVmZWV2azFjQ3VuTXFxOXQ4QUM1dWhXZEdBRFJrWFZJaGlPX2ZGblNPa2UyU1F2RWpLT2pxU3RWMF9Bb3FmUEdyVk9Edms1NEJLN3JjTTFKMkZFQUR5dnNmTzlYVGhNekpHbVRWc1VhOW1HVFZxOWNmaUd4cEpKREwyVXJnTWpSTWQwUWxUbkkyeFBiZkxyOTVjMjRaSnRzTUtPeklXUzBOUTRPd3NrcnZJWm1KUk5SSUFRbXVqQ2dvS0I0T0hRWVJDNA?oc=5",
+   "date": "2026-11-22",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  },
+  {
+   "source": "Insurance Times",
+   "titre": "Sign in - Insurance Times - Insurance Times",
+   "lien": "https://news.google.com/rss/articles/CBMinAJBVV95cUxQaEJEakQ3UkROZzhSVlNjalFpUXZRLWJfLTUteGV6akg3NllnNFZnRl95M2VFT0ExblphU3liWEo2ZXpFSFdHN2pESWlYNFdFMWtMU2RIbjhRQ0lmWWlialpZc0UtUGxtN3VBWmotNWViNWV4dU1JcmFJZ3Y2WkZpMUhvSzc3cmdtcW9obExmeGREOTRRZEZCRmVYYmI0djVJU0RUQ2s4enp3amkyc09Oa251MDBWcllJRUk1ZlVKQ2pWMDFxNnd5NF85MDUweXlmWVpHMTlHRmlnVjYtOTlsQTBRMTBLNkRLWkduMjd5VVFyZGlYZlRFS0h6ZWtycU1oblBhVU5wbmctN2k3dVo3c3hNVlRzLTdVOXpQaA?oc=5",
+   "date": "2026-11-22",
+   "extrait": "Sign in - Insurance Times Insurance Times",
+   "motsCles": [
+    "insurance"
+   ],
+   "nomsSuivis": []
+  }
+ ]
+}
